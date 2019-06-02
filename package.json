@@ -1,11 +1,11 @@
 {
-  "name": "woocommerce",
-  "title": "WooCommerce",
+  "name": "classic-commerce",
+  "title": "ClassicCommerce",
   "version": "3.4.0",
-  "homepage": "https://woocommerce.com/",
+  "homepage": "https://github.com/ClassicPress-research/classic-commerce",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woocommerce/woocommerce.git"
+    "url": "https://github.com/ClassicPress-research/classic-commerce.git"
   },
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
@@ -55,6 +55,6 @@
     "npm": ">=5.5.1"
   },
   "dependencies": {
-    "github-contributors-list": "https://github.com/woocommerce/github-contributors-list/tarball/master"
+    "github-contributors-list": "https://github.com/ClassicPress-research/classic-commerce/github-contributors-list/tarball/master"
   }
 }
