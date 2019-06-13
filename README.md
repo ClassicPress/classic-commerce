@@ -13,7 +13,7 @@ We recommend all developers to follow the [Issues](https://github.com/ClassicPre
 * [WooCommerce REST API Docs](https://woocommerce.github.io/woocommerce-rest-api-docs/)
 
 ## Reporting Security Issues
-To disclose a security issue to our team. ( We need an email here)
+To disclose a security issue to our team. (security@classicpress.net)
 
 ## Support
 This repository is most suitable for development but for the little while will use it for support. We shall add a support tag to your issue. However, this might take a little longer to get response.
