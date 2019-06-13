@@ -1,7 +1,7 @@
 ### All Submissions:
 
 * [ ] Have you followed the [ClassicCommerce Contributing guideline](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md)?
-* [ ] Does your code follow the repo standards?
+* [ ] Does your code follow the [repo standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/)?
 * [ ] Have you checked to ensure there aren't other open [Pull Requests](../../pulls) for the same update/change?
 
 <!-- Mark completed items with an [x] -->
