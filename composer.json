@@ -1,8 +1,8 @@
 {
-  "name": "woocommerce/woocommerce",
+  "name": "ClassicPress-research/classic-commerce",
   "description": "An eCommerce toolkit that helps you sell anything. Beautifully.",
-  "homepage": "https://woocommerce.com/",
-  "type": "wordpress-plugin",
+  "homepage": "https://github.com/ClassicPress-research/classic-commerce",
+  "type": "classicpress-plugin",
   "license": "GPL-3.0-or-later",
   "prefer-stable": true,
   "minimum-stability": "dev",

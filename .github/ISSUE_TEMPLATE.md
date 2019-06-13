@@ -1,8 +1,6 @@
-<!-- This form is for reporting bugs and issues specific to the WooCommerce plugin. This is not a support portal. If you need technical support from a human being, please submit a ticket via the helpdesk instead: https://woocommerce.com/contact-us/ -->
+<!-- This form is for reporting bugs and issues specific to the ClassicCommerce plugin. -->
 
-<!-- Usage questions can also be directed to the public support forum here: https://wordpress.org/support/plugin/woocommerce, unless this is a question about a premium extension in which case you should use the helpdesk. -->
-
-<!-- If you have a feature request, submit it to: http://ideas.woocommerce.com/forums/133476-woocommerce -->
+<!-- Usage questions and feature request can also be directed to the issues page -->
 
 <!-- If you are a developer who needs a new filter/hook raise a PR instead :) -->
 
@@ -13,7 +11,7 @@
 <!-- MARK COMPLETED ITEMS WITH AN [x] -->
 
 - [ ] I have searched for similar issues in both open and closed tickets and cannot find a duplicate
-- [ ] The issue still exists against the latest `master` branch of WooCommerce on Github (this is **not** the same version as on WordPress.org!)
+- [ ] The issue still exists against the latest `master` branch of ClassicCommerce on Github
 - [ ] I have attempted to find the simplest possible steps to reproduce the issue
 - [ ] I have included a failing test as a pull request (Optional)
 
@@ -35,14 +33,14 @@ I was expecting to see...
 
 <!-- MARK COMPLETED ITEMS WITH AN [x] -->
 
-- [ ] This bug happens with only WooCommerce plugin active
-- [ ] This bug happens with a default WordPress theme active, or [Storefront](https://woocommerce.com/storefront/)
+- [ ] This bug happens with only ClassicCommerce plugin active
+- [ ] This bug happens with a default ClassicPress theme active
 - [ ] I can reproduce this bug consistently using the steps above
 
 ## WordPress Environment
 
 <details>
 ```
-Copy and paste the system status report from **WooCommerce > System Status** in WordPress admin here.
+Copy and paste the system status report from **ClassicCommerce > System Status** in ClassicPress admin here.
 ```
 </details>

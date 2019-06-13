@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: WooCommerce
- * Plugin URI: https://woocommerce.com/
+ * Plugin Name: Classic Commerce
+ * Plugin URI: https://github.com/ClassicPress-research/classic-commerce
  * Description: An eCommerce toolkit that helps you sell anything. Beautifully.
- * Version: 3.5.3
- * Author: Automattic
- * Author URI: https://woocommerce.com
+ * Version: 0.1.0
+ * Author: ClassicPress Research Team
+ * Author URI: https://github.com/ClassicPress-research/classic-commerce
  * Text Domain: woocommerce
  * Domain Path: /i18n/languages/
  *
