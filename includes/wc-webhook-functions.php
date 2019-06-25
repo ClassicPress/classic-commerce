@@ -3,7 +3,7 @@
  * WooCommerce Webhook functions
  *
  * @package WooCommerce/Functions
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

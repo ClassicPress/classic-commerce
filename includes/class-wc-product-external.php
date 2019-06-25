@@ -5,7 +5,7 @@
  * External products cannot be bought; they link offsite. Extends simple products.
  *
  * @package WooCommerce/Classes/Products
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

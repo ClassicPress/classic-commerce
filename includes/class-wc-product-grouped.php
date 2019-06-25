@@ -5,7 +5,7 @@
  * Grouped products cannot be purchased - they are wrappers for other products.
  *
  * @package WooCommerce\Classes\Products
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -3,7 +3,7 @@
  * Mexico States
  *
  * @package WooCommerce/i18n
- * @version 2.2.9
+ * @version WC-2.2.9
  */
 
 global $states;

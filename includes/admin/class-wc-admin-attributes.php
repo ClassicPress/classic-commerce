@@ -5,7 +5,7 @@
  * The attributes section lets users add custom attributes to assign to products - they can also be used in the "Filter Products by Attribute" widget.
  *
  * @package WooCommerce/Admin
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

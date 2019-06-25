@@ -5,7 +5,7 @@
  * WooCommerce Emails Class which handles the sending on transactional emails and email templates. This class loads in available emails.
  *
  * @package WooCommerce/Classes/Emails
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

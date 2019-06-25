@@ -2,7 +2,7 @@
 /**
  * Log Handler Interface
  *
- * @version 3.3.0
+ * @version WC-3.3.0
  * @package WooCommerce/Interface
  */
 
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined to correctly fulfill log handler API.
  *
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 interface WC_Log_Handler_Interface {
 

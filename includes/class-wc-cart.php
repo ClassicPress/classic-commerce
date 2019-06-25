@@ -6,7 +6,7 @@
  * The cart class also has a price calculation function which calls upon other classes to calculate totals.
  *
  * @package WooCommerce/Classes
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 defined( 'ABSPATH' ) || exit;

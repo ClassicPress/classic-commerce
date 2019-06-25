@@ -5,7 +5,7 @@
  * Handle comments (reviews and order notes).
  *
  * @package WooCommerce/Classes/Products
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

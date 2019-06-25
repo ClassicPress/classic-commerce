@@ -4,7 +4,7 @@
  *
  * The WooCommerce product class handles individual product data.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Classes/Products
  */
 

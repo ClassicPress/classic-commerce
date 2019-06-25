@@ -3,7 +3,7 @@
  * Bolivian states
  *
  * @package WooCommerce/i18n
- * @version 3.1.0
+ * @version WC-3.1.0
  */
 
 global $states;

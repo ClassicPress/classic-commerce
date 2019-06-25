@@ -4,7 +4,7 @@
  *
  * Used for our image cropping settings.
  *
- * @version 3.3.0
+ * @version WC-3.3.0
  * @package WooCommerce
  */
 

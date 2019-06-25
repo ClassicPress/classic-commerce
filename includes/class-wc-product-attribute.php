@@ -6,7 +6,7 @@
  * Uses ArrayAccess to be BW compatible with previous ways of reading attributes.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 

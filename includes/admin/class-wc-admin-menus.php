@@ -3,7 +3,7 @@
  * Setup menus in WP admin.
  *
  * @package WooCommerce\Admin
- * @version 2.5.0
+ * @version WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;

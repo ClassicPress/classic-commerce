@@ -3,7 +3,7 @@
  * WooCommerce API Keys Table List
  *
  * @package WooCommerce\Admin
- * @version 2.4.0
+ * @version WC-2.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * WC Order Item Shipping Data Store
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package data-stores
  */
 

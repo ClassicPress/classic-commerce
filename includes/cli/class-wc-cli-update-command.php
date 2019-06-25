@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Allows updates via CLI.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce
  */
 class WC_CLI_Update_Command {

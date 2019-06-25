@@ -5,7 +5,7 @@
  * Shows the 'my account' section where the customer can view past orders and update their information.
  *
  * @package WooCommerce/Shortcodes/My_Account
- * @version 2.0.0
+ * @version WC-2.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -3,7 +3,7 @@
  * Class for customer download logs.
  *
  * @package WooCommerce/Classes
- * @version 3.3.0
+ * @version WC-3.3.0
  * @since   3.3.0
  */
 

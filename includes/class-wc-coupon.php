@@ -5,7 +5,7 @@
  * The WooCommerce coupons class gets coupon data from storage and checks coupon validity.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

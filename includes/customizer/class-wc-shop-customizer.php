@@ -2,7 +2,7 @@
 /**
  * Adds options to the customizer for WooCommerce.
  *
- * @version 3.3.0
+ * @version WC-3.3.0
  * @package WooCommerce
  */
 

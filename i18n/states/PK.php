@@ -3,7 +3,7 @@
  * Pakistan's states
  *
  * @package WooCommerce/i18n
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 global $states;

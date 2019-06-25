@@ -3,7 +3,7 @@
  * Handle frontend scripts
  *
  * @package WooCommerce/Classes
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

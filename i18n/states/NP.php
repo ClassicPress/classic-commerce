@@ -3,7 +3,7 @@
  * Nepal states (Zones)
  *
  * @package WooCommerce/i18n
- * @version 2.2.5
+ * @version WC-2.2.5
  */
 
 global $states;

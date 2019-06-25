@@ -4,7 +4,7 @@
  *
  * Loads payment gateways via hooks for use in the store.
  *
- * @version 2.2.0
+ * @version WC-2.2.0
  * @package WooCommerce/Classes/Payment
  */
 

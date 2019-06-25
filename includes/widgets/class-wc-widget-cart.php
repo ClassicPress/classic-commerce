@@ -5,7 +5,7 @@
  * Displays shopping cart widget.
  *
  * @package WooCommerce/Widgets
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * Contains the query functions for WooCommerce which alter the front-end post queries and loops
  *
- * @version 3.2.0
+ * @version WC-3.2.0
  * @package WooCommerce\Classes
  */
 

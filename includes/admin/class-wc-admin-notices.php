@@ -3,7 +3,7 @@
  * Display notices in admin
  *
  * @package WooCommerce\Admin
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

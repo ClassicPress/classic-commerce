@@ -5,7 +5,7 @@
  * The main idea behind this class is to avoid doing unneeded
  * SQL updates if nothing changed.
  *
- * @version 3.2.0
+ * @version WC-3.2.0
  * @package WooCommerce
  */
 

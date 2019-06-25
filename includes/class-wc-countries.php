@@ -3,7 +3,7 @@
  * WooCommerce countries
  *
  * @package WooCommerce\l10n
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -212,7 +212,7 @@ class WC_Countries {
 	/**
 	 * Get the base city for the store.
 	 *
-	 * @version 3.1.1
+	 * @version WC-3.1.1
 	 * @return string
 	 */
 	public function get_base_city() {

@@ -3,7 +3,7 @@
  * Regular order
  *
  * @package WooCommerce\Classes
- * @version 2.2.0
+ * @version WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;

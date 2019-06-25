@@ -5,7 +5,7 @@
  * Widget related functions and widget registration.
  *
  * @package WooCommerce/Functions
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

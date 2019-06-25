@@ -5,7 +5,7 @@
  * An API for storing and managing tokens for gateways and customers.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   2.6.0
  */
 

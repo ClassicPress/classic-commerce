@@ -2,7 +2,7 @@
 /**
  * Flat Rate Shipping Method.
  *
- * @version 2.6.0
+ * @version WC-2.6.0
  * @package WooCommerce/Classes/Shipping
  */
 
@@ -199,7 +199,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 		}
 
 		/**
-		 * Developers can add additional flat rates based on this one via this action since @version 2.4.
+		 * Developers can add additional flat rates based on this one via this action since @version WC-2.4.
 		 *
 		 * Previously there were (overly complex) options to add additional rates however this was not user.
 		 * friendly and goes against what Flat Rate Shipping was originally intended for.

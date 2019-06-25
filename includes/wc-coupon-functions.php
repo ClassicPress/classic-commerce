@@ -5,7 +5,7 @@
  * Functions for coupon specific things.
  *
  * @package WooCommerce/Functions
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

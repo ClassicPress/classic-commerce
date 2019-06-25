@@ -7,7 +7,7 @@
  * We suggest using the action woocommerce_cart_calculate_fees hook for adding fees.
  *
  * @package WooCommerce/Classes
- * @version 3.2.0
+ * @version WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;

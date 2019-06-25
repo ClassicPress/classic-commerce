@@ -2,7 +2,7 @@
 /**
  * Standard log levels
  *
- * @version 3.2.0
+ * @version WC-3.2.0
  * @package WooCommerce/Classes
  */
 

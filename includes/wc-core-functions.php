@@ -5,7 +5,7 @@
  * General core functions available on both the front-end and admin.
  *
  * @package WooCommerce\Functions
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

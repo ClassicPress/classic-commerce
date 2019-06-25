@@ -3,7 +3,7 @@
  * List tables: orders.
  *
  * @package WooCommerce\admin
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

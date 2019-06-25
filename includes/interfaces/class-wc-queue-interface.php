@@ -2,7 +2,7 @@
 /**
  * Queue Interface
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  * @package WooCommerce/Interface
  */
 
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined to implement an action/job/event queue.
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  */
 interface WC_Queue_Interface {
 

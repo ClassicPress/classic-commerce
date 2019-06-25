@@ -5,7 +5,7 @@
  * Functions for order specific things.
  *
  * @package WooCommerce/Functions
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

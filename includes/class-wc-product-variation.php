@@ -5,7 +5,7 @@
  * The WooCommerce product variation class handles product variation data.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -3,7 +3,7 @@
  * Handles storage and retrieval of shipping zones
  *
  * @package WooCommerce/Classes
- * @version 3.3.0
+ * @version WC-3.3.0
  * @since   2.6.0
  */
 

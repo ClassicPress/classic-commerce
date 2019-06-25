@@ -66,7 +66,7 @@ class WC_API extends WC_Legacy_API {
 	 * API request - Trigger any API requests.
 	 *
 	 * @since   2.0
-	 * @version 2.4
+	 * @version WC-2.4
 	 */
 	public function handle_api_requests() {
 		global $wp;

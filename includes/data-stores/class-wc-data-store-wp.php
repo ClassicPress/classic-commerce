@@ -5,7 +5,7 @@
  * Your own data store doesn't need to use WC_Data_Store_WP -- you can write
  * your own meta handling functions.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Classes
  */
 

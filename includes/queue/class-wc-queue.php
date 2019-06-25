@@ -2,7 +2,7 @@
 /**
  * WC Queue
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  * @package WooCommerce/Interface
  */
 
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Singleton for managing the WC queue instance.
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  */
 class WC_Queue {
 

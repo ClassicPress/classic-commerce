@@ -6,7 +6,7 @@
  * or for a particular right or service, and not supposed to be negative.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 

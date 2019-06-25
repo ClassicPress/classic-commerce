@@ -3,7 +3,7 @@
  * Represents a file which can be downloaded.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 

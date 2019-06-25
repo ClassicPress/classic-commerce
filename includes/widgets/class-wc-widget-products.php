@@ -3,7 +3,7 @@
  * List products. One widget to rule them all.
  *
  * @package WooCommerce/Widgets
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

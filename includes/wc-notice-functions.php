@@ -5,7 +5,7 @@
  * Functions for error/message handling and display.
  *
  * @package WooCommerce/Functions
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

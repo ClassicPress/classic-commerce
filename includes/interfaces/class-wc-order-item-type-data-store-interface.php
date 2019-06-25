@@ -2,7 +2,7 @@
 /**
  * Order Item Type Data Store Interface
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Interface
  */
 

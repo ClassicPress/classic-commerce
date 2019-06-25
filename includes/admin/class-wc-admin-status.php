@@ -3,7 +3,7 @@
  * Debug/Status page
  *
  * @package WooCommerce/Admin/System Status
- * @version 2.2.0
+ * @version WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;

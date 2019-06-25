@@ -5,7 +5,7 @@
  * Standardises certain post data on save.
  *
  * @package WooCommerce/Classes/Data
- * @version 2.2.0
+ * @version WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;

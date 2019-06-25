@@ -5,7 +5,7 @@
  * Used on the cart page, the cart shortcode displays the cart contents and interface for coupon codes and other cart bits and pieces.
  *
  * @package WooCommerce/Shortcodes/Cart
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
