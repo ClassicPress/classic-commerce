@@ -53,8 +53,5 @@
   "engines": {
     "node": ">=8.9.3",
     "npm": ">=5.5.1"
-  },
-  "dependencies": {
-    "github-contributors-list": "https://github.com/ClassicPress-research/classic-commerce/github-contributors-list/tarball/master"
   }
 }
