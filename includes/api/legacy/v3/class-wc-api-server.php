@@ -109,7 +109,7 @@ class WC_API_Server {
 	/**
 	 * Setup class and set request/response handler
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param $path
 	 */
 	public function __construct( $path ) {
@@ -145,7 +145,7 @@ class WC_API_Server {
 	/**
 	 * Check authentication for the request
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return WP_User|WP_Error WP_User object indicates successful login, WP_Error indicates unsuccessful login
 	 */
 	public function check_authentication() {
@@ -175,7 +175,7 @@ class WC_API_Server {
 	 * array. This enables simpler client behaviour, as it is represented as a
 	 * list in JSON rather than an object/map
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_Error $error
 	 * @return array List of associative arrays with code and message keys
 	 */
@@ -196,7 +196,7 @@ class WC_API_Server {
 	 * Matches the current server URI to a route and runs the first matching
 	 * callback then outputs a JSON representation of the returned value.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @uses WC_API_Server::dispatch()
 	 */
 	public function serve_request() {
@@ -261,7 +261,7 @@ class WC_API_Server {
 	 * Note that the path regexes (array keys) must have @ escaped, as this is
 	 * used as the delimiter with preg_match()
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return array `'/path/regex' => array( $callback, $bitmask )` or `'/path/regex' => array( array( $callback, $bitmask ), ...)`
 	 */
 	public function get_routes() {
@@ -287,7 +287,7 @@ class WC_API_Server {
 	/**
 	 * Match the request to a callback and call it
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return mixed The value returned by the callback, or a WP_Error instance
 	 */
 	public function dispatch() {
@@ -397,7 +397,7 @@ class WC_API_Server {
 	 * Takes a callback and a list of available params, then filters and sorts
 	 * by the parameters the method actually needs, using the Reflection API
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param callable|array $callback the endpoint callback
 	 * @param array $provided the provided request parameters
@@ -440,7 +440,7 @@ class WC_API_Server {
 	 *
 	 * This endpoint describes the capabilities of the site.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 * @return array Index entity
 	 */
 	public function get_index() {
@@ -514,7 +514,7 @@ class WC_API_Server {
 	/**
 	 * Send a HTTP status code
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $code HTTP status
 	 */
 	public function send_status( $code ) {
@@ -524,7 +524,7 @@ class WC_API_Server {
 	/**
 	 * Send a HTTP header
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $key Header key
 	 * @param string $value Header value
 	 * @param boolean $replace Should we replace the existing header?
@@ -541,7 +541,7 @@ class WC_API_Server {
 	 * @link http://tools.ietf.org/html/rfc5988
 	 * @link http://www.iana.org/assignments/link-relations/link-relations.xml
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $rel Link relation. Either a registered type, or an absolute URL
 	 * @param string $link Target IRI for the link
 	 * @param array $other Other parameters to send, as an associative array
@@ -566,7 +566,7 @@ class WC_API_Server {
 	/**
 	 * Send pagination headers for resources
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_Query|WP_User_Query|stdClass $query
 	 */
 	public function add_pagination_headers( $query ) {
@@ -633,7 +633,7 @@ class WC_API_Server {
 	/**
 	 * Returns the request URL with the page query parameter set to the specified page
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $page
 	 * @return string
 	 */
@@ -654,7 +654,7 @@ class WC_API_Server {
 	/**
 	 * Retrieve the raw request entity (body)
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return string
 	 */
 	public function get_raw_data() {
@@ -681,7 +681,7 @@ class WC_API_Server {
 	 *
 	 * Invalid dates default to unix epoch
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $datetime RFC3339 datetime
 	 * @return string MySQl datetime (YYYY-MM-DD HH:MM:SS)
 	 */
@@ -711,7 +711,7 @@ class WC_API_Server {
 	/**
 	 * Format a unix timestamp or MySQL datetime into an RFC3339 datetime
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int|string $timestamp unix timestamp or MySQL datetime
 	 * @param bool $convert_to_utc
 	 * @param bool $convert_to_gmt Use GMT timezone.
@@ -755,7 +755,7 @@ class WC_API_Server {
 	/**
 	 * Extract headers from a PHP-style $_SERVER array
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $server Associative array similar to $_SERVER
 	 * @return array Headers extracted from the input
 	 */

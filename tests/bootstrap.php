@@ -2,7 +2,7 @@
 /**
  * WooCommerce Unit Tests Bootstrap
  *
- * @since 2.2
+ * @since WC-2.2
  */
 class WC_Unit_Tests_Bootstrap {
 
@@ -21,7 +21,7 @@ class WC_Unit_Tests_Bootstrap {
 	/**
 	 * Setup the unit testing environment.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function __construct() {
 
@@ -60,7 +60,7 @@ class WC_Unit_Tests_Bootstrap {
 	/**
 	 * Load WooCommerce.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function load_wc() {
 		define( 'WC_TAX_ROUNDING_MODE', 'auto' );
@@ -71,7 +71,7 @@ class WC_Unit_Tests_Bootstrap {
 	/**
 	 * Install WooCommerce after the test environment and WC have been loaded.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function install_wc() {
 
@@ -96,7 +96,7 @@ class WC_Unit_Tests_Bootstrap {
 	/**
 	 * Load WC-specific test cases and factories.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function includes() {
 
@@ -130,7 +130,7 @@ class WC_Unit_Tests_Bootstrap {
 	/**
 	 * Get the single class instance.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @return WC_Unit_Tests_Bootstrap
 	 */
 	public static function instance() {

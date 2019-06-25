@@ -28,7 +28,7 @@ class WC_API_Products extends WC_API_Resource {
 	 * GET/PUT/DELETE /products/<id>
 	 * GET /products/<id>/reviews
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -138,7 +138,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get all products
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param string $type
 	 * @param array $filter
@@ -174,7 +174,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the product ID
 	 * @param string $fields
 	 * @return array|WP_Error
@@ -221,7 +221,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the total number of products
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param string $type
 	 * @param array $filter
@@ -249,7 +249,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $data posted data
 	 *
@@ -364,7 +364,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id the product ID
 	 * @param array $data
@@ -464,7 +464,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id the product ID.
 	 * @param bool $force true to permanently delete order, false to move to trash.
@@ -531,7 +531,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the reviews for a product
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the product ID to get reviews for
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -566,7 +566,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the orders for a product
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @param int $id the product ID to get orders for
 	 * @param string fields  fields to retrieve
 	 * @param array $filter filters to include in response
@@ -606,7 +606,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get a listing of product categories
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param string|null $fields fields to limit response to
 	 *
@@ -636,7 +636,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product category for the given ID
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param string $id product category term ID
 	 * @param string|null $fields fields to limit response to
@@ -1069,7 +1069,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Helper method to get product post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */
@@ -1142,7 +1142,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get standard product data that applies to every product type
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|int $product
 	 *
 	 * @return array
@@ -1228,7 +1228,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get product menu order.
 	 *
-	 * @since 2.5.3
+	 * @since WC-2.5.3
 	 * @param WC_Product $product
 	 * @return int
 	 */
@@ -1241,7 +1241,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get an individual variation's data.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product $product
 	 * @return array
 	 */
@@ -1325,7 +1325,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save default attributes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Product $product
 	 * @param WP_REST_Request $request
@@ -1961,7 +1961,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save product shipping data
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param WC_Product $product
 	 * @param array $data
 	 * @return WC_Product
@@ -2014,7 +2014,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save downloadable files
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param WC_Product $product
 	 * @param array $downloads
 	 * @param int $deprecated Deprecated since 3.0.
@@ -2049,7 +2049,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get attribute taxonomy by slug.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $slug
 	 * @return string|null
 	 */
@@ -2071,7 +2071,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the images for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */
@@ -2199,7 +2199,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Upload image from URL
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $image_url
 	 * @return int|WP_Error attachment id
 	 */
@@ -2210,7 +2210,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Upload product category image from URL.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 * @param string $image_url
 	 * @return int|WP_Error attachment id
 	 */
@@ -2223,7 +2223,7 @@ class WC_API_Products extends WC_API_Resource {
 	 *
 	 * @throws WC_API_Exception
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 * @param string $image_url
 	 * @param string $upload_for
 	 * @return array|WP_Error
@@ -2299,7 +2299,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Sets product image as attachment and returns the attachment ID.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param array $upload
 	 * @param int $id
 	 * @return int
@@ -2377,7 +2377,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the attributes for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */
@@ -2417,7 +2417,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the downloads for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */
@@ -2443,7 +2443,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get a listing of product attributes
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param string|null $fields fields to limit response to
 	 *
@@ -2479,7 +2479,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product attribute for the given ID
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param string $id product attribute term ID
 	 * @param string|null $fields fields to limit response to
@@ -2568,7 +2568,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product attribute.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param array $data Posted data.
 	 *
@@ -2651,7 +2651,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product attribute.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $id the attribute ID.
 	 * @param array $data
@@ -2797,7 +2797,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get a listing of product attribute terms.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $attribute_id Attribute ID.
 	 * @param string|null $fields Fields to limit response to.
@@ -2856,7 +2856,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product attribute term for the given ID.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $attribute_id Attribute ID.
 	 * @param string $id Product attribute term ID.
@@ -2908,7 +2908,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product attribute term.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $attribute_id Attribute ID.
 	 * @param array $data Posted data.
@@ -2972,7 +2972,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product attribute term.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $attribute_id Attribute ID.
 	 * @param int $id the attribute ID.
@@ -3103,7 +3103,7 @@ class WC_API_Products extends WC_API_Resource {
 	 * Accepts an array with products in the formats supported by
 	 * WC_API_Products->create_product() and WC_API_Products->edit_product()
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param array $data
 	 *

@@ -806,14 +806,14 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 				/**
 				 * Sanitize the value of an option.
 				 *
-				 * @since 2.4.0
+				 * @since WC-2.4.0
 				 */
 				$value = apply_filters( 'woocommerce_admin_settings_sanitize_option', $value, $option, $raw_value );
 
 				/**
 				 * Sanitize the value of an option by option name.
 				 *
-				 * @since 2.4.0
+				 * @since WC-2.4.0
 				 */
 				$value = apply_filters( "woocommerce_admin_settings_sanitize_option_$option_name", $value, $option, $raw_value );
 

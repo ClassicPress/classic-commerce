@@ -33,7 +33,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Create a new payment token in the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Payment_Token $token Payment token object.
 	 *
@@ -77,7 +77,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Update a payment token.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Payment_Token $token Payment token object.
 	 *
@@ -127,7 +127,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Remove a payment token from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Payment_Token $token Payment token object.
 	 * @param bool             $force_delete Unused param.
 	 */
@@ -141,7 +141,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Read a token from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Payment_Token $token Payment token object.
 	 *
@@ -179,7 +179,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 * Read extra data associated with the token (like last4 digits of a card for expiry dates).
 	 *
 	 * @param WC_Payment_Token $token Payment token object.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function read_extra_data( &$token ) {
 		foreach ( $token->get_extra_data_keys() as $key ) {
@@ -193,7 +193,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Saves extra token data as meta.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Payment_Token $token Payment token object.
 	 * @param bool             $force By default, only changed props are updated. When this param is true all props are updated.
 	 * @return array List of updated props.
@@ -228,7 +228,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 * Accepts token_id, user_id, gateway_id, and type.
 	 * Each object should contain the fields token_id, gateway_id, token, user_id, type, is_default.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $args List of accepted args: token_id, gateway_id, user_id, type.
 	 * @return array
 	 */
@@ -285,7 +285,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 * Returns an stdObject of a token for a user's default token.
 	 * Should contain the fields token_id, gateway_id, token, user_id, type, is_default.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param id $user_id User ID.
 	 * @return object
 	 */
@@ -303,7 +303,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 * Returns an stdObject of a token.
 	 * Should contain the fields token_id, gateway_id, token, user_id, type, is_default.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param id $token_id Token ID.
 	 * @return object
 	 */
@@ -320,7 +320,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Returns metadata for a specific payment token.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param id $token_id Token ID.
 	 * @return array
 	 */
@@ -331,7 +331,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	/**
 	 * Get a token's type by ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param id $token_id Token ID.
 	 * @return string
 	 */
@@ -350,7 +350,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 * looping through tokens and setting their statuses instead of creating a bunch
 	 * of objects.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param id   $token_id Token ID.
 	 * @param bool $status Whether given payment token is the default payment token or not.

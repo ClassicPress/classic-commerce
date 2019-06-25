@@ -3,7 +3,7 @@
  * Unit tests for the core functions.
  *
  * @package WooCommerce\Tests\Util
- * @since 2.2
+ * @since WC-2.2
  */
 
 /**
@@ -14,7 +14,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_woocommerce_currency().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_get_woocommerce_currency() {
 
@@ -24,7 +24,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_woocommerce_currencies().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_get_woocommerce_currencies() {
 		static $currencies;
@@ -204,7 +204,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_woocommerce_currency_symbol().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_get_woocommerce_currency_symbol() {
 
@@ -249,7 +249,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_woocommerce_api_url().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_get_woocommerce_api_url() {
 
@@ -265,7 +265,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_log_file_path().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_log_file_path() {
 		$log_dir     = trailingslashit( WC_LOG_DIR );
@@ -278,7 +278,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_logger().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_get_logger() {
 		// This filter should have no effect because the class does not implement WC_Logger_Interface.
@@ -327,7 +327,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_base_location().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_get_base_location() {
 		$default = wc_get_base_location();
@@ -339,7 +339,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_country_state_string().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_format_country_state_string() {
 		// Test with correct values.
@@ -364,7 +364,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_shipping_method_count()
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_get_shipping_method_count() {
 		// Without legacy methods.
@@ -377,7 +377,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_print_r()
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_print_r() {
 		$arr = array(
@@ -477,7 +477,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_maybe_define_constant().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_maybe_define_constant() {
 		$this->assertFalse( defined( 'WC_TESTING_DEFINE_FUNCTION' ) );
@@ -494,7 +494,7 @@ class WC_Tests_Core_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_create_order() and wc_update_order() currency handling.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_create_update_order_currency() {
 		$old_currency = get_woocommerce_currency();

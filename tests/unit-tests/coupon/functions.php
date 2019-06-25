@@ -3,14 +3,14 @@
 /**
  * Class Functions.
  * @package WooCommerce\Tests\Coupon
- * @since 2.2
+ * @since WC-2.2
  */
 class WC_Tests_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Test wc_get_coupon_types().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_coupon_types() {
 
@@ -26,7 +26,7 @@ class WC_Tests_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_coupon_type().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_coupon_type() {
 
@@ -37,7 +37,7 @@ class WC_Tests_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test coupons_enabled method.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 */
 	public function test_wc_coupons_enabled() {
 		$this->assertEquals( apply_filters( 'woocommerce_coupons_enabled', get_option( 'woocommerce_enable_coupons' ) === 'yes' ), wc_coupons_enabled() );
@@ -46,7 +46,7 @@ class WC_Tests_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_coupon_code_by_id().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_get_coupon_code_by_id() {
 		// Create coupon.
@@ -64,7 +64,7 @@ class WC_Tests_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_coupon_id_by_code().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_get_coupon_id_by_code() {
 		// Create coupon.

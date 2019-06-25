@@ -427,7 +427,7 @@ class WC_Frontend_Scripts {
 	/**
 	 * Localize a WC script once.
 	 *
-	 * @since 2.3.0 this needs less wp_script_is() calls due to https://core.trac.wordpress.org/ticket/28404 being added in WP 4.0.
+	 * @since WC-2.3.0 this needs less wp_script_is() calls due to https://core.trac.wordpress.org/ticket/28404 being added in WP 4.0.
 	 * @param string $handle Script handle the data will be attached to.
 	 */
 	private static function localize_script( $handle ) {

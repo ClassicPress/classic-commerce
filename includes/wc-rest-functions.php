@@ -60,7 +60,7 @@ function wc_rest_allowed_image_mime_types() {
 /**
  * Upload image from URL.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $image_url Image URL.
  * @return array|WP_Error Attachment data or error message.
  */
@@ -144,7 +144,7 @@ function wc_rest_upload_image_from_url( $image_url ) {
 /**
  * Set uploaded image as attachment.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param array $upload Upload information from wp_upload_bits.
  * @param int   $id Post ID. Default to 0.
  * @return int Attachment ID
@@ -187,7 +187,7 @@ function wc_rest_set_uploaded_image_as_attachment( $upload, $id = 0 ) {
 /**
  * Validate reports request arguments.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param mixed           $value   Value to valdate.
  * @param WP_REST_Request $request Request instance.
  * @param string          $param   Param to validate.
@@ -221,7 +221,7 @@ function wc_rest_validate_reports_request_arg( $value, $request, $param ) {
  * Encodes a value according to RFC 3986.
  * Supports multidimensional arrays.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string|array $value The value to encode.
  * @return string|array       Encoded values.
  */
@@ -236,7 +236,7 @@ function wc_rest_urlencode_rfc3986( $value ) {
 /**
  * Check permissions of posts on REST API.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $post_type Post type.
  * @param string $context   Request context.
  * @param int    $object_id Post ID.
@@ -265,7 +265,7 @@ function wc_rest_check_post_permissions( $post_type, $context = 'read', $object_
 /**
  * Check permissions of users on REST API.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $context   Request context.
  * @param int    $object_id Post ID.
  * @return bool
@@ -303,7 +303,7 @@ function wc_rest_check_user_permissions( $context = 'read', $object_id = 0 ) {
 /**
  * Check permissions of product terms on REST API.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $taxonomy  Taxonomy.
  * @param string $context   Request context.
  * @param int    $object_id Post ID.
@@ -328,7 +328,7 @@ function wc_rest_check_product_term_permissions( $taxonomy, $context = 'read', $
 /**
  * Check manager permissions on REST API.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $object  Object.
  * @param string $context Request context.
  * @return bool
@@ -352,7 +352,7 @@ function wc_rest_check_manager_permissions( $object, $context = 'read' ) {
 /**
  * Check product reviews permissions on REST API.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  * @param string $context   Request context.
  * @param string $object_id Object ID.
  * @return bool

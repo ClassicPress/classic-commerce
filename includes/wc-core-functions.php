@@ -57,7 +57,7 @@ add_filter( 'woocommerce_short_description', array( $GLOBALS['wp_embed'], 'run_s
 /**
  * Define a constant if it is not already defined.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $name  Constant name.
  * @param mixed  $value Value.
  */
@@ -215,7 +215,7 @@ function wc_get_template( $template_name, $args = array(), $template_path = '', 
  * Like wc_get_template, but returns the HTML instead of outputting.
  *
  * @see wc_get_template
- * @since 2.5.0
+ * @since WC-2.5.0
  * @param string $template_name Template name.
  * @param array  $args          Arguments. (default: array).
  * @param string $template_path Template path. (default: '').
@@ -807,7 +807,7 @@ function wc_print_js() {
 		/**
 		 * Queued jsfilter.
 		 *
-		 * @since 2.6.0
+		 * @since WC-2.6.0
 		 * @param string $js JavaScript code.
 		 */
 		echo apply_filters( 'woocommerce_queued_js', $js ); // WPCS: XSS ok.
@@ -836,7 +836,7 @@ function wc_setcookie( $name, $value, $expire = 0, $secure = false ) {
 /**
  * Get the URL to the WooCommerce REST API.
  *
- * @since 2.1
+ * @since WC-2.1
  * @param string $path an endpoint to include in the URL.
  * @return string the URL.
  */
@@ -855,7 +855,7 @@ function get_woocommerce_api_url( $path ) {
 /**
  * Get a log file path.
  *
- * @since 2.2
+ * @since WC-2.2
  *
  * @param string $handle name.
  * @return string the log file path.
@@ -867,7 +867,7 @@ function wc_get_log_file_path( $handle ) {
 /**
  * Get a log file name.
  *
- * @since 3.3
+ * @since WC-3.3
  *
  * @param string $handle Name.
  * @return string The log file name.
@@ -931,7 +931,7 @@ add_action( 'admin_footer', 'flush_rewrite_rules_on_shop_page_save' );
 /**
  * Various rewrite rule fixes.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param array $rules Rules.
  * @return array
  */
@@ -1019,7 +1019,7 @@ add_filter( 'mod_rewrite_rules', 'wc_ms_protect_download_rewite_rules' );
 /**
  * Formats a string in the format COUNTRY:STATE into an array.
  *
- * @since 2.3.0
+ * @since WC-2.3.0
  * @param  string $country_string Country string.
  * @return array
  */
@@ -1039,7 +1039,7 @@ function wc_format_country_state_string( $country_string ) {
 /**
  * Get the store's base location.
  *
- * @since 2.3.0
+ * @since WC-2.3.0
  * @return array
  */
 function wc_get_base_location() {
@@ -1054,7 +1054,7 @@ function wc_get_base_location() {
  * Filtered, and set to base location or left blank. If cache-busting,
  * this should only be used when 'location' is set in the querystring.
  *
- * @since 2.3.0
+ * @since WC-2.3.0
  * @return array
  */
 function wc_get_customer_default_location() {
@@ -1105,7 +1105,7 @@ if ( ! function_exists( 'hash_equals' ) ) :
 	 * This function was added in PHP 5.6.
 	 * It can leak the length of a string.
 	 *
-	 * @since 3.9.2
+	 * @since WC-3.9.2
 	 *
 	 * @param string $a Expected string.
 	 * @param string $b Actual string.
@@ -1155,7 +1155,7 @@ function wc_api_hash( $data ) {
 /**
  * Find all possible combinations of values from the input array and return in a logical order.
  *
- * @since 2.5.0
+ * @since WC-2.5.0
  * @param array $input Input.
  * @return array
  */
@@ -1221,7 +1221,7 @@ function wc_array_cartesian( $input ) {
 /**
  * Run a MySQL transaction query, if supported.
  *
- * @since 2.5.0
+ * @since WC-2.5.0
  * @param string $type Types: start (default), commit, rollback.
  * @param bool   $force use of transactions.
  */
@@ -1280,7 +1280,7 @@ function wc_get_checkout_url() {
 /**
  * Register a shipping method.
  *
- * @since 1.5.7
+ * @since WC-1.5.7
  * @param string|object $shipping_method class name (string) or a class object.
  */
 function woocommerce_register_shipping_method( $shipping_method ) {
@@ -1360,7 +1360,7 @@ function wc_help_tip( $tip, $allow_html = false ) {
 /**
  * Return a list of potential postcodes for wildcard searching.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param  string $postcode Postcode.
  * @param  string $country  Country to format postcode for matching.
  * @return string[]
@@ -1385,7 +1385,7 @@ function wc_get_wildcard_postcodes( $postcode, $country = '' ) {
  * Used by shipping zones and taxes to compare a given $postcode to stored
  * postcodes to find matches for numerical ranges, and wildcards.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $postcode           Postcode you want to match against stored postcodes.
  * @param array  $objects            Array of postcode objects from Database.
  * @param string $object_id_key      DB column name for the ID.
@@ -1472,7 +1472,7 @@ function wc_get_shipping_method_count( $include_legacy = false ) {
 /**
  * Wrapper for set_time_limit to see if it is enabled.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int $limit Time limit.
  */
 function wc_set_time_limit( $limit = 0 ) {
@@ -1484,7 +1484,7 @@ function wc_set_time_limit( $limit = 0 ) {
 /**
  * Wrapper for nocache_headers which also disables page caching.
  *
- * @since 3.2.4
+ * @since WC-3.2.4
  */
 function wc_nocache_headers() {
 	WC_Cache_Helper::set_nocache_constants();
@@ -1494,7 +1494,7 @@ function wc_nocache_headers() {
 /**
  * Used to sort products attributes with uasort.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param array $a First attribute to compare.
  * @param array $b Second attribute to compare.
  * @return int
@@ -1506,7 +1506,7 @@ function wc_product_attribute_uasort_comparison( $a, $b ) {
 /**
  * Used to sort shipping zone methods with uasort.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param array $a First shipping zone method to compare.
  * @param array $b Second shipping zone method to compare.
  * @return int
@@ -1518,7 +1518,7 @@ function wc_shipping_zone_method_order_uasort_comparison( $a, $b ) {
 /**
  * User to sort checkout fields based on priority with uasort.
  *
- * @since 3.5.1
+ * @since WC-3.5.1
  * @param array $a First field to compare.
  * @param array $b Second field to compare.
  * @return int
@@ -1539,7 +1539,7 @@ function wc_checkout_fields_uasort_comparison( $a, $b ) {
 /**
  * User to sort two values with ausort.
  *
- * @since 3.5.1
+ * @since WC-3.5.1
  * @param int $a First value to compare.
  * @param int $b Second value to compare.
  * @return int
@@ -1554,7 +1554,7 @@ function wc_uasort_comparison( $a, $b ) {
 /**
  * Get rounding mode for internal tax calculations.
  *
- * @since 3.2.4
+ * @since WC-3.2.4
  * @return int
  */
 function wc_get_tax_rounding_mode() {
@@ -1571,7 +1571,7 @@ function wc_get_tax_rounding_mode() {
  * Get rounding precision for internal WC calculations.
  * Will increase the precision of wc_get_price_decimals by 2 decimals, unless WC_ROUNDING_PRECISION is set to a higher number.
  *
- * @since 2.6.3
+ * @since WC-2.6.3
  * @return int
  */
 function wc_get_rounding_precision() {
@@ -1694,7 +1694,7 @@ function wc_get_logger() {
 /**
  * Trigger logging cleanup using the logging class.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_cleanup_logs() {
 	$logger = wc_get_logger();
@@ -1711,7 +1711,7 @@ add_action( 'woocommerce_cleanup_logs', 'wc_cleanup_logs' );
  * Some server environments blacklist some debugging functions. This function provides a safe way to
  * turn an expression into a printable, readable form without calling blacklisted functions.
  *
- * @since 3.0
+ * @since WC-3.0
  *
  * @param mixed $expression The expression to be printed.
  * @param bool  $return     Optional. Default false. Set to true to return the human-readable string.
@@ -1758,7 +1758,7 @@ function wc_print_r( $expression, $return = false ) {
 /**
  * Registers the default log handler.
  *
- * @since 3.0
+ * @since WC-3.0
  * @param array $handlers Handlers.
  * @return array
  */
@@ -1779,7 +1779,7 @@ add_filter( 'woocommerce_register_log_handlers', 'wc_register_default_log_handle
 /**
  * Based on wp_list_pluck, this calls a method instead of returning a property.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param array      $list              List of objects or arrays.
  * @param int|string $callback_or_field Callback method from the object to place instead of the entire object.
  * @param int|string $index_key         Optional. Field from the object to use as keys for the new array.
@@ -1809,7 +1809,7 @@ function wc_list_pluck( $list, $callback_or_field, $index_key = null ) {
 	 */
 	$newlist = array();
 	foreach ( $list as $value ) {
-		// Get index. @since 3.2.0 this supports a callback.
+		// Get index. @since WC-3.2.0 this supports a callback.
 		if ( is_callable( array( $value, $index_key ) ) ) {
 			$newlist[ $value->{$index_key}() ] = $value->{$callback_or_field}();
 		} elseif ( isset( $value->$index_key ) ) {
@@ -1860,7 +1860,7 @@ function wc_get_permalink_structure() {
 /**
  * Switch WooCommerce to site language.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  */
 function wc_switch_to_site_locale() {
 	if ( function_exists( 'switch_to_locale' ) ) {
@@ -1877,7 +1877,7 @@ function wc_switch_to_site_locale() {
 /**
  * Switch WooCommerce language to original.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  */
 function wc_restore_locale() {
 	if ( function_exists( 'restore_previous_locale' ) ) {
@@ -1897,7 +1897,7 @@ function wc_restore_locale() {
  * Remove formatting and allow "+".
  * Example and specs: https://developer.mozilla.org/en/docs/Web/HTML/Element/a#Creating_a_phone_link
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  *
  * @param string $phone Content to convert phone number.
  * @return string Content with converted phone number.
@@ -1935,7 +1935,7 @@ function wc_get_var( &$var, $default = null ) {
 /**
  * Read in WooCommerce headers when reading plugin headers.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @param array $headers Headers.
  * @return array
  */
@@ -1953,7 +1953,7 @@ add_filter( 'extra_plugin_headers', 'wc_enable_wc_plugin_headers' );
 /**
  * Prevent auto-updating the WooCommerce plugin on major releases if there are untested extensions active.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @param  bool   $should_update If should update.
  * @param  object $plugin        Plugin data.
  * @return bool
@@ -1991,7 +1991,7 @@ add_filter( 'auto_update_plugin', 'wc_prevent_dangerous_auto_updates', 99, 2 );
  *
  * Based on code inside core's upgrade_network() function.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @return int Number of transients that were cleared.
  */
 function wc_delete_expired_transients() {
@@ -2018,7 +2018,7 @@ add_action( 'woocommerce_installed', 'wc_delete_expired_transients' );
 /**
  * Make a URL relative, if possible.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @param string $url URL to make relative.
  * @return string
  */
@@ -2029,7 +2029,7 @@ function wc_get_relative_url( $url ) {
 /**
  * See if a resource is remote.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @param string $url URL to check.
  * @return bool
  */
@@ -2042,7 +2042,7 @@ function wc_is_external_resource( $url ) {
 /**
  * See if theme/s is activate or not.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param string|array $theme Theme name or array of theme names to check.
  * @return boolean
  */
@@ -2053,7 +2053,7 @@ function wc_is_active_theme( $theme ) {
 /**
  * Cleans up session data - cron callback.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  */
 function wc_cleanup_session_data() {
 	$session_class = apply_filters( 'woocommerce_session_handler', 'WC_Session_Handler' );
@@ -2143,7 +2143,7 @@ function wc_selected( $value, $options ) {
 /**
  * Retrieves the MySQL server version. Based on $wpdb.
  *
- * @since 3.4.1
+ * @since WC-3.4.1
  * @return array Vesion information.
  */
 function wc_get_server_database_version() {

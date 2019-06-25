@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Runs a deprecated action with notice only if used.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $tag         The name of the action hook.
  * @param array  $args        Array of additional function arguments to be passed to do_action().
  * @param string $version     The version of WooCommerce that deprecated the hook.
@@ -36,7 +36,7 @@ function wc_do_deprecated_action( $tag, $args, $version, $replacement = null, $m
 /**
  * Wrapper for deprecated functions so we can apply some extra logic.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $function Function used.
  * @param string $version Version the message was added in.
  * @param string $replacement Replacement for the called function.
@@ -57,7 +57,7 @@ function wc_deprecated_function( $function, $version, $replacement = null ) {
 /**
  * Wrapper for deprecated hook so we can apply some extra logic.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param string $hook        The hook that was used.
  * @param string $version     The version of WordPress that deprecated the hook.
  * @param string $replacement The hook that should have been used.
@@ -82,7 +82,7 @@ function wc_deprecated_hook( $hook, $version, $replacement = null, $message = nu
 /**
  * When catching an exception, this allows us to log it if unexpected.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param Exception $exception_object The exception object.
  * @param string    $function The function which threw exception.
  * @param array     $args The args passed to the function.
@@ -883,7 +883,7 @@ function woocommerce_track_product_view() {
 }
 
 /**
- * @since 2.3
+ * @since WC-2.3
  * @deprecated has no replacement
  */
 function woocommerce_compile_less_styles() {
@@ -893,7 +893,7 @@ function woocommerce_compile_less_styles() {
 /**
  * woocommerce_calc_shipping was an option used to determine if shipping was enabled prior to version 2.6.0. This has since been replaced with wc_shipping_enabled() function and
  * the woocommerce_ship_to_countries setting.
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return string
  */
 function woocommerce_calc_shipping_backwards_compatibility( $value ) {
@@ -990,7 +990,7 @@ function _wc_save_product_price( $product_id, $regular_price, $sale_price = '', 
  * Return customer avatar URL.
  *
  * @deprecated 3.1.0
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $email the customer's email.
  * @return string the URL to the customer's avatar.
  */
@@ -1005,7 +1005,7 @@ function wc_get_customer_avatar_url( $email ) {
  * WooCommerce Core Supported Themes.
  *
  * @deprecated 3.3.0
- * @since 2.2
+ * @since WC-2.2
  * @return string[]
  */
 function wc_get_core_supported_themes() {

@@ -21,7 +21,7 @@ interface WC_API_Handler {
 	 *
 	 * This should return the proper HTTP content-type for the response
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return string
 	 */
 	public function get_content_type();
@@ -29,7 +29,7 @@ interface WC_API_Handler {
 	/**
 	 * Parse the raw request body entity into an array
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $data
 	 * @return array
 	 */
@@ -38,7 +38,7 @@ interface WC_API_Handler {
 	/**
 	 * Generate a response from an array of data
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data
 	 * @return string
 	 */

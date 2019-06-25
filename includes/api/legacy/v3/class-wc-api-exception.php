@@ -26,7 +26,7 @@ class WC_API_Exception extends Exception {
 	 * error message - friendly message, e.g. 'Product ID is invalid'
 	 * http status code - proper HTTP status code to respond with, e.g. 400
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $error_code
 	 * @param string $error_message user-friendly translated error message
 	 * @param int $http_status_code HTTP status code to respond with
@@ -39,7 +39,7 @@ class WC_API_Exception extends Exception {
 	/**
 	 * Returns the error code
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @return string
 	 */
 	public function getErrorCode() {

@@ -20,7 +20,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Data array, with defaults.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(
@@ -120,7 +120,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * If the object has an ID, read using the data store.
 	 *
-	 * @since 3.4.1
+	 * @since WC-3.4.1
 	 */
 	protected function read_object_from_database() {
 		$this->data_store = WC_Data_Store::load( 'coupon' );
@@ -402,7 +402,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * If the filter is added through the woocommerce_get_shop_coupon_data filter, it's virtual and not in the DB.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return boolean
 	 */
@@ -463,7 +463,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set coupon code.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $code Coupon code.
 	 */
 	public function set_code( $code ) {
@@ -473,7 +473,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set coupon description.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $description Description.
 	 */
 	public function set_description( $description ) {
@@ -483,7 +483,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set discount type.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $discount_type Discount type.
 	 */
 	public function set_discount_type( $discount_type ) {
@@ -499,7 +499,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set amount.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param float $amount Amount.
 	 */
 	public function set_amount( $amount ) {
@@ -553,7 +553,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set how many times this coupon has been used.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $usage_count Usage count.
 	 */
 	public function set_usage_count( $usage_count ) {
@@ -563,7 +563,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set if this coupon can only be used once.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param bool $is_individual_use If is for individual use.
 	 */
 	public function set_individual_use( $is_individual_use ) {
@@ -573,7 +573,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the product IDs this coupon can be used with.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $product_ids Products IDs.
 	 */
 	public function set_product_ids( $product_ids ) {
@@ -583,7 +583,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the product IDs this coupon cannot be used with.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $excluded_product_ids Exclude product IDs.
 	 */
 	public function set_excluded_product_ids( $excluded_product_ids ) {
@@ -593,7 +593,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the amount of times this coupon can be used.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $usage_limit Usage limit.
 	 */
 	public function set_usage_limit( $usage_limit ) {
@@ -603,7 +603,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the amount of times this coupon can be used per user.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $usage_limit Usage limit.
 	 */
 	public function set_usage_limit_per_user( $usage_limit ) {
@@ -613,7 +613,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set usage limit to x number of items.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int|null $limit_usage_to_x_items Limit usage to X items.
 	 */
 	public function set_limit_usage_to_x_items( $limit_usage_to_x_items ) {
@@ -623,7 +623,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set if this coupon enables free shipping or not.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param bool $free_shipping If grant free shipping.
 	 */
 	public function set_free_shipping( $free_shipping ) {
@@ -633,7 +633,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the product category IDs this coupon can be used with.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $product_categories List of product categories.
 	 */
 	public function set_product_categories( $product_categories ) {
@@ -643,7 +643,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the product category IDs this coupon cannot be used with.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $excluded_product_categories List of excluded product categories.
 	 */
 	public function set_excluded_product_categories( $excluded_product_categories ) {
@@ -653,7 +653,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set if this coupon should excluded sale items or not.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param bool $exclude_sale_items If should exclude sale items.
 	 */
 	public function set_exclude_sale_items( $exclude_sale_items ) {
@@ -663,7 +663,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the minimum spend amount.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param float $amount Minium amount.
 	 */
 	public function set_minimum_amount( $amount ) {
@@ -673,7 +673,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set the maximum spend amount.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param float $amount Maximum amount.
 	 */
 	public function set_maximum_amount( $amount ) {
@@ -683,7 +683,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set email restrictions.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $emails List of emails.
 	 */
 	public function set_email_restrictions( $emails = array() ) {
@@ -699,7 +699,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set which users have used this coupon.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $used_by List of user IDs.
 	 */
 	public function set_used_by( $used_by ) {
@@ -710,7 +710,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	 * Set coupon virtual state.
 	 *
 	 * @param boolean $virtual Whether it is virtual or not.
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function set_virtual( $virtual ) {
 		$this->set_prop( 'virtual', (bool) $virtual );
@@ -725,7 +725,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Developers can programmatically return coupons. This function will read those values into our WC_Coupon class.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $code   Coupon code.
 	 * @param array  $coupon Array of coupon properties.
 	 */

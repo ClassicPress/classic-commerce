@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Process webhook delivery.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param WC_Webhook $webhook Webhook instance.
  * @param array      $arg     Delivery arguments.
  */
@@ -36,7 +36,7 @@ add_action( 'woocommerce_webhook_process_delivery', 'wc_webhook_process_delivery
  * Wrapper function to execute the `woocommerce_deliver_webhook_async` cron.
  * hook, see WC_Webhook::process().
  *
- * @since 2.2.0
+ * @since WC-2.2.0
  * @param int   $webhook_id Webhook ID to deliver.
  * @throws Exception        If webhook cannot be read/found and $data parameter of WC_Webhook class constructor is set.
  * @param mixed $arg        Hook argument.
@@ -140,7 +140,7 @@ function wc_get_webhook( $id ) {
 /**
  * Get webhoook REST API versions.
  *
- * @since 3.5.1
+ * @since WC-3.5.1
  * @return array
  */
 function wc_get_webhook_rest_api_versions() {

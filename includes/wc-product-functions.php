@@ -46,7 +46,7 @@ function wc_get_products( $args ) {
 /**
  * Main function for returning products, uses the WC_Product_Factory class.
  *
- * @since 2.2.0
+ * @since WC-2.2.0
  *
  * @param mixed $the_product Post object or post ID of the product.
  * @param array $deprecated Previously used to pass arguments to the factory, e.g. to force a type.
@@ -151,7 +151,7 @@ function wc_delete_product_transients( $post_id = 0 ) {
 /**
  * Function that returns an array containing the IDs of the products that are on sale.
  *
- * @since 2.0
+ * @since WC-2.0
  * @return array
  */
 function wc_get_product_ids_on_sale() {
@@ -175,7 +175,7 @@ function wc_get_product_ids_on_sale() {
 /**
  * Function that returns an array containing the IDs of the featured products.
  *
- * @since 2.1
+ * @since WC-2.1
  * @return array
  */
 function wc_get_featured_product_ids() {
@@ -525,7 +525,7 @@ add_action( 'template_redirect', 'wc_track_product_view', 20 );
 /**
  * Get product types.
  *
- * @since 2.2
+ * @since WC-2.2
  * @return array
  */
 function wc_get_product_types() {
@@ -542,7 +542,7 @@ function wc_get_product_types() {
 /**
  * Check if product sku is unique.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param int    $product_id Product ID.
  * @param string $sku Product SKU.
  * @return bool
@@ -690,7 +690,7 @@ function wc_get_product_cat_ids( $product_id ) {
 /**
  * Gets data about an attachment, such as alt text and captions.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  *
  * @param int|null        $attachment_id Attachment ID.
  * @param WC_Product|bool $product WC_Product object.
@@ -761,7 +761,7 @@ function wc_get_product_attachment_props( $attachment_id = null, $product = fals
 /**
  * Get product visibility options.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @return array
  */
 function wc_get_product_visibility_options() {
@@ -778,7 +778,7 @@ function wc_get_product_visibility_options() {
 /**
  * Get min/max price meta query args.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param array $args Min price and max price arguments.
  * @return array
  */
@@ -819,7 +819,7 @@ function wc_get_min_max_price_meta_query( $args ) {
 /**
  * Get product tax class options.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @return array
  */
 function wc_get_product_tax_class_options() {
@@ -838,7 +838,7 @@ function wc_get_product_tax_class_options() {
 /**
  * Get stock status options.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @return array
  */
 function wc_get_product_stock_status_options() {
@@ -852,7 +852,7 @@ function wc_get_product_stock_status_options() {
 /**
  * Get backorder options.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @return array
  */
 function wc_get_product_backorder_options() {
@@ -986,7 +986,7 @@ function wc_get_price_including_tax( $product, $args = array() ) {
 				/**
 			 * The woocommerce_adjust_non_base_location_prices filter can stop base taxes being taken off when dealing with out of base locations.
 			 * e.g. If a product costs 10 including tax, all users will pay 10 regardless of location and taxes.
-			 * This feature is experimental @since 2.4.7 and may change in the future. Use at your risk.
+			 * This feature is experimental @since WC-2.4.7 and may change in the future. Use at your risk.
 			 */
 			} elseif ( $tax_rates !== $base_tax_rates && apply_filters( 'woocommerce_adjust_non_base_location_prices', true ) ) {
 				$base_taxes   = WC_Tax::calc_tax( $line_price, $base_tax_rates, true );

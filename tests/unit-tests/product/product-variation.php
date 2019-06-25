@@ -8,14 +8,14 @@
 /**
  * Class Product_Variation.
  *
- * @since 3.0
+ * @since WC-3.0
  */
 class WC_Tests_Product_Variation extends WC_Unit_Test_Case {
 
 	/**
 	 * Test is_sold_individually().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_is_sold_individually() {
 		// Create a variable product with sold individually.

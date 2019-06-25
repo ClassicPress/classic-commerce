@@ -3,14 +3,14 @@
 /**
  * Class WC_Tests_Logger
  * @package WooCommerce\Tests\Log
- * @since 2.3
+ * @since WC-2.3
  */
 class WC_Tests_Logger extends WC_Unit_Test_Case {
 
 	/**
 	 * Test add().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_add() {
 		$time = time();
@@ -38,7 +38,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test clear().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_clear() {
 		$file = wc_get_log_file_path( 'unit-tests' );
@@ -51,7 +51,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test log() complains for bad levels.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_bad_level() {
 		$log = new WC_Logger( null, 'debug' );
@@ -62,7 +62,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test log().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_log() {
 		$handler = $this->create_mock_handler();
@@ -80,7 +80,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test logs passed to all handlers.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_log_handlers() {
 		$false_handler = $this
@@ -116,7 +116,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test WC_Logger->[debug..emergency] methods
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_level_methods() {
 		$handler = $this->create_mock_handler();
@@ -134,7 +134,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test 'woocommerce_register_log_handlers' filter.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_woocommerce_register_log_handlers_filter() {
 		add_filter( 'woocommerce_register_log_handlers', array( $this, 'return_assertion_handlers' ) );
@@ -153,7 +153,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	/**
 	 * Test no filtering by default
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_threshold_defaults() {
 		$time = time();
@@ -200,7 +200,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	 * If a handler does not implement WC_Log_Handler_Interface, WC_Logger should complain
 	 * (wc_doing_it_wrong) and not register the handler. This handler should receive no messages.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_validate_handler_interface() {
 		$handler = $this
@@ -218,7 +218,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	 * Returns an array of 1 mocked handler.
 	 * The handler expects to receive exactly 8 messages (1 for each level).
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @return WC_Log_Handler[] array of mocked handlers.
 	 */
@@ -237,7 +237,7 @@ class WC_Tests_Logger extends WC_Unit_Test_Case {
 	 *
 	 * Calls should have the message '[level] message'
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @return WC_Log_Handler mock object
 	 */

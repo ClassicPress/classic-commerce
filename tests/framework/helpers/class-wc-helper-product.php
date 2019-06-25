@@ -22,7 +22,7 @@ class WC_Helper_Product {
 	/**
 	 * Create simple product.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 * @return WC_Product_Simple
 	 */
 	public static function create_simple_product( $save = true ) {
@@ -51,7 +51,7 @@ class WC_Helper_Product {
 	/**
 	 * Create external product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return WC_Product_External
 	 */
 	public static function create_external_product() {
@@ -71,7 +71,7 @@ class WC_Helper_Product {
 	/**
 	 * Create grouped product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return WC_Product_Grouped
 	 */
 	public static function create_grouped_product() {
@@ -91,7 +91,7 @@ class WC_Helper_Product {
 	/**
 	 * Create a dummy variation product.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 *
 	 * @return WC_Product_Variable
 	 */
@@ -140,7 +140,7 @@ class WC_Helper_Product {
 	/**
 	 * Create a dummy attribute.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 *
 	 * @param string        $attribute_name Name of attribute to create.
 	 * @param array(string) $terms          Terms to create for the attribute.
@@ -206,7 +206,7 @@ class WC_Helper_Product {
 	 *
 	 * @param $attribute_id
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public static function delete_attribute( $attribute_id ) {
 		global $wpdb;
@@ -221,7 +221,7 @@ class WC_Helper_Product {
 	/**
 	 * Creates a new product review on a specific product.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 * @param $product_id integer Product ID that the review is for
 	 * @param $revieww_content string Content to use for the product review
 	 * @return integer Product Review ID
@@ -242,7 +242,7 @@ class WC_Helper_Product {
 
 	/**
 	 * A helper function for hooking into save_post during the test_product_meta_save_post test.
-	 * @since 3.0.1
+	 * @since WC-3.0.1
 	 */
 	public static function save_post_test_update_meta_data_direct( $id ) {
 		update_post_meta( $id, '_test2', 'world' );

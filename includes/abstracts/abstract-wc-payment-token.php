@@ -57,7 +57,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	 * gateway_id   - string  Required - Identifier for the gateway this token is associated with
 	 * user_id      - int     Optional - ID for the user this token is associated with. 0 if this token is not associated with a user
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param mixed $token Token.
 	 */
 	public function __construct( $token = '' ) {
@@ -124,7 +124,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Returns the user ID associated with the token or false if this token is not associated.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param  string $context In what context to execute this.
 	 * @return int User ID if this token is associated with a user or 0 if no user is associated
 	 */
@@ -135,7 +135,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Returns the ID of the gateway associated with this payment token.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param  string $context In what context to execute this.
 	 * @return string Gateway ID
 	 */
@@ -146,7 +146,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Returns the ID of the gateway associated with this payment token.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param  string $context In what context to execute this.
 	 * @return string Gateway ID
 	 */
@@ -163,7 +163,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Set the raw payment token.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $token Payment token.
 	 */
 	public function set_token( $token ) {
@@ -173,7 +173,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Set the user ID for the user associated with this order.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $user_id User ID.
 	 */
 	public function set_user_id( $user_id ) {
@@ -183,7 +183,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Set the gateway ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $gateway_id Gateway ID.
 	 */
 	public function set_gateway_id( $gateway_id ) {
@@ -193,7 +193,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Marks the payment as default or non-default.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param boolean $is_default True or false.
 	 */
 	public function set_default( $is_default ) {
@@ -209,7 +209,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Returns if the token is marked as default.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return boolean True if the token is default
 	 */
 	public function is_default() {
@@ -219,7 +219,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Validate basic token info (token and type are required).
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return boolean True if the passed data is valid
 	 */
 	public function validate() {

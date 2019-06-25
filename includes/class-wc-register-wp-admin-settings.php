@@ -25,7 +25,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Hooks into the settings API and starts registering our settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Email|WC_Settings_Page $object The object that contains the settings to register.
 	 * @param string                    $type   Type of settings to register (email or page).
 	 */
@@ -136,7 +136,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Register a setting into the format expected for the Settings REST API.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  array $setting Setting data.
 	 * @return array|bool
 	 */

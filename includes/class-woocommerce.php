@@ -26,7 +26,7 @@ final class WooCommerce {
 	 * The single instance of the class.
 	 *
 	 * @var WooCommerce
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
 
@@ -105,7 +105,7 @@ final class WooCommerce {
 	 *
 	 * Ensures only one instance of WooCommerce is loaded or can be loaded.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @static
 	 * @see WC()
 	 * @return WooCommerce - Main instance.
@@ -120,7 +120,7 @@ final class WooCommerce {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __clone() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
@@ -129,7 +129,7 @@ final class WooCommerce {
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __wakeup() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
@@ -161,7 +161,7 @@ final class WooCommerce {
 	/**
 	 * Hook into actions and filters.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	private function init_hooks() {
 		register_activation_hook( WC_PLUGIN_FILE, array( 'WC_Install', 'install' ) );
@@ -179,7 +179,7 @@ final class WooCommerce {
 	/**
 	 * Ensures fatal errors are logged so they can be picked up in the status report.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function log_errors() {
 		$error = error_get_last();
@@ -402,7 +402,7 @@ final class WooCommerce {
 	/**
 	 * Include classes for theme support.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	private function theme_support_includes() {
 		if ( wc_is_active_theme( array( 'twentynineteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', 'twentyfourteen', 'twentythirteen', 'twentyeleven', 'twentytwelve', 'twentyten' ) ) ) {
@@ -553,7 +553,7 @@ final class WooCommerce {
 	 * woocommerce_thumbnail - Used in product listings. We assume these work for a 3 column grid layout.
 	 * woocommerce_single - Used on single product pages for the main image.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function add_image_sizes() {
 		$thumbnail         = wc_get_image_size( 'thumbnail' );
@@ -636,7 +636,7 @@ final class WooCommerce {
 	/**
 	 * Load & enqueue active webhooks.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	private function load_webhooks() {
 

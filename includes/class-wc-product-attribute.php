@@ -20,7 +20,7 @@ class WC_Product_Attribute implements ArrayAccess {
 	/**
 	 * Data array.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(

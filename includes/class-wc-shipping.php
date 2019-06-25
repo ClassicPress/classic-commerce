@@ -49,7 +49,7 @@ class WC_Shipping {
 	 * The single instance of the class
 	 *
 	 * @var WC_Shipping
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
 
@@ -58,7 +58,7 @@ class WC_Shipping {
 	 *
 	 * Ensures only one instance of WC_Shipping is loaded or can be loaded.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return WC_Shipping Main instance
 	 */
 	public static function instance() {
@@ -71,7 +71,7 @@ class WC_Shipping {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __clone() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
@@ -80,7 +80,7 @@ class WC_Shipping {
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __wakeup() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
@@ -261,7 +261,7 @@ class WC_Shipping {
 		 * but before Woocommerce does anything with them. A good example of usage is to merge the shipping methods for multiple
 		 * packages for marketplaces.
 		 *
-		 * @since 2.6.0
+		 * @since WC-2.6.0
 		 *
 		 * @param array $packages The array of packages after shipping costs are calculated.
 		 */

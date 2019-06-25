@@ -49,7 +49,7 @@ class WC_AJAX {
 	/**
 	 * Send headers for WC Ajax Requests.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 */
 	private static function wc_ajax_headers() {
 		send_origin_headers();
@@ -2719,7 +2719,7 @@ class WC_AJAX {
 	/**
 	 * Toggle payment gateway on or off via AJAX.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 */
 	public static function toggle_gateway_enabled() {
 		if ( current_user_can( 'manage_woocommerce' ) && check_ajax_referer( 'woocommerce-toggle-payment-gateway-enabled', 'security' ) ) {

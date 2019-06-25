@@ -3,14 +3,14 @@
 /**
  * Class Notice_Functions.
  * @package WooCommerce\Tests\Util
- * @since 2.2
+ * @since WC-2.2
  */
 class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Clear out notices after each test.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function tearDown() {
 
@@ -20,7 +20,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_notice_count().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	function test_wc_notice_count() {
 
@@ -58,7 +58,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_has_notice().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	function test_wc_has_notice() {
 
@@ -74,7 +74,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_notice_add_notice().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	function test_wc_add_notice() {
 
@@ -97,7 +97,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_clear_notices().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	function test_wc_clear_notices() {
 
@@ -109,7 +109,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_print_notices().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_print_notices() {
 
@@ -125,7 +125,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_print_notice() w/ success type.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_print_success_notice() {
 
@@ -137,7 +137,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_print_notice() w/ notice type.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_print_info_notice() {
 
@@ -149,7 +149,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_print_notice() w/ error type.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_print_error_notice() {
 
@@ -162,7 +162,7 @@ class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_notices().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_notices() {
 

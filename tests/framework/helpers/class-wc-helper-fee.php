@@ -10,7 +10,7 @@ class WC_Helper_Fee {
 	/**
 	 * Create a cart simple fee without taxes.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public static function create_simple_fee() {
 		if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
@@ -23,7 +23,7 @@ class WC_Helper_Fee {
 	/**
 	 * Create a cart fee with taxes.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public static function create_taxed_fee() {
 		if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
@@ -36,7 +36,7 @@ class WC_Helper_Fee {
 	/**
 	 * Create a negative cart fee without taxes.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public static function create_negative_fee() {
 		if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
@@ -50,7 +50,7 @@ class WC_Helper_Fee {
 	/**
 	 * Create a negative cart fee with taxes.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public static function create_negative_taxed_fee() {
 		if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
@@ -64,7 +64,7 @@ class WC_Helper_Fee {
 	 * Add a cart fee.
 	 * Note: need to be added before add any product in the cart.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 * @param string $fee Type of fee to add (Default: simple)
 	 */
 	public static function add_cart_fee( $fee = '' ) {
@@ -86,7 +86,7 @@ class WC_Helper_Fee {
 	/**
 	 * Remove a cart fee.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 * @param string $fee Type of fee to remove (Default: simple)
 	 */
 	public static function remove_cart_fee( $fee = '' ) {

@@ -268,7 +268,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * Admin Panel Options.
 	 * - Options for bits like 'title' and availability on a country-by-country basis.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 */
 	public function admin_options() {
 		if ( $this->is_valid_for_use() ) {

@@ -27,7 +27,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	 * GET /coupons/count
 	 * GET /coupons/<id>
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -59,7 +59,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get all coupons
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param array $filter
 	 * @param int $page
@@ -90,7 +90,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the coupon for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param int $id the coupon ID
 	 * @param string $fields fields to include in response
@@ -140,7 +140,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the total number of coupons
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param array $filter
 	 *
@@ -160,7 +160,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the coupon for the given code
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $code the coupon code
 	 * @param string $fields fields to include in response
 	 * @return int|WP_Error
@@ -227,7 +227,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Helper method to get coupon post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */

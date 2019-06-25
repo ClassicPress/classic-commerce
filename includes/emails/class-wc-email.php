@@ -302,7 +302,7 @@ class WC_Email extends WC_Settings_API {
 		/**
 		 * Filter for main find/replace.
 		 *
-		 * @since 3.2.0
+		 * @since WC-3.2.0
 		 */
 		return apply_filters( 'woocommerce_email_format_string', str_replace( $find, $replace, $string ), $this );
 	}
@@ -542,7 +542,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Return if emogrifier library is supported.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return bool
 	 */
 	protected function supports_emogrifier() {
@@ -705,7 +705,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Save the email templates.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @param string $template_code Template code.
 	 * @param string $template_path Template path.
 	 */
@@ -846,7 +846,7 @@ class WC_Email extends WC_Settings_API {
 	 * Setup the email settings screen.
 	 * Override this in your email.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 */
 	public function admin_options() {
 		// Do admin actions.

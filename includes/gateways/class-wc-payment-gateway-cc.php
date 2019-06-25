@@ -21,7 +21,7 @@ class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
 	 * Builds our payment fields area - including tokenization fields for logged
 	 * in users, and the actual payment fields.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function payment_fields() {
 		if ( $this->supports( 'tokenization' ) && is_checkout() ) {
@@ -50,7 +50,7 @@ class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
 	/**
 	 * Outputs fields for entering credit card information.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function form() {
 		wp_enqueue_script( 'wc-credit-card-form' );

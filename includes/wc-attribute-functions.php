@@ -73,7 +73,7 @@ function wc_attribute_taxonomy_name( $attribute_name ) {
 /**
  * Get the attribute name used when storing values in post meta.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $attribute_name Attribute name.
  * @return string
  */
@@ -361,7 +361,7 @@ function wc_is_attribute_in_product_name( $attribute, $name ) {
  * Callback for array filter to get default attributes.  Will allow for '0' string values, but regard all other
  * class PHP FALSE equivalents normally.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  * @param mixed $attribute Attribute being considered for exclusion from parent array.
  * @return bool
  */

@@ -97,7 +97,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Return the name of the option in the WP DB.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_option_key() {
@@ -180,7 +180,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Update a single option.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $key Option key.
 	 * @param mixed  $value Value to set.
 	 * @return bool was anything saved?
@@ -255,7 +255,7 @@ abstract class WC_Settings_API {
 	 * and make sure the $settings array is either the default
 	 * or the settings stored in the database.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 * @uses get_option(), add_option()
 	 */
 	public function init_settings() {

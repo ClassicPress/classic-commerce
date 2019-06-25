@@ -305,7 +305,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Return if product manage stock.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return boolean|string true, false, or parent.
 	 */
@@ -339,7 +339,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	 * Get backorders.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return string yes no or notify
 	 */
 	public function get_backorders( $context = 'view' ) {
@@ -355,7 +355,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get main image ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -372,7 +372,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get purchase note.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -389,7 +389,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get shipping class ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -422,7 +422,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Set the parent data array for this variation.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $parent_data parent data array for this variation.
 	 */
 	public function set_parent_data( $parent_data ) {

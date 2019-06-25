@@ -3,14 +3,14 @@
  * Data Store Tests: Tests WC_Products's WC_Data_Store.
  *
  * @package WooCommerce\Tests\Product
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 
 	/**
 	 * Make sure the default product store loads.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @group core-only
 	 */
 	public function test_product_store_loads() {
@@ -22,7 +22,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test creating a new product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_product_create() {
 		$product = new WC_Product();
@@ -39,7 +39,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test reading a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_product_read() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -51,7 +51,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test updating a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_product_update() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -70,7 +70,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test trashing a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_product_trash() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -81,7 +81,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test deleting a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_product_delete() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -92,7 +92,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test creating a new grouped product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_grouped_product_create() {
 		$simple_product = WC_Helper_Product::create_simple_product();
@@ -108,7 +108,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test getting / reading an grouped product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_grouped_product_read() {
 		$product      = WC_Helper_Product::create_grouped_product();
@@ -120,7 +120,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test updating an grouped product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_grouped_product_update() {
 		$product        = WC_Helper_Product::create_grouped_product();
@@ -141,7 +141,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test creating a new external product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_external_product_create() {
 		$product = new WC_Product_External();
@@ -163,7 +163,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	 * Test getting / reading an external product. Make sure both our external
 	 * product data and the main product data are present.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_external_product_read() {
 		$product = WC_Helper_Product::create_external_product();
@@ -177,7 +177,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	 * Test updating an external product. Make sure both our external
 	 * product data and the main product data are written to and present.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_external_product_update() {
 		$product = WC_Helper_Product::create_external_product();
@@ -199,7 +199,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test reading a variable product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_variable_read() {
 		$product  = WC_Helper_Product::create_variation_product();
@@ -232,7 +232,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test variable and variations.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_variables_and_variations() {
 		$product = new WC_Product_Variable();
@@ -583,7 +583,7 @@ class WC_Tests_Product_Data_Store extends WC_Unit_Test_Case {
 	/**
 	 * Test to make sure meta can still be set while hooked using save_post.
 	 * https://github.com/woocommerce/woocommerce/issues/13960
-	 * @since 3.0.1
+	 * @since WC-3.0.1
 	 */
 	public function test_product_meta_save_post() {
 		$product = new WC_Product();

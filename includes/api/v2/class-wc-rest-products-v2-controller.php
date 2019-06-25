@@ -1229,7 +1229,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Save default attributes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Product      $product Product instance.
 	 * @param WP_REST_Request $request Request data.

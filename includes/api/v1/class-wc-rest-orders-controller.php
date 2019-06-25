@@ -783,7 +783,7 @@ class WC_REST_Orders_V1_Controller extends WC_REST_Posts_Controller {
 
 		/**
 		 * Action hook to adjust item before save.
-		 * @since 3.0.0
+		 * @since WC-3.0.0
 		 */
 		do_action( 'woocommerce_rest_set_order_item', $item, $posted );
 

@@ -35,7 +35,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -398,7 +398,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	 * Filters out bad values from the settings array/filter so we
 	 * only return known values via the API.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  array $setting Settings.
 	 * @return array
 	 */
@@ -424,7 +424,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	 * to make sure we return these consistently the same we accept them.
 	 *
 	 * @todo remove in 4.0
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  array $setting Settings.
 	 * @return array
 	 */
@@ -492,7 +492,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Get the settings schema, conforming to JSON Schema.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array
 	 */
 	public function get_item_schema() {

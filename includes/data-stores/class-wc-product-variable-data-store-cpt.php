@@ -95,7 +95,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Read product data.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Product $product Product object.
 	 */
@@ -240,7 +240,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 		/**
 		 * Transient name for storing prices for this product (note: Max transient length is 45)
 		 *
-		 * @since 2.5.0 a single transient is used per product for all prices, rather than many transients per product.
+		 * @since WC-2.5.0 a single transient is used per product for all prices, rather than many transients per product.
 		 */
 		$transient_name = 'wc_var_prices_' . $product->get_id();
 
@@ -387,7 +387,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Does a child have a weight set?
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @return boolean
 	 */
@@ -400,7 +400,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Does a child have dimensions set?
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @return boolean
 	 */
@@ -413,7 +413,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Is a child in stock?
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @return boolean
 	 */
@@ -424,7 +424,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Does a child have a stock status?
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param WC_Product $product Product object.
 	 * @param string     $status 'instock', 'outofstock', or 'onbackorder'.
 	 * @return boolean
@@ -454,7 +454,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	 * @param WC_Product $product Product object.
 	 * @param string     $previous_name Variation previous name.
 	 * @param string     $new_name Variation new name.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function sync_variation_names( &$product, $previous_name = '', $new_name = '' ) {
 		if ( $new_name !== $previous_name ) {
@@ -479,7 +479,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	 * This sync function syncs downwards (from parent to child) when the variable product is saved.
 	 *
 	 * @param WC_Product $product Product object.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function sync_managed_variation_stock_status( &$product ) {
 		global $wpdb;
@@ -505,7 +505,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Sync variable product prices with children.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 */
 	public function sync_price( &$product ) {
@@ -534,7 +534,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	 * Sync variable product stock status with children.
 	 * Change does not persist unless saved by caller.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 */
 	public function sync_stock_status( &$product ) {
@@ -550,7 +550,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	/**
 	 * Delete variations of a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int  $product_id Product ID.
 	 * @param bool $force_delete False to trash.
 	 */

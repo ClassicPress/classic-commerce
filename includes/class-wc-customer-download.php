@@ -24,7 +24,7 @@ class WC_Customer_Download extends WC_Data implements ArrayAccess {
 	/**
 	 * Download Data array.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(
@@ -286,7 +286,7 @@ class WC_Customer_Download extends WC_Data implements ArrayAccess {
 	/**
 	 * Track a download on this permission.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @throws Exception When permission ID is invalid.
 	 * @param int    $user_id         Id of the user performing the download.
 	 * @param string $user_ip_address IP Address of the user performing the download.
@@ -341,7 +341,7 @@ WHERE permission_id = %d",
 	/**
 	 * Save data to the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return int Item ID
 	 */
 	public function save() {

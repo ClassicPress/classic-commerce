@@ -81,7 +81,7 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	/**
 	 * Returns topic count text.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param int $count Count text.
 	 * @return string
 	 */
@@ -108,7 +108,7 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	 * Returns topic count text.
 	 *
 	 * @deprecated 3.4.0
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $count Count text.
 	 * @return string
 	 */

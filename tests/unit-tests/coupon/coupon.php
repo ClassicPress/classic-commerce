@@ -17,7 +17,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test the code/id differentiation of the coupon constructor.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_constructor_code_id() {
 		$string_code_1 = 'test';
@@ -61,7 +61,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test add_discount method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_add_discount() {
 
@@ -78,7 +78,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test add_discount method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_add_discount_duplicate() {
 
@@ -98,7 +98,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test fixed cart discount method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_fixed_cart_discount() {
 
@@ -132,7 +132,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test fixed product discount method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_fixed_product_discount() {
 
@@ -169,7 +169,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test percent product discount method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_percent_discount() {
 
@@ -206,7 +206,7 @@ class WC_Tests_Coupon extends WC_Unit_Test_Case {
 	/**
 	 * Test date setters/getters.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_dates() {
 		$valid_coupon = WC_Helper_Coupon::create_coupon();

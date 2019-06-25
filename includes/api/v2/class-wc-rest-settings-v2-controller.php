@@ -35,7 +35,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -129,7 +129,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	 * Filters out bad values from the groups array/filter so we
 	 * only return known values via the API.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  array $group Group.
 	 * @return array
 	 */

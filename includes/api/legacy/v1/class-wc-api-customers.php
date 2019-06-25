@@ -29,7 +29,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Setup class, overridden to provide customer data to order response
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_API_Server $server
 	 */
 	public function __construct( WC_API_Server $server ) {
@@ -51,7 +51,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * GET /customers/<id>
 	 * GET /customers/<id>/orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -83,7 +83,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get all customers
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $fields
 	 * @param array $filter
 	 * @param int $page
@@ -114,7 +114,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the customer for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the customer ID
 	 * @param string $fields
 	 * @return array|WP_Error
@@ -174,7 +174,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the total number of customers
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $filter
 	 * @return array|WP_Error
 	 */
@@ -243,7 +243,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the orders for a customer
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the customer ID
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -284,7 +284,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * Note that WP_User_Query does not have built-in pagination so limit & offset are used to provide limited
 	 * pagination support
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_User_Query
 	 */
@@ -345,7 +345,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Add customer data to orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param $order_data
 	 * @param $order
 	 * @return array
@@ -397,7 +397,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Modify the WP_User_Query to support filtering on the date the customer was created
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_User_Query $query
 	 */
 	public function modify_user_query( $query ) {
@@ -418,7 +418,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * 2) the ID returns a valid WP_User
 	 * 3) the current user has the proper permissions
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::validate_request()
 	 * @param string|int $id the customer ID
 	 * @param string $type the request type, unused because this method overrides the parent class
@@ -469,7 +469,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Check if the current user can read users
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::is_readable()
 	 * @param int|WP_Post $post unused
 	 * @return bool true if the current user can read users, false otherwise

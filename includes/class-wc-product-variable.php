@@ -63,7 +63,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Get the add to cart button text description - used in aria tags.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @return string
 	 */
 	public function add_to_cart_description() {
@@ -220,7 +220,7 @@ class WC_Product_Variable extends WC_Product {
 	 *
 	 * This is lazy loaded as it's not used often and does require several queries.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array Children ids
 	 */
 	public function get_visible_children() {
@@ -363,7 +363,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Sets an array of variation attributes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $variation_attributes Attributes list.
 	 */
 	public function set_variation_attributes( $variation_attributes ) {
@@ -373,7 +373,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Sets an array of children for the product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $children Childre products.
 	 */
 	public function set_children( $children ) {
@@ -383,7 +383,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Sets an array of visible children only.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $visible_children List of visible children products.
 	 */
 	public function set_visible_children( $visible_children ) {
@@ -399,7 +399,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Ensure properties are set correctly before save.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function validate_props() {
 		// Before updating, ensure stock props are all aligned. Qty and backorders are not needed if not stock managed.
@@ -430,7 +430,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Save data (either create or update depending on if we are working on an existing product).
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function save() {
 		$this->validate_props();
@@ -486,7 +486,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Is a child on backorder?
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @return boolean
 	 */
 	public function child_is_on_backorder() {

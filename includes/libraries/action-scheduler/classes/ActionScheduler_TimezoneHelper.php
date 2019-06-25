@@ -41,7 +41,7 @@ abstract class ActionScheduler_TimezoneHelper {
 	 * string, then an empty string will be returned, and the UTC offset should be used to set a DateTime's
 	 * timezone.
 	 *
-	 * @since 2.1.0
+	 * @since WC-2.1.0
 	 * @return string PHP timezone string for the site or empty if no timezone string is available.
 	 */
 	protected static function get_local_timezone_string( $reset = false ) {

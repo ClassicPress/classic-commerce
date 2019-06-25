@@ -8,7 +8,7 @@
 /**
  * Class Functions.
  *
- * @since 2.2
+ * @since WC-2.2
  */
 class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 
@@ -22,7 +22,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_string_to_bool().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_string_to_bool() {
 		$this->assertTrue( wc_string_to_bool( 1 ) );
@@ -36,7 +36,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_bool_to_string().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_bool_to_string() {
 		$this->assertEquals( array( 'yes', 'no' ), array( wc_bool_to_string( true ), wc_bool_to_string( false ) ) );
@@ -45,7 +45,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_string_to_array().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_string_to_array() {
 		$this->assertEquals( array(
@@ -57,7 +57,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_sanitize_taxonomy_name().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_sanitize_taxonomy_name() {
 		$this->assertEquals( 'name-with-spaces', wc_sanitize_taxonomy_name( 'Name With Spaces' ) );
@@ -69,7 +69,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_sanitize_permalink().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_sanitize_permalink() {
 		$this->assertEquals( 'foo.com/bar', wc_sanitize_permalink( 'http://foo.com/bar' ) );
@@ -78,7 +78,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_filename_from_url().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_filename_from_url() {
 		$this->assertEquals( 'woocommerce.pdf', wc_get_filename_from_url( 'https://woocommerce.com/woocommerce.pdf' ) );
@@ -90,7 +90,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_dimension().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_dimension() {
 		// Save default.
@@ -163,7 +163,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_weight().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_get_weight() {
 		// Save default.
@@ -212,7 +212,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_trim_zeros().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_trim_zeros() {
 		$this->assertEquals( '$1', wc_trim_zeros( '$1.00' ) );
@@ -222,7 +222,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_round_tax_total().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_round_tax_total() {
 		update_option( 'woocommerce_prices_include_tax', 'no' );
@@ -250,7 +250,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_refund_total().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_refund_total() {
 		$this->assertEquals( -10, wc_format_refund_total( 10 ) );
@@ -260,7 +260,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_decimal().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_decimal() {
 		// Given string.
@@ -329,7 +329,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_float_to_string().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_float_to_string() {
 		// Given string, return string.
@@ -340,7 +340,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_localized_price().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_localized_price() {
 		// Save default.
@@ -356,7 +356,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_localized_decimal().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_localized_decimal() {
 		$this->assertEquals( '1.17', wc_format_localized_decimal( '1.17' ) );
@@ -365,7 +365,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_coupon_code().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_coupon_code() {
 		$this->assertEquals( 'foo#bar', wc_format_coupon_code( 'FOO#bar<script>alert();</script>' ) );
@@ -374,7 +374,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_clean().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_clean() {
 		$this->assertEquals( 'cleaned', wc_clean( '<script>alert();</script>cleaned' ) );
@@ -384,7 +384,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_sanitize_textarea().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_sanitize_textarea() {
 		$this->assertEquals( "foo\ncleaned\nbar", wc_sanitize_textarea( "foo\n<script>alert();</script>cleaned\nbar" ) );
@@ -395,7 +395,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	 *
 	 * Note this is a basic type test as WP core already has coverage for wp_kses().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_sanitize_tooltip() {
 		$this->assertEquals( 'alert();cleaned&lt;p&gt;foo&lt;/p&gt;&lt;span&gt;bar&lt;/span&gt;', wc_sanitize_tooltip( '<script>alert();</script>cleaned<p>foo</p><span>bar</span>' ) );
@@ -404,7 +404,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_array_overlay().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_array_overlay() {
 		$a1 = array(
@@ -437,7 +437,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_stock_amount().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_stock_amount() {
 		$this->assertEquals( 10, wc_stock_amount( 10 ) );
@@ -448,7 +448,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_woocommerce_price_format().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_get_woocommerce_price_format() {
 		// Save default.
@@ -476,7 +476,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_price_thousand_separator().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_price_thousand_separator() {
 		$separator = get_option( 'woocommerce_price_thousand_sep' );
@@ -496,7 +496,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_price_decimal_separator().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_price_decimal_separator() {
 		$separator = get_option( 'woocommerce_price_decimal_sep' );
@@ -516,7 +516,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_price_decimals().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_price_decimals() {
 		$decimals = get_option( 'woocommerce_price_num_decimals' );
@@ -539,7 +539,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_price().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_price() {
 		// Common prices.
@@ -575,7 +575,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_let_to_num().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_let_to_num() {
 		$this->assertEquals( array( 10240, 10485760, 10737418240, 10995116277760, 11258999068426240 ), array(
@@ -590,7 +590,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_date_format().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_date_format() {
 		$this->assertEquals( get_option( 'date_format' ), wc_date_format() );
@@ -599,7 +599,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_time_format().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_time_format() {
 		$this->assertEquals( get_option( 'time_format' ), wc_time_format() );
@@ -608,7 +608,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_string_to_timestamp().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_string_to_timestamp() {
 		$this->assertEquals( 1507075200, wc_string_to_timestamp( '2017-10-04' ) );
@@ -618,7 +618,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_string_to_datetime().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_string_to_datetime() {
 		$data = wc_string_to_datetime( '2014-10-04' );
@@ -630,7 +630,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_timezone_string().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_timezone_string() {
 		// Test when timezone string exists.
@@ -659,7 +659,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_timezone_offset().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_timezone_offset() {
 		$this->assertEquals( 0.0, wc_timezone_offset() );
@@ -668,7 +668,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rgb_from_hex().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_rgb_from_hex() {
 		$rgb = array(
@@ -684,7 +684,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_hex_darker().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_hex_darker() {
 		$this->assertEquals( '#004178', wc_hex_darker( '005dab' ) );
@@ -694,7 +694,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_hex_lighter().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_hex_lighter() {
 		$this->assertEquals( '#4d8ec4', wc_hex_lighter( '005dab' ) );
@@ -705,7 +705,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_light_or_dark().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_light_or_dark() {
 		$this->assertEquals( '#FFFFFF', wc_light_or_dark( '005dab' ) );
@@ -715,7 +715,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_hex().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_hex() {
 		$this->assertEquals( '#CCCCCC', wc_format_hex( 'CCC' ) );
@@ -726,7 +726,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_postcode().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_postcode() {
 		// Generic postcode.
@@ -748,7 +748,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_normalize_postcode().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_normalize_postcode() {
 		$this->assertEquals( '99999999', wc_normalize_postcode( '99999-999' ) );
@@ -757,7 +757,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_phone_number().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_format_phone_number() {
 		$this->assertEquals( '1-610-385-0000', wc_format_phone_number( '1.610.385.0000' ) );
@@ -770,7 +770,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_trim_string().
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_trim_string() {
 		$this->assertEquals( 'string', wc_trim_string( 'string' ) );
@@ -782,7 +782,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_content().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_content() {
 		$this->assertEquals( "<p>foo</p>\n", wc_format_content( 'foo' ) );
@@ -791,7 +791,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_sanitize_term_text_based().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_sanitize_term_text_based() {
 		$this->assertEquals( 'foo', wc_sanitize_term_text_based( "<p>foo</p>\n" ) );
@@ -800,7 +800,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_make_numeric_postcode().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_make_numeric_postcode() {
 		$this->assertEquals( '16050300', wc_make_numeric_postcode( 'PE30' ) );
@@ -809,7 +809,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_stock_for_display().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_stock_for_display() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -834,7 +834,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_stock_quantity_for_display().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_stock_quantity_for_display() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -848,7 +848,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_sale_price().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_sale_price() {
 		$this->assertEquals( '<del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>10.00</span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>5.00</span></ins>', wc_format_sale_price( '10', '5' ) );
@@ -857,7 +857,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_price_range().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_price_range() {
 		$this->assertEquals( '<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>10.00</span> &ndash; <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>5.00</span>', wc_format_price_range( '10', '5' ) );
@@ -866,7 +866,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_weight().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_weight() {
 		$this->assertEquals( '10 kg', wc_format_weight( '10' ) );
@@ -875,7 +875,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_dimensions().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_dimensions() {
 		$this->assertEquals( '10 &times; 10 &times; 10 cm', wc_format_dimensions( array( 10, 10, 10 ) ) );
@@ -884,7 +884,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_datetime().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_format_datetime() {
 		$date = new WC_DateTime( '2017-10-05', new DateTimeZone( 'UTC' ) );
@@ -895,7 +895,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_do_oembeds().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_do_oembeds() {
 		// In this case should only return the URL back, since oEmbed will run other actions on frontend.
@@ -933,7 +933,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_string_before_colon().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_string_before_colon() {
 		$this->assertEquals( 'foo', wc_get_string_before_colon( 'foo:1' ) );
@@ -943,7 +943,7 @@ class WC_Tests_Formatting_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_array_merge_recursive_numeric().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_array_merge_recursive_numeric() {
 		$a = array(

@@ -132,7 +132,7 @@ class WC_Admin_Duplicate_Product {
 	 * @return WC_Product
 	 */
 	public function product_duplicate( $product ) {
-		// Filter to allow us to unset/remove data we don't want to copy to the duplicate. @since 2.6
+		// Filter to allow us to unset/remove data we don't want to copy to the duplicate. @since WC-2.6
 		$meta_to_exclude = array_filter( apply_filters( 'woocommerce_duplicate_product_exclude_meta', array() ) );
 
 		$duplicate = clone $product;
@@ -153,7 +153,7 @@ class WC_Admin_Duplicate_Product {
 			$duplicate->delete_meta_data( $meta_key );
 		}
 
-		// This action can be used to modify the object further before it is created - it will be passed by reference. @since 3.0
+		// This action can be used to modify the object further before it is created - it will be passed by reference. @since WC-3.0
 		do_action( 'woocommerce_product_duplicate_before_save', $duplicate, $product );
 
 		// Save parent product.
@@ -176,7 +176,7 @@ class WC_Admin_Duplicate_Product {
 					$child_duplicate->delete_meta_data( $meta_key );
 				}
 
-				// This action can be used to modify the object further before it is created - it will be passed by reference. @since 3.0
+				// This action can be used to modify the object further before it is created - it will be passed by reference. @since WC-3.0
 				do_action( 'woocommerce_product_duplicate_before_save', $child_duplicate, $child );
 
 				$child_duplicate->save();

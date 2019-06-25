@@ -3,14 +3,14 @@
 /**
  * REST API Functions.
  * @package WooCommerce\Tests\API
- * @since 2.6.0
+ * @since WC-2.6.0
  */
 class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Test wc_rest_prepare_date_response().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_prepare_date_response() {
 		$this->assertEquals( '2016-06-06T06:06:06', wc_rest_prepare_date_response( '2016-06-06 06:06:06' ) );
@@ -19,7 +19,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_upload_image_from_url().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_upload_image_from_url() {
 		// Only test the error, no need to upload images.
@@ -29,7 +29,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_set_uploaded_image_as_attachment().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_set_uploaded_image_as_attachment() {
 		$this->assertInternalType( 'int', wc_rest_set_uploaded_image_as_attachment( array( 'file' => '', 'url' => '' ) ) );
@@ -38,7 +38,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_validate_reports_request_arg().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_validate_reports_request_arg() {
 		$request = new WP_REST_Request( 'GET', '/wc/v3/foo', array(
@@ -61,7 +61,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_urlencode_rfc3986().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_urlencode_rfc3986() {
 		$this->assertEquals( 'https%3A%2F%2Fwoocommerce.com%2F', wc_rest_urlencode_rfc3986( 'https://woocommerce.com/' ) );
@@ -70,7 +70,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_check_post_permissions().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_check_post_permissions() {
 		$this->assertFalse( wc_rest_check_post_permissions( 'shop_order' ) );
@@ -79,7 +79,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_check_user_permissions().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_check_user_permissions() {
 		$this->assertFalse( wc_rest_check_user_permissions() );
@@ -88,7 +88,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_check_product_term_permissions().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_check_product_term_permissions() {
 		$this->assertFalse( wc_rest_check_product_term_permissions( 'product_cat' ) );
@@ -97,7 +97,7 @@ class WC_Tests_API_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_rest_check_manager_permissions().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_rest_check_manager_permissions() {
 		$this->assertFalse( wc_rest_check_manager_permissions( 'reports' ) );

@@ -59,7 +59,7 @@ class WC_Payment_Tokens {
 	/**
 	 * Returns an array of payment token objects associated with the passed customer ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param  int    $customer_id Customer ID.
 	 * @param  string $gateway_id  Optional Gateway ID for getting tokens for a specific gateway.
 	 * @return array               Array of token objects.
@@ -104,7 +104,7 @@ class WC_Payment_Tokens {
 	/**
 	 * Returns an array of payment token objects associated with the passed order ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $order_id Order ID.
 	 * @return array Array of token objects.
 	 */
@@ -133,7 +133,7 @@ class WC_Payment_Tokens {
 	/**
 	 * Get a token object by ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 *
 	 * @param int    $token_id Token ID.
 	 * @param object $token_result Token result.
@@ -169,7 +169,7 @@ class WC_Payment_Tokens {
 	/**
 	 * Remove a payment token from the database by ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param WC_Payment_Token $token_id Token ID.
 	 */
 	public static function delete( $token_id ) {
@@ -184,7 +184,7 @@ class WC_Payment_Tokens {
 	/**
 	 * Loops through all of a users payment tokens and sets is_default to false for all but a specific token.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $user_id  User to set a default for.
 	 * @param int $token_id The ID of the token that should be default.
 	 */

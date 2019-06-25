@@ -20,7 +20,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 	/**
 	 * Get the content type for the response
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return string
 	 */
 	public function get_content_type() {
@@ -31,7 +31,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 	/**
 	 * Parse the raw request body entity
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $body the raw request body
 	 * @return array|mixed
 	 */
@@ -43,7 +43,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 	/**
 	 * Generate a JSON response given an array of data
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data the response data
 	 * @return string
 	 */

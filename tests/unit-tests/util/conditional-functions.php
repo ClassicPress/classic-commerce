@@ -3,14 +3,14 @@
 /**
  * Class Conditional_Functions.
  * @package WooCommerce\Tests\Util
- * @since 2.3.0
+ * @since WC-2.3.0
  */
 class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Test is_store_notice_showing().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_is_store_notice_showing() {
 
@@ -20,7 +20,7 @@ class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_tax_enabled().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_tax_enabled() {
 
@@ -30,7 +30,7 @@ class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_prices_include_tax().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_prices_include_tax() {
 
@@ -40,7 +40,7 @@ class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Data provider for test_wc_is_valid_url.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function data_provider_test_wc_is_valid_url() {
 		return array(
@@ -83,7 +83,7 @@ class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {
 	 * Test wc_is_valid_url().
 	 *
 	 * @dataProvider data_provider_test_wc_is_valid_url
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_is_valid_url( $assert, $values ) {
 		$this->assertEquals( $assert,  $values );

@@ -156,7 +156,7 @@ class WC_Post_Data {
 	/**
 	 * Handle type changes.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product data.
 	 * @param string     $from    Origin type.
 	 * @param string     $to      New type.
@@ -301,7 +301,7 @@ class WC_Post_Data {
 	/**
 	 * Change embed data for certain post types.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array   $data The response data.
 	 * @param WP_Post $post The post object.
 	 * @return array
@@ -417,7 +417,7 @@ class WC_Post_Data {
 	/**
 	 * Before deleting an order, do some cleanup.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param int $order_id Order ID.
 	 */
 	public static function before_delete_order( $order_id ) {
@@ -515,7 +515,7 @@ class WC_Post_Data {
 	/**
 	 * Ensure default category gets set.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param int    $object_id Product ID.
 	 * @param array  $terms     Terms array.
 	 * @param array  $tt_ids    Term ids array.

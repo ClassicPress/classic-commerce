@@ -578,7 +578,7 @@ class WC_REST_Product_Attributes_V1_Controller extends WC_REST_Controller {
 	 * Schedule to flush rewrite rules.
 	 *
 	 * @deprecated 3.2.0
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function flush_rewrite_rules() {
 		wp_schedule_single_event( time(), 'woocommerce_flush_rewrite_rules' );

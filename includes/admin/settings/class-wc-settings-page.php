@@ -46,7 +46,7 @@ if ( ! class_exists( 'WC_Settings_Page', false ) ) :
 		/**
 		 * Get settings page ID.
 		 *
-		 * @since 3.0.0
+		 * @since WC-3.0.0
 		 * @return string
 		 */
 		public function get_id() {
@@ -56,7 +56,7 @@ if ( ! class_exists( 'WC_Settings_Page', false ) ) :
 		/**
 		 * Get settings page label.
 		 *
-		 * @since 3.0.0
+		 * @since WC-3.0.0
 		 * @return string
 		 */
 		public function get_label() {

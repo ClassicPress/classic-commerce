@@ -18,7 +18,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Setup class.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 */
 	public function __construct() {
 		parent::__construct();
@@ -42,7 +42,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Add new query vars.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 * @param array $vars Query vars.
 	 * @return string[]
 	 */
@@ -55,7 +55,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * WC API for payment gateway IPNs, etc.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 */
 	public static function add_endpoint() {
 		parent::add_endpoint();
@@ -105,7 +105,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Init WP REST API.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	private function rest_api_init() {
 		// REST API was included starting WordPress 4.4.
@@ -122,7 +122,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Include REST API classes.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	private function rest_api_includes() {
 		// Exception handler.
@@ -244,7 +244,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Register REST API routes.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function register_rest_routes() {
 		// Register settings to the REST API.

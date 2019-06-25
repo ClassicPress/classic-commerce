@@ -25,7 +25,7 @@ class WC_API_Resource {
 	/**
 	 * Setup class
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_API_Server $server
 	 */
 	public function __construct( WC_API_Server $server ) {
@@ -73,7 +73,7 @@ class WC_API_Resource {
 	 * 2) the ID returns a valid post object and matches the provided post type
 	 * 3) the current user has the proper permissions to read/edit/delete the post
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string|int $id the post ID
 	 * @param string $type the post type, either `shop_order`, `shop_coupon`, or `product`
 	 * @param string $context the context of the request, either `read`, `edit` or `delete`
@@ -140,7 +140,7 @@ class WC_API_Resource {
 	/**
 	 * Add common request arguments to argument list before WP_Query is run
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $base_args required arguments for the query (e.g. `post_type`, etc)
 	 * @param array $request_args arguments provided in the request
 	 * @return array
@@ -235,7 +235,7 @@ class WC_API_Resource {
 	 * Add meta to resources when requested by the client. Meta is added as a top-level
 	 * `<resource_name>_meta` attribute (e.g. `order_meta`) as a list of key/value pairs
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data the resource data
 	 * @param object $resource the resource object (e.g WC_Order)
 	 * @return mixed
@@ -295,7 +295,7 @@ class WC_API_Resource {
 	/**
 	 * Restrict the fields included in the response if the request specified certain only certain fields should be returned
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data the response data
 	 * @param object $resource the object that provided the response data, e.g. WC_Coupon or WC_Order
 	 * @param array|string the requested list of fields to include in the response
@@ -350,7 +350,7 @@ class WC_API_Resource {
 	/**
 	 * Delete a given resource
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the resource ID
 	 * @param string $type the resource post type, or `customer`
 	 * @param bool $force true to permanently delete resource, false to move to trash (not supported for `customer`)
@@ -396,7 +396,7 @@ class WC_API_Resource {
 	/**
 	 * Checks if the given post is readable by the current user
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::check_permission()
 	 * @param WP_Post|int $post
 	 * @return bool
@@ -409,7 +409,7 @@ class WC_API_Resource {
 	/**
 	 * Checks if the given post is editable by the current user
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::check_permission()
 	 * @param WP_Post|int $post
 	 * @return bool
@@ -423,7 +423,7 @@ class WC_API_Resource {
 	/**
 	 * Checks if the given post is deletable by the current user
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::check_permission()
 	 * @param WP_Post|int $post
 	 * @return bool
@@ -436,7 +436,7 @@ class WC_API_Resource {
 	/**
 	 * Checks the permissions for the current user given a post and context
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_Post|int $post
 	 * @param string $context the type of permission to check, either `read`, `write`, or `delete`
 	 * @return bool true if the current user has the permissions to perform the context on the post

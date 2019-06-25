@@ -181,7 +181,7 @@ function woocommerce_settings_get_option( $option_name, $default = '' ) {
 /**
  * Save order items. Uses the CRUD.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param int   $order_id Order ID
  * @param array $items Order items to save
  */
@@ -320,7 +320,7 @@ function wc_save_order_items( $order_id, $items ) {
 /**
  * Get HTML for some action buttons. Used in list tables.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param array $actions Actions to output.
  * @return string
  */

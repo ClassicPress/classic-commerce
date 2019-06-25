@@ -9,7 +9,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Helper method to get the checkout URL.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @return string
 	 */
@@ -41,7 +41,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_checkout_url over HTTP.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 */
 	public function test_get_checkout_url_regular() {
 		// Make sure pages exist
@@ -56,7 +56,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_checkout_url over HTTP.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 */
 	public function test_get_checkout_url_ssl() {
 		// Make sure pages exist
@@ -71,7 +71,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_empty_cart().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_empty_cart() {
 		// Create dummy product
@@ -90,7 +90,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_format_list_of_items().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_format_list_of_items() {
 		$items = array( 'Title 1', 'Title 2' );
@@ -101,7 +101,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_cart_totals_subtotal_html().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_cart_totals_subtotal_html() {
 		$product = WC_Helper_Product::create_simple_product();
@@ -114,7 +114,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_cart_totals_coupon_label().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_cart_totals_coupon_label() {
 		$coupon = WC_Helper_Coupon::create_coupon();
@@ -125,7 +125,7 @@ class WC_Tests_Cart_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test get_cart_url method.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 */
 	public function test_wc_get_cart_url() {
 		$cart_page_url = wc_get_page_permalink( 'cart' );

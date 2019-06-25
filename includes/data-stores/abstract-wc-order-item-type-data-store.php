@@ -37,7 +37,7 @@ abstract class Abstract_WC_Order_Item_Type_Data_Store extends WC_Data_Store_WP i
 	/**
 	 * Create a new order item in the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Order_Item $item Order item object.
 	 */
 	public function create( &$item ) {
@@ -62,7 +62,7 @@ abstract class Abstract_WC_Order_Item_Type_Data_Store extends WC_Data_Store_WP i
 	/**
 	 * Update a order item in the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Order_Item $item Order item object.
 	 */
 	public function update( &$item ) {
@@ -91,7 +91,7 @@ abstract class Abstract_WC_Order_Item_Type_Data_Store extends WC_Data_Store_WP i
 	/**
 	 * Remove an order item from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Order_Item $item Order item object.
 	 * @param array         $args Array of args to pass to the delete method.
 	 */
@@ -109,7 +109,7 @@ abstract class Abstract_WC_Order_Item_Type_Data_Store extends WC_Data_Store_WP i
 	/**
 	 * Read a order item from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Order_Item $item Order item object.
 	 *
@@ -145,7 +145,7 @@ abstract class Abstract_WC_Order_Item_Type_Data_Store extends WC_Data_Store_WP i
 	 * Saves an item's data to the database / item meta.
 	 * Ran after both create and update, so $item->get_id() will be set.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Order_Item $item Order item object.
 	 */
 	public function save_item_data( &$item ) {}

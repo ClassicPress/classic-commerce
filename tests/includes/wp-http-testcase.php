@@ -4,13 +4,13 @@
  * A test case parent for testing HTTP requests.
  *
  * @package WP_HTTP_Testcase
- * @since 1.0.0
+ * @since WC-1.0.0
  */
 
 /**
  * Parent test case for tests involving HTTP requests.
  *
- * @since 1.0.0
+ * @since WC-1.0.0
  */
 abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 
@@ -23,7 +23,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	 *    @type array  $request The request arguments.
 	 * }
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 *
 	 * @var array $http_requests
 	 */
@@ -32,7 +32,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * A function to simulate responses to requests.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 *
 	 * @type callable|false $http_responder
 	 */
@@ -41,7 +41,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Whether the class has been initialized.
 	 *
-	 * @since 1.3.0
+	 * @since WC-1.3.0
 	 *
 	 * @var bool
 	 */
@@ -50,7 +50,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * The local host to route requests to in 'local' mode.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var string
 	 */
@@ -59,7 +59,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Whether to use caching.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var bool
 	 */
@@ -70,7 +70,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	 *
 	 * Only the keys are used. The values are meaningless and are completely ignored.
 	 *
-	 * @since 1.3.0
+	 * @since WC-1.3.0
 	 *
 	 * @var array
 	 */
@@ -84,7 +84,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * The directory the cache files are in.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var string
 	 */
@@ -93,7 +93,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * The cache group to use.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var string
 	 */
@@ -102,7 +102,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * The currently loaded cache.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var array
 	 */
@@ -111,7 +111,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Whether the cache has changed.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @var bool
 	 */
@@ -123,14 +123,14 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	 * When true, the cache won't be checked for the next request, but the response
 	 * will still overwrite the existing cache.
 	 *
-	 * @since 1.2.0
+	 * @since WC-1.2.0
 	 *
 	 * @var bool
 	 */
 	protected $skip_cache_next = false;
 
 	/**
-	 * @since 1.3.0
+	 * @since WC-1.3.0
 	 */
 	public static function setUpBeforeClass() {
 
@@ -142,7 +142,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	}
 
 	/**
-	 * @since 1.3.1
+	 * @since WC-1.3.1
 	 */
 	public static function tearDownAfterClass() {
 
@@ -154,7 +154,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Set up for each test.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 */
 	public function setUp() {
 
@@ -172,7 +172,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Clean up the filters after each test.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 */
 	public function tearDown() {
 
@@ -190,7 +190,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Mock responses to HTTP requests coming from WordPress.
 	 *
-	 * @since 1.0.0
+	 * @since WC-1.0.0
 	 *
 	 * @WordPress\filter pre_http_request Added by self::setUp().
 	 *
@@ -217,7 +217,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Route a request through to a predefined host, with optional caching.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @param array  $request The request to route.
 	 * @param string $url     The URL the request is for.
@@ -254,7 +254,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Get the cache key for a request.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @param array $request The request.
 	 * @param string $url The URL the request is for.
@@ -275,7 +275,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Get the cached response to a request.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @param string $cache_key The cache key for the request.
 	 *
@@ -303,7 +303,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Save a response to the cache.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @param string $cache_key The cache key for the request.
 	 * @param array  $response  The response.
@@ -325,7 +325,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Initialize the class.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 */
 	public static function init() {
 
@@ -340,7 +340,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Get an environment setting.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 *
 	 * @param string $var     The name of the setting to get.
 	 * @param mixed  $default The default value for this setting.
@@ -365,7 +365,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Get an environment setting and assign it to the corresponding property.
 	 *
-	 * @since 1.2.0
+	 * @since WC-1.2.0
 	 *
 	 * @param string $var     The var name.
 	 * @param bool   $is_bool Whether this is a boolean property.
@@ -384,7 +384,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Load the cache if caching is in use.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 */
 	protected static function load_cache() {
 
@@ -418,7 +418,7 @@ abstract class WP_HTTP_TestCase extends WP_UnitTestCase {
 	/**
 	 * Save the cache.
 	 *
-	 * @since 1.1.0
+	 * @since WC-1.1.0
 	 */
 	public static function save_cache() {
 

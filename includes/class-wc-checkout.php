@@ -39,7 +39,7 @@ class WC_Checkout {
 	/**
 	 * Gets the main WC_Checkout Instance.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @static
 	 * @return WC_Checkout Main instance
 	 */
@@ -357,7 +357,7 @@ class WC_Checkout {
 			/**
 			 * Action hook to adjust order before save.
 			 *
-			 * @since 3.0.0
+			 * @since WC-3.0.0
 			 */
 			do_action( 'woocommerce_checkout_create_order', $order, $data );
 
@@ -383,7 +383,7 @@ class WC_Checkout {
 			/**
 			 * Filter hook to get initial item object.
 			 *
-			 * @since 3.1.0
+			 * @since WC-3.1.0
 			 */
 			$item                       = apply_filters( 'woocommerce_checkout_create_order_line_item_object', new WC_Order_Item_Product(), $cart_item_key, $values, $order );
 			$product                    = $values['data'];
@@ -417,7 +417,7 @@ class WC_Checkout {
 			/**
 			 * Action hook to adjust item before save.
 			 *
-			 * @since 3.0.0
+			 * @since WC-3.0.0
 			 */
 			do_action( 'woocommerce_checkout_create_order_line_item', $item, $cart_item_key, $values, $order );
 
@@ -453,7 +453,7 @@ class WC_Checkout {
 			/**
 			 * Action hook to adjust item before save.
 			 *
-			 * @since 3.0.0
+			 * @since WC-3.0.0
 			 */
 			do_action( 'woocommerce_checkout_create_order_fee_item', $item, $fee_key, $fee, $order );
 
@@ -494,7 +494,7 @@ class WC_Checkout {
 				/**
 				 * Action hook to adjust item before save.
 				 *
-				 * @since 3.0.0
+				 * @since WC-3.0.0
 				 */
 				do_action( 'woocommerce_checkout_create_order_shipping_item', $item, $package_key, $package, $order );
 
@@ -528,7 +528,7 @@ class WC_Checkout {
 				/**
 				 * Action hook to adjust item before save.
 				 *
-				 * @since 3.0.0
+				 * @since WC-3.0.0
 				 */
 				do_action( 'woocommerce_checkout_create_order_tax_item', $item, $tax_rate_id, $order );
 
@@ -563,7 +563,7 @@ class WC_Checkout {
 			/**
 			 * Action hook to adjust item before save.
 			 *
-			 * @since 3.0.0
+			 * @since WC-3.0.0
 			 */
 			do_action( 'woocommerce_checkout_create_order_coupon_item', $item, $code, $coupon, $order );
 
@@ -575,7 +575,7 @@ class WC_Checkout {
 	/**
 	 * See if a fieldset should be skipped.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $fieldset_key Fieldset key.
 	 * @param array  $data         Posted data.
 	 * @return bool
@@ -798,7 +798,7 @@ class WC_Checkout {
 	/**
 	 * Set address field for customer.
 	 *
-	 * @since 3.0.7
+	 * @since WC-3.0.7
 	 * @param string $field String to update.
 	 * @param string $key   Field key.
 	 * @param array  $data  Array of data to get the value from.
@@ -828,7 +828,7 @@ class WC_Checkout {
 	/**
 	 * Update customer and session data from the posted checkout data.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $data Posted data.
 	 */
 	protected function update_session( $data ) {
@@ -870,7 +870,7 @@ class WC_Checkout {
 	/**
 	 * Process an order that does require payment.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int    $order_id       Order ID.
 	 * @param string $payment_method Payment method.
 	 */
@@ -903,7 +903,7 @@ class WC_Checkout {
 	/**
 	 * Process an order that doesn't require payment.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $order_id Order ID.
 	 */
 	protected function process_order_without_payment( $order_id ) {
@@ -990,7 +990,7 @@ class WC_Checkout {
 			/**
 			 * Action hook to adjust customer before save.
 			 *
-			 * @since 3.0.0
+			 * @since WC-3.0.0
 			 */
 			do_action( 'woocommerce_checkout_update_customer', $customer, $data );
 

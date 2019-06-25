@@ -6,7 +6,7 @@
  * No personal information is tracked, only general WooCommerce settings, general product, order and user counts and admin email for discount code.
  *
  * @class WC_Tracker
- * @since 2.3.0
+ * @since WC-2.3.0
  * @package WooCommerce/Classes
  */
 

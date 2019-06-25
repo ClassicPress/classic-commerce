@@ -18,7 +18,7 @@ class WC_API_Authentication {
 	/**
 	 * Setup class
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __construct() {
 
@@ -29,7 +29,7 @@ class WC_API_Authentication {
 	/**
 	 * Authenticate the request. The authentication method varies based on whether the request was made over SSL or not.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_User $user
 	 * @return null|WP_Error|WP_User
 	 */
@@ -68,7 +68,7 @@ class WC_API_Authentication {
 	 * associated with the given consumer key and confirming the consumer secret
 	 * provided is valid
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return array
 	 * @throws Exception
 	 */
@@ -130,7 +130,7 @@ class WC_API_Authentication {
 	 *    This is because there is no cross-OS function within PHP to get the raw Authorization header
 	 *
 	 * @link http://tools.ietf.org/html/rfc5849 for the full spec
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return array
 	 * @throws Exception
 	 */
@@ -162,7 +162,7 @@ class WC_API_Authentication {
 	/**
 	 * Return the keys for the given consumer key
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @param string $consumer_key
 	 * @return array
 	 * @throws Exception
@@ -206,7 +206,7 @@ class WC_API_Authentication {
 	/**
 	 * Check if the consumer secret provided for the given user is valid
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $keys_consumer_secret
 	 * @param string $consumer_secret
 	 * @return bool
@@ -288,7 +288,7 @@ class WC_API_Authentication {
 	 * This conforms to the OAuth 1.0a spec which indicates the entire query string
 	 * should be URL encoded
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see rawurlencode()
 	 * @param array $parameters un-normalized parameters
 	 * @return array normalized parameters
@@ -390,7 +390,7 @@ class WC_API_Authentication {
 	/**
 	 * Updated API Key last access datetime
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param int $key_id
 	 */
