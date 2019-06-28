@@ -17,7 +17,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	/**
 	 * Setup test.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function setUp() {
 		parent::setUp();
@@ -27,7 +27,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	/**
 	 * Test WC has static instance.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_instance() {
 		$this->assertClassHasStaticAttribute( '_instance', 'WooCommerce' );
@@ -36,7 +36,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	/**
 	 * Test that all WC constants are set.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_constants() {
 		$this->assertEquals( str_replace( 'tests/unit-tests/core/', '', plugin_dir_path( __FILE__ ) ) . 'woocommerce.php', WC_PLUGIN_FILE );
@@ -56,7 +56,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	/**
 	 * Test class instance.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 */
 	public function test_wc_class_instances() {
 		$this->assertInstanceOf( 'WooCommerce', $this->wc );

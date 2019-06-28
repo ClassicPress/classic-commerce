@@ -4,7 +4,7 @@
  *
  * Loads Integrations into WooCommerce.
  *
- * @version 2.3.0
+ * @version WC-2.3.0
  * @package WooCommerce/Classes/Integrations
  */
 

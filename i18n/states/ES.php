@@ -3,7 +3,7 @@
  * Spain states
  *
  * @package WooCommerce/i18n
- * @version 2.0.11
+ * @version WC-2.0.11
  */
 
 global $states;

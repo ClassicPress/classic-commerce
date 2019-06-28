@@ -5,7 +5,7 @@
  * Lets a user see the status of an order by entering their order details.
  *
  * @package WooCommerce/Shortcodes/Order_Tracking
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

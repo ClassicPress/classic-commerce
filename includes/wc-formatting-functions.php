@@ -5,7 +5,7 @@
  * Functions for formatting data.
  *
  * @package WooCommerce/Functions
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Converts a string (e.g. 'yes' or 'no') to a bool.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $string String to convert.
  * @return bool
  */
@@ -24,7 +24,7 @@ function wc_string_to_bool( $string ) {
 /**
  * Converts a bool to a 'yes' or 'no'.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param bool $bool String to convert.
  * @return string
  */
@@ -38,7 +38,7 @@ function wc_bool_to_string( $bool ) {
 /**
  * Explode a string into an array by $delimiter and remove empty values.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $string    String to convert.
  * @param string $delimiter Delimiter, defaults to ','.
  * @return array
@@ -241,7 +241,7 @@ function wc_round_tax_total( $value, $precision = null ) {
 /**
  * Round half down in PHP 5.2.
  *
- * @since 3.2.6
+ * @since WC-3.2.6
  * @param float $value Value to round.
  * @param int   $precision Precision to round down to.
  * @return float
@@ -692,7 +692,7 @@ function wc_string_to_datetime( $time_string ) {
  *
  * Adapted from https://secure.php.net/manual/en/function.timezone-name-from-abbr.php#89155.
  *
- * @since 2.1
+ * @since WC-2.1
  * @return string PHP timezone string for the site
  */
 function wc_timezone_string() {
@@ -940,7 +940,7 @@ function wc_format_postcode( $postcode, $country ) {
  *
  * Remove spaces and convert characters to uppercase.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $postcode Postcode.
  * @return string
  */
@@ -1111,7 +1111,7 @@ if ( ! function_exists( 'wc_make_numeric_postcode' ) ) {
 	 * Converts letters to numbers so we can do a simple range check on postcodes.
 	 * E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $postcode Regular postcode.
 	 * @return string
 	 */
@@ -1296,7 +1296,7 @@ function wc_get_string_before_colon( $string ) {
  *
  * Source:  https://gist.github.com/Nickology/f700e319cbafab5eaedc
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @return array
  */
 function wc_array_merge_recursive_numeric() {
@@ -1353,7 +1353,7 @@ function wc_array_merge_recursive_numeric() {
 /**
  * Implode and escape HTML attributes for output.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param array $raw_attributes Attribute name value pairs.
  * @return string
  */
@@ -1368,7 +1368,7 @@ function wc_implode_html_attributes( $raw_attributes ) {
 /**
  * Parse a relative date option from the settings API into a standard format.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param mixed $raw_value Value stored in DB.
  * @return array Nicely formatted array with number and unit values.
  */
@@ -1397,7 +1397,7 @@ function wc_parse_relative_date_option( $raw_value ) {
 /**
  * Format the endpoint slug, strip out anything not allowed in a url.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  * @param string $raw_value The raw value.
  * @return string
  */

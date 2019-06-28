@@ -75,7 +75,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Enqueue the hooks associated with the webhook.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 */
 	public function enqueue() {
 		$hooks = $this->get_hooks();
@@ -92,7 +92,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * Process the webhook for delivery by verifying that it should be delivered.
 	 * and scheduling the delivery (in the background by default, or immediately).
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param mixed $arg The first argument provided from the associated hooks.
 	 */
 	public function process( $arg ) {
@@ -105,7 +105,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 		/**
 		 * Process webhook delivery.
 		 *
-		 * @since 3.3.0
+		 * @since WC-3.3.0
 		 * @hooked wc_webhook_process_delivery - 10
 		 */
 		do_action( 'woocommerce_webhook_process_delivery', $this, $arg );
@@ -179,7 +179,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Deliver the webhook payload using wp_safe_remote_request().
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param mixed $arg First hook argument.
 	 */
 	public function deliver( $arg ) {
@@ -388,7 +388,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Log the delivery request/response.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param string         $delivery_id Previously created hash.
 	 * @param array          $request     Request data.
 	 * @param array|WP_Error $response    Response data.
@@ -461,7 +461,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * if more than 5 consecutive failures occur. A failure is defined as a.
 	 * non-2xx response.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 */
 	private function failed_delivery() {
 		$failures = $this->get_failure_count();
@@ -496,7 +496,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * + request headers/body
 	 * + response code/message/headers/body
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @deprecated 3.3.0
 	 * @param int $delivery_id Delivery ID.
 	 * @return void
@@ -689,7 +689,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set webhook name.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $name Webhook name.
 	 */
 	public function set_name( $name ) {
@@ -699,7 +699,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set webhook created date.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime.
 	 *                                  If the DateTime string has no timezone or offset,
 	 *                                  WordPress site timezone will be assumed.
@@ -712,7 +712,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set webhook modified date.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime.
 	 *                                  If the DateTime string has no timezone or offset,
 	 *                                  WordPress site timezone will be assumed.
@@ -725,7 +725,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set status.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $status Status.
 	 */
 	public function set_status( $status ) {
@@ -739,7 +739,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set the secret used for generating the HMAC-SHA256 signature.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param string $secret Secret.
 	 */
 	public function set_secret( $secret ) {
@@ -750,7 +750,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * Set the webhook topic and associated hooks.
 	 * The topic resource & event are also saved separately.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param string $topic Webhook topic.
 	 */
 	public function set_topic( $topic ) {
@@ -766,7 +766,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set the delivery URL.
 	 *
-	 * @since 2.2.0
+	 * @since WC-2.2.0
 	 * @param string $url Delivery URL.
 	 */
 	public function set_delivery_url( $url ) {
@@ -776,7 +776,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set user ID.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param int $user_id User ID.
 	 */
 	public function set_user_id( $user_id ) {
@@ -786,7 +786,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set API version.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int|string $version REST API version.
 	 */
 	public function set_api_version( $version ) {
@@ -800,7 +800,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set pending delivery.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param bool $pending_delivery Set true if is pending for delivery.
 	 */
 	public function set_pending_delivery( $pending_delivery ) {
@@ -810,7 +810,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Set failure count.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param bool $failure_count Total of failures.
 	 */
 	public function set_failure_count( $failure_count ) {

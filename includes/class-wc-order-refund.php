@@ -3,7 +3,7 @@
  * Order refund. Refunds are based on orders (essentially negative orders) and
  * contain much of the same data.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Classes
  */
 
@@ -81,7 +81,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund reason.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int|float
 	 */
@@ -92,7 +92,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get ID of user who did the refund.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -114,7 +114,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get formatted refunded amount.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 * @return string
 	 */
 	public function get_formatted_refund_amount() {
@@ -154,7 +154,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Set if the payment was refunded via API.
 	 *
-	 * @since 3.3
+	 * @since WC-3.3
 	 * @param bool $value Value to set.
 	 */
 	public function set_refunded_payment( $value ) {

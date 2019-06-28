@@ -10,7 +10,7 @@
  * - if calculating a total, round (if settings allow).
  *
  * @package WooCommerce/Classes
- * @version 3.2.0
+ * @version WC-3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

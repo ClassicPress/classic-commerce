@@ -3,7 +3,7 @@
  * Represents a file which can be downloaded.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 
@@ -17,7 +17,7 @@ class WC_Product_Download implements ArrayAccess {
 	/**
 	 * Data array.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(

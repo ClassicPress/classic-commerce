@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Forked from wp-cli/restful (by Daniel Bachhuber, released under the MIT license https://opensource.org/licenses/MIT).
  * https://github.com/wp-cli/restful
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce
  */
 class WC_CLI_Tool_Command {

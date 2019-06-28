@@ -56,7 +56,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Hook prefix
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function get_hook_prefix() {
 		return 'woocommerce_payment_token_echeck_get_';
@@ -68,7 +68,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	 * These fields are required by all eCheck payment tokens:
 	 * last4  - string Last 4 digits of the check
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return boolean True if the passed data is valid
 	 */
 	public function validate() {
@@ -96,7 +96,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Set the last four digits.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $last4 eCheck last four digits.
 	 */
 	public function set_last4( $last4 ) {

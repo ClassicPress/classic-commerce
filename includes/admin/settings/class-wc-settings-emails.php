@@ -3,7 +3,7 @@
  * WooCommerce Email Settings
  *
  * @package WooCommerce/Admin
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 defined( 'ABSPATH' ) || exit;

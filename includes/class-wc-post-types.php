@@ -5,7 +5,7 @@
  * Registers post types and taxonomies.
  *
  * @package WooCommerce/Classes/Products
- * @version 2.5.0
+ * @version WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;

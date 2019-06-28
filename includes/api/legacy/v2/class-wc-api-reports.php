@@ -28,7 +28,7 @@ class WC_API_Reports extends WC_API_Resource {
 	 * GET /reports
 	 * GET /reports/sales
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -55,7 +55,7 @@ class WC_API_Reports extends WC_API_Resource {
 	/**
 	 * Get a simple listing of available reports
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return array
 	 */
 	public function get_reports() {
@@ -65,7 +65,7 @@ class WC_API_Reports extends WC_API_Resource {
 	/**
 	 * Get the sales report
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields fields to include in response
 	 * @param array $filter date filtering
 	 * @return array|WP_Error
@@ -200,7 +200,7 @@ class WC_API_Reports extends WC_API_Resource {
 	/**
 	 * Get the top sellers report
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields fields to include in response
 	 * @param array $filter date filtering
 	 * @return array|WP_Error
@@ -260,7 +260,7 @@ class WC_API_Reports extends WC_API_Resource {
 	/**
 	 * Setup the report object and parse any date filtering
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $filter date filtering
 	 */
 	private function setup_report( $filter ) {
@@ -306,7 +306,7 @@ class WC_API_Reports extends WC_API_Resource {
 	/**
 	 * Verify that the current user has permission to view reports
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::validate_request()
 	 *
 	 * @param null $id unused

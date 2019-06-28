@@ -5,7 +5,7 @@
  * Returns an array of continents.
  *
  * @package WooCommerce/i18n
- * @version 2.5.0
+ * @version WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * This class is here for backwards compatibility for methods existing before zones existed.
  *
  * @deprecated  2.6.0
- * @version 2.4.0
+ * @version WC-2.4.0
  * @package WooCommerce/Classes/Shipping
  */
 class WC_Shipping_Legacy_Free_Shipping extends WC_Shipping_Method {
@@ -60,7 +60,7 @@ class WC_Shipping_Legacy_Free_Shipping extends WC_Shipping_Method {
 	/**
 	 * Return the name of the option in the WP DB.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_option_key() {

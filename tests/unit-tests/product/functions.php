@@ -3,14 +3,14 @@
 /**
  * Class Functions.
  * @package WooCommerce\Tests\Product
- * @since 2.3
+ * @since WC-2.3
  */
 class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Tests wc_get_products().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_get_products() {
 		$test_cat_1 = wp_insert_term( 'Testing 1', 'product_cat' );
@@ -227,7 +227,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with dimension parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_dimensions() {
 		$product_1 = new WC_Product_Simple();
@@ -274,7 +274,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with price parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_price() {
 		$product_1 = new WC_Product_Simple();
@@ -320,7 +320,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with total_sales parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_total_sales() {
 		$product_1 = new WC_Product_Simple();
@@ -350,7 +350,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with boolean parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_booleans() {
 		$product_1 = new WC_Product_Simple();
@@ -458,7 +458,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with visibility parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_visibility() {
 		$product_1 = new WC_Product_Simple();
@@ -504,7 +504,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with stock parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_stock() {
 		$product_1 = new WC_Product_Simple();
@@ -549,7 +549,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with tax parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_tax() {
 		$product_1 = new WC_Product_Simple();
@@ -592,7 +592,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with shipping parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_shipping_class() {
 		$shipping_class_1 = wp_insert_term( 'Bulky', 'product_shipping_class' );
@@ -628,7 +628,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with download parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_download() {
 		$product_1 = new WC_Product_Simple();
@@ -677,7 +677,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Tests wc_get_products() with reviews parameters.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_products_reviews() {
 		$product_1 = new WC_Product_Simple();
@@ -727,7 +727,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_product().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_wc_get_product() {
 
@@ -742,7 +742,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_update_product_stock().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_wc_update_product_stock() {
 		// Create product
@@ -814,7 +814,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_delete_product_transients().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_delete_product_transients() {
 		// Create product
@@ -835,7 +835,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_product_ids_on_sale().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_product_ids_on_sale() {
 		$this->assertEquals( array(), wc_get_product_ids_on_sale() );
@@ -854,7 +854,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_featured_product_ids().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_get_featured_product_ids() {
 		$this->assertEquals( array(), wc_get_featured_product_ids() );
@@ -872,7 +872,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_placeholder_img().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_placeholder_img() {
 		$this->assertTrue( (bool) strstr( wc_placeholder_img(), wc_placeholder_img_src() ) );
@@ -881,7 +881,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_product_types().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_wc_get_product_types() {
 		$product_types = (array) apply_filters(
@@ -911,7 +911,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_product_id_by_sku().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_wc_get_product_id_by_sku() {
 		// Create product
@@ -923,7 +923,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_min_max_price_meta_query()
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_get_min_max_price_meta_query() {
 		$meta_query = wc_get_min_max_price_meta_query(
@@ -946,7 +946,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_product_force_unique_sku
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_product_force_unique_sku() {
 		$product_1 = WC_Helper_Product::create_simple_product();
@@ -977,7 +977,7 @@ class WC_Tests_Product_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_is_attribute_in_product_name
 	 *
-	 * @since 3.0.2
+	 * @since WC-3.0.2
 	 */
 	public function test_wc_is_attribute_in_product_name() {
 		$this->assertTrue( wc_is_attribute_in_product_name( 'L', 'Product &ndash; L' ) );

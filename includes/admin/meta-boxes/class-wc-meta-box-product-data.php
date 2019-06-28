@@ -137,7 +137,7 @@ class WC_Meta_Box_Product_Data {
 	/**
 	 * Callback to sort product data tabs on priority.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param int $a First item.
 	 * @param int $b Second item.
 	 *
@@ -387,7 +387,7 @@ class WC_Meta_Box_Product_Data {
 		}
 
 		/**
-		 * @since 3.0.0 to set props before save.
+		 * @since WC-3.0.0 to set props before save.
 		 */
 		do_action( 'woocommerce_admin_process_product_object', $product );
 

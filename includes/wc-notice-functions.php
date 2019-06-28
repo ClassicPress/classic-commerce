@@ -5,7 +5,7 @@
  * Functions for error/message handling and display.
  *
  * @package WooCommerce/Functions
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -65,7 +65,7 @@ function wc_has_notice( $message, $notice_type = 'success' ) {
 /**
  * Add and store a notice.
  *
- * @since 2.1
+ * @since WC-2.1
  * @param string $message The text to display in the notice.
  * @param string $notice_type Optional. The name of the notice type - either error, success or notice.
  */
@@ -90,7 +90,7 @@ function wc_add_notice( $message, $notice_type = 'success' ) {
 /**
  * Set all notices at once.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param mixed $notices Array of notices.
  */
 function wc_set_notices( $notices ) {
@@ -105,7 +105,7 @@ function wc_set_notices( $notices ) {
 /**
  * Unset all notices.
  *
- * @since 2.1
+ * @since WC-2.1
  */
 function wc_clear_notices() {
 	if ( ! did_action( 'woocommerce_init' ) ) {
@@ -118,8 +118,8 @@ function wc_clear_notices() {
 /**
  * Prints messages and errors which are stored in the session, then clears them.
  *
- * @since 2.1
- * @param bool $return true to return rather than echo. @since 3.5.0.
+ * @since WC-2.1
+ * @param bool $return true to return rather than echo. @since WC-3.5.0.
  * @return string|null
  */
 function wc_print_notices( $return = false ) {
@@ -156,7 +156,7 @@ function wc_print_notices( $return = false ) {
 /**
  * Print a single notice immediately.
  *
- * @since 2.1
+ * @since WC-2.1
  * @param string $message The text to display in the notice.
  * @param string $notice_type Optional. The singular name of the notice type - either error, success or notice.
  */
@@ -212,7 +212,7 @@ function wc_add_wp_error_notices( $errors ) {
 /**
  * Filters out the same tags as wp_kses_post, but allows tabindex for <a> element.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  * @param string $message Content to filter through kses.
  * @return string
  */

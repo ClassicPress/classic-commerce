@@ -8,7 +8,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Test validation for empty/unset values.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_token_cc_validate_empty() {
 		$token = new WC_Payment_Token_CC();
@@ -23,7 +23,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Test validation for expiry length.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_token_cc_validate_expiry_length() {
 		$token = new WC_Payment_Token_CC();
@@ -47,7 +47,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Tes get/set card type.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_cc_card_type() {
 		$token = new WC_Payment_Token_CC();
@@ -57,7 +57,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Test get/set expiry year.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_cc_expiry_year() {
 		$token = new WC_Payment_Token_CC();
@@ -67,7 +67,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Test get/set expiry month.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_cc_expiry_month() {
 		$token = new WC_Payment_Token_CC();
@@ -77,7 +77,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/**
 	 * Test get/set last4.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_cc_last4() {
 		$token = new WC_Payment_Token_CC();
@@ -87,7 +87,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/*
 	 * Test reading/getting a token from DB correctly sets meta.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_cc_read_pulls_meta() {
 		$token = WC_Helper_Payment_Token::create_cc_token();
@@ -98,7 +98,7 @@ class WC_Tests_Payment_Token_CC extends WC_Unit_Test_Case {
 
 	/*
 	 * Test saving a new value in a token after it has been created.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_wc_payment_token_cc_updates_after_create() {
 		$token    = WC_Helper_Payment_Token::create_cc_token();

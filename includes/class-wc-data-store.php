@@ -4,7 +4,7 @@
  *
  * @package WooCommerce\Classes
  * @since   3.0.0
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -131,7 +131,7 @@ class WC_Data_Store {
 	 *
 	 * @param string $object_type Name of object.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @throws Exception When validation fails.
 	 * @return WC_Data_Store
 	 */
@@ -142,7 +142,7 @@ class WC_Data_Store {
 	/**
 	 * Returns the class name of the current data store.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return string
 	 */
 	public function get_current_class_name() {
@@ -152,7 +152,7 @@ class WC_Data_Store {
 	/**
 	 * Reads an object from the data store.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Data $data WooCommerce data instance.
 	 */
 	public function read( &$data ) {
@@ -162,7 +162,7 @@ class WC_Data_Store {
 	/**
 	 * Create an object in the data store.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Data $data WooCommerce data instance.
 	 */
 	public function create( &$data ) {
@@ -172,7 +172,7 @@ class WC_Data_Store {
 	/**
 	 * Update an object in the data store.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Data $data WooCommerce data instance.
 	 */
 	public function update( &$data ) {
@@ -182,7 +182,7 @@ class WC_Data_Store {
 	/**
 	 * Delete an object from the data store.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Data $data WooCommerce data instance.
 	 * @param array   $args Array of args to pass to the delete method.
 	 */
@@ -195,7 +195,7 @@ class WC_Data_Store {
 	 * some helper methods for increasing or decreasing usage). This passes
 	 * through to the instance if that function exists.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $method     Method.
 	 * @param mixed  $parameters Parameters.
 	 * @return mixed

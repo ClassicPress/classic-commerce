@@ -3,7 +3,7 @@
  * Angola states
  *
  * @package WooCommerce/i18n
- * @version 1.0.0
+ * @version WC-1.0.0
  */
 
 global $states;

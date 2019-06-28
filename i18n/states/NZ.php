@@ -3,7 +3,7 @@
  * New Zealand States
  *
  * @package WooCommerce/i18n
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 global $states;

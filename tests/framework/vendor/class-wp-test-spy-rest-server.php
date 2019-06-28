@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * @version 2.0-beta13.1
+ * @version WC-2.0-beta13.1
  */
 class WP_Test_Spy_REST_Server extends WP_REST_Server {
 	/**

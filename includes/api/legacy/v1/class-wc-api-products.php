@@ -28,7 +28,7 @@ class WC_API_Products extends WC_API_Resource {
 	 * GET /products/<id>
 	 * GET /products/<id>/reviews
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -60,7 +60,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get all products
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param string $type
 	 * @param array $filter
@@ -96,7 +96,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the product ID
 	 * @param string $fields
 	 * @return array|WP_Error
@@ -130,7 +130,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the total number of orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param string $type
 	 * @param array $filter
@@ -191,7 +191,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the reviews for a product
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the product ID to get reviews for
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -232,7 +232,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Helper method to get product post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */
@@ -269,7 +269,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get standard product data that applies to every product type
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|int $product
 	 * @return array
 	 */
@@ -349,7 +349,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get an individual variation's data
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product $product
 	 * @return array
 	 */
@@ -406,7 +406,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the images for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */
@@ -485,7 +485,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the attributes for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */
@@ -523,7 +523,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the downloads for a product or product variation
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Product|WC_Product_Variation $product
 	 * @return array
 	 */

@@ -5,7 +5,7 @@
  * The WooCommerce product factory creating the right product object.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -70,7 +70,7 @@ class WC_Product_Factory {
 	/**
 	 * Get the product type for a product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  int $product_id Product ID.
 	 * @return string|false
 	 */

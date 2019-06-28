@@ -2,7 +2,7 @@
 /**
  * Logger Interface
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Interface
  */
 
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined to correctly fulfill logger API.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 interface WC_Logger_Interface {
 

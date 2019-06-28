@@ -13,7 +13,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_lostpassword_url().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_lostpassword_url() {
 		$this->assertEquals( '', wc_lostpassword_url() );
@@ -22,7 +22,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_customer_edit_account_url().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_customer_edit_account_url() {
 		$this->assertEquals( 'http://example.org?edit-account', wc_customer_edit_account_url() );
@@ -31,7 +31,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_edit_address_i18n().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_edit_address_i18n() {
 		// Should return the same result, since it's using en_US in Unit Tests.
@@ -42,7 +42,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_menu_items().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_get_account_menu_items() {
 		$this->assertEquals( array(
@@ -58,7 +58,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_menu_item_classes().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_menu_item_classes() {
 		$this->assertEquals( 'woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--test', wc_get_account_menu_item_classes( 'test' ) );
@@ -67,7 +67,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_endpoint_url().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_endpoint_url() {
 		$this->assertEquals( 'http://example.org?test', wc_get_account_endpoint_url( 'test' ) );
@@ -76,7 +76,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_orders_columns().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_get_account_orders_columns() {
 		$this->assertEquals( array(
@@ -91,7 +91,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_downloads_columns().
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_get_account_downloads_columns() {
 		$this->assertEquals( array(
@@ -105,7 +105,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_payment_methods_columns().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_payment_methods_columns() {
 		$this->assertEquals( array(
@@ -118,7 +118,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_payment_methods_types().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_payment_methods_types() {
 		$this->assertEquals( array(
@@ -130,7 +130,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_orders_actions().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_orders_actions() {
 		$order = WC_Helper_Order::create_order();
@@ -156,7 +156,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_formatted_address().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_formatted_address() {
 		$customer = WC_Helper_Customer::create_customer();
@@ -169,7 +169,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_saved_payment_methods_list().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_saved_payment_methods_list() {
 		$customer = WC_Helper_Customer::create_customer();
@@ -214,7 +214,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_saved_payment_methods_list_item_cc().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_saved_payment_methods_list_item_cc() {
 		$token = new WC_Payment_Token_CC();
@@ -240,7 +240,7 @@ class WC_Tests_Account_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_account_saved_payment_methods_list_item_echeck().
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_get_account_saved_payment_methods_list_item_echeck() {
 		$token = new WC_Payment_Token_ECheck();

@@ -5,7 +5,7 @@
  * Functions for cart specific things.
  *
  * @package WooCommerce/Functions
- * @version 2.5.0
+ * @version WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -66,7 +66,7 @@ function wc_load_persistent_cart( $user_login, $user ) {
  *
  * Do not use for redirects, use {@see wp_get_referer()} instead.
  *
- * @since 2.6.1
+ * @since WC-2.6.1
  * @return string|false Referer URL on success, false on failure.
  */
 function wc_get_raw_referer() {

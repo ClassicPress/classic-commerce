@@ -5,7 +5,7 @@
  * Handle comments (reviews and order notes).
  *
  * @package WooCommerce/Classes/Products
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -308,7 +308,7 @@ class WC_Comments {
 	/**
 	 * Get product rating for a product. Please note this is not cached.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product instance.
 	 * @return float
 	 */
@@ -346,7 +346,7 @@ class WC_Comments {
 	/**
 	 * Get product review count for a product (not replies). Please note this is not cached.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product instance.
 	 * @return int
 	 */
@@ -375,7 +375,7 @@ class WC_Comments {
 	/**
 	 * Get product rating count for a product. Please note this is not cached.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product instance.
 	 * @return int[]
 	 */
@@ -412,7 +412,7 @@ class WC_Comments {
 	/**
 	 * Update comment type of product reviews.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @param array $comment_data Comment data.
 	 * @return array
 	 */

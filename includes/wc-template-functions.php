@@ -86,7 +86,7 @@ add_action( 'template_redirect', 'wc_send_frame_options_header' );
  * No index our endpoints.
  * Prevent indexing pages like order-received.
  *
- * @since 2.5.3
+ * @since WC-2.5.3
  */
 function wc_prevent_endpoint_indexing() {
 	if ( is_wc_endpoint_url() || isset( $_GET['download_file'] ) ) { // WPCS: input var ok, CSRF ok.
@@ -98,7 +98,7 @@ add_action( 'template_redirect', 'wc_prevent_endpoint_indexing' );
 /**
  * Remove adjacent_posts_rel_link_wp_head - pointless for products.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 function wc_prevent_adjacent_posts_rel_link_wp_head() {
 	if ( is_singular( 'product' ) ) {
@@ -110,7 +110,7 @@ add_action( 'template_redirect', 'wc_prevent_adjacent_posts_rel_link_wp_head' );
 /**
  * Show the gallery if JS is disabled.
  *
- * @since 3.0.6
+ * @since WC-3.0.6
  */
 function wc_gallery_noscript() {
 	?>
@@ -145,7 +145,7 @@ add_action( 'the_post', 'wc_setup_product_data' );
 /**
  * Sets up the woocommerce_loop global from the passed args or from the main query.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param array $args Args to pass into the global.
  */
 function wc_setup_loop( $args = array() ) {
@@ -187,7 +187,7 @@ add_action( 'woocommerce_before_shop_loop', 'wc_setup_loop' );
 /**
  * Resets the woocommerce_loop global.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  */
 function wc_reset_loop() {
 	unset( $GLOBALS['woocommerce_loop'] );
@@ -197,7 +197,7 @@ add_action( 'woocommerce_after_shop_loop', 'woocommerce_reset_loop', 999 );
 /**
  * Gets a property from the woocommerce_loop global.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param string $prop Prop to get.
  * @param string $default Default if the prop does not exist.
  * @return mixed
@@ -211,7 +211,7 @@ function wc_get_loop_prop( $prop, $default = '' ) {
 /**
  * Sets a property in the woocommerce_loop global.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param string $prop Prop to set.
  * @param string $value Value to set.
  */
@@ -227,7 +227,7 @@ function wc_set_loop_prop( $prop, $value = '' ) {
  *
  * This will return true if we have posts (products) or if we have subcats to display.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @return bool
  */
 function woocommerce_product_loop() {
@@ -304,7 +304,7 @@ function wc_body_class( $classes ) {
 /**
  * NO JS handling.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_no_js() {
 	?>
@@ -319,7 +319,7 @@ function wc_no_js() {
 /**
  * Display the classes for the product cat div.
  *
- * @since 2.4.0
+ * @since WC-2.4.0
  * @param string|array $class One or more classes to add to the class list.
  * @param object       $category object Optional.
  */
@@ -331,7 +331,7 @@ function wc_product_cat_class( $class = '', $category = null ) {
 /**
  * Get the default columns setting - this is how many products will be shown per row in loops.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @return int
  */
 function wc_get_default_products_per_row() {
@@ -360,7 +360,7 @@ function wc_get_default_products_per_row() {
 /**
  * Get the default rows setting - this is how many product rows will be shown in loops.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @return int
  */
 function wc_get_default_product_rows_per_page() {
@@ -383,7 +383,7 @@ function wc_get_default_product_rows_per_page() {
 /**
  * Reset the product grid settings when a new theme is activated.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  */
 function wc_reset_product_grid_settings() {
 	$product_grid = wc_get_theme_support( 'product_grid' );
@@ -401,7 +401,7 @@ add_action( 'after_switch_theme', 'wc_reset_product_grid_settings' );
 /**
  * Get classname for woocommerce loops.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return string
  */
 function wc_get_loop_class() {
@@ -426,7 +426,7 @@ function wc_get_loop_class() {
 /**
  * Get the classes for the product cat div.
  *
- * @since 2.4.0
+ * @since WC-2.4.0
  *
  * @param string|array $class One or more classes to add to the class list.
  * @param object       $category object Optional.
@@ -446,7 +446,7 @@ function wc_get_product_cat_class( $class = '', $category = null ) {
 /**
  * Adds extra post classes for products.
  *
- * @since 2.1.0
+ * @since WC-2.1.0
  * @param array        $classes Current classes.
  * @param string|array $class Additional class.
  * @param int          $post_id Post ID.
@@ -509,7 +509,7 @@ function wc_product_post_class( $classes, $class = '', $post_id = 0 ) {
 /**
  * Get product taxonomy HTML classes.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param array  $term_ids Array of terms IDs or objects.
  * @param string $taxonomy Taxonomy.
  * @return array
@@ -545,7 +545,7 @@ function wc_get_product_taxonomy_class( $term_ids, $taxonomy ) {
  *
  * This method is clone from WordPress's get_post_class(), allowing removing taxonomies.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string|array           $class      One or more classes to add to the class list.
  * @param int|WP_Post|WC_Product $product_id Product ID or product object.
  * @return array
@@ -640,7 +640,7 @@ function wc_get_product_class( $class = '', $product_id = null ) {
 /**
  * Display the classes for the product div.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string|array           $class      One or more classes to add to the class list.
  * @param int|WP_Post|WC_Product $product_id Product ID or product object.
  */
@@ -651,7 +651,7 @@ function wc_product_class( $class = '', $product_id = null ) {
 /**
  * Outputs hidden form inputs for each query string variable.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string|array $values Name value pairs, or a URL to parse.
  * @param array        $exclude Keys to exclude.
  * @param string       $current_key Current key we are outputting.
@@ -695,7 +695,7 @@ function wc_query_string_form_fields( $values = null, $exclude = array(), $curre
 /**
  * Get the terms and conditons page ID.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @return int
  */
 function wc_terms_and_conditions_page_id() {
@@ -706,7 +706,7 @@ function wc_terms_and_conditions_page_id() {
 /**
  * Get the privacy policy page ID.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @return int
  */
 function wc_privacy_policy_page_id() {
@@ -717,7 +717,7 @@ function wc_privacy_policy_page_id() {
 /**
  * See if the checkbox is enabled or not based on the existance of the terms page and checkbox text.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @return bool
  */
 function wc_terms_and_conditions_checkbox_enabled() {
@@ -729,7 +729,7 @@ function wc_terms_and_conditions_checkbox_enabled() {
 /**
  * Get the terms and conditons checkbox text, if set.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @return string
  */
 function wc_get_terms_and_conditions_checkbox_text() {
@@ -740,7 +740,7 @@ function wc_get_terms_and_conditions_checkbox_text() {
 /**
  * Get the privacy policy text, if set.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string $type Type of policy to load. Valid values include registration and checkout.
  * @return string
  */
@@ -764,7 +764,7 @@ function wc_get_privacy_policy_text( $type = '' ) {
 /**
  * Output t&c checkbox text.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_terms_and_conditions_checkbox_text() {
 	$text = wc_get_terms_and_conditions_checkbox_text();
@@ -779,7 +779,7 @@ function wc_terms_and_conditions_checkbox_text() {
 /**
  * Output t&c page's content (if set). The page can be set from checkout settings.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_terms_and_conditions_page_content() {
 	$terms_page_id = wc_terms_and_conditions_page_id();
@@ -798,7 +798,7 @@ function wc_terms_and_conditions_page_content() {
 /**
  * Render privacy policy text on the checkout.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_checkout_privacy_policy_text() {
 	echo '<div class="woocommerce-privacy-policy-text">';
@@ -809,7 +809,7 @@ function wc_checkout_privacy_policy_text() {
 /**
  * Render privacy policy text on the register forms.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_registration_privacy_policy_text() {
 	echo '<div class="woocommerce-privacy-policy-text">';
@@ -822,7 +822,7 @@ function wc_registration_privacy_policy_text() {
  *
  * Loads the relevant policy for the current page unless a specific policy text is required.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string $type Type of policy to load. Valid values include registration and checkout.
  */
 function wc_privacy_policy_text( $type = 'checkout' ) {
@@ -835,7 +835,7 @@ function wc_privacy_policy_text( $type = 'checkout' ) {
 /**
  * Replaces placeholders with links to WooCommerce policy pages.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string $text Text to find/replace within.
  * @return string
  */
@@ -1383,7 +1383,7 @@ if ( ! function_exists( 'woocommerce_show_product_thumbnails' ) ) {
  *
  * Woocommerce_gallery_thumbnail_size, woocommerce_gallery_image_size and woocommerce_gallery_full_size accept name based image sizes, or an array of width/height values.
  *
- * @since 3.3.2
+ * @since WC-3.3.2
  * @param int  $attachment_id Attachment ID.
  * @param bool $main_image Is this the main image or a thumbnail?.
  * @return string
@@ -2138,7 +2138,7 @@ if ( ! function_exists( 'woocommerce_get_loop_display_mode' ) ) {
 	/**
 	 * See what is going to display in the loop.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @return string Either products, subcategories, or both, based on current page.
 	 */
 	function woocommerce_get_loop_display_mode() {
@@ -2181,7 +2181,7 @@ if ( ! function_exists( 'woocommerce_maybe_show_product_subcategories' ) ) {
 	/**
 	 * Maybe display categories before, or instead of, a product loop.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param string $loop_html HTML.
 	 * @return string
 	 */
@@ -2276,7 +2276,7 @@ if ( ! function_exists( 'woocommerce_output_product_categories' ) ) {
 	 * This is a replacement for woocommerce_product_subcategories which also does some logic
 	 * based on the loop. This function however just outputs when called.
 	 *
-	 * @since 3.3.1
+	 * @since WC-3.3.1
 	 * @param array $args Arguments.
 	 * @return boolean
 	 */
@@ -2401,7 +2401,7 @@ if ( ! function_exists( 'woocommerce_order_downloads_table' ) ) {
 	/**
 	 * Displays order downloads in a table.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $downloads Downloads.
 	 */
 	function woocommerce_order_downloads_table( $downloads ) {
@@ -2663,7 +2663,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 		/**
 		 * General filter on form fields.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 */
 		$field = apply_filters( 'woocommerce_form_field', $field, $key, $args, $value );
 
@@ -2760,7 +2760,7 @@ if ( ! function_exists( 'wc_dropdown_variation_attribute_options' ) ) {
 	 * Output a list of variation attributes for use in the cart forms.
 	 *
 	 * @param array $args Arguments.
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 */
 	function wc_dropdown_variation_attribute_options( $args = array() ) {
 		$args = wp_parse_args( apply_filters( 'woocommerce_dropdown_variation_attribute_options_args', $args ), array(
@@ -2973,7 +2973,7 @@ if ( ! function_exists( 'wc_get_email_order_items' ) ) {
 	 * @param WC_Order $order Order object.
 	 * @param array    $args Arguments.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return string
 	 */
 	function wc_get_email_order_items( $order, $args = array() ) {
@@ -3224,7 +3224,7 @@ function wc_logout_url( $redirect = '' ) {
 /**
  * Show notice if cart is empty.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  */
 function wc_empty_cart_message() {
 	echo '<p class="cart-empty">' . wp_kses_post( apply_filters( 'wc_empty_cart_message', __( 'Your cart is currently empty.', 'woocommerce' ) ) ) . '</p>';
@@ -3233,7 +3233,7 @@ function wc_empty_cart_message() {
 /**
  * Disable search engines indexing core, dynamic, cart/checkout pages.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  */
 function wc_page_noindex() {
 	if ( is_page( wc_get_page_id( 'cart' ) ) || is_page( wc_get_page_id( 'checkout' ) ) || is_page( wc_get_page_id( 'myaccount' ) ) ) {
@@ -3245,7 +3245,7 @@ add_action( 'wp_head', 'wc_page_noindex' );
 /**
  * Get a slug identifying the current theme.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @return string
  */
 function wc_get_theme_slug_for_templates() {
@@ -3255,7 +3255,7 @@ function wc_get_theme_slug_for_templates() {
 /**
  * Gets and formats a list of cart item data + variations for display on the frontend.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param array $cart_item Cart item object.
  * @param bool  $flat Should the data be returned flat or in a list.
  * @return string
@@ -3329,7 +3329,7 @@ function wc_get_formatted_cart_item_data( $cart_item, $flat = false ) {
 /**
  * Gets the url to remove an item from the cart.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param string $cart_item_key contains the id of the cart item.
  * @return string url to page
  */
@@ -3341,7 +3341,7 @@ function wc_get_cart_remove_url( $cart_item_key ) {
 /**
  * Gets the url to re-add an item into the cart.
  *
- * @since 3.3.0
+ * @since WC-3.3.0
  * @param  string $cart_item_key Cart item key to undo.
  * @return string url to page
  */
@@ -3358,7 +3358,7 @@ function wc_get_cart_undo_url( $cart_item_key ) {
 /**
  * Outputs all queued notices on WC pages.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  */
 function woocommerce_output_all_notices() {
 	echo '<div class="woocommerce-notices-wrapper">';

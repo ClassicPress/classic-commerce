@@ -26,7 +26,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	 * GET /coupons/count
 	 * GET /coupons/<id>
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -66,7 +66,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get all coupons
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param array $filter
 	 * @param int $page
@@ -97,7 +97,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the coupon for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the coupon ID
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -151,7 +151,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the total number of coupons
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $filter
 	 * @return array|WP_Error
 	 */
@@ -172,7 +172,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Get the coupon for the given code
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $code the coupon code
 	 * @param string $fields fields to include in response
 	 * @return int|WP_Error
@@ -196,7 +196,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Create a coupon
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $data
 	 *
@@ -308,7 +308,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Edit a coupon
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id the coupon ID
 	 * @param array $data
@@ -485,7 +485,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Helper method to get coupon post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */
@@ -508,7 +508,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	 * Accepts an array with coupons in the formats supported by
 	 * WC_API_Coupons->create_coupon() and WC_API_Coupons->edit_coupon()
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param array $data
 	 *

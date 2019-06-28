@@ -2,7 +2,7 @@
 /**
  * Background Updater
  *
- * @version 2.6.0
+ * @version WC-2.6.0
  * @package WooCommerce/Classes
  */
 

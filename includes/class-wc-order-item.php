@@ -6,7 +6,7 @@
  * Uses ArrayAccess to be BW compatible with WC_Orders::get_items().
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 
@@ -20,7 +20,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 	/**
 	 * Order Data array. This is the core order data exposed in APIs since 3.0.0.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(
@@ -81,7 +81,7 @@ class WC_Order_Item extends WC_Data implements ArrayAccess {
 	 * array_replace_recursive does not work well for order items because it merges taxes instead
 	 * of replacing them.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function apply_changes() {
 		if ( function_exists( 'array_replace' ) ) {

@@ -3,14 +3,14 @@
 /**
  * Class Functions.
  * @package WooCommerce\Tests\Webhook
- * @since 2.3
+ * @since WC-2.3
  */
 class WC_Tests_Webhook_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Data provider for test_wc_is_webhook_valid_topic.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function data_provider_test_wc_is_webhook_valid_topic() {
 		return array(
@@ -43,7 +43,7 @@ class WC_Tests_Webhook_Functions extends WC_Unit_Test_Case {
 	 * Test wc_is_webhook_valid_topic().
 	 *
 	 * @dataProvider data_provider_test_wc_is_webhook_valid_topic
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_is_webhook_valid_topic( $assert, $values ) {
 		$this->assertEquals( $assert, $values );
@@ -52,7 +52,7 @@ class WC_Tests_Webhook_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_webhook_statuses().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_webhook_statuses() {
 		$expected = array(
@@ -67,7 +67,7 @@ class WC_Tests_Webhook_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_load_webhooks().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_load_webhooks() {
 		$webhook = new WC_Webhook;

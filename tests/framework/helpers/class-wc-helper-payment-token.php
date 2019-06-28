@@ -9,7 +9,7 @@ class WC_Helper_Payment_Token {
 	/**
 	 * Create a new credit card payment token
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 * @return WC_Payment_Token_CC object
 	 */
 	public static function create_cc_token( $user_id = '' ) {
@@ -29,7 +29,7 @@ class WC_Helper_Payment_Token {
 	/**
 	 * Create a new eCheck payment token
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 * @return WC_Payment_Token_ECheck object
 	 */
 	public static function create_eCheck_token() {
@@ -43,7 +43,7 @@ class WC_Helper_Payment_Token {
 	/**
 	 * Create a new 'stub' payment token
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 * @param  string $extra A string to insert and get to test the metadata functionality of a token
 	 * @return WC_Payment_Token_Stub object
 	 */

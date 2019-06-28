@@ -23,7 +23,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	/**
 	 * Add some response filters
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __construct() {
 
@@ -37,7 +37,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	/**
 	 * Get the content type for the response
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return string
 	 */
 	public function get_content_type() {
@@ -48,7 +48,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	/**
 	 * Parse the raw request body entity
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $data the raw request body
 	 * @return array
 	 */
@@ -60,7 +60,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	/**
 	 * Generate an XML response given an array of data
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data the response data
 	 * @return string
 	 */
@@ -120,7 +120,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	/**
 	 * Convert array into XML by recursively generating child elements
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string|array $element_key - name for element, e.g. <OrderID>
 	 * @param string|array $element_value - value for element, e.g. 1234
 	 * @return string - generated XML
@@ -197,7 +197,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	 * Adjust the sales report array format to change totals keyed with the sales date to become an
 	 * attribute for the totals element instead
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data
 	 * @return array
 	 */
@@ -222,7 +222,7 @@ class WC_API_XML_Handler implements WC_API_Handler {
 	 *
 	 * Note that the parent product data for variations is also adjusted in the same manner as needed
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $data
 	 * @return array
 	 */

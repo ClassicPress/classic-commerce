@@ -8,7 +8,7 @@ class WC_Tests_Payment_Token_eCheck extends WC_Unit_Test_Case {
 
 	/**
 	 * Test validation for empty/unset values.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_token_echeck_validate_empty() {
 		$token = new WC_Payment_Token_ECheck();
@@ -20,7 +20,7 @@ class WC_Tests_Payment_Token_eCheck extends WC_Unit_Test_Case {
 
 	/**
 	 * Test get/set last4.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_echeck_last4() {
 		$token = new WC_Payment_Token_ECheck();
@@ -30,7 +30,7 @@ class WC_Tests_Payment_Token_eCheck extends WC_Unit_Test_Case {
 
 	/**
 	 * Test reading/getting a token from DB correctly sets meta.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function test_wc_payment_token_echeck_read_pulls_meta() {
 		$token = WC_Helper_Payment_Token::create_eCheck_token();

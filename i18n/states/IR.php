@@ -3,7 +3,7 @@
  * Iran States
  *
  * @package WooCommerce/i18n
- * @version 2.2.3
+ * @version WC-2.2.3
  */
 
 global $states;

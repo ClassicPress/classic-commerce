@@ -3,7 +3,7 @@
  * Setup menus in WP admin.
  *
  * @package WooCommerce\Admin
- * @version 2.5.0
+ * @version WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -337,7 +337,7 @@ class WC_Admin_Menus {
 	/**
 	 * Add the "Visit Store" link in admin bar main menu.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @param WP_Admin_Bar $wp_admin_bar Admin bar instance.
 	 */
 	public function admin_bar_menus( $wp_admin_bar ) {

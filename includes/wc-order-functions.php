@@ -5,7 +5,7 @@
  * Functions for order specific things.
  *
  * @package WooCommerce/Functions
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -86,7 +86,7 @@ function wc_get_order( $the_order = false ) {
 /**
  * Get all order statuses.
  *
- * @since 2.2
+ * @since WC-2.2
  * @used-by WC_Order::set_status
  * @return array
  */
@@ -464,7 +464,7 @@ function wc_ship_to_billing_address_only() {
  *
  * Returns a new refund object on success which can then be used to add additional data.
  *
- * @since 2.2
+ * @since WC-2.2
  * @throws Exception Throws exceptions when fail to create, but returns WP_Error instead.
  * @param array $args New refund arguments.
  * @return WC_Order_Refund|WP_Error
@@ -561,7 +561,7 @@ function wc_create_refund( $args = array() ) {
 		/**
 		 * Action hook to adjust refund before save.
 		 *
-		 * @since 3.0.0
+		 * @since WC-3.0.0
 		 */
 		do_action( 'woocommerce_create_refund', $refund, $args );
 
@@ -612,7 +612,7 @@ function wc_create_refund( $args = array() ) {
 /**
  * Try to refund the payment for an order via the gateway.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @throws Exception Throws exceptions when fail to refund, but returns WP_Error instead.
  * @param WC_Order $order  Order instance.
  * @param string   $amount Amount to refund.
@@ -658,7 +658,7 @@ function wc_refund_payment( $order, $amount, $reason = '' ) {
 /**
  * Restock items during refund.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param WC_Order $order               Order instance.
  * @param array    $refunded_line_items Refunded items list.
  */
@@ -686,7 +686,7 @@ function wc_restock_refunded_items( $order, $refunded_line_items ) {
 /**
  * Get tax class by tax id.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param int $tax_id Tax ID.
  * @return string
  */
@@ -698,7 +698,7 @@ function wc_get_tax_class_by_tax_id( $tax_id ) {
 /**
  * Get payment gateway class by order data.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param int|WC_Order $order Order instance.
  * @return WC_Payment_Gateway|bool
  */
@@ -722,7 +722,7 @@ function wc_get_payment_gateway_by_order( $order ) {
  *
  * This is manual; no gateway refund will be performed.
  *
- * @since 2.4
+ * @since WC-2.4
  * @param int $order_id Order ID.
  */
 function wc_order_fully_refunded( $order_id ) {
@@ -760,7 +760,7 @@ function wc_order_search( $term ) {
 /**
  * Update total sales amount for each product within a paid order.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int $order_id Order ID.
  */
 function wc_update_total_sales_counts( $order_id ) {
@@ -797,7 +797,7 @@ add_action( 'woocommerce_order_status_on-hold', 'wc_update_total_sales_counts' )
 /**
  * Update used coupon amount for each coupon within an order.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int $order_id Order ID.
  */
 function wc_update_coupon_usage_counts( $order_id ) {
@@ -882,7 +882,7 @@ add_action( 'woocommerce_cancel_unpaid_orders', 'wc_cancel_unpaid_orders' );
  * E.g Users can sometimes try to track an order id using # with no success.
  * This function will fix this.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  * @param int $order_id Order ID.
  */
 function wc_sanitize_order_id( $order_id ) {

@@ -2,7 +2,7 @@
 /**
  * Background Emailer
  *
- * @version 3.0.1
+ * @version WC-3.0.1
  * @package WooCommerce/Classes
  */
 

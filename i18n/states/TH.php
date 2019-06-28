@@ -3,7 +3,7 @@
  * Thailand states
  *
  * @package WooCommerce/i18n
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 global $states;

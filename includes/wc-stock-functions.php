@@ -5,7 +5,7 @@
  * Functions used to manage product stock levels.
  *
  * @package WooCommerce/Functions
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -74,7 +74,7 @@ function wc_update_product_stock_status( $product_id, $status ) {
 /**
  * When a payment is complete, we can reduce stock levels for items within an order.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int $order_id Order ID.
  */
 function wc_maybe_reduce_stock_levels( $order_id ) {
@@ -105,7 +105,7 @@ add_action( 'woocommerce_order_status_on-hold', 'wc_maybe_reduce_stock_levels' )
 /**
  * When a payment is cancelled, restore stock.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int $order_id Order ID.
  */
 function wc_maybe_increase_stock_levels( $order_id ) {
@@ -134,7 +134,7 @@ add_action( 'woocommerce_order_status_pending', 'wc_maybe_increase_stock_levels'
 /**
  * Reduce stock levels for items within an order, if stock has not already been reduced for the items.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int|WC_Order $order_id Order ID or order instance.
  */
 function wc_reduce_stock_levels( $order_id ) {
@@ -193,7 +193,7 @@ function wc_reduce_stock_levels( $order_id ) {
 /**
  * After stock change events, triggers emails and adds order notes.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  * @param WC_Order $order order object.
  * @param array $changes Array of changes.
  */
@@ -231,7 +231,7 @@ function wc_trigger_stock_change_notifications( $order, $changes ) {
 /**
  * Increase stock levels for items within an order.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int|WC_Order $order_id Order ID or order instance.
  */
 function wc_increase_stock_levels( $order_id ) {
@@ -288,7 +288,7 @@ function wc_increase_stock_levels( $order_id ) {
 /**
  * See how much stock is being held in pending orders.
  *
- * @since 3.5.0
+ * @since WC-3.5.0
  * @param WC_Product $product Product to check.
  * @param integer    $exclude_order_id Order ID to exclude.
  * @return int

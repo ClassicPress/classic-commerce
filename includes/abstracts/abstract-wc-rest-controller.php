@@ -230,7 +230,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate a text value for a text based setting.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Value.
 	 * @param array  $setting Setting.
 	 * @return string
@@ -243,7 +243,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate select based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Value.
 	 * @param array  $setting Setting.
 	 * @return string|WP_Error
@@ -259,7 +259,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate multiselect based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $values Values.
 	 * @param array $setting Setting.
 	 * @return array|WP_Error
@@ -286,7 +286,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate image_width based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $values Values.
 	 * @param array $setting Setting.
 	 * @return string|WP_Error
@@ -312,7 +312,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate radio based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Value.
 	 * @param array  $setting Setting.
 	 * @return string|WP_Error
@@ -324,7 +324,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate checkbox based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Value.
 	 * @param array  $setting Setting.
 	 * @return string|WP_Error
@@ -343,7 +343,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Validate textarea based settings.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Value.
 	 * @param array  $setting Setting.
 	 * @return string
@@ -368,7 +368,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	/**
 	 * Add meta query.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $args       Query args.
 	 * @param array $meta_query Meta query.
 	 * @return array
@@ -429,7 +429,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	 * Included fields are based on item schema and `_fields=` request argument.
 	 * Introduced to support WordPress 4.9.6 changes.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return array Fields to be included in the response.
 	 */

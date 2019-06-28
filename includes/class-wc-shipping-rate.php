@@ -18,7 +18,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Stores data for this rate.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var   array
 	 */
 	protected $data = array(
@@ -33,7 +33,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Stores meta data for this rate.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @var   array
 	 */
 	protected $meta_data = array();
@@ -60,7 +60,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Magic methods to support direct access to props.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $key Key.
 	 * @return bool
 	 */
@@ -71,7 +71,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Magic methods to support direct access to props.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $key Key.
 	 * @return mixed
 	 */
@@ -88,7 +88,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Magic methods to support direct access to props.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $key   Key.
 	 * @param mixed  $value Value.
 	 */
@@ -103,7 +103,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set ID for the rate. This is usually a combination of the method and instance IDs.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $id Shipping rate ID.
 	 */
 	public function set_id( $id ) {
@@ -113,7 +113,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set shipping method ID the rate belongs to.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $method_id Shipping method ID.
 	 */
 	public function set_method_id( $method_id ) {
@@ -123,7 +123,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set instance ID the rate belongs to.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param int $instance_id Instance ID.
 	 */
 	public function set_instance_id( $instance_id ) {
@@ -133,7 +133,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate label.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $label Shipping rate label.
 	 */
 	public function set_label( $label ) {
@@ -144,7 +144,7 @@ class WC_Shipping_Rate {
 	 * Set rate cost.
 	 *
 	 * @todo 4.0 Prevent negative value being set. #19293
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string $cost Shipping rate cost.
 	 */
 	public function set_cost( $cost ) {
@@ -154,7 +154,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate taxes.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $taxes List of taxes applied to shipping rate.
 	 */
 	public function set_taxes( $taxes ) {
@@ -164,7 +164,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set ID for the rate. This is usually a combination of the method and instance IDs.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return string
 	 */
 	public function get_id() {
@@ -174,7 +174,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set shipping method ID the rate belongs to.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return string
 	 */
 	public function get_method_id() {
@@ -184,7 +184,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set instance ID the rate belongs to.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return int
 	 */
 	public function get_instance_id() {
@@ -203,7 +203,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate cost.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return string
 	 */
 	public function get_cost() {
@@ -213,7 +213,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate taxes.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return array
 	 */
 	public function get_taxes() {
@@ -232,7 +232,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Add some meta data for this rate.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $key   Key.
 	 * @param string $value Value.
 	 */
@@ -243,7 +243,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Get all meta data for this rate.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return array
 	 */
 	public function get_meta_data() {

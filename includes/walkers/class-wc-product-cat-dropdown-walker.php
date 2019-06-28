@@ -3,7 +3,7 @@
  * WC_Product_Cat_Dropdown_Walker class
  *
  * @package WooCommerce/Classes/Walkers
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -39,7 +39,7 @@ class WC_Product_Cat_Dropdown_Walker extends Walker {
 	 * Starts the list before the elements are added.
 	 *
 	 * @see Walker::start_el()
-	 * @since 2.1.0
+	 * @since WC-2.1.0
 	 *
 	 * @param string $output            Passed by reference. Used to append additional content.
 	 * @param object $cat               Category.
@@ -83,7 +83,7 @@ class WC_Product_Cat_Dropdown_Walker extends Walker {
 	 *
 	 * This method shouldn't be called directly, use the walk() method instead.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param object $element           Data object.
 	 * @param array  $children_elements List of elements to continue traversing.

@@ -62,7 +62,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Hook prefix
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function get_hook_prefix() {
 		return 'woocommerce_payment_token_cc_get_';
@@ -77,7 +77,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	 * last4         - string Last 4 digits of the card
 	 * card_type     - string Card type (visa, mastercard, etc)
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return boolean True if the passed data is valid
 	 */
 	public function validate() {
@@ -126,7 +126,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Set the card type (mastercard, visa, ...).
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $type Credit card type (mastercard, visa, ...).
 	 */
 	public function set_card_type( $type ) {
@@ -147,7 +147,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Set the expiration year for the card (YYYY format).
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $year Credit card expiration year.
 	 */
 	public function set_expiry_year( $year ) {
@@ -168,7 +168,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Set the expiration month for the card (formats into MM format).
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $month Credit card expiration month.
 	 */
 	public function set_expiry_month( $month ) {
@@ -189,7 +189,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Set the last four digits.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $last4 Credit card last four digits.
 	 */
 	public function set_last4( $last4 ) {

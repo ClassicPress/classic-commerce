@@ -817,7 +817,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param  array $tax_rate
@@ -841,7 +841,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id
@@ -864,7 +864,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id
@@ -893,7 +893,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -914,7 +914,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -936,7 +936,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -956,7 +956,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id

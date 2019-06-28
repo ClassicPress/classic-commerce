@@ -3,14 +3,14 @@
 /**
  * Order Item Tax Tests.
  * @package WooCommerce\Tests\Order_Items
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Tests_Order_Item_Tax extends WC_Unit_Test_Case {
 
 	/**
 	 * Test set_tax_total/get_tax_total.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	function test_set_get_tax_totals() {
 
@@ -30,7 +30,7 @@ class WC_Tests_Order_Item_Tax extends WC_Unit_Test_Case {
 	/**
 	 * Test set_tax_total/get_tax_total.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	function test_set_get_shipping_tax_totals() {
 

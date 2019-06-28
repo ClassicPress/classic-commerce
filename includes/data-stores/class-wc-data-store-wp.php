@@ -5,7 +5,7 @@
  * Your own data store doesn't need to use WC_Data_Store_WP -- you can write
  * your own meta handling functions.
  *
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Classes
  */
 
@@ -37,7 +37,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Data stored in meta keys, but not considered "meta" for an object.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $internal_meta_keys = array();
@@ -165,7 +165,7 @@ class WC_Data_Store_WP {
 	 * Internal meta keys we don't want exposed as part of meta_data. This is in
 	 * addition to all data props with _ prefix.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 *
 	 * @param string $key Prefix to be added to meta keys.
 	 * @return string
@@ -210,7 +210,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Get valid WP_Query args from a WC_Object_Query's query variables.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param array $query_vars query vars from a WC_Object_Query.
 	 * @return array
 	 */
@@ -275,7 +275,7 @@ class WC_Data_Store_WP {
 	 * Valid date formats: YYYY-MM-DD or timestamp, possibly combined with an operator from $valid_operators.
 	 * Also accepts a WC_DateTime object.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param mixed  $query_var A valid date format.
 	 * @param string $key meta or db column key.
 	 * @param array  $wp_query_args WP_Query args.
@@ -441,7 +441,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Return list of internal meta keys.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @return array
 	 */
 	public function get_internal_meta_keys() {
@@ -455,7 +455,7 @@ class WC_Data_Store_WP {
 	 * term matching when searching for posts. The list of English stopwords is
 	 * the approximate search engines list, and is translatable.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param array $terms Terms to check.
 	 * @return array Terms that are not stopwords.
 	 */
@@ -489,7 +489,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Retrieve stopwords used when parsing search terms.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @return array Stopwords.
 	 */
 	protected function get_search_stopwords() {

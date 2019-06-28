@@ -5,7 +5,7 @@
  * Widget related functions and widget registration.
  *
  * @package WooCommerce/Functions
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -30,7 +30,7 @@ require_once dirname( __FILE__ ) . '/widgets/class-wc-widget-top-rated-products.
 /**
  * Register Widgets.
  *
- * @since 2.3.0
+ * @since WC-2.3.0
  */
 function wc_register_widgets() {
 	register_widget( 'WC_Widget_Cart' );

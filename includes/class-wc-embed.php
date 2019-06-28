@@ -18,7 +18,7 @@ class WC_Embed {
 	/**
 	 * Init embed class.
 	 *
-	 * @since 2.4.11
+	 * @since WC-2.4.11
 	 */
 	public static function init() {
 
@@ -38,7 +38,7 @@ class WC_Embed {
 	/**
 	 * Remove comments button on product embeds.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public static function remove_comments_button() {
 		if ( self::is_embedded_product() ) {
@@ -49,7 +49,7 @@ class WC_Embed {
 	/**
 	 * Check if this is an embedded product - to make sure we don't mess up regular posts.
 	 *
-	 * @since 2.4.11
+	 * @since WC-2.4.11
 	 * @return bool
 	 */
 	public static function is_embedded_product() {
@@ -62,7 +62,7 @@ class WC_Embed {
 	/**
 	 * Create the excerpt for embedded products - we want to add the buy button to it.
 	 *
-	 * @since 2.4.11
+	 * @since WC-2.4.11
 	 * @param string $excerpt Embed short description.
 	 * @return string
 	 */
@@ -91,7 +91,7 @@ class WC_Embed {
 	/**
 	 * Create the button to go to the product page for embedded products.
 	 *
-	 * @since 2.4.11
+	 * @since WC-2.4.11
 	 * @return string
 	 */
 	public static function product_buttons() {
@@ -111,7 +111,7 @@ class WC_Embed {
 	/**
 	 * Prints the markup for the rating stars.
 	 *
-	 * @since 2.4.11
+	 * @since WC-2.4.11
 	 */
 	public static function get_ratings() {
 		// Make sure we're only affecting embedded products.

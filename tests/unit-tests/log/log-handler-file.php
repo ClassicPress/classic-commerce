@@ -3,7 +3,7 @@
 /**
  * Class WC_Tests_Log_Handler_File
  * @package WooCommerce\Tests\Log
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 
@@ -42,7 +42,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test _legacy format.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_legacy_format() {
 		$handler = new WC_Log_Handler_File( array( 'threshold' => 'debug' ) );
@@ -59,7 +59,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test clear().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_clear() {
 		$handler = new WC_Log_Handler_File();
@@ -72,7 +72,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test remove().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_remove() {
 		$handler = new WC_Log_Handler_File();
@@ -85,7 +85,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test handle writes to default file correctly.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_writes_file() {
 		$handler = new WC_Log_Handler_File();
@@ -107,7 +107,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test 'source' context determines log file.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_log_file_source() {
 		$handler = new WC_Log_Handler_File();
@@ -130,7 +130,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test multiple handlers don't conflict on log writing.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_multiple_handlers() {
 		$handler_a = new WC_Log_Handler_File();
@@ -157,7 +157,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	 *
 	 * Ensure logs are rotated correctly when limit is surpassed.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_log_rotate() {
 
@@ -196,7 +196,7 @@ class WC_Tests_Log_Handler_File extends WC_Unit_Test_Case {
 	/**
 	 * Test get_log_file_path().
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_log_file_path() {
 		$log_dir   = trailingslashit( WC_LOG_DIR );

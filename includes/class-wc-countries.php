@@ -3,7 +3,7 @@
  * WooCommerce countries
  *
  * @package WooCommerce\l10n
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -73,7 +73,7 @@ class WC_Countries {
 	/**
 	 * Get continent code for a country code.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $cc Continent code.
 	 * @return string
 	 */
@@ -170,7 +170,7 @@ class WC_Countries {
 	/**
 	 * Get the base address (first line) for the store.
 	 *
-	 * @since 3.1.1
+	 * @since WC-3.1.1
 	 * @return string
 	 */
 	public function get_base_address() {
@@ -181,7 +181,7 @@ class WC_Countries {
 	/**
 	 * Get the base address (second line) for the store.
 	 *
-	 * @since 3.1.1
+	 * @since WC-3.1.1
 	 * @return string
 	 */
 	public function get_base_address_2() {
@@ -212,7 +212,7 @@ class WC_Countries {
 	/**
 	 * Get the base city for the store.
 	 *
-	 * @version 3.1.1
+	 * @version WC-3.1.1
 	 * @return string
 	 */
 	public function get_base_city() {
@@ -223,7 +223,7 @@ class WC_Countries {
 	/**
 	 * Get the base postcode for the store.
 	 *
-	 * @since 3.1.1
+	 * @since WC-3.1.1
 	 * @return string
 	 */
 	public function get_base_postcode() {
@@ -518,7 +518,7 @@ class WC_Countries {
 	 * Get country address format.
 	 *
 	 * @param  array  $args Arguments.
-	 * @param  string $separator How to separate address lines. @since 3.5.0.
+	 * @param  string $separator How to separate address lines. @since WC-3.5.0.
 	 * @return string
 	 */
 	public function get_formatted_address( $args = array(), $separator = '<br/>' ) {

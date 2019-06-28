@@ -152,7 +152,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test that calculation rounding is done correctly with and without taxes.
 	 *
 	 * @see https://github.com/woocommerce/woocommerce/issues/16305
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_discount_cart_rounding() {
 		$expected_values = array(
@@ -221,7 +221,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test cart calculations when out of base location and using inclusive taxes and discounts.
 	 *
 	 * @see GitHub issues #17517 and #17536.
-	 * @since 3.3
+	 * @since WC-3.3
 	 */
 	public function test_out_of_base_discounts_inclusive_tax() {
 		// Set up tax options.
@@ -362,7 +362,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test cart calculations when out of base location and using inclusive taxes and discounts, for tax exempt customer.
 	 *
 	 * @see GitHub issues #17517 and #17536.
-	 * @since 3.5
+	 * @since WC-3.5
 	 */
 	public function test_out_of_base_discounts_inclusive_tax_for_tax_exempt_customer() {
 		WC()->customer->set_is_vat_exempt( true );
@@ -505,7 +505,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test cart calculations when out of base location with no matching taxes and using inclusive taxes and discounts.
 	 *
 	 * @see GitHub issue #19390.
-	 * @since 3.3
+	 * @since WC-3.3
 	 */
 	public function test_out_of_base_discounts_inclusive_tax_no_oob_tax() {
 		// Set up tax options.
@@ -608,7 +608,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Helper that can be hooked to a filter to force the customer's shipping country to be GB.
 	 *
-	 * @since 3.3
+	 * @since WC-3.3
 	 * @param string $country
 	 * @return string
 	 */
@@ -619,7 +619,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Helper that can be hooked to a filter to force the customer's shipping country to be US.
 	 *
-	 * @since 3.3
+	 * @since WC-3.3
 	 * @param string $country
 	 * @return string
 	 */
@@ -631,7 +631,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test a rounding issue on prices that are entered inclusive tax and shipping is used.
 	 * See: #17970.
 	 *
-	 * @since 3.2.6
+	 * @since WC-3.2.6
 	 */
 	public function test_inclusive_tax_rounding() {
 		$expected_values = array(
@@ -702,7 +702,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test a rounding issue on prices that are entered exclusive tax.
 	 * See: #17970.
 	 *
-	 * @since 3.2.6
+	 * @since WC-3.2.6
 	 */
 	public function test_exclusive_tax_rounding() {
 		$expected_values = array(
@@ -755,7 +755,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	 * Test a rounding issue on prices and totals that are entered exclusive tax.
 	 * See: #17647.
 	 *
-	 * @since 3.2.6
+	 * @since WC-3.2.6
 	 */
 	public function test_exclusive_tax_rounding_and_totals() {
 		$expected_values = array(
@@ -829,7 +829,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test get_remove_url.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_get_remove_url() {
 		// Get the cart page id
@@ -845,7 +845,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test add to cart simple product.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_add_to_cart_simple() {
 		// Create dummy product
@@ -878,7 +878,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test add to cart variable product.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_add_to_cart_variable() {
 		$product    = WC_Helper_Product::create_variation_product();
@@ -895,7 +895,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Check if adding a product that is sold individually is corrected when adding multiple times.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_add_to_cart_sold_individually() {
 		// Create dummy product
@@ -914,7 +914,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test the find_product_in_cart method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_find_product_in_cart() {
 		// Create dummy product
@@ -933,7 +933,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test the generate_cart_id method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_generate_cart_id() {
 
@@ -989,7 +989,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test the set_quantity method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_set_quantity() {
 		// Create dummy product
@@ -1017,7 +1017,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test check_cart_item_validity method.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_check_cart_item_validity() {
 
@@ -1034,7 +1034,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test get_total.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_get_total() {
 		// Create dummy product
@@ -1050,7 +1050,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test get_total_ex_tax.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_get_total_ex_tax() {
 		$expected_values = array(
@@ -1115,7 +1115,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test shipping total.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_shipping_total() {
 		// Create product
@@ -1143,7 +1143,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test cart fee.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_cart_fee() {
 		// Create product.
@@ -1164,7 +1164,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test cart fee with taxes.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_cart_fee_taxes() {
 		$expected_values = array(
@@ -1211,7 +1211,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test negative cart fee.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_cart_negative_fee() {
 		// Create product.
@@ -1232,7 +1232,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test negative cart fee with taxes.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_cart_negative_fee_taxes() {
 		$expected_values = array(
@@ -1292,7 +1292,7 @@ class WC_Tests_Cart extends WC_Unit_Test_Case {
 	/**
 	 * Test add_discount allows coupons by code but not by ID.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_add_discount_code_id() {
 

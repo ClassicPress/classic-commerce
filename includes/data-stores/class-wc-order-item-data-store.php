@@ -126,7 +126,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Get order ID by order item ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  int $item_id Item ID.
 	 * @return int
 	 */
@@ -143,7 +143,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Get the order item type based on Item ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $item_id Item ID.
 	 * @return string
 	 */

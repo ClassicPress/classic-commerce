@@ -2,7 +2,7 @@
 /**
  * Stub/Dummy class to test WC_Payment_Token methods only
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  */
 class WC_Payment_Token_Stub extends WC_Payment_Token {
 
@@ -11,7 +11,7 @@ class WC_Payment_Token_Stub extends WC_Payment_Token {
 
 	/**
 	 * Returns meta.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_extra() {
@@ -20,7 +20,7 @@ class WC_Payment_Token_Stub extends WC_Payment_Token {
 
 	/**
 	 * Set meta.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $extra
 	 */
 	public function set_extra( $extra ) {

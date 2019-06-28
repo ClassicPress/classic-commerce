@@ -89,7 +89,7 @@ class WC_Customer_Data_Store_Session extends WC_Data_Store_WP implements WC_Cust
 	 * Read customer data from the session unless the user has logged in, in
 	 * which case the stored ID will differ from the actual ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Customer $customer Customer object.
 	 */
 	public function read( &$customer ) {
@@ -154,7 +154,7 @@ class WC_Customer_Data_Store_Session extends WC_Data_Store_WP implements WC_Cust
 	/**
 	 * Deletes a customer from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Customer $customer Customer object.
 	 * @param array       $args Array of args to pass to the delete method.
 	 */
@@ -165,7 +165,7 @@ class WC_Customer_Data_Store_Session extends WC_Data_Store_WP implements WC_Cust
 	/**
 	 * Gets the customers last order.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Customer $customer Customer object.
 	 * @return WC_Order|false
 	 */
@@ -176,7 +176,7 @@ class WC_Customer_Data_Store_Session extends WC_Data_Store_WP implements WC_Cust
 	/**
 	 * Return the number of orders this customer has.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Customer $customer Customer object.
 	 * @return integer
 	 */
@@ -187,7 +187,7 @@ class WC_Customer_Data_Store_Session extends WC_Data_Store_WP implements WC_Cust
 	/**
 	 * Return how much money this customer has spent.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Customer $customer Customer object.
 	 * @return float
 	 */

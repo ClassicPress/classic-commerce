@@ -3,7 +3,7 @@
  * All functionality to regenerate images in the background when settings change.
  *
  * @package WooCommerce/Classes
- * @version 3.3.0
+ * @version WC-3.3.0
  * @since   3.3.0
  */
 

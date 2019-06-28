@@ -26,7 +26,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	 * GET /taxes/count
 	 * GET /taxes/<id>
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -77,7 +77,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Get all taxes
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param string $fields
 	 * @param array  $filter
@@ -110,7 +110,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Get the tax for the given ID
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $id The tax ID
 	 * @param string $fields fields to include in response
@@ -172,7 +172,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Create a tax
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param array $data
 	 *
@@ -241,7 +241,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Edit a tax
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $id The tax ID
 	 * @param array $data
@@ -328,7 +328,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Delete a tax
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $id The tax ID
 	 *
@@ -360,7 +360,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Get the total number of taxes
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param string $class
 	 * @param array $filter
@@ -388,7 +388,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Helper method to get tax rates objects
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param  array $args
 	 * @param  bool  $count_only
@@ -445,7 +445,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	 * Accepts an array with taxes in the formats supported by
 	 * WC_API_Taxes->create_tax() and WC_API_Taxes->edit_tax()
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param array $data
 	 *
@@ -513,7 +513,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Get all tax classes
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param string $fields
 	 *
@@ -552,7 +552,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Create a tax class.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param array $data
 	 *
@@ -616,7 +616,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Delete a tax class
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @param int $slug The tax class slug
 	 *
@@ -671,7 +671,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	/**
 	 * Get the total number of tax classes
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 *
 	 * @return array|WP_Error
 	 */

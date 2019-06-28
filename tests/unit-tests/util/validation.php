@@ -3,13 +3,13 @@
 /**
  * Class Validation.
  * @package WooCommerce\Tests\Util
- * @since 2.3
+ * @since WC-2.3
  */
 class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Test is_email().
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_is_email() {
 		$this->assertEquals( 'email@domain.com', WC_Validation::is_email( 'email@domain.com' ) );
@@ -20,7 +20,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Data provider for test_is_phone.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function data_provider_test_is_phone() {
 		return array(
@@ -36,7 +36,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	 * Test is_phone().
 	 *
 	 * @dataProvider data_provider_test_is_phone
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public function test_is_phone( $assert, $values ) {
 		$this->assertEquals( $assert, $values );
@@ -45,7 +45,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Data provider for test_is_postcode().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function data_provider_test_is_postcode() {
 		$generic = array(
@@ -99,7 +99,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	 * Test is_postcode().
 	 *
 	 * @dataProvider data_provider_test_is_postcode
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_is_postcode( $assert, $values ) {
 		$this->assertEquals( $assert, $values );
@@ -108,7 +108,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Data provider for test_is_gb_postcode.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function data_provider_test_is_gb_postcode() {
 		return array(
@@ -130,7 +130,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	 * Test is_gb_postcode().
 	 *
 	 * @dataProvider data_provider_test_is_gb_postcode
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_is_gb_postcode( $assert, $values ) {
 		$this->assertEquals( $assert, $values );
@@ -139,7 +139,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Data provider for test_format_postcode.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function data_provider_test_format_postcode() {
 		return array(
@@ -156,7 +156,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	 * Test format_postcode().
 	 *
 	 * @dataProvider data_provider_test_format_postcode
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_format_postcode( $assert, $values ) {
 		$this->assertEquals( $assert, $values );
@@ -165,7 +165,7 @@ class WC_Tests_Validation extends WC_Unit_Test_Case {
 	/**
 	 * Test format_phone().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_format_phone() {
 		$this->assertEquals( '+00-000-00-00-000', WC_Validation::format_phone( '+00.000.00.00.000' ) );

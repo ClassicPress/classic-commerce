@@ -10,7 +10,7 @@ class WC_Helper_Shipping {
 	/**
 	 * Create a simple flat rate at the cost of 10.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public static function create_simple_flat_rate() {
 		$flat_rate_settings = array(
@@ -31,7 +31,7 @@ class WC_Helper_Shipping {
 	/**
 	 * Delete the simple flat rate.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 */
 	public static function delete_simple_flat_rate() {
 		delete_option( 'woocommerce_flat_rate_settings' );

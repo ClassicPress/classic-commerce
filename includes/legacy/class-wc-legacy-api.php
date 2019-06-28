@@ -45,7 +45,7 @@ class WC_Legacy_API {
 	/**
 	 * Setup class.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 */
 	public function __construct() {
 		add_action( 'parse_request', array( $this, 'handle_rest_api_requests' ), 0 );
@@ -54,7 +54,7 @@ class WC_Legacy_API {
 	/**
 	 * Add new query vars.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 * @param array $vars Vars.
 	 * @return string[]
 	 */
@@ -67,7 +67,7 @@ class WC_Legacy_API {
 	/**
 	 * Add new endpoints.
 	 *
-	 * @since 2.0
+	 * @since WC-2.0
 	 */
 	public static function add_endpoint() {
 		// REST API, deprecated since 2.6.0.
@@ -78,7 +78,7 @@ class WC_Legacy_API {
 	/**
 	 * Handle REST API requests.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @deprecated 2.6.0
 	 */
 	public function handle_rest_api_requests() {
@@ -122,7 +122,7 @@ class WC_Legacy_API {
 	/**
 	 * Include required files for REST API request.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @deprecated 2.6.0
 	 */
 	public function includes() {
@@ -153,7 +153,7 @@ class WC_Legacy_API {
 	/**
 	 * Register available API resources.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @deprecated 2.6.0
 	 * @param WC_API_Server $server the REST server.
 	 */
@@ -180,7 +180,7 @@ class WC_Legacy_API {
 	/**
 	 * Handle legacy v1 REST API requests.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @deprecated 2.6.0
 	 */
 	private function handle_v1_rest_api_request() {
@@ -228,7 +228,7 @@ class WC_Legacy_API {
 	/**
 	 * Handle legacy v2 REST API requests.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 * @deprecated 2.6.0
 	 */
 	private function handle_v2_rest_api_request() {

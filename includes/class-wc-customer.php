@@ -3,7 +3,7 @@
  * The WooCommerce customer class handles storage of the current customer's data, such as location.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -131,7 +131,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 * Delete a customer and reassign posts..
 	 *
 	 * @param int $reassign Reassign posts and links to new User ID.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return bool
 	 */
 	public function delete_and_reassign( $reassign = null ) {
@@ -170,7 +170,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return this customer's avatar.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return string
 	 */
 	public function get_avatar_url() {
@@ -244,7 +244,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Get if customer is VAT exempt?
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return bool
 	 */
 	public function get_is_vat_exempt() {
@@ -290,7 +290,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's password.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $password Password.
 	 */
 	public function set_password( $password ) {
@@ -702,7 +702,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's username.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $username Username.
 	 */
 	public function set_username( $username ) {
@@ -712,7 +712,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's email.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $value Email.
 	 */
 	public function set_email( $value ) {
@@ -725,7 +725,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's first name.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $first_name First name.
 	 */
 	public function set_first_name( $first_name ) {
@@ -735,7 +735,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's last name.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $last_name Last name.
 	 */
 	public function set_last_name( $last_name ) {
@@ -745,7 +745,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's display name.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param string $display_name Display name.
 	 */
 	public function set_display_name( $display_name ) {
@@ -756,7 +756,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer's user role(s).
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param mixed $role User role.
 	 */
 	public function set_role( $role ) {
@@ -791,7 +791,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer address to match shop base address.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function set_billing_address_to_base() {
 		$base = wc_get_customer_default_location();
@@ -801,7 +801,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set customer shipping address to base address.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function set_shipping_address_to_base() {
 		$base = wc_get_customer_default_location();
@@ -845,7 +845,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Sets a prop for a setter method.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $prop    Name of prop to set.
 	 * @param string $address Name of address to set. billing or shipping.
 	 * @param mixed  $value   Value of the prop.
@@ -1066,7 +1066,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set if the user a paying customer.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param bool $is_paying_customer If is a paying customer.
 	 */
 	public function set_is_paying_customer( $is_paying_customer ) {

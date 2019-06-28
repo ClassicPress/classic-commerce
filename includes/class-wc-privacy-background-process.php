@@ -3,7 +3,7 @@
  * Order cleanup background process.
  *
  * @package WooCommerce/Classes
- * @version 3.4.0
+ * @version WC-3.4.0
  * @since   3.4.0
  */
 

@@ -3,7 +3,7 @@
  * Represents a single shipping zone
  *
  * @since   2.6.0
- * @version 3.0.0
+ * @version WC-3.0.0
  * @package WooCommerce/Classes
  */
 
@@ -235,7 +235,7 @@ class WC_Shipping_Zone extends WC_Legacy_Shipping_Zone {
 	/**
 	 * Set zone locations.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param array $locations Value to set.
 	 */
 	public function set_zone_locations( $locations ) {

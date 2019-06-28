@@ -19,7 +19,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Data stored in meta keys, but not considered "meta" for an order.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $internal_meta_keys = array(
@@ -91,7 +91,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	 *
 	 * @param WC_Order $order Order object.
 	 * @param object   $post_object Post object.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function read_order_data( &$order, $post_object ) {
 		parent::read_order_data( $order, $post_object );
@@ -166,7 +166,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	 * Helper method that updates all the post meta for an order based on it's settings in the WC_Order class.
 	 *
 	 * @param WC_Order $order Order object.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function update_post_meta( &$order ) {
 		$updated_props     = array();
@@ -613,7 +613,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Get the order type based on Order ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $order_id Order ID.
 	 * @return string
 	 */
@@ -624,7 +624,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Get valid WP_Query args from a WC_Order_Query's query variables.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param array $query_vars query vars from a WC_Order_Query.
 	 * @return array
 	 */
@@ -726,7 +726,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Query for Orders matching specific criteria.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 *
 	 * @param array $query_vars query vars from a WC_Order_Query.
 	 *

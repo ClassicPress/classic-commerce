@@ -19,7 +19,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	/**
 	 * Method to create a new shipping zone.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Shipping_Zone $zone Shipping zone object.
 	 */
 	public function create( &$zone ) {
@@ -41,7 +41,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	/**
 	 * Update zone in the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Shipping_Zone $zone Shipping zone object.
 	 */
 	public function update( &$zone ) {
@@ -64,7 +64,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	/**
 	 * Method to read a shipping zone from the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Shipping_Zone $zone Shipping zone object.
 	 * @throws Exception If invalid data store.
 	 */
@@ -185,7 +185,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	/**
 	 * Delete a method instance.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $instance_id Instance ID.
 	 */
 	public function delete_method( $instance_id ) {
@@ -253,7 +253,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	/**
 	 * Return an ordered list of zones.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array An array of objects containing a zone_id, zone_name, and zone_order.
 	 */
 	public function get_zones() {
@@ -300,7 +300,7 @@ class WC_Shipping_Zone_Data_Store extends WC_Data_Store_WP implements WC_Shippin
 	 * Save locations to the DB.
 	 * This function clears old locations, then re-inserts new if any changes are found.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Shipping_Zone $zone Shipping zone object.
 	 *

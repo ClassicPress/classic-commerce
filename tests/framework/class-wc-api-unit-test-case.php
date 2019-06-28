@@ -5,14 +5,14 @@
  * Provides REST API specific setup/tear down/assert methods, along with some helper.
  * functions.
  *
- * @since 2.2
+ * @since WC-2.2
  */
 class WC_API_Unit_Test_Case extends WC_Unit_Test_Case {
 
 	/**
 	 * Setup the test case case.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @see WC_Unit_Test_Case::setUp()
 	 */
 	public function setUp() {
@@ -39,7 +39,7 @@ class WC_API_Unit_Test_Case extends WC_Unit_Test_Case {
 	/**
 	 * Assert the given response is an API error with a specific code and status.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $code error code, e.g. `woocommerce_api_user_cannot_read_orders_count`
 	 * @param int|null $status HTTP status code associated with error, e.g. 400
 	 * @param WP_Error $response
@@ -64,7 +64,7 @@ class WC_API_Unit_Test_Case extends WC_Unit_Test_Case {
 	 * Disable the given capability for the current user, used for testing.
 	 * permission checking.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $capability, e.g. `read_private_shop_orders`
 	 */
 	protected function disable_capability( $capability ) {

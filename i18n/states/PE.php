@@ -3,7 +3,7 @@
  * Peru states
  *
  * @package WooCommerce/i18n
- * @version 2.1.0
+ * @version WC-2.1.0
  */
 
 global $states;

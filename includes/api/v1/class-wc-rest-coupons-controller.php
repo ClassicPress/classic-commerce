@@ -379,7 +379,7 @@ class WC_REST_Coupons_V1_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Saves a coupon to the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return WP_Error|int
 	 */

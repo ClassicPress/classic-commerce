@@ -3,7 +3,7 @@
  * Handles storage and retrieval of shipping zones
  *
  * @package WooCommerce/Classes
- * @version 3.3.0
+ * @version WC-3.3.0
  * @since   2.6.0
  */
 
@@ -19,7 +19,7 @@ class WC_Shipping_Zones {
 	/**
 	 * Get shipping zones from the database.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $context Getting shipping methods for what context. Valid values, admin, json.
 	 * @return array Array of arrays.
 	 */
@@ -42,7 +42,7 @@ class WC_Shipping_Zones {
 	/**
 	 * Get shipping zone using it's ID
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $zone_id Zone ID.
 	 * @return WC_Shipping_Zone|bool
 	 */
@@ -53,7 +53,7 @@ class WC_Shipping_Zones {
 	/**
 	 * Get shipping zone by an ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $by Get by 'zone_id' or 'instance_id'.
 	 * @param int    $id ID.
 	 * @return WC_Shipping_Zone|bool
@@ -85,7 +85,7 @@ class WC_Shipping_Zones {
 	/**
 	 * Get shipping zone using it's ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $instance_id Instance ID.
 	 * @return bool|WC_Shipping_Method
 	 */
@@ -109,7 +109,7 @@ class WC_Shipping_Zones {
 	 * Delete a zone using it's ID
 	 *
 	 * @param int $zone_id Zone ID.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public static function delete_zone( $zone_id ) {
 		$zone = new WC_Shipping_Zone( $zone_id );

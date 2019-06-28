@@ -25,7 +25,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 * Notes: cart_tax = cart_tax is the new name for the legacy 'order_tax'
 	 * which is the tax for items only, not shipping.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(
@@ -48,7 +48,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Order items will be stored here, sometimes before they persist in the DB.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $items = array();
@@ -56,7 +56,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Order items that need deleting are stored here.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $items_to_delete = array();
@@ -124,7 +124,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get all class data in array format.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array
 	 */
 	public function get_data() {
@@ -161,7 +161,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Save data to the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return int order ID
 	 */
 	public function save() {
@@ -226,7 +226,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get parent order ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param  string $context View or edit context.
 	 * @return integer
 	 */
@@ -441,7 +441,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get all valid statuses for this order
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array Internal status keys e.g. 'wc-processing'
 	 */
 	protected function get_valid_statuses() {
@@ -481,7 +481,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Set parent order ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $value Value to set.
 	 * @throws WC_Data_Exception Exception thrown if parent ID does not exist or is invalid.
 	 */
@@ -495,7 +495,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Set order status.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $new_status Status to change the order to. No internal wc- prefix is required.
 	 * @return array details of change
 	 */
@@ -879,7 +879,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Adds an order item to this order. The order item will not persist until save.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Order_Item $item Order item object (product, shipping, fee, coupon, tax).
 	 * @return false|void
 	 */
@@ -911,7 +911,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Apply a coupon to the order and recalculate totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param string|WC_Coupon $raw_coupon Coupon code or object.
 	 * @return true|WP_Error True if applied, error if not.
 	 */
@@ -1045,7 +1045,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 			/**
 			 * Allow developers to filter this coupon before it get's re-applied to the order.
 			 *
-			 * @since 3.2.0
+			 * @since WC-3.2.0
 			 */
 			$coupon_object = apply_filters( 'woocommerce_order_recalculate_coupons_coupon_object', $coupon_object, $coupon_code, $coupon_item, $this );
 
@@ -1064,7 +1064,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * After applying coupons via the WC_Discounts class, update line items.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param WC_Discounts $discounts Discounts class.
 	 */
 	protected function set_item_discount_amounts( $discounts ) {
@@ -1089,7 +1089,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * After applying coupons via the WC_Discounts class, update or create coupon items.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param WC_Discounts $discounts Discounts class.
 	 */
 	protected function set_coupon_discount_amounts( $discounts ) {
@@ -1198,7 +1198,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Add a payment token to an order
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 * @param WC_Payment_Token $token Payment token object.
 	 * @return boolean|int The new token ID or false if it failed.
 	 */
@@ -1218,7 +1218,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Returns a list of all payment tokens associated with the current order
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 * @return array An array of payment token objects
 	 */
 	public function get_payment_tokens() {
@@ -1237,7 +1237,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Calculate shipping total.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @return float
 	 */
 	public function calculate_shipping() {
@@ -1256,7 +1256,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get all tax classes for items in the order.
 	 *
-	 * @since 2.6.3
+	 * @since WC-2.6.3
 	 * @return array
 	 */
 	public function get_items_tax_classes() {
@@ -1274,7 +1274,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get tax location for this order.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $args array Override the location.
 	 * @return array
 	 */
@@ -1419,7 +1419,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Calculate totals by looking at the contents of the order. Stores the totals and returns the orders final total.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param  bool $and_taxes Calc taxes if true.
 	 * @return float calculated grand total.
 	 */
@@ -1910,7 +1910,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Returns true if the order contains a free product.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 * @return bool
 	 */
 	public function has_free_item() {

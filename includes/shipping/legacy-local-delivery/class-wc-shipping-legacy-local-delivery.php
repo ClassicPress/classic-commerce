@@ -46,7 +46,7 @@ class WC_Shipping_Legacy_Local_Delivery extends WC_Shipping_Local_Pickup {
 	/**
 	 * Return the name of the option in the WP DB.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_option_key() {

@@ -2,7 +2,7 @@
 /**
  * Customer Download Log Data Store Interface
  *
- * @version 3.3.0
+ * @version WC-3.3.0
  * @package WooCommerce/Interface
  */
 

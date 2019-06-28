@@ -27,7 +27,7 @@ abstract class WC_Data {
 	/**
 	 * ID for this object.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var int
 	 */
 	protected $id = 0;
@@ -35,7 +35,7 @@ abstract class WC_Data {
 	/**
 	 * Core data for this object. Name value pairs (name + default value).
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array();
@@ -43,7 +43,7 @@ abstract class WC_Data {
 	/**
 	 * Core data changes for this object.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $changes = array();
@@ -51,7 +51,7 @@ abstract class WC_Data {
 	/**
 	 * This is false until the object is read from the DB.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var bool
 	 */
 	protected $object_read = false;
@@ -59,7 +59,7 @@ abstract class WC_Data {
 	/**
 	 * This is the name of this object type.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var string
 	 */
 	protected $object_type = 'data';
@@ -69,7 +69,7 @@ abstract class WC_Data {
 	 * Used as a standard way for sub classes (like product types) to add
 	 * additional information to an inherited class.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $extra_data = array();
@@ -77,7 +77,7 @@ abstract class WC_Data {
 	/**
 	 * Set to _data on construct so we can track and reset data if needed.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $default_data = array();
@@ -85,7 +85,7 @@ abstract class WC_Data {
 	/**
 	 * Contains a reference to the data store for this class.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var object
 	 */
 	protected $data_store;
@@ -94,7 +94,7 @@ abstract class WC_Data {
 	 * Stores meta in cache for future reads.
 	 * A group must be set to to enable caching.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var string
 	 */
 	protected $cache_group = '';
@@ -102,7 +102,7 @@ abstract class WC_Data {
 	/**
 	 * Stores additional meta data.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $meta_data = null;
@@ -143,7 +143,7 @@ abstract class WC_Data {
 	/**
 	 * When the object is cloned, make sure meta is duplicated correctly.
 	 *
-	 * @since 3.0.2
+	 * @since WC-3.0.2
 	 */
 	public function __clone() {
 		$this->maybe_read_meta_data();
@@ -267,7 +267,7 @@ abstract class WC_Data {
 	/**
 	 * Get All Meta Data.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return array of objects.
 	 */
 	public function get_meta_data() {
@@ -355,7 +355,7 @@ abstract class WC_Data {
 	/**
 	 * Set all meta data from array.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param array $data Key/Value pairs.
 	 */
 	public function set_meta_data( $data ) {
@@ -377,7 +377,7 @@ abstract class WC_Data {
 	/**
 	 * Add meta data.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 *
 	 * @param string        $key Meta key.
 	 * @param string|array  $value Meta value.
@@ -457,7 +457,7 @@ abstract class WC_Data {
 	/**
 	 * Delete meta data.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $key Meta key.
 	 */
 	public function delete_meta_data( $key ) {
@@ -474,7 +474,7 @@ abstract class WC_Data {
 	/**
 	 * Delete meta data.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param int $mid Meta ID.
 	 */
 	public function delete_meta_data_by_mid( $mid ) {
@@ -491,7 +491,7 @@ abstract class WC_Data {
 	/**
 	 * Read meta data if null.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function maybe_read_meta_data() {
 		if ( is_null( $this->meta_data ) ) {
@@ -503,7 +503,7 @@ abstract class WC_Data {
 	 * Read Meta Data from the database. Ignore any internal properties.
 	 * Uses it's own caches because get_metadata does not provide meta_ids.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param bool $force_read True to force a new DB read (and update cache).
 	 */
 	public function read_meta_data( $force_read = false ) {
@@ -549,7 +549,7 @@ abstract class WC_Data {
 	/**
 	 * Update Meta Data in the database.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function save_meta_data() {
 		if ( ! $this->data_store || is_null( $this->meta_data ) ) {
@@ -580,7 +580,7 @@ abstract class WC_Data {
 	/**
 	 * Set ID.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int $id ID.
 	 */
 	public function set_id( $id ) {
@@ -590,7 +590,7 @@ abstract class WC_Data {
 	/**
 	 * Set all props to default values.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function set_defaults() {
 		$this->data        = $this->default_data;
@@ -601,7 +601,7 @@ abstract class WC_Data {
 	/**
 	 * Set object read property.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param boolean $read Should read?.
 	 */
 	public function set_object_read( $read = true ) {
@@ -659,7 +659,7 @@ abstract class WC_Data {
 	 * This stores changes in a special array so we can track what needs saving
 	 * the the DB later.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $prop Name of prop to set.
 	 * @param mixed  $value Value of the prop.
 	 */
@@ -678,7 +678,7 @@ abstract class WC_Data {
 	/**
 	 * Return data changes only.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array
 	 */
 	public function get_changes() {
@@ -688,7 +688,7 @@ abstract class WC_Data {
 	/**
 	 * Merge changes with data and clear.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function apply_changes() {
 		$this->data    = array_replace_recursive( $this->data, $this->changes ); // @codingStandardsIgnoreLine
@@ -733,7 +733,7 @@ abstract class WC_Data {
 	/**
 	 * Sets a date prop whilst handling formatting and datetime objects.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string         $prop Name of prop to set.
 	 * @param string|integer $value Value of the prop.
 	 */
@@ -775,7 +775,7 @@ abstract class WC_Data {
 	 * When invalid data is found, throw an exception unless reading from the DB.
 	 *
 	 * @throws WC_Data_Exception Data Exception.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $code             Error code.
 	 * @param string $message          Error message.
 	 * @param int    $http_status_code HTTP status code.

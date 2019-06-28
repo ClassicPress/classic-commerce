@@ -3,7 +3,7 @@
  * Handles responses from PayPal IPN.
  *
  * @package WooCommerce/PayPal
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.5.0
+ * @version WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * My Account navigation.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  */
 do_action( 'woocommerce_account_navigation' ); ?>
 
@@ -29,7 +29,7 @@ do_action( 'woocommerce_account_navigation' ); ?>
 		/**
 		 * My Account content.
 		 *
-		 * @since 2.6.0
+		 * @since WC-2.6.0
 		 */
 		do_action( 'woocommerce_account_content' );
 	?>

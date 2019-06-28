@@ -71,7 +71,7 @@ class WC_Admin_Post_Types {
 	/**
 	 * Looks at the current screen and loads the correct list table handler.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function setup_screen() {
 		global $wc_list_table;
@@ -272,7 +272,7 @@ class WC_Admin_Post_Types {
 	 * Offers a way to hook into save post without causing an infinite loop
 	 * when quick/bulk saving product info.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param int    $post_id Post ID being saved.
 	 * @param object $post Post object being saved.
 	 */

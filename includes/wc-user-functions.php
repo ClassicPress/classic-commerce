@@ -5,7 +5,7 @@
  * Functions for customers.
  *
  * @package WooCommerce/Functions
- * @version 2.2.0
+ * @version WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -576,7 +576,7 @@ function wc_review_is_from_verified_owner( $comment_id ) {
 /**
  * Disable author archives for customers.
  *
- * @since 2.5.0
+ * @since WC-2.5.0
  */
 function wc_disable_author_archives_for_customers() {
 	global $author;
@@ -595,7 +595,7 @@ add_action( 'template_redirect', 'wc_disable_author_archives_for_customers' );
 /**
  * Hooks into the `profile_update` hook to set the user last updated timestamp.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int   $user_id The user that was updated.
  * @param array $old     The profile fields pre-change.
  */
@@ -608,7 +608,7 @@ add_action( 'profile_update', 'wc_update_profile_last_update_time', 10, 2 );
 /**
  * Hooks into the update user meta function to set the user last updated timestamp.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int    $meta_id     ID of the meta object that was changed.
  * @param int    $user_id     The user that was updated.
  * @param string $meta_key    Name of the meta key that was changed.
@@ -631,7 +631,7 @@ add_action( 'update_user_meta', 'wc_meta_update_last_update_time', 10, 4 );
 /**
  * Sets a user's "last update" time to the current timestamp.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int $user_id The user to set a timestamp for.
  */
 function wc_set_user_last_update_time( $user_id ) {
@@ -641,7 +641,7 @@ function wc_set_user_last_update_time( $user_id ) {
 /**
  * Get customer saved payment methods list.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int $customer_id Customer ID.
  * @return array
  */
@@ -652,7 +652,7 @@ function wc_get_customer_saved_methods_list( $customer_id ) {
 /**
  * Get info about customer's last order.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param int $customer_id Customer ID.
  * @return WC_Order|bool Order object if successful or false.
  */
@@ -665,7 +665,7 @@ function wc_get_customer_last_order( $customer_id ) {
 /**
  * Add support for searching by display_name.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  * @param array $search_columns Column names.
  * @return array
  */
@@ -711,7 +711,7 @@ add_action( 'delete_user', 'wc_delete_user_data' );
 /**
  * Store user agents. Used for tracker.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string     $user_login User login.
  * @param int|object $user       User.
  */
@@ -727,7 +727,7 @@ add_action( 'wp_login', 'wc_maybe_store_user_agent', 10, 2 );
 /**
  * Update logic triggered on login.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param string $user_login User login.
  * @param object $user       User.
  */
@@ -740,7 +740,7 @@ add_action( 'wp_login', 'wc_user_logged_in', 10, 2 );
 /**
  * Update when the user was last active.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  */
 function wc_current_user_is_active() {
 	if ( ! is_user_logged_in() ) {
@@ -753,7 +753,7 @@ add_action( 'wp', 'wc_current_user_is_active', 10 );
 /**
  * Set the user last active timestamp to now.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @param int $user_id User ID to mark active.
  */
 function wc_update_user_last_active( $user_id ) {

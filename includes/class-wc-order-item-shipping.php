@@ -3,7 +3,7 @@
  * Order Line Item (shipping)
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 
@@ -17,7 +17,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	/**
 	 * Order Data array. This is the core order data exposed in APIs since 3.0.0.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $extra_data = array(

@@ -5,7 +5,7 @@
  * Functions for coupon specific things.
  *
  * @package WooCommerce/Functions
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -71,7 +71,7 @@ function wc_coupons_enabled() {
 /**
  * Get coupon code by ID.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param int $id Coupon ID.
  * @return string
  */
@@ -83,7 +83,7 @@ function wc_get_coupon_code_by_id( $id ) {
 /**
  * Get coupon code by ID.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  * @param string $code    Coupon code.
  * @param int    $exclude Used to exclude an ID from the check if you're checking existence.
  * @return int

@@ -22,7 +22,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Register the routes for this class
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param array $routes
 	 * @return array
 	 */
@@ -62,7 +62,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get all webhooks
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $fields
 	 * @param array $filter
@@ -95,7 +95,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get the webhook for the given ID
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $id webhook ID
 	 * @param array $fields
 	 * @return array|WP_Error
@@ -130,7 +130,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get the total number of webhooks
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param string $status
 	 * @param array $filter
@@ -158,7 +158,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Create an webhook
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $data parsed webhook data
 	 *
@@ -228,7 +228,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Edit a webhook
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id webhook ID
 	 * @param array $data parsed webhook data
@@ -307,7 +307,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Delete a webhook
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $id webhook ID
 	 * @return array|WP_Error
 	 */
@@ -329,7 +329,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get webhooks total results
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param array $args Request arguments for filtering query.
 	 * @return array
 	 */
@@ -344,7 +344,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Helper method to get webhook post objects
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param array $args Request arguments for filtering query.
 	 * @return array
 	 */
@@ -410,7 +410,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get deliveries for a webhook
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
 	 * @param string $webhook_id webhook ID
 	 * @param string|null $fields fields to include in response
@@ -431,7 +431,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get the delivery log for the given webhook ID and delivery ID
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
 	 * @param string $webhook_id webhook ID
 	 * @param string $id delivery log ID
@@ -475,7 +475,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	 * 2) the ID returns a valid post object and matches the provided post type.
 	 * 3) the current user has the proper permissions to read/edit/delete the post.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param string|int $id The post ID
 	 * @param string $type The post type, either `shop_order`, `shop_coupon`, or `product`.
 	 * @param string $context The context of the request, either `read`, `edit` or `delete`.

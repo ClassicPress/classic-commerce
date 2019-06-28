@@ -2,7 +2,7 @@
 /**
  * Tax importer class file
  *
- * @version 2.3.0
+ * @version WC-2.3.0
  * @package WooCommerce/Admin
  */
 

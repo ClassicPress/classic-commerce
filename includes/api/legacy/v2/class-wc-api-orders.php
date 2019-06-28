@@ -30,7 +30,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * GET|PUT|DELETE /orders/<id>
 	 * GET /orders/<id>/notes
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -96,7 +96,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get all orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param array $filter
 	 * @param string $status
@@ -133,7 +133,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the order for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the order ID
 	 * @param array $fields
 	 * @param array $filter
@@ -285,7 +285,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the total number of orders
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 *
 	 * @param string $status
 	 * @param array $filter
@@ -334,7 +334,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * API user. Order statuses (particularly custom statuses) could be considered
 	 * private information which is why it's not in the API index.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @return array
 	 */
 	public function get_order_statuses() {
@@ -351,7 +351,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create an order
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $data raw order data
 	 *
@@ -477,7 +477,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 *
 	 * Requires a separate function for classes that extend WC_API_Orders.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 *
 	 * @param $args array
 	 * @param $data
@@ -491,7 +491,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Edit an order
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id the order ID
 	 * @param array $data
@@ -662,7 +662,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Helper method to get order post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */
@@ -695,7 +695,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * Helper method to set/update the billing & shipping addresses for
 	 * an order
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param \WC_Order $order
 	 * @param array $data
 	 */
@@ -777,7 +777,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * 1) Only non-protected meta (no leading underscore) can be set
 	 * 2) Meta values must be scalar (int, string, bool)
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $order_id valid order ID
 	 * @param array $order_meta order meta in array( 'meta_key' => 'meta_value' ) format
 	 */
@@ -796,7 +796,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 *
 	 * Items can be deleted by setting the resource ID to null
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param array $item item provided in the request body
 	 * @return bool true if the item resource ID is null, false otherwise
 	 */
@@ -819,7 +819,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * When updating, the item ID provided is checked to ensure it is associated
 	 * with the order.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param \WC_Order $order order
 	 * @param string $item_type
 	 * @param array $item item provided in the request body
@@ -851,7 +851,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create or update a line item
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param \WC_Order $order
 	 * @param array $item line item data
 	 * @param string $action 'create' to add line item or 'update' to update it
@@ -1016,7 +1016,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create or update an order shipping method
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param \WC_Order $order
 	 * @param array $shipping item data
 	 * @param string $action 'create' to add shipping or 'update' to update it
@@ -1068,7 +1068,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create or update an order fee
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param \WC_Order $order
 	 * @param array $fee item data
 	 * @param string $action 'create' to add fee or 'update' to update it
@@ -1139,7 +1139,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create or update an order coupon
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param \WC_Order $order
 	 * @param array $coupon item data
 	 * @param string $action 'create' to add coupon or 'update' to update it
@@ -1190,7 +1190,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the admin order notes for an order
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $order_id order ID
 	 * @param string|null $fields fields to include in response
 	 * @return array|WP_Error
@@ -1229,7 +1229,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get an order note for the given order ID and ID
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param string $order_id order ID
 	 * @param string $id order note ID
@@ -1274,7 +1274,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create a new order note for the given order
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param array $data raw request data
 	 * @return WP_Error|array error or created note response data
@@ -1332,7 +1332,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Edit the order note
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param string $id note ID
 	 * @param array $data parsed request data
@@ -1406,7 +1406,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Delete order note
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param string $id note ID
 	 * @return WP_Error|array error or deleted message
@@ -1456,7 +1456,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the order refunds for an order
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param string|null $fields fields to include in response
 	 * @return array|WP_Error
@@ -1488,7 +1488,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get an order refund for the given order ID and ID
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param string $order_id order ID
 	 * @param int $id
@@ -1567,7 +1567,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Create a new order refund for the given order
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param array $data raw request data
 	 * @param bool $api_refund do refund using a payment gateway API
@@ -1646,7 +1646,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Edit an order refund
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param string $id refund ID
 	 * @param array $data parsed request data
@@ -1715,7 +1715,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Delete order refund
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param string $order_id order ID
 	 * @param string $id refund ID
 	 * @return WP_Error|array error or deleted message
@@ -1762,7 +1762,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * Accepts an array with orders in the formats supported by
 	 * WC_API_Orders->create_order() and WC_API_Orders->edit_order()
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param array $data
 	 *

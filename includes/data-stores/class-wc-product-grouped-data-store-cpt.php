@@ -21,7 +21,7 @@ class WC_Product_Grouped_Data_Store_CPT extends WC_Product_Data_Store_CPT implem
 	 *
 	 * @param WC_Product $product Product object.
 	 * @param bool       $force Force update. Used during create.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function update_post_meta( &$product, $force = false ) {
 		$meta_key_to_props = array(
@@ -57,7 +57,7 @@ class WC_Product_Grouped_Data_Store_CPT extends WC_Product_Data_Store_CPT implem
 	/**
 	 * Sync grouped product prices with children.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product|int $product Product object or product ID.
 	 */
 	public function sync_price( &$product ) {

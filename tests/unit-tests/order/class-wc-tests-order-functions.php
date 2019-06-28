@@ -9,14 +9,14 @@
  * Class Functions.
  *
  * @package WooCommerce\Tests\Order
- * @since 2.3
+ * @since WC-2.3
  */
 class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 
 	/**
 	 * Test wc_get_order_statuses().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_get_order_statuses() {
 
@@ -38,7 +38,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_is_order_status().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_is_order_status() {
 		$this->assertTrue( wc_is_order_status( 'wc-pending' ) );
@@ -48,7 +48,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_order_status_name().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_get_order_status_name() {
 
@@ -59,7 +59,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_processing_order_count().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_processing_order_count() {
 		$this->assertEquals( 0, wc_processing_order_count() );
@@ -68,7 +68,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_orders_count().
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 */
 	public function test_wc_orders_count() {
 		foreach ( wc_get_order_statuses() as $status ) {
@@ -82,7 +82,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_ship_to_billing_address_only().
 	 *
-	 * @since 2.3.0
+	 * @since WC-2.3.0
 	 */
 	public function test_wc_ship_to_billing_address_only() {
 
@@ -100,7 +100,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_order().
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @group test
 	 */
 	public function test_wc_get_order() {
@@ -130,7 +130,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test getting an orders payment tokens
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 */
 	public function test_wc_order_get_payment_tokens() {
 		$order = WC_Helper_Order::create_order();
@@ -146,7 +146,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test adding a payment token to an order
 	 *
-	 * @since 2.6
+	 * @since WC-2.6
 	 */
 	public function test_wc_order_add_payment_token() {
 		$order = WC_Helper_Order::create_order();
@@ -161,7 +161,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the before and after date parameters for wc_get_orders.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 */
 	public function test_wc_get_orders_customer_params() {
 		$order1  = WC_Helper_Order::create_order( 0 );
@@ -210,7 +210,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the legacy before and after date parameters for wc_get_orders.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 */
 	public function test_wc_get_orders_date_params() {
 		$order1 = WC_Helper_Order::create_order();
@@ -297,7 +297,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the status parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_status_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -329,7 +329,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the type parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_type_param() {
 		$order = WC_Helper_Order::create_order();
@@ -359,7 +359,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the version parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_version_param() {
 		$order = WC_Helper_Order::create_order();
@@ -387,7 +387,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the created_via parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_created_via_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -419,7 +419,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the parent parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_parent_param() {
 		$parent = WC_Helper_Order::create_order();
@@ -444,7 +444,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the parent_exclude parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_parent_exclude_param() {
 		$parent = WC_Helper_Order::create_order();
@@ -470,7 +470,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the exclude parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_exclude_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -491,7 +491,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the limit parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_limit_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -506,7 +506,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the paged parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_paged_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -542,7 +542,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the offset parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_offset_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -565,7 +565,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the paginate parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_paginate_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -583,7 +583,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the paginate parameter with return id for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_paginate_id_param() {
 		$order = WC_Helper_order::create_order();
@@ -603,7 +603,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the order parameters for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_order_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -635,7 +635,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the currency parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_currency_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -667,7 +667,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the prices_include_tax parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_prices_include_tax_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -699,7 +699,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the payment_method parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_payment_method_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -731,7 +731,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the payment_method_title parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_get_order_payment_method_title_param() {
 		$order1 = WC_Helper_Order::create_order();
@@ -763,7 +763,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the price parameters for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_price_price_params() {
 		$order1 = new WC_Order();
@@ -841,7 +841,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the customer parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_customer_param() {
 		$customer1 = WC_Helper_Customer::create_customer( 'customer1', 'password', 'test1@test.com' );
@@ -895,7 +895,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the customer_id parameter for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_customer_id_param() {
 		$customer1 = WC_Helper_Customer::create_customer( 'customer1', 'password', 'test1@test.com' );
@@ -935,7 +935,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test the address parameters for wc_get_orders.
 	 *
-	 * @since 3.1
+	 * @since WC-3.1
 	 */
 	public function test_wc_get_order_address_params() {
 		$order1 = WC_Helper_Order::create_order();
@@ -1192,7 +1192,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_order date queries combined with meta queries.
 	 *
-	 * @since 3.2
+	 * @since WC-3.2
 	 */
 	public function test_wc_get_order_mixed_date_shipping_country() {
 		// Set up dates.
@@ -1274,7 +1274,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_order_note().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_order_note() {
 		$note_content = 'Note content';
@@ -1295,7 +1295,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_get_order_notes().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_get_order_notes() {
 		$order = WC_Helper_Order::create_order();
@@ -1326,7 +1326,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_create_order_note().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_create_order_note() {
 		$order = WC_Helper_Order::create_order();
@@ -1338,7 +1338,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_delete_order_note().
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function test_wc_delete_order_note() {
 		$order   = WC_Helper_Order::create_order();
@@ -1350,7 +1350,7 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	/**
 	 * Test wc_order_search()
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_wc_order_search() {
 		$order = WC_Helper_Order::create_order();

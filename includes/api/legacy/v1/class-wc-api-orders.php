@@ -28,7 +28,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 * GET|PUT /orders/<id>
 	 * GET /orders/<id>/notes
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $routes
 	 * @return array
 	 */
@@ -61,7 +61,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get all orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param string $fields
 	 * @param array $filter
 	 * @param string $status
@@ -98,7 +98,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the order for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the order ID
 	 * @param array $fields
 	 * @return array|WP_Error
@@ -236,7 +236,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the total number of orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param string $status
 	 * @param array $filter
@@ -263,7 +263,7 @@ class WC_API_Orders extends WC_API_Resource {
 	 *
 	 * API v1 only allows updating the status of an order
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the order ID
 	 * @param array $data
 	 * @return array|WP_Error
@@ -303,7 +303,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Get the admin order notes for an order
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the order ID
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -347,7 +347,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Helper method to get order post objects
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $args request arguments for filtering query
 	 * @return WP_Query
 	 */
@@ -379,7 +379,7 @@ class WC_API_Orders extends WC_API_Resource {
 	/**
 	 * Helper method to get the order subtotal
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_Order $order
 	 * @return float
 	 */

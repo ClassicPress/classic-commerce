@@ -3,7 +3,7 @@
  * Philippines Provinces
  *
  * @package WooCommerce/i18n
- * @version 2.4.0
+ * @version WC-2.4.0
  */
 
 global $states;

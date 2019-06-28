@@ -5,7 +5,7 @@
  * WooCommerce Emails Class which handles the sending on transactional emails and email templates. This class loads in available emails.
  *
  * @package WooCommerce/Classes/Emails
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -41,7 +41,7 @@ class WC_Emails {
 	 *
 	 * Ensures only one instance of WC_Emails is loaded or can be loaded.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @static
 	 * @return WC_Emails Main instance
 	 */
@@ -55,7 +55,7 @@ class WC_Emails {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __clone() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
@@ -64,7 +64,7 @@ class WC_Emails {
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 */
 	public function __wakeup() {
 		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
@@ -389,7 +389,7 @@ class WC_Emails {
 	/**
 	 * Show order downloads in a table.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param WC_Order $order         Order instance.
 	 * @param bool     $sent_to_admin If should sent to admin.
 	 * @param bool     $plain_text    If is plain text email.
@@ -449,7 +449,7 @@ class WC_Emails {
 		/**
 		 * Deprecated woocommerce_email_order_meta_keys filter.
 		 *
-		 * @since 2.3.0
+		 * @since WC-2.3.0
 		 */
 		$_fields = apply_filters( 'woocommerce_email_order_meta_keys', array(), $sent_to_admin );
 
@@ -651,7 +651,7 @@ class WC_Emails {
 	 * @deprecated 3.0.0
 	 * @see WC_Structured_Data::generate_order_data()
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param WC_Order $order         Order instance.
 	 * @param bool     $sent_to_admin If should sent to admin.
 	 * @param bool     $plain_text    If is plain text email.

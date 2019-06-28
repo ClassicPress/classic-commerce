@@ -3,7 +3,7 @@
  * Shortcodes
  *
  * @package WooCommerce/Classes
- * @version 3.2.0
+ * @version WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;

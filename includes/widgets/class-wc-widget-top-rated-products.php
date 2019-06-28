@@ -4,7 +4,7 @@
  * Gets and displays top rated products in an unordered list.
  *
  * @package WooCommerce/Widgets
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

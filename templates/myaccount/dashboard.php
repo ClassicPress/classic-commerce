@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	/**
 	 * My Account dashboard.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	do_action( 'woocommerce_account_dashboard' );
 

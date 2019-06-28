@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Handles Refunds and other API requests such as capture.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Gateway_Paypal_API_Handler {
 
@@ -163,7 +163,7 @@ class WC_Gateway_Paypal_API_Handler {
 /**
  * Here for backwards compatibility.
  *
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Gateway_Paypal_Refund extends WC_Gateway_Paypal_API_Handler {
 	/**

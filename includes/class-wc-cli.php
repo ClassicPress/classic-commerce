@@ -3,7 +3,7 @@
  * Enables WooCommerce, via the the command line.
  *
  * @package WooCommerce\CLI
- * @version 3.0.0
+ * @version WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

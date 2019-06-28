@@ -119,7 +119,7 @@ class WC_Order_Item_Meta {
 	 *   )
 	 * )
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 * @param string $hideprefix exclude meta when key is prefixed with this, defaults to '_'.
 	 * @return array
 	 */

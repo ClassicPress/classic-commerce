@@ -14,7 +14,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting tokens associated with an order.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_get_order_tokens() {
 		$order = WC_Helper_Order::create_order();
@@ -29,7 +29,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting tokens associated with a user and no gateway ID.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_get_customer_tokens_no_gateway() {
 		$this->assertEmpty( WC_Payment_Tokens::get_customer_tokens( $this->user_id ) );
@@ -47,7 +47,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting tokens associated with a user and for a specific gateway.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_get_customer_tokens_with_gateway() {
 		$this->assertEmpty( WC_Payment_Tokens::get_customer_tokens( $this->user_id ) );
@@ -72,7 +72,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting a customers default token.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_get_customer_default_token() {
 		$token = WC_Helper_Payment_Token::create_cc_token();
@@ -97,7 +97,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 	 * This should be the "first created".
 	 * @see WC_Payment_Token::create()
 	 * @group failing
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_get_customer_default_token_returns_first_created_when_no_default_token_set() {
 		$token = WC_Helper_Payment_Token::create_cc_token( $this->user_id );
@@ -116,7 +116,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting a token by ID.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_get() {
 		$token = WC_Helper_Payment_Token::create_cc_token();
@@ -127,7 +127,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test deleting a token by ID.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_delete() {
 		$token = WC_Helper_Payment_Token::create_cc_token();
@@ -141,7 +141,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test getting a token's type by ID.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_get_type_by_id() {
 		$token = WC_Helper_Payment_Token::create_cc_token();
@@ -151,7 +151,7 @@ class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 
 	/**
 	 * Test setting a users default token.
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	function test_wc_payment_tokens_set_users_default() {
 		$token = WC_Helper_Payment_Token::create_cc_token( $this->user_id );

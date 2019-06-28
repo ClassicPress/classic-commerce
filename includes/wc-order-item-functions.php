@@ -5,7 +5,7 @@
  * Functions for order specific things.
  *
  * @package WooCommerce/Functions
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -44,7 +44,7 @@ function wc_add_order_item( $order_id, $item_array ) {
 /**
  * Update an item for an order.
  *
- * @since 2.2
+ * @since WC-2.2
  * @param int   $item_id Item ID.
  * @param array $args    Either `order_item_type` or `order_item_name`.
  *

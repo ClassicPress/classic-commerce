@@ -25,7 +25,7 @@ class WC_Auth {
 	/**
 	 * Setup class.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 */
 	public function __construct() {
 		// Add query vars.
@@ -54,7 +54,7 @@ class WC_Auth {
 	/**
 	 * Add auth endpoint.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 */
 	public static function add_endpoint() {
 		add_rewrite_rule( '^wc-auth/v([1]{1})/(.*)?', 'index.php?wc-auth-version=$matches[1]&wc-auth-route=$matches[2]', 'top' );
@@ -63,7 +63,7 @@ class WC_Auth {
 	/**
 	 * Get scope name.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @param  string $scope Permission scope.
 	 * @return string
 	 */
@@ -286,7 +286,7 @@ class WC_Auth {
 	/**
 	 * Handle auth requests.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @throws Exception When auth_endpoint validation fails.
 	 */
 	public function handle_auth_requests() {
@@ -309,7 +309,7 @@ class WC_Auth {
 	/**
 	 * Auth endpoint.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 * @throws Exception When validation fails.
 	 * @param string $route Route.
 	 */
@@ -406,7 +406,7 @@ class WC_Auth {
 	/**
 	 * Maybe delete key.
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param array $key Key.
 	 */

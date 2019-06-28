@@ -35,7 +35,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Reads a product from the database and sets its data to the class.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object. $product Product object.
 	 */
 	public function read( &$product ) {
@@ -92,7 +92,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Create a new product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 */
 	public function create( &$product ) {
@@ -153,7 +153,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Updates an existing product.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 */
 	public function update( &$product ) {
@@ -247,7 +247,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	 * Generates a title with attribute information for a variation.
 	 * Products will get a title of the form "Name - Value, Value" or just "Name".
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @return string
 	 */
@@ -280,7 +280,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	 * Make sure we store the product version (to track data changes).
 	 *
 	 * @param WC_Product $product Product object.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function update_version_and_type( &$product ) {
 		wp_set_object_terms( $product->get_id(), '', 'product_type' );
@@ -290,7 +290,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Read post data.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @throws WC_Data_Exception If WC_Product::set_tax_status() is called with an invalid tax status.
 	 */
@@ -376,7 +376,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * For all stored terms in all taxonomies, save them to the DB.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @param bool       $force Force update. Used during create.
 	 */
@@ -391,7 +391,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Update visibility terms based on props.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 *
 	 * @param WC_Product $product Product object.
 	 * @param bool       $force Force update. Used during create.
@@ -413,7 +413,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Update attribute meta values.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @param bool       $force Force update. Used during create.
 	 */
@@ -447,7 +447,7 @@ class WC_Product_Variation_Data_Store_CPT extends WC_Product_Data_Store_CPT impl
 	/**
 	 * Helper method that updates all the post meta for a product based on it's settings in the WC_Product class.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param WC_Product $product Product object.
 	 * @param bool       $force Force update. Used during create.
 	 */

@@ -2,7 +2,7 @@
 
 /**
  * Simple text copy functions using native browser clipboard capabilities.
- * @since 3.2.0
+ * @since WC-3.2.0
  */
 
 /**

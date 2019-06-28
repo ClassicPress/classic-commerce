@@ -5,7 +5,7 @@
  * Functions for account specific things.
  *
  * @package WooCommerce/Functions
- * @version 2.6.0
+ * @version WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -81,7 +81,7 @@ function wc_edit_address_i18n( $id, $flip = false ) {
 /**
  * Get My Account menu items.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return array
  */
 function wc_get_account_menu_items() {
@@ -132,7 +132,7 @@ function wc_get_account_menu_items() {
 /**
  * Get account menu item classes.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $endpoint Endpoint.
  * @return string
  */
@@ -162,7 +162,7 @@ function wc_get_account_menu_item_classes( $endpoint ) {
 /**
  * Get account endpoint URL.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @param string $endpoint Endpoint.
  * @return string
  */
@@ -181,7 +181,7 @@ function wc_get_account_endpoint_url( $endpoint ) {
 /**
  * Get My Account > Orders columns.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return array
  */
 function wc_get_account_orders_columns() {
@@ -202,7 +202,7 @@ function wc_get_account_orders_columns() {
 /**
  * Get My Account > Downloads columns.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return array
  */
 function wc_get_account_downloads_columns() {
@@ -226,7 +226,7 @@ function wc_get_account_downloads_columns() {
 /**
  * Get My Account > Payment methods columns.
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return array
  */
 function wc_get_account_payment_methods_columns() {
@@ -242,7 +242,7 @@ function wc_get_account_payment_methods_columns() {
 /**
  * Get My Account > Payment methods types
  *
- * @since 2.6.0
+ * @since WC-2.6.0
  * @return array
  */
 function wc_get_account_payment_methods_types() {
@@ -371,7 +371,7 @@ add_filter( 'woocommerce_saved_payment_methods_list', 'wc_get_account_saved_paym
 /**
  * Controls the output for credit cards on the my account page.
  *
- * @since 2.6
+ * @since WC-2.6
  * @param  array            $item         Individual list item from woocommerce_saved_payment_methods_list.
  * @param  WC_Payment_Token $payment_token The payment token associated with this method entry.
  * @return array                           Filtered item.
@@ -394,7 +394,7 @@ add_filter( 'woocommerce_payment_methods_list_item', 'wc_get_account_saved_payme
 /**
  * Controls the output for eChecks on the my account page.
  *
- * @since 2.6
+ * @since WC-2.6
  * @param  array            $item         Individual list item from woocommerce_saved_payment_methods_list.
  * @param  WC_Payment_Token $payment_token The payment token associated with this method entry.
  * @return array                           Filtered item.

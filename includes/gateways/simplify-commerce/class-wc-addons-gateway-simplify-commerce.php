@@ -368,7 +368,7 @@ class WC_Addons_Gateway_Simplify_Commerce extends WC_Gateway_Simplify_Commerce {
 	 * Include the payment meta data required to process automatic recurring payments so that store managers can.
 	 * manually set up automatic recurring payments for a customer via the Edit Subscription screen in Subscriptions v2.0+.
 	 *
-	 * @since 2.4
+	 * @since WC-2.4
 	 * @param array           $payment_meta associative array of meta data required for automatic payments
 	 * @param WC_Subscription $subscription An instance of a subscription object
 	 * @return array

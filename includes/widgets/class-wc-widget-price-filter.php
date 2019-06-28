@@ -5,7 +5,7 @@
  * Generates a range slider to filter products by price.
  *
  * @package WooCommerce/Widgets
- * @version 2.3.0
+ * @version WC-2.3.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -6,7 +6,7 @@
  * Uses ArrayAccess to be BW compatible with previous ways of reading attributes.
  *
  * @package WooCommerce/Classes
- * @version 3.0.0
+ * @version WC-3.0.0
  * @since   3.0.0
  */
 
@@ -20,7 +20,7 @@ class WC_Product_Attribute implements ArrayAccess {
 	/**
 	 * Data array.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(

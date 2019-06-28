@@ -174,7 +174,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Whether or not this method is enabled in settings.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return boolean
 	 */
 	public function is_enabled() {
@@ -184,7 +184,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Return the shipping method instance ID.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return int
 	 */
 	public function get_instance_id() {
@@ -194,7 +194,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Return the shipping method title.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_method_title() {
@@ -204,7 +204,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Return the shipping method description.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_method_description() {
@@ -223,7 +223,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Return calculated rates for a package.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param object $package Package array.
 	 * @return array
 	 */
@@ -239,7 +239,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Returns a rate ID based on this methods ID and instance, with an optional
 	 * suffix if distinguishing between multiple rates.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param string $suffix Suffix.
 	 * @return string
 	 */
@@ -270,7 +270,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 			'taxes'     => '', // Pass taxes, or leave empty to have it calculated for you, or 'false' to disable calculations.
 			'calc_tax'  => 'per_order', // Calc tax per_order or per_item. Per item needs an array of costs.
 			'meta_data' => array(), // Array of misc meta data to store along with this rate - key value pairs.
-			'package'   => false, // Package array this rate was generated for @since 2.6.0.
+			'package'   => false, // Package array this rate was generated for @since WC-2.6.0.
 			'price_decimals' => wc_get_price_decimals(),
 		) ), $this );
 
@@ -322,7 +322,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Calc taxes per item being shipping in costs array.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @access protected
 	 * @param  array $costs Costs.
 	 * @return array of taxes
@@ -492,7 +492,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Get settings fields for instances of this shipping method (within zones).
 	 * Should be overridden by shipping methods to add options.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return array
 	 */
 	public function get_instance_form_fields() {
@@ -502,7 +502,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Return the name of the option in the WP DB.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_instance_option_key() {
@@ -512,7 +512,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	/**
 	 * Initialise Settings for instances.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function init_instance_settings() {
 		$this->instance_settings = get_option( $this->get_instance_option_key(), null );
@@ -529,7 +529,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 *
 	 * This method is usually attached to woocommerce_update_options_x hooks.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return bool was anything saved?
 	 */
 	public function process_admin_options() {

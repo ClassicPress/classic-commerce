@@ -28,7 +28,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Setup class, overridden to provide customer data to order response
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WC_API_Server $server
 	 */
 	public function __construct( WC_API_Server $server ) {
@@ -50,7 +50,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * GET /customers/<id>
 	 * GET /customers/<id>/orders
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param array $routes
 	 * @return array
 	 */
@@ -100,7 +100,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get all customers
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param array $fields
 	 * @param array $filter
 	 * @param int $page
@@ -131,7 +131,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the customer for the given ID
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the customer ID
 	 * @param array $fields
 	 * @return array|WP_Error
@@ -193,7 +193,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the customer for the given email
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param string $email the customer email
 	 * @param array $fields
@@ -220,7 +220,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the total number of customers
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 *
 	 * @param array $filter
 	 *
@@ -289,7 +289,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Add/Update customer data.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $id the customer ID
 	 * @param array $data
 	 * @param WC_Customer $customer
@@ -338,7 +338,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Create a customer
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param array $data
 	 *
@@ -392,7 +392,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Edit a customer
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 *
 	 * @param int $id the customer ID
 	 * @param array $data
@@ -445,7 +445,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Delete a customer
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $id the customer ID
 	 * @return array|WP_Error
 	 */
@@ -467,7 +467,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the orders for a customer
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param int $id the customer ID
 	 * @param string $fields fields to include in response
 	 * @param array $filter filters
@@ -489,7 +489,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get the available downloads for a customer
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @param int $id the customer ID
 	 * @param string $fields fields to include in response
 	 * @return array|WP_Error
@@ -529,7 +529,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 *
 	 * The filter for role can only be a single role in a string.
 	 *
-	 * @since 2.3
+	 * @since WC-2.3
 	 * @param array $args request arguments for filtering query
 	 * @return WP_User_Query
 	 */
@@ -619,7 +619,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Add customer data to orders
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param $order_data
 	 * @param $order
 	 * @return array
@@ -671,7 +671,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Modify the WP_User_Query to support filtering on the date the customer was created
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @param WP_User_Query $query
 	 */
 	public function modify_user_query( $query ) {
@@ -692,7 +692,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * 2) the ID returns a valid WP_User
 	 * 3) the current user has the proper permissions
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::validate_request()
 	 * @param integer $id the customer ID
 	 * @param string $type the request type, unused because this method overrides the parent class
@@ -747,7 +747,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Check if the current user can read users
 	 *
-	 * @since 2.1
+	 * @since WC-2.1
 	 * @see WC_API_Resource::is_readable()
 	 * @param int|WP_Post $post unused
 	 * @return bool true if the current user can read users, false otherwise
@@ -761,7 +761,7 @@ class WC_API_Customers extends WC_API_Resource {
 	 * Accepts an array with customers in the formats supported by
 	 * WC_API_Customers->create_customer() and WC_API_Customers->edit_customer()
 	 *
-	 * @since 2.4.0
+	 * @since WC-2.4.0
 	 *
 	 * @param array $data
 	 *

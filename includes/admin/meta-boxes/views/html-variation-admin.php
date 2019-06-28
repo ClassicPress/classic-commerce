@@ -150,7 +150,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				/**
 				 * woocommerce_variation_options_pricing action.
 				 *
-				 * @since 2.5.0
+				 * @since WC-2.5.0
 				 *
 				 * @param int     $loop
 				 * @param array   $variation_data
@@ -198,7 +198,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					/**
 					 * woocommerce_variation_options_inventory action.
 					 *
-					 * @since 2.5.0
+					 * @since WC-2.5.0
 					 *
 					 * @param int     $loop
 					 * @param array   $variation_data
@@ -276,7 +276,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				/**
 				 * woocommerce_variation_options_dimensions action.
 				 *
-				 * @since 2.5.0
+				 * @since WC-2.5.0
 				 *
 				 * @param int     $loop
 				 * @param array   $variation_data
@@ -321,7 +321,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					/**
 					 * woocommerce_variation_options_tax action.
 					 *
-					 * @since 2.5.0
+					 * @since WC-2.5.0
 					 *
 					 * @param int     $loop
 					 * @param array   $variation_data
@@ -428,7 +428,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				/**
 				 * woocommerce_variation_options_download action.
 				 *
-				 * @since 2.5.0
+				 * @since WC-2.5.0
 				 *
 				 * @param int     $loop
 				 * @param array   $variation_data

@@ -3,7 +3,7 @@
  * Regular order
  *
  * @package WooCommerce\Classes
- * @version 2.2.0
+ * @version WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -25,7 +25,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Order Data array. This is the core order data exposed in APIs since 3.0.0.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @var array
 	 */
 	protected $data = array(
@@ -208,7 +208,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Save data to the database.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return int order ID
 	 */
 	public function save() {
@@ -245,7 +245,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Set order status.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $new_status    Status to change the order to. No internal wc- prefix is required.
 	 * @param string $note          Optional note to add.
 	 * @param bool   $manual_update Is this a manual order status change?.
@@ -284,7 +284,7 @@ class WC_Order extends WC_Abstract_Order {
 	 * This ensures the data exists even if a gateway does not use the
 	 * `payment_complete` method.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function maybe_set_date_paid() {
 		if ( ! $this->get_date_paid( 'edit' ) && $this->has_status( apply_filters( 'woocommerce_payment_complete_order_status', $this->needs_processing() ? 'processing' : 'completed', $this->get_id(), $this ) ) ) {
@@ -297,7 +297,7 @@ class WC_Order extends WC_Abstract_Order {
 	 *
 	 * Sets the date completed variable when transitioning to completed status.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	protected function maybe_set_date_completed() {
 		if ( $this->has_status( 'completed' ) ) {
@@ -387,7 +387,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get all class data in array format.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return array
 	 */
 	public function get_data() {
@@ -855,7 +855,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get a formatted billing address for the order.
 	 *
-	 * @param string $empty_content Content to show if no address is present. @since 3.3.0.
+	 * @param string $empty_content Content to show if no address is present. @since WC-3.3.0.
 	 * @return string
 	 */
 	public function get_formatted_billing_address( $empty_content = '' ) {
@@ -868,7 +868,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get a formatted shipping address for the order.
 	 *
-	 * @param string $empty_content Content to show if no address is present. @since 3.3.0.
+	 * @param string $empty_content Content to show if no address is present. @since WC-3.3.0.
 	 * @return string
 	 */
 	public function get_formatted_shipping_address( $empty_content = '' ) {
@@ -917,7 +917,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Sets a prop for a setter method.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @param string $prop Name of prop to set.
 	 * @param string $address Name of address to set. billing or shipping.
 	 * @param mixed  $value Value of the prop.
@@ -1320,7 +1320,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Returns if an order has been paid for based on the order status.
 	 *
-	 * @since 2.5.0
+	 * @since WC-2.5.0
 	 * @return bool
 	 */
 	public function is_paid() {
@@ -1442,7 +1442,7 @@ class WC_Order extends WC_Abstract_Order {
 	 * Uses a transient so these calls are not repeated multiple times, and because
 	 * once the order is processed this code/transient does not need to persist.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 * @return bool
 	 */
 	public function needs_processing() {
@@ -1598,7 +1598,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get's the URL to edit the order in the backend.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @return string
 	 */
 	public function get_edit_order_url() {
@@ -1708,7 +1708,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get order refunds.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @return array of WC_Order_Refund objects
 	 */
 	public function get_refunds() {
@@ -1735,7 +1735,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get amount already refunded.
 	 *
-	 * @since 2.2
+	 * @since WC-2.2
 	 * @return string
 	 */
 	public function get_total_refunded() {

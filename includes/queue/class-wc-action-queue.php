@@ -2,7 +2,7 @@
 /**
  * Action Queue
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  * @package WooCommerce/Interface
  */
 
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * A job queue using WordPress actions.
  *
- * @version 3.5.0
+ * @version WC-3.5.0
  */
 class WC_Action_Queue implements WC_Queue_Interface {
 

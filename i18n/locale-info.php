@@ -3,7 +3,7 @@
  * Locales information
  *
  * @package WooCommerce/i18n
- * @version 3.5.0
+ * @version WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;

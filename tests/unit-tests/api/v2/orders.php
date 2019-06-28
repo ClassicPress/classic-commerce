@@ -3,7 +3,7 @@
  * Tests for the orders REST API.
  *
  * @package WooCommerce\Tests\API
- * @since 3.0.0
+ * @since WC-3.0.0
  */
 class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
@@ -28,7 +28,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Test route registration.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_register_routes() {
 		$routes = $this->server->get_routes();
@@ -39,7 +39,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Test getting all orders.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_items() {
 		wp_set_current_user( $this->user );
@@ -59,7 +59,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests to make sure orders cannot be viewed without valid permissions.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_items_without_permission() {
 		wp_set_current_user( 0 );
@@ -70,7 +70,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests getting a single order.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_item() {
 		wp_set_current_user( $this->user );
@@ -94,7 +94,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests getting a single order without the correct permissions.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_item_without_permission() {
 		wp_set_current_user( 0 );
@@ -106,7 +106,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests getting an order with an invalid ID.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_get_item_invalid_id() {
 		wp_set_current_user( $this->user );
@@ -116,7 +116,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests getting an order with an invalid ID.
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function test_get_item_refund_id() {
 		wp_set_current_user( $this->user );
@@ -130,7 +130,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests creating an order.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_create_order() {
 		wp_set_current_user( $this->user );
@@ -211,7 +211,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Test the sanitization of the payment_method_title field through the API.
 	 *
-	 * @since 3.5.2
+	 * @since WC-3.5.2
 	 */
 	public function test_create_update_order_payment_method_title_sanitize() {
 		wp_set_current_user( $this->user );
@@ -286,7 +286,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests creating an order without required fields.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_create_order_invalid_fields() {
 		wp_set_current_user( $this->user );
@@ -345,7 +345,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests updating an order.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_update_order() {
 		wp_set_current_user( $this->user );
@@ -372,7 +372,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests updating an order and removing items.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_update_order_remove_items() {
 		wp_set_current_user( $this->user );
@@ -412,7 +412,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests updating an order and adding a coupon.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_update_order_add_coupons() {
 		wp_set_current_user( $this->user );
@@ -451,7 +451,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests updating an order and removing a coupon.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function test_update_order_remove_coupons() {
 		wp_set_current_user( $this->user );
@@ -498,7 +498,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Tests updating an order without the correct permissions.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_update_order_without_permission() {
 		wp_set_current_user( 0 );
@@ -519,7 +519,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Tests that updating an order with an invalid id fails.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_update_order_invalid_id() {
 		wp_set_current_user( $this->user );
@@ -539,7 +539,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Test deleting an order.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_delete_order() {
 		wp_set_current_user( $this->user );
@@ -553,7 +553,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Test deleting an order without permission/creds.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_delete_order_without_permission() {
 		wp_set_current_user( 0 );
@@ -567,7 +567,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 	/**
 	 * Test deleting an order with an invalid id.
 	 *
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_delete_order_invalid_id() {
 		wp_set_current_user( $this->user );
@@ -617,7 +617,7 @@ class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {
 
 	/**
 	 * Test the order schema.
-	 * @since 3.0.0
+	 * @since WC-3.0.0
 	 */
 	public function test_order_schema() {
 		wp_set_current_user( $this->user );

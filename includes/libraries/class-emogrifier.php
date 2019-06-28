@@ -4,7 +4,7 @@
  *
  * For more information, please see the README.md file.
  *
- * @version 2.0.0
+ * @version WC-2.0.0
  *
  * @author Cameron Brooks
  * @author Jaime Prado

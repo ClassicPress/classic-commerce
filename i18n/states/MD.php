@@ -9,7 +9,7 @@
  * https://en.wikipedia.org/wiki/Romanian_alphabet#Unicode_and_HTML
  *
  * @package WooCommerce/i18n
- * @version 3.3.0
+ * @version WC-3.3.0
  */
 
 global $states;

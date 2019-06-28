@@ -7,7 +7,7 @@
  * This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com.
  *
  * @package WooCommerce/Classes
- * @version 3.4.0
+ * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

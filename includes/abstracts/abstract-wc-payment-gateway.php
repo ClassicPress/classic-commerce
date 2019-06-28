@@ -5,7 +5,7 @@
  * Hanldes generic payment gateway functionality which is extended by idividual payment gateways.
  *
  * @class WC_Payment_Gateway
- * @version 2.1.0
+ * @version WC-2.1.0
  * @package WooCommerce/Abstracts
  */
 
@@ -141,7 +141,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Returns a users saved tokens for this gateway.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return array
 	 */
 	public function get_tokens() {
@@ -199,7 +199,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	 * When this gateway is toggled on via AJAX, if this returns true a
 	 * redirect will occur to the settings page instead.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @return bool
 	 */
 	public function needs_setup() {
@@ -397,7 +397,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	 *
 	 * @param string $feature string The name of a feature to test support for.
 	 * @return bool True if the gateway supports the feature, false otherwise.
-	 * @since 1.5.7
+	 * @since WC-1.5.7
 	 */
 	public function supports( $feature ) {
 		return apply_filters( 'woocommerce_payment_gateway_supports', in_array( $feature, $this->supports ), $feature, $this );
@@ -432,7 +432,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Enqueues our tokenization script to handle some of the new form options.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function tokenization_script() {
 		wp_enqueue_script(
@@ -453,7 +453,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Grab and display our saved payment methods.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function saved_payment_methods() {
 		$html = '<ul class="woocommerce-SavedPaymentMethods wc-saved-payment-methods" data-count="' . esc_attr( count( $this->get_tokens() ) ) . '">';
@@ -471,7 +471,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Gets saved payment method HTML from a token.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @param  WC_Payment_Token $token Payment Token.
 	 * @return string Generated payment method HTML
 	 */
@@ -494,7 +494,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	 * Displays a radio button for entering a new payment method (new CC details) instead of using a saved method.
 	 * Only displayed when a gateway supports tokenization.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function get_new_payment_method_option_html() {
 		$label = apply_filters( 'woocommerce_payment_gateway_get_new_payment_method_option_html_label', $this->new_method_label ? $this->new_method_label : __( 'Use a new payment method', 'woocommerce' ), $this );
@@ -513,7 +513,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Outputs a checkbox for saving a new payment method to the database.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 */
 	public function save_payment_method_checkbox() {
 		printf(
@@ -529,7 +529,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Add payment method via account screen. This should be extended by gateway plugins.
 	 *
-	 * @since 3.2.0 Included here from 3.2.0, but supported from 3.0.0.
+	 * @since WC-3.2.0 Included here from 3.2.0, but supported from 3.0.0.
 	 * @return array
 	 */
 	public function add_payment_method() {

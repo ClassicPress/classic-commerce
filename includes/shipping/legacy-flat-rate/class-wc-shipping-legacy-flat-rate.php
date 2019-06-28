@@ -56,7 +56,7 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Return the name of the option in the WP DB.
 	 *
-	 * @since 2.6.0
+	 * @since WC-2.6.0
 	 * @return string
 	 */
 	public function get_option_key() {
@@ -229,7 +229,7 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 		}
 
 		/**
-		 * Developers can add additional flat rates based on this one via this action since @version 2.4.
+		 * Developers can add additional flat rates based on this one via this action since @version WC-2.4.
 		 *
 		 * Previously there were (overly complex) options to add additional rates however this was not user.
 		 * friendly and goes against what Flat Rate Shipping was originally intended for.
