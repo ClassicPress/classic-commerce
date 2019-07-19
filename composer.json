@@ -10,7 +10,7 @@
     "composer/installers": "~1.2"
   },
   "require-dev": {
-    "phpunit/phpunit": "6.*",
+    "phpunit/phpunit": "7.5.14",
     "woocommerce/woocommerce-git-hooks": "*",
     "woocommerce/woocommerce-sniffs": "0.0.9"
   },
