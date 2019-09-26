@@ -1,6 +1,6 @@
 <!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
 
-Welcome to the ClassicCommerce repository on GitHub. This is a Fork of Woocommerce and is still in development. 
+Welcome to the ClassicCommerce repository on GitHub. This is a Fork of Woocommerce [3.5 Beta](https://github.com/woocommerce/woocommerce/tree/cfd90f759f8410b9d20cf9d831c5229044c84ec0) and is still in development.
 
 Here you can browse the source, look at open issues and keep track of development. 
 
