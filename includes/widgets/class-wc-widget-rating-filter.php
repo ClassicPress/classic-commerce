@@ -2,7 +2,7 @@
 /**
  * Rating Filter Widget and related functions.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.6.0
  */
 

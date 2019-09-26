@@ -2,7 +2,7 @@
 /**
  * WooCommerce Checkout Settings
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

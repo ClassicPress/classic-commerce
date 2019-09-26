@@ -2,7 +2,7 @@
 
 /**
  * Order coupon tests.
- * @package WooCommerce\Tests\Orders
+ * @package ClassicCommerce\Tests\Orders
  */
 class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 

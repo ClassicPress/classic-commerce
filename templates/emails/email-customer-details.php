@@ -14,7 +14,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package WooCommerce/Templates/Emails
+ * @package ClassicCommerce/Templates/Emails
  * @version WC-2.5.0
  */
 

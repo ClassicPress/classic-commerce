@@ -4,7 +4,7 @@
  *
  * Returns an array of continents.
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.5.0
  */
 

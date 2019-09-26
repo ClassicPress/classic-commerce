@@ -2,7 +2,7 @@
 /**
  * Formatting functions
  *
- * @package WooCommerce\Tests\Formatting
+ * @package ClassicCommerce\Tests\Formatting
  */
 
 /**

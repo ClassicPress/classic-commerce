@@ -2,7 +2,7 @@
 /**
  * Product Categories Widget
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.3.0
  */
 

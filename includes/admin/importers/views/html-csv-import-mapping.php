@@ -2,7 +2,7 @@
 /**
  * Admin View: Importer - CSV mapping
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

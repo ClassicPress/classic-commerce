@@ -2,7 +2,7 @@
 /**
  * Class WC_Shipping_Legacy_Local_Pickup file.
  *
- * @package WooCommerce\Shipping
+ * @package ClassicCommerce\Shipping
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

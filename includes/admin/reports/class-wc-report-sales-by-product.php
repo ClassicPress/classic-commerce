@@ -2,7 +2,7 @@
 /**
  * Sales By Product Reporting
  *
- * @package WooCommerce/Admin/Reporting
+ * @package ClassicCommerce/Admin/Reporting
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

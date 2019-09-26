@@ -2,7 +2,7 @@
 /**
  * Class WC_Customer_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 /**
  * Class WC_Gateway_BACS file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

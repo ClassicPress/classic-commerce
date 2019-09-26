@@ -2,7 +2,7 @@
 /**
  * Product data variations
  *
- * @package WooCommerce\Admin\Metaboxes\Views
+ * @package ClassicCommerce\Admin\Metaboxes\Views
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

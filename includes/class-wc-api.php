@@ -4,7 +4,7 @@
  *
  * Handles WC-API endpoint requests.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   2.0.0
  */
 

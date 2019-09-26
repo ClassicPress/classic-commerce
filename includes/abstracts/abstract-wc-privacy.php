@@ -3,7 +3,7 @@
  * WooCommerce abstract privacy class.
  *
  * @since 3.4.0
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 defined( 'ABSPATH' ) || exit;

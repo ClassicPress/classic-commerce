@@ -4,7 +4,7 @@
  *
  * Functions for customers.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.2.0
  */
 

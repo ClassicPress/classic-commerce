@@ -5,7 +5,7 @@
  * Generic payment tokens functionality which can be extended by idividual types of payment tokens.
  *
  * @class WC_Payment_Token
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

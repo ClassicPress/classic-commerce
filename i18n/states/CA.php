@@ -2,7 +2,7 @@
 /**
  * Canadian states
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.0.0
  */
 

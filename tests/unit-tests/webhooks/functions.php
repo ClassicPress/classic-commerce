@@ -2,7 +2,7 @@
 
 /**
  * Class Functions.
- * @package WooCommerce\Tests\Webhook
+ * @package ClassicCommerce\Tests\Webhook
  * @since WC-2.3
  */
 class WC_Tests_Webhook_Functions extends WC_Unit_Test_Case {

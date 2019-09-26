@@ -2,7 +2,7 @@
 
 /**
  * WC_Object_Query tests
- * @package WooCommerce\Tests\CRUD
+ * @package ClassicCommerce\Tests\CRUD
  * @since 3.1.0
  */
 class WC_Tests_WC_Object_Query extends WC_Unit_Test_Case {

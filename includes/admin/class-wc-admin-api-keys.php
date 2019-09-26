@@ -2,7 +2,7 @@
 /**
  * WooCommerce Admin API Keys Class
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-2.4.0
  */
 

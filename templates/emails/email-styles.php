@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails
+ * @package ClassicCommerce/Templates/Emails
  * @version WC-3.3.0
  */
 

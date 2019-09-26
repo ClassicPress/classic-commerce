@@ -2,7 +2,7 @@
 /**
  * Display notices in admin
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-3.4.0
  */
 

@@ -4,7 +4,7 @@
  *
  * Widget related functions and widget registration.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.3.0
  */
 

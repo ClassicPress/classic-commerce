@@ -2,7 +2,7 @@
 /**
  * Tests for Products API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.0.0
  */
 

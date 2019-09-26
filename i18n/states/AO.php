@@ -2,7 +2,7 @@
 /**
  * Angola states
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-1.0.0
  */
 

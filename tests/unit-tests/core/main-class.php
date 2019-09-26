@@ -3,7 +3,7 @@
 /**
  * WooCommerce class.
  *
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  */
 class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 

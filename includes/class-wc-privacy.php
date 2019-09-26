@@ -3,7 +3,7 @@
  * Privacy/GDPR related functionality which ties into WordPress functionality.
  *
  * @since 3.4.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;

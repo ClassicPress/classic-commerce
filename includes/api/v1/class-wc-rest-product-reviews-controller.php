@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Product Reviews Controller Class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Product_Reviews_V1_Controller extends WC_REST_Controller {

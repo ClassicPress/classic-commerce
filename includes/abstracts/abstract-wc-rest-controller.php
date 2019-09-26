@@ -12,7 +12,7 @@
  * If necessary extend this class and create new abstract classes like `WC_REST_CRUD_Controller` or `WC_REST_Terms_Controller`.
  *
  * @class   WC_REST_Controller
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  * @see     https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/
  */
 

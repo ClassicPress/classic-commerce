@@ -2,7 +2,7 @@
 /**
  * The WooCommerce customer class handles storage of the current customer's data, such as location.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 

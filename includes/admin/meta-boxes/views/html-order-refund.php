@@ -3,7 +3,7 @@
  * Show order refund
  *
  * @var object $refund The refund object.
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

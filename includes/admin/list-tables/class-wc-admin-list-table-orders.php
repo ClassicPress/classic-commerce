@@ -2,7 +2,7 @@
 /**
  * List tables: orders.
  *
- * @package WooCommerce\admin
+ * @package ClassicCommerce\admin
  * @version WC-3.3.0
  */
 

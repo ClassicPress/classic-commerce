@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Customers controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Customers_V1_Controller extends WC_REST_Controller {

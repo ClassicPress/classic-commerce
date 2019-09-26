@@ -2,7 +2,7 @@
 /**
  * Admin View: Page - Status Report.
  *
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 
 defined( 'ABSPATH' ) || exit;

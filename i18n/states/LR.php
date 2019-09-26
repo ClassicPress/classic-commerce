@@ -2,7 +2,7 @@
 /**
  * Liberia provinces
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-3.0.0
  */
 

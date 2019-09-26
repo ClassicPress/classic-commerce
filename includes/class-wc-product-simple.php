@@ -4,7 +4,7 @@
  *
  * The default product type kinda product.
  *
- * @package WooCommerce/Classes/Products
+ * @package ClassicCommerce/Classes/Products
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * Settings for PayPal Gateway.
  *
- * @package WooCommerce/Classes/Payment
+ * @package ClassicCommerce/Classes/Payment
  */
 
 defined( 'ABSPATH' ) || exit;

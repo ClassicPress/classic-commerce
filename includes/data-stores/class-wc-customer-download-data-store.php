@@ -2,7 +2,7 @@
 /**
  * WC_Customer_Download_Data_Store class file.
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

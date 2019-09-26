@@ -2,7 +2,7 @@
 /**
  * Base test case for all WooCommerce tests.
  *
- * @package WooCommerce\Tests
+ * @package ClassicCommerce\Tests
  */
 
 /**

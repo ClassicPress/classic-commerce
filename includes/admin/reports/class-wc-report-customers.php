@@ -2,7 +2,7 @@
 /**
  * Class WC_Report_Customers file.
  *
- * @package WooCommerce\Reports
+ * @package ClassicCommerce\Reports
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

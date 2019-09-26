@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Token_CC file.
  *
- * @package WooCommerce\PaymentTokens
+ * @package ClassicCommerce\PaymentTokens
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

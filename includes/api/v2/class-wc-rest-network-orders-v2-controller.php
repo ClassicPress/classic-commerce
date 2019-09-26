@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Network Orders controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Orders_V2_Controller
  */
 class WC_REST_Network_Orders_V2_Controller extends WC_REST_Orders_V2_Controller {

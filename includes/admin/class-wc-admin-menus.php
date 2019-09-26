@@ -2,7 +2,7 @@
 /**
  * Setup menus in WP admin.
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-2.5.0
  */
 

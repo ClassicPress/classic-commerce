@@ -4,7 +4,7 @@
  *
  * Functions for handling terms/term meta.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.1.0
  */
 

@@ -2,7 +2,7 @@
 /**
  * Coupon usage report functionality
  *
- * @package WooCommerce/Admin/Reports
+ * @package ClassicCommerce/Admin/Reports
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

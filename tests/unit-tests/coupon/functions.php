@@ -2,7 +2,7 @@
 
 /**
  * Class Functions.
- * @package WooCommerce\Tests\Coupon
+ * @package ClassicCommerce\Tests\Coupon
  * @since WC-2.2
  */
 class WC_Tests_Functions extends WC_Unit_Test_Case {

@@ -3,7 +3,7 @@
  * Background Emailer
  *
  * @version WC-3.0.1
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

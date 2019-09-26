@@ -4,7 +4,7 @@
  *
  * External products cannot be bought; they link offsite. Extends simple products.
  *
- * @package WooCommerce/Classes/Products
+ * @package ClassicCommerce/Classes/Products
  * @version WC-3.0.0
  */
 

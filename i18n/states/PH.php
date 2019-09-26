@@ -2,7 +2,7 @@
 /**
  * Philippines Provinces
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.4.0
  */
 

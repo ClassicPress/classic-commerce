@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Shipping Zones base class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 abstract class WC_REST_Shipping_Zones_Controller_Base extends WC_REST_Controller {

@@ -4,7 +4,7 @@
  *
  * Grouped products cannot be purchased - they are wrappers for other products.
  *
- * @package WooCommerce\Classes\Products
+ * @package ClassicCommerce\Classes\Products
  * @version WC-3.0.0
  */
 

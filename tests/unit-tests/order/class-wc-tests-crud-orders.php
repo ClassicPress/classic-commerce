@@ -2,13 +2,13 @@
 /**
  * Class WC_Tests_CRUD_Orders file.
  *
- * @package WooCommerce\Tests\CRUD
+ * @package ClassicCommerce\Tests\CRUD
  */
 
 /**
  * Meta
  *
- * @package WooCommerce\Tests\CRUD
+ * @package ClassicCommerce\Tests\CRUD
  */
 class WC_Tests_CRUD_Orders extends WC_Unit_Test_Case {
 

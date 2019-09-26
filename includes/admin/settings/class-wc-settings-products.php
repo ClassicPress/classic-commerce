@@ -2,7 +2,7 @@
 /**
  * WooCommerce Product Settings
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  * @version WC-2.4.0
  */
 

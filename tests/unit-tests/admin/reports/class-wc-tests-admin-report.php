@@ -2,7 +2,7 @@
 /**
  * Class WC_Tests_Admin_Report file.
  *
- * @package WooCommerce\Tests\Admin\Reports
+ * @package ClassicCommerce\Tests\Admin\Reports
  */
 
 /**

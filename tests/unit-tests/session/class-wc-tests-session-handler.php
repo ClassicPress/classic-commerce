@@ -2,7 +2,7 @@
 /**
  * Class WC_Tests_Session_Handler file.
  *
- * @package WooCommerce\Tests\Session
+ * @package ClassicCommerce\Tests\Session
  */
 
 /**

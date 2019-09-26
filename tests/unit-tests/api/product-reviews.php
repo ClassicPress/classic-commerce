@@ -2,7 +2,7 @@
 /**
  * Tests for the product reviews REST API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 

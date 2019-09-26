@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Cart_Fees.
- * @package WooCommerce\Tests\Cart
+ * @package ClassicCommerce\Tests\Cart
  * @since 3.2.0
  */
 class WC_Tests_WC_Cart_Fees extends WC_Unit_Test_Case {

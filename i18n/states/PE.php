@@ -2,7 +2,7 @@
 /**
  * Peru states
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.1.0
  */
 

@@ -7,7 +7,7 @@
  *
  * @class WC_Tracker
  * @since WC-2.3.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

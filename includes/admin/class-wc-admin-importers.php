@@ -2,7 +2,7 @@
 /**
  * Init WooCommerce data importers.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

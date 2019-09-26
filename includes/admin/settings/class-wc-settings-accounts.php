@@ -2,7 +2,7 @@
 /**
  * WooCommerce Account Settings.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

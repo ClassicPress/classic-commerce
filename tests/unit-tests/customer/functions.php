@@ -2,7 +2,7 @@
 
 /**
  * Customer functions.
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 class WC_Tests_Customer_Functions extends WC_Unit_Test_Case {
 

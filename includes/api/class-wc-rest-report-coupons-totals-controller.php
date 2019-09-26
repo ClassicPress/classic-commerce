@@ -4,7 +4,7 @@
  *
  * Handles requests to the /reports/coupons/count endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   3.5.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Reports Coupons Totals controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Reports_Controller
  */
 class WC_REST_Report_Coupons_Totals_Controller extends WC_REST_Reports_Controller {

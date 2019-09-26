@@ -2,7 +2,7 @@
 /**
  * Bangladeshi states (districts)
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  */
 
 global $states;

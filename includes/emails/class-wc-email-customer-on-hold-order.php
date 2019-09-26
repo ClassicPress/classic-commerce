@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_On_Hold_Order file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 
 /**
  * Class CustomerCRUD.
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 class WC_Tests_CustomerCRUD extends WC_Unit_Test_Case {
 

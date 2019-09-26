@@ -4,7 +4,7 @@
  *
  * Functions for order specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 

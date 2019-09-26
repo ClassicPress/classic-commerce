@@ -2,7 +2,7 @@
 /**
  * Unit tests for Paypal standard gateway request.
  *
- * @package WooCommerce\Tests\Gateways\Paypal
+ * @package ClassicCommerce\Tests\Gateways\Paypal
  */
 class WC_Tests_Paypal_Gateway_Request extends WC_Unit_Test_Case {
 

@@ -2,7 +2,7 @@
 /**
  * Admin View: Notice - Secure connection.
  *
- * @package WooCommerce\Admin\Notices
+ * @package ClassicCommerce\Admin\Notices
  */
 
 defined( 'ABSPATH' ) || exit;

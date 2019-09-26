@@ -3,7 +3,7 @@
  * Personal data erasers.
  *
  * @since 3.4.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;

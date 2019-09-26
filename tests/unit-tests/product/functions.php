@@ -2,7 +2,7 @@
 
 /**
  * Class Functions.
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  * @since WC-2.3
  */
 class WC_Tests_Product_Functions extends WC_Unit_Test_Case {

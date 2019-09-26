@@ -2,7 +2,7 @@
 /**
  * Shortcodes
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 

@@ -5,7 +5,7 @@
  * Loads Integrations into WooCommerce.
  *
  * @version WC-2.3.0
- * @package WooCommerce/Classes/Integrations
+ * @package ClassicCommerce/Classes/Integrations
  */
 
 defined( 'ABSPATH' ) || exit;

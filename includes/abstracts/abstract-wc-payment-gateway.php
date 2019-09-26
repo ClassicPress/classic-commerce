@@ -6,7 +6,7 @@
  *
  * @class WC_Payment_Gateway
  * @version WC-2.1.0
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

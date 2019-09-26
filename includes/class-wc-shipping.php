@@ -5,7 +5,7 @@
  * Handles shipping and loads shipping methods via hooks.
  *
  * @version WC-2.6.0
- * @package WooCommerce/Classes/Shipping
+ * @package ClassicCommerce/Classes/Shipping
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

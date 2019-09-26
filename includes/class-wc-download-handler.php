@@ -4,7 +4,7 @@
  *
  * Handle digital downloads.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-2.2.0
  */
 

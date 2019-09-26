@@ -2,7 +2,7 @@
 
 /**
  * Class Shipping_Zone.
- * @package WooCommerce\Tests\Shipping_Zone
+ * @package ClassicCommerce\Tests\Shipping_Zone
  */
 class WC_Tests_Shipping_Zone extends WC_Unit_Test_Case {
 

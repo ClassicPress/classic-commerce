@@ -4,7 +4,7 @@
  *
  * Based on English names published at https://en.wikipedia.org/wiki/ISO_3166-2:TZ
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.0.0
  */
 

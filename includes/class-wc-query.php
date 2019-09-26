@@ -3,7 +3,7 @@
  * Contains the query functions for WooCommerce which alter the front-end post queries and loops
  *
  * @version WC-3.2.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;

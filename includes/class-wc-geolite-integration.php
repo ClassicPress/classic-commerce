@@ -6,7 +6,7 @@
  *
  * Requires PHP 5.4+.
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @since   3.4.0
  */
 

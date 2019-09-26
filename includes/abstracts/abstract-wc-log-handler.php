@@ -3,7 +3,7 @@
  * Log handling functionality.
  *
  * @class WC_Log_Handler
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

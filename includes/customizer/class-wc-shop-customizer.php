@@ -3,7 +3,7 @@
  * Adds options to the customizer for WooCommerce.
  *
  * @version WC-3.3.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * File for WC Variable Product Data Store class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -3,7 +3,7 @@
  * Tax importer class file
  *
  * @version WC-2.3.0
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -3,7 +3,7 @@
  * Flat Rate Shipping Method.
  *
  * @version WC-2.6.0
- * @package WooCommerce/Classes/Shipping
+ * @package ClassicCommerce/Classes/Shipping
  */
 
 defined( 'ABSPATH' ) || exit;

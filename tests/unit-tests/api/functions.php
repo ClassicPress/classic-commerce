@@ -2,7 +2,7 @@
 
 /**
  * REST API Functions.
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since WC-2.6.0
  */
 class WC_Tests_API_Functions extends WC_Unit_Test_Case {

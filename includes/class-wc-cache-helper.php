@@ -2,7 +2,7 @@
 /**
  * WC_Cache_Helper class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

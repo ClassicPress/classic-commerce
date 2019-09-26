@@ -4,7 +4,7 @@
  *
  * Lets a user see the status of an order by entering their order details.
  *
- * @package WooCommerce/Shortcodes/Order_Tracking
+ * @package ClassicCommerce/Shortcodes/Order_Tracking
  * @version WC-3.0.0
  */
 

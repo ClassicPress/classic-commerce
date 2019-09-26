@@ -2,13 +2,13 @@
 /**
  * Unit tests for the product download class.
  *
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  */
 
 /**
  * WC_Product_Download tests.
  *
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  * @since 3.4.6
  */
 class WC_Tests_Product_Download extends WC_Unit_Test_Case {

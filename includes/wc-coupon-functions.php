@@ -4,7 +4,7 @@
  *
  * Functions for coupon specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.0.0
  */
 

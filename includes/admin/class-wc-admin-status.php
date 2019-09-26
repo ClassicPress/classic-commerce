@@ -2,7 +2,7 @@
 /**
  * Debug/Status page
  *
- * @package WooCommerce/Admin/System Status
+ * @package ClassicCommerce/Admin/System Status
  * @version WC-2.2.0
  */
 

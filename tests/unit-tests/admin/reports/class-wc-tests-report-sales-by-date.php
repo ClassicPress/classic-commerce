@@ -2,7 +2,7 @@
 /**
  * Class WC_Tests_Report_Sales_By_Date file.
  *
- * @package WooCommerce\Tests\Admin\Reports
+ * @package ClassicCommerce\Tests\Admin\Reports
  */
 
 /**

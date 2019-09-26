@@ -3,7 +3,7 @@
  * Abstract Rest Posts Controller Class
  *
  * @class WC_REST_Posts_Controller
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

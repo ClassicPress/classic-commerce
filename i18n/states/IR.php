@@ -2,7 +2,7 @@
 /**
  * Iran States
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.2.3
  */
 

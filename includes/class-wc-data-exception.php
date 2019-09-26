@@ -4,7 +4,7 @@
  *
  * Extends Exception to provide additional data.
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @since   3.0.0
  */
 

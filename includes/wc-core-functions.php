@@ -4,7 +4,7 @@
  *
  * General core functions available on both the front-end and admin.
  *
- * @package WooCommerce\Functions
+ * @package ClassicCommerce\Functions
  * @version WC-3.3.0
  */
 

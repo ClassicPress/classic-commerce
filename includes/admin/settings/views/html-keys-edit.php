@@ -2,7 +2,7 @@
 /**
  * Admin view: Edit API keys
  *
- * @package WooCommerce/Admin/Settings
+ * @package ClassicCommerce/Admin/Settings
  */
 
 defined( 'ABSPATH' ) || exit;

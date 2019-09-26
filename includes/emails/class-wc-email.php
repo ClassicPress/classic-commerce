@@ -2,7 +2,7 @@
 /**
  * Class WC_Email file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

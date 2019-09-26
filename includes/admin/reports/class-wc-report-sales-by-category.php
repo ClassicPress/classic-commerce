@@ -2,7 +2,7 @@
 /**
  * Sales by category report functionality
  *
- * @package WooCommerce/Admin/Reporting
+ * @package ClassicCommerce/Admin/Reporting
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Product Shipping Classes controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Terms_Controller
  */
 class WC_REST_Product_Shipping_Classes_V1_Controller extends WC_REST_Terms_Controller {

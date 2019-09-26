@@ -12,7 +12,7 @@
  *
  * @see https://docs.woocommerce.com/document/template-structure/
 
- * @package WooCommerce/Templates/Emails/Plain
+ * @package ClassicCommerce/Templates/Emails/Plain
  * @version WC-3.5.0
  */
 

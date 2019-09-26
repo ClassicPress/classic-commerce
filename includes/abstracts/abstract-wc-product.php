@@ -2,7 +2,7 @@
 /**
  * WooCommerce product base class.
  *
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

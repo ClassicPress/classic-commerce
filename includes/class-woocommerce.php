@@ -2,7 +2,7 @@
 /**
  * WooCommerce setup
  *
- * @package WooCommerce
+ * @package ClassicCommerce
  * @since   3.2.0
  */
 

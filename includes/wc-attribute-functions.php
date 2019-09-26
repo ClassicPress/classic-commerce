@@ -2,7 +2,7 @@
 /**
  * WooCommerce Attribute Functions
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.1.0
  */
 

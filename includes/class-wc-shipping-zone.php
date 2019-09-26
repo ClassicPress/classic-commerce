@@ -4,7 +4,7 @@
  *
  * @since   2.6.0
  * @version WC-3.0.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

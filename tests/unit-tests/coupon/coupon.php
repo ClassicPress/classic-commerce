@@ -2,7 +2,7 @@
 
 /**
  * Class Coupon.
- * @package WooCommerce\Tests\Coupon
+ * @package ClassicCommerce\Tests\Coupon
  * @group coupons
  */
 class WC_Tests_Coupon extends WC_Unit_Test_Case {

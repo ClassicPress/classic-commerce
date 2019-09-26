@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Plugin_Updates.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since 3.2.0
  */
 class WC_Tests_Plugin_Updates extends WC_Unit_Test_Case {

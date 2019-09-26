@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Countries.
- * @package WooCommerce\Tests\Countries
+ * @package ClassicCommerce\Tests\Countries
  */
 class WC_Tests_Countries extends WC_Unit_Test_Case {
 

@@ -4,7 +4,7 @@
  * contain much of the same data.
  *
  * @version WC-3.0.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * Tag Cloud Widget.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-3.4.0
  */
 

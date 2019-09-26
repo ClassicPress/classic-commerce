@@ -4,7 +4,7 @@
  *
  * Handle comments (reviews and order notes).
  *
- * @package WooCommerce/Classes/Products
+ * @package ClassicCommerce/Classes/Products
  * @version WC-2.3.0
  */
 

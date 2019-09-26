@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Legacy Orders controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_CRUD_Controller
  */
 class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {

@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Gateway_eCheck file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

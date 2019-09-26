@@ -2,7 +2,7 @@
 /**
  * WP_Background_Processing Tests.
  *
- * @package WooCommerce\Tests\Libraries
+ * @package ClassicCommerce\Tests\Libraries
  */
 
 /**

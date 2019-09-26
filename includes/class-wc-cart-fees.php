@@ -6,7 +6,7 @@
  *
  * We suggest using the action woocommerce_cart_calculate_fees hook for adding fees.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 

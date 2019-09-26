@@ -2,7 +2,7 @@
 /**
  * Class WC_Product_CSV_Importer_Controller file.
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

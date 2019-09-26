@@ -2,7 +2,7 @@
 
 /**
  * Class Notice_Functions.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since WC-2.2
  */
 class WC_Tests_Notice_Functions extends WC_Unit_Test_Case {

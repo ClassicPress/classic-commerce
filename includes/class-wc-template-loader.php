@@ -2,7 +2,7 @@
 /**
  * Template Loader
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;
