@@ -23,7 +23,7 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-payment-token.php'
  * @class       WC_Payment_Token
  * @version     3.0.0
  * @since       2.6.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 

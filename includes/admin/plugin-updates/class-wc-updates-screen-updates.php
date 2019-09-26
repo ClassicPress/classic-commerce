@@ -2,7 +2,7 @@
 /**
  * Manages WooCommerce plugin updating on the Updates screen.
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     3.2.0
  */
 

@@ -2,7 +2,7 @@
 /**
  * Init WooCommerce data exporters.
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     3.1.0
  */
 

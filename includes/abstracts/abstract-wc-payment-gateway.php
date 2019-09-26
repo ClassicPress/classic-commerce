@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @class       WC_Payment_Gateway
  * @extends     WC_Settings_API
  * @version     2.1.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Payment_Gateway extends WC_Settings_API {
 

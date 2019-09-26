@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @author      WooCommerce
  * @category    Admin
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     3.0.0
  */
 

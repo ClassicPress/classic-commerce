@@ -2,7 +2,7 @@
 /**
  * WooCommerce Shipping Settings
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     2.6.0
  */
 

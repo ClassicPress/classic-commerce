@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class       WC_Shipping_Method
  * @version     3.0.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Shipping_Method extends WC_Settings_API {
 

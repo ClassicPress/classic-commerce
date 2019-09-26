@@ -4,7 +4,7 @@
  *
  * Takes new users through some basic steps to setup their store.
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     2.6.0
  */
 

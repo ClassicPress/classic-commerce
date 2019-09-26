@@ -4,7 +4,7 @@
  *
  * Functions for determining the current query/page.
  *
- * @package     WooCommerce/Functions
+ * @package     ClassicCommerce/Functions
  * @version     2.3.0
  */
 

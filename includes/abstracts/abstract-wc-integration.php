@@ -7,7 +7,7 @@
  *
  * @class       WC_Settings_API
  * @version     2.6.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

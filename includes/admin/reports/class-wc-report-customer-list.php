@@ -13,7 +13,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
+ * @package     ClassicCommerce/Admin/Reports
  * @version     2.1.0
  */
 class WC_Report_Customer_List extends WP_List_Table {

@@ -17,7 +17,7 @@ if ( ! class_exists( 'WP_Importer' ) ) {
 /**
  * Tax Rates importer - import tax rates and local tax rates into WooCommerce.
  *
- * @package     WooCommerce/Admin/Importers
+ * @package     ClassicCommerce/Admin/Importers
  * @version     2.3.0
  */
 class WC_Tax_Rate_Importer extends WP_Importer {
