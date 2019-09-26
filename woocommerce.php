@@ -9,7 +9,7 @@
  * Text Domain: woocommerce
  * Domain Path: /i18n/languages/
  *
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,11 +27,11 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 }
 
 /**
- * Main instance of WooCommerce.
+ * Main instance of ClassicCommerce.
  *
  * Returns the main instance of WC to prevent the need to use globals.
  *
- * @since  2.1
+ * @since  WC-2.1
  * @return WooCommerce
  */
 function wc() {
