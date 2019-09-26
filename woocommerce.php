@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Classic Commerce
  * Plugin URI: https://github.com/ClassicPress-research/classic-commerce
- * Description: An eCommerce toolkit that helps you sell anything. Beautifully.
+ * Description: Built for selling.
  * Version: 0.1.0
  * Author: ClassicPress Research Team
  * Author URI: https://github.com/ClassicPress-research/classic-commerce
