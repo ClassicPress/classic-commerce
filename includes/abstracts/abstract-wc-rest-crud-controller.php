@@ -3,8 +3,8 @@
  * Abstract Rest CRUD Controller Class
  *
  * @class    WC_REST_CRUD_Controller
- * @package  WooCommerce/Abstracts
- * @version  3.0.0
+ * @package  ClassicCommerce/Abstracts
+ * @version  WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -104,7 +104,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Prepares the object for the REST response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data         $object  Object data.
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_Error|WP_REST_Response Response object on success, or WP_Error object on failure.
@@ -117,7 +117,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Prepares one object for create or update operation.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request object.
 	 * @param  bool            $creating If is creating a new object.
 	 * @return WP_Error|WC_Data The prepared item, or WP_Error object on failure.
@@ -153,7 +153,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Save an object data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request  Full details about the request.
 	 * @param  bool            $creating If is creating a new object.
 	 * @return WC_Data|WP_Error
@@ -266,7 +266,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */
@@ -319,7 +319,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Get objects.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $query_args Query args.
 	 * @return array
 	 */

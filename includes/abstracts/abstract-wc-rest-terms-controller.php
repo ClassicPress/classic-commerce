@@ -2,8 +2,8 @@
 /**
  * Abstract Rest Terms Controller
  *
- * @package  WooCommerce/Abstracts
- * @version  3.3.0
+ * @package  ClassicCommerce/Abstracts
+ * @version  WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

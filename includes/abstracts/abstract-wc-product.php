@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce product base class.
+ * ClassicCommerce product base class.
  *
  * @package ClassicCommerce/Abstracts
  */
@@ -18,10 +18,10 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-product.php';
 /**
  * Abstract Product Class
  *
- * The WooCommerce product class handles individual product data.
+ * The ClassicCommerce product class handles individual product data.
  *
- * @version  3.0.0
- * @package  WooCommerce/Abstracts
+ * @version  WC-3.0.0
+ * @package  ClassicCommerce/Abstracts
  */
 class WC_Product extends WC_Abstract_Legacy_Product {
 
@@ -158,7 +158,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product name.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -169,7 +169,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product slug.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -180,7 +180,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product created date.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -191,7 +191,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product modified date.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -202,7 +202,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product status.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -213,7 +213,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * If the product is featured.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return boolean
 	 */
@@ -224,7 +224,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get catalog visibility.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -235,7 +235,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product description.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -246,7 +246,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get product short description.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -297,7 +297,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get date on sale from.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -308,7 +308,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get date on sale to.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -319,7 +319,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get number total of sales.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -350,7 +350,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Return if product manage stock.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return boolean
 	 */
@@ -372,7 +372,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Return the stock status.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	public function get_stock_status( $context = 'view' ) {
@@ -383,7 +383,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Get backorders.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @return string yes no or notify
 	 */
 	public function get_backorders( $context = 'view' ) {
@@ -394,7 +394,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Get low stock amount.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return int|string Returns empty string if value not set
 	 */
 	public function get_low_stock_amount( $context = 'view' ) {
@@ -473,7 +473,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get upsell IDs.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -484,7 +484,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get cross sell IDs.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -495,7 +495,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get parent ID.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -506,7 +506,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Return if reviews is allowed.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return bool
 	 */
@@ -517,7 +517,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get purchase note.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -538,7 +538,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get default attributes.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -549,7 +549,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get menu order.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -560,7 +560,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get category ids.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -571,7 +571,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get tag ids.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -582,7 +582,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get virtual.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return bool
 	 */
@@ -603,7 +603,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get shipping class ID.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -614,7 +614,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get downloads.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return array
 	 */
@@ -625,7 +625,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get download expiry.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -636,7 +636,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get downloadable.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return bool
 	 */
@@ -647,7 +647,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get download limit.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -658,7 +658,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get main image ID.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -769,7 +769,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Set catalog visibility.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @throws WC_Data_Exception Throws exception when invalid data is found.
 	 * @param string $visibility Options: 'hidden', 'visible', 'search' and 'catalog'.
 	 */
@@ -804,7 +804,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Set SKU.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @throws WC_Data_Exception Throws exception when invalid data is found.
 	 * @param string $sku Product SKU.
 	 */
@@ -1671,7 +1671,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Returns whether or not the product has additional options that need
 	 * selecting before adding to cart.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function has_options() {
@@ -1714,7 +1714,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * If the stock level comes from another product ID, this should be modified.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_stock_managed_by_id() {
@@ -1757,7 +1757,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get min quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_min_purchase_quantity() {
@@ -1767,7 +1767,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get max quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int Quantity or -1 if unlimited.
 	 */
 	public function get_max_purchase_quantity() {

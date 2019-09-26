@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Extended by shipping methods to handle shipping calculations etc.
  *
  * @class       WC_Shipping_Method
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Shipping_Method extends WC_Settings_API {
@@ -120,7 +120,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Availability - legacy. Used for method Availability.
 	 * No longer useful for instance based shipping methods.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 * @var string
 	 */
 	public $availability;
@@ -129,7 +129,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Availability countries - legacy. Used for method Availability.
 	 * No longer useful for instance based shipping methods.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 * @var array
 	 */
 	public $countries = array();

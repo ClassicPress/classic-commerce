@@ -3,7 +3,7 @@
  * Handle data for the current customers session
  *
  * @class       WC_Session
- * @version     2.0.0
+ * @version     WC-2.0.0
  * @package     ClassicCommerce/Abstracts
  */
 
@@ -40,7 +40,7 @@ abstract class WC_Session {
 	/**
 	 * Init hooks and session data. Extended by child classes.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function init() {}
 

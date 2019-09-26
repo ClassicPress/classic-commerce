@@ -3,7 +3,7 @@
  * Abstract widget class
  *
  * @class WC_Widget
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Widget
  *
- * @package  WooCommerce/Abstracts
- * @version  2.5.0
+ * @package  ClassicCommerce/Abstracts
+ * @version  WC-2.5.0
  * @extends  WP_Widget
  */
 abstract class WC_Widget extends WP_Widget {
@@ -286,7 +286,7 @@ abstract class WC_Widget extends WP_Widget {
 	 * Get current page URL with various filtering props supported by WC.
 	 *
 	 * @return string
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 */
 	protected function get_current_page_url() {
 		if ( defined( 'SHOP_IS_ON_FRONT' ) ) {
@@ -353,7 +353,7 @@ abstract class WC_Widget extends WP_Widget {
 	/**
 	 * Get widget id plus scheme/protocol to prevent serving mixed content from (persistently) cached widgets.
 	 *
-	 * @since  3.4.0
+	 * @since  WC-3.4.0
 	 * @param  string $widget_id Id of the cached widget.
 	 * @param  string $scheme    Scheme for the widget id.
 	 * @return string            Widget id including scheme/protocol.
