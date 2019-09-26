@@ -563,6 +563,26 @@ return array(
 			),
 		),
 	),
+	'UG' => array(
+		'currency_code'  => 'UGX',
+		'currency_pos'   => 'left_space',
+		'thousand_sep'   => '.',
+		'decimal_sep'    => ',',
+		'num_decimals'   => 2,
+		'weight_unit'    => 'kg',
+		'dimension_unit' => 'cm',
+		'tax_rates'      => array(
+			'' => array(
+				array(
+					'country'  => 'UG',
+					'state'    => '',
+					'rate'     => '18.0000',
+					'name'     => 'VAT',
+					'shipping' => true,
+				),
+			),
+		),
+	),
 	'US' => array(
 		'currency_code'  => 'USD',
 		'currency_pos'   => 'left',
