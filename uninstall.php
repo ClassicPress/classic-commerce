@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Uninstall
+ * ClassicCommerce Uninstall
  *
- * Uninstalling WooCommerce deletes user roles, pages, tables, and options.
+ * Uninstalling ClassicCommerce deletes user roles, pages, tables, and options.
  *
- * @package WooCommerce\Uninstaller
+ * @package ClassicCommerce\Uninstaller
  * @version WC-2.3.0
  */
 

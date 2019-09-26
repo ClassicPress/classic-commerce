@@ -1,6 +1,6 @@
 <!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
 
-Welcome to the ClassicCommerce repository on GitHub. This is a Fork of Woocommerce [3.5 Beta](https://github.com/woocommerce/woocommerce/tree/cfd90f759f8410b9d20cf9d831c5229044c84ec0) and is still in development.
+Welcome to the ClassicCommerce repository on GitHub. This is a Fork of [Woocommerce 3.5 Beta](https://github.com/woocommerce/woocommerce/tree/cfd90f759f8410b9d20cf9d831c5229044c84ec0) and is still in development.
 
 Here you can browse the source, look at open issues and keep track of development. 
 
@@ -18,5 +18,5 @@ To disclose a security issue to our team. (security@classicpress.net)
 ## Support
 This repository is most suitable for development but for the little while will use it for support. We shall add a support tag to your issue. However, this might take a little longer to get response.
 
-## Contributing to WooCommerce
-If you have a patch or have stumbled upon an issue with WooCommerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information how you can do this.
+## Contributing to ClassicCommerce
+If you have a patch or have stumbled upon an issue with ClassicCommerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information how you can do this.
