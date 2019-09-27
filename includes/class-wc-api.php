@@ -5,7 +5,7 @@
  * Handles WC-API endpoint requests.
  *
  * @package ClassicCommerce/API
- * @since   2.0.0
+ * @since   WC-2.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

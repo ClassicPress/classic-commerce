@@ -119,7 +119,7 @@ jQuery( function( $ ) {
 			.prop( 'required', checked );
 	} );
 
-	// TODO: Remove Jetpack
+	// TODO: Remove Jetpack 
 	// function submitActivateForm() {
 	// 	$( 'form.activate-jetpack' ).submit();
 	// }
