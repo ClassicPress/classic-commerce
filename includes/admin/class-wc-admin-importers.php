@@ -1,6 +1,6 @@
 <?php
 /**
- * Init WooCommerce data importers.
+ * Init ClassicCommerce data importers.
  *
  * @package ClassicCommerce/Admin
  */
@@ -43,7 +43,7 @@ class WC_Admin_Importers {
 	}
 
 	/**
-	 * Return true if WooCommerce imports are allowed for current user, false otherwise.
+	 * Return true if ClassicCommerce imports are allowed for current user, false otherwise.
 	 *
 	 * @return bool Whether current user can perform imports.
 	 */
@@ -110,8 +110,8 @@ class WC_Admin_Importers {
 	public function register_importers() {
 		if ( defined( 'WP_LOAD_IMPORTERS' ) ) {
 			add_action( 'import_start', array( $this, 'post_importer_compatibility' ) );
-			register_importer( 'woocommerce_product_csv', __( 'WooCommerce products (CSV)', 'woocommerce' ), __( 'Import <strong>products</strong> to your store via a csv file.', 'woocommerce' ), array( $this, 'product_importer' ) );
-			register_importer( 'woocommerce_tax_rate_csv', __( 'WooCommerce tax rates (CSV)', 'woocommerce' ), __( 'Import <strong>tax rates</strong> to your store via a csv file.', 'woocommerce' ), array( $this, 'tax_rates_importer' ) );
+			register_importer( 'woocommerce_product_csv', __( 'ClassicCommerce products (CSV)', 'woocommerce' ), __( 'Import <strong>products</strong> to your store via a csv file.', 'woocommerce' ), array( $this, 'product_importer' ) );
+			register_importer( 'woocommerce_tax_rate_csv', __( 'ClassicCommerce tax rates (CSV)', 'woocommerce' ), __( 'Import <strong>tax rates</strong> to your store via a csv file.', 'woocommerce' ), array( $this, 'tax_rates_importer' ) );
 		}
 	}
 

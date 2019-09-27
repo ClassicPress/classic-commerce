@@ -1,5 +1,6 @@
 <?php
 /**
+ * TODO: Check on extensions from Woo. Do we need to track these?
  * Admin -> WooCommerce -> Extensions -> WooCommerce.com Subscriptions main page.
  *
  * @package ClassicCommerce\Views

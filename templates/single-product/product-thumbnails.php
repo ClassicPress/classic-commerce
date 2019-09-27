@@ -4,7 +4,7 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-thumbnails.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * HOWEVER, on occasion ClassicCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
  * maintain compatibility. We try to do this as little as possible, but it does
  * happen. When this occurs the version of the template file will be bumped and
@@ -12,11 +12,12 @@
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     ClassicCommerce/Templates
- * @version     3.5.1
+ * @version     WC-3.5.1
  */
 
 defined( 'ABSPATH' ) || exit;
 
+// TODO: Might need deleting since version 1 will have the function.
 // Note: `wc_get_gallery_image_html` was added in WC 3.3.2 and did not exist prior. This check protects against theme overrides being used on older versions of WC.
 if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
 	return;

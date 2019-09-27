@@ -1,5 +1,6 @@
 <?php
 /**
+ * TODO: Jetpack things that need removing
  * Setup Wizard Class
  *
  * Takes new users through some basic steps to setup their store.
@@ -68,12 +69,12 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * The theme "extra" should only be shown if the current user can modify themes
-	 * and the store doesn't already have a WooCommerce theme.
+	 * and the store doesn't already have a ClassicCommerce theme.
 	 *
 	 * @return boolean
 	 */
 	protected function should_show_theme() {
-		$support_woocommerce = current_theme_supports( 'woocommerce' ) && ! $this->is_default_theme();
+		$support_Classiccommerce = current_theme_supports( 'woocommerce' ) && ! $this->is_default_theme();
 
 		return (
 			current_user_can( 'install_themes' ) &&
@@ -153,8 +154,12 @@ class WC_Admin_Setup_Wizard {
 	 * Hooked onto 'admin_enqueue_scripts'.
 	 */
 	public function enqueue_scripts() {
+
+		// TODO: Remove woocommerce_setup_background_installing_jetpack option
 		// Whether or not there is a pending background install of Jetpack.
-		$pending_jetpack = ! class_exists( 'Jetpack' ) && get_option( 'woocommerce_setup_background_installing_jetpack' );
+
+		//$pending_jetpack = ! class_exists( 'Jetpack' ) && get_option( 'woocommerce_setup_background_installing_jetpack' );
+
 		$suffix          = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		wp_register_script( 'jquery-blockui', WC()->plugin_url() . '/assets/js/jquery-blockui/jquery.blockUI' . $suffix . '.js', array( 'jquery' ), '2.70', true );
@@ -187,16 +192,16 @@ class WC_Admin_Setup_Wizard {
 			'wc-setup',
 			'wc_setup_params',
 			array(
-				'pending_jetpack_install' => $pending_jetpack ? 'yes' : 'no',
+				//'pending_jetpack_install' => $pending_jetpack ? 'yes' : 'no',
 				'states'                  => WC()->countries->get_states(),
 				'current_step'            => isset( $this->steps[ $this->step ] ) ? $this->step : false,
 				'i18n'                    => array(
 					'extra_plugins' => array(
-						'payment' => array(
-							'stripe_create_account'                              => __( 'Stripe setup is powered by Jetpack and WooCommerce Services.', 'woocommerce' ),
-							'ppec_paypal_reroute_requests'                       => __( 'PayPal setup is powered by Jetpack and WooCommerce Services.', 'woocommerce' ),
-							'stripe_create_account,ppec_paypal_reroute_requests' => __( 'Stripe and PayPal setup are powered by Jetpack and WooCommerce Services.', 'woocommerce' ),
-						),
+						// 'payment' => array(
+						// 	'stripe_create_account'                              => __( 'Stripe setup is powered by Jetpack and ClassicCommerce Services.', 'woocommerce' ),
+						// 	'ppec_paypal_reroute_requests'                       => __( 'PayPal setup is powered by Jetpack and ClassicCommerce Services.', 'woocommerce' ),
+						// 	'stripe_create_account,ppec_paypal_reroute_requests' => __( 'Stripe and PayPal setup are powered by Jetpack and ClassicCommerce Services.', 'woocommerce' ),
+						// ),
 					),
 				),
 			)
@@ -231,11 +236,12 @@ class WC_Admin_Setup_Wizard {
 				'view'    => array( $this, 'wc_setup_recommended' ),
 				'handler' => array( $this, 'wc_setup_recommended_save' ),
 			),
-			'activate'    => array(
-				'name'    => __( 'Activate', 'woocommerce' ),
-				'view'    => array( $this, 'wc_setup_activate' ),
-				'handler' => array( $this, 'wc_setup_activate_save' ),
-			),
+			// 'activate'    => array(
+			// 	'name'    => __( 'Activate', 'woocommerce' ),
+			// 	'view'    => array( $this, 'wc_setup_activate' ),
+			// 	'handler' => '',
+			// 	// 'handler' => array( $this, 'wc_setup_activate_save' ),
+			// ),
 			'next_steps'  => array(
 				'name'    => __( 'Ready!', 'woocommerce' ),
 				'view'    => array( $this, 'wc_setup_ready' ),
@@ -313,7 +319,7 @@ class WC_Admin_Setup_Wizard {
 		<head>
 			<meta name="viewport" content="width=device-width" />
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			<title><?php esc_html_e( 'WooCommerce &rsaquo; Setup Wizard', 'woocommerce' ); ?></title>
+			<title><?php esc_html_e( 'ClassicCommerce &rsaquo; Setup Wizard', 'woocommerce' ); ?></title>
 			<?php do_action( 'admin_enqueue_scripts' ); ?>
 			<?php wp_print_scripts( 'wc-setup' ); ?>
 			<?php do_action( 'admin_print_styles' ); ?>
@@ -346,9 +352,11 @@ class WC_Admin_Setup_Wizard {
 		$output_steps      = $this->steps;
 		$selected_features = array_filter( $this->wc_setup_activate_get_feature_list() );
 
-		// Hide the activate step if Jetpack is already active, unless WooCommerce Services
+		// Hide the activate step if Jetpack is already active, unless ClassicCommerce Services
 		// features are selected, or unless the Activate step was already taken.
-		if ( class_exists( 'Jetpack' ) && Jetpack::is_active() && empty( $selected_features ) && 'yes' !== get_transient( 'wc_setup_activated' ) ) {
+		if ( 
+			//class_exists( 'Jetpack' ) && Jetpack::is_active() && 
+		empty( $selected_features ) && 'yes' !== get_transient( 'wc_setup_activated' ) ) {
 			unset( $output_steps['activate'] );
 		}
 
@@ -508,22 +516,23 @@ class WC_Admin_Setup_Wizard {
 			</label>
 
 			<?php
-			if ( 'unknown' === get_option( 'woocommerce_allow_tracking', 'unknown' ) ) {
+			// TODO: Remove tracking option woocommerce_allow_tracking
+			// if ( 'unknown' === get_option( 'woocommerce_allow_tracking', 'unknown' ) ) {
 				?>
-				<div class="woocommerce-tracker">
+				<!--<div class="woocommerce-tracker">
 					<p class="checkbox">
 						<input type="checkbox" id="wc_tracker_checkbox" name="wc_tracker_checkbox" value="yes" checked />
-						<label for="wc_tracker_checkbox"><?php esc_html_e( 'Help WooCommerce improve with usage tracking.', 'woocommerce' ); ?></label>
+						<label for="wc_tracker_checkbox"><?php // esc_html_e( 'Help ClassicCommerce improve with usage tracking.', 'woocommerce' ); ?></label>
 					</p>
 					<p>
 					<?php
-					esc_html_e( 'Gathering usage data allows us to make WooCommerce better &mdash; your store will be considered as we evaluate new features, judge the quality of an update, or determine if an improvement makes sense. If you would rather opt-out, and do not check this box, we will not know this store exists and we will not collect any usage data.', 'woocommerce' );
-					echo ' <a target="_blank" href="https://woocommerce.com/usage-tracking/">' . esc_html__( 'Read more about what we collect.', 'woocommerce' ) . '</a>';
+					// esc_html_e( 'Gathering usage data allows us to make ClassicCommerce better &mdash; your store will be considered as we evaluate new features, judge the quality of an update, or determine if an improvement makes sense. If you would rather opt-out, and do not check this box, we will not know this store exists and we will not collect any usage data.', 'woocommerce' );
+					// echo ' <a target="_blank" href="https://woocommerce.com/usage-tracking/">' . esc_html__( 'Read more about what we collect.', 'woocommerce' ) . '</a>';
 					?>
 					</p>
-				</div>
+				</div>-->
 				<?php
-			}
+			//}
 			?>
 			<p class="wc-setup-actions step">
 				<button type="submit" class="button-primary button button-large button-next" value="<?php esc_attr_e( "Let's go!", 'woocommerce' ); ?>" name="save_step"><?php esc_html_e( "Let's go!", 'woocommerce' ); ?></button>
@@ -579,12 +588,12 @@ class WC_Admin_Setup_Wizard {
 			}
 		}
 
-		if ( $tracking ) {
-			update_option( 'woocommerce_allow_tracking', 'yes' );
-			wp_schedule_single_event( time() + 10, 'woocommerce_tracker_send_event', array( true ) );
-		} else {
-			update_option( 'woocommerce_allow_tracking', 'no' );
-		}
+		// if ( $tracking ) {
+		// 	update_option( 'woocommerce_allow_tracking', 'yes' );
+		// 	wp_schedule_single_event( time() + 10, 'woocommerce_tracker_send_event', array( true ) );
+		// } else {
+		// 	update_option( 'woocommerce_allow_tracking', 'no' );
+		// }
 
 		WC_Install::create_pages();
 		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
@@ -696,32 +705,32 @@ class WC_Admin_Setup_Wizard {
 	/**
 	 * Helper method to install Jetpack.
 	 */
-	protected function install_jetpack() {
-		$this->install_plugin(
-			'jetpack',
-			array(
-				'name'      => __( 'Jetpack', 'woocommerce' ),
-				'repo-slug' => 'jetpack',
-			)
-		);
-	}
+	// protected function install_jetpack() {
+	// 	$this->install_plugin(
+	// 		'jetpack',
+	// 		array(
+	// 			'name'      => __( 'Jetpack', 'woocommerce' ),
+	// 			'repo-slug' => 'jetpack',
+	// 		)
+	// 	);
+	// }
 
 	/**
-	 * Helper method to install WooCommerce Services and its Jetpack dependency.
+	 * Helper method to install ClassicCommerce Services and its Jetpack dependency.
 	 */
 	protected function install_woocommerce_services() {
-		$this->install_jetpack();
+		// $this->install_jetpack();
 		$this->install_plugin(
 			'woocommerce-services',
 			array(
-				'name'      => __( 'WooCommerce Services', 'woocommerce' ),
+				'name'      => __( 'ClassicCommerce Services', 'woocommerce' ),
 				'repo-slug' => 'woocommerce-services',
 			)
 		);
 	}
 
 	/**
-	 * Retrieve info for missing WooCommerce Services and/or Jetpack plugin.
+	 * Retrieve info for missing ClassicCommerce Services and/or Jetpack plugin.
 	 *
 	 * @return array
 	 */
@@ -729,16 +738,16 @@ class WC_Admin_Setup_Wizard {
 		$plugins = array();
 		if ( ! is_plugin_active( 'woocommerce-services/woocommerce-services.php' ) && ! get_option( 'woocommerce_setup_background_installing_woocommerce-services' ) ) {
 			$plugins[] = array(
-				'name' => __( 'WooCommerce Services', 'woocommerce' ),
+				'name' => __( 'ClassicCommerce Services', 'woocommerce' ),
 				'slug' => 'woocommerce-services',
 			);
 		}
-		if ( ! is_plugin_active( 'jetpack/jetpack.php' ) && ! get_option( 'woocommerce_setup_background_installing_jetpack' ) ) {
-			$plugins[] = array(
-				'name' => __( 'Jetpack', 'woocommerce' ),
-				'slug' => 'jetpack',
-			);
-		}
+		// if ( ! is_plugin_active( 'jetpack/jetpack.php' ) && ! get_option( 'woocommerce_setup_background_installing_jetpack' ) ) {
+		// 	$plugins[] = array(
+		// 		'name' => __( 'Jetpack', 'woocommerce' ),
+		// 		'slug' => 'jetpack',
+		// 	);
+		// }
 		return $plugins;
 	}
 
@@ -962,7 +971,7 @@ class WC_Admin_Setup_Wizard {
 						printf(
 							wp_kses(
 								/* translators: %1$s: live rates tooltip text, %2$s: shipping extensions URL */
-								__( 'If you\'d like to offer <span class="help_tip" data-tip="%1$s">live rates</span> from a specific carrier (e.g. UPS) you can find a variety of extensions available for WooCommerce <a href="%2$s" target="_blank">here</a>.', 'woocommerce' ),
+								__( 'If you\'d like to offer <span class="help_tip" data-tip="%1$s">live rates</span> from a specific carrier (e.g. UPS) you can find a variety of extensions available for ClassicCommerce <a href="%2$s" target="_blank">here</a>.', 'woocommerce' ),
 								array(
 									'span' => array(
 										'class'    => array(),
@@ -990,9 +999,9 @@ class WC_Admin_Setup_Wizard {
 				$this->display_recommended_item( array(
 					'type'        => 'woocommerce_services',
 					'title'       => __( 'Print shipping labels at home', 'woocommerce' ),
-					'description' => __( 'We recommend WooCommerce Services & Jetpack. These plugins will save you time at the Post Office by enabling you to print your shipping labels at home.', 'woocommerce' ),
+					'description' => __( 'We recommend ClassicCommerce Services. These plugins will save you time at the Post Office by enabling you to print your shipping labels at home.', 'woocommerce' ),
 					'img_url'     => WC()->plugin_url() . '/assets/images/obw-woocommerce-services-icon.png',
-					'img_alt'     => __( 'WooCommerce Services icon', 'woocommerce' ),
+					'img_alt'     => __( 'ClassicCommerce Services icon', 'woocommerce' ),
 					'plugins'     => $this->get_wcs_requisite_plugins(),
 				) );
 			elseif ( $is_shipstation_supported ) :
@@ -1299,7 +1308,7 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * Is WooCommerce Services shipping label country supported
+	 * Is ClassicCommerce Services shipping label country supported
 	 *
 	 * @param string $country_code Country code.
 	 */
@@ -1358,7 +1367,7 @@ class WC_Admin_Setup_Wizard {
 
 		return array(
 			'stripe'          => array(
-				'name'        => __( 'WooCommerce Stripe Gateway', 'woocommerce' ),
+				'name'        => __( 'ClassicCommerce Stripe Gateway', 'woocommerce' ),
 				'image'       => WC()->plugin_url() . '/assets/images/stripe.png',
 				'description' => $stripe_description,
 				'class'       => 'checked stripe-logo',
@@ -1383,7 +1392,7 @@ class WC_Admin_Setup_Wizard {
 				),
 			),
 			'ppec_paypal'     => array(
-				'name'        => __( 'WooCommerce PayPal Checkout Gateway', 'woocommerce' ),
+				'name'        => __( 'ClassicCommerce PayPal Checkout Gateway', 'woocommerce' ),
 				'image'       => WC()->plugin_url() . '/assets/images/paypal.png',
 				'description' => $paypal_checkout_description,
 				'enabled'     => true,
@@ -1439,7 +1448,7 @@ class WC_Admin_Setup_Wizard {
 				'repo-slug'   => 'klarna-payments-for-woocommerce',
 			),
 			'square'          => array(
-				'name'        => __( 'WooCommerce Square', 'woocommerce' ),
+				'name'        => __( 'ClassicCommerce Square', 'woocommerce' ),
 				'description' => $square_description,
 				'image'       => WC()->plugin_url() . '/assets/images/square-white.png',
 				'class'       => 'square-logo',
@@ -1447,16 +1456,16 @@ class WC_Admin_Setup_Wizard {
 				'repo-slug'   => 'woocommerce-square',
 			),
 			'eway'            => array(
-				'name'        => __( 'WooCommerce eWAY Gateway', 'woocommerce' ),
-				'description' => __( 'The eWAY extension for WooCommerce allows you to take credit card payments directly on your store without redirecting your customers to a third party site to make payment.', 'woocommerce' ),
+				'name'        => __( 'ClassicCommerce eWAY Gateway', 'woocommerce' ),
+				'description' => __( 'The eWAY extension for ClassicCommerce allows you to take credit card payments directly on your store without redirecting your customers to a third party site to make payment.', 'woocommerce' ),
 				'image'       => WC()->plugin_url() . '/assets/images/eway-logo.jpg',
 				'enabled'     => false,
 				'class'       => 'eway-logo',
 				'repo-slug'   => 'woocommerce-gateway-eway',
 			),
 			'payfast'         => array(
-				'name'        => __( 'WooCommerce PayFast Gateway', 'woocommerce' ),
-				'description' => __( 'The PayFast extension for WooCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs.', 'woocommerce' ),
+				'name'        => __( 'ClassicCommerce PayFast Gateway', 'woocommerce' ),
+				'description' => __( 'The PayFast extension for ClassicCommerce enables you to accept payments by Credit Card and EFT via one of South Africa’s most popular payment gateways. No setup fees or monthly subscription costs.', 'woocommerce' ),
 				'image'       => WC()->plugin_url() . '/assets/images/payfast.png',
 				'class'       => 'payfast-logo',
 				'enabled'     => false,
@@ -1712,7 +1721,7 @@ class WC_Admin_Setup_Wizard {
 				printf(
 					wp_kses(
 						/* translators: %s: Link */
-						__( 'WooCommerce can accept both online and offline payments. <a href="%s" target="_blank">Additional payment methods</a> can be installed later.', 'woocommerce' ),
+						__( 'ClassicCommerce can accept both online and offline payments. <a href="%s" target="_blank">Additional payment methods</a> can be installed later.', 'woocommerce' ),
 						array(
 							'a' => array(
 								'href'   => array(),
@@ -1778,11 +1787,11 @@ class WC_Admin_Setup_Wizard {
 
 		if (
 			(
-				// Install WooCommerce Services with Stripe to enable deferred account creation.
+				// Install ClassicCommerce Services with Stripe to enable deferred account creation.
 				! empty( $_POST['wc-wizard-service-stripe-enabled'] ) && // WPCS: CSRF ok, input var ok.
 				! empty( $_POST['stripe_create_account'] ) // WPCS: CSRF ok, input var ok.
 			) || (
-				// Install WooCommerce Services with PayPal EC to enable proxied payments.
+				// Install ClassicCommerce Services with PayPal EC to enable proxied payments.
 				! empty( $_POST['wc-wizard-service-ppec_paypal-enabled'] ) && // WPCS: CSRF ok, input var ok.
 				! empty( $_POST['ppec_paypal_reroute_requests'] ) // WPCS: CSRF ok, input var ok.
 			)
@@ -1865,7 +1874,7 @@ class WC_Admin_Setup_Wizard {
 	 */
 	public function wc_setup_recommended() {
 		?>
-		<h1><?php esc_html_e( 'Recommended for All WooCommerce Stores', 'woocommerce' ); ?></h1>
+		<h1><?php esc_html_e( 'Recommended for All ClassicCommerce Stores', 'woocommerce' ); ?></h1>
 		<p><?php
 			// If we're displaying all of the recommended features, show the full description. Otherwise, display a placeholder.
 			// We're not translating all of the different permutations to save on translations,
@@ -1875,7 +1884,7 @@ class WC_Admin_Setup_Wizard {
 					&& $this->should_show_automated_tax()
 					&& $this->should_show_mailchimp()
 					) :
-				esc_html_e( 'Select from the list below to enable automated taxes and MailChimp’s best-in-class email services — and design your store with our official, free WooCommerce theme.', 'woocommerce' );
+				esc_html_e( 'Select from the list below to enable automated taxes and MailChimp’s best-in-class email services — and design your store with our official, freeClassicoCommerce theme.', 'woocommerce' );
 			else :
 				esc_html_e( 'Enhance your store with these recommended features.', 'woocommerce' );
 			endif;
@@ -1890,7 +1899,7 @@ class WC_Admin_Setup_Wizard {
 						'type'        => 'storefront_theme',
 						'title'       => __( 'Storefront Theme', 'woocommerce' ),
 						'description' => sprintf( __(
-								'Design your store with deep WooCommerce integration. If toggled on, we’ll install <a href="https://woocommerce.com/storefront/" target="_blank" rel="noopener noreferrer">Storefront</a>, and your current theme <em>%s</em> will be deactivated.', 'woocommerce' ),
+								'Design your store with deep ClassicCommerce integration. If toggled on, we’ll install <a href="https://woocommerce.com/storefront/" target="_blank" rel="noopener noreferrer">Storefront</a>, and your current theme <em>%s</em> will be deactivated.', 'woocommerce' ),
 								$theme_name
 						),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-storefront-icon.svg',
@@ -1902,7 +1911,7 @@ class WC_Admin_Setup_Wizard {
 					$this->display_recommended_item( array(
 						'type'        => 'automated_taxes',
 						'title'       => __( 'Automated Taxes', 'woocommerce' ),
-						'description' => __( 'Save time and errors with automated tax calculation and collection at checkout. Powered by WooCommerce Services and Jetpack.', 'woocommerce' ),
+						'description' => __( 'Save time and errors with automated tax calculation and collection at checkout. Powered by ClassicCommerce Services and Jetpack.', 'woocommerce' ),
 						'img_url'     => WC()->plugin_url() . '/assets/images/obw-taxes-icon.svg',
 						'img_alt'     => __( 'automated taxes icon', 'woocommerce' ),
 						'plugins'     => $this->get_wcs_requisite_plugins(),
@@ -2029,13 +2038,13 @@ class WC_Admin_Setup_Wizard {
 	public function wc_setup_activate() {
 		$this->wc_setup_activate_actions();
 
-		$jetpack_connected = class_exists( 'Jetpack' ) && Jetpack::is_active();
+		// $jetpack_connected = class_exists( 'Jetpack' ) && Jetpack::is_active();
 
-		$has_jetpack_error = false;
+		// $has_jetpack_error = false;
 		if ( isset( $_GET['activate_error'] ) ) {
-			$has_jetpack_error = true;
+			// $has_jetpack_error = true;
 
-			$title = __( "Sorry, we couldn't connect your store to Jetpack", 'woocommerce' );
+			// $title = __( "Sorry, we couldn't connect your store to Jetpack", 'woocommerce' );
 
 			$error_message = $this->get_activate_error_message( sanitize_text_field( wp_unslash( $_GET['activate_error'] ) ) );
 			$description = $error_message;
@@ -2054,14 +2063,16 @@ class WC_Admin_Setup_Wizard {
 				$description = sprintf( $description_base, $feature_list );
 			}
 
-			if ( ! $jetpack_connected ) {
-				$title = $feature_list ?
-					__( 'Connect your store to Jetpack', 'woocommerce' ) :
-					__( 'Connect your store to Jetpack to enable extra features', 'woocommerce' );
-				$button_text = __( 'Continue with Jetpack', 'woocommerce' );
-			} elseif ( $feature_list ) {
-				$title = __( 'Connect your store to activate WooCommerce Services', 'woocommerce' );
-				$button_text = __( 'Continue with WooCommerce Services', 'woocommerce' );
+			// if ( ! $jetpack_connected ) {
+			// 	$title = $feature_list ?
+			// 		__( 'Connect your store to Jetpack', 'woocommerce' ) :
+			// 		__( 'Connect your store to Jetpack to enable extra features', 'woocommerce' );
+			// 	$button_text = __( 'Continue with Jetpack', 'woocommerce' );
+			// } else
+			
+			if ( $feature_list ) {
+				$title = __( 'Connect your store to activate ClassicCommerce Services', 'woocommerce' );
+				$button_text = __( 'Continue with ClassicCommerce Services', 'woocommerce' );
 			} else {
 				wp_redirect( esc_url_raw( $this->get_next_step_link() ) );
 				exit;
@@ -2071,8 +2082,8 @@ class WC_Admin_Setup_Wizard {
 		<h1><?php echo esc_html( $title ); ?></h1>
 		<p><?php echo esc_html( $description ); ?></p>
 
-		<?php if ( $jetpack_connected ) : ?>
-			<div class="activate-splash">
+		<?php // if ( $jetpack_connected ) : ?>
+			<!-- <div class="activate-splash">
 				<img
 					class="jetpack-logo"
 					src="<?php echo esc_url( WC()->plugin_url() . '/assets/images/jetpack_horizontal_logo.png' ); ?>"
@@ -2082,26 +2093,26 @@ class WC_Admin_Setup_Wizard {
 					class="wcs-notice"
 					src="<?php echo esc_url( WC()->plugin_url() . '/assets/images/wcs-notice.png' ); ?>"
 				/>
-			</div>
-		<?php else : ?>
-			<img
+			</div> -->
+		<?php // else : ?>
+			<!-- <img
 				class="jetpack-logo"
 				src="<?php echo esc_url( WC()->plugin_url() . '/assets/images/jetpack_vertical_logo.png' ); ?>"
 				alt="Jetpack logo"
-			/>
-		<?php endif; ?>
+			/> -->
+		<?php // endif; ?>
 
-		<?php if ( $has_jetpack_error ) : ?>
-			<p class="wc-setup-actions step">
+		<?php // if ( $has_jetpack_error ) : ?>
+			<!-- <p class="wc-setup-actions step">
 				<a
 					href="<?php echo esc_url( $this->get_next_step_link() ); ?>"
 					class="button-primary button button-large"
 				>
 					<?php esc_html_e( 'Finish setting up your store', 'woocommerce' ); ?>
 				</a>
-			</p>
-		<?php else : ?>
-			<p class="jetpack-terms">
+			</p> -->
+		<?php // else : ?>
+			<!-- <p class="jetpack-terms">
 				<?php
 					printf(
 						wp_kses_post( __( 'By connecting your site you agree to our fascinating <a href="%1$s" target="_blank">Terms of Service</a> and to <a href="%2$s" target="_blank">share details</a> with WordPress.com', 'woocommerce' ) ),
@@ -2109,7 +2120,7 @@ class WC_Admin_Setup_Wizard {
 						'https://jetpack.com/support/what-data-does-jetpack-sync'
 					);
 				?>
-			</p>
+			</p> -->
 			<form method="post" class="activate-jetpack">
 				<p class="wc-setup-actions step">
 					<button type="submit" class="button-primary button button-large" value="<?php echo esc_attr( $button_text ); ?>"><?php echo esc_html( $button_text ); ?></button>
@@ -2117,65 +2128,66 @@ class WC_Admin_Setup_Wizard {
 				<input type="hidden" name="save_step" value="activate" />
 				<?php wp_nonce_field( 'wc-setup' ); ?>
 			</form>
-			<?php if ( ! $jetpack_connected ) : ?>
-				<h3 class="jetpack-reasons">
+			<?php // if ( ! $jetpack_connected ) : ?>
+				<!-- <h3 class="jetpack-reasons">
 					<?php
-						echo esc_html( $description ?
-							__( "Bonus reasons you'll love Jetpack", 'woocommerce' ) :
-							__( "Reasons you'll love Jetpack", 'woocommerce' )
-						);
+						// echo esc_html( $description ?
+						// 	__( "Bonus reasons you'll love Jetpack", 'woocommerce' ) :
+						// 	__( "Reasons you'll love Jetpack", 'woocommerce' )
+						// );
 					?>
 				</h3>
 				<ul class="wc-wizard-features">
 					<li class="wc-wizard-feature-item">
 						<p class="wc-wizard-feature-name">
-							<strong><?php esc_html_e( 'Better security', 'woocommerce' ); ?></strong>
+							<strong><?php //esc_html_e( 'Better security', 'woocommerce' ); ?></strong>
 						</p>
 						<p class="wc-wizard-feature-description">
-							<?php esc_html_e( 'Protect your store from unauthorized access.', 'woocommerce' ); ?>
+							<?php //esc_html_e( 'Protect your store from unauthorized access.', 'woocommerce' ); ?>
 						</p>
 					</li>
 					<li class="wc-wizard-feature-item">
 						<p class="wc-wizard-feature-name">
-							<strong><?php esc_html_e( 'Store stats', 'woocommerce' ); ?></strong>
+							<strong><?php //esc_html_e( 'Store stats', 'woocommerce' ); ?></strong>
 						</p>
 						<p class="wc-wizard-feature-description">
-							<?php esc_html_e( 'Get insights on how your store is doing, including total sales, top products, and more.', 'woocommerce' ); ?>
+							<?php //esc_html_e( 'Get insights on how your store is doing, including total sales, top products, and more.', 'woocommerce' ); ?>
 						</p>
 					</li>
 					<li class="wc-wizard-feature-item">
 						<p class="wc-wizard-feature-name">
-							<strong><?php esc_html_e( 'Store monitoring', 'woocommerce' ); ?></strong>
+							<strong><?php //esc_html_e( 'Store monitoring', 'woocommerce' ); ?></strong>
 						</p>
 						<p class="wc-wizard-feature-description">
-							<?php esc_html_e( 'Get an alert if your store is down for even a few minutes.', 'woocommerce' ); ?>
+							<?php //esc_html_e( 'Get an alert if your store is down for even a few minutes.', 'woocommerce' ); ?>
 						</p>
 					</li>
 					<li class="wc-wizard-feature-item">
 						<p class="wc-wizard-feature-name">
-							<strong><?php esc_html_e( 'Product promotion', 'woocommerce' ); ?></strong>
+							<strong><?php //esc_html_e( 'Product promotion', 'woocommerce' ); ?></strong>
 						</p>
 						<p class="wc-wizard-feature-description">
-							<?php esc_html_e( "Share new items on social media the moment they're live in your store.", 'woocommerce' ); ?>
+							<?php //esc_html_e( "Share new items on social media the moment they're live in your store.", 'woocommerce' ); ?>
 						</p>
 					</li>
-				</ul>
-			<?php endif; ?>
-		<?php endif; ?>
+				</ul> -->
+			<?php // endif; ?>
+		<?php // endif; ?>
 	<?php
 	}
 
-	protected function get_all_activate_errors() {
-		return array(
-			'default' => __( "Sorry! We tried, but we couldn't connect Jetpack just now 😭. Please go to the Plugins tab to connect Jetpack, so that you can finish setting up your store.", 'woocommerce' ),
-			'jetpack_cant_be_installed' => __( "Sorry! We tried, but we couldn't install Jetpack for you 😭. Please go to the Plugins tab to install it, and finish setting up your store.", 'woocommerce' ),
-			'register_http_request_failed' => __( "Sorry! We couldn't contact Jetpack just now 😭. Please make sure that your site is visible over the internet, and that it accepts incoming and outgoing requests via curl. You can also try to connect to Jetpack again, and if you run into any more issues, please contact support.", 'woocommerce' ),
-			'siteurl_private_ip_dev' => __( "Your site might be on a private network. Jetpack can only connect to public sites. Please make sure your site is visible over the internet, and then try connecting again 🙏." , 'woocommerce' ),
-		);
-	}
+	// protected function get_all_activate_errors() {
+		// return array(
+		// 	'default' => __( "Sorry! We tried, but we couldn't connect Jetpack just now 😭. Please go to the Plugins tab to connect Jetpack, so that you can finish setting up your store.", 'woocommerce' ),
+		// 	'jetpack_cant_be_installed' => __( "Sorry! We tried, but we couldn't install Jetpack for you 😭. Please go to the Plugins tab to install it, and finish setting up your store.", 'woocommerce' ),
+		// 	'register_http_request_failed' => __( "Sorry! We couldn't contact Jetpack just now 😭. Please make sure that your site is visible over the internet, and that it accepts incoming and outgoing requests via curl. You can also try to connect to Jetpack again, and if you run into any more issues, please contact support.", 'woocommerce' ),
+		// 	'siteurl_private_ip_dev' => __( "Your site might be on a private network. Jetpack can only connect to public sites. Please make sure your site is visible over the internet, and then try connecting again 🙏." , 'woocommerce' ),
+		// );
+	// }
 
 	protected function get_activate_error_message( $code = '' ) {
-		$errors = $this->get_all_activate_errors();
+		// $errors = $this->get_all_activate_errors();
+		$errors = '';
 		return array_key_exists( $code, $errors ) ? $errors[ $code ] : $errors['default'];
 	}
 
@@ -2184,51 +2196,53 @@ class WC_Admin_Setup_Wizard {
 	 *
 	 * Install, activate, and launch connection flow for Jetpack.
 	 */
-	public function wc_setup_activate_save() {
-		check_admin_referer( 'wc-setup' );
+	// TODO: Remove Jetpack woocommerce_setup_jetpack_opted_in option
 
-		set_transient( 'wc_setup_activated', 'yes', MINUTE_IN_SECONDS * 10 );
+	// public function wc_setup_activate_save() {
+	// 	check_admin_referer( 'wc-setup' );
 
-		// Leave a note for WooCommerce Services that Jetpack has been opted into.
-		update_option( 'woocommerce_setup_jetpack_opted_in', true );
+	// 	set_transient( 'wc_setup_activated', 'yes', MINUTE_IN_SECONDS * 10 );
 
-		if ( class_exists( 'Jetpack' ) && Jetpack::is_active() ) {
-			wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
-			exit;
-		}
+	// 	Leave a note for ClassicCommerce Services that Jetpack has been opted into.
+	// 	update_option( 'woocommerce_setup_jetpack_opted_in', true );
 
-		WC_Install::background_installer( 'jetpack', array(
-			'name'      => __( 'Jetpack', 'woocommerce' ),
-			'repo-slug' => 'jetpack',
-		) );
+	// 	if ( class_exists( 'Jetpack' ) && Jetpack::is_active() ) {
+	// 		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+	// 		exit;
+	// 	}
 
-		// Did Jetpack get successfully installed?
-		if ( ! class_exists( 'Jetpack' ) ) {
-			wp_redirect( esc_url_raw( add_query_arg( 'activate_error', 'jetpack_cant_be_installed' ) ) );
-			exit;
-		}
+	// 	WC_Install::background_installer( 'jetpack', array(
+	// 		'name'      => __( 'Jetpack', 'woocommerce' ),
+	// 		'repo-slug' => 'jetpack',
+	// 	) );
 
-		Jetpack::maybe_set_version_option();
-		$register_result = Jetpack::try_registration();
+	// 	Did Jetpack get successfully installed?
+	// 	if ( ! class_exists( 'Jetpack' ) ) {
+	// 		wp_redirect( esc_url_raw( add_query_arg( 'activate_error', 'jetpack_cant_be_installed' ) ) );
+	// 		exit;
+	// 	}
 
-		if ( is_wp_error( $register_result ) ) {
-			$result_error_code = $register_result->get_error_code();
-			$jetpack_error_code = array_key_exists( $result_error_code, $this->get_all_activate_errors() ) ? $result_error_code : 'register';
-			wp_redirect( esc_url_raw( add_query_arg( 'activate_error', $jetpack_error_code ) ) );
-			exit;
-		}
+	// 	Jetpack::maybe_set_version_option();
+	// 	$register_result = Jetpack::try_registration();
 
-		$redirect_url = esc_url_raw( add_query_arg( array(
-			'page'           => 'wc-setup',
-			'step'           => 'activate',
-			'from'           => 'wpcom',
-			'activate_error' => false,
-		), admin_url() ) );
-		$connection_url = Jetpack::init()->build_connect_url( true, $redirect_url, 'woocommerce-setup-wizard' );
+	// 	if ( is_wp_error( $register_result ) ) {
+	// 		$result_error_code = $register_result->get_error_code();
+	// 		$jetpack_error_code = array_key_exists( $result_error_code, $this->get_all_activate_errors() ) ? $result_error_code : 'register';
+	// 		wp_redirect( esc_url_raw( add_query_arg( 'activate_error', $jetpack_error_code ) ) );
+	// 		exit;
+	// 	}
 
-		wp_redirect( esc_url_raw( $connection_url ) );
-		exit;
-	}
+	// 	$redirect_url = esc_url_raw( add_query_arg( array(
+	// 		'page'           => 'wc-setup',
+	// 		'step'           => 'activate',
+	// 		'from'           => 'wpcom',
+	// 		'activate_error' => false,
+	// 	), admin_url() ) );
+	// 	$connection_url = Jetpack::init()->build_connect_url( true, $redirect_url, 'woocommerce-setup-wizard' );
+
+	// 	wp_redirect( esc_url_raw( $connection_url ) );
+	// 	exit;
+	// }
 
 	/**
 	 * Final step.

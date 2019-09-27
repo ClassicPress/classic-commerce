@@ -17,7 +17,7 @@ if ( ! class_exists( 'WP_Importer' ) ) {
  * Product importer controller - handles file upload and forms in admin.
  *
  * @package     ClassicCommerce/Admin/Importers
- * @version     3.1.0
+ * @version     WC-3.1.0
  */
 class WC_Product_CSV_Importer_Controller {
 

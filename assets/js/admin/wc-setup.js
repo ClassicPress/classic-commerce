@@ -119,44 +119,45 @@ jQuery( function( $ ) {
 			.prop( 'required', checked );
 	} );
 
-	function submitActivateForm() {
-		$( 'form.activate-jetpack' ).submit();
-	}
+	// TODO: Remove Jetpack
+	// function submitActivateForm() {
+	// 	$( 'form.activate-jetpack' ).submit();
+	// }
 
-	function waitForJetpackInstall() {
-		wp.ajax.post( 'setup_wizard_check_jetpack' )
-			.then( function( result ) {
-				// If we receive success, or an unexpected result
-				// let the form submit.
-				if (
-					! result ||
-					! result.is_active ||
-					'yes' === result.is_active
-				) {
-					return submitActivateForm();
-				}
+	// function waitForJetpackInstall() {
+	// 	wp.ajax.post( 'setup_wizard_check_jetpack' )
+	// 		.then( function( result ) {
+	// 			// If we receive success, or an unexpected result
+	// 			// let the form submit.
+	// 			if (
+	// 				! result ||
+	// 				! result.is_active ||
+	// 				'yes' === result.is_active
+	// 			) {
+	// 				return submitActivateForm();
+	// 			}
 
-				// Wait until checking the status again
-				setTimeout( waitForJetpackInstall, 3000 );
-			} )
-			.fail( function() {
-				// Submit the form as normal if the request fails
-				submitActivateForm();
-			} );
-	}
+	// 			// Wait until checking the status again
+	// 			setTimeout( waitForJetpackInstall, 3000 );
+	// 		} )
+	// 		.fail( function() {
+	// 			// Submit the form as normal if the request fails
+	// 			submitActivateForm();
+	// 		} );
+	// }
 
 	// Wait for a pending Jetpack install to finish before triggering a "save"
 	// on the activate step, which launches the Jetpack connection flow.
-	$( '.activate-jetpack' ).on( 'click', '.button-primary', function( e ) {
-		blockWizardUI();
+	// $( '.activate-jetpack' ).on( 'click', '.button-primary', function( e ) {
+	// 	blockWizardUI();
 
-		if ( 'no' === wc_setup_params.pending_jetpack_install ) {
-			return true;
-		}
+	// 	if ( 'no' === wc_setup_params.pending_jetpack_install ) {
+	// 		return true;
+	// 	}
 
-		e.preventDefault();
-		waitForJetpackInstall();
-	} );
+	// 	e.preventDefault();
+	// 	waitForJetpackInstall();
+	// } );
 
 	$( '.wc-wizard-services' ).on( 'change', 'input#stripe_create_account, input#ppec_paypal_reroute_requests', function() {
 		if ( $( this ).is( ':checked' ) ) {

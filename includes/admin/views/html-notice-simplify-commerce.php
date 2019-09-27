@@ -1,5 +1,6 @@
 <?php
 /**
+ * TODO: Check on simplify commerce payment gateway
  * Admin View: Notice - Simplify Commerce.
  */
 

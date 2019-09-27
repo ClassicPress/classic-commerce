@@ -1,5 +1,6 @@
 <?php
 /**
+ * TODO: Remove gutenberg stuff
  * Admin View: Notice - Wootenberg Feature Plugin
  */
 

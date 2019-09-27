@@ -1,11 +1,12 @@
 <?php
 /**
+ * TODO: Add ons, should we support them?
  * Addons Page
  *
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
- * @version  2.5.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-2.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

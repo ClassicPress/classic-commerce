@@ -1,9 +1,10 @@
 <?php
 /**
+ * TODO: Fix links without tracking utm_source
  * Add some content to the help tab
  *
  * @package     ClassicCommerce/Admin
- * @version     2.1.0
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

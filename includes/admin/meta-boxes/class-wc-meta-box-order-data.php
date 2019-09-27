@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    Admin
  * @package     ClassicCommerce/Admin/Meta Boxes
- * @version     2.2.0
+ * @version     WC-2.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

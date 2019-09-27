@@ -2,7 +2,7 @@
 /**
  * WooCommerce advanced settings
  *
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -328,7 +328,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	/**
 	 * Form method.
 	 *
-	 * @deprecated 3.4.4
+	 * @deprecated WC-3.4.4
 	 * @param  string $method Method name.
 	 * @return string
 	 */
@@ -390,8 +390,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 /**
  * WC_Settings_Rest_API class.
  *
- * @deprecated 3.4 in favour of WC_Settings_Advanced.
- * @todo remove in 4.0.
+ * @deprecated WC-3.4 in favour of WC_Settings_Advanced.
+ * @todo remove in WC-4.0.
  */
 class WC_Settings_Rest_API extends WC_Settings_Advanced {} // @codingStandardsIgnoreLine.
 

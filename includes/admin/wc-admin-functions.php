@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Admin Functions
+ * ClassicCommerce Admin Functions
  *
  * @author   WooThemes
  * @category Core
- * @package  WooCommerce/Admin/Functions
- * @version  2.4.0
+ * @package  ClassicCommerce/Admin/Functions
+ * @version  WC-2.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Get all WooCommerce screen ids.
+ * Get all ClassicCommerce screen ids.
  *
  * @return array
  */
@@ -134,7 +134,7 @@ function wc_create_page( $slug, $option = '', $page_title = '', $page_content = 
 /**
  * Output admin fields.
  *
- * Loops though the woocommerce options array and outputs each field.
+ * Loops though the Classiccommerce options array and outputs each field.
  *
  * @param array $options Opens array to output
  */

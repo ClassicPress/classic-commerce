@@ -3,7 +3,7 @@
  * Manages WooCommerce plugin updating on the Plugins screen.
  *
  * @package     ClassicCommerce/Admin
- * @version     3.2.0
+ * @version     WC-3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

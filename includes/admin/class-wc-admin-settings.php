@@ -2,8 +2,8 @@
 /**
  * WooCommerce Admin Settings Class
  *
- * @package  WooCommerce/Admin
- * @version  3.4.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

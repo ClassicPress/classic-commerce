@@ -390,9 +390,10 @@ final class WooCommerce {
 			$this->frontend_includes();
 		}
 
-		if ( $this->is_request( 'cron' ) && 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) ) {
-			include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
-		}
+		// TODO: Remove includes/class-wc-tracker.php
+		// if ( $this->is_request( 'cron' ) && 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) ) {
+		// 	include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
+		// }
 
 		$this->theme_support_includes();
 		$this->query = new WC_Query();

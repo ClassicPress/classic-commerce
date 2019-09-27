@@ -319,7 +319,7 @@ class WC_Settings_General extends WC_Settings_Page {
 	/**
 	 * Show a notice showing where the store notice setting has moved.
 	 *
-	 * @since 3.3.1
+	 * @since WC-3.3.1
 	 * @todo remove in next major release.
 	 */
 	private function store_notice_setting_moved_notice() {

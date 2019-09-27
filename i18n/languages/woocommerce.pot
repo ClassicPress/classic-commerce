@@ -8507,15 +8507,6 @@ msgstr ""
 msgid "Help WooCommerce improve with usage tracking."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:517
-msgid ""
-"Gathering usage data allows us to make WooCommerce better &mdash; your "
-"store will be considered as we evaluate new features, judge the quality of "
-"an update, or determine if an improvement makes sense. If you would rather "
-"opt-out, and do not check this box, we will not know this store exists and "
-"we will not collect any usage data."
-msgstr ""
-
 #: includes/admin/class-wc-admin-setup-wizard.php:518
 msgid "Read more about what we collect."
 msgstr ""

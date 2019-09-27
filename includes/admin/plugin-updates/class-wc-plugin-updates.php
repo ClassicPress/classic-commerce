@@ -3,7 +3,7 @@
  * Class for displaying plugin warning notifications and determining 3rd party plugin compatibility.
  *
  * @package     ClassicCommerce/Admin
- * @version     3.2.0
+ * @version     WC-3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

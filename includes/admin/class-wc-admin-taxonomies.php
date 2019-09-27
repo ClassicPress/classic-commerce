@@ -3,8 +3,8 @@
  * Handles taxonomies in admin
  *
  * @class    WC_Admin_Taxonomies
- * @version  2.3.10
- * @package  WooCommerce/Admin
+ * @version  WC-2.3.10
+ * @package  ClassicCommerce/Admin
  * @category Class
  * @author   WooThemes
  */
