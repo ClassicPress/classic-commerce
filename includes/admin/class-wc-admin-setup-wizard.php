@@ -5,7 +5,7 @@
  * Takes new users through some basic steps to setup their store.
  *
  * @package     ClassicCommerce/Admin
- * @version     2.6.0
+ * @version     WC-2.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -44,8 +44,8 @@ class WC_Admin_Setup_Wizard {
 	 * @var array
 	 */
 	private $tweets = array(
-		'Someone give me woo-t, I just set up a new store with #WordPress and @WooCommerce!',
-		'Someone give me high five, I just set up a new store with #WordPress and @WooCommerce!',
+		'Someone give me woo-t, I just set up a new store with #ClassicPress and @GetClassicPress!',
+		'Someone give me high five, I just set up a new store with #ClassicPress and @GetClassicPress!',
 	);
 
 	/**
@@ -91,14 +91,9 @@ class WC_Admin_Setup_Wizard {
 	protected function is_default_theme() {
 		return wc_is_active_theme(
 			array(
-				'twentyseventeen',
-				'twentysixteen',
-				'twentyfifteen',
-				'twentyfourteen',
-				'twentythirteen',
-				'twentyeleven',
-				'twentytwelve',
-				'twentyten',
+				'classicpress-twentyseventeen',
+				'classicpress-twentysixteen',
+				'classicpress-twentyfifteen',
 			)
 		);
 	}
