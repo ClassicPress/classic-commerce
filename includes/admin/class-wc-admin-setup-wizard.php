@@ -94,6 +94,14 @@ class WC_Admin_Setup_Wizard {
 				'classicpress-twentyseventeen',
 				'classicpress-twentysixteen',
 				'classicpress-twentyfifteen',
+				'twentyseventeen',
+				'twentysixteen',
+				'twentyfifteen',
+				'twentyfourteen',
+				'twentythirteen',
+				'twentyeleven',
+				'twentytwelve',
+				'twentyten',
 			)
 		);
 	}
