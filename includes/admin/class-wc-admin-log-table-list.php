@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Log Table List
+ * ClassicCommerce Log Table List
  *
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  1.0.0
  */
 
@@ -77,7 +77,7 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 		?>
 			<label for="filter-by-level" class="screen-reader-text"><?php _e( 'Filter by level', 'woocommerce' ); ?></label>
 			<select name="level" id="filter-by-level">
-				<option<?php selected( $selected_level, '' ); ?> value=""><?php _e( 'All levels', 'woocommerce' ); ?></option>
+				<option <?php selected( $selected_level, '' ); ?> value=""><?php _e( 'All levels', 'woocommerce' ); ?></option>
 				<?php
 				foreach ( $levels as $l ) {
 					printf(
