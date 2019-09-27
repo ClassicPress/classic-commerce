@@ -6,6 +6,12 @@ Here you can browse the source, look at open issues and keep track of developmen
 
 We recommend all developers to follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 
+## Contributing
+- Start by cloning the repo to your development space using `git clone https://github.com/ClassicPress-research/classic-commerce`
+- cd directory in terminal/command prompt
+- Run `composer install`
+- Run `npm install`
+- Run `npm scripts build-watch` as you develop.
 
 ## Documentation
 * [WooCommerce Documentation](https://docs.woocommerce.com/documentation/plugins/woocommerce/)
