@@ -18,14 +18,5 @@ To disclose a security issue to our team. (security@classicpress.net)
 ## Support
 This repository is most suitable for development but for the little while will use it for support. We shall add a support tag to your issue. However, this might take a little longer to get response.
 
-## Contributing to ClassicCommerce
+## Contributing to WooCommerce
 If you have a patch or have stumbled upon an issue with WooCommerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information how you can do this.
-
-### Submit a PR
-Start by cloning this repo into your staging site plugins folder via the terminal or command prompt using:
-- Run `git clone https://github.com/ClassicPress-research/classic-commerce`
-- Run `cd classic-commerce`
-- Run `composer install`
-- Run `npm install`
-- Run `npm scripts build-watch` or `npm scripts build` as you develop.
-- Push your PR commits and changes to the **develop** branch.
