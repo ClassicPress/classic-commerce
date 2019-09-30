@@ -13,6 +13,8 @@ php:
   - 5.6
   - 7.0
   - 7.1
+  - 7.2
+  - 7.3
 
 env:
   - WP_VERSION=latest WP_MULTISITE=0
@@ -22,6 +24,8 @@ env:
 matrix:
   fast_finish: true
   include:
+  - php: 7.3
+    env: WP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1 RUN_E2E=1
   - php: 7.2
     env: WP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1 RUN_E2E=1
   - php: 7.1
