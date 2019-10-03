@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# TODO: Change the nightly and build links to CPs.
 # See https://raw.githubusercontent.com/wp-cli/scaffold-command/master/templates/install-wp-tests.sh
 
 if [ $# -lt 3 ]; then
