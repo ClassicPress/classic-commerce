@@ -31,9 +31,6 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	</p>
 	<p class="submit">
 		<a href="#" class="button-primary debug-report"><?php esc_html_e( 'Get system report', 'woocommerce' ); ?></a>
-		<a class="button-secondary docs" href="https://docs.woocommerce.com/document/understanding-the-woocommerce-system-status-report/" target="_blank">
-			<?php esc_html_e( 'Understanding the status report', 'woocommerce' ); ?>
-		</a>
 	</p>
 	<div id="debug-report">
 		<textarea readonly="readonly"></textarea>
@@ -50,7 +47,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 <table class="wc_status_table widefat" cellspacing="0" id="status">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="WordPress Environment"><h2><?php esc_html_e( 'WordPress environment', 'woocommerce' ); ?></h2></th>
+			<th colspan="3" data-export-label="CMS Environment"><h2><?php esc_html_e( 'CMS environment', 'woocommerce' ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -65,13 +62,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			<td><?php echo esc_html( $environment['site_url'] ); ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WC Version"><?php esc_html_e( 'WooCommerce version', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WooCommerce installed on your site.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="CC Version"><?php esc_html_e( 'Classic Commerce version', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of Classic Commerce installed on your site.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['version'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Log Directory Writable"><?php esc_html_e( 'Log directory writable', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several WooCommerce extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['log_directory_writable'] ) {
@@ -84,55 +81,33 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Version"><?php esc_html_e( 'WordPress version', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WordPress installed on your site.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="CMS Version"><?php esc_html_e( 'CMS version', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The CMS version installed on your site.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
-				$latest_version = get_transient( 'woocommerce_system_status_wp_version_check' );
-
-				if ( false === $latest_version ) {
-					$version_check = wp_remote_get( 'https://api.wordpress.org/core/version-check/1.7/' );
-					$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
-
-					if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
-						$latest_version = $api_response['offers'][0]['version'];
-					} else {
-						$latest_version = $environment['wp_version'];
-					}
-					set_transient( 'woocommerce_system_status_wp_version_check', $latest_version, DAY_IN_SECONDS );
-				}
-
-				if ( version_compare( $environment['wp_version'], $latest_version, '<' ) ) {
-					/* Translators: %1$s: Current version, %2$s: New version */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'woocommerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
+				if ( function_exists( 'classicpress_version' ) ) {
+				    /* translators: ClassicPress version string */
+				    printf( __( 'You are running ClassicPress version %s', 'woocommerce' ), classicpress_version() );
 				} else {
-					echo '<mark class="yes">' . esc_html( $environment['wp_version'] ) . '</mark>';
+				    /* translators: WordPress version string */
+				    printf( __( 'You are running WordPress version %s', 'woocommerce' ), get_bloginfo( 'version' ) );
 				}
 				?>
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Multisite"><?php esc_html_e( 'WordPress multisite', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have WordPress Multisite enabled.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Multisite"><?php esc_html_e( 'Multisite', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have Multisite enabled.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo ( $environment['wp_multisite'] ) ? '<span class="dashicons dashicons-yes"></span>' : '&ndash;'; ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Memory Limit"><?php esc_html_e( 'WordPress memory limit', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
-			<td>
-				<?php
-				if ( $environment['wp_memory_limit'] < 67108864 ) {
-					/* Translators: %1$s: Memory limit, %2$s: Docs link. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend setting memory to at least 64MB. See: %2$s', 'woocommerce' ), esc_html( size_format( $environment['wp_memory_limit'] ) ), '<a href="https://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP" target="_blank">' . esc_html__( 'Increasing memory allocated to PHP', 'woocommerce' ) . '</a>' ) . '</mark>';
-				} else {
-					echo '<mark class="yes">' . esc_html( size_format( $environment['wp_memory_limit'] ) ) . '</mark>';
-				}
-				?>
-			</td>
+			<td data-export-label="Memory Limit"><?php esc_html_e( 'Memory limit', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time. We recommend setting memory to at least 64MB.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td><?php	echo esc_html( size_format( $environment['wp_memory_limit'] ) ); ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Debug Mode"><?php esc_html_e( 'WordPress debug mode', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is in Debug Mode.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Debug Mode"><?php esc_html_e( 'Debug mode', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not your CMS is in Debug Mode.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_debug_mode'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -142,8 +117,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Cron"><?php esc_html_e( 'WordPress cron', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WP Cron Jobs are enabled.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Cron"><?php esc_html_e( 'Cron enabled', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not Cron Jobs are enabled.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_cron'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -154,12 +129,12 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		</tr>
 		<tr>
 			<td data-export-label="Language"><?php esc_html_e( 'Language', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by WordPress. Default = English', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by your CMS. Default = English', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['language'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="External object cache"><?php esc_html_e( 'External object cache', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is using an external object cache.', 'woocommerce' ) ); ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not your CMS is using an external object cache.', 'woocommerce' ) ); ?></td>
 			<td>
 				<?php if ( $environment['external_object_cache'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -184,28 +159,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		</tr>
 		<tr>
 			<td data-export-label="PHP Version"><?php esc_html_e( 'PHP version', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of PHP installed on your hosting server.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
-			<td>
-				<?php
-				if ( version_compare( $environment['php_version'], '7.2', '>=' ) ) {
-					echo '<mark class="yes">' . esc_html( $environment['php_version'] ) . '</mark>';
-				} else {
-					$update_link = ' <a href="https://docs.woocommerce.com/document/how-to-update-your-php-version/" target="_blank">' . esc_html__( 'How to update your PHP version', 'woocommerce' ) . '</a>';
-					$class       = 'error';
-
-					if ( version_compare( $environment['php_version'], '5.4', '<' ) ) {
-						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'WooCommerce will run under this version of PHP, however, some features such as geolocation are not compatible. Support for this version will be dropped in the next major release. We recommend using PHP version 7.2 or above for greater performance and security.', 'woocommerce' ) . $update_link;
-					} elseif ( version_compare( $environment['php_version'], '5.6', '<' ) ) {
-						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'WooCommerce will run under this version of PHP, however, it has reached end of life. We recommend using PHP version 7.2 or above for greater performance and security.', 'woocommerce' ) . $update_link;
-					} elseif ( version_compare( $environment['php_version'], '7.2', '<' ) ) {
-						$notice = __( 'We recommend using PHP version 7.2 or above for greater performance and security.', 'woocommerce' ) . $update_link;
-						$class  = 'recommendation';
-					}
-
-					echo '<mark class="' . esc_attr( $class ) . '">' . esc_html( $environment['php_version'] ) . ' - ' . wp_kses_post( $notice ) . '</mark>';
-				}
-				?>
-			</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of PHP installed on your hosting server. We recommend using PHP version 7.2 or above for greater performance and security.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td><?php echo esc_html( $environment['php_version'] );	?></td>
 		</tr>
 		<?php if ( function_exists( 'ini_get' ) ) : ?>
 			<tr>
@@ -241,22 +196,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			?>
 			<tr>
 				<td data-export-label="MySQL Version"><?php esc_html_e( 'MySQL version', 'woocommerce' ); ?>:</td>
-				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of MySQL installed on your hosting server.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
-				<td>
-					<?php
-					if ( version_compare( $environment['mysql_version'], '5.6', '<' ) && ! strstr( $environment['mysql_version_string'], 'MariaDB' ) ) {
-						/* Translators: %1$s: MySQL version, %2$s: Recommended MySQL version. */
-						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend a minimum MySQL version of 5.6. See: %2$s', 'woocommerce' ), esc_html( $environment['mysql_version_string'] ), '<a href="https://wordpress.org/about/requirements/" target="_blank">' . esc_html__( 'WordPress requirements', 'woocommerce' ) . '</a>' ) . '</mark>';
-					} else {
-						echo '<mark class="yes">' . esc_html( $environment['mysql_version_string'] ) . '</mark>';
-					}
-					?>
-				</td>
+				<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of MySQL installed on your hosting server. We recommend a minimum MySQL version of 5.6.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+				<td><?php echo $environment['mysql_version_string']; ?></td>
 			</tr>
 		<?php endif; ?>
 		<tr>
 			<td data-export-label="Max Upload Size"><?php esc_html_e( 'Max upload size', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your WordPress installation.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your installation.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( size_format( $environment['max_upload_size'] ) ); ?></td>
 		</tr>
 		<tr>
@@ -358,7 +304,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		</tr>
 		<tr>
 			<td data-export-label="Remote Get"><?php esc_html_e( 'Remote get', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'WooCommerce plugins may use this method of communication when checking for plugin updates.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Classic Commerce plugins may use this method of communication when checking for plugin updates.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['remote_get_successful'] ) {
@@ -403,23 +349,14 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	</thead>
 	<tbody>
 		<tr>
-			<td data-export-label="WC Database Version"><?php esc_html_e( 'WooCommerce database version', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WooCommerce that the database is formatted for. This should be the same as your WooCommerce version.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Database Version"><?php esc_html_e( 'Database version', 'woocommerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of Classic Commerce that the database is formatted for. This should be the same as your Classic Commerce version.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $database['wc_database_version'] ); ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WC Database Prefix"><?php esc_html_e( 'Database prefix', 'woocommerce' ); ?></td>
-			<td class="help">&nbsp;</td>
-			<td>
-				<?php
-				if ( strlen( $database['database_prefix'] ) > 20 ) {
-					/* Translators: %1$s: Database prefix, %2$s: Docs link. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend using a prefix with less than 20 characters. See: %2$s', 'woocommerce' ), esc_html( $database['database_prefix'] ), '<a href="https://docs.woocommerce.com/document/completed-order-email-doesnt-contain-download-links/#section-2" target="_blank">' . esc_html__( 'How to update your database table prefix', 'woocommerce' ) . '</a>' ) . '</mark>';
-				} else {
-					echo '<mark class="yes">' . esc_html( $database['database_prefix'] ) . '</mark>';
-				}
-				?>
-			</td>
+			<td data-export-label="Database Prefix"><?php esc_html_e( 'Database prefix', 'woocommerce' ); ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'We recommend using a prefix with less than 20 characters.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td><?php	echo esc_html( $database['database_prefix'] ); ?></td>
 		</tr>
 
 		<?php if ( $settings['geolocation_enabled'] ) { ?>
@@ -526,8 +463,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				<?php else : ?>
 					<mark class="error"><span class="dashicons dashicons-warning"></span>
 					<?php
-					/* Translators: %s: docs link. */
-					echo wp_kses_post( sprintf( __( 'Your store is not using HTTPS. <a href="%s" target="_blank">Learn more about HTTPS and SSL Certificates</a>.', 'woocommerce' ), 'https://docs.woocommerce.com/document/ssl-and-https/' ) );
+					echo wp_kses_post( sprintf( __( 'Your store is not using HTTPS.', 'woocommerce' ) ) );
 					?>
 					</mark>
 				<?php endif; ?>
@@ -566,20 +502,9 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 
 				$version_string = '';
 				$network_string = '';
-				if ( strstr( $plugin['url'], 'woothemes.com' ) || strstr( $plugin['url'], 'woocommerce.com' ) ) {
-					if ( ! empty( $plugin['version_latest'] ) && version_compare( $plugin['version_latest'], $plugin['version'], '>' ) ) {
-						/* translators: %s: plugin latest version */
-						$version_string = ' &ndash; <strong style="color:red;">' . sprintf( esc_html__( '%s is available', 'woocommerce' ), $plugin['version_latest'] ) . '</strong>';
-					}
-
-					if ( false !== $plugin['network_activated'] ) {
+				if ( false !== $plugin['network_activated'] ) {
 						$network_string = ' &ndash; <strong style="color:black;">' . esc_html__( 'Network enabled', 'woocommerce' ) . '</strong>';
 					}
-				}
-				$untested_string = '';
-				if ( array_key_exists( $plugin['plugin'], $untested_plugins ) ) {
-					$untested_string = ' &ndash; <strong style="color:red;">' . esc_html__( 'Not tested with the active version of WooCommerce', 'woocommerce' ) . '</strong>';
-				}
 				?>
 				<tr>
 					<td><?php echo wp_kses_post( $plugin_name ); ?></td>
@@ -588,7 +513,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					<?php
 						/* translators: %s: plugin author */
 						printf( esc_html__( 'by %s', 'woocommerce' ), esc_html( $plugin['author_name'] ) );
-						echo ' &ndash; ' . esc_html( $plugin['version'] ) . $version_string . $untested_string . $network_string; // WPCS: XSS ok.
+						echo ' &ndash; ' . esc_html( $plugin['version'] ) . $version_string . $network_string; // WPCS: XSS ok.
 					?>
 					</td>
 				</tr>
@@ -671,7 +596,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="WC Pages"><h2><?php esc_html_e( 'WooCommerce pages', 'woocommerce' ); ?></h2></th>
+			<th colspan="3" data-export-label="WC Pages"><h2><?php esc_html_e( 'Classic Commerce pages', 'woocommerce' ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -699,8 +624,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Page ID is set, but the page does not exist', 'woocommerce' ) . '</mark>';
 				$error = true;
 			} elseif ( ! $page['page_visible'] ) {
-				/* Translators: %s: docs link. */
-				echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . wp_kses_post( sprintf( __( 'Page visibility should be <a href="%s" target="_blank">public</a>', 'woocommerce' ), 'https://codex.wordpress.org/Content_Visibility' ) ) . '</mark>';
+				echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Page visibility should be public', 'woocommerce' ) . '</mark>';
 				$error = true;
 			} else {
 				// Shortcode check.
@@ -760,7 +684,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
 				} else {
 					/* Translators: %s docs link. */
-					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying WooCommerce on a parent theme that you did not build personally we recommend using a child theme. See: <a href="%s" target="_blank">How to create a child theme</a>', 'woocommerce' ), 'https://codex.wordpress.org/Child_Themes' ) );
+					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying Classic Commerce on a parent theme that you did not build personally we recommend using a child theme.', 'woocommerce' ) ) );
 				}
 				?>
 				</td>
@@ -790,25 +714,12 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				<td><?php echo esc_html( $theme['parent_author_url'] ); ?></td>
 			</tr>
 		<?php endif ?>
-		<tr>
-			<td data-export-label="WooCommerce Support"><?php esc_html_e( 'WooCommerce support', 'woocommerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares WooCommerce support.', 'woocommerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
-			<td>
-				<?php
-				if ( ! $theme['has_woocommerce_support'] ) {
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Not declared', 'woocommerce' ) . '</mark>';
-				} else {
-					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
-				}
-				?>
-			</td>
-		</tr>
 	</tbody>
 </table>
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="Templates"><h2><?php esc_html_e( 'Templates', 'woocommerce' ); ?><?php echo wc_help_tip( esc_html__( 'This section shows any files that are overriding the default WooCommerce template pages.', 'woocommerce' ) ); ?></h2></th>
+			<th colspan="3" data-export-label="Templates"><h2><?php esc_html_e( 'Templates', 'woocommerce' ); ?><?php echo wc_help_tip( esc_html__( 'This section shows any files that are overriding the default Classic Commerce template pages.', 'woocommerce' ) ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -864,9 +775,6 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					<mark class="error">
 						<span class="dashicons dashicons-warning"></span>
 					</mark>
-					<a href="https://docs.woocommerce.com/document/fix-outdated-templates-woocommerce/" target="_blank">
-						<?php esc_html_e( 'Learn how to update', 'woocommerce' ); ?>
-					</a>
 				</td>
 			</tr>
 		<?php endif; ?>
