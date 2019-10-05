@@ -183,7 +183,7 @@ module.exports = function( grunt ) {
 				type: 'wp-plugin',
 				domainPath: 'i18n/languages',
 				potHeaders: {
-					'report-msgid-bugs-to': 'https://github.com/woocommerce/woocommerce/issues',
+					'report-msgid-bugs-to': 'https://github.com/classicpress-research/classiccommerce/issues',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 				}
 			},
