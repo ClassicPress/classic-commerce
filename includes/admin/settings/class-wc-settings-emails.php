@@ -133,7 +133,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 					'css'         => 'width:300px; height: 75px;',
 					'placeholder' => __( 'N/A', 'woocommerce' ),
 					'type'        => 'textarea',
-					'default'     => '{site_title}<br/>Powered by Classic Commerce',
+					'default'     => '{site_title}<br/>Powered by <a href="https://github.com/ClassicPress-research/classic-commerce/">Classic Commerce</a>',
 					'autoload'    => false,
 					'desc_tip'    => true,
 				),
