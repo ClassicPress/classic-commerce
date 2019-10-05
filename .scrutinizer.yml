@@ -28,6 +28,7 @@ filter:
     - i18n/
     - includes/api/legacy/
     - includes/legacy/
+    - includes/gateways/simplify-commerce/includes/
     - includes/libraries/
     - includes/shipping/legacy-*
     - includes/updates/

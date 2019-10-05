@@ -22,7 +22,9 @@ module.exports = function( grunt ) {
 				'<%= dirs.js %>/admin/*.js',
 				'!<%= dirs.js %>/admin/*.min.js',
 				'<%= dirs.js %>/frontend/*.js',
-				'!<%= dirs.js %>/frontend/*.min.js'
+				'!<%= dirs.js %>/frontend/*.min.js',
+				'includes/gateways/simplify-commerce/assets/js/*.js',
+				'!includes/gateways/simplify-commerce/assets/js/*.min.js'
 			]
 		},
 
@@ -201,7 +203,7 @@ module.exports = function( grunt ) {
 		// Check textdomain errors.
 		checktextdomain: {
 			options:{
-				text_domain: 'classic-commerce',
+				text_domain: 'woocommerce',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -299,6 +301,7 @@ module.exports = function( grunt ) {
 					'**/*.php',                                                  // Include all files
 					'!apigen/**',                                                // Exclude apigen/
 					'!includes/api/legacy/**',                                   // Exclude legacy REST API
+					'!includes/gateways/simplify-commerce/includes/Simplify/**', // Exclude simplify commerce SDK
 					'!includes/libraries/**',                                    // Exclude libraries/
 					'!node_modules/**',                                          // Exclude node_modules/
 					'!tests/cli/**',                                             // Exclude tests/cli/

@@ -1,4 +1,4 @@
-ClassicCommerce - eCommerce for ClassicPress
+WooCommerce - eCommerce for WordPress
 
 Copyright 2015 by the contributors
 
@@ -26,11 +26,11 @@ permission notices:
 
 and
 
-  ClassicCommerce - eCommerce for ClassicPress
+  WooCommerce - eCommerce for WordPress
 
-  ClassicCommerce is Copyright (c) 2015 WooThemes
+  WooCommerce is Copyright (c) 2015 WooThemes
 
-  ClassicCommerce is released under the GPL
+  WooCommerce is released under the GPL
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
