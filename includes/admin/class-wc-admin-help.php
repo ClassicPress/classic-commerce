@@ -43,12 +43,17 @@ class WC_Admin_Help {
 				'content' =>
 					'<h2>' . __( 'Help &amp; Support', 'woocommerce' ) . '</h2>' .
 					'<p>' . sprintf(
+						/* translators: %s: Documentation URL */
+						__( 'Should you need help understanding, using, or extending Classic Commerce, <a href="%s">please refer to the WooCommerce documentation</a>. You will find all kinds of resources including snippets, tutorials and much more.', 'woocommerce' ),
+						'https://docs.woocommerce.com/documentation/plugins/woocommerce/?utm_source=helptab&utm_medium=product&utm_content=docs&utm_campaign=woocommerceplugin'
+					) . '</p>' .
+					'<p>' . sprintf(
 						/* translators: %s: Forum URL */
 						__( 'For further assistance with Classic Commerce you can use the <a href="%1$s">ClassicPress community forum</a>.', 'woocommerce' ),
-						'https://forums.classicpress.net/'
+						'https://forums.classicpress.net/c/support'
 					) . '</p>' .
 					'<p>' . __( 'Before asking for help we recommend using the system status page to identify any problems with your configuration. You should make a copy of this report to add to your support request.', 'woocommerce' ) . '</p>' .
-					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'woocommerce' ) . '</a> <a href="https://forums.classicpress.net/" class="button">' . __( 'Community forum', 'woocommerce' ) . '</a></p>',
+					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'woocommerce' ) . '</a> <a href="https://forums.classicpress.net/c/support" class="button">' . __( 'Community forum', 'woocommerce' ) . '</a></p>',
 			)
 		);
 
@@ -77,7 +82,9 @@ class WC_Admin_Help {
 
 		$screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'woocommerce' ) . '</strong></p>' .
-			'<p><a href="https://github.com/ClassicPress-research/classic-commerce/" target="_blank">' . __( 'Github project', 'woocommerce' ) . '</a></p>'
+			'<p><a href="https://github.com/ClassicPress-research/classic-commerce/" target="_blank">' . __( 'Github project', 'woocommerce' ) . '</a></p>' .
+			'<p><a href="https://classicpress.net/" target="_blank">' . __( 'About ClassicPress', 'woocommerce' ) . '</a></p>' .
+			'<p><a href="https://woocommerce.com/product-category/woocommerce-extensions/?utm_source=helptab&utm_medium=product&utm_content=wcextensions&utm_campaign=woocommerceplugin" target="_blank">' . __( 'Extensions', 'woocommerce' ) . '</a></p>'
 		);
 	}
 }
