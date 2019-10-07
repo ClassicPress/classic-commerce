@@ -50,10 +50,10 @@ class WC_Admin_Help {
 					'<p>' . sprintf(
 						/* translators: %s: Forum URL */
 						__( 'For further assistance with Classic Commerce you can use the <a href="%1$s">ClassicPress community forum</a>.', 'woocommerce' ),
-						' https://forums.classicpress.net/c/support/classic-commerce'
+						'https://forums.classicpress.net/c/support'
 					) . '</p>' .
 					'<p>' . __( 'Before asking for help we recommend using the system status page to identify any problems with your configuration. You should make a copy of this report to add to your support request.', 'woocommerce' ) . '</p>' .
-					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'woocommerce' ) . '</a> <a href=" https://forums.classicpress.net/c/support/classic-commerce" class="button">' . __( 'Community forum', 'woocommerce' ) . '</a></p>',
+					'<p><a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button button-primary">' . __( 'System status', 'woocommerce' ) . '</a> <a href="https://forums.classicpress.net/c/support" class="button">' . __( 'Community forum', 'woocommerce' ) . '</a></p>',
 			)
 		);
 
