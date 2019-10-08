@@ -716,7 +716,7 @@ add_action( 'delete_user', 'wc_delete_user_data' );
  * @param int|object $user       User.
  */
 function wc_maybe_store_user_agent( $user_login, $user ) {
-	if ( 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) && user_can( $user, 'manage_woocommerce' ) ) {
+	if ( user_can( $user, 'manage_woocommerce' ) ) {
 		$admin_user_agents   = array_filter( (array) get_option( 'woocommerce_tracker_ua', array() ) );
 		$admin_user_agents[] = wc_get_user_agent();
 		update_option( 'woocommerce_tracker_ua', array_unique( $admin_user_agents ) );
