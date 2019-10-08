@@ -759,7 +759,7 @@ class WC_Tax {
 	 * @return string
 	 */
 	private static function format_tax_rate_name( $name ) {
-		return $name ? $name : __( 'Tax', 'woocommerce' );
+		return $name ? $name : __( 'Tax', 'classic-commerce' );
 	}
 
 	/**

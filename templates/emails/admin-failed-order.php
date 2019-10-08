@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %1$s: Order number. %2$s: Customer full name. */ ?>
-<p><?php printf( esc_html__( 'Payment for order #%1$s from %2$s has failed. The order was as follows:', 'woocommerce' ), esc_html( $order->get_order_number() ), esc_html( $order->get_formatted_billing_full_name() ) ); ?></p>
+<p><?php printf( esc_html__( 'Payment for order #%1$s from %2$s has failed. The order was as follows:', 'classic-commerce' ), esc_html( $order->get_order_number() ), esc_html( $order->get_formatted_billing_full_name() ) ); ?></p>
 
 <?php
 
@@ -49,7 +49,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 ?>
 <p>
-<?php echo wp_kses_post( __( 'Hopefully they’ll be back. Read more about <a href="https://docs.woocommerce.com/document/managing-orders/#section-10">troubleshooting failed payments</a>.', 'woocommerce' ) ); ?>
+<?php echo wp_kses_post( __( 'Hopefully they’ll be back. Read more about <a href="https://docs.woocommerce.com/document/managing-orders/#section-10">troubleshooting failed payments</a>.', 'classic-commerce' ) ); ?>
 </p>
 <?php
 

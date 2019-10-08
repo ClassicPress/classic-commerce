@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <h2>
-	<?php esc_html_e( 'Shipping classes', 'woocommerce' ); ?>
-	<?php echo wc_help_tip( __( 'Shipping classes can be used to group products of similar type and can be used by some Shipping Methods (such as "Flat rate shipping") to provide different rates to different classes of product.', 'woocommerce' ) ); // @codingStandardsIgnoreLine ?>
+	<?php esc_html_e( 'Shipping classes', 'classic-commerce' ); ?>
+	<?php echo wc_help_tip( __( 'Shipping classes can be used to group products of similar type and can be used by some Shipping Methods (such as "Flat rate shipping") to provide different rates to different classes of product.', 'classic-commerce' ) ); // @codingStandardsIgnoreLine ?>
 </h2>
 
 <table class="wc-shipping-classes widefat">
@@ -26,8 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<tfoot>
 		<tr>
 			<td colspan="<?php echo absint( count( $shipping_class_columns ) ); ?>">
-				<button type="submit" name="save" class="button button-primary wc-shipping-class-save" value="<?php esc_attr_e( 'Save shipping classes', 'woocommerce' ); ?>" disabled><?php esc_html_e( 'Save shipping classes', 'woocommerce' ); ?></button>
-				<a class="button button-secondary wc-shipping-class-add" href="#"><?php esc_html_e( 'Add shipping class', 'woocommerce' ); ?></a>
+				<button type="submit" name="save" class="button button-primary wc-shipping-class-save" value="<?php esc_attr_e( 'Save shipping classes', 'classic-commerce' ); ?>" disabled><?php esc_html_e( 'Save shipping classes', 'classic-commerce' ); ?></button>
+				<a class="button button-secondary wc-shipping-class-add" href="#"><?php esc_html_e( 'Add shipping class', 'classic-commerce' ); ?></a>
 			</td>
 		</tr>
 	</tfoot>
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <script type="text/html" id="tmpl-wc-shipping-class-row-blank">
 	<tr>
-		<td class="wc-shipping-classes-blank-state" colspan="<?php echo absint( count( $shipping_class_columns ) ); ?>"><p><?php esc_html_e( 'No shipping classes have been created.', 'woocommerce' ); ?></p></td>
+		<td class="wc-shipping-classes-blank-state" colspan="<?php echo absint( count( $shipping_class_columns ) ); ?>"><p><?php esc_html_e( 'No shipping classes have been created.', 'classic-commerce' ); ?></p></td>
 	</tr>
 </script>
 
@@ -51,13 +51,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="view">
 						{{ data.name }}
 						<div class="row-actions">
-							<a class="wc-shipping-class-edit" href="#"><?php esc_html_e( 'Edit', 'woocommerce' ); ?></a> | <a href="#" class="wc-shipping-class-delete"><?php esc_html_e( 'Remove', 'woocommerce' ); ?></a>
+							<a class="wc-shipping-class-edit" href="#"><?php esc_html_e( 'Edit', 'classic-commerce' ); ?></a> | <a href="#" class="wc-shipping-class-delete"><?php esc_html_e( 'Remove', 'classic-commerce' ); ?></a>
 						</div>
 					</div>
 					<div class="edit">
-						<input type="text" name="name[{{ data.term_id }}]" data-attribute="name" value="{{ data.name }}" placeholder="<?php esc_attr_e( 'Shipping class name', 'woocommerce' ); ?>" />
+						<input type="text" name="name[{{ data.term_id }}]" data-attribute="name" value="{{ data.name }}" placeholder="<?php esc_attr_e( 'Shipping class name', 'classic-commerce' ); ?>" />
 						<div class="row-actions">
-							<a class="wc-shipping-class-cancel-edit" href="#"><?php esc_html_e( 'Cancel changes', 'woocommerce' ); ?></a>
+							<a class="wc-shipping-class-cancel-edit" href="#"><?php esc_html_e( 'Cancel changes', 'classic-commerce' ); ?></a>
 						</div>
 					</div>
 					<?php
@@ -65,13 +65,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				case 'wc-shipping-class-slug':
 					?>
 					<div class="view">{{ data.slug }}</div>
-					<div class="edit"><input type="text" name="slug[{{ data.term_id }}]" data-attribute="slug" value="{{ data.slug }}" placeholder="<?php esc_attr_e( 'Slug', 'woocommerce' ); ?>" /></div>
+					<div class="edit"><input type="text" name="slug[{{ data.term_id }}]" data-attribute="slug" value="{{ data.slug }}" placeholder="<?php esc_attr_e( 'Slug', 'classic-commerce' ); ?>" /></div>
 					<?php
 					break;
 				case 'wc-shipping-class-description':
 					?>
 					<div class="view">{{ data.description }}</div>
-					<div class="edit"><input type="text" name="description[{{ data.term_id }}]" data-attribute="description" value="{{ data.description }}" placeholder="<?php esc_attr_e( 'Description for your reference', 'woocommerce' ); ?>" /></div>
+					<div class="edit"><input type="text" name="description[{{ data.term_id }}]" data-attribute="description" value="{{ data.description }}" placeholder="<?php esc_attr_e( 'Description for your reference', 'classic-commerce' ); ?>" /></div>
 					<?php
 					break;
 				case 'wc-shipping-class-count':

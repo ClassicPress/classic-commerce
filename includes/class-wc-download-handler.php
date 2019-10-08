@@ -36,12 +36,12 @@ class WC_Download_Handler {
 		$data_store = WC_Data_Store::load( 'customer-download' );
 
 		if ( ! $product || empty( $_GET['key'] ) || empty( $_GET['order'] ) ) { // WPCS: input var ok, CSRF ok.
-			self::download_error( __( 'Invalid download link.', 'woocommerce' ) );
+			self::download_error( __( 'Invalid download link.', 'classic-commerce' ) );
 		}
 
 		// Fallback, accept email address if it's passed.
 		if ( empty( $_GET['email'] ) && empty( $_GET['uid'] ) ) { // WPCS: input var ok, CSRF ok.
-			self::download_error( __( 'Invalid download link.', 'woocommerce' ) );
+			self::download_error( __( 'Invalid download link.', 'classic-commerce' ) );
 		}
 
 		if ( isset( $_GET['email'] ) ) { // WPCS: input var ok, CSRF ok.
@@ -56,7 +56,7 @@ class WC_Download_Handler {
 			$email_hash = function_exists( 'hash' ) ? hash( 'sha256', $email_address ) : sha1( $email_address );
 
 			if ( is_null( $email_address ) || ! hash_equals( wp_unslash( $_GET['uid'] ), $email_hash ) ) { // WPCS: input var ok, CSRF ok, sanitization ok.
-				self::download_error( __( 'Invalid download link.', 'woocommerce' ) );
+				self::download_error( __( 'Invalid download link.', 'classic-commerce' ) );
 			}
 		}
 
@@ -74,7 +74,7 @@ class WC_Download_Handler {
 		);
 
 		if ( empty( $download_ids ) ) {
-			self::download_error( __( 'Invalid download link.', 'woocommerce' ) );
+			self::download_error( __( 'Invalid download link.', 'classic-commerce' ) );
 		}
 
 		$download = new WC_Customer_Download( current( $download_ids ) );
@@ -122,7 +122,7 @@ class WC_Download_Handler {
 			$order = wc_get_order( $download->get_order_id() );
 
 			if ( $order && ! $order->is_download_permitted() ) {
-				self::download_error( __( 'Invalid order.', 'woocommerce' ), '', 403 );
+				self::download_error( __( 'Invalid order.', 'classic-commerce' ), '', 403 );
 			}
 		}
 	}
@@ -134,7 +134,7 @@ class WC_Download_Handler {
 	 */
 	private static function check_downloads_remaining( $download ) {
 		if ( '' !== $download->get_downloads_remaining() && 0 >= $download->get_downloads_remaining() ) {
-			self::download_error( __( 'Sorry, you have reached your download limit for this file', 'woocommerce' ), '', 403 );
+			self::download_error( __( 'Sorry, you have reached your download limit for this file', 'classic-commerce' ), '', 403 );
 		}
 	}
 
@@ -145,7 +145,7 @@ class WC_Download_Handler {
 	 */
 	private static function check_download_expiry( $download ) {
 		if ( ! is_null( $download->get_access_expires() ) && $download->get_access_expires()->getTimestamp() < strtotime( 'midnight', current_time( 'timestamp', true ) ) ) {
-			self::download_error( __( 'Sorry, this download has expired', 'woocommerce' ), '', 403 );
+			self::download_error( __( 'Sorry, this download has expired', 'classic-commerce' ), '', 403 );
 		}
 	}
 
@@ -158,13 +158,13 @@ class WC_Download_Handler {
 		if ( $download->get_user_id() && 'yes' === get_option( 'woocommerce_downloads_require_login' ) ) {
 			if ( ! is_user_logged_in() ) {
 				if ( wc_get_page_id( 'myaccount' ) ) {
-					wp_safe_redirect( add_query_arg( 'wc_error', rawurlencode( __( 'You must be logged in to download files.', 'woocommerce' ) ), wc_get_page_permalink( 'myaccount' ) ) );
+					wp_safe_redirect( add_query_arg( 'wc_error', rawurlencode( __( 'You must be logged in to download files.', 'classic-commerce' ) ), wc_get_page_permalink( 'myaccount' ) ) );
 					exit;
 				} else {
-					self::download_error( __( 'You must be logged in to download files.', 'woocommerce' ) . ' <a href="' . esc_url( wp_login_url( wc_get_page_permalink( 'myaccount' ) ) ) . '" class="wc-forward">' . __( 'Login', 'woocommerce' ) . '</a>', __( 'Log in to Download Files', 'woocommerce' ), 403 );
+					self::download_error( __( 'You must be logged in to download files.', 'classic-commerce' ) . ' <a href="' . esc_url( wp_login_url( wc_get_page_permalink( 'myaccount' ) ) ) . '" class="wc-forward">' . __( 'Login', 'classic-commerce' ) . '</a>', __( 'Log in to Download Files', 'classic-commerce' ), 403 );
 				}
 			} elseif ( ! current_user_can( 'download_file', $download ) ) {
-				self::download_error( __( 'This is not your download link.', 'woocommerce' ), '', 403 );
+				self::download_error( __( 'This is not your download link.', 'classic-commerce' ), '', 403 );
 			}
 		}
 	}
@@ -185,7 +185,7 @@ class WC_Download_Handler {
 	 */
 	public static function download( $file_path, $product_id ) {
 		if ( ! $file_path ) {
-			self::download_error( __( 'No file defined', 'woocommerce' ) );
+			self::download_error( __( 'No file defined', 'classic-commerce' ) );
 		}
 
 		$filename = basename( $file_path );
@@ -395,7 +395,7 @@ class WC_Download_Handler {
 			if ( $parsed_file_path['remote_file'] ) {
 				self::download_file_redirect( $file_path );
 			} else {
-				self::download_error( __( 'File not found', 'woocommerce' ) );
+				self::download_error( __( 'File not found', 'classic-commerce' ) );
 			}
 		}
 
@@ -581,7 +581,7 @@ class WC_Download_Handler {
 	 */
 	private static function download_error( $message, $title = '', $status = 404 ) {
 		if ( ! strstr( $message, '<a ' ) ) {
-			$message .= ' <a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" class="wc-forward">' . esc_html__( 'Go to shop', 'woocommerce' ) . '</a>';
+			$message .= ' <a href="' . esc_url( wc_get_page_permalink( 'shop' ) ) . '" class="wc-forward">' . esc_html__( 'Go to shop', 'classic-commerce' ) . '</a>';
 		}
 		wp_die( $message, $title, array( 'response' => $status ) ); // WPCS: XSS ok.
 	}

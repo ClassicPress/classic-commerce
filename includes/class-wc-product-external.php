@@ -102,7 +102,7 @@ class WC_Product_External extends WC_Product {
 		$this->set_prop( 'manage_stock', false );
 
 		if ( true === $manage_stock ) {
-			$this->error( 'product_external_invalid_manage_stock', __( 'External products cannot be stock managed.', 'woocommerce' ) );
+			$this->error( 'product_external_invalid_manage_stock', __( 'External products cannot be stock managed.', 'classic-commerce' ) );
 		}
 	}
 
@@ -117,7 +117,7 @@ class WC_Product_External extends WC_Product {
 		$this->set_prop( 'stock_status', 'instock' );
 
 		if ( 'instock' !== $stock_status ) {
-			$this->error( 'product_external_invalid_stock_status', __( 'External products cannot be stock managed.', 'woocommerce' ) );
+			$this->error( 'product_external_invalid_stock_status', __( 'External products cannot be stock managed.', 'classic-commerce' ) );
 		}
 	}
 
@@ -131,7 +131,7 @@ class WC_Product_External extends WC_Product {
 		$this->set_prop( 'backorders', 'no' );
 
 		if ( 'no' !== $backorders ) {
-			$this->error( 'product_external_invalid_backorders', __( 'External products cannot be backordered.', 'woocommerce' ) );
+			$this->error( 'product_external_invalid_backorders', __( 'External products cannot be backordered.', 'classic-commerce' ) );
 		}
 	}
 
@@ -168,7 +168,7 @@ class WC_Product_External extends WC_Product {
 	 * @return string
 	 */
 	public function single_add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_single_add_to_cart_text', $this->get_button_text() ? $this->get_button_text() : _x( 'Buy product', 'placeholder', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_single_add_to_cart_text', $this->get_button_text() ? $this->get_button_text() : _x( 'Buy product', 'placeholder', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -178,7 +178,7 @@ class WC_Product_External extends WC_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->get_button_text() ? $this->get_button_text() : _x( 'Buy product', 'placeholder', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->get_button_text() ? $this->get_button_text() : _x( 'Buy product', 'placeholder', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -189,6 +189,6 @@ class WC_Product_External extends WC_Product {
 	 */
 	public function add_to_cart_description() {
 		/* translators: %s: Product title */
-		return apply_filters( 'woocommerce_product_add_to_cart_description', $this->get_button_text() ? $this->get_button_text() : sprintf( __( 'Buy &ldquo;%s&rdquo;', 'woocommerce' ), $this->get_name() ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_description', $this->get_button_text() ? $this->get_button_text() : sprintf( __( 'Buy &ldquo;%s&rdquo;', 'classic-commerce' ), $this->get_name() ), $this );
 	}
 }

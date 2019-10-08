@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 $text_align = is_rtl() ? 'right' : 'left';
 
-?><h2 class="woocommerce-order-downloads__title"><?php esc_html_e( 'Downloads', 'woocommerce' ); ?></h2>
+?><h2 class="woocommerce-order-downloads__title"><?php esc_html_e( 'Downloads', 'classic-commerce' ); ?></h2>
 
 <table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; margin-bottom: 40px;" border="1">
 	<thead>
@@ -55,7 +55,7 @@ $text_align = is_rtl() ? 'right' : 'left';
 									<time datetime="<?php echo esc_attr( date( 'Y-m-d', strtotime( $download['access_expires'] ) ) ); ?>" title="<?php echo esc_attr( strtotime( $download['access_expires'] ) ); ?>"><?php echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $download['access_expires'] ) ) ); ?></time>
 									<?php
 								} else {
-									esc_html_e( 'Never', 'woocommerce' );
+									esc_html_e( 'Never', 'classic-commerce' );
 								}
 								break;
 						}

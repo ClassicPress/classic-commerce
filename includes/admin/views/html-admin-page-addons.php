@@ -12,16 +12,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wrap woocommerce wc_addons_wrap">
 	<nav class="nav-tab-wrapper woo-nav-tab-wrapper">
-		<a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-addons' ) ); ?>" class="nav-tab nav-tab-active"><?php _e( 'Browse Extensions', 'woocommerce' ); ?></a>
+		<a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-addons' ) ); ?>" class="nav-tab nav-tab-active"><?php _e( 'Browse Extensions', 'classic-commerce' ); ?></a>
 
 		<?php
 			$count_html = WC_Helper_Updater::get_updates_count_html();
-			$menu_title = sprintf( __( 'WooCommerce.com Subscriptions %s', 'woocommerce' ), $count_html );
+			$menu_title = sprintf( __( 'WooCommerce.com Subscriptions %s', 'classic-commerce' ), $count_html );
 		?>
 		<a href="<?php echo esc_url( admin_url( 'admin.php?page=wc-addons&section=helper' ) ); ?>" class="nav-tab"><?php echo $menu_title; ?></a>
 	</nav>
 
-	<h1 class="screen-reader-text"><?php _e( 'WooCommerce Extensions', 'woocommerce' ); ?></h1>
+	<h1 class="screen-reader-text"><?php _e( 'WooCommerce Extensions', 'classic-commerce' ); ?></h1>
 
 	<?php if ( $sections ) : ?>
 		<ul class="subsubsub">
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php if ( isset( $_GET['search'] ) ) : ?>
 			<h1 class="search-form-title" >
-				<?php printf( __( 'Showing search results for: %s', 'woocommerce' ), '<strong>' . esc_html( $_GET['search'] ) . '</strong>' ); ?>
+				<?php printf( __( 'Showing search results for: %s', 'classic-commerce' ), '<strong>' . esc_html( $_GET['search'] ) . '</strong>' ); ?>
 			</h1>
 		<?php endif; ?>
 
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				type="text"
 				name="search"
 				value="<?php echo esc_attr( isset( $_GET['search'] ) ? $_GET['search'] : '' ); ?>"
-				placeholder="<?php _e( 'Enter a search term and press enter', 'woocommerce' ); ?>">
+				placeholder="<?php _e( 'Enter a search term and press enter', 'classic-commerce' ); ?>">
 			<input type="hidden" name="page" value="wc-addons">
 			<?php $page_section = ( isset( $_GET['section'] ) && '_featured' !== $_GET['section'] ) ? $_GET['section'] : '_all'; ?>
 			<input type="hidden" name="section" value="<?php echo esc_attr( $page_section ); ?>">
@@ -105,18 +105,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</ul>
 		<?php endif; ?>
 	<?php else : ?>
-		<p><?php printf( __( 'Our catalog of WooCommerce Extensions can be found on WooCommerce.com here: <a href="%s">WooCommerce Extensions Catalog</a>', 'woocommerce' ), 'https://woocommerce.com/product-category/woocommerce-extensions/' ); ?></p>
+		<p><?php printf( __( 'Our catalog of WooCommerce Extensions can be found on WooCommerce.com here: <a href="%s">WooCommerce Extensions Catalog</a>', 'classic-commerce' ), 'https://woocommerce.com/product-category/woocommerce-extensions/' ); ?></p>
 	<?php endif; ?>
 
 	<?php if ( 'Storefront' !== $theme['Name'] && '_featured' !== $current_section ) : ?>
 		<div class="storefront">
 			<a href="<?php echo esc_url( 'https://woocommerce.com/storefront/' ); ?>" target="_blank"><img src="<?php echo WC()->plugin_url(); ?>/assets/images/storefront.png" alt="Storefront" /></a>
-			<h2><?php _e( 'Looking for a WooCommerce theme?', 'woocommerce' ); ?></h2>
-			<p><?php _e( 'We recommend Storefront, the <em>official</em> WooCommerce theme.', 'woocommerce' ); ?></p>
-			<p><?php _e( 'Storefront is an intuitive, flexible and <strong>free</strong> WordPress theme offering deep integration with WooCommerce and many of the most popular customer-facing extensions.', 'woocommerce' ); ?></p>
+			<h2><?php _e( 'Looking for a WooCommerce theme?', 'classic-commerce' ); ?></h2>
+			<p><?php _e( 'We recommend Storefront, the <em>official</em> WooCommerce theme.', 'classic-commerce' ); ?></p>
+			<p><?php _e( 'Storefront is an intuitive, flexible and <strong>free</strong> WordPress theme offering deep integration with WooCommerce and many of the most popular customer-facing extensions.', 'classic-commerce' ); ?></p>
 			<p>
-				<a href="https://woocommerce.com/storefront/" target="_blank" class="button"><?php _e( 'Read all about it', 'woocommerce' ); ?></a>
-				<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-theme&theme=storefront' ), 'install-theme_storefront' ) ); ?>" class="button button-primary"><?php _e( 'Download &amp; install', 'woocommerce' ); ?></a>
+				<a href="https://woocommerce.com/storefront/" target="_blank" class="button"><?php _e( 'Read all about it', 'classic-commerce' ); ?></a>
+				<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-theme&theme=storefront' ), 'install-theme_storefront' ) ); ?>" class="button button-primary"><?php _e( 'Download &amp; install', 'classic-commerce' ); ?></a>
 			</p>
 		</div>
 	<?php endif; ?>

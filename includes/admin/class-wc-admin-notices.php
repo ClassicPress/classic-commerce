@@ -132,11 +132,11 @@ class WC_Admin_Notices {
 	public static function hide_notices() {
 		if ( isset( $_GET['wc-hide-notice'] ) && isset( $_GET['_wc_notice_nonce'] ) ) { // WPCS: input var ok, CSRF ok.
 			if ( ! wp_verify_nonce( sanitize_key( wp_unslash( $_GET['_wc_notice_nonce'] ) ), 'woocommerce_hide_notices_nonce' ) ) { // WPCS: input var ok, CSRF ok.
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 			}
 
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'woocommerce' ) );
+				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'classic-commerce' ) );
 			}
 
 			$hide_notice = sanitize_text_field( wp_unslash( $_GET['wc-hide-notice'] ) ); // WPCS: input var ok, CSRF ok.

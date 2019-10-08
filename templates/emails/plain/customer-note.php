@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 echo '= ' . esc_html( $email_heading ) . " =\n\n";
 
 /* translators: %s Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
-echo esc_html__( 'The following note has been added to your order:', 'woocommerce' ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
+echo esc_html__( 'The following note has been added to your order:', 'classic-commerce' ) . "\n\n";
 
 echo "----------\n\n";
 
@@ -32,7 +32,7 @@ echo wptexturize( $customer_note ) . "\n\n"; // phpcs:ignore WordPress.XSS.Escap
 
 echo "----------\n\n";
 
-echo esc_html__( 'As a reminder, here are your order details:', 'woocommerce' ) . "\n\n";
+echo esc_html__( 'As a reminder, here are your order details:', 'classic-commerce' ) . "\n\n";
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
@@ -57,7 +57,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
  */
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 
-echo esc_html__( 'Thanks for reading.', 'woocommerce' ) . "\n\n";
+echo esc_html__( 'Thanks for reading.', 'classic-commerce' ) . "\n\n";
 
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
