@@ -24,7 +24,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	 */
 	public function __construct() {
 		$this->id    = 'advanced';
-		$this->label = __( 'Advanced', 'woocommerce' );
+		$this->label = __( 'Advanced', 'classic-commerce' );
 
 		parent::__construct();
 		$this->notices();
@@ -37,10 +37,10 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	 */
 	public function get_sections() {
 		$sections = array(
-			''           => __( 'Page setup', 'woocommerce' ),
-			'keys'       => __( 'REST API', 'woocommerce' ),
-			'webhooks'   => __( 'Webhooks', 'woocommerce' ),
-			'legacy_api' => __( 'Legacy API', 'woocommerce' ),
+			''           => __( 'Page setup', 'classic-commerce' ),
+			'keys'       => __( 'REST API', 'classic-commerce' ),
+			'webhooks'   => __( 'Webhooks', 'classic-commerce' ),
+			'legacy_api' => __( 'Legacy API', 'classic-commerce' ),
 		);
 
 		return apply_filters( 'woocommerce_get_sections_' . $this->id, $sections );
@@ -60,16 +60,16 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 				'woocommerce_settings_pages', array(
 
 					array(
-						'title' => __( 'Page setup', 'woocommerce' ),
-						'desc'  => __( 'These pages need to be set so that WooCommerce knows where to send users to checkout.', 'woocommerce' ),
+						'title' => __( 'Page setup', 'classic-commerce' ),
+						'desc'  => __( 'These pages need to be set so that WooCommerce knows where to send users to checkout.', 'classic-commerce' ),
 						'type'  => 'title',
 						'id'    => 'advanced_page_options',
 					),
 
 					array(
-						'title'    => __( 'Cart page', 'woocommerce' ),
+						'title'    => __( 'Cart page', 'classic-commerce' ),
 						/* Translators: %s Page contents. */
-						'desc'     => sprintf( __( 'Page contents: [%s]', 'woocommerce' ), apply_filters( 'woocommerce_cart_shortcode_tag', 'woocommerce_cart' ) ),
+						'desc'     => sprintf( __( 'Page contents: [%s]', 'classic-commerce' ), apply_filters( 'woocommerce_cart_shortcode_tag', 'woocommerce_cart' ) ),
 						'id'       => 'woocommerce_cart_page_id',
 						'type'     => 'single_select_page',
 						'default'  => '',
@@ -79,9 +79,9 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Checkout page', 'woocommerce' ),
+						'title'    => __( 'Checkout page', 'classic-commerce' ),
 						/* Translators: %s Page contents. */
-						'desc'     => sprintf( __( 'Page contents: [%s]', 'woocommerce' ), apply_filters( 'woocommerce_checkout_shortcode_tag', 'woocommerce_checkout' ) ),
+						'desc'     => sprintf( __( 'Page contents: [%s]', 'classic-commerce' ), apply_filters( 'woocommerce_checkout_shortcode_tag', 'woocommerce_checkout' ) ),
 						'id'       => 'woocommerce_checkout_page_id',
 						'type'     => 'single_select_page',
 						'default'  => '',
@@ -91,9 +91,9 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'My account page', 'woocommerce' ),
+						'title'    => __( 'My account page', 'classic-commerce' ),
 						/* Translators: %s Page contents. */
-						'desc'     => sprintf( __( 'Page contents: [%s]', 'woocommerce' ), apply_filters( 'woocommerce_my_account_shortcode_tag', 'woocommerce_my_account' ) ),
+						'desc'     => sprintf( __( 'Page contents: [%s]', 'classic-commerce' ), apply_filters( 'woocommerce_my_account_shortcode_tag', 'woocommerce_my_account' ) ),
 						'id'       => 'woocommerce_myaccount_page_id',
 						'type'     => 'single_select_page',
 						'default'  => '',
@@ -103,8 +103,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Terms and conditions', 'woocommerce' ),
-						'desc'     => __( 'If you define a "Terms" page the customer will be asked if they accept them when checking out.', 'woocommerce' ),
+						'title'    => __( 'Terms and conditions', 'classic-commerce' ),
+						'desc'     => __( 'If you define a "Terms" page the customer will be asked if they accept them when checking out.', 'classic-commerce' ),
 						'id'       => 'woocommerce_terms_page_id',
 						'default'  => '',
 						'class'    => 'wc-enhanced-select-nostd',
@@ -127,19 +127,19 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					'force_ssl_checkout'   => array(
-						'title'           => __( 'Secure checkout', 'woocommerce' ),
-						'desc'            => __( 'Force secure checkout', 'woocommerce' ),
+						'title'           => __( 'Secure checkout', 'classic-commerce' ),
+						'desc'            => __( 'Force secure checkout', 'classic-commerce' ),
 						'id'              => 'woocommerce_force_ssl_checkout',
 						'default'         => 'no',
 						'type'            => 'checkbox',
 						'checkboxgroup'   => 'start',
 						'show_if_checked' => 'option',
 						/* Translators: %s Docs URL. */
-						'desc_tip'        => sprintf( __( 'Force SSL (HTTPS) on the checkout pages (<a href="%s" target="_blank">an SSL Certificate is required</a>).', 'woocommerce' ), 'https://docs.woocommerce.com/document/ssl-and-https/#section-3' ),
+						'desc_tip'        => sprintf( __( 'Force SSL (HTTPS) on the checkout pages (<a href="%s" target="_blank">an SSL Certificate is required</a>).', 'classic-commerce' ), 'https://docs.woocommerce.com/document/ssl-and-https/#section-3' ),
 					),
 
 					'unforce_ssl_checkout' => array(
-						'desc'            => __( 'Force HTTP when leaving the checkout', 'woocommerce' ),
+						'desc'            => __( 'Force HTTP when leaving the checkout', 'classic-commerce' ),
 						'id'              => 'woocommerce_unforce_ssl_checkout',
 						'default'         => 'no',
 						'type'            => 'checkbox',
@@ -153,15 +153,15 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title' => __( 'Checkout endpoints', 'woocommerce' ),
+						'title' => __( 'Checkout endpoints', 'classic-commerce' ),
 						'type'  => 'title',
-						'desc'  => __( 'Endpoints are appended to your page URLs to handle specific actions during the checkout process. They should be unique.', 'woocommerce' ),
+						'desc'  => __( 'Endpoints are appended to your page URLs to handle specific actions during the checkout process. They should be unique.', 'classic-commerce' ),
 						'id'    => 'account_endpoint_options',
 					),
 
 					array(
-						'title'    => __( 'Pay', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "Checkout &rarr; Pay" page.', 'woocommerce' ),
+						'title'    => __( 'Pay', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "Checkout &rarr; Pay" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_checkout_pay_endpoint',
 						'type'     => 'text',
 						'default'  => 'order-pay',
@@ -169,8 +169,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Order received', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "Checkout &rarr; Order received" page.', 'woocommerce' ),
+						'title'    => __( 'Order received', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "Checkout &rarr; Order received" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_checkout_order_received_endpoint',
 						'type'     => 'text',
 						'default'  => 'order-received',
@@ -178,8 +178,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Add payment method', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "Checkout &rarr; Add payment method" page.', 'woocommerce' ),
+						'title'    => __( 'Add payment method', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "Checkout &rarr; Add payment method" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_add_payment_method_endpoint',
 						'type'     => 'text',
 						'default'  => 'add-payment-method',
@@ -187,8 +187,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Delete payment method', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the delete payment method page.', 'woocommerce' ),
+						'title'    => __( 'Delete payment method', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the delete payment method page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_delete_payment_method_endpoint',
 						'type'     => 'text',
 						'default'  => 'delete-payment-method',
@@ -196,8 +196,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Set default payment method', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the setting a default payment method page.', 'woocommerce' ),
+						'title'    => __( 'Set default payment method', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the setting a default payment method page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_set_default_payment_method_endpoint',
 						'type'     => 'text',
 						'default'  => 'set-default-payment-method',
@@ -210,15 +210,15 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title' => __( 'Account endpoints', 'woocommerce' ),
+						'title' => __( 'Account endpoints', 'classic-commerce' ),
 						'type'  => 'title',
-						'desc'  => __( 'Endpoints are appended to your page URLs to handle specific actions on the accounts pages. They should be unique and can be left blank to disable the endpoint.', 'woocommerce' ),
+						'desc'  => __( 'Endpoints are appended to your page URLs to handle specific actions on the accounts pages. They should be unique and can be left blank to disable the endpoint.', 'classic-commerce' ),
 						'id'    => 'account_endpoint_options',
 					),
 
 					array(
-						'title'    => __( 'Orders', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Orders" page.', 'woocommerce' ),
+						'title'    => __( 'Orders', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Orders" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_orders_endpoint',
 						'type'     => 'text',
 						'default'  => 'orders',
@@ -226,8 +226,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'View order', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; View order" page.', 'woocommerce' ),
+						'title'    => __( 'View order', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; View order" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_view_order_endpoint',
 						'type'     => 'text',
 						'default'  => 'view-order',
@@ -235,8 +235,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Downloads', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Downloads" page.', 'woocommerce' ),
+						'title'    => __( 'Downloads', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Downloads" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_downloads_endpoint',
 						'type'     => 'text',
 						'default'  => 'downloads',
@@ -244,8 +244,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Edit account', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Edit account" page.', 'woocommerce' ),
+						'title'    => __( 'Edit account', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Edit account" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_edit_account_endpoint',
 						'type'     => 'text',
 						'default'  => 'edit-account',
@@ -253,8 +253,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Addresses', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Addresses" page.', 'woocommerce' ),
+						'title'    => __( 'Addresses', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Addresses" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_edit_address_endpoint',
 						'type'     => 'text',
 						'default'  => 'edit-address',
@@ -262,8 +262,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Payment methods', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Payment methods" page.', 'woocommerce' ),
+						'title'    => __( 'Payment methods', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Payment methods" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_payment_methods_endpoint',
 						'type'     => 'text',
 						'default'  => 'payment-methods',
@@ -271,8 +271,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Lost password', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the "My account &rarr; Lost password" page.', 'woocommerce' ),
+						'title'    => __( 'Lost password', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the "My account &rarr; Lost password" page.', 'classic-commerce' ),
 						'id'       => 'woocommerce_myaccount_lost_password_endpoint',
 						'type'     => 'text',
 						'default'  => 'lost-password',
@@ -280,8 +280,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 					),
 
 					array(
-						'title'    => __( 'Logout', 'woocommerce' ),
-						'desc'     => __( 'Endpoint for the triggering logout. You can add this to your menus via a custom link: yoursite.com/?customer-logout=true', 'woocommerce' ),
+						'title'    => __( 'Logout', 'classic-commerce' ),
+						'desc'     => __( 'Endpoint for the triggering logout. You can add this to your menus via a custom link: yoursite.com/?customer-logout=true', 'classic-commerce' ),
 						'id'       => 'woocommerce_logout_endpoint',
 						'type'     => 'text',
 						'default'  => 'customer-logout',
@@ -308,8 +308,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 						'id'    => 'legacy_api_options',
 					),
 					array(
-						'title'   => __( 'Legacy API', 'woocommerce' ),
-						'desc'    => __( 'Enable the legacy REST API', 'woocommerce' ),
+						'title'   => __( 'Legacy API', 'classic-commerce' ),
+						'desc'    => __( 'Enable the legacy REST API', 'classic-commerce' ),
 						'id'      => 'woocommerce_api_enabled',
 						'type'    => 'checkbox',
 						'default' => 'no',

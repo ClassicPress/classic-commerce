@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( __( 'Hi %s,', 'woocommerce' ), $order->get_billing_first_name() ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
-<p><?php _e( 'Thanks for your order. It’s on-hold until we confirm that payment has been received. In the meantime, here’s a reminder of what you ordered:', 'woocommerce' ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput ?>
+<p><?php printf( __( 'Hi %s,', 'classic-commerce' ), $order->get_billing_first_name() ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
+<p><?php _e( 'Thanks for your order. It’s on-hold until we confirm that payment has been received. In the meantime, here’s a reminder of what you ordered:', 'classic-commerce' ); ?></p><?php // phpcs:ignore WordPress.XSS.EscapeOutput ?>
 
 <?php
 
@@ -51,7 +51,7 @@ do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_
 
 ?>
 <p>
-<?php _e( 'We look forward to fulfilling your order soon.', 'woocommerce' ); // phpcs:ignore WordPress.XSS.EscapeOutput ?>
+<?php _e( 'We look forward to fulfilling your order soon.', 'classic-commerce' ); // phpcs:ignore WordPress.XSS.EscapeOutput ?>
 </p>
 <?php
 

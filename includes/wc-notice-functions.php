@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function wc_notice_count( $notice_type = '' ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return;
 	}
 
@@ -53,7 +53,7 @@ function wc_notice_count( $notice_type = '' ) {
  */
 function wc_has_notice( $message, $notice_type = 'success' ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return false;
 	}
 
@@ -71,7 +71,7 @@ function wc_has_notice( $message, $notice_type = 'success' ) {
  */
 function wc_add_notice( $message, $notice_type = 'success' ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return;
 	}
 
@@ -95,7 +95,7 @@ function wc_add_notice( $message, $notice_type = 'success' ) {
  */
 function wc_set_notices( $notices ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.6' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.6' );
 		return;
 	}
 	WC()->session->set( 'wc_notices', $notices );
@@ -109,7 +109,7 @@ function wc_set_notices( $notices ) {
  */
 function wc_clear_notices() {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return;
 	}
 	WC()->session->set( 'wc_notices', null );
@@ -124,7 +124,7 @@ function wc_clear_notices() {
  */
 function wc_print_notices( $return = false ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return;
 	}
 
@@ -179,7 +179,7 @@ function wc_print_notice( $message, $notice_type = 'success' ) {
  */
 function wc_get_notices( $notice_type = '' ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
-		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'woocommerce' ), '2.3' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'This function should not be called before woocommerce_init.', 'classic-commerce' ), '2.3' );
 		return;
 	}
 

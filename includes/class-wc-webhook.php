@@ -399,7 +399,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 		$message = array(
 			'Webhook Delivery' => array(
 				'Delivery ID' => $delivery_id,
-				'Date'        => date_i18n( __( 'M j, Y @ G:i', 'woocommerce' ), strtotime( 'now' ), true ),
+				'Date'        => date_i18n( __( 'M j, Y @ G:i', 'classic-commerce' ), strtotime( 'now' ), true ),
 				'URL'         => $this->get_delivery_url(),
 				'Duration'    => $duration,
 				'Request'     => array(
@@ -522,12 +522,12 @@ class WC_Webhook extends WC_Legacy_Webhook {
 
 		if ( is_wp_error( $test ) ) {
 			/* translators: error message */
-			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL cannot be reached: %s', 'woocommerce' ), $test->get_error_message() ) );
+			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL cannot be reached: %s', 'classic-commerce' ), $test->get_error_message() ) );
 		}
 
 		if ( 200 !== $response_code ) {
 			/* translators: error message */
-			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL returned response code: %s', 'woocommerce' ), absint( $response_code ) ) );
+			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL returned response code: %s', 'classic-commerce' ), absint( $response_code ) ) );
 		}
 
 		$this->set_pending_delivery( false );

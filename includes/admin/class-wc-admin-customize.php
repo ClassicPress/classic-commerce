@@ -38,8 +38,8 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 		 */
 		public function register_customize_nav_menu_item_types( $item_types ) {
 			$item_types[] = array(
-				'title'      => __( 'WooCommerce Endpoints', 'woocommerce' ),
-				'type_label' => __( 'WooCommerce Endpoint', 'woocommerce' ),
+				'title'      => __( 'WooCommerce Endpoints', 'classic-commerce' ),
+				'type_label' => __( 'WooCommerce Endpoint', 'classic-commerce' ),
 				'type'       => 'woocommerce_nav',
 				'object'     => 'woocommerce_endpoint',
 			);
@@ -76,7 +76,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 			}
 
 			// Include missing lost password.
-			$endpoints['lost-password'] = __( 'Lost password', 'woocommerce' );
+			$endpoints['lost-password'] = __( 'Lost password', 'classic-commerce' );
 
 			$endpoints = apply_filters( 'woocommerce_custom_nav_menu_items', $endpoints );
 
@@ -84,7 +84,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 				$items[] = array(
 					'id'         => $endpoint,
 					'title'      => $title,
-					'type_label' => __( 'Custom Link', 'woocommerce' ),
+					'type_label' => __( 'Custom Link', 'classic-commerce' ),
 					'url'        => esc_url_raw( wc_get_account_endpoint_url( $endpoint ) ),
 				);
 			}

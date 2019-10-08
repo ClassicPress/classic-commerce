@@ -103,7 +103,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 
 			do_action( 'woocommerce_webhook_loaded', $webhook );
 		} else {
-			throw new Exception( __( 'Invalid webhook.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid webhook.', 'classic-commerce' ) );
 		}
 	}
 

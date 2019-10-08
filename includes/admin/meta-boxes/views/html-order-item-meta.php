@@ -47,8 +47,8 @@ $hidden_order_itemmeta = apply_filters(
 					?>
 					<tr data-meta_id="<?php echo esc_attr( $meta_id ); ?>">
 						<td>
-							<input type="text" maxlength="255" placeholder="<?php esc_attr_e( 'Name (required)', 'woocommerce' ); ?>" name="meta_key[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $meta_id ); ?>]" value="<?php echo esc_attr( $meta->key ); ?>" />
-							<textarea placeholder="<?php esc_attr_e( 'Value (required)', 'woocommerce' ); ?>" name="meta_value[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $meta_id ); ?>]"><?php echo esc_textarea( rawurldecode( $meta->value ) ); ?></textarea>
+							<input type="text" maxlength="255" placeholder="<?php esc_attr_e( 'Name (required)', 'classic-commerce' ); ?>" name="meta_key[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $meta_id ); ?>]" value="<?php echo esc_attr( $meta->key ); ?>" />
+							<textarea placeholder="<?php esc_attr_e( 'Value (required)', 'classic-commerce' ); ?>" name="meta_value[<?php echo esc_attr( $item_id ); ?>][<?php echo esc_attr( $meta_id ); ?>]"><?php echo esc_textarea( rawurldecode( $meta->value ) ); ?></textarea>
 						</td>
 						<td width="1%"><button class="remove_order_item_meta button">&times;</button></td>
 					</tr>
@@ -57,7 +57,7 @@ $hidden_order_itemmeta = apply_filters(
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="4"><button class="add_order_item_meta button"><?php esc_html_e( 'Add&nbsp;meta', 'woocommerce' ); ?></button></td>
+				<td colspan="4"><button class="add_order_item_meta button"><?php esc_html_e( 'Add&nbsp;meta', 'classic-commerce' ); ?></button></td>
 			</tr>
 		</tfoot>
 	</table>

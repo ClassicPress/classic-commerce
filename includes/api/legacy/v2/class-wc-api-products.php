@@ -182,7 +182,7 @@ class WC_API_Products extends WC_API_Resource {
 	public function get_products_count( $type = null, $filter = array() ) {
 		try {
 			if ( ! current_user_can( 'read_private_products' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_products_count', __( 'You do not have permission to read the products count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_products_count', __( 'You do not have permission to read the products count', 'classic-commerce' ), 401 );
 			}
 
 			if ( ! empty( $type ) ) {
@@ -211,21 +211,21 @@ class WC_API_Products extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['product'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_product_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'product' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_product_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'product' ), 400 );
 			}
 
 			$data = $data['product'];
 
 			// Check permissions
 			if ( ! current_user_can( 'publish_products' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_product', __( 'You do not have permission to create products', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_product', __( 'You do not have permission to create products', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_product_data', $data, $this );
 
 			// Check if product title is specified
 			if ( ! isset( $data['title'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_product_title', sprintf( __( 'Missing parameter %s', 'woocommerce' ), 'title' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_product_title', sprintf( __( 'Missing parameter %s', 'classic-commerce' ), 'title' ), 400 );
 			}
 
 			// Check product type
@@ -240,7 +240,7 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Validate the product type
 			if ( ! in_array( wc_clean( $data['type'] ), array_keys( wc_get_product_types() ) ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_type', sprintf( __( 'Invalid product type - the product type must be any of these: %s', 'woocommerce' ), implode( ', ', array_keys( wc_get_product_types() ) ) ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_type', sprintf( __( 'Invalid product type - the product type must be any of these: %s', 'classic-commerce' ), implode( ', ', array_keys( wc_get_product_types() ) ) ), 400 );
 			}
 
 			// Enable description html tags.
@@ -320,7 +320,7 @@ class WC_API_Products extends WC_API_Resource {
 	public function edit_product( $id, $data ) {
 		try {
 			if ( ! isset( $data['product'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_product_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'product' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_product_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'product' ), 400 );
 			}
 
 			$data = $data['product'];
@@ -366,7 +366,7 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Validate the product type.
 			if ( isset( $data['type'] ) && ! in_array( wc_clean( $data['type'] ), array_keys( wc_get_product_types() ) ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_type', sprintf( __( 'Invalid product type - the product type must be any of these: %s', 'woocommerce' ), implode( ', ', array_keys( wc_get_product_types() ) ) ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_type', sprintf( __( 'Invalid product type - the product type must be any of these: %s', 'classic-commerce' ), implode( ', ', array_keys( wc_get_product_types() ) ) ), 400 );
 			}
 
 			// Check for featured/gallery images, upload it and set it.
@@ -452,7 +452,7 @@ class WC_API_Products extends WC_API_Resource {
 		}
 
 		if ( ! $result ) {
-			return new WP_Error( 'woocommerce_api_cannot_delete_product', sprintf( __( 'This %s cannot be deleted', 'woocommerce' ), 'product' ), array( 'status' => 500 ) );
+			return new WP_Error( 'woocommerce_api_cannot_delete_product', sprintf( __( 'This %s cannot be deleted', 'classic-commerce' ), 'product' ), array( 'status' => 500 ) );
 		}
 
 		// Delete parent product transients.
@@ -461,11 +461,11 @@ class WC_API_Products extends WC_API_Resource {
 		}
 
 		if ( $force ) {
-			return array( 'message' => sprintf( __( 'Permanently deleted %s', 'woocommerce' ), 'product' ) );
+			return array( 'message' => sprintf( __( 'Permanently deleted %s', 'classic-commerce' ), 'product' ) );
 		} else {
 			$this->server->send_status( '202' );
 
-			return array( 'message' => sprintf( __( 'Deleted %s', 'woocommerce' ), 'product' ) );
+			return array( 'message' => sprintf( __( 'Deleted %s', 'classic-commerce' ), 'product' ) );
 		}
 	}
 
@@ -557,7 +557,7 @@ class WC_API_Products extends WC_API_Resource {
 		try {
 			// Permissions check
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product categories', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product categories', 'classic-commerce' ), 401 );
 			}
 
 			$product_categories = array();
@@ -590,18 +590,18 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Validate ID
 			if ( empty( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_category_id', __( 'Invalid product category ID', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_category_id', __( 'Invalid product category ID', 'classic-commerce' ), 400 );
 			}
 
 			// Permissions check
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product categories', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product categories', 'classic-commerce' ), 401 );
 			}
 
 			$term = get_term( $id, 'product_cat' );
 
 			if ( is_wp_error( $term ) || is_null( $term ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_category_id', __( 'A product category with the provided ID could not be found', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_category_id', __( 'A product category with the provided ID could not be found', 'classic-commerce' ), 404 );
 			}
 
 			$term_id = intval( $term->term_id );
@@ -946,7 +946,7 @@ class WC_API_Products extends WC_API_Resource {
 				if ( ! empty( $new_sku ) ) {
 					$unique_sku = wc_product_has_unique_sku( $product->get_id(), $new_sku );
 					if ( ! $unique_sku ) {
-						throw new WC_API_Exception( 'woocommerce_api_product_sku_already_exists', __( 'The SKU already exists on another product.', 'woocommerce' ), 400 );
+						throw new WC_API_Exception( 'woocommerce_api_product_sku_already_exists', __( 'The SKU already exists on another product.', 'classic-commerce' ), 400 );
 					} else {
 						$product->set_sku( $new_sku );
 					}
@@ -1290,7 +1290,7 @@ class WC_API_Products extends WC_API_Resource {
 			// Create initial name and status.
 			if ( ! $variation->get_slug() ) {
 				/* translators: 1: variation id 2: product name */
-				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'woocommerce' ), $variation->get_id(), $product->get_name() ) );
+				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'classic-commerce' ), $variation->get_id(), $product->get_name() ) );
 				$variation->set_status( isset( $data['visible'] ) && false === $data['visible'] ? 'private' : 'publish' );
 			}
 
@@ -1617,8 +1617,8 @@ class WC_API_Products extends WC_API_Resource {
 				'created_at' => $this->server->format_datetime( time() ), // Default to now.
 				'updated_at' => $this->server->format_datetime( time() ),
 				'src'        => wc_placeholder_img_src(),
-				'title'      => __( 'Placeholder', 'woocommerce' ),
-				'alt'        => __( 'Placeholder', 'woocommerce' ),
+				'title'      => __( 'Placeholder', 'classic-commerce' ),
+				'alt'        => __( 'Placeholder', 'classic-commerce' ),
 				'position'   => 0,
 			);
 		}
@@ -1701,7 +1701,7 @@ class WC_API_Products extends WC_API_Resource {
 
 		// Check parsed URL
 		if ( ! $parsed_url || ! is_array( $parsed_url ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_image', sprintf( __( 'Invalid URL %s.', 'woocommerce' ), $image_url ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_image', sprintf( __( 'Invalid URL %s.', 'classic-commerce' ), $image_url ), 400 );
 		}
 
 		// Ensure url is valid
@@ -1713,9 +1713,9 @@ class WC_API_Products extends WC_API_Resource {
 		) );
 
 		if ( is_wp_error( $response ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_remote_product_image', sprintf( __( 'Error getting remote image %s.', 'woocommerce' ), $image_url ) . ' ' . sprintf( __( 'Error: %s.', 'woocommerce' ), $response->get_error_message() ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_remote_product_image', sprintf( __( 'Error getting remote image %s.', 'classic-commerce' ), $image_url ) . ' ' . sprintf( __( 'Error: %s.', 'classic-commerce' ), $response->get_error_message() ), 400 );
 		} elseif ( 200 !== wp_remote_retrieve_response_code( $response ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_remote_product_image', sprintf( __( 'Error getting remote image %s.', 'woocommerce' ), $image_url ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_remote_product_image', sprintf( __( 'Error getting remote image %s.', 'classic-commerce' ), $image_url ), 400 );
 		}
 
 		// Ensure we have a file name and type
@@ -1736,7 +1736,7 @@ class WC_API_Products extends WC_API_Resource {
 			$wp_filetype = wp_check_filetype( $file_name, wc_rest_allowed_image_mime_types() );
 
 			if ( ! $wp_filetype['type'] ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_image', __( 'Invalid image type.', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_image', __( 'Invalid image type.', 'classic-commerce' ), 400 );
 			}
 		}
 
@@ -1753,7 +1753,7 @@ class WC_API_Products extends WC_API_Resource {
 		if ( 0 == $filesize ) {
 			@unlink( $upload['file'] );
 			unset( $upload );
-			throw new WC_API_Exception( 'woocommerce_api_product_image_upload_file_error', __( 'Zero size file downloaded.', 'woocommerce' ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_product_image_upload_file_error', __( 'Zero size file downloaded.', 'classic-commerce' ), 400 );
 		}
 
 		unset( $response );
@@ -1895,7 +1895,7 @@ class WC_API_Products extends WC_API_Resource {
 		try {
 			// Permissions check
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_attributes', __( 'You do not have permission to read product attributes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_attributes', __( 'You do not have permission to read product attributes', 'classic-commerce' ), 401 );
 			}
 
 			$product_attributes   = array();
@@ -1936,12 +1936,12 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Validate ID
 			if ( empty( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'Invalid product attribute ID', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'Invalid product attribute ID', 'classic-commerce' ), 400 );
 			}
 
 			// Permissions check
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product attributes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_product_categories', __( 'You do not have permission to read product attributes', 'classic-commerce' ), 401 );
 			}
 
 			$attribute = $wpdb->get_row( $wpdb->prepare( "
@@ -1951,7 +1951,7 @@ class WC_API_Products extends WC_API_Resource {
 			 ", $id ) );
 
 			if ( is_wp_error( $attribute ) || is_null( $attribute ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'A product attribute with the provided ID could not be found', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'A product attribute with the provided ID could not be found', 'classic-commerce' ), 404 );
 			}
 
 			$product_attribute = array(
@@ -1983,25 +1983,25 @@ class WC_API_Products extends WC_API_Resource {
 	 */
 	protected function validate_attribute_data( $name, $slug, $type, $order_by, $new_data = true ) {
 		if ( empty( $name ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_name', sprintf( __( 'Missing parameter %s', 'woocommerce' ), 'name' ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_name', sprintf( __( 'Missing parameter %s', 'classic-commerce' ), 'name' ), 400 );
 		}
 
 		if ( strlen( $slug ) >= 28 ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_too_long', sprintf( __( 'Slug "%s" is too long (28 characters max). Shorten it, please.', 'woocommerce' ), $slug ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_too_long', sprintf( __( 'Slug "%s" is too long (28 characters max). Shorten it, please.', 'classic-commerce' ), $slug ), 400 );
 		} elseif ( wc_check_if_attribute_name_is_reserved( $slug ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_reserved_name', sprintf( __( 'Slug "%s" is not allowed because it is a reserved term. Change it, please.', 'woocommerce' ), $slug ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_reserved_name', sprintf( __( 'Slug "%s" is not allowed because it is a reserved term. Change it, please.', 'classic-commerce' ), $slug ), 400 );
 		} elseif ( $new_data && taxonomy_exists( wc_attribute_taxonomy_name( $slug ) ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_already_exists', sprintf( __( 'Slug "%s" is already in use. Change it, please.', 'woocommerce' ), $slug ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_slug_already_exists', sprintf( __( 'Slug "%s" is already in use. Change it, please.', 'classic-commerce' ), $slug ), 400 );
 		}
 
 		// Validate the attribute type
 		if ( ! in_array( wc_clean( $type ), array_keys( wc_get_attribute_types() ) ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_type', sprintf( __( 'Invalid product attribute type - the product attribute type must be any of these: %s', 'woocommerce' ), implode( ', ', array_keys( wc_get_attribute_types() ) ) ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_type', sprintf( __( 'Invalid product attribute type - the product attribute type must be any of these: %s', 'classic-commerce' ), implode( ', ', array_keys( wc_get_attribute_types() ) ) ), 400 );
 		}
 
 		// Validate the attribute order by
 		if ( ! in_array( wc_clean( $order_by ), array( 'menu_order', 'name', 'name_num', 'id' ) ) ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_order_by', sprintf( __( 'Invalid product attribute order_by type - the product attribute order_by type must be any of these: %s', 'woocommerce' ), implode( ', ', array( 'menu_order', 'name', 'name_num', 'id' ) ) ), 400 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_order_by', sprintf( __( 'Invalid product attribute order_by type - the product attribute order_by type must be any of these: %s', 'classic-commerce' ), implode( ', ', array( 'menu_order', 'name', 'name_num', 'id' ) ) ), 400 );
 		}
 
 		return true;
@@ -2021,14 +2021,14 @@ class WC_API_Products extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['product_attribute'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'product_attribute' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'product_attribute' ), 400 );
 			}
 
 			$data = $data['product_attribute'];
 
 			// Check permissions
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_product_attribute', __( 'You do not have permission to create product attributes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_product_attribute', __( 'You do not have permission to create product attributes', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_product_attribute_data', $data, $this );
@@ -2104,7 +2104,7 @@ class WC_API_Products extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['product_attribute'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'product_attribute' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_product_attribute_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'product_attribute' ), 400 );
 			}
 
 			$id   = absint( $id );
@@ -2112,7 +2112,7 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Check permissions
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_product_attribute', __( 'You do not have permission to edit product attributes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_product_attribute', __( 'You do not have permission to edit product attributes', 'classic-commerce' ), 401 );
 			}
 
 			$data      = apply_filters( 'woocommerce_api_edit_product_attribute_data', $data, $this );
@@ -2158,7 +2158,7 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Checks for an error in the product creation
 			if ( false === $update ) {
-				throw new WC_API_Exception( 'woocommerce_api_cannot_edit_product_attribute', __( 'Could not edit the attribute', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_cannot_edit_product_attribute', __( 'Could not edit the attribute', 'classic-commerce' ), 400 );
 			}
 
 			do_action( 'woocommerce_api_edit_product_attribute', $id, $data );
@@ -2187,7 +2187,7 @@ class WC_API_Products extends WC_API_Resource {
 		try {
 			// Check permissions
 			if ( ! current_user_can( 'manage_product_terms' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_product_attribute', __( 'You do not have permission to delete product attributes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_product_attribute', __( 'You do not have permission to delete product attributes', 'classic-commerce' ), 401 );
 			}
 
 			$id = absint( $id );
@@ -2199,7 +2199,7 @@ class WC_API_Products extends WC_API_Resource {
 			 ", $id ) );
 
 			if ( is_null( $attribute_name ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'A product attribute with the provided ID could not be found', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_attribute_id', __( 'A product attribute with the provided ID could not be found', 'classic-commerce' ), 404 );
 			}
 
 			$deleted = $wpdb->delete(
@@ -2209,7 +2209,7 @@ class WC_API_Products extends WC_API_Resource {
 			);
 
 			if ( false === $deleted ) {
-				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_product_attribute', __( 'Could not delete the attribute', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_product_attribute', __( 'Could not delete the attribute', 'classic-commerce' ), 401 );
 			}
 
 			$taxonomy = wc_attribute_taxonomy_name( $attribute_name );
@@ -2227,7 +2227,7 @@ class WC_API_Products extends WC_API_Resource {
 			// Clear transients
 			delete_transient( 'wc_attribute_taxonomies' );
 
-			return array( 'message' => sprintf( __( 'Deleted %s', 'woocommerce' ), 'product_attribute' ) );
+			return array( 'message' => sprintf( __( 'Deleted %s', 'classic-commerce' ), 'product_attribute' ) );
 		} catch ( WC_API_Exception $e ) {
 			return new WP_Error( $e->getErrorCode(), $e->getMessage(), array( 'status' => $e->getCode() ) );
 		}
@@ -2250,7 +2250,7 @@ class WC_API_Products extends WC_API_Resource {
 			$id = wc_get_product_id_by_sku( $sku );
 
 			if ( empty( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_product_sku', __( 'Invalid product SKU', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_product_sku', __( 'Invalid product SKU', 'classic-commerce' ), 404 );
 			}
 
 			return $this->get_product( $id, $fields );
@@ -2300,7 +2300,7 @@ class WC_API_Products extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['products'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_products_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'woocommerce' ), 'products' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_products_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'classic-commerce' ), 'products' ), 400 );
 			}
 
 			$data  = $data['products'];
@@ -2308,7 +2308,7 @@ class WC_API_Products extends WC_API_Resource {
 
 			// Limit bulk operation
 			if ( count( $data ) > $limit ) {
-				throw new WC_API_Exception( 'woocommerce_api_products_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'woocommerce' ), $limit ), 413 );
+				throw new WC_API_Exception( 'woocommerce_api_products_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'classic-commerce' ), $limit ), 413 );
 			}
 
 			$products = array();

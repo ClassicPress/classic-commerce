@@ -39,7 +39,7 @@ class WC_Product_Grouped extends WC_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_add_to_cart_text', __( 'View products', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_text', __( 'View products', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -50,7 +50,7 @@ class WC_Product_Grouped extends WC_Product {
 	 */
 	public function add_to_cart_description() {
 		/* translators: %s: Product title */
-		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'View products in the &ldquo;%s&rdquo; group', 'woocommerce' ), $this->get_name() ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'View products in the &ldquo;%s&rdquo; group', 'classic-commerce' ), $this->get_name() ), $this );
 	}
 
 	/**
@@ -117,7 +117,7 @@ class WC_Product_Grouped extends WC_Product {
 			$is_free = 0 === $min_price && 0 === $max_price;
 
 			if ( $is_free ) {
-				$price = apply_filters( 'woocommerce_grouped_free_price_html', __( 'Free!', 'woocommerce' ), $this );
+				$price = apply_filters( 'woocommerce_grouped_free_price_html', __( 'Free!', 'classic-commerce' ), $this );
 			} else {
 				$price = apply_filters( 'woocommerce_grouped_price_html', $price . $this->get_price_suffix(), $this, $child_prices );
 			}

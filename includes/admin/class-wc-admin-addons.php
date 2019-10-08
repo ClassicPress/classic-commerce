@@ -153,16 +153,16 @@ class WC_Admin_Addons {
 		if ( 'storefront' === $template ) {
 			if ( 'storefront' === $stylesheet ) {
 				$url         = 'https://woocommerce.com/product-category/themes/storefront-child-theme-themes/';
-				$text        = __( 'Need a fresh look? Try Storefront child themes', 'woocommerce' );
+				$text        = __( 'Need a fresh look? Try Storefront child themes', 'classic-commerce' );
 				$utm_content = 'nostorefrontchildtheme';
 			} else {
 				$url         = 'https://woocommerce.com/product-category/themes/storefront-child-theme-themes/';
-				$text        = __( 'View more Storefront child themes', 'woocommerce' );
+				$text        = __( 'View more Storefront child themes', 'classic-commerce' );
 				$utm_content = 'hasstorefrontchildtheme';
 			}
 		} else {
 			$url         = 'https://woocommerce.com/storefront/';
-			$text        = __( 'Need a theme? Try Storefront', 'woocommerce' );
+			$text        = __( 'Need a theme? Try Storefront', 'classic-commerce' );
 			$utm_content = 'nostorefront';
 		}
 
@@ -367,10 +367,10 @@ class WC_Admin_Addons {
 
 		$defaults = array(
 			'image'       => WC()->plugin_url() . '/assets/images/wcs-extensions-banner-3x.png',
-			'image_alt'   => __( 'WooCommerce Services', 'woocommerce' ),
-			'title'       => __( 'Buy discounted shipping labels — then print them from your dashboard.', 'woocommerce' ),
-			'description' => __( 'Integrate your store with USPS to buy discounted shipping labels, and print them directly from your WooCommerce dashboard. Powered by WooCommerce Services.', 'woocommerce' ),
-			'button'      => __( 'Free - Install now', 'woocommerce' ),
+			'image_alt'   => __( 'WooCommerce Services', 'classic-commerce' ),
+			'title'       => __( 'Buy discounted shipping labels — then print them from your dashboard.', 'classic-commerce' ),
+			'description' => __( 'Integrate your store with USPS to buy discounted shipping labels, and print them directly from your WooCommerce dashboard. Powered by WooCommerce Services.', 'classic-commerce' ),
+			'button'      => __( 'Free - Install now', 'classic-commerce' ),
 			'href'        => $button_url,
 			'logos'       => array(),
 		);
@@ -379,8 +379,8 @@ class WC_Admin_Addons {
 			case 'CA':
 				$local_defaults = array(
 					'image'       => WC()->plugin_url() . '/assets/images/wcs-truck-banner-3x.png',
-					'title'       => __( 'Show Canada Post shipping rates', 'woocommerce' ),
-					'description' => __( 'Display live rates from Canada Post at checkout to make shipping a breeze. Powered by WooCommerce Services.', 'woocommerce' ),
+					'title'       => __( 'Show Canada Post shipping rates', 'classic-commerce' ),
+					'description' => __( 'Display live rates from Canada Post at checkout to make shipping a breeze. Powered by WooCommerce Services.', 'classic-commerce' ),
 					'logos'       => array_merge(
 						$defaults['logos'], array(
 							array(
@@ -485,9 +485,9 @@ class WC_Admin_Addons {
 	 * @param string $plugin
 	 */
 	public static function output_button( $url, $text, $theme, $plugin = '' ) {
-		$theme = __( 'Free', 'woocommerce' ) === $text ? 'addons-button-outline-green' : $theme;
+		$theme = __( 'Free', 'classic-commerce' ) === $text ? 'addons-button-outline-green' : $theme;
 		$theme = is_plugin_active( $plugin ) ? 'addons-button-installed' : $theme;
-		$text  = is_plugin_active( $plugin ) ? __( 'Installed', 'woocommerce' ) : $text;
+		$text  = is_plugin_active( $plugin ) ? __( 'Installed', 'classic-commerce' ) : $text;
 		?>
 		<a
 			class="addons-button <?php echo esc_attr( $theme ); ?>"
@@ -542,7 +542,7 @@ class WC_Admin_Addons {
 
 		$services_plugin_id = 'woocommerce-services';
 		$services_plugin    = array(
-			'name'      => __( 'WooCommerce Services', 'woocommerce' ),
+			'name'      => __( 'WooCommerce Services', 'classic-commerce' ),
 			'repo-slug' => 'woocommerce-services',
 		);
 

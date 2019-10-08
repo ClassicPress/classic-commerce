@@ -18,14 +18,14 @@ class WC_Widget_Products extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_products';
-		$this->widget_description = __( "A list of your store's products.", 'woocommerce' );
+		$this->widget_description = __( "A list of your store's products.", 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_products';
-		$this->widget_name        = __( 'Products', 'woocommerce' );
+		$this->widget_name        = __( 'Products', 'classic-commerce' );
 		$this->settings           = array(
 			'title'       => array(
 				'type'  => 'text',
-				'std'   => __( 'Products', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Products', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 			'number'      => array(
 				'type'  => 'number',
@@ -33,47 +33,47 @@ class WC_Widget_Products extends WC_Widget {
 				'min'   => 1,
 				'max'   => '',
 				'std'   => 5,
-				'label' => __( 'Number of products to show', 'woocommerce' ),
+				'label' => __( 'Number of products to show', 'classic-commerce' ),
 			),
 			'show'        => array(
 				'type'    => 'select',
 				'std'     => '',
-				'label'   => __( 'Show', 'woocommerce' ),
+				'label'   => __( 'Show', 'classic-commerce' ),
 				'options' => array(
-					''         => __( 'All products', 'woocommerce' ),
-					'featured' => __( 'Featured products', 'woocommerce' ),
-					'onsale'   => __( 'On-sale products', 'woocommerce' ),
+					''         => __( 'All products', 'classic-commerce' ),
+					'featured' => __( 'Featured products', 'classic-commerce' ),
+					'onsale'   => __( 'On-sale products', 'classic-commerce' ),
 				),
 			),
 			'orderby'     => array(
 				'type'    => 'select',
 				'std'     => 'date',
-				'label'   => __( 'Order by', 'woocommerce' ),
+				'label'   => __( 'Order by', 'classic-commerce' ),
 				'options' => array(
-					'date'  => __( 'Date', 'woocommerce' ),
-					'price' => __( 'Price', 'woocommerce' ),
-					'rand'  => __( 'Random', 'woocommerce' ),
-					'sales' => __( 'Sales', 'woocommerce' ),
+					'date'  => __( 'Date', 'classic-commerce' ),
+					'price' => __( 'Price', 'classic-commerce' ),
+					'rand'  => __( 'Random', 'classic-commerce' ),
+					'sales' => __( 'Sales', 'classic-commerce' ),
 				),
 			),
 			'order'       => array(
 				'type'    => 'select',
 				'std'     => 'desc',
-				'label'   => _x( 'Order', 'Sorting order', 'woocommerce' ),
+				'label'   => _x( 'Order', 'Sorting order', 'classic-commerce' ),
 				'options' => array(
-					'asc'  => __( 'ASC', 'woocommerce' ),
-					'desc' => __( 'DESC', 'woocommerce' ),
+					'asc'  => __( 'ASC', 'classic-commerce' ),
+					'desc' => __( 'DESC', 'classic-commerce' ),
 				),
 			),
 			'hide_free'   => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Hide free products', 'woocommerce' ),
+				'label' => __( 'Hide free products', 'classic-commerce' ),
 			),
 			'show_hidden' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Show hidden products', 'woocommerce' ),
+				'label' => __( 'Show hidden products', 'classic-commerce' ),
 			),
 		);
 
