@@ -183,7 +183,7 @@ module.exports = function( grunt ) {
 				type: 'wp-plugin',
 				domainPath: 'i18n/languages',
 				potHeaders: {
-					'report-msgid-bugs-to': 'https://github.com/classicpress-research/classic-commerce/issues',
+					'report-msgid-bugs-to': 'https://github.com/woocommerce/woocommerce/issues',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 				}
 			},
@@ -260,7 +260,7 @@ module.exports = function( grunt ) {
 			contributors: {
 				command: [
 					'echo "Generating contributor list since <%= fromDate %>"',
-					'./node_modules/.bin/githubcontrib --owner woocommerce --repo wordpress --fromDate <%= fromDate %> --authToken <%= authToken %> --cols 6 --sortBy contributions --format md --sortOrder desc --showlogin true > contributors.md'
+					'./node_modules/.bin/githubcontrib --owner woocommerce --repo woocommerce --fromDate <%= fromDate %> --authToken <%= authToken %> --cols 6 --sortBy contributions --format md --sortOrder desc --showlogin true > contributors.md'
 				].join( '&&' )
 			}
 		},
