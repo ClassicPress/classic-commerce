@@ -29,8 +29,8 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_invoice';
 			$this->customer_email = true;
-			$this->title          = __( 'Customer invoice / Order details', 'woocommerce' );
-			$this->description    = __( 'Customer invoice emails can be sent to customers containing their order information and payment links.', 'woocommerce' );
+			$this->title          = __( 'Customer invoice / Order details', 'classic-commerce' );
+			$this->description    = __( 'Customer invoice emails can be sent to customers containing their order information and payment links.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-invoice.php';
 			$this->template_plain = 'emails/plain/customer-invoice.php';
 			$this->placeholders   = array(
@@ -54,9 +54,9 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		 */
 		public function get_default_subject( $paid = false ) {
 			if ( $paid ) {
-				return __( 'Invoice for order #{order_number} on {site_title}', 'woocommerce' );
+				return __( 'Invoice for order #{order_number} on {site_title}', 'classic-commerce' );
 			} else {
-				return __( 'Your latest {site_title} invoice', 'woocommerce' );
+				return __( 'Your latest {site_title} invoice', 'classic-commerce' );
 			}
 		}
 
@@ -69,9 +69,9 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		 */
 		public function get_default_heading( $paid = false ) {
 			if ( $paid ) {
-				return __( 'Invoice for order #{order_number}', 'woocommerce' );
+				return __( 'Invoice for order #{order_number}', 'classic-commerce' );
 			} else {
-				return __( 'Your invoice for order #{order_number}', 'woocommerce' );
+				return __( 'Your invoice for order #{order_number}', 'classic-commerce' );
 			}
 		}
 
@@ -173,45 +173,45 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		public function init_form_fields() {
 			$this->form_fields = array(
 				'subject'      => array(
-					'title'       => __( 'Subject', 'woocommerce' ),
+					'title'       => __( 'Subject', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_subject(),
 					'default'     => '',
 				),
 				'heading'      => array(
-					'title'       => __( 'Email heading', 'woocommerce' ),
+					'title'       => __( 'Email heading', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_heading(),
 					'default'     => '',
 				),
 				'subject_paid' => array(
-					'title'       => __( 'Subject (paid)', 'woocommerce' ),
+					'title'       => __( 'Subject (paid)', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_subject( true ),
 					'default'     => '',
 				),
 				'heading_paid' => array(
-					'title'       => __( 'Email heading (paid)', 'woocommerce' ),
+					'title'       => __( 'Email heading (paid)', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_heading( true ),
 					'default'     => '',
 				),
 				'email_type'   => array(
-					'title'       => __( 'Email type', 'woocommerce' ),
+					'title'       => __( 'Email type', 'classic-commerce' ),
 					'type'        => 'select',
-					'description' => __( 'Choose which format of email to send.', 'woocommerce' ),
+					'description' => __( 'Choose which format of email to send.', 'classic-commerce' ),
 					'default'     => 'html',
 					'class'       => 'email_type wc-enhanced-select',
 					'options'     => $this->get_email_type_options(),

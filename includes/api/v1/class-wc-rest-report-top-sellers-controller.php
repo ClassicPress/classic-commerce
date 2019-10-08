@@ -149,19 +149,19 @@ class WC_REST_Report_Top_Sellers_V1_Controller extends WC_REST_Report_Sales_V1_C
 			'type'       => 'object',
 			'properties' => array(
 				'name' => array(
-					'description' => __( 'Product name.', 'woocommerce' ),
+					'description' => __( 'Product name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'product_id' => array(
-					'description' => __( 'Product ID.', 'woocommerce' ),
+					'description' => __( 'Product ID.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'quantity' => array(
-					'description' => __( 'Total number of purchases.', 'woocommerce' ),
+					'description' => __( 'Total number of purchases.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

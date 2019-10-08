@@ -39,106 +39,106 @@ if ( ! class_exists( 'WC_Admin_Profile', false ) ) :
 			$show_fields = apply_filters(
 				'woocommerce_customer_meta_fields', array(
 					'billing'  => array(
-						'title'  => __( 'Customer billing address', 'woocommerce' ),
+						'title'  => __( 'Customer billing address', 'classic-commerce' ),
 						'fields' => array(
 							'billing_first_name' => array(
-								'label'       => __( 'First name', 'woocommerce' ),
+								'label'       => __( 'First name', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_last_name'  => array(
-								'label'       => __( 'Last name', 'woocommerce' ),
+								'label'       => __( 'Last name', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_company'    => array(
-								'label'       => __( 'Company', 'woocommerce' ),
+								'label'       => __( 'Company', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_address_1'  => array(
-								'label'       => __( 'Address line 1', 'woocommerce' ),
+								'label'       => __( 'Address line 1', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_address_2'  => array(
-								'label'       => __( 'Address line 2', 'woocommerce' ),
+								'label'       => __( 'Address line 2', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_city'       => array(
-								'label'       => __( 'City', 'woocommerce' ),
+								'label'       => __( 'City', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_postcode'   => array(
-								'label'       => __( 'Postcode / ZIP', 'woocommerce' ),
+								'label'       => __( 'Postcode / ZIP', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_country'    => array(
-								'label'       => __( 'Country', 'woocommerce' ),
+								'label'       => __( 'Country', 'classic-commerce' ),
 								'description' => '',
 								'class'       => 'js_field-country',
 								'type'        => 'select',
-								'options'     => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_allowed_countries(),
+								'options'     => array( '' => __( 'Select a country&hellip;', 'classic-commerce' ) ) + WC()->countries->get_allowed_countries(),
 							),
 							'billing_state'      => array(
-								'label'       => __( 'State / County', 'woocommerce' ),
-								'description' => __( 'State / County or state code', 'woocommerce' ),
+								'label'       => __( 'State / County', 'classic-commerce' ),
+								'description' => __( 'State / County or state code', 'classic-commerce' ),
 								'class'       => 'js_field-state',
 							),
 							'billing_phone'      => array(
-								'label'       => __( 'Phone', 'woocommerce' ),
+								'label'       => __( 'Phone', 'classic-commerce' ),
 								'description' => '',
 							),
 							'billing_email'      => array(
-								'label'       => __( 'Email address', 'woocommerce' ),
+								'label'       => __( 'Email address', 'classic-commerce' ),
 								'description' => '',
 							),
 						),
 					),
 					'shipping' => array(
-						'title'  => __( 'Customer shipping address', 'woocommerce' ),
+						'title'  => __( 'Customer shipping address', 'classic-commerce' ),
 						'fields' => array(
 							'copy_billing'        => array(
-								'label'       => __( 'Copy from billing address', 'woocommerce' ),
+								'label'       => __( 'Copy from billing address', 'classic-commerce' ),
 								'description' => '',
 								'class'       => 'js_copy-billing',
 								'type'        => 'button',
-								'text'        => __( 'Copy', 'woocommerce' ),
+								'text'        => __( 'Copy', 'classic-commerce' ),
 							),
 							'shipping_first_name' => array(
-								'label'       => __( 'First name', 'woocommerce' ),
+								'label'       => __( 'First name', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_last_name'  => array(
-								'label'       => __( 'Last name', 'woocommerce' ),
+								'label'       => __( 'Last name', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_company'    => array(
-								'label'       => __( 'Company', 'woocommerce' ),
+								'label'       => __( 'Company', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_address_1'  => array(
-								'label'       => __( 'Address line 1', 'woocommerce' ),
+								'label'       => __( 'Address line 1', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_address_2'  => array(
-								'label'       => __( 'Address line 2', 'woocommerce' ),
+								'label'       => __( 'Address line 2', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_city'       => array(
-								'label'       => __( 'City', 'woocommerce' ),
+								'label'       => __( 'City', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_postcode'   => array(
-								'label'       => __( 'Postcode / ZIP', 'woocommerce' ),
+								'label'       => __( 'Postcode / ZIP', 'classic-commerce' ),
 								'description' => '',
 							),
 							'shipping_country'    => array(
-								'label'       => __( 'Country', 'woocommerce' ),
+								'label'       => __( 'Country', 'classic-commerce' ),
 								'description' => '',
 								'class'       => 'js_field-country',
 								'type'        => 'select',
-								'options'     => array( '' => __( 'Select a country&hellip;', 'woocommerce' ) ) + WC()->countries->get_allowed_countries(),
+								'options'     => array( '' => __( 'Select a country&hellip;', 'classic-commerce' ) ) + WC()->countries->get_allowed_countries(),
 							),
 							'shipping_state'      => array(
-								'label'       => __( 'State / County', 'woocommerce' ),
-								'description' => __( 'State / County or state code', 'woocommerce' ),
+								'label'       => __( 'State / County', 'classic-commerce' ),
+								'description' => __( 'State / County or state code', 'classic-commerce' ),
 								'class'       => 'js_field-state',
 							),
 						),

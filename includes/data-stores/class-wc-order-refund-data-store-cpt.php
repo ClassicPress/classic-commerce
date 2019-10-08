@@ -112,8 +112,8 @@ class WC_Order_Refund_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT im
 	protected function get_post_title() {
 		return sprintf(
 			/* translators: %s: Order date */
-			__( 'Refund &ndash; %s', 'woocommerce' ),
-			strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'woocommerce' ) ) // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.UnorderedPlaceholdersText
+			__( 'Refund &ndash; %s', 'classic-commerce' ),
+			strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'classic-commerce' ) ) // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.UnorderedPlaceholdersText
 		);
 	}
 }

@@ -25,12 +25,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<p><?php esc_html_e( 'The following note has been added to your order:', 'woocommerce' ); ?></p>
+<p><?php printf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+<p><?php esc_html_e( 'The following note has been added to your order:', 'classic-commerce' ); ?></p>
 
 <blockquote><?php echo wpautop( wptexturize( $customer_note ) ); ?></blockquote><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
 
-<p><?php esc_html_e( 'As a reminder, here are your order details:', 'woocommerce' ); ?></p>
+<p><?php esc_html_e( 'As a reminder, here are your order details:', 'classic-commerce' ); ?></p>
 
 <?php
 
@@ -54,7 +54,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 
 ?>
-<p><?php esc_html_e( 'Thanks for reading.', 'woocommerce' ); ?></p>
+<p><?php esc_html_e( 'Thanks for reading.', 'classic-commerce' ); ?></p>
 <?php
 
 /*

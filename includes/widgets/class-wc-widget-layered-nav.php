@@ -18,9 +18,9 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_layered_nav woocommerce-widget-layered-nav';
-		$this->widget_description = __( 'Display a list of attributes to filter products in your store.', 'woocommerce' );
+		$this->widget_description = __( 'Display a list of attributes to filter products in your store.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_layered_nav';
-		$this->widget_name        = __( 'Filter Products by Attribute', 'woocommerce' );
+		$this->widget_name        = __( 'Filter Products by Attribute', 'classic-commerce' );
 		parent::__construct();
 	}
 
@@ -69,31 +69,31 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 		$this->settings = array(
 			'title'        => array(
 				'type'  => 'text',
-				'std'   => __( 'Filter by', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Filter by', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 			'attribute'    => array(
 				'type'    => 'select',
 				'std'     => '',
-				'label'   => __( 'Attribute', 'woocommerce' ),
+				'label'   => __( 'Attribute', 'classic-commerce' ),
 				'options' => $attribute_array,
 			),
 			'display_type' => array(
 				'type'    => 'select',
 				'std'     => 'list',
-				'label'   => __( 'Display type', 'woocommerce' ),
+				'label'   => __( 'Display type', 'classic-commerce' ),
 				'options' => array(
-					'list'     => __( 'List', 'woocommerce' ),
-					'dropdown' => __( 'Dropdown', 'woocommerce' ),
+					'list'     => __( 'List', 'classic-commerce' ),
+					'dropdown' => __( 'Dropdown', 'classic-commerce' ),
 				),
 			),
 			'query_type'   => array(
 				'type'    => 'select',
 				'std'     => 'and',
-				'label'   => __( 'Query type', 'woocommerce' ),
+				'label'   => __( 'Query type', 'classic-commerce' ),
 				'options' => array(
-					'and' => __( 'AND', 'woocommerce' ),
-					'or'  => __( 'OR', 'woocommerce' ),
+					'and' => __( 'AND', 'classic-commerce' ),
+					'or'  => __( 'OR', 'classic-commerce' ),
 				),
 			),
 		);
@@ -227,7 +227,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 			$taxonomy_label       = wc_attribute_label( $taxonomy );
 
 			/* translators: %s: taxonomy name */
-			$any_label      = apply_filters( 'woocommerce_layered_nav_any_label', sprintf( __( 'Any %s', 'woocommerce' ), $taxonomy_label ), $taxonomy_label, $taxonomy );
+			$any_label      = apply_filters( 'woocommerce_layered_nav_any_label', sprintf( __( 'Any %s', 'classic-commerce' ), $taxonomy_label ), $taxonomy_label, $taxonomy );
 			$multiple       = 'or' === $query_type;
 			$current_values = isset( $_chosen_attributes[ $taxonomy ]['terms'] ) ? $_chosen_attributes[ $taxonomy ]['terms'] : array();
 
@@ -265,7 +265,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 			echo '</select>';
 
 			if ( $multiple ) {
-				echo '<button class="woocommerce-widget-layered-nav-dropdown__submit" type="submit" value="' . esc_attr__( 'Apply', 'woocommerce' ) . '">' . esc_html__( 'Apply', 'woocommerce' ) . '</button>';
+				echo '<button class="woocommerce-widget-layered-nav-dropdown__submit" type="submit" value="' . esc_attr__( 'Apply', 'classic-commerce' ) . '">' . esc_html__( 'Apply', 'classic-commerce' ) . '</button>';
 			}
 
 			if ( 'or' === $query_type ) {
@@ -299,7 +299,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 							allowClear: " . ( $multiple ? 'false' : 'true' ) . ",
 							language: {
 								noResults: function() {
-									return '" . esc_js( _x( 'No matches found', 'enhanced select', 'woocommerce' ) ) . "';
+									return '" . esc_js( _x( 'No matches found', 'enhanced select', 'classic-commerce' ) ) . "';
 								}
 							}
 						} );
