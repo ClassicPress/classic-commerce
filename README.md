@@ -27,5 +27,6 @@ Start by cloning this repo into your staging site plugins folder via the termina
 - Run `cd classic-commerce`
 - Run `composer install`
 - Run `npm install`
-- Run `npm scripts build-watch` or `npm scripts build` as you develop.
+- Make a branch using `git checkout -b short-title-to-your-changes`
+- Run `npm run build-watch` or `npm run build` as you make changes. These fixes translation string changes in the .pot file, scripts and styles.
 - Push your PR commits and changes to the **develop** branch.
