@@ -120,14 +120,14 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	public function get_tools() {
 		$tools = array(
 			'clear_transients'                   => array(
-				'name'   => __( 'WooCommerce transients', 'woocommerce' ),
+				'name'   => __( 'Classic Commerce transients', 'woocommerce' ),
 				'button' => __( 'Clear transients', 'woocommerce' ),
 				'desc'   => __( 'This tool will clear the product/shop transients cache.', 'woocommerce' ),
 			),
 			'clear_expired_transients'           => array(
 				'name'   => __( 'Expired transients', 'woocommerce' ),
 				'button' => __( 'Clear transients', 'woocommerce' ),
-				'desc'   => __( 'This tool will clear ALL expired transients from WordPress.', 'woocommerce' ),
+				'desc'   => __( 'This tool will clear ALL expired transients.', 'woocommerce' ),
 			),
 			'delete_orphaned_variations'         => array(
 				'name'   => __( 'Orphaned variations', 'woocommerce' ),
@@ -152,7 +152,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 			'reset_roles'                        => array(
 				'name'   => __( 'Capabilities', 'woocommerce' ),
 				'button' => __( 'Reset capabilities', 'woocommerce' ),
-				'desc'   => __( 'This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the WooCommerce admin pages.', 'woocommerce' ),
+				'desc'   => __( 'This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the Classic Commerce admin pages.', 'woocommerce' ),
 			),
 			'clear_sessions'                     => array(
 				'name'   => __( 'Clear customer sessions', 'woocommerce' ),
@@ -164,16 +164,16 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				),
 			),
 			'install_pages'                      => array(
-				'name'   => __( 'Create default WooCommerce pages', 'woocommerce' ),
+				'name'   => __( 'Create default Classic Commerce pages', 'woocommerce' ),
 				'button' => __( 'Create pages', 'woocommerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
 					__( 'Note:', 'woocommerce' ),
-					__( 'This tool will install all the missing WooCommerce pages. Pages already defined and set up will not be replaced.', 'woocommerce' )
+					__( 'This tool will install all the missing Classic Commerce pages. Pages already defined and set up will not be replaced.', 'woocommerce' )
 				),
 			),
 			'delete_taxes'                       => array(
-				'name'   => __( 'Delete WooCommerce tax rates', 'woocommerce' ),
+				'name'   => __( 'Delete Classic Commerce tax rates', 'woocommerce' ),
 				'button' => __( 'Delete tax rates', 'woocommerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
@@ -197,7 +197,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
 					__( 'Note:', 'woocommerce' ),
-					__( 'This tool will update your WooCommerce database to the latest version. Please ensure you make sufficient backups before proceeding.', 'woocommerce' )
+					__( 'This tool will update your Classic Commerce database to the latest version. Please ensure you make sufficient backups before proceeding.', 'woocommerce' )
 				),
 			)
 		);
