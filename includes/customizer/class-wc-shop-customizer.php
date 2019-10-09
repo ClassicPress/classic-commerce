@@ -33,7 +33,7 @@ class WC_Shop_Customizer {
 			'priority'       => 200,
 			'capability'     => 'manage_woocommerce',
 			'theme_supports' => '',
-			'title'          => __( 'WooCommerce', 'woocommerce' ),
+			'title'          => __( 'Classic Commerce', 'woocommerce' ),
 		) );
 
 		$this->add_store_notice_section( $wp_customize );
