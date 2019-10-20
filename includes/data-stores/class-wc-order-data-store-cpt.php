@@ -423,7 +423,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 			} elseif ( is_numeric( $value ) ) {
 				$meta_query['customer_ids']['value'][] = strval( absint( $value ) );
 			} else {
-				return new WP_Error( 'woocommerce_query_invalid', __( 'Invalid customer query.', 'woocommerce' ), $values );
+				return new WP_Error( 'woocommerce_query_invalid', __( 'Invalid customer query.', 'classic-commerce' ), $values );
 			}
 		}
 

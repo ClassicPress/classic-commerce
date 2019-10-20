@@ -27,7 +27,7 @@ if ( $downloads = WC()->customer->get_downloadable_products() ) : ?>
 
 	<?php do_action( 'woocommerce_before_available_downloads' ); ?>
 
-	<h2><?php echo apply_filters( 'woocommerce_my_account_my_downloads_title', __( 'Available downloads', 'woocommerce' ) ); ?></h2>
+	<h2><?php echo apply_filters( 'woocommerce_my_account_my_downloads_title', __( 'Available downloads', 'classic-commerce' ) ); ?></h2>
 
 	<ul class="woocommerce-Downloads digital-downloads">
 		<?php foreach ( $downloads as $download ) : ?>
@@ -36,7 +36,7 @@ if ( $downloads = WC()->customer->get_downloadable_products() ) : ?>
 					do_action( 'woocommerce_available_download_start', $download );
 
 					if ( is_numeric( $download['downloads_remaining'] ) ) {
-						echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . sprintf( _n( '%s download remaining', '%s downloads remaining', $download['downloads_remaining'], 'woocommerce' ), $download['downloads_remaining'] ) . '</span> ', $download );
+						echo apply_filters( 'woocommerce_available_download_count', '<span class="woocommerce-Count count">' . sprintf( _n( '%s download remaining', '%s downloads remaining', $download['downloads_remaining'], 'classic-commerce' ), $download['downloads_remaining'] ) . '</span> ', $download );
 					}
 
 					echo apply_filters( 'woocommerce_available_download_link', '<a href="' . esc_url( $download['download_url'] ) . '">' . $download['download_name'] . '</a>', $download );

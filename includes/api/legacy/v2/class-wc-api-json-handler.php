@@ -55,7 +55,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 
 				WC()->api->server->send_status( 400 );
 
-				$data = array( array( 'code' => 'woocommerce_api_jsonp_disabled', 'message' => __( 'JSONP support is disabled on this site', 'woocommerce' ) ) );
+				$data = array( array( 'code' => 'woocommerce_api_jsonp_disabled', 'message' => __( 'JSONP support is disabled on this site', 'classic-commerce' ) ) );
 			}
 
 			// Check for invalid characters (only alphanumeric allowed)
@@ -63,7 +63,7 @@ class WC_API_JSON_Handler implements WC_API_Handler {
 
 				WC()->api->server->send_status( 400 );
 
-				$data = array( array( 'code' => 'woocommerce_api_jsonp_callback_invalid', __( 'The JSONP callback function is invalid', 'woocommerce' ) ) );
+				$data = array( array( 'code' => 'woocommerce_api_jsonp_callback_invalid', __( 'The JSONP callback function is invalid', 'classic-commerce' ) ) );
 			}
 
 			// see http://miki.it/blog/2014/7/8/abusing-jsonp-with-rosetta-flash/

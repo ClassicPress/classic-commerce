@@ -34,9 +34,9 @@ class WC_Meta_Box_Order_Actions {
 
 		$order_actions = apply_filters(
 			'woocommerce_order_actions', array(
-				'send_order_details'              => __( 'Email invoice / order details to customer', 'woocommerce' ),
-				'send_order_details_admin'        => __( 'Resend new order notification', 'woocommerce' ),
-				'regenerate_download_permissions' => __( 'Regenerate download permissions', 'woocommerce' ),
+				'send_order_details'              => __( 'Email invoice / order details to customer', 'classic-commerce' ),
+				'send_order_details_admin'        => __( 'Resend new order notification', 'classic-commerce' ),
+				'regenerate_download_permissions' => __( 'Regenerate download permissions', 'classic-commerce' ),
 			)
 		);
 		?>
@@ -46,12 +46,12 @@ class WC_Meta_Box_Order_Actions {
 
 			<li class="wide" id="actions">
 				<select name="wc_order_action">
-					<option value=""><?php esc_html_e( 'Choose an action...', 'woocommerce' ); ?></option>
+					<option value=""><?php esc_html_e( 'Choose an action...', 'classic-commerce' ); ?></option>
 					<?php foreach ( $order_actions as $action => $title ) { ?>
 						<option value="<?php echo esc_attr( $action ); ?>"><?php echo esc_html( $title ); ?></option>
 					<?php } ?>
 				</select>
-				<button class="button wc-reload"><span><?php esc_html_e( 'Apply', 'woocommerce' ); ?></span></button>
+				<button class="button wc-reload"><span><?php esc_html_e( 'Apply', 'classic-commerce' ); ?></span></button>
 			</li>
 
 			<li class="wide">
@@ -60,9 +60,9 @@ class WC_Meta_Box_Order_Actions {
 					if ( current_user_can( 'delete_post', $post->ID ) ) {
 
 						if ( ! EMPTY_TRASH_DAYS ) {
-							$delete_text = __( 'Delete permanently', 'woocommerce' );
+							$delete_text = __( 'Delete permanently', 'classic-commerce' );
 						} else {
-							$delete_text = __( 'Move to trash', 'woocommerce' );
+							$delete_text = __( 'Move to trash', 'classic-commerce' );
 						}
 						?>
 						<a class="submitdelete deletion" href="<?php echo esc_url( get_delete_post_link( $post->ID ) ); ?>"><?php echo esc_html( $delete_text ); ?></a>
@@ -71,7 +71,7 @@ class WC_Meta_Box_Order_Actions {
 					?>
 				</div>
 
-				<button type="submit" class="button save_order button-primary" name="save" value="<?php echo 'auto-draft' === $post->post_status ? esc_attr__( 'Create', 'woocommerce' ) : esc_attr__( 'Update', 'woocommerce' ); ?>"><?php echo 'auto-draft' === $post->post_status ? esc_html__( 'Create', 'woocommerce' ) : esc_html__( 'Update', 'woocommerce' ); ?></button>
+				<button type="submit" class="button save_order button-primary" name="save" value="<?php echo 'auto-draft' === $post->post_status ? esc_attr__( 'Create', 'classic-commerce' ) : esc_attr__( 'Update', 'classic-commerce' ); ?>"><?php echo 'auto-draft' === $post->post_status ? esc_html__( 'Create', 'classic-commerce' ) : esc_html__( 'Update', 'classic-commerce' ); ?></button>
 			</li>
 
 			<?php do_action( 'woocommerce_order_actions_end', $post->ID ); ?>
@@ -104,7 +104,7 @@ class WC_Meta_Box_Order_Actions {
 				WC()->mailer()->customer_invoice( $order );
 
 				// Note the event.
-				$order->add_order_note( __( 'Order details manually sent to customer.', 'woocommerce' ), false, true );
+				$order->add_order_note( __( 'Order details manually sent to customer.', 'classic-commerce' ), false, true );
 
 				do_action( 'woocommerce_after_resend_order_email', $order, 'customer_invoice' );
 

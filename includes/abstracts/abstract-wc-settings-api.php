@@ -771,7 +771,7 @@ abstract class WC_Settings_API {
 					</select>
 					<?php echo $this->get_description_html( $data ); // WPCS: XSS ok. ?>
 					<?php if ( $data['select_buttons'] ) : ?>
-						<br/><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'woocommerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'woocommerce' ); ?></a>
+						<br/><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'classic-commerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'classic-commerce' ); ?></a>
 					<?php endif; ?>
 				</fieldset>
 			</td>

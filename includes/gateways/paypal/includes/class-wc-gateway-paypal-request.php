@@ -267,7 +267,7 @@ class WC_Gateway_Paypal_Request {
 			$line_item_args['shipping_1'] = $this->number_format( $shipping_total, $order );
 		} elseif ( $order->get_shipping_total() > 0 ) {
 			/* translators: %s: Order shipping method */
-			$this->add_line_item( sprintf( __( 'Shipping via %s', 'woocommerce' ), $order->get_shipping_method() ), 1, $this->number_format( $shipping_total, $order ) );
+			$this->add_line_item( sprintf( __( 'Shipping via %s', 'classic-commerce' ), $order->get_shipping_method() ), 1, $this->number_format( $shipping_total, $order ) );
 		}
 
 		return $line_item_args;
@@ -283,7 +283,7 @@ class WC_Gateway_Paypal_Request {
 		$this->delete_line_items();
 
 		$all_items_name = $this->get_order_item_names( $order );
-		$this->add_line_item( $all_items_name ? $all_items_name : __( 'Order', 'woocommerce' ), 1, $this->number_format( $order->get_total() - $this->round( $order->get_shipping_total() + $order->get_shipping_tax(), $order ), $order ), $order->get_order_number() );
+		$this->add_line_item( $all_items_name ? $all_items_name : __( 'Order', 'classic-commerce' ), 1, $this->number_format( $order->get_total() - $this->round( $order->get_shipping_total() + $order->get_shipping_tax(), $order ), $order ), $order->get_order_number() );
 		$line_item_args = $this->get_shipping_cost_line_item( $order, true );
 
 		return array_merge( $line_item_args, $this->get_line_items() );
@@ -468,7 +468,7 @@ class WC_Gateway_Paypal_Request {
 
 		$item = apply_filters(
 			'woocommerce_paypal_line_item', array(
-				'item_name'   => html_entity_decode( wc_trim_string( $item_name ? $item_name : __( 'Item', 'woocommerce' ), 127 ), ENT_NOQUOTES, 'UTF-8' ),
+				'item_name'   => html_entity_decode( wc_trim_string( $item_name ? $item_name : __( 'Item', 'classic-commerce' ), 127 ), ENT_NOQUOTES, 'UTF-8' ),
 				'quantity'    => (int) $quantity,
 				'amount'      => wc_float_to_string( (float) $amount ),
 				'item_number' => $item_number,

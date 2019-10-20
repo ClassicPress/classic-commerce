@@ -18,12 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function wc_importer_generic_mappings( $mappings ) {
 	$generic_mappings = array(
-		__( 'Title', 'woocommerce' )         => 'name',
-		__( 'Product Title', 'woocommerce' ) => 'name',
-		__( 'Price', 'woocommerce' )         => 'regular_price',
-		__( 'Parent SKU', 'woocommerce' )    => 'parent_id',
-		__( 'Quantity', 'woocommerce' )      => 'stock_quantity',
-		__( 'Menu order', 'woocommerce' )    => 'menu_order',
+		__( 'Title', 'classic-commerce' )         => 'name',
+		__( 'Product Title', 'classic-commerce' ) => 'name',
+		__( 'Price', 'classic-commerce' )         => 'regular_price',
+		__( 'Parent SKU', 'classic-commerce' )    => 'parent_id',
+		__( 'Quantity', 'classic-commerce' )      => 'stock_quantity',
+		__( 'Menu order', 'classic-commerce' )    => 'menu_order',
 	);
 
 	return array_merge( $mappings, $generic_mappings );

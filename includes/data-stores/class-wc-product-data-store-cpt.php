@@ -103,7 +103,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 					'post_type'      => 'product',
 					'post_status'    => $product->get_status() ? $product->get_status() : 'publish',
 					'post_author'    => get_current_user_id(),
-					'post_title'     => $product->get_name() ? $product->get_name() : __( 'Product', 'woocommerce' ),
+					'post_title'     => $product->get_name() ? $product->get_name() : __( 'Product', 'classic-commerce' ),
 					'post_content'   => $product->get_description(),
 					'post_excerpt'   => $product->get_short_description(),
 					'post_parent'    => $product->get_parent_id(),
@@ -147,7 +147,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 		$post_object = get_post( $product->get_id() );
 
 		if ( ! $product->get_id() || ! $post_object || 'product' !== $post_object->post_type ) {
-			throw new Exception( __( 'Invalid product.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid product.', 'classic-commerce' ) );
 		}
 
 		$product->set_props(

@@ -246,12 +246,12 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 		try {
 			// Make sure customer exists.
 			if ( ! is_null( $request['customer_id'] ) && 0 !== $request['customer_id'] && false === get_user_by( 'id', $request['customer_id'] ) ) {
-				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id',__( 'Customer ID is invalid.', 'woocommerce' ), 400 );
+				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id',__( 'Customer ID is invalid.', 'classic-commerce' ), 400 );
 			}
 
 			// Make sure customer is part of blog.
 			if ( is_multisite() && ! is_user_member_of_blog( $request['customer_id'] ) ) {
-				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id_network',__( 'Customer ID does not belong to this site.', 'woocommerce' ), 400 );
+				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id_network',__( 'Customer ID does not belong to this site.', 'classic-commerce' ), 400 );
 			}
 
 			$order = $this->prepare_item_for_database( $request );

@@ -9,9 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $current_tab = ! empty( $_REQUEST['tab'] ) ? sanitize_title( $_REQUEST['tab'] ) : 'status';
 $tabs        = array(
-	'status' => __( 'System status', 'woocommerce' ),
-	'tools'  => __( 'Tools', 'woocommerce' ),
-	'logs'   => __( 'Logs', 'woocommerce' ),
+	'status' => __( 'System status', 'classic-commerce' ),
+	'tools'  => __( 'Tools', 'classic-commerce' ),
+	'logs'   => __( 'Logs', 'classic-commerce' ),
 );
 $tabs        = apply_filters( 'woocommerce_admin_status_tabs', $tabs );
 ?>

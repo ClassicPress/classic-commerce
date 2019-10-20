@@ -196,7 +196,7 @@ class WC_Admin {
 			$mailer = WC()->mailer();
 
 			// get the preview email subject
-			$email_heading = __( 'HTML email template', 'woocommerce' );
+			$email_heading = __( 'HTML email template', 'classic-commerce' );
 
 			// get the preview email content
 			ob_start();
@@ -234,7 +234,7 @@ class WC_Admin {
 
 		// Check to make sure we're on a Classic Commerce admin page.
 		if ( isset( $current_screen->id ) && apply_filters( 'woocommerce_display_admin_footer_text', in_array( $current_screen->id, $wc_pages ) ) ) {
-				$footer_text = __( 'Thank you for using Classic Commerce.', 'woocommerce' );
+				$footer_text = __( 'Thank you for using Classic Commerce.', 'classic-commerce' );
 		}
 
 		return $footer_text;

@@ -185,7 +185,7 @@ class WC_Log_Handler_Email extends WC_Log_Handler {
 			. PHP_EOL
 			. PHP_EOL
 			/* translators: %s: Site name */
-			. sprintf( __( 'Visit %s admin area:', 'woocommerce' ), $site_name )
+			. sprintf( __( 'Visit %s admin area:', 'classic-commerce' ), $site_name )
 			. PHP_EOL
 			. admin_url();
 	}

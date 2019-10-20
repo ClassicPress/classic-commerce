@@ -11,12 +11,12 @@ global $states;
 defined( 'ABSPATH' ) || exit;
 
 $states['PK'] = array(
-	'JK' => __( 'Azad Kashmir', 'woocommerce' ),
-	'BA' => __( 'Balochistan', 'woocommerce' ),
-	'TA' => __( 'FATA', 'woocommerce' ),
-	'GB' => __( 'Gilgit Baltistan', 'woocommerce' ),
-	'IS' => __( 'Islamabad Capital Territory', 'woocommerce' ),
-	'KP' => __( 'Khyber Pakhtunkhwa', 'woocommerce' ),
-	'PB' => __( 'Punjab', 'woocommerce' ),
-	'SD' => __( 'Sindh', 'woocommerce' ),
+	'JK' => __( 'Azad Kashmir', 'classic-commerce' ),
+	'BA' => __( 'Balochistan', 'classic-commerce' ),
+	'TA' => __( 'FATA', 'classic-commerce' ),
+	'GB' => __( 'Gilgit Baltistan', 'classic-commerce' ),
+	'IS' => __( 'Islamabad Capital Territory', 'classic-commerce' ),
+	'KP' => __( 'Khyber Pakhtunkhwa', 'classic-commerce' ),
+	'PB' => __( 'Punjab', 'classic-commerce' ),
+	'SD' => __( 'Sindh', 'classic-commerce' ),
 );
