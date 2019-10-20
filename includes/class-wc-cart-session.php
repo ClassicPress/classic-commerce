@@ -355,7 +355,7 @@ final class WC_Cart_Session {
 						'%d item from your previous order is currently unavailable and could not be added to your cart.',
 						'%d items from your previous order are currently unavailable and could not be added to your cart.',
 						$num_items_added,
-						'woocommerce'
+						'classic-commerce'
 					),
 					$num_items_added
 				),
