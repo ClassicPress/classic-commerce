@@ -57,8 +57,8 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_new_account';
 			$this->customer_email = true;
-			$this->title          = __( 'New account', 'woocommerce' );
-			$this->description    = __( 'Customer "new account" emails are sent to the customer when a customer signs up via checkout or account pages.', 'woocommerce' );
+			$this->title          = __( 'New account', 'classic-commerce' );
+			$this->description    = __( 'Customer "new account" emails are sent to the customer when a customer signs up via checkout or account pages.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-new-account.php';
 			$this->template_plain = 'emails/plain/customer-new-account.php';
 
@@ -73,7 +73,7 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Your {site_title} account has been created!', 'woocommerce' );
+			return __( 'Your {site_title} account has been created!', 'classic-commerce' );
 		}
 
 		/**
@@ -83,7 +83,7 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Welcome to {site_title}', 'woocommerce' );
+			return __( 'Welcome to {site_title}', 'classic-commerce' );
 		}
 
 		/**

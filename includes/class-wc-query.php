@@ -96,41 +96,41 @@ class WC_Query {
 
 		switch ( $endpoint ) {
 			case 'order-pay':
-				$title = __( 'Pay for order', 'woocommerce' );
+				$title = __( 'Pay for order', 'classic-commerce' );
 				break;
 			case 'order-received':
-				$title = __( 'Order received', 'woocommerce' );
+				$title = __( 'Order received', 'classic-commerce' );
 				break;
 			case 'orders':
 				if ( ! empty( $wp->query_vars['orders'] ) ) {
 					/* translators: %s: page */
-					$title = sprintf( __( 'Orders (page %d)', 'woocommerce' ), intval( $wp->query_vars['orders'] ) );
+					$title = sprintf( __( 'Orders (page %d)', 'classic-commerce' ), intval( $wp->query_vars['orders'] ) );
 				} else {
-					$title = __( 'Orders', 'woocommerce' );
+					$title = __( 'Orders', 'classic-commerce' );
 				}
 				break;
 			case 'view-order':
 				$order = wc_get_order( $wp->query_vars['view-order'] );
 				/* translators: %s: order number */
-				$title = ( $order ) ? sprintf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ) : '';
+				$title = ( $order ) ? sprintf( __( 'Order #%s', 'classic-commerce' ), $order->get_order_number() ) : '';
 				break;
 			case 'downloads':
-				$title = __( 'Downloads', 'woocommerce' );
+				$title = __( 'Downloads', 'classic-commerce' );
 				break;
 			case 'edit-account':
-				$title = __( 'Account details', 'woocommerce' );
+				$title = __( 'Account details', 'classic-commerce' );
 				break;
 			case 'edit-address':
-				$title = __( 'Addresses', 'woocommerce' );
+				$title = __( 'Addresses', 'classic-commerce' );
 				break;
 			case 'payment-methods':
-				$title = __( 'Payment methods', 'woocommerce' );
+				$title = __( 'Payment methods', 'classic-commerce' );
 				break;
 			case 'add-payment-method':
-				$title = __( 'Add payment method', 'woocommerce' );
+				$title = __( 'Add payment method', 'classic-commerce' );
 				break;
 			case 'lost-password':
-				$title = __( 'Lost password', 'woocommerce' );
+				$title = __( 'Lost password', 'classic-commerce' );
 				break;
 			default:
 				$title = '';

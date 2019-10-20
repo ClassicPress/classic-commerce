@@ -529,7 +529,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 			// Create initial name and status.
 			if ( ! $variation->get_slug() ) {
 				/* translators: 1: variation id 2: product name */
-				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'woocommerce' ), $variation->get_id(), $product->get_name() ) );
+				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'classic-commerce' ), $variation->get_id(), $product->get_name() ) );
 				$variation->set_status( isset( $data['visible'] ) && false === $data['visible'] ? 'private' : 'publish' );
 			}
 

@@ -43,7 +43,7 @@ class WC_Report_Stock extends WP_List_Table {
 	 * No items found text.
 	 */
 	public function no_items() {
-		_e( 'No products found.', 'woocommerce' );
+		_e( 'No products found.', 'classic-commerce' );
 	}
 
 	/**
@@ -111,11 +111,11 @@ class WC_Report_Stock extends WP_List_Table {
 
 			case 'stock_status':
 				if ( $product->is_on_backorder() ) {
-					$stock_html = '<mark class="onbackorder">' . __( 'On backorder', 'woocommerce' ) . '</mark>';
+					$stock_html = '<mark class="onbackorder">' . __( 'On backorder', 'classic-commerce' ) . '</mark>';
 				} elseif ( $product->is_in_stock() ) {
-					$stock_html = '<mark class="instock">' . __( 'In stock', 'woocommerce' ) . '</mark>';
+					$stock_html = '<mark class="instock">' . __( 'In stock', 'classic-commerce' ) . '</mark>';
 				} else {
-					$stock_html = '<mark class="outofstock">' . __( 'Out of stock', 'woocommerce' ) . '</mark>';
+					$stock_html = '<mark class="outofstock">' . __( 'Out of stock', 'classic-commerce' ) . '</mark>';
 				}
 				echo apply_filters( 'woocommerce_admin_stock_html', $stock_html, $product );
 				break;
@@ -132,14 +132,14 @@ class WC_Report_Stock extends WP_List_Table {
 
 					$actions['edit'] = array(
 						'url'    => admin_url( 'post.php?post=' . $action_id . '&action=edit' ),
-						'name'   => __( 'Edit', 'woocommerce' ),
+						'name'   => __( 'Edit', 'classic-commerce' ),
 						'action' => 'edit',
 					);
 
 					if ( $product->is_visible() ) {
 						$actions['view'] = array(
 							'url'    => get_permalink( $action_id ),
-							'name'   => __( 'View', 'woocommerce' ),
+							'name'   => __( 'View', 'classic-commerce' ),
 							'action' => 'view',
 						);
 					}
@@ -151,7 +151,7 @@ class WC_Report_Stock extends WP_List_Table {
 							'<a class="button tips %1$s" href="%2$s" data-tip="%3$s">%4$s</a>',
 							esc_attr( $action['action'] ),
 							esc_url( $action['url'] ),
-							sprintf( esc_attr__( '%s product', 'woocommerce' ), $action['name'] ),
+							sprintf( esc_attr__( '%s product', 'classic-commerce' ), $action['name'] ),
 							esc_html( $action['name'] )
 						);
 					}
@@ -170,11 +170,11 @@ class WC_Report_Stock extends WP_List_Table {
 	public function get_columns() {
 
 		$columns = array(
-			'product'      => __( 'Product', 'woocommerce' ),
-			'parent'       => __( 'Parent', 'woocommerce' ),
-			'stock_level'  => __( 'Units in stock', 'woocommerce' ),
-			'stock_status' => __( 'Stock status', 'woocommerce' ),
-			'wc_actions'   => __( 'Actions', 'woocommerce' ),
+			'product'      => __( 'Product', 'classic-commerce' ),
+			'parent'       => __( 'Parent', 'classic-commerce' ),
+			'stock_level'  => __( 'Units in stock', 'classic-commerce' ),
+			'stock_status' => __( 'Stock status', 'classic-commerce' ),
+			'wc_actions'   => __( 'Actions', 'classic-commerce' ),
 		);
 
 		return $columns;

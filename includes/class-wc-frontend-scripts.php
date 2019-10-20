@@ -226,7 +226,7 @@ class WC_Frontend_Scripts {
 			),
 			'wc-add-payment-method'      => array(
 				'src'     => self::get_asset_url( 'assets/js/frontend/add-payment-method' . $suffix . '.js' ),
-				'deps'    => array( 'jquery', 'woocommerce' ),
+				'deps'    => array( 'jquery', 'classic-commerce' ),
 				'version' => WC_VERSION,
 			),
 			'wc-cart'                    => array(
@@ -271,7 +271,7 @@ class WC_Frontend_Scripts {
 			),
 			'wc-lost-password'           => array(
 				'src'     => self::get_asset_url( 'assets/js/frontend/lost-password' . $suffix . '.js' ),
-				'deps'    => array( 'jquery', 'woocommerce' ),
+				'deps'    => array( 'jquery', 'classic-commerce' ),
 				'version' => WC_VERSION,
 			),
 			'wc-password-strength-meter' => array(
@@ -470,7 +470,7 @@ class WC_Frontend_Scripts {
 				break;
 			case 'wc-single-product':
 				$params = array(
-					'i18n_required_rating_text' => esc_attr__( 'Please select a rating', 'woocommerce' ),
+					'i18n_required_rating_text' => esc_attr__( 'Please select a rating', 'classic-commerce' ),
 					'review_rating_required'    => get_option( 'woocommerce_review_rating_required' ),
 					'flexslider'                => apply_filters(
 						'woocommerce_single_product_carousel_options', array(
@@ -511,15 +511,15 @@ class WC_Frontend_Scripts {
 					'checkout_url'              => WC_AJAX::get_endpoint( 'checkout' ),
 					'is_checkout'               => is_checkout() && empty( $wp->query_vars['order-pay'] ) && ! isset( $wp->query_vars['order-received'] ) ? 1 : 0,
 					'debug_mode'                => defined( 'WP_DEBUG' ) && WP_DEBUG,
-					'i18n_checkout_error'       => esc_attr__( 'Error processing checkout. Please try again.', 'woocommerce' ),
+					'i18n_checkout_error'       => esc_attr__( 'Error processing checkout. Please try again.', 'classic-commerce' ),
 				);
 				break;
 			case 'wc-address-i18n':
 				$params = array(
 					'locale'             => wp_json_encode( WC()->countries->get_country_locale() ),
 					'locale_fields'      => wp_json_encode( WC()->countries->get_country_locale_field_selectors() ),
-					'i18n_required_text' => esc_attr__( 'required', 'woocommerce' ),
-					'i18n_optional_text' => esc_html__( 'optional', 'woocommerce' ),
+					'i18n_required_text' => esc_attr__( 'required', 'classic-commerce' ),
+					'i18n_optional_text' => esc_html__( 'optional', 'classic-commerce' ),
 				);
 				break;
 			case 'wc-cart':
@@ -543,7 +543,7 @@ class WC_Frontend_Scripts {
 				$params = array(
 					'ajax_url'                => WC()->ajax_url(),
 					'wc_ajax_url'             => WC_AJAX::get_endpoint( '%%endpoint%%' ),
-					'i18n_view_cart'          => esc_attr__( 'View cart', 'woocommerce' ),
+					'i18n_view_cart'          => esc_attr__( 'View cart', 'classic-commerce' ),
 					'cart_url'                => apply_filters( 'woocommerce_add_to_cart_redirect', wc_get_cart_url() ),
 					'is_cart'                 => is_cart(),
 					'cart_redirect_after_add' => get_option( 'woocommerce_cart_redirect_after_add' ),
@@ -555,31 +555,31 @@ class WC_Frontend_Scripts {
 
 				$params = array(
 					'wc_ajax_url'                      => WC_AJAX::get_endpoint( '%%endpoint%%' ),
-					'i18n_no_matching_variations_text' => esc_attr__( 'Sorry, no products matched your selection. Please choose a different combination.', 'woocommerce' ),
-					'i18n_make_a_selection_text'       => esc_attr__( 'Please select some product options before adding this product to your cart.', 'woocommerce' ),
-					'i18n_unavailable_text'            => esc_attr__( 'Sorry, this product is unavailable. Please choose a different combination.', 'woocommerce' ),
+					'i18n_no_matching_variations_text' => esc_attr__( 'Sorry, no products matched your selection. Please choose a different combination.', 'classic-commerce' ),
+					'i18n_make_a_selection_text'       => esc_attr__( 'Please select some product options before adding this product to your cart.', 'classic-commerce' ),
+					'i18n_unavailable_text'            => esc_attr__( 'Sorry, this product is unavailable. Please choose a different combination.', 'classic-commerce' ),
 				);
 				break;
 			case 'wc-country-select':
 				$params = array(
 					'countries'                 => wp_json_encode( array_merge( WC()->countries->get_allowed_country_states(), WC()->countries->get_shipping_country_states() ) ),
-					'i18n_select_state_text'    => esc_attr__( 'Select an option&hellip;', 'woocommerce' ),
-					'i18n_no_matches'           => _x( 'No matches found', 'enhanced select', 'woocommerce' ),
-					'i18n_ajax_error'           => _x( 'Loading failed', 'enhanced select', 'woocommerce' ),
-					'i18n_input_too_short_1'    => _x( 'Please enter 1 or more characters', 'enhanced select', 'woocommerce' ),
-					'i18n_input_too_short_n'    => _x( 'Please enter %qty% or more characters', 'enhanced select', 'woocommerce' ),
-					'i18n_input_too_long_1'     => _x( 'Please delete 1 character', 'enhanced select', 'woocommerce' ),
-					'i18n_input_too_long_n'     => _x( 'Please delete %qty% characters', 'enhanced select', 'woocommerce' ),
-					'i18n_selection_too_long_1' => _x( 'You can only select 1 item', 'enhanced select', 'woocommerce' ),
-					'i18n_selection_too_long_n' => _x( 'You can only select %qty% items', 'enhanced select', 'woocommerce' ),
-					'i18n_load_more'            => _x( 'Loading more results&hellip;', 'enhanced select', 'woocommerce' ),
-					'i18n_searching'            => _x( 'Searching&hellip;', 'enhanced select', 'woocommerce' ),
+					'i18n_select_state_text'    => esc_attr__( 'Select an option&hellip;', 'classic-commerce' ),
+					'i18n_no_matches'           => _x( 'No matches found', 'enhanced select', 'classic-commerce' ),
+					'i18n_ajax_error'           => _x( 'Loading failed', 'enhanced select', 'classic-commerce' ),
+					'i18n_input_too_short_1'    => _x( 'Please enter 1 or more characters', 'enhanced select', 'classic-commerce' ),
+					'i18n_input_too_short_n'    => _x( 'Please enter %qty% or more characters', 'enhanced select', 'classic-commerce' ),
+					'i18n_input_too_long_1'     => _x( 'Please delete 1 character', 'enhanced select', 'classic-commerce' ),
+					'i18n_input_too_long_n'     => _x( 'Please delete %qty% characters', 'enhanced select', 'classic-commerce' ),
+					'i18n_selection_too_long_1' => _x( 'You can only select 1 item', 'enhanced select', 'classic-commerce' ),
+					'i18n_selection_too_long_n' => _x( 'You can only select %qty% items', 'enhanced select', 'classic-commerce' ),
+					'i18n_load_more'            => _x( 'Loading more results&hellip;', 'enhanced select', 'classic-commerce' ),
+					'i18n_searching'            => _x( 'Searching&hellip;', 'enhanced select', 'classic-commerce' ),
 				);
 				break;
 			case 'wc-password-strength-meter':
 				$params = array(
 					'min_password_strength' => apply_filters( 'woocommerce_min_password_strength', 3 ),
-					'i18n_password_error'   => esc_attr__( 'Please enter a stronger password.', 'woocommerce' ),
+					'i18n_password_error'   => esc_attr__( 'Please enter a stronger password.', 'classic-commerce' ),
 					'i18n_password_hint'    => esc_attr( wp_get_password_hint() ),
 				);
 				break;
