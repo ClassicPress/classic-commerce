@@ -92,13 +92,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				if ( function_exists( 'classicpress_version' ) ) {
 					$latest_version = get_transient( 'classic_commerce_system_status_cp_version_check' );
 					$classicpress_version = classicpress_version();
+					$cp_url = 'https://api.classicpress.net/upgrade/' . $classicpress_version . '.json';
 	
 					if ( false === $latest_version ) {
-						$version_check = wp_remote_get( 'https://api-v1.classicpress.net/core/version-check/1.0/' );
+						$version_check = wp_remote_get( $cp_url );
 						$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
-	
-						if ( $api_response && isset( $api_response[0]['version'] ) ) {
-							$latest_version = $api_response[0]['version'];
+						if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
+							$latest_version = $api_response['offers'][0]['version'];
 						} else {
 							$latest_version = $classicpress_version;
 						}
