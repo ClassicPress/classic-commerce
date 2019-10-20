@@ -816,8 +816,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</tr>
 		<?php endif ?>
 		<tr>
-			<td data-export-label="WooCommerce Support"><?php esc_html_e( 'WooCommerce support', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares WooCommerce support.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Classic Commerce Support"><?php esc_html_e( 'Classic Commerce support', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares Classic Commerce support.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( ! $theme['has_woocommerce_support'] ) {
