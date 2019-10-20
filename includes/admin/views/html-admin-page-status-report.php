@@ -815,6 +815,19 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				<td><?php echo esc_html( $theme['parent_author_url'] ); ?></td>
 			</tr>
 		<?php endif ?>
+		<tr>
+			<td data-export-label="WooCommerce Support"><?php esc_html_e( 'WooCommerce support', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares WooCommerce support.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td>
+				<?php
+				if ( ! $theme['has_woocommerce_support'] ) {
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Not declared', 'classic-commerce' ) . '</mark>';
+				} else {
+					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
+				}
+				?>
+			</td>
+		</tr>
 	</tbody>
 </table>
 <table class="wc_status_table widefat" cellspacing="0">
