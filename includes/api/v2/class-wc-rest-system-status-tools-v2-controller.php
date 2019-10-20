@@ -181,11 +181,6 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					__( 'This option will delete ALL of your tax rates, use with caution. This action cannot be reversed.', 'classic-commerce' )
 				),
 			),
-			'reset_tracking'                     => array(
-				'name'   => __( 'Reset usage tracking', 'classic-commerce' ),
-				'button' => __( 'Reset', 'classic-commerce' ),
-				'desc'   => __( 'This will reset your usage tracking settings, causing it to show the opt-in banner again and not sending any data.', 'classic-commerce' ),
-			),
 			'regenerate_thumbnails'              => array(
 				'name'   => __( 'Regenerate shop thumbnails', 'classic-commerce' ),
 				'button' => __( 'Regenerate', 'classic-commerce' ),
@@ -529,17 +524,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				WC_Cache_Helper::incr_cache_prefix( 'taxes' );
 				$message = __( 'Tax rates successfully deleted', 'classic-commerce' );
 				break;
-
-			case 'reset_tracking':
-				if ( ! class_exists( 'WC_Tracker' ) ) {
-					include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
-				}
-				WC_Tracker::opt_out_request();
-				delete_option( 'woocommerce_allow_tracking' );
-				WC_Admin_Notices::add_notice( 'tracking' );
-				$message = __( 'Usage tracking settings successfully reset.', 'classic-commerce' );
-				break;
-
+        
 			case 'regenerate_thumbnails':
 				WC_Regenerate_Images::queue_image_regeneration();
 				$message = __( 'Thumbnail regeneration has been scheduled to run in the background.', 'classic-commerce' );
