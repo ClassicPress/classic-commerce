@@ -107,7 +107,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	
 					if ( version_compare( $classicpress_version, $latest_version, '<' ) ) {
 						/* Translators: %1$s: Current version, %2$s: New version */
-						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'woocommerce' ), esc_html( $classicpress_version ), esc_html( $latest_version ) ) . '</mark>';
+						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of ClassicPress available (%2$s)', 'woocommerce' ), esc_html( $classicpress_version ), esc_html( $latest_version ) ) . '</mark>';
 					} else {
 						echo '<mark class="yes">' . esc_html( $classicpress_version ) . '</mark>';
 					}
