@@ -56,7 +56,7 @@ class WC_Admin_Menus {
 			$menu[] = array( '', 'read', 'separator-woocommerce', '', 'wp-menu-separator woocommerce' ); // WPCS: override ok.
 		}
 
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'Classic Commerce', 'classic-commerce' ), 'manage_woocommerce', 'classic-commerce', null, null, '55.5' );
+		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'Classic Commerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, null, '55.5' );
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'classic-commerce' ), __( 'Attributes', 'classic-commerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
