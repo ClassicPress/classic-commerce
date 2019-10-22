@@ -56,7 +56,7 @@ class WC_Admin_Menus {
 			$menu[] = array( '', 'read', 'separator-woocommerce', '', 'wp-menu-separator woocommerce' ); // WPCS: override ok.
 		}
 
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'Classic Commerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, null, '55.5' );
+		add_menu_page( __( 'WooCommerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, null, '55.5' );
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'classic-commerce' ), __( 'Attributes', 'classic-commerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
@@ -161,7 +161,7 @@ class WC_Admin_Menus {
 		global $submenu;
 
 		if ( isset( $submenu['woocommerce'] ) ) {
-			// Remove 'Classic Commerce' sub menu item.
+			// Remove 'WooCommerce' sub menu item.
 			unset( $submenu['woocommerce'][0] );
 
 			$order_count = wc_processing_order_count();
@@ -179,7 +179,7 @@ class WC_Admin_Menus {
 	}
 
 	/**
-	 * Reorder the CC menu items in admin.
+	 * Reorder the WC menu items in admin.
 	 *
 	 * @param int $menu_order Menu order.
 	 * @return array
