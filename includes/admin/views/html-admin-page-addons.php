@@ -12,17 +12,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wrap woocommerce wc_addons_wrap">
 
-		<h1>Extensions for Classic Commerce</h1>
+	<h2><?php esc_html_e( 'Extensions for Classic Commerce', 'classic-commerce' ); ?></h2>
 
-		<p>This is a message and disclaimer about compatability of WooCoomerce extensions with Classic Commerce.</p>
+	<hr>
 
-		<p>They <strong>probably</strong> should still work (?) but you will need to check carefully.</p>
+	<p><?php esc_html_e( 'This is a message and disclaimer about compatability of WooCoomerce extensions with Classic Commerce.', 'classic-commerce' ); ?></p>
 
-		<p>Note that Classic Commerce does not include JetPack integration.</p>
+	<p><?php printf( __( 'Extensions that work with WooCoomerce %1$s in Classic Commerce %2$s' , 'classic-commerce'), '<strong>still work</strong>', '<strong>however the shop owner needs to check carefully for compatibility.</strong>' ); ?></p>
 
-		<p>Maybe include a list here of basic extensions that we know are compatible?</p>
+	<p><?php printf( __( 'Click the link to get a <a href="%s">catalog of WooCommerce Extensions</a>', 'woocommerce' ), 'https://woocommerce.com/product-category/woocommerce-extensions/' ); ?></p>
 
-		<p><?php printf( __( 'A catalog of WooCommerce Extensions can be found here: <a href="%s">WooCommerce Extensions Catalog</a>', 'woocommerce' ), 'https://woocommerce.com/product-category/woocommerce-extensions/' ); ?></p>
+	<p><?php esc_html_e( 'Please note that Classic Commerce does not include JetPack or WooCommerce Services integration.', 'classic-commerce' ); ?></p>
 
 </div>
 
