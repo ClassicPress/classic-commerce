@@ -16,13 +16,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<hr>
 
-	<p><?php esc_html_e( 'This is a message and disclaimer about compatability of WooCoomerce extensions with Classic Commerce.', 'classic-commerce' ); ?></p>
+	<p><?php printf( __( 'Although Classic Commerce is a fork of WooCommerce version 3.5.3, all JetPack and WooCommerce Services integration has been removed.', 'classic-commerce' ), '<strong>Important Note: </strong>' ); ?></p>
 
-	<p><?php printf( __( 'Extensions that work with WooCoomerce %1$s in Classic Commerce %2$s' , 'classic-commerce'), '<strong>still work</strong>', '<strong>however the shop owner needs to check carefully for compatibility.</strong>' ); ?></p>
+	<p><?php esc_html_e( 'Many extensions or plugins designed for WooCommerce will still work with Classic Commerce provided they do not rely on Jetpack or WooCommerce Services.', 'classic-commerce' ); ?></p>
 
-	<p><?php printf( __( 'Click the link to get a <a href="%s">catalog of WooCommerce Extensions</a>', 'woocommerce' ), 'https://woocommerce.com/product-category/woocommerce-extensions/' ); ?></p>
+	<p><strong><?php esc_html_e( 'The end user is entirely responsible for choosing, installing, testing and monitoring any extensions or plugins that are needed to provide extra functionality to the Classic Commerce core.', 'classic-commerce' ); ?></strong></p>
 
-	<p><?php esc_html_e( 'Please note that Classic Commerce does not include JetPack or WooCommerce Services integration.', 'classic-commerce' ); ?></p>
+	<p><?php esc_html_e( 'Before installing and using any extensions or plugins we strongly recommend that you first work in a test environment. If you are working on a live site please ensure that you have a recent backup.', 'classic-commerce' ); ?></p>
+
+	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%1s">ClassicPress community forum</a>. For problems with the Classic Commerce core files please raise an issue via <a href="%2s">Github issues</a>.', 'woocommerce' ), 'https://forums.classicpress.net/c/support/classic-commerce/', 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
+
+	<hr />
+
+	<p><strong><?php esc_html_e( 'GNU General Public License', 'classic-commerce' ); ?></strong></p>
+
+	<p><?php esc_html_e( 'This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation.', 'classic-commerce' ); ?></p>
+
+	<p><?php esc_html_e( 'This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.', 'classic-commerce' ); ?></p>
+
+	<p><?php printf( __( 'You should have received a copy of the GNU General Public License along with this program. If not, see <a href="%1s">www.gnu.org/licenses</a>.', 'woocommerce' ), 'https://www.gnu.org/licenses/' ); ?></p>
+
+	<p></p>
 
 </div>
 
