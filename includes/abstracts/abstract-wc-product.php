@@ -394,7 +394,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Get low stock amount.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return int|string Returns empty string if value not set
 	 */
 	public function get_low_stock_amount( $context = 'view' ) {
@@ -1671,7 +1671,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Returns whether or not the product has additional options that need
 	 * selecting before adding to cart.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function has_options() {
@@ -1714,7 +1714,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * If the stock level comes from another product ID, this should be modified.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_stock_managed_by_id() {
@@ -1757,7 +1757,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get min quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_min_purchase_quantity() {
@@ -1767,7 +1767,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get max quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int Quantity or -1 if unlimited.
 	 */
 	public function get_max_purchase_quantity() {

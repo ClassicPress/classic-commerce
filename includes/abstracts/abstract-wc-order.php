@@ -804,7 +804,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get an order item object, based on its type.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int  $item_id ID of item to get.
 	 * @param  bool $load_from_db Prior to 3.2 this item was loaded direct from WC_Order_Factory, not this object. This param is here for backwards compatility with that. If false, uses the local items variable instead.
 	 * @return WC_Order_Item|false
@@ -838,7 +838,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get key for where a certain item type is stored in _items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $item object Order item (product, shipping, fee, coupon, tax).
 	 * @return string
 	 */
@@ -980,7 +980,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 * Manual discounts are not affected; those are separate and do not affect
 	 * stored line totals.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $code Coupon code.
 	 * @return void
 	 */
@@ -1002,7 +1002,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Apply all coupons in this order again to all line items.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 */
 	protected function recalculate_coupons() {
 		// Reset line item totals.
@@ -1737,7 +1737,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get the discount amount (formatted).
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @param string $tax_display Excl or incl tax display mode.
 	 * @return string
 	 */

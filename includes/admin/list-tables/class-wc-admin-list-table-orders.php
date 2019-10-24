@@ -332,7 +332,7 @@ class WC_Admin_List_Table_Orders extends WC_Admin_List_Table {
 	/**
 	 * Template for order preview.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function order_preview_template() {
 		?>

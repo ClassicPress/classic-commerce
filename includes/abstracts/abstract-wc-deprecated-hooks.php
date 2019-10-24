@@ -3,7 +3,7 @@
  * Abstract deprecated hooks
  *
  * @package WooCommerce\Abstracts
- * @since   3.0.0
+ * @since   WC-3.0.0
  * @version WC-3.3.0
  */
 

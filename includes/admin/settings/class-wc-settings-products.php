@@ -60,7 +60,7 @@ class WC_Settings_Products extends WC_Settings_Page {
 	/**
 	 * Show a notice showing where some options have moved.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @todo remove in next major release.
 	 */
 	private function product_display_settings_moved_notice() {

@@ -5,7 +5,7 @@
  * Houses common functionality between Shipping Zones and Locations.
  *
  * @package  WooCommerce/Abstracts
- * @since    3.0.0
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
