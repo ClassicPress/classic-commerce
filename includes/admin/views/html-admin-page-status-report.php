@@ -109,7 +109,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 						/* Translators: %1$s: Current version, %2$s: New version */
 						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of ClassicPress available (%2$s)', 'classic-commerce' ), esc_html( $classicpress_version ), esc_html( $latest_version ) ) . '</mark>';
 					} else {
-						echo '<mark class="yes">' . sprintf( esc_html__( 'You are running ClassicPress Version: %s', 'classic-commerce' ), esc_html( $classicpress_version ) ) . '</mark>';
+						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running ClassicPress Version %s', 'classic-commerce' ), esc_html( $classicpress_version ) );
 					}
 				} else {
 					$latest_version = get_transient( 'woocommerce_system_status_wp_version_check' );
@@ -130,7 +130,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 						/* Translators: %1$s: Current version, %2$s: New version */
 						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'classic-commerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
 					} else {
-						echo '<mark class="yes">' . sprintf( esc_html__( 'You are running WordPress Version %s', 'classic-commerce' ), esc_html( $environment['wp_version'] ) ) . '</mark>';
+						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running WordPress Version %s', 'classic-commerce' ), esc_html( $environment['wp_version'] ) );
 					}
 				}
 				?>
