@@ -24,7 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'Before installing and using any extensions or plugins we strongly recommend that you first work in a test environment. If you are working on a live site please ensure that you have a recent backup.', 'classic-commerce' ); ?></p>
 
-	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%1s">ClassicPress community forum</a>. For problems with the Classic Commerce core files please raise an issue via <a href="%2s">Github issues</a>.', 'woocommerce' ), 'https://forums.classicpress.net/c/support/classic-commerce/', 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
+	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%s">ClassicPress community forum</a>.', 'woocommerce' ), 'https://forums.classicpress.net/c/support/classic-commerce/' ); ?></p>
+
+	<p><?php printf( __( 'For problems with the Classic Commerce core files please raise an issue via <a href="%s">Github issues</a>.', 'woocommerce' ), 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
 
 	<hr />
 
