@@ -189,7 +189,7 @@ module.exports = function( grunt ) {
 			},
 			dist: {
 				options: {
-					potFilename: 'woocommerce.pot',
+					potFilename: 'classic-commerce.pot',
 					exclude: [
 						'apigen/.*',
 						'vendor/.*',
