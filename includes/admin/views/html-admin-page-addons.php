@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<hr>
 
-	<p><?php printf( __( 'Although Classic Commerce is a fork of WooCommerce version 3.5.3, all JetPack and WooCommerce Services integration has been removed.', 'classic-commerce' ), '<strong>Important Note: </strong>' ); ?></p>
+	<p><?php printf( __( '<strong>Important Note: </strong>Although Classic Commerce is a fork of WooCommerce version 3.5.3, all JetPack and WooCommerce Services integration have been removed.', 'classic-commerce' ), 'classic-commerce' ); ?></p>
 
 	<p><?php esc_html_e( 'Many extensions or plugins designed for WooCommerce will still work with Classic Commerce provided they do not rely on Jetpack or WooCommerce Services.', 'classic-commerce' ); ?></p>
 
@@ -37,8 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<p><?php esc_html_e( 'This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.', 'classic-commerce' ); ?></p>
 
 	<p><?php printf( __( 'You should have received a copy of the GNU General Public License along with this program. If not, see <a href="%1s">www.gnu.org/licenses</a>.', 'woocommerce' ), 'https://www.gnu.org/licenses/' ); ?></p>
-
-	<p></p>
 
 </div>
 
