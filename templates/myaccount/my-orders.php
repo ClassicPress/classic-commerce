@@ -2,7 +2,7 @@
 /**
  * My Orders - Deprecated
  *
- * @deprecated 2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
+ * @deprecated WC-2.6.0 this template file is no longer used. My Account shortcode uses orders.php.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -70,7 +70,7 @@ if ( $customer_orders ) : ?>
 							<?php elseif ( 'order-actions' === $column_id ) : ?>
 								<?php
 								$actions = wc_get_account_orders_actions( $order );
-	
+
 								if ( ! empty( $actions ) ) {
 									foreach ( $actions as $key => $action ) {
 										echo '<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';

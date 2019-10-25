@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Auth
+ * @package Classic Commerce/Templates/Auth
  * @version WC-3.4.0
  */
 

@@ -12,8 +12,8 @@
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.0.0
+ * @package 	Classic Commerce/Templates
+ * @version     WC-2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

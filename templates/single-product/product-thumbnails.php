@@ -11,8 +11,8 @@
  * the readme will list any important changes.
  *
  * @see         https://docs.woocommerce.com/document/template-structure/
- * @package     WooCommerce/Templates
- * @version     3.5.1
+ * @package     Classic Commerce/Templates
+ * @version     WC-3.5.1
  */
 
 defined( 'ABSPATH' ) || exit;

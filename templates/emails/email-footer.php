@@ -12,8 +12,8 @@
  *
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
- * @package 	WooCommerce/Templates/Emails
- * @version     2.3.0
+ * @package 	Classic Commerce/Templates/Emails
+ * @version     WC-2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
