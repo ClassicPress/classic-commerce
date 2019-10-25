@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.2
+ * @since       WC-2.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

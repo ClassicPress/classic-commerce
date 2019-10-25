@@ -761,7 +761,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Return the order type of a given item which belongs to WC_Order.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  WC_Order $order Order Object.
 	 * @param  int      $order_item_id Order item id.
 	 * @return string Order Item type

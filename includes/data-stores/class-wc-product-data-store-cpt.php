@@ -1041,7 +1041,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	/**
 	 * Find a matching (enabled) variation within a variable product.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product $product Variable product.
 	 * @param  array      $match_attributes Array of attributes we want to try to match.
 	 * @return int Matching variation ID or 0.
@@ -1218,7 +1218,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	 *
 	 * Uses queries rather than update_post_meta so we can do this in one query (to avoid stock issues).
 	 *
-	 * @since  3.0.0 this supports set, increase and decrease.
+	 * @since  WC-3.0.0 this supports set, increase and decrease.
 	 * @param  int      $product_id_with_stock Product ID.
 	 * @param  int|null $stock_quantity Stock quantity.
 	 * @param  string   $operation Set, increase and decrease.
@@ -1263,7 +1263,7 @@ class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Da
 	 *
 	 * Uses queries rather than update_post_meta so we can do this in one query for performance.
 	 *
-	 * @since  3.0.0 this supports set, increase and decrease.
+	 * @since  WC-3.0.0 this supports set, increase and decrease.
 	 * @param  int      $product_id Product ID.
 	 * @param  int|null $quantity Quantity.
 	 * @param  string   $operation set, increase and decrease.

@@ -75,7 +75,7 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
@@ -85,7 +85,7 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {

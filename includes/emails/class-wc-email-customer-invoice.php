@@ -49,7 +49,7 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		 * Get email subject.
 		 *
 		 * @param bool $paid Whether the order has been paid or not.
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject( $paid = false ) {
@@ -64,7 +64,7 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 		 * Get email heading.
 		 *
 		 * @param bool $paid Whether the order has been paid or not.
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading( $paid = false ) {

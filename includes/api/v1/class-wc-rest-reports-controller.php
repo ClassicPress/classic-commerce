@@ -7,7 +7,7 @@
  * @author   WooThemes
  * @category API
  * @package  WooCommerce/API
- * @since    3.0.0
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -68,7 +68,7 @@ class WC_REST_Reports_V1_Controller extends WC_REST_Controller {
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {

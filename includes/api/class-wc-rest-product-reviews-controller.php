@@ -5,7 +5,7 @@
  * Handles requests to /products/reviews.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since  WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -298,7 +298,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		/**
 		 * Filters arguments, before passing to WP_Comment_Query, when querying reviews via the REST API.
 		 *
-		 * @since 3.5.0
+		 * @since  WC-3.5.0
 		 * @link https://developer.wordpress.org/reference/classes/wp_comment_query/
 		 * @param array           $prepared_args Array of arguments for WP_Comment_Query.
 		 * @param WP_REST_Request $request       The current request.
@@ -445,7 +445,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		 * Returning a WP_Error value from the filter will shortcircuit insertion and allow
 		 * skipping further processing.
 		 *
-		 * @since 3.5.0
+		 * @since  WC-3.5.0
 		 * @param array|WP_Error  $prepared_review The prepared review data for wp_insert_comment().
 		 * @param WP_REST_Request $request          Request used to insert the review.
 		 */
@@ -617,7 +617,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		 *
 		 * Return false to disable trash support for the post.
 		 *
-		 * @since 3.5.0
+		 * @since  WC-3.5.0
 		 * @param bool       $supports_trash Whether the post type support trashing.
 		 * @param WP_Comment $review         The review object being considered for trashing support.
 		 */
@@ -777,7 +777,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		 *
 		 * Allows modification of the review right after it is prepared for the database.
 		 *
-		 * @since 3.5.0
+		 * @since  WC-3.5.0
 		 * @param array           $prepared_review The prepared review data for `wp_insert_comment`.
 		 * @param WP_REST_Request $request         The current request.
 		 */
@@ -1025,7 +1025,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 		 * collection parameter to an internal WP_Comment_Query parameter. Use the
 		 * `wc_rest_review_query` filter to set WP_Comment_Query parameters.
 		 *
-		 * @since 3.5.0
+		 * @since  WC-3.5.0
 		 * @param array $params JSON Schema-formatted collection parameters.
 		 */
 		return apply_filters( 'woocommerce_rest_product_review_collection_params', $params );
@@ -1034,7 +1034,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 	/**
 	 * Get the reivew, if the ID is valid.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @param int $id Supplied ID.
 	 * @return WP_Comment|WP_Error Comment object if ID is valid, WP_Error otherwise.
 	 */
@@ -1065,7 +1065,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 	/**
 	 * Prepends internal property prefix to query parameters to match our response fields.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @param string $query_param Query parameter.
 	 * @return string
 	 */
@@ -1093,7 +1093,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 	/**
 	 * Checks comment_approved to set comment status for single comment output.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @param string|int $comment_approved comment status.
 	 * @return string Comment status.
 	 */
@@ -1120,7 +1120,7 @@ class WC_REST_Product_Reviews_Controller extends WC_REST_Controller {
 	/**
 	 * Sets the comment_status of a given review object when creating or updating a review.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @param string|int $new_status New review status.
 	 * @param int        $id         Review ID.
 	 * @return bool Whether the status was changed.

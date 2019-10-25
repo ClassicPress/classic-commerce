@@ -5,7 +5,7 @@
  * Handles requests to the /reports/orders/count endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Report_Orders_Totals_Controller extends WC_REST_Reports_Controller
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {

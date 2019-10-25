@@ -61,7 +61,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Should meta be exported?
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param bool $enable_meta_export Should meta be exported.
 	 */
 	public function enable_meta_export( $enable_meta_export ) {
@@ -71,7 +71,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Product types to export.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param array $product_types_to_export List of types to export.
 	 */
 	public function set_product_types_to_export( $product_types_to_export ) {
@@ -81,7 +81,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Product category to export
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @param string $product_category_to_export Product category slug to export, empty string exports all.
 	 * @return void
 	 */
@@ -92,7 +92,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Return an array of columns to export.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @return array
 	 */
 	public function get_default_column_names() {
@@ -146,7 +146,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Prepare data for export.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 */
 	public function prepare_data_to_export() {
 		$args = array(
@@ -243,7 +243,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get published value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return int
 	 */
@@ -282,7 +282,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get product_cat value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -294,7 +294,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get product_tag value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -306,7 +306,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get product_shipping_class value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -318,7 +318,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get images value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -340,7 +340,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Prepare linked products for export.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param int[] $linked_products Array of linked product ids.
 	 * @return string
 	 */
@@ -361,7 +361,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get cross_sell_ids value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -372,7 +372,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get upsell_ids value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -383,7 +383,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get parent_id value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -402,7 +402,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get grouped_products value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -427,7 +427,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get download_limit value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -438,7 +438,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get download_expiry value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -449,7 +449,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get stock value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -469,7 +469,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get stock status value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -486,7 +486,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get backorders.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -505,7 +505,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	 * Get low stock amount value.
 	 *
 	 * @param WC_Product $product Product being exported.
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return int|string Empty string if value not set
 	 */
 	protected function get_column_value_low_stock_amount( $product ) {
@@ -515,7 +515,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Get type value.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @return string
 	 */
@@ -537,7 +537,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Export downloads.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @param array      $row     Row being exported.
 	 */
@@ -563,7 +563,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Export attributes data.
 	 *
-	 * @since 3.1.0
+	 * @since  WC-3.1.0
 	 * @param  WC_Product $product Product being exported.
 	 * @param  array      $row     Row being exported.
 	 */
@@ -639,7 +639,7 @@ class WC_Product_CSV_Exporter extends WC_CSV_Batch_Exporter {
 	/**
 	 * Export meta data.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param WC_Product $product Product being exported.
 	 * @param array      $row Row data.
 	 */

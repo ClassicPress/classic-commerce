@@ -5,7 +5,7 @@
  * Handles requests to the reports endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ class WC_REST_Reports_Controller extends WC_REST_Reports_V2_Controller {
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {

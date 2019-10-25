@@ -5,7 +5,7 @@
  * Handles requests to the /orders/<order_id>/notes endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

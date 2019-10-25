@@ -228,7 +228,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 	/**
 	 * Method to delete a download permission from the database by user ID.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param int $id user ID of the downloads that will be deleted.
 	 * @return bool True if deleted rows.
 	 */
@@ -246,7 +246,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 	/**
 	 * Method to delete a download permission from the database by user email.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $email email of the downloads that will be deleted.
 	 * @return bool True if deleted rows.
 	 */

@@ -5,7 +5,7 @@
  * Handles requests to the /customers endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ class WC_REST_Customers_V2_Controller extends WC_REST_Customers_V1_Controller {
 	/**
 	 * Get formatted item data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data $object WC_Data instance.
 	 * @return array
 	 */

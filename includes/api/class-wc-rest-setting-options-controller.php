@@ -5,7 +5,7 @@
  * Handles requests to the /settings/$group/$setting endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -127,7 +127,7 @@ class WC_REST_Setting_Options_Controller extends WC_REST_Setting_Options_V2_Cont
 	/**
 	 * Returns a list of countries and states for use in the base location setting.
 	 *
-	 * @since  3.0.7
+	 * @since  WC-3.0.7
 	 * @return array Array of states and countries.
 	 */
 	private function get_countries_and_states() {

@@ -5,7 +5,7 @@
  * Handles requests to the /data endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Data_Controller extends WC_REST_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -81,7 +81,7 @@ class WC_REST_Data_Controller extends WC_REST_Controller {
 	/**
 	 * Return the list of data resources.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -155,7 +155,7 @@ class WC_REST_Data_Controller extends WC_REST_Controller {
 	/**
 	 * Get the data index schema, conforming to JSON Schema.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	public function get_item_schema() {

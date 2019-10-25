@@ -44,7 +44,7 @@ class WC_Product_Grouped_Data_Store_CPT extends WC_Product_Data_Store_CPT implem
 	/**
 	 * Handle updated meta props after updating meta data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product $product Product object.
 	 */
 	protected function handle_updated_props( &$product ) {

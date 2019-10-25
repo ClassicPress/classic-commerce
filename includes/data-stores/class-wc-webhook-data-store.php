@@ -18,7 +18,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Create a new webhook in the database.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param WC_Webhook $webhook Webhook instance.
 	 */
 	public function create( &$webhook ) {
@@ -67,7 +67,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Read a webhook from the database.
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @param  WC_Webhook $webhook Webhook instance.
 	 * @throws Exception When webhook is invalid.
 	 */
@@ -110,7 +110,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Update a webhook.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param WC_Webhook $webhook Webhook instance.
 	 */
 	public function update( &$webhook ) {
@@ -165,7 +165,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Remove a webhook from the database.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param WC_Webhook $webhook      Webhook instance.
 	 * @param bool       $force_delete Skip trash bin forcing to delete.
 	 */
@@ -188,7 +188,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Get API version number.
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @param  string $api_version REST API version.
 	 * @return int
 	 */
@@ -199,7 +199,7 @@ class WC_Webhook_Data_Store implements WC_Webhook_Data_Store_Interface {
 	/**
 	 * Get all webhooks IDs.
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @return int[]
 	 */
 	public function get_webhooks_ids() {

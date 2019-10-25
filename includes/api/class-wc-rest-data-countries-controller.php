@@ -5,7 +5,7 @@
  * Handles requests to the /data/countries endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Data_Countries_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -103,7 +103,7 @@ class WC_REST_Data_Countries_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of states for all countries.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -123,7 +123,7 @@ class WC_REST_Data_Countries_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of states for a given country.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -138,7 +138,7 @@ class WC_REST_Data_Countries_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Prepare the data object for response.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param object          $item Data object.
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_REST_Response $response Response data.
@@ -186,7 +186,7 @@ class WC_REST_Data_Countries_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Get the location schema, conforming to JSON Schema.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	public function get_item_schema() {

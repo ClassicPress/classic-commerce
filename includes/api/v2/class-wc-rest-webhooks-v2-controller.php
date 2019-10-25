@@ -5,7 +5,7 @@
  * Handles requests to the /webhooks endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -76,7 +76,7 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 	/**
 	 * Get the default REST API version.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_default_api_version() {

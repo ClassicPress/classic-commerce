@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  * @version     3.0
  */
 
@@ -694,7 +694,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product category.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product category if succeed, otherwise WP_Error
 	 *                              will be returned
@@ -770,7 +770,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product category.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id   Product category term ID
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product category if succeed, otherwise WP_Error
@@ -841,7 +841,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product category.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id Product category term ID
 	 * @return array|WP_Error     Success message if succeed, otherwise WP_Error
 	 *                            will be returned
@@ -877,7 +877,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get a listing of product tags.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 *
 	 * @param  string|null $fields Fields to limit response to
 	 *
@@ -907,7 +907,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product tag for the given ID.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 *
 	 * @param  string $id          Product tag term ID
 	 * @param  string|null $fields Fields to limit response to
@@ -953,7 +953,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product tag.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product tag if succeed, otherwise WP_Error
 	 *                              will be returned
@@ -997,7 +997,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product tag.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id   Product tag term ID
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product tag if succeed, otherwise WP_Error
@@ -1040,7 +1040,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product tag.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id Product tag term ID
 	 * @return array|WP_Error     Success message if succeed, otherwise WP_Error
 	 *                            will be returned
@@ -1300,7 +1300,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get grouped products data
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  WC_Product $product
 	 *
 	 * @return array
@@ -1383,7 +1383,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save product meta.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  WC_Product $product
 	 * @param  array $data
 	 * @return WC_Product
@@ -1763,7 +1763,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save variations.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 *
 	 * @param  WC_Product $product
 	 * @param  array $request
@@ -2133,7 +2133,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save product images.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  WC_Product $product
 	 * @param  array $images
 	 * @throws WC_API_Exception
@@ -2311,7 +2311,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Sets uploaded category image as attachment and returns the attachment ID.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  integer $upload Upload information from wp_upload_bits
 	 * @return int             Attachment ID
 	 */
@@ -2322,7 +2322,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Set uploaded image as attachment.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  array $upload Upload information from wp_upload_bits
 	 * @param  int   $id     Post ID. Default to 0.
 	 * @return int           Attachment ID
@@ -2530,7 +2530,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Validate attribute data.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  string $name
 	 * @param  string $slug
 	 * @param  string $type
@@ -2735,7 +2735,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product attribute.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 *
 	 * @param  int $id the product attribute ID.
 	 *
@@ -3033,7 +3033,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product attribute term.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 *
 	 * @param int $attribute_id Attribute ID.
 	 * @param int $id the product attribute ID.
@@ -3180,7 +3180,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get a listing of product shipping classes.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  string|null    $fields Fields to limit response to
 	 * @return array|WP_Error         List of product shipping classes if succeed,
 	 *                                otherwise WP_Error will be returned
@@ -3209,7 +3209,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get the product shipping class for the given ID.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  string         $id     Product shipping class term ID
 	 * @param  string|null    $fields Fields to limit response to
 	 * @return array|WP_Error         Product shipping class if succeed, otherwise
@@ -3253,7 +3253,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Create a new product shipping class.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product shipping class if succeed, otherwise
 	 *                              WP_Error will be returned
@@ -3310,7 +3310,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Edit a product shipping class.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id   Product shipping class term ID
 	 * @param  array          $data Posted data
 	 * @return array|WP_Error       Product shipping class if succeed, otherwise
@@ -3355,7 +3355,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product shipping class.
 	 *
-	 * @since  2.5.0
+	 * @since  WC-2.5.0
 	 * @param  int            $id Product shipping class term ID
 	 * @return array|WP_Error     Success message if succeed, otherwise WP_Error
 	 *                            will be returned

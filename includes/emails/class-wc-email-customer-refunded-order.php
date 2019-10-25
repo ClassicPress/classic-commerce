@@ -65,7 +65,7 @@ if ( ! class_exists( 'WC_Email_Customer_Refunded_Order', false ) ) :
 		 * Get email subject.
 		 *
 		 * @param bool $partial Whether it is a partial refund or a full refund.
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject( $partial = false ) {
@@ -80,7 +80,7 @@ if ( ! class_exists( 'WC_Email_Customer_Refunded_Order', false ) ) :
 		 * Get email heading.
 		 *
 		 * @param bool $partial Whether it is a partial refund or a full refund.
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading( $partial = false ) {
