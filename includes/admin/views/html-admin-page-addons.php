@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<hr>
 
-	<p><?php printf( __( '<strong>Important Note: </strong>Although Classic Commerce is a fork of WooCommerce version 3.5.3, all JetPack and WooCommerce Services integration have been removed.', 'classic-commerce' ), 'classic-commerce' ); ?></p>
+	<p><?php printf( __( '<strong>Important Note: </strong>Although Classic Commerce is a fork of WooCommerce version 3.5.3, all JetPack and WooCommerce Services integration have been removed.', 'classic-commerce' ) ); ?></p>
 
 	<p><?php esc_html_e( 'Many extensions or plugins designed for WooCommerce will still work with Classic Commerce provided they do not rely on Jetpack or WooCommerce Services.', 'classic-commerce' ); ?></p>
 
