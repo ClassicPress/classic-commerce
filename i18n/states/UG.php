@@ -4,7 +4,7 @@
  *
  * Based on English names published at https://en.wikipedia.org/wiki/ISO_3166-2:UG
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version 2.0.0
  */
 global $states;

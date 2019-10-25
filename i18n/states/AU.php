@@ -2,7 +2,7 @@
 /**
  * Australian states
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-2.0.0
  */
 

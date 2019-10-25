@@ -2,7 +2,7 @@
 /**
  * Greek Regions
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-2.3.0
  */
 

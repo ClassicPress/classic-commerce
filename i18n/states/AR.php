@@ -2,7 +2,7 @@
 /**
  * Argentinian provinces
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-2.4.0
  */
 

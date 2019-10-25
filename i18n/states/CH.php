@@ -2,7 +2,7 @@
 /**
  * Cantons of Switzerland
  *
- * @package  WooCommerce/i18n
+ * @package  Classic Commerce/i18n
  * @version  3.2.0
  */
 
