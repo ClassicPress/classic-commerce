@@ -2,7 +2,7 @@
 /**
  * Brazillian states
  *
- * @package WooCommerce/i18n
+ * @package Classic/i18n
  * @version WC-2.0.0
  */
 

@@ -2,7 +2,7 @@
 /**
  * Pakistan's states
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-3.0.0
  */
 
