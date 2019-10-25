@@ -183,13 +183,13 @@ module.exports = function( grunt ) {
 				type: 'wp-plugin',
 				domainPath: 'i18n/languages',
 				potHeaders: {
-					'report-msgid-bugs-to': 'https://github.com/woocommerce/woocommerce/issues',
+					'report-msgid-bugs-to': 'https://github.com/ClassicPress-Research/classic-commerce/issues',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 				}
 			},
 			dist: {
 				options: {
-					potFilename: 'woocommerce.pot',
+					potFilename: 'classic-commerce.pot',
 					exclude: [
 						'apigen/.*',
 						'vendor/.*',
