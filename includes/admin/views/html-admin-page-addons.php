@@ -24,9 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'Before installing and using any extensions or plugins we strongly recommend that you first work in a test environment. If you are working on a live site please ensure that you have a recent backup.', 'classic-commerce' ); ?></p>
 
-	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%s">ClassicPress community forum</a>.', 'woocommerce' ), 'https://forums.classicpress.net/c/support/classic-commerce/' ); ?></p>
+	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%s">ClassicPress community forum</a>.', 'classic-commerce' ), 'https://forums.classicpress.net/c/support/classic-commerce/' ); ?></p>
 
-	<p><?php printf( __( 'For problems with the Classic Commerce core files please raise an issue via <a href="%s">Github issues</a>.', 'woocommerce' ), 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
+	<p><?php printf( __( 'For problems with the Classic Commerce core files please raise an issue via <a href="%s">Github issues</a>.', 'classic-commerce' ), 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
 
 	<hr />
 
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.', 'classic-commerce' ); ?></p>
 
-	<p><?php printf( __( 'You should have received a copy of the GNU General Public License along with this program. If not, see <a href="%1s">www.gnu.org/licenses</a>.', 'woocommerce' ), 'https://www.gnu.org/licenses/' ); ?></p>
+	<p><?php printf( __( 'You should have received a copy of the GNU General Public License along with this program. If not, see <a href="%1s">www.gnu.org/licenses</a>.', 'classic-commerce' ), 'https://www.gnu.org/licenses/' ); ?></p>
 
 </div>
 
