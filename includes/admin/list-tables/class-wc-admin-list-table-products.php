@@ -310,7 +310,7 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 	/**
 	 * Render the product category filter for the list table.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	protected function render_products_category_filter() {
 		$categories_count = (int) wp_count_terms( 'product_cat' );
@@ -338,7 +338,7 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 	/**
 	 * Render the product type filter for the list table.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	protected function render_products_type_filter() {
 		$current_product_type = isset( $_REQUEST['product_type'] ) ? wc_clean( wp_unslash( $_REQUEST['product_type'] ) ) : false; // WPCS: input var ok, sanitization ok.
@@ -368,7 +368,7 @@ class WC_Admin_List_Table_Products extends WC_Admin_List_Table {
 	/**
 	 * Render the stock status filter for the list table.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function render_products_stock_status_filter() {
 		$current_stock_status = isset( $_REQUEST['stock_status'] ) ? wc_clean( wp_unslash( $_REQUEST['stock_status'] ) ) : false; // WPCS: input var ok, sanitization ok.

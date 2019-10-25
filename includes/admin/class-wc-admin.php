@@ -218,7 +218,7 @@ class WC_Admin {
 	/**
 	 * Change the admin footer text on Classic Commerce admin pages.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @param  string $footer_text
 	 * @return string
 	 */

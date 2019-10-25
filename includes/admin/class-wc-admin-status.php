@@ -140,7 +140,7 @@ class WC_Admin_Status {
 	/**
 	 * Retrieve metadata from a file. Based on WP Core's get_file_data function.
 	 *
-	 * @since  2.1.1
+	 * @since  WC-2.1.1
 	 * @param  string $file Path to the file.
 	 * @return string
 	 */

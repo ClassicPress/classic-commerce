@@ -2,7 +2,7 @@
 /**
  * WooCommerce abstract privacy class.
  *
- * @since 3.4.0
+ * @since WC-3.4.0
  * @package WooCommerce/Abstracts
  */
 

@@ -143,7 +143,7 @@ class WC_Meta_Box_Order_Actions {
 	 * Set the correct message ID.
 	 *
 	 * @param string $location Location.
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @static
 	 * @return string
 	 */

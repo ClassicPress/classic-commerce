@@ -529,7 +529,7 @@ abstract class WC_Payment_Gateway extends WC_Settings_API {
 	/**
 	 * Add payment method via account screen. This should be extended by gateway plugins.
 	 *
-	 * @since WC-3.2.0 Included here from 3.2.0, but supported from 3.0.0.
+	 * @since WC-3.2.0 Included here from WC-3.2.0, but supported from WC-3.0.0.
 	 * @return array
 	 */
 	public function add_payment_method() {

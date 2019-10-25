@@ -658,7 +658,7 @@ class WC_Admin_Report {
 	/**
 	 * Check nonce for current range.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @param  string $current_range Current range.
 	 */
 	public function check_current_range_nonce( $current_range ) {

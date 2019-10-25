@@ -220,7 +220,7 @@ if ( ! class_exists( 'WC_Admin_Profile', false ) ) :
 		/**
 		 * Get user meta for a given key, with fallbacks to core user info for pre-existing fields.
 		 *
-		 * @since 3.1.0
+		 * @since WC-3.1.0
 		 * @param int    $user_id User ID of the user being edited
 		 * @param string $key     Key for user meta field
 		 * @return string
