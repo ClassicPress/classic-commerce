@@ -92,7 +92,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * When this gateway is toggled on via AJAX, if this returns true a
 	 * redirect will occur to the settings page instead.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @return bool
 	 */
 	public function needs_setup() {
@@ -436,7 +436,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	/**
 	 * Load admin scripts.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function admin_scripts() {
 		$screen    = get_current_screen();

@@ -741,7 +741,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	 * Explode CSV cell values using commas by default, and handling escaped
 	 * separators.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $value Value to explode.
 	 * @return array
 	 */
@@ -756,7 +756,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	/**
 	 * Remove formatting and trim each value.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $value Value to format.
 	 * @return string
 	 */
@@ -769,7 +769,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	 * issues with negative numbers. This removes the ' if the input is still a valid
 	 * number after removal.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param string $value A numeric string that may or may not have ' prepended.
 	 * @return string
 	 */

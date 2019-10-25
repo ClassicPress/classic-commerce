@@ -283,7 +283,7 @@ abstract class WC_Abstract_Legacy_Order extends WC_Data {
 	 * Update tax line on order.
 	 * Note this does not update order totals.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 * @param object|int $item
 	 * @param array $args
 	 * @return int updated order item ID
