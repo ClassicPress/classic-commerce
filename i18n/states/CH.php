@@ -3,7 +3,7 @@
  * Cantons of Switzerland
  *
  * @package  Classic Commerce/i18n
- * @version  3.2.0
+ * @version  WC-3.2.0
  */
 
 global $states;
