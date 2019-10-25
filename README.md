@@ -1,8 +1,10 @@
 <!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
 
-Welcome to the ClassicCommerce repository on GitHub. This is a Fork of Woocommerce and is still in development. 
+Welcome to the Classic Commerce repository on GitHub. This is a Fork of Woocommerce and is still in development. 
 
-Here you can browse the source, look at open issues and keep track of development. 
+Classic Commerce is a simple, powerful and independent e-commerce platform. Sell anything with ease.
+
+You can browse the source, look at open issues and keep track of development here. 
 
 We recommend all developers to follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 
