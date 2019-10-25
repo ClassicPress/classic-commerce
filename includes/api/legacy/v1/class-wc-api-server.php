@@ -10,7 +10,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  * @version     2.1
  */
 

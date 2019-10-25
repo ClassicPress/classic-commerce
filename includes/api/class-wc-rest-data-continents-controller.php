@@ -5,7 +5,7 @@
  * Handles requests to the /data/continents endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -69,7 +69,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of countries and states for a given continent.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  string          $continent_code Continent code.
 	 * @param  WP_REST_Request $request        Request data.
 	 * @return array|mixed Response data, ready for insertion into collection data.
@@ -155,7 +155,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of states for all continents.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -175,7 +175,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of locations for a given continent.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -190,7 +190,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Prepare the data object for response.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param object          $item Data object.
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_REST_Response $response Response data.
@@ -236,7 +236,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Get the location schema, conforming to JSON Schema.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	public function get_item_schema() {

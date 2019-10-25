@@ -328,7 +328,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Get email subject.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @return string
 	 */
 	public function get_default_subject() {
@@ -338,7 +338,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Get email heading.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @return string
 	 */
 	public function get_default_heading() {

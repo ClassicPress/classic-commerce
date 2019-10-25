@@ -5,7 +5,7 @@
  * Handles requests to the /coupons endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -123,7 +123,7 @@ class WC_REST_Coupons_V2_Controller extends WC_REST_Legacy_Coupons_Controller {
 	/**
 	 * Get object.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $id Object ID.
 	 * @return WC_Data
 	 */
@@ -134,7 +134,7 @@ class WC_REST_Coupons_V2_Controller extends WC_REST_Legacy_Coupons_Controller {
 	/**
 	 * Get formatted item data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data $object WC_Data instance.
 	 * @return array
 	 */
@@ -196,7 +196,7 @@ class WC_REST_Coupons_V2_Controller extends WC_REST_Legacy_Coupons_Controller {
 	/**
 	 * Prepare a single coupon output for response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data         $object  Object data.
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_REST_Response
@@ -225,7 +225,7 @@ class WC_REST_Coupons_V2_Controller extends WC_REST_Legacy_Coupons_Controller {
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */

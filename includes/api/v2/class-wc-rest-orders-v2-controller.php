@@ -5,7 +5,7 @@
  * Handles requests to the /orders endpoint.
  *
  * @package  WooCommerce/API
- * @since    2.6.0
+ * @since    WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -129,7 +129,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 	/**
 	 * Get object. Return false if object is not of required type.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $id Object ID.
 	 * @return WC_Data|bool
 	 */
@@ -197,7 +197,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 	/**
 	 * Get formatted item data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data $object WC_Data instance.
 	 * @return array
 	 */
@@ -285,7 +285,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 	/**
 	 * Prepare a single order output for response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data         $object  Object data.
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_REST_Response
@@ -348,7 +348,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */
@@ -504,7 +504,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 	/**
 	 * Save an object data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @throws WC_REST_Exception But all errors are validated before returning any data.
 	 * @param  WP_REST_Request $request  Full details about the request.
 	 * @param  bool            $creating If is creating a new object.

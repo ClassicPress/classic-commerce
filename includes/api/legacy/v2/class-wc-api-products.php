@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  * @version     3.0
  */
 
@@ -893,7 +893,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save product meta
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  WC_Product $product
 	 * @param  array $data
 	 * @return WC_Product
@@ -1269,7 +1269,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save variations
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  WC_Product $product
 	 * @param  array $request
 	 *
@@ -1629,7 +1629,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Save product images
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 *
 	 * @param WC_Product $product
 	 * @param array      $images
@@ -1687,7 +1687,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Upload image from URL
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 *
 	 * @param  string $image_url
 	 *
@@ -1972,7 +1972,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Validate attribute data.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  string $name
 	 * @param  string $slug
 	 * @param  string $type
@@ -2175,7 +2175,7 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Delete a product attribute
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 *
 	 * @param  int $id the product attribute ID
 	 *
@@ -2238,7 +2238,7 @@ class WC_API_Products extends WC_API_Resource {
 	 *
 	 * @deprecated 2.4.0
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 *
 	 * @param  int    $sku the product SKU
 	 * @param  string $fields

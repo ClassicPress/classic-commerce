@@ -5,7 +5,7 @@
  * Handles requests to the /reports/reviews/count endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Report_Reviews_Totals_Controller extends WC_REST_Reports_Controlle
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {

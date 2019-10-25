@@ -5,7 +5,7 @@
  * Handles requests to the /settings endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -70,7 +70,7 @@ class WC_REST_Settings_Controller extends WC_REST_Settings_V2_Controller {
 	/**
 	 * Get the groups schema, conforming to JSON Schema.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public function get_item_schema() {

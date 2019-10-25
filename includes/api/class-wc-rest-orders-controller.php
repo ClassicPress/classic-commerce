@@ -5,7 +5,7 @@
  * Handles requests to the /orders endpoint.
  *
  * @package  WooCommerce/API
- * @since    2.6.0
+ * @since    WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -137,7 +137,7 @@ class WC_REST_Orders_Controller extends WC_REST_Orders_V2_Controller {
 	/**
 	 * Save an object data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @throws WC_REST_Exception But all errors are validated before returning any data.
 	 * @param  WP_REST_Request $request  Full details about the request.
 	 * @param  bool            $creating If is creating a new object.
@@ -205,7 +205,7 @@ class WC_REST_Orders_Controller extends WC_REST_Orders_V2_Controller {
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */

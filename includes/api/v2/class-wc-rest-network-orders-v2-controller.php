@@ -5,7 +5,7 @@
  * Handles requests to the /orders/network endpoint
  *
  * @package  WooCommerce/API
- * @since    3.4.0
+ * @since    WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

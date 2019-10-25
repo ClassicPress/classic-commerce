@@ -226,7 +226,7 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 	/**
 	 * Method to delete download logs for a given permission ID.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param int $id download_id of the downloads that will be deleted.
 	 */
 	public function delete_by_permission_id( $id ) {

@@ -5,7 +5,7 @@
  * Handles requests to the /products/<product_id>/variations endpoints.
  *
  * @package WooCommerce\API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -141,7 +141,7 @@ class WC_REST_Product_Variations_V2_Controller extends WC_REST_Products_V2_Contr
 	/**
 	 * Get object.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $id Object ID.
 	 * @return WC_Data
 	 */
@@ -173,7 +173,7 @@ class WC_REST_Product_Variations_V2_Controller extends WC_REST_Products_V2_Contr
 	/**
 	 * Prepare a single variation output for response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data         $object  Object data.
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_REST_Response
@@ -247,7 +247,7 @@ class WC_REST_Product_Variations_V2_Controller extends WC_REST_Products_V2_Contr
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */
@@ -586,7 +586,7 @@ class WC_REST_Product_Variations_V2_Controller extends WC_REST_Products_V2_Contr
 	/**
 	 * Bulk create, update and delete items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return array Of WP_Error or WP_REST_Response.
 	 */

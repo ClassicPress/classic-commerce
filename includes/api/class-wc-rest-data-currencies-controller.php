@@ -5,7 +5,7 @@
  * Handles requests to the /data/currencies endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;

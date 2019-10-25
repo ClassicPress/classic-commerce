@@ -59,7 +59,7 @@ if ( ! class_exists( 'WC_Email_New_Order' ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
@@ -69,7 +69,7 @@ if ( ! class_exists( 'WC_Email_New_Order' ) ) :
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {

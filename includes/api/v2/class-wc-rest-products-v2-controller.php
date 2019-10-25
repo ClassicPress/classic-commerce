@@ -5,7 +5,7 @@
  * Handles requests to the /products endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -133,7 +133,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Get object.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $id Object ID.
 	 * @return WC_Data
 	 */
@@ -144,7 +144,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Prepare a single product output for response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data         $object  Object data.
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_REST_Response
@@ -184,7 +184,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Prepare objects query.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Full details about the request.
 	 * @return array
 	 */
@@ -435,7 +435,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Get product attribute taxonomy name.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string     $slug    Taxonomy name.
 	 * @param  WC_Product $product Product data.
 	 * @return string
