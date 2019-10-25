@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woocommerce/woocommerce/issues\n"
-"POT-Creation-Date: 2019-10-20 13:40:27+00:00\n"
+"POT-Creation-Date: 2019-10-25 13:07:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7157,6 +7157,7 @@ msgid "You do not have permission to revoke API Keys"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:84
+#: includes/admin/class-wc-admin-menus.php:59
 #: includes/admin/helper/class-wc-helper.php:448
 #: includes/admin/helper/class-wc-helper.php:591
 #: includes/admin/helper/class-wc-helper.php:1329
@@ -27235,7 +27236,9 @@ msgid "https://github.com/ClassicPress-research/classic-commerce"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "An eCommerce toolkit that helps you sell anything. Beautifully."
+msgid ""
+"A simple, powerful and independent e-commerce platform. Sell anything with "
+"ease."
 msgstr ""
 
 #. Author of the plugin/theme
