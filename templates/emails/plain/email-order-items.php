@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author 	WooThemes
+ * @author  WooThemes
  * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.2.0
  */
