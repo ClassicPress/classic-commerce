@@ -18,9 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				array(
 					'id'          => '_sku',
 					'value'       => $product_object->get_sku( 'edit' ),
-					'label'       => '<abbr title="' . esc_attr__( 'Stock Keeping Unit', 'woocommerce' ) . '">' . esc_html__( 'SKU', 'woocommerce' ) . '</abbr>',
+					'label'       => '<abbr title="' . esc_attr__( 'Stock Keeping Unit', 'classic-commerce' ) . '">' . esc_html__( 'SKU', 'classic-commerce' ) . '</abbr>',
 					'desc_tip'    => true,
-					'description' => __( 'SKU refers to a Stock-keeping unit, a unique identifier for each distinct product and service that can be purchased.', 'woocommerce' ),
+					'description' => __( 'SKU refers to a Stock-keeping unit, a unique identifier for each distinct product and service that can be purchased.', 'classic-commerce' ),
 				)
 			);
 		}
@@ -34,8 +34,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 					'id'            => '_manage_stock',
 					'value'         => $product_object->get_manage_stock( 'edit' ) ? 'yes' : 'no',
 					'wrapper_class' => 'show_if_simple show_if_variable',
-					'label'         => __( 'Manage stock?', 'woocommerce' ),
-					'description'   => __( 'Enable stock management at product level', 'woocommerce' ),
+					'label'         => __( 'Manage stock?', 'classic-commerce' ),
+					'description'   => __( 'Enable stock management at product level', 'classic-commerce' ),
 				)
 			);
 
@@ -47,9 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				array(
 					'id'                => '_stock',
 					'value'             => wc_stock_amount( $product_object->get_stock_quantity( 'edit' ) ),
-					'label'             => __( 'Stock quantity', 'woocommerce' ),
+					'label'             => __( 'Stock quantity', 'classic-commerce' ),
 					'desc_tip'          => true,
-					'description'       => __( 'Stock quantity. If this is a variable product this value will be used to control stock for all variations, unless you define stock at variation level.', 'woocommerce' ),
+					'description'       => __( 'Stock quantity. If this is a variable product this value will be used to control stock for all variations, unless you define stock at variation level.', 'classic-commerce' ),
 					'type'              => 'number',
 					'custom_attributes' => array(
 						'step' => 'any',
@@ -64,10 +64,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				array(
 					'id'          => '_backorders',
 					'value'       => $product_object->get_backorders( 'edit' ),
-					'label'       => __( 'Allow backorders?', 'woocommerce' ),
+					'label'       => __( 'Allow backorders?', 'classic-commerce' ),
 					'options'     => wc_get_product_backorder_options(),
 					'desc_tip'    => true,
-					'description' => __( 'If managing stock, this controls whether or not backorders are allowed. If enabled, stock quantity can go below 0.', 'woocommerce' ),
+					'description' => __( 'If managing stock, this controls whether or not backorders are allowed. If enabled, stock quantity can go below 0.', 'classic-commerce' ),
 				)
 			);
 
@@ -75,9 +75,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'id'                => '_low_stock_amount',
 				'value'             => $product_object->get_low_stock_amount( 'edit' ),
 				'placeholder'       => get_option( 'woocommerce_notify_low_stock_amount' ),
-				'label'             => __( 'Low stock threshold', 'woocommerce' ),
+				'label'             => __( 'Low stock threshold', 'classic-commerce' ),
 				'desc_tip'          => true,
-				'description'       => __( 'When product stock reaches this amount you will be notified by email', 'woocommerce' ),
+				'description'       => __( 'When product stock reaches this amount you will be notified by email', 'classic-commerce' ),
 				'type'              => 'number',
 				'custom_attributes' => array(
 					'step' => 'any',
@@ -95,10 +95,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'id'            => '_stock_status',
 				'value'         => $product_object->get_stock_status( 'edit' ),
 				'wrapper_class' => 'stock_status_field hide_if_variable hide_if_external hide_if_grouped',
-				'label'         => __( 'Stock status', 'woocommerce' ),
+				'label'         => __( 'Stock status', 'classic-commerce' ),
 				'options'       => wc_get_product_stock_status_options(),
 				'desc_tip'      => true,
-				'description'   => __( 'Controls whether or not the product is listed as "in stock" or "out of stock" on the frontend.', 'woocommerce' ),
+				'description'   => __( 'Controls whether or not the product is listed as "in stock" or "out of stock" on the frontend.', 'classic-commerce' ),
 			)
 		);
 
@@ -113,8 +113,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'id'            => '_sold_individually',
 				'value'         => $product_object->get_sold_individually( 'edit' ) ? 'yes' : 'no',
 				'wrapper_class' => 'show_if_simple show_if_variable',
-				'label'         => __( 'Sold individually', 'woocommerce' ),
-				'description'   => __( 'Enable this to only allow one of this item to be bought in a single order', 'woocommerce' ),
+				'label'         => __( 'Sold individually', 'classic-commerce' ),
+				'description'   => __( 'Enable this to only allow one of this item to be bought in a single order', 'classic-commerce' ),
 			)
 		);
 

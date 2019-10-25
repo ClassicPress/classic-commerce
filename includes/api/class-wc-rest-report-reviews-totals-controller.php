@@ -5,7 +5,7 @@
  * Handles requests to the /reports/reviews/count endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Report_Reviews_Totals_Controller extends WC_REST_Reports_Controlle
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {
@@ -54,7 +54,7 @@ class WC_REST_Report_Reviews_Totals_Controller extends WC_REST_Reports_Controlle
 			$data[] = array(
 				'slug'  => 'rated_' . $i . '_out_of_5',
 				/* translators: %s: average rating */
-				'name'  => sprintf( __( 'Rated %s out of 5', 'woocommerce' ), $i ),
+				'name'  => sprintf( __( 'Rated %s out of 5', 'classic-commerce' ), $i ),
 				'total' => (int) get_comments( $query_data ),
 			);
 		}
@@ -107,19 +107,19 @@ class WC_REST_Report_Reviews_Totals_Controller extends WC_REST_Reports_Controlle
 			'type'       => 'object',
 			'properties' => array(
 				'slug'  => array(
-					'description' => __( 'An alphanumeric identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'An alphanumeric identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'name'  => array(
-					'description' => __( 'Review type name.', 'woocommerce' ),
+					'description' => __( 'Review type name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'total' => array(
-					'description' => __( 'Amount of reviews.', 'woocommerce' ),
+					'description' => __( 'Amount of reviews.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

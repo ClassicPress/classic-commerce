@@ -5,7 +5,7 @@
  * Handles requests to the /settings endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -48,7 +48,7 @@ class WC_REST_Settings_Controller extends WC_REST_Settings_V2_Controller {
 	 */
 	public function update_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'settings', 'edit' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you cannot edit this resource.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you cannot edit this resource.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -70,7 +70,7 @@ class WC_REST_Settings_Controller extends WC_REST_Settings_V2_Controller {
 	/**
 	 * Get the groups schema, conforming to JSON Schema.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public function get_item_schema() {
@@ -80,27 +80,27 @@ class WC_REST_Settings_Controller extends WC_REST_Settings_V2_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'          => array(
-					'description' => __( 'A unique identifier that can be used to link settings together.', 'woocommerce' ),
+					'description' => __( 'A unique identifier that can be used to link settings together.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'label'       => array(
-					'description' => __( 'A human readable label for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable label for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'description' => array(
-					'description' => __( 'A human readable description for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable description for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'parent_id'   => array(
-					'description' => __( 'ID of parent grouping.', 'woocommerce' ),
+					'description' => __( 'ID of parent grouping.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'sub_groups'  => array(
-					'description' => __( 'IDs for settings sub groups.', 'woocommerce' ),
+					'description' => __( 'IDs for settings sub groups.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),

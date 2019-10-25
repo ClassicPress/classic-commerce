@@ -1,14 +1,14 @@
-# Copyright (C) 2018 Automattic
-# This file is distributed under the same license as the WooCommerce package.
+# Copyright (C) 2019 ClassicPress Research Team
+# This file is distributed under the same license as the Classic Commerce package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce 3.5.3\n"
+"Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woocommerce/woocommerce/issues\n"
-"POT-Creation-Date: 2018-12-20 14:59:55+00:00\n"
+"POT-Creation-Date: 2019-10-20 13:40:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n1.0.2\n"
@@ -5593,6 +5593,518 @@ msgstr ""
 msgid "Simiyu"
 msgstr ""
 
+#: i18n/states/UG.php:15
+msgid "Abim"
+msgstr ""
+
+#: i18n/states/UG.php:16
+msgid "Adjumani"
+msgstr ""
+
+#: i18n/states/UG.php:17
+msgid "Agago"
+msgstr ""
+
+#: i18n/states/UG.php:18
+msgid "Alebtong"
+msgstr ""
+
+#: i18n/states/UG.php:19
+msgid "Amolatar"
+msgstr ""
+
+#: i18n/states/UG.php:20
+msgid "Amudat"
+msgstr ""
+
+#: i18n/states/UG.php:21
+msgid "Amuria"
+msgstr ""
+
+#: i18n/states/UG.php:22
+msgid "Amuru"
+msgstr ""
+
+#: i18n/states/UG.php:23
+msgid "Apac"
+msgstr ""
+
+#: i18n/states/UG.php:24
+msgid "Arua"
+msgstr ""
+
+#: i18n/states/UG.php:25
+msgid "Budaka"
+msgstr ""
+
+#: i18n/states/UG.php:26
+msgid "Bududa"
+msgstr ""
+
+#: i18n/states/UG.php:27
+msgid "Bugiri"
+msgstr ""
+
+#: i18n/states/UG.php:28
+msgid "Bugweri"
+msgstr ""
+
+#: i18n/states/UG.php:29
+msgid "Buhweju"
+msgstr ""
+
+#: i18n/states/UG.php:30
+msgid "Buikwe"
+msgstr ""
+
+#: i18n/states/UG.php:31
+msgid "Bukedea"
+msgstr ""
+
+#: i18n/states/UG.php:32
+msgid "Bukomansimbi"
+msgstr ""
+
+#: i18n/states/UG.php:33
+msgid "Bukwa"
+msgstr ""
+
+#: i18n/states/UG.php:34
+msgid "Bulambuli"
+msgstr ""
+
+#: i18n/states/UG.php:35
+msgid "Buliisa"
+msgstr ""
+
+#: i18n/states/UG.php:36
+msgid "Bundibugyo"
+msgstr ""
+
+#: i18n/states/UG.php:37
+msgid "Bunyangabu"
+msgstr ""
+
+#: i18n/states/UG.php:38
+msgid "Bushenyi"
+msgstr ""
+
+#: i18n/states/UG.php:39
+msgid "Busia"
+msgstr ""
+
+#: i18n/states/UG.php:40
+msgid "Butaleja"
+msgstr ""
+
+#: i18n/states/UG.php:41
+msgid "Butambala"
+msgstr ""
+
+#: i18n/states/UG.php:42
+msgid "Butebo"
+msgstr ""
+
+#: i18n/states/UG.php:43
+msgid "Buvuma"
+msgstr ""
+
+#: i18n/states/UG.php:44
+msgid "Buyende"
+msgstr ""
+
+#: i18n/states/UG.php:45
+msgid "Dokolo"
+msgstr ""
+
+#: i18n/states/UG.php:46
+msgid "Gomba"
+msgstr ""
+
+#: i18n/states/UG.php:47
+msgid "Gulu"
+msgstr ""
+
+#: i18n/states/UG.php:48
+msgid "Hoima"
+msgstr ""
+
+#: i18n/states/UG.php:49
+msgid "Ibanda"
+msgstr ""
+
+#: i18n/states/UG.php:50
+msgid "Iganga"
+msgstr ""
+
+#: i18n/states/UG.php:51
+msgid "Isingiro"
+msgstr ""
+
+#: i18n/states/UG.php:52
+msgid "Jinja"
+msgstr ""
+
+#: i18n/states/UG.php:53
+msgid "Kaabong"
+msgstr ""
+
+#: i18n/states/UG.php:54
+msgid "Kabale"
+msgstr ""
+
+#: i18n/states/UG.php:55
+msgid "Kabarole"
+msgstr ""
+
+#: i18n/states/UG.php:56
+msgid "Kaberamaido"
+msgstr ""
+
+#: i18n/states/UG.php:57
+msgid "Kagadi"
+msgstr ""
+
+#: i18n/states/UG.php:58
+msgid "Kakumiro"
+msgstr ""
+
+#: i18n/states/UG.php:59
+msgid "Kalangala"
+msgstr ""
+
+#: i18n/states/UG.php:60
+msgid "Kaliro"
+msgstr ""
+
+#: i18n/states/UG.php:61
+msgid "Kalungu"
+msgstr ""
+
+#: i18n/states/UG.php:62
+msgid "Kampala"
+msgstr ""
+
+#: i18n/states/UG.php:63
+msgid "Kamuli"
+msgstr ""
+
+#: i18n/states/UG.php:64
+msgid "Kamwenge"
+msgstr ""
+
+#: i18n/states/UG.php:65
+msgid "Kanungu"
+msgstr ""
+
+#: i18n/states/UG.php:66
+msgid "Kapchorwa"
+msgstr ""
+
+#: i18n/states/UG.php:67
+msgid "Kapelebyong"
+msgstr ""
+
+#: i18n/states/UG.php:68
+msgid "Kasanda"
+msgstr ""
+
+#: i18n/states/UG.php:69
+msgid "Kasese"
+msgstr ""
+
+#: i18n/states/UG.php:70
+msgid "Katakwi"
+msgstr ""
+
+#: i18n/states/UG.php:71
+msgid "Kayunga"
+msgstr ""
+
+#: i18n/states/UG.php:72
+msgid "Kibaale"
+msgstr ""
+
+#: i18n/states/UG.php:73
+msgid "Kiboga"
+msgstr ""
+
+#: i18n/states/UG.php:74
+msgid "Kibuku"
+msgstr ""
+
+#: i18n/states/UG.php:75
+msgid "Kikuube"
+msgstr ""
+
+#: i18n/states/UG.php:76
+msgid "Kiruhura"
+msgstr ""
+
+#: i18n/states/UG.php:77
+msgid "Kiryandongo"
+msgstr ""
+
+#: i18n/states/UG.php:78
+msgid "Kisoro"
+msgstr ""
+
+#: i18n/states/UG.php:79
+msgid "Kitgum"
+msgstr ""
+
+#: i18n/states/UG.php:80
+msgid "Koboko"
+msgstr ""
+
+#: i18n/states/UG.php:81
+msgid "Kole"
+msgstr ""
+
+#: i18n/states/UG.php:82
+msgid "Kotido"
+msgstr ""
+
+#: i18n/states/UG.php:83
+msgid "Kumi"
+msgstr ""
+
+#: i18n/states/UG.php:84
+msgid "Kwania"
+msgstr ""
+
+#: i18n/states/UG.php:85
+msgid "Kween"
+msgstr ""
+
+#: i18n/states/UG.php:86
+msgid "Kyankwanzi"
+msgstr ""
+
+#: i18n/states/UG.php:87
+msgid "Kyegegwa"
+msgstr ""
+
+#: i18n/states/UG.php:88
+msgid "Kyenjojo"
+msgstr ""
+
+#: i18n/states/UG.php:89
+msgid "Kyotera"
+msgstr ""
+
+#: i18n/states/UG.php:90
+msgid "Lamwo"
+msgstr ""
+
+#: i18n/states/UG.php:91
+msgid "Lira"
+msgstr ""
+
+#: i18n/states/UG.php:92
+msgid "Luuka"
+msgstr ""
+
+#: i18n/states/UG.php:93
+msgid "Luwero"
+msgstr ""
+
+#: i18n/states/UG.php:94
+msgid "Lwengo"
+msgstr ""
+
+#: i18n/states/UG.php:95
+msgid "Lyantonde"
+msgstr ""
+
+#: i18n/states/UG.php:96
+msgid "Manafwa"
+msgstr ""
+
+#: i18n/states/UG.php:97
+msgid "Maracha"
+msgstr ""
+
+#: i18n/states/UG.php:98
+msgid "Masaka"
+msgstr ""
+
+#: i18n/states/UG.php:99
+msgid "Masindi"
+msgstr ""
+
+#: i18n/states/UG.php:100
+msgid "Mayuge"
+msgstr ""
+
+#: i18n/states/UG.php:101
+msgid "Mbale"
+msgstr ""
+
+#: i18n/states/UG.php:102
+msgid "Mbarara"
+msgstr ""
+
+#: i18n/states/UG.php:103
+msgid "Mitooma"
+msgstr ""
+
+#: i18n/states/UG.php:104
+msgid "Mityana"
+msgstr ""
+
+#: i18n/states/UG.php:105
+msgid "Moroto"
+msgstr ""
+
+#: i18n/states/UG.php:106
+msgid "Moyo"
+msgstr ""
+
+#: i18n/states/UG.php:107
+msgid "Mpigi"
+msgstr ""
+
+#: i18n/states/UG.php:108
+msgid "Mubende"
+msgstr ""
+
+#: i18n/states/UG.php:109
+msgid "Mukono"
+msgstr ""
+
+#: i18n/states/UG.php:110
+msgid "Nabilatuk"
+msgstr ""
+
+#: i18n/states/UG.php:111
+msgid "Nakapiripirit"
+msgstr ""
+
+#: i18n/states/UG.php:112
+msgid "Nakaseke"
+msgstr ""
+
+#: i18n/states/UG.php:113
+msgid "Nakasongola"
+msgstr ""
+
+#: i18n/states/UG.php:114
+msgid "Namayingo"
+msgstr ""
+
+#: i18n/states/UG.php:115
+msgid "Namisindwa"
+msgstr ""
+
+#: i18n/states/UG.php:116
+msgid "Namutumba"
+msgstr ""
+
+#: i18n/states/UG.php:117
+msgid "Napak"
+msgstr ""
+
+#: i18n/states/UG.php:118
+msgid "Nebbi"
+msgstr ""
+
+#: i18n/states/UG.php:119
+msgid "Ngora"
+msgstr ""
+
+#: i18n/states/UG.php:120
+msgid "Ntoroko"
+msgstr ""
+
+#: i18n/states/UG.php:121
+msgid "Ntungamo"
+msgstr ""
+
+#: i18n/states/UG.php:122
+msgid "Nwoya"
+msgstr ""
+
+#: i18n/states/UG.php:123
+msgid "Omoro"
+msgstr ""
+
+#: i18n/states/UG.php:124
+msgid "Otuke"
+msgstr ""
+
+#: i18n/states/UG.php:125
+msgid "Oyam"
+msgstr ""
+
+#: i18n/states/UG.php:126
+msgid "Pader"
+msgstr ""
+
+#: i18n/states/UG.php:127
+msgid "Pakwach"
+msgstr ""
+
+#: i18n/states/UG.php:128
+msgid "Pallisa"
+msgstr ""
+
+#: i18n/states/UG.php:129
+msgid "Rakai"
+msgstr ""
+
+#: i18n/states/UG.php:130
+msgid "Rubanda"
+msgstr ""
+
+#: i18n/states/UG.php:131
+msgid "Rubirizi"
+msgstr ""
+
+#: i18n/states/UG.php:132
+msgid "Rukiga"
+msgstr ""
+
+#: i18n/states/UG.php:133
+msgid "Rukungiri"
+msgstr ""
+
+#: i18n/states/UG.php:134
+msgid "Sembabule"
+msgstr ""
+
+#: i18n/states/UG.php:135
+msgid "Serere"
+msgstr ""
+
+#: i18n/states/UG.php:136
+msgid "Sheema"
+msgstr ""
+
+#: i18n/states/UG.php:137
+msgid "Sironko"
+msgstr ""
+
+#: i18n/states/UG.php:138
+msgid "Soroti"
+msgstr ""
+
+#: i18n/states/UG.php:139
+msgid "Tororo"
+msgstr ""
+
+#: i18n/states/UG.php:140
+msgid "Wakiso"
+msgstr ""
+
+#: i18n/states/UG.php:141
+msgid "Yumbe"
+msgstr ""
+
+#: i18n/states/UG.php:142
+msgid "Zombo"
+msgstr ""
+
 #: i18n/states/US.php:14
 msgid "Alabama"
 msgstr ""
@@ -6455,8 +6967,8 @@ msgstr ""
 
 #: includes/admin/class-wc-admin-addons.php:370
 #: includes/admin/class-wc-admin-addons.php:545
-#: includes/admin/class-wc-admin-setup-wizard.php:714
-#: includes/admin/class-wc-admin-setup-wizard.php:729
+#: includes/admin/class-wc-admin-setup-wizard.php:686
+#: includes/admin/class-wc-admin-setup-wizard.php:701
 msgid "WooCommerce Services"
 msgstr ""
 
@@ -6644,7 +7156,14 @@ msgstr ""
 msgid "You do not have permission to revoke API Keys"
 msgstr ""
 
-#. Plugin Name of the plugin/theme
+#: includes/admin/class-wc-admin-assets.php:84
+#: includes/admin/helper/class-wc-helper.php:448
+#: includes/admin/helper/class-wc-helper.php:591
+#: includes/admin/helper/class-wc-helper.php:1329
+#: includes/admin/wc-admin-functions.php:22
+#: includes/api/class-wc-rest-order-notes-controller.php:38
+#: includes/class-wc-order.php:1632 includes/class-wc-order.php:1633
+#: includes/class-wc-privacy.php:31 includes/wc-order-functions.php:915
 msgid "WooCommerce"
 msgstr ""
 
@@ -7148,7 +7667,6 @@ msgid "WooCommerce recent reviews"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:44
-#: includes/admin/class-wc-admin-menus.php:123
 msgid "WooCommerce status"
 msgstr ""
 
@@ -7302,108 +7820,79 @@ msgstr ""
 #: includes/admin/class-wc-admin-help.php:47
 #. translators: %s: Documentation URL
 msgid ""
-"Should you need help understanding, using, or extending WooCommerce, <a "
-"href=\"%s\">please read our documentation</a>. You will find all kinds of "
-"resources including snippets, tutorials and much more."
+"Should you need help understanding, using, or extending Classic Commerce, "
+"<a href=\"%s\">please refer to the WooCommerce documentation</a>. You will "
+"find all kinds of resources including snippets, tutorials and much more."
 msgstr ""
 
 #: includes/admin/class-wc-admin-help.php:52
 #. translators: %s: Forum URL
 msgid ""
-"For further assistance with WooCommerce core you can use the <a "
-"href=\"%1$s\">community forum</a>. If you need help with premium extensions "
-"sold by WooCommerce, please <a href=\"%2$s\">use our helpdesk</a>."
+"For further assistance with Classic Commerce you can use the <a "
+"href=\"%1$s\">ClassicPress community forum</a>."
+msgstr ""
+
+#: includes/admin/class-wc-admin-help.php:55
+msgid ""
+"Before asking for help we recommend using the system status page to "
+"identify any problems with your configuration. You should make a copy of "
+"this report to add to your support request."
 msgstr ""
 
 #: includes/admin/class-wc-admin-help.php:56
-msgid ""
-"Before asking for help we recommend checking the system status page to "
-"identify any problems with your configuration."
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:57
-#: includes/admin/class-wc-admin-help.php:69
+#: includes/admin/class-wc-admin-help.php:68
 #: includes/admin/views/html-admin-page-status.php:12
 msgid "System status"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:57
+#: includes/admin/class-wc-admin-help.php:56
 msgid "Community forum"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:57
-msgid "WooCommerce helpdesk"
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:64
-#: includes/admin/class-wc-admin-help.php:66
+#: includes/admin/class-wc-admin-help.php:63
+#: includes/admin/class-wc-admin-help.php:65
 msgid "Found a bug?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:68
-#. translators: 1: GitHub issues URL 2: GitHub contribution guide URL 3: System
-#. status report URL
+#: includes/admin/class-wc-admin-help.php:67
+#. translators: 1: GitHub issues URL 2: System status report URL
 msgid ""
-"If you find a bug within WooCommerce core you can create a ticket via <a "
-"href=\"%1$s\">Github issues</a>. Ensure you read the <a "
-"href=\"%2$s\">contribution guide</a> prior to submitting your report. To "
-"help us solve your issue, please be as descriptive as possible and include "
-"your <a href=\"%3$s\">system status report</a>."
+"If you find a bug within Classic Commerce core you can create a ticket via "
+"<a href=\"%1$s\">Github issues</a>. To help us solve your issue, please be "
+"as descriptive as possible and include your <a href=\"%2$s\">system status "
+"report</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:69
+#: includes/admin/class-wc-admin-help.php:68
 msgid "Report a bug"
 msgstr ""
 
+#: includes/admin/class-wc-admin-help.php:75
 #: includes/admin/class-wc-admin-help.php:77
 #: includes/admin/class-wc-admin-help.php:79
-msgid "Education"
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:80
-msgid ""
-"If you would like to learn about using WooCommerce from an expert, consider "
-"a WooCommerce course to further your education."
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:81
-msgid "Further education"
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:88
-#: includes/admin/class-wc-admin-help.php:90
-#: includes/admin/class-wc-admin-help.php:92
 msgid "Setup wizard"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:91
+#: includes/admin/class-wc-admin-help.php:78
 msgid ""
 "If you need to access the setup wizard again, please click on the button "
 "below."
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:98
+#: includes/admin/class-wc-admin-help.php:84
 msgid "For more information:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:99
-msgid "About WooCommerce"
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:100
-msgid "WordPress.org project"
-msgstr ""
-
-#: includes/admin/class-wc-admin-help.php:101
+#: includes/admin/class-wc-admin-help.php:85
 msgid "Github project"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:102
-msgid "Official theme"
+#: includes/admin/class-wc-admin-help.php:86
+msgid "About ClassicPress"
 msgstr ""
 
-#: includes/admin/class-wc-admin-help.php:103
-msgid "Official extensions"
+#: includes/admin/class-wc-admin-help.php:87
+msgid "Extensions"
 msgstr ""
 
 #: includes/admin/class-wc-admin-importers.php:39
@@ -7509,6 +7998,10 @@ msgstr ""
 msgid "All sources"
 msgstr ""
 
+#. Plugin Name of the plugin/theme
+msgid "Classic Commerce"
+msgstr ""
+
 #: includes/admin/class-wc-admin-menus.php:61
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:717
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:111
@@ -7525,7 +8018,7 @@ msgid "Sales reports"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:79
-msgid "WooCommerce settings"
+msgid "Classic Commerce settings"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:79
@@ -7534,17 +8027,21 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
+#: includes/admin/class-wc-admin-menus.php:123
+msgid "Classic Commerce status"
+msgstr ""
+
 #: includes/admin/class-wc-admin-menus.php:132
 #. translators: %s: extensions count
 msgid "Extensions %s"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:133
-msgid "WooCommerce extensions"
+msgid "Classic Commerce extensions"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:281
-msgid "WooCommerce endpoints"
+msgid "Classic Commerce endpoints"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:329
@@ -8104,7 +8601,7 @@ msgstr ""
 #: includes/admin/class-wc-admin-profile.php:105
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:44
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:95
-#: includes/class-wc-countries.php:627 includes/class-wc-form-handler.php:235
+#: includes/class-wc-countries.php:628 includes/class-wc-form-handler.php:235
 #: templates/myaccount/form-edit-account.php:27
 msgid "First name"
 msgstr ""
@@ -8113,7 +8610,7 @@ msgstr ""
 #: includes/admin/class-wc-admin-profile.php:109
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:48
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:99
-#: includes/class-wc-countries.php:634 includes/class-wc-form-handler.php:236
+#: includes/class-wc-countries.php:635 includes/class-wc-form-handler.php:236
 #: templates/myaccount/form-edit-account.php:31
 msgid "Last name"
 msgstr ""
@@ -8141,7 +8638,7 @@ msgstr ""
 
 #: includes/admin/class-wc-admin-profile.php:61
 #: includes/admin/class-wc-admin-profile.php:121
-#: includes/admin/class-wc-admin-setup-wizard.php:430
+#: includes/admin/class-wc-admin-setup-wizard.php:428
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:60
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:111
 #: includes/admin/settings/class-wc-settings-general.php:73
@@ -8157,7 +8654,7 @@ msgstr ""
 
 #: includes/admin/class-wc-admin-profile.php:65
 #: includes/admin/class-wc-admin-profile.php:125
-#: includes/admin/class-wc-admin-setup-wizard.php:435
+#: includes/admin/class-wc-admin-setup-wizard.php:433
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:64
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:115
 #: includes/admin/settings/class-wc-settings-general.php:82
@@ -8169,13 +8666,13 @@ msgstr ""
 
 #: includes/admin/class-wc-admin-profile.php:69
 #: includes/admin/class-wc-admin-profile.php:129
-#: includes/admin/class-wc-admin-setup-wizard.php:445
+#: includes/admin/class-wc-admin-setup-wizard.php:443
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:68
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:119
 #: includes/admin/settings/class-wc-settings-general.php:100
 #: includes/admin/settings/class-wc-settings-tax.php:195
 #: includes/admin/settings/views/html-settings-tax.php:28
-#: includes/class-wc-countries.php:690
+#: includes/class-wc-countries.php:691
 #: templates/cart/shipping-calculator.php:82
 msgid "Postcode / ZIP"
 msgstr ""
@@ -8184,10 +8681,10 @@ msgstr ""
 #: includes/admin/class-wc-admin-profile.php:133
 #: includes/admin/class-wc-admin-settings.php:588
 #: includes/admin/class-wc-admin-settings.php:613
-#: includes/admin/class-wc-admin-setup-wizard.php:421
+#: includes/admin/class-wc-admin-setup-wizard.php:419
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:72
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:123
-#: includes/class-wc-countries.php:649
+#: includes/class-wc-countries.php:650
 msgid "Country"
 msgstr ""
 
@@ -8204,7 +8701,7 @@ msgstr ""
 #: includes/admin/class-wc-admin-profile.php:140
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:79
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:130
-#: includes/class-wc-countries.php:682
+#: includes/class-wc-countries.php:683
 #: templates/cart/shipping-calculator.php:50
 #: templates/cart/shipping-calculator.php:55
 #: templates/cart/shipping-calculator.php:67
@@ -8219,15 +8716,15 @@ msgstr ""
 #: includes/admin/class-wc-admin-profile.php:85
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:365
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:87
-#: includes/class-wc-countries.php:1279
+#: includes/class-wc-countries.php:1294
 #: includes/customizer/class-wc-shop-customizer.php:679
 msgid "Phone"
 msgstr ""
 
 #: includes/admin/class-wc-admin-profile.php:89
-#: includes/admin/class-wc-admin-setup-wizard.php:2258
+#: includes/admin/class-wc-admin-setup-wizard.php:2230
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:84
-#: includes/class-wc-countries.php:1289 includes/class-wc-form-handler.php:238
+#: includes/class-wc-countries.php:1304 includes/class-wc-form-handler.php:238
 #: templates/myaccount/form-edit-account.php:43
 #: templates/myaccount/form-login.php:86
 msgid "Email address"
@@ -8349,7 +8846,7 @@ msgid "Select a page&hellip;"
 msgstr ""
 
 #: includes/admin/class-wc-admin-settings.php:588
-#: includes/admin/class-wc-admin-setup-wizard.php:421
+#: includes/admin/class-wc-admin-setup-wizard.php:419
 msgid "Choose a country&hellip;"
 msgstr ""
 
@@ -8377,29 +8874,29 @@ msgstr ""
 msgid "Year(s)"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:193
+#: includes/admin/class-wc-admin-setup-wizard.php:191
 msgid "Stripe setup is powered by Jetpack and WooCommerce Services."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:194
+#: includes/admin/class-wc-admin-setup-wizard.php:192
 msgid "PayPal setup is powered by Jetpack and WooCommerce Services."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:195
+#: includes/admin/class-wc-admin-setup-wizard.php:193
 msgid "Stripe and PayPal setup are powered by Jetpack and WooCommerce Services."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:212
+#: includes/admin/class-wc-admin-setup-wizard.php:210
 msgid "Store setup"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:217
-#: includes/admin/class-wc-admin-setup-wizard.php:1705
+#: includes/admin/class-wc-admin-setup-wizard.php:215
+#: includes/admin/class-wc-admin-setup-wizard.php:1677
 msgid "Payment"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:222
-#: includes/admin/class-wc-admin-setup-wizard.php:913
+#: includes/admin/class-wc-admin-setup-wizard.php:220
+#: includes/admin/class-wc-admin-setup-wizard.php:885
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:428
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:99
 #: includes/admin/meta-boxes/views/html-order-shipping.php:17
@@ -8412,65 +8909,65 @@ msgstr ""
 msgid "Shipping"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:227
+#: includes/admin/class-wc-admin-setup-wizard.php:225
 msgid "Recommended"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:232
+#: includes/admin/class-wc-admin-setup-wizard.php:230
 msgid "Activate"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:237
+#: includes/admin/class-wc-admin-setup-wizard.php:235
 msgid "Ready!"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:313
+#: includes/admin/class-wc-admin-setup-wizard.php:311
 msgid "WooCommerce &rsaquo; Setup Wizard"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:330
+#: includes/admin/class-wc-admin-setup-wizard.php:328
 msgid "Not right now"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:332
+#: includes/admin/class-wc-admin-setup-wizard.php:330
 msgid "Skip this step"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:416
+#: includes/admin/class-wc-admin-setup-wizard.php:414
 msgid ""
 "The following wizard will help you configure your store and get you started "
 "quickly."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:420
+#: includes/admin/class-wc-admin-setup-wizard.php:418
 msgid "Where is your store based?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:427
+#: includes/admin/class-wc-admin-setup-wizard.php:425
 msgid "Address"
 msgstr ""
 
+#: includes/admin/class-wc-admin-setup-wizard.php:438
 #: includes/admin/class-wc-admin-setup-wizard.php:440
-#: includes/admin/class-wc-admin-setup-wizard.php:442
-#: includes/class-wc-countries.php:780 includes/class-wc-countries.php:1033
-#: includes/class-wc-countries.php:1169
+#: includes/class-wc-countries.php:781 includes/class-wc-countries.php:1034
+#: includes/class-wc-countries.php:1184
 msgid "State"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:442
+#: includes/admin/class-wc-admin-setup-wizard.php:440
 msgid "Choose a state&hellip;"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:453
+#: includes/admin/class-wc-admin-setup-wizard.php:451
 msgid "What currency do you accept payments in?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:459
-#: includes/admin/class-wc-admin-setup-wizard.php:462
+#: includes/admin/class-wc-admin-setup-wizard.php:457
+#: includes/admin/class-wc-admin-setup-wizard.php:460
 msgid "Choose a currency&hellip;"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:470
+#: includes/admin/class-wc-admin-setup-wizard.php:468
 #: includes/admin/meta-boxes/views/html-order-items.php:41
 #: includes/admin/views/html-bulk-edit-product.php:134
 #. translators: 1: currency name 2: currency code
@@ -8478,71 +8975,54 @@ msgstr ""
 msgid "%1$s (%2$s)"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:473
+#: includes/admin/class-wc-admin-setup-wizard.php:471
 #. translators: 1: currency name 2: currency symbol, 3: currency code
 msgid "%1$s (%2$s / %3$s)"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:487
+#: includes/admin/class-wc-admin-setup-wizard.php:485
 msgid "What type of products do you plan to sell?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:490
+#: includes/admin/class-wc-admin-setup-wizard.php:488
 msgid "I plan to sell both physical and digital products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:491
+#: includes/admin/class-wc-admin-setup-wizard.php:489
 msgid "I plan to sell physical products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:492
+#: includes/admin/class-wc-admin-setup-wizard.php:490
 msgid "I plan to sell digital products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:504
+#: includes/admin/class-wc-admin-setup-wizard.php:502
 msgid "I will also be selling products or services in person."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:513
-msgid "Help WooCommerce improve with usage tracking."
-msgstr ""
-
-#: includes/admin/class-wc-admin-setup-wizard.php:517
-msgid ""
-"Gathering usage data allows us to make WooCommerce better &mdash; your "
-"store will be considered as we evaluate new features, judge the quality of "
-"an update, or determine if an improvement makes sense. If you would rather "
-"opt-out, and do not check this box, we will not know this store exists and "
-"we will not collect any usage data."
-msgstr ""
-
-#: includes/admin/class-wc-admin-setup-wizard.php:518
-msgid "Read more about what we collect."
-msgstr ""
-
-#: includes/admin/class-wc-admin-setup-wizard.php:526
+#: includes/admin/class-wc-admin-setup-wizard.php:506
 msgid "Let's go!"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:700
-#: includes/admin/class-wc-admin-setup-wizard.php:735
-#: includes/admin/class-wc-admin-setup-wizard.php:2198
+#: includes/admin/class-wc-admin-setup-wizard.php:672
+#: includes/admin/class-wc-admin-setup-wizard.php:707
+#: includes/admin/class-wc-admin-setup-wizard.php:2170
 msgid "Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:748
+#: includes/admin/class-wc-admin-setup-wizard.php:720
 msgid "The following plugins will be installed and activated for you:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:764
+#: includes/admin/class-wc-admin-setup-wizard.php:736
 msgid "Flat Rate"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:765
+#: includes/admin/class-wc-admin-setup-wizard.php:737
 msgid "Set a fixed price to cover shipping costs."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:769
+#: includes/admin/class-wc-admin-setup-wizard.php:741
 #: includes/admin/meta-boxes/views/html-order-items.php:31
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:31
 #: includes/shipping/legacy-flat-rate/includes/settings-flat-rate.php:63
@@ -8550,56 +9030,56 @@ msgstr ""
 msgid "Cost"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:770
+#: includes/admin/class-wc-admin-setup-wizard.php:742
 msgid "What would you like to charge for flat rate shipping?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:776
+#: includes/admin/class-wc-admin-setup-wizard.php:748
 #: includes/shipping/legacy-free-shipping/class-wc-shipping-legacy-free-shipping.php:106
 msgid "Free Shipping"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:777
+#: includes/admin/class-wc-admin-setup-wizard.php:749
 msgid "Don't charge for shipping."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:856
+#: includes/admin/class-wc-admin-setup-wizard.php:828
 msgid "Kilograms"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:857
+#: includes/admin/class-wc-admin-setup-wizard.php:829
 msgid "Grams"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:858
+#: includes/admin/class-wc-admin-setup-wizard.php:830
 msgid "Pounds"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:859
+#: includes/admin/class-wc-admin-setup-wizard.php:831
 msgid "Ounces"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:878
+#: includes/admin/class-wc-admin-setup-wizard.php:850
 msgid "Meters"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:879
+#: includes/admin/class-wc-admin-setup-wizard.php:851
 msgid "Centimeters"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:880
+#: includes/admin/class-wc-admin-setup-wizard.php:852
 msgid "Millimeters"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:881
+#: includes/admin/class-wc-admin-setup-wizard.php:853
 msgid "Inches"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:882
+#: includes/admin/class-wc-admin-setup-wizard.php:854
 msgid "Yards"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:904
+#: includes/admin/class-wc-admin-setup-wizard.php:876
 #. translators: %s: country name including the 'the' prefix if needed
 msgid ""
 "We've created two Shipping Zones - for %s and for the rest of the world. "
@@ -8607,21 +9087,21 @@ msgid ""
 "Shipping."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:922
+#: includes/admin/class-wc-admin-setup-wizard.php:894
 msgid "Shipping Zone"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:925
+#: includes/admin/class-wc-admin-setup-wizard.php:897
 msgid "Shipping Method"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:944
+#: includes/admin/class-wc-admin-setup-wizard.php:916
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:26
 #: includes/data-stores/class-wc-shipping-zone-data-store.php:87
 msgid "Locations not covered by your other zones"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:962
+#: includes/admin/class-wc-admin-setup-wizard.php:934
 #. translators: %1$s: live rates tooltip text, %2$s: shipping extensions URL
 msgid ""
 "If you'd like to offer <span class=\"help_tip\" data-tip=\"%1$s\">live "
@@ -8630,56 +9110,56 @@ msgid ""
 "target=\"_blank\">here</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:974
+#: includes/admin/class-wc-admin-setup-wizard.php:946
 msgid ""
 "A live rate is the exact cost to ship an order, quoted directly from the "
 "shipping carrier."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:989
-#: includes/admin/class-wc-admin-setup-wizard.php:998
+#: includes/admin/class-wc-admin-setup-wizard.php:961
+#: includes/admin/class-wc-admin-setup-wizard.php:970
 msgid "Print shipping labels at home"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:990
+#: includes/admin/class-wc-admin-setup-wizard.php:962
 msgid ""
 "We recommend WooCommerce Services & Jetpack. These plugins will save you "
 "time at the Post Office by enabling you to print your shipping labels at "
 "home."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:992
+#: includes/admin/class-wc-admin-setup-wizard.php:964
 msgid "WooCommerce Services icon"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:999
+#: includes/admin/class-wc-admin-setup-wizard.php:971
 msgid ""
 "We recommend using ShipStation to save time at the Post Office by printing "
 "your shipping labels at home. Try ShipStation free for 30 days."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1001
+#: includes/admin/class-wc-admin-setup-wizard.php:973
 msgid "ShipStation icon"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1004
-#: includes/admin/class-wc-admin-setup-wizard.php:1085
+#: includes/admin/class-wc-admin-setup-wizard.php:976
+#: includes/admin/class-wc-admin-setup-wizard.php:1057
 msgid "ShipStation"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1020
+#: includes/admin/class-wc-admin-setup-wizard.php:992
 #. translators: %1$s: weight unit dropdown, %2$s: dimension unit dropdown
 msgid "We'll use %1$s for product weight and %2$s for product dimensions."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1045
-#: includes/admin/class-wc-admin-setup-wizard.php:1763
-#: includes/admin/class-wc-admin-setup-wizard.php:1923
+#: includes/admin/class-wc-admin-setup-wizard.php:1017
+#: includes/admin/class-wc-admin-setup-wizard.php:1735
+#: includes/admin/class-wc-admin-setup-wizard.php:1895
 #: includes/admin/importers/views/html-product-csv-import-form.php:101
 msgid "Continue"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1332
+#: includes/admin/class-wc-admin-setup-wizard.php:1304
 #. translators: %s: URL
 msgid ""
 "Accept debit and credit cards in 135+ currencies, methods such as Alipay, "
@@ -8687,14 +9167,14 @@ msgid ""
 "target=\"_blank\">Learn more</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1337
+#: includes/admin/class-wc-admin-setup-wizard.php:1309
 #. translators: %s: URL
 msgid ""
 "Safe and secure payments using credit cards or your customer's PayPal "
 "account. <a href=\"%s\" target=\"_blank\">Learn more</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1342
+#: includes/admin/class-wc-admin-setup-wizard.php:1314
 #. translators: %s: URL
 msgid ""
 "Full checkout experience with pay now, pay later and slice it. No credit "
@@ -8702,7 +9182,7 @@ msgid ""
 "target=\"_blank\">Learn more about Klarna</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1347
+#: includes/admin/class-wc-admin-setup-wizard.php:1319
 #. translators: %s: URL
 msgid ""
 "Choose the payment that you want, pay now, pay later or slice it. No credit "
@@ -8710,7 +9190,7 @@ msgid ""
 "target=\"_blank\">Learn more about Klarna</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1352
+#: includes/admin/class-wc-admin-setup-wizard.php:1324
 #. translators: %s: URL
 msgid ""
 "Securely accept credit and debit cards with one low rate, no surprise fees "
@@ -8719,145 +9199,145 @@ msgid ""
 "Square</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1358
+#: includes/admin/class-wc-admin-setup-wizard.php:1330
 msgid "WooCommerce Stripe Gateway"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1365
+#: includes/admin/class-wc-admin-setup-wizard.php:1337
 msgid "Set up Stripe for me using this email:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1374
+#: includes/admin/class-wc-admin-setup-wizard.php:1346
 msgid "Stripe email address:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1377
+#: includes/admin/class-wc-admin-setup-wizard.php:1349
 msgid "Stripe email address"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1383
+#: includes/admin/class-wc-admin-setup-wizard.php:1355
 msgid "WooCommerce PayPal Checkout Gateway"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1391
+#: includes/admin/class-wc-admin-setup-wizard.php:1363
 msgid "Set up PayPal for me using this email:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1400
+#: includes/admin/class-wc-admin-setup-wizard.php:1372
 msgid "Direct payments to email address:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1403
+#: includes/admin/class-wc-admin-setup-wizard.php:1375
 msgid "Email address to receive payments"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1409
+#: includes/admin/class-wc-admin-setup-wizard.php:1381
 msgid "PayPal Standard"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1410
+#: includes/admin/class-wc-admin-setup-wizard.php:1382
 msgid "Accept payments via PayPal using account balance or credit card."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1414
+#: includes/admin/class-wc-admin-setup-wizard.php:1386
 msgid "PayPal email address:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1417
+#: includes/admin/class-wc-admin-setup-wizard.php:1389
 msgid "PayPal email address"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1423
+#: includes/admin/class-wc-admin-setup-wizard.php:1395
 msgid "Klarna Checkout for WooCommerce"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1431
+#: includes/admin/class-wc-admin-setup-wizard.php:1403
 msgid "Klarna Payments for WooCommerce"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1439
+#: includes/admin/class-wc-admin-setup-wizard.php:1411
 msgid "WooCommerce Square"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1447
+#: includes/admin/class-wc-admin-setup-wizard.php:1419
 msgid "WooCommerce eWAY Gateway"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1448
+#: includes/admin/class-wc-admin-setup-wizard.php:1420
 msgid ""
 "The eWAY extension for WooCommerce allows you to take credit card payments "
 "directly on your store without redirecting your customers to a third party "
 "site to make payment."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1455
+#: includes/admin/class-wc-admin-setup-wizard.php:1427
 msgid "WooCommerce PayFast Gateway"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1456
+#: includes/admin/class-wc-admin-setup-wizard.php:1428
 msgid ""
 "The PayFast extension for WooCommerce enables you to accept payments by "
 "Credit Card and EFT via one of South Africa’s most popular payment "
 "gateways. No setup fees or monthly subscription costs."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1551
+#: includes/admin/class-wc-admin-setup-wizard.php:1523
 msgid "A simple offline gateway that lets you accept a check as method of payment."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1556
+#: includes/admin/class-wc-admin-setup-wizard.php:1528
 msgid "Bank transfer (BACS) payments"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1557
+#: includes/admin/class-wc-admin-setup-wizard.php:1529
 msgid "A simple offline gateway that lets you accept BACS payment."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1562
+#: includes/admin/class-wc-admin-setup-wizard.php:1534
 #: includes/gateways/cod/class-wc-gateway-cod.php:56
 #: includes/gateways/cod/class-wc-gateway-cod.php:118
 msgid "Cash on delivery"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1563
+#: includes/admin/class-wc-admin-setup-wizard.php:1535
 msgid "A simple offline gateway that lets you accept cash on delivery."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1712
+#: includes/admin/class-wc-admin-setup-wizard.php:1684
 #. translators: %s: Link
 msgid ""
 "WooCommerce can accept both online and offline payments. <a href=\"%s\" "
 "target=\"_blank\">Additional payment methods</a> can be installed later."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1745
+#: includes/admin/class-wc-admin-setup-wizard.php:1717
 msgid "Offline Payments"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1748
+#: includes/admin/class-wc-admin-setup-wizard.php:1720
 msgid "Collect payments from customers offline."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1865
+#: includes/admin/class-wc-admin-setup-wizard.php:1837
 msgid "Recommended for All WooCommerce Stores"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1875
+#: includes/admin/class-wc-admin-setup-wizard.php:1847
 msgid ""
 "Select from the list below to enable automated taxes and MailChimp’s "
 "best-in-class email services — and design your store with our official, "
 "free WooCommerce theme."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1877
+#: includes/admin/class-wc-admin-setup-wizard.php:1849
 msgid "Enhance your store with these recommended features."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1888
+#: includes/admin/class-wc-admin-setup-wizard.php:1860
 msgid "Storefront Theme"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1889
+#: includes/admin/class-wc-admin-setup-wizard.php:1861
 msgid ""
 "Design your store with deep WooCommerce integration. If toggled on, we’ll "
 "install <a href=\"https://woocommerce.com/storefront/\" target=\"_blank\" "
@@ -8865,175 +9345,175 @@ msgid ""
 "<em>%s</em> will be deactivated."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1894
+#: includes/admin/class-wc-admin-setup-wizard.php:1866
 msgid "Storefront icon"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1901
+#: includes/admin/class-wc-admin-setup-wizard.php:1873
 msgid "Automated Taxes"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1902
+#: includes/admin/class-wc-admin-setup-wizard.php:1874
 msgid ""
 "Save time and errors with automated tax calculation and collection at "
 "checkout. Powered by WooCommerce Services and Jetpack."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1904
+#: includes/admin/class-wc-admin-setup-wizard.php:1876
 msgid "automated taxes icon"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1912
+#: includes/admin/class-wc-admin-setup-wizard.php:1884
 msgid "MailChimp"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1913
+#: includes/admin/class-wc-admin-setup-wizard.php:1885
 msgid ""
 "Join the 16 million customers who use MailChimp. Sync list and store data "
 "to send automated emails, and targeted campaigns."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1915
+#: includes/admin/class-wc-admin-setup-wizard.php:1887
 msgid "MailChimp icon"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1916
-#: includes/admin/class-wc-admin-setup-wizard.php:1958
+#: includes/admin/class-wc-admin-setup-wizard.php:1888
+#: includes/admin/class-wc-admin-setup-wizard.php:1930
 msgid "MailChimp for WooCommerce"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2006
+#: includes/admin/class-wc-admin-setup-wizard.php:1978
 msgid "payment setup, automated taxes and discounted shipping labels"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2008
+#: includes/admin/class-wc-admin-setup-wizard.php:1980
 msgid "payment setup and automated taxes"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2010
+#: includes/admin/class-wc-admin-setup-wizard.php:1982
 msgid "payment setup and discounted shipping labels"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2012
+#: includes/admin/class-wc-admin-setup-wizard.php:1984
 msgid "payment setup"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2014
+#: includes/admin/class-wc-admin-setup-wizard.php:1986
 msgid "automated taxes and discounted shipping labels"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2016
+#: includes/admin/class-wc-admin-setup-wizard.php:1988
 msgid "automated taxes"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2018
+#: includes/admin/class-wc-admin-setup-wizard.php:1990
 msgid "discounted shipping labels"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2035
+#: includes/admin/class-wc-admin-setup-wizard.php:2007
 msgid "Sorry, we couldn't connect your store to Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2047
+#: includes/admin/class-wc-admin-setup-wizard.php:2019
 #. translators: %s: list of features, potentially comma separated
 msgid ""
 "Your store is almost ready! To activate services like %s, just connect with "
 "Jetpack."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2049
+#: includes/admin/class-wc-admin-setup-wizard.php:2021
 msgid ""
 "Thanks for using Jetpack! Your store is almost ready: to activate services "
 "like %s, just connect your store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2056
+#: includes/admin/class-wc-admin-setup-wizard.php:2028
 msgid "Connect your store to Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2057
+#: includes/admin/class-wc-admin-setup-wizard.php:2029
 msgid "Connect your store to Jetpack to enable extra features"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2058
+#: includes/admin/class-wc-admin-setup-wizard.php:2030
 msgid "Continue with Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2060
+#: includes/admin/class-wc-admin-setup-wizard.php:2032
 msgid "Connect your store to activate WooCommerce Services"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2061
+#: includes/admin/class-wc-admin-setup-wizard.php:2033
 msgid "Continue with WooCommerce Services"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2097
+#: includes/admin/class-wc-admin-setup-wizard.php:2069
 msgid "Finish setting up your store"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2104
+#: includes/admin/class-wc-admin-setup-wizard.php:2076
 msgid ""
 "By connecting your site you agree to our fascinating <a href=\"%1$s\" "
 "target=\"_blank\">Terms of Service</a> and to <a href=\"%2$s\" "
 "target=\"_blank\">share details</a> with WordPress.com"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2121
+#: includes/admin/class-wc-admin-setup-wizard.php:2093
 msgid "Bonus reasons you'll love Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2122
+#: includes/admin/class-wc-admin-setup-wizard.php:2094
 msgid "Reasons you'll love Jetpack"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2129
+#: includes/admin/class-wc-admin-setup-wizard.php:2101
 msgid "Better security"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2132
+#: includes/admin/class-wc-admin-setup-wizard.php:2104
 msgid "Protect your store from unauthorized access."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2137
+#: includes/admin/class-wc-admin-setup-wizard.php:2109
 msgid "Store stats"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2140
+#: includes/admin/class-wc-admin-setup-wizard.php:2112
 msgid ""
 "Get insights on how your store is doing, including total sales, top "
 "products, and more."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2145
+#: includes/admin/class-wc-admin-setup-wizard.php:2117
 msgid "Store monitoring"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2148
+#: includes/admin/class-wc-admin-setup-wizard.php:2120
 msgid "Get an alert if your store is down for even a few minutes."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2153
+#: includes/admin/class-wc-admin-setup-wizard.php:2125
 msgid "Product promotion"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2156
+#: includes/admin/class-wc-admin-setup-wizard.php:2128
 msgid "Share new items on social media the moment they're live in your store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2167
+#: includes/admin/class-wc-admin-setup-wizard.php:2139
 msgid ""
 "Sorry! We tried, but we couldn't connect Jetpack just now 😭. Please go to "
 "the Plugins tab to connect Jetpack, so that you can finish setting up your "
 "store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2168
+#: includes/admin/class-wc-admin-setup-wizard.php:2140
 msgid ""
 "Sorry! We tried, but we couldn't install Jetpack for you 😭. Please go to "
 "the Plugins tab to install it, and finish setting up your store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2169
+#: includes/admin/class-wc-admin-setup-wizard.php:2141
 msgid ""
 "Sorry! We couldn't contact Jetpack just now 😭. Please make sure that your "
 "site is visible over the internet, and that it accepts incoming and "
@@ -9041,14 +9521,14 @@ msgid ""
 "and if you run into any more issues, please contact support."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2170
+#: includes/admin/class-wc-admin-setup-wizard.php:2142
 msgid ""
 "Your site might be on a private network. Jetpack can only connect to public "
 "sites. Please make sure your site is visible over the internet, and then "
 "try connecting again 🙏."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2242
+#: includes/admin/class-wc-admin-setup-wizard.php:2214
 #. translators: %1$s: link to videos, %2$s: link to docs
 msgid ""
 "Watch our <a href=\"%1$s\" target=\"_blank\">guided tour videos</a> to "
@@ -9056,63 +9536,63 @@ msgid ""
 "<a href=\"%2$s\" target=\"_blank\">getting started</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2247
+#: includes/admin/class-wc-admin-setup-wizard.php:2219
 msgid "You're ready to start selling!"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2250
+#: includes/admin/class-wc-admin-setup-wizard.php:2222
 msgid ""
 "We're here for you — get tips, product updates, and inspiration straight to "
 "your mailbox."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2264
-#: includes/admin/class-wc-admin-setup-wizard.php:2268
+#: includes/admin/class-wc-admin-setup-wizard.php:2236
+#: includes/admin/class-wc-admin-setup-wizard.php:2240
 msgid "Yes please!"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2277
+#: includes/admin/class-wc-admin-setup-wizard.php:2249
 msgid "Next step"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2278
+#: includes/admin/class-wc-admin-setup-wizard.php:2250
 msgid "Create some products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2279
+#: includes/admin/class-wc-admin-setup-wizard.php:2251
 msgid "You're ready to add products to your store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2284
+#: includes/admin/class-wc-admin-setup-wizard.php:2256
 msgid "Create a product"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2291
+#: includes/admin/class-wc-admin-setup-wizard.php:2263
 msgid "Have an existing store?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2292
-#: includes/admin/class-wc-admin-setup-wizard.php:2298
+#: includes/admin/class-wc-admin-setup-wizard.php:2264
+#: includes/admin/class-wc-admin-setup-wizard.php:2270
 msgid "Import products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2293
+#: includes/admin/class-wc-admin-setup-wizard.php:2265
 msgid "Transfer existing products to your new store — just import a CSV file."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2305
+#: includes/admin/class-wc-admin-setup-wizard.php:2277
 msgid "You can also:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2310
+#: includes/admin/class-wc-admin-setup-wizard.php:2282
 msgid "Visit Dashboard"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2313
+#: includes/admin/class-wc-admin-setup-wizard.php:2285
 msgid "Review Settings"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:2316
+#: includes/admin/class-wc-admin-setup-wizard.php:2288
 msgid "View &amp; Customize"
 msgstr ""
 
@@ -9183,7 +9663,7 @@ msgstr ""
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:162
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:171
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:180
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:199
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:194
 #: templates/emails/email-order-details.php:79
 #: templates/emails/plain/email-order-details.php:45
 #: templates/order/order-details.php:84
@@ -9315,17 +9795,8 @@ msgstr ""
 msgid "HTML email template"
 msgstr ""
 
-#: includes/admin/class-wc-admin.php:241
-#. translators: 1: WooCommerce 2:: five stars
-msgid "If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
-msgstr ""
-
-#: includes/admin/class-wc-admin.php:243
-msgid "Thanks :)"
-msgstr ""
-
-#: includes/admin/class-wc-admin.php:252
-msgid "Thank you for selling with WooCommerce."
+#: includes/admin/class-wc-admin.php:237
+msgid "Thank you for using Classic Commerce."
 msgstr ""
 
 #: includes/admin/helper/class-wc-helper-compat.php:159
@@ -9508,14 +9979,14 @@ msgstr ""
 msgid "Authentication and subscription caches refreshed successfully."
 msgstr ""
 
-#: includes/admin/helper/class-wc-helper.php:1364
+#: includes/admin/helper/class-wc-helper.php:1355
 #. translators: %s: helper screen url
 msgid ""
 "<a href=\"%s\">Connect your store</a> to WooCommerce.com to receive "
 "extensions updates and support."
 msgstr ""
 
-#: includes/admin/helper/class-wc-helper.php:1397
+#: includes/admin/helper/class-wc-helper.php:1388
 #. translators: %1$s: helper url, %2$d: number of extensions
 msgid ""
 "Note: You currently have <a href=\"%1$s\">%2$d paid extension</a> which "
@@ -12452,7 +12923,6 @@ msgid "Showing reports for:"
 msgstr ""
 
 #: includes/admin/reports/class-wc-report-sales-by-product.php:206
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:186
 msgid "Reset"
 msgstr ""
 
@@ -12981,8 +13451,8 @@ msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:54
 msgid ""
-"Email notifications sent from WooCommerce are listed below. Click on an "
-"email to configure it."
+"Email notifications sent from Classic Commerce are listed below. Click on "
+"an email to configure it."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:72
@@ -12994,7 +13464,7 @@ msgid "\"From\" name"
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:80
-msgid "How the sender name appears in outgoing WooCommerce emails."
+msgid "How the sender name appears in outgoing Classic Commerce emails."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:90
@@ -13002,7 +13472,7 @@ msgid "\"From\" address"
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:91
-msgid "How the sender email appears in outgoing WooCommerce emails."
+msgid "How the sender email appears in outgoing Classic Commerce emails."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:109
@@ -13012,7 +13482,7 @@ msgstr ""
 #: includes/admin/settings/class-wc-settings-emails.php:112
 #. translators: %s: Nonced email preview link
 msgid ""
-"This section lets you customize the WooCommerce emails. <a href=\"%s\" "
+"This section lets you customize the Classic Commerce emails. <a href=\"%s\" "
 "target=\"_blank\">Click here to preview your email template</a>."
 msgstr ""
 
@@ -13032,7 +13502,7 @@ msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:131
 #. translators: %s: Available placeholders for use
-msgid "The text to appear in the footer of WooCommerce emails."
+msgid "The text to appear in the footer of Classic Commerce emails."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:131
@@ -13064,7 +13534,7 @@ msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:144
 #. translators: %s: default color
-msgid "The base color for WooCommerce email templates. Default %s."
+msgid "The base color for Classic Commerce email templates. Default %s."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:154
@@ -13073,7 +13543,7 @@ msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:156
 #. translators: %s: default color
-msgid "The background color for WooCommerce email templates. Default %s."
+msgid "The background color for Classic Commerce email templates. Default %s."
 msgstr ""
 
 #: includes/admin/settings/class-wc-settings-emails.php:166
@@ -19747,7 +20217,7 @@ msgid "Shipping zone order."
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:123
-msgid "WooCommerce transients"
+msgid "Classic Commerce transients"
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:124
@@ -19764,7 +20234,7 @@ msgid "Expired transients"
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:130
-msgid "This tool will clear ALL expired transients from WordPress."
+msgid "This tool will clear ALL expired transients."
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:133
@@ -19832,7 +20302,8 @@ msgstr ""
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:155
 msgid ""
 "This tool will reset the admin, customer and shop_manager roles to default. "
-"Use this if your users cannot access all of the WooCommerce admin pages."
+"Use this if your users cannot access all of the Classic Commerce admin "
+"pages."
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:158
@@ -19851,7 +20322,7 @@ msgid ""
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:167
-msgid "Create default WooCommerce pages"
+msgid "Create default Classic Commerce pages"
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:168
@@ -19860,12 +20331,12 @@ msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:172
 msgid ""
-"This tool will install all the missing WooCommerce pages. Pages already "
-"defined and set up will not be replaced."
+"This tool will install all the missing Classic Commerce pages. Pages "
+"already defined and set up will not be replaced."
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:176
-msgid "Delete WooCommerce tax rates"
+msgid "Delete Classic Commerce tax rates"
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:177
@@ -19879,136 +20350,122 @@ msgid ""
 msgstr ""
 
 #: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:185
-msgid "Reset usage tracking"
-msgstr ""
-
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:187
-msgid ""
-"This will reset your usage tracking settings, causing it to show the opt-in "
-"banner again and not sending any data."
-msgstr ""
-
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:190
 msgid "Regenerate shop thumbnails"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:191
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:186
 msgid "Regenerate"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:192
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:187
 msgid ""
 "This will regenerate all shop thumbnails to match your theme and/or image "
 "settings."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:195
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:196
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:190
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:191
 msgid "Update database"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:200
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:195
 msgid ""
-"This tool will update your WooCommerce database to the latest version. "
+"This tool will update your Classic Commerce database to the latest version. "
 "Please ensure you make sufficient backups before proceeding."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:247
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:271
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:242
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:266
 msgid "Invalid tool ID."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:329
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:324
 msgid "A unique identifier for the tool."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:337
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:332
 msgid "Tool name."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:345
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:340
 msgid "What running the tool will do."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:353
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:348
 msgid "Tool description."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:361
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:356
 msgid "Did the tool run successfully?"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:366
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:361
 msgid "Tool return message."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:431
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:426
 msgid "Product transients cleared"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:436
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:431
 #. translators: %d: amount of expired transients
 msgid "%d transients rows cleared"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:450
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:445
 #. translators: %d: amount of orphaned variations
 msgid "%d orphaned variations deleted"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:465
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:460
 #. translators: %d: amount of permissions
 msgid "%d permissions deleted"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:485
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:480
 #. translators: %d: amount of indexes
 msgid "%d indexes added"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:492
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:487
 msgid "Roles successfully reset"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:510
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:505
 msgid "Terms successfully recounted"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:518
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:513
 #. translators: %d: amount of sessions
 msgid "Deleted all active sessions, and %d saved carts."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:523
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:518
 msgid "All missing WooCommerce pages successfully installed"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:530
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:525
 msgid "Tax rates successfully deleted"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:540
-msgid "Usage tracking settings successfully reset."
-msgstr ""
-
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:545
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:530
 msgid "Thumbnail regeneration has been scheduled to run in the background."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:553
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:538
 msgid "Database upgrade routine has been scheduled to run in the background."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:567
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:552
 #. translators: %s: callback string
 msgid "There was an error calling %s"
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:569
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:554
 msgid "Tool ran."
 msgstr ""
 
-#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:573
+#: includes/api/v2/class-wc-rest-system-status-tools-v2-controller.php:558
 msgid "There was an error calling this tool. There is no callback present."
 msgstr ""
 
@@ -20722,92 +21179,97 @@ msgstr ""
 msgid "(ex. tax)"
 msgstr ""
 
-#: includes/class-wc-countries.php:620
+#: includes/class-wc-countries.php:621
 msgid "Apartment, suite, unit etc. (optional)"
 msgstr ""
 
-#: includes/class-wc-countries.php:622 includes/class-wc-countries.php:665
+#: includes/class-wc-countries.php:623 includes/class-wc-countries.php:666
 msgid "Apartment, suite, unit etc."
 msgstr ""
 
-#: includes/class-wc-countries.php:641
+#: includes/class-wc-countries.php:642
 #: includes/customizer/class-wc-shop-customizer.php:677
 msgid "Company name"
 msgstr ""
 
-#: includes/class-wc-countries.php:656
+#: includes/class-wc-countries.php:657
 msgid "Street address"
 msgstr ""
 
-#: includes/class-wc-countries.php:658
+#: includes/class-wc-countries.php:659
 #. translators: use local order of street name and house number.
 msgid "House number and street name"
 msgstr ""
 
-#: includes/class-wc-countries.php:674
+#: includes/class-wc-countries.php:675
 msgid "Town / City"
 msgstr ""
 
-#: includes/class-wc-countries.php:761 includes/class-wc-countries.php:805
-#: includes/class-wc-countries.php:835 includes/class-wc-countries.php:860
-#: includes/class-wc-countries.php:941 includes/class-wc-countries.php:980
-#: includes/class-wc-countries.php:1023 includes/class-wc-countries.php:1121
-#: includes/class-wc-countries.php:1161 includes/class-wc-countries.php:1217
+#: includes/class-wc-countries.php:762 includes/class-wc-countries.php:806
+#: includes/class-wc-countries.php:836 includes/class-wc-countries.php:861
+#: includes/class-wc-countries.php:942 includes/class-wc-countries.php:981
+#: includes/class-wc-countries.php:1024 includes/class-wc-countries.php:1122
+#: includes/class-wc-countries.php:1162 includes/class-wc-countries.php:1232
 msgid "Province"
 msgstr ""
 
-#: includes/class-wc-countries.php:774
+#: includes/class-wc-countries.php:775
 msgid "Suburb"
 msgstr ""
 
-#: includes/class-wc-countries.php:777 includes/class-wc-countries.php:1028
-#: includes/class-wc-countries.php:1038 includes/class-wc-countries.php:1174
+#: includes/class-wc-countries.php:778 includes/class-wc-countries.php:1029
+#: includes/class-wc-countries.php:1039 includes/class-wc-countries.php:1189
 msgid "Postcode"
 msgstr ""
 
-#: includes/class-wc-countries.php:796 includes/class-wc-countries.php:1187
+#: includes/class-wc-countries.php:797 includes/class-wc-countries.php:1175
+#: includes/class-wc-countries.php:1202
 msgid "District"
 msgstr ""
 
-#: includes/class-wc-countries.php:843
+#: includes/class-wc-countries.php:844
 msgid "Canton"
 msgstr ""
 
-#: includes/class-wc-countries.php:855 includes/class-wc-countries.php:931
-#: includes/class-wc-countries.php:1042
+#: includes/class-wc-countries.php:856 includes/class-wc-countries.php:932
+#: includes/class-wc-countries.php:1043
 msgid "Region"
 msgstr ""
 
-#: includes/class-wc-countries.php:928
+#: includes/class-wc-countries.php:929
 msgid "Town / District"
 msgstr ""
 
-#: includes/class-wc-countries.php:936 includes/class-wc-countries.php:950
-#: includes/class-wc-countries.php:1081 includes/class-wc-countries.php:1177
+#: includes/class-wc-countries.php:937 includes/class-wc-countries.php:951
+#: includes/class-wc-countries.php:1082 includes/class-wc-countries.php:1192
 msgid "County"
 msgstr ""
 
-#: includes/class-wc-countries.php:947
+#: includes/class-wc-countries.php:948
 msgid "Eircode"
 msgstr ""
 
-#: includes/class-wc-countries.php:985
+#: includes/class-wc-countries.php:986
 msgid "Prefecture"
 msgstr ""
 
-#: includes/class-wc-countries.php:1055
+#: includes/class-wc-countries.php:1056
 msgid "State / Zone"
 msgstr ""
 
-#: includes/class-wc-countries.php:1129
+#: includes/class-wc-countries.php:1130
 msgid "Municipality"
 msgstr ""
 
-#: includes/class-wc-countries.php:1145
+#: includes/class-wc-countries.php:1146
 msgid "Municipality / District"
 msgstr ""
 
-#: includes/class-wc-countries.php:1166
+#: includes/class-wc-countries.php:1171
+msgid "Town / Village"
+msgstr ""
+
+#: includes/class-wc-countries.php:1181
 msgid "ZIP"
 msgstr ""
 
@@ -21223,11 +21685,11 @@ msgid "API docs"
 msgstr ""
 
 #: includes/class-wc-install.php:1198
-msgid "Visit premium customer support"
+msgid "Visit issues  support section on github"
 msgstr ""
 
 #: includes/class-wc-install.php:1198
-msgid "Premium support"
+msgid "Support"
 msgstr ""
 
 #: includes/class-wc-install.php:1326 includes/class-wc-install.php:1429
@@ -26768,8 +27230,8 @@ msgstr ""
 msgid "Only logged in customers who have purchased this product may leave a review."
 msgstr ""
 
-#. Plugin URI of the plugin/theme
-msgid "https://woocommerce.com/"
+#. Author URI of the plugin/theme
+msgid "https://github.com/ClassicPress-research/classic-commerce"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -26777,11 +27239,7 @@ msgid "An eCommerce toolkit that helps you sell anything. Beautifully."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://woocommerce.com"
+msgid "ClassicPress Research Team"
 msgstr ""
 
 #: i18n/locale-info.php:96 i18n/locale-info.php:106 i18n/locale-info.php:116
@@ -26813,7 +27271,7 @@ msgid "Georgia"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:115
-#: includes/admin/class-wc-admin-setup-wizard.php:164
+#: includes/admin/class-wc-admin-setup-wizard.php:162
 #: includes/class-wc-frontend-scripts.php:567
 #: includes/widgets/class-wc-widget-layered-nav.php:302
 #: includes/widgets/class-wc-widget-product-categories.php:266
@@ -26822,63 +27280,63 @@ msgid "No matches found"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:116
-#: includes/admin/class-wc-admin-setup-wizard.php:165
+#: includes/admin/class-wc-admin-setup-wizard.php:163
 #: includes/class-wc-frontend-scripts.php:568
 msgctxt "enhanced select"
 msgid "Loading failed"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:117
-#: includes/admin/class-wc-admin-setup-wizard.php:166
+#: includes/admin/class-wc-admin-setup-wizard.php:164
 #: includes/class-wc-frontend-scripts.php:569
 msgctxt "enhanced select"
 msgid "Please enter 1 or more characters"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:118
-#: includes/admin/class-wc-admin-setup-wizard.php:167
+#: includes/admin/class-wc-admin-setup-wizard.php:165
 #: includes/class-wc-frontend-scripts.php:570
 msgctxt "enhanced select"
 msgid "Please enter %qty% or more characters"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:119
-#: includes/admin/class-wc-admin-setup-wizard.php:168
+#: includes/admin/class-wc-admin-setup-wizard.php:166
 #: includes/class-wc-frontend-scripts.php:571
 msgctxt "enhanced select"
 msgid "Please delete 1 character"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:120
-#: includes/admin/class-wc-admin-setup-wizard.php:169
+#: includes/admin/class-wc-admin-setup-wizard.php:167
 #: includes/class-wc-frontend-scripts.php:572
 msgctxt "enhanced select"
 msgid "Please delete %qty% characters"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:121
-#: includes/admin/class-wc-admin-setup-wizard.php:170
+#: includes/admin/class-wc-admin-setup-wizard.php:168
 #: includes/class-wc-frontend-scripts.php:573
 msgctxt "enhanced select"
 msgid "You can only select 1 item"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:122
-#: includes/admin/class-wc-admin-setup-wizard.php:171
+#: includes/admin/class-wc-admin-setup-wizard.php:169
 #: includes/class-wc-frontend-scripts.php:574
 msgctxt "enhanced select"
 msgid "You can only select %qty% items"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:123
-#: includes/admin/class-wc-admin-setup-wizard.php:172
+#: includes/admin/class-wc-admin-setup-wizard.php:170
 #: includes/class-wc-frontend-scripts.php:575
 msgctxt "enhanced select"
 msgid "Loading more results&hellip;"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:124
-#: includes/admin/class-wc-admin-setup-wizard.php:173
+#: includes/admin/class-wc-admin-setup-wizard.php:171
 #: includes/class-wc-frontend-scripts.php:576
 msgctxt "enhanced select"
 msgid "Searching&hellip;"
@@ -26955,7 +27413,7 @@ msgctxt "default-slug"
 msgid "product"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1550
+#: includes/admin/class-wc-admin-setup-wizard.php:1522
 #: includes/gateways/cheque/class-wc-gateway-cheque.php:31
 #: includes/gateways/cheque/class-wc-gateway-cheque.php:67
 msgctxt "Check payment method"

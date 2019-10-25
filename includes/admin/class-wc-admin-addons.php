@@ -24,11 +24,6 @@ class WC_Admin_Addons {
 
 		/**
 		 * Addon page view.
-		 *
-		 * @uses $addons
-		 * @uses $sections
-		 * @uses $theme
-		 * @uses $current_section
 		 */
 		include_once dirname( __FILE__ ) . '/views/html-admin-page-addons.php';
 	}

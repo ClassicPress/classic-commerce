@@ -18,9 +18,9 @@ defined( 'ABSPATH' ) || exit;
 function wc_get_coupon_types() {
 	return (array) apply_filters(
 		'woocommerce_coupon_discount_types', array(
-			'percent'       => __( 'Percentage discount', 'woocommerce' ),
-			'fixed_cart'    => __( 'Fixed cart discount', 'woocommerce' ),
-			'fixed_product' => __( 'Fixed product discount', 'woocommerce' ),
+			'percent'       => __( 'Percentage discount', 'classic-commerce' ),
+			'fixed_cart'    => __( 'Fixed cart discount', 'classic-commerce' ),
+			'fixed_product' => __( 'Fixed product discount', 'classic-commerce' ),
 		)
 	);
 }

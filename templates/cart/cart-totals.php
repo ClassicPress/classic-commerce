@@ -25,13 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php _e( 'Cart totals', 'woocommerce' ); ?></h2>
+	<h2><?php _e( 'Cart totals', 'classic-commerce' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php _e( 'Subtotal', 'classic-commerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'classic-commerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -52,8 +52,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
 			<tr class="shipping">
-				<th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
-				<td data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
+				<th><?php _e( 'Shipping', 'classic-commerce' ); ?></th>
+				<td data-title="<?php esc_attr_e( 'Shipping', 'classic-commerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
 		<?php endif; ?>
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) :
 			$taxable_address = WC()->customer->get_taxable_address();
 			$estimated_text  = WC()->customer->is_customer_outside_base() && ! WC()->customer->has_calculated_shipping()
-					? sprintf( ' <small>' . __( '(estimated for %s)', 'woocommerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] )
+					? sprintf( ' <small>' . __( '(estimated for %s)', 'classic-commerce' ) . '</small>', WC()->countries->estimated_for_prefix( $taxable_address[0] ) . WC()->countries->countries[ $taxable_address[0] ] )
 					: '';
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
@@ -89,8 +89,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+			<th><?php _e( 'Total', 'classic-commerce' ); ?></th>
+			<td data-title="<?php esc_attr_e( 'Total', 'classic-commerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

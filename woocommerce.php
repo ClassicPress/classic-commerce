@@ -6,7 +6,7 @@
  * Version: 0.1.0
  * Author: ClassicPress Research Team
  * Author URI: https://github.com/ClassicPress-research/classic-commerce
- * Text Domain: woocommerce
+ * Text Domain: classic-commerce
  * Domain Path: /i18n/languages/
  *
  * @package WooCommerce

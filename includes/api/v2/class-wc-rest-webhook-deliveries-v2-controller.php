@@ -5,7 +5,7 @@
  * Handles requests to the /webhooks/<webhook_id>/deliveries endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -67,32 +67,32 @@ class WC_REST_Webhook_Deliveries_V2_Controller extends WC_REST_Webhook_Deliverie
 			'type'       => 'object',
 			'properties' => array(
 				'id'               => array(
-					'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'duration'         => array(
-					'description' => __( 'The delivery duration, in seconds.', 'woocommerce' ),
+					'description' => __( 'The delivery duration, in seconds.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'summary'          => array(
-					'description' => __( 'A friendly summary of the response including the HTTP response code, message, and body.', 'woocommerce' ),
+					'description' => __( 'A friendly summary of the response including the HTTP response code, message, and body.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'request_url'      => array(
-					'description' => __( 'The URL where the webhook was delivered.', 'woocommerce' ),
+					'description' => __( 'The URL where the webhook was delivered.', 'classic-commerce' ),
 					'type'        => 'string',
 					'format'      => 'uri',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'request_headers'  => array(
-					'description' => __( 'Request headers.', 'woocommerce' ),
+					'description' => __( 'Request headers.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -101,25 +101,25 @@ class WC_REST_Webhook_Deliveries_V2_Controller extends WC_REST_Webhook_Deliverie
 					),
 				),
 				'request_body'     => array(
-					'description' => __( 'Request body.', 'woocommerce' ),
+					'description' => __( 'Request body.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'response_code'    => array(
-					'description' => __( 'The HTTP response code from the receiving server.', 'woocommerce' ),
+					'description' => __( 'The HTTP response code from the receiving server.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'response_message' => array(
-					'description' => __( 'The HTTP response message from the receiving server.', 'woocommerce' ),
+					'description' => __( 'The HTTP response message from the receiving server.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'response_headers' => array(
-					'description' => __( 'Array of the response headers from the receiving server.', 'woocommerce' ),
+					'description' => __( 'Array of the response headers from the receiving server.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -128,19 +128,19 @@ class WC_REST_Webhook_Deliveries_V2_Controller extends WC_REST_Webhook_Deliverie
 					),
 				),
 				'response_body'    => array(
-					'description' => __( 'The response body from the receiving server.', 'woocommerce' ),
+					'description' => __( 'The response body from the receiving server.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'date_created'     => array(
-					'description' => __( "The date the webhook delivery was logged, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date the webhook delivery was logged, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_created_gmt' => array(
-					'description' => __( 'The date the webhook delivery was logged, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date the webhook delivery was logged, as GMT.', 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

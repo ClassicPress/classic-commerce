@@ -407,7 +407,7 @@ class WC_Template_Loader {
 
 			if ( $args->page > 1 ) {
 				/* translators: %d: Page number. */
-				$title_suffix[] = sprintf( esc_html__( 'Page %d', 'woocommerce' ), $args->page );
+				$title_suffix[] = sprintf( esc_html__( 'Page %d', 'classic-commerce' ), $args->page );
 			}
 
 			if ( $title_suffix ) {

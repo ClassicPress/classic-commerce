@@ -57,7 +57,7 @@ class WC_Product_Variable extends WC_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->is_purchasable() ? __( 'Select options', 'woocommerce' ) : __( 'Read more', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->is_purchasable() ? __( 'Select options', 'classic-commerce' ) : __( 'Read more', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -68,7 +68,7 @@ class WC_Product_Variable extends WC_Product {
 	 */
 	public function add_to_cart_description() {
 		/* translators: %s: Product title */
-		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Select options for &ldquo;%s&rdquo;', 'woocommerce' ), $this->get_name() ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Select options for &ldquo;%s&rdquo;', 'classic-commerce' ), $this->get_name() ), $this );
 	}
 
 	/**
