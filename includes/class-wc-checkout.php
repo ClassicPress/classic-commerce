@@ -215,7 +215,7 @@ class WC_Checkout {
 					'label'       => __( 'Order notes', 'classic-commerce' ),
 					'placeholder' => esc_attr__(
 						'Notes about your order, e.g. special notes for delivery.',
-						'woocommerce'
+						'classic-commerce'
 					),
 				),
 			),
