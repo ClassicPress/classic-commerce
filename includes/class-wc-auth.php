@@ -5,7 +5,7 @@
  * Handles wc-auth endpoint requests.
  *
  * @package WooCommerce/API
- * @since   2.4.0
+ * @since   WC-2.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -41,7 +41,7 @@ class WC_Auth {
 	/**
 	 * Add query vars.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  array $vars Query variables.
 	 * @return string[]
 	 */
@@ -80,7 +80,7 @@ class WC_Auth {
 	/**
 	 * Return a list of permissions a scope allows.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  string $scope Permission scope.
 	 * @return array
 	 */
@@ -114,7 +114,7 @@ class WC_Auth {
 	/**
 	 * Build auth urls.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  array  $data     Data to build URL.
 	 * @param  string $endpoint Endpoint.
 	 * @return string
@@ -152,7 +152,7 @@ class WC_Auth {
 	/**
 	 * Make validation.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @throws Exception When validate fails.
 	 */
 	protected function make_validation() {
@@ -198,7 +198,7 @@ class WC_Auth {
 	/**
 	 * Create keys.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 *
 	 * @param  string $app_name    App name.
 	 * @param  string $app_user_id User ID.
@@ -256,7 +256,7 @@ class WC_Auth {
 	/**
 	 * Post consumer data.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 *
 	 * @throws Exception When validation fails.
 	 * @param  array  $consumer_data Consumer data.

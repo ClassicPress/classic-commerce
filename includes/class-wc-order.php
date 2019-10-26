@@ -439,7 +439,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get order key.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -479,7 +479,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Gets a prop for a getter method.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $prop Name of prop to get.
 	 * @param  string $address billing or shipping.
 	 * @param  string $context What the value is for. Valid values are view and edit.
@@ -808,7 +808,7 @@ class WC_Order extends WC_Abstract_Order {
 	 * Returns the requested address in raw, non-formatted way.
 	 * Note: Merges raw data with get_prop data so changes are returned too.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  string $type Billing or shipping. Anything else besides 'billing' will return shipping address.
 	 * @return array The stored address after filter.
 	 */
@@ -885,7 +885,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Returns true if the order has a billing address.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @return boolean
 	 */
 	public function has_billing_address() {
@@ -895,7 +895,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Returns true if the order has a shipping address.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @return boolean
 	 */
 	public function has_shipping_address() {
@@ -1383,7 +1383,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get downloads from all line items for this order.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_downloadable_items() {
@@ -1756,7 +1756,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total tax refunded.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @return float
 	 */
 	public function get_total_tax_refunded() {
@@ -1777,7 +1777,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total shipping refunded.
 	 *
-	 * @since  2.4
+	 * @since  WC-2.4
 	 * @return float
 	 */
 	public function get_total_shipping_refunded() {
@@ -1798,7 +1798,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Gets the count of order items of a certain type that have been refunded.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param string $item_type Item type.
 	 * @return string
 	 */
@@ -1823,7 +1823,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total number of items refunded.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 *
 	 * @param  string $item_type Type of the item we're checking, if not a line_item.
 	 * @return int

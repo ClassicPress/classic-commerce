@@ -58,7 +58,7 @@ class WC_Product_Simple extends WC_Product {
 	/**
 	 * Get the add to cart button text description - used in aria tags.
 	 *
-	 * @since 3.3.0
+	 * @since  WC-3.3.0
 	 * @return string
 	 */
 	public function add_to_cart_description() {

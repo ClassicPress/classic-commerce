@@ -18,7 +18,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Shortcode type.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var   string
 	 */
 	protected $type = 'products';
@@ -26,7 +26,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Attributes.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var   array
 	 */
 	protected $attributes = array();
@@ -34,7 +34,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var   array
 	 */
 	protected $query_args = array();
@@ -42,7 +42,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set custom visibility.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var   bool
 	 */
 	protected $custom_visibility = false;
@@ -50,7 +50,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Initialize shortcode.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array  $attributes Shortcode attributes.
 	 * @param string $type       Shortcode type.
 	 */
@@ -63,7 +63,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Get shortcode attributes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_attributes() {
@@ -73,7 +73,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Get query args.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_query_args() {
@@ -83,7 +83,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Get shortcode type.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_type() {
@@ -93,7 +93,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Get shortcode content.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return string
 	 */
 	public function get_content() {
@@ -103,7 +103,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Parse attributes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $attributes Shortcode attributes.
 	 * @return array
 	 */
@@ -143,7 +143,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Parse legacy attributes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $attributes Attributes.
 	 * @return array
 	 */
@@ -167,7 +167,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Parse query args.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function parse_query_args() {
@@ -242,7 +242,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set skus query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_skus_query_args( &$query_args ) {
@@ -259,7 +259,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set ids query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_ids_query_args( &$query_args ) {
@@ -277,7 +277,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set attributes query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_attributes_query_args( &$query_args ) {
@@ -322,7 +322,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set categories query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_categories_query_args( &$query_args ) {
@@ -360,7 +360,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set tags query args.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_tags_query_args( &$query_args ) {
@@ -377,7 +377,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set sale products query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_sale_products_query_args( &$query_args ) {
@@ -387,7 +387,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set best selling products query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_best_selling_products_query_args( &$query_args ) {
@@ -399,7 +399,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set visibility as hidden.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_hidden_query_args( &$query_args ) {
@@ -416,7 +416,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set visibility as catalog.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_catalog_query_args( &$query_args ) {
@@ -440,7 +440,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set visibility as search.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_search_query_args( &$query_args ) {
@@ -464,7 +464,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set visibility as featured.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_featured_query_args( &$query_args ) {
@@ -484,7 +484,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set visibility query args.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $query_args Query args.
 	 */
 	protected function set_visibility_query_args( &$query_args ) {
@@ -500,7 +500,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Set product as visible when quering for hidden products.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  bool $visibility Product visibility.
 	 * @return bool
 	 */
@@ -511,7 +511,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Get wrapper classes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $columns Number of columns.
 	 * @return array
 	 */
@@ -530,7 +530,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Generate and return the transient name for this shortcode based on the query args.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @return string
 	 */
 	protected function get_transient_name() {
@@ -550,7 +550,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Run the query and return an array of data, including queried ids and pagination information.
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @return object Object with the following props; ids, per_page, found_posts, max_num_pages, current_page
 	 */
 	protected function get_query_results() {
@@ -589,7 +589,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Loop over found products.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return string
 	 */
 	protected function product_loop() {
@@ -669,7 +669,7 @@ class WC_Shortcode_Products {
 	/**
 	 * Order by rating.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $args Query args.
 	 * @return array
 	 */

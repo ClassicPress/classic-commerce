@@ -48,7 +48,7 @@ class WC_Shipping {
 	/**
 	 * The single instance of the class
 	 *
-	 * @var WC_Shipping
+	 * @var   WC_Shipping
 	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
@@ -58,7 +58,7 @@ class WC_Shipping {
 	 *
 	 * Ensures only one instance of WC_Shipping is loaded or can be loaded.
 	 *
-	 * @since WC-2.1
+	 * @since  WC-2.1
 	 * @return WC_Shipping Main instance
 	 */
 	public static function instance() {

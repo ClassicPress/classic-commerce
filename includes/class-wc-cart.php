@@ -1110,7 +1110,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Remove a cart item.
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @param  string $cart_item_key Cart item key to remove from the cart.
 	 * @return bool
 	 */
@@ -1182,7 +1182,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Get cart's owner.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return WC_Customer
 	 */
 	public function get_customer() {
@@ -1268,7 +1268,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Filter items needing shipping callback.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $item Item to check for shipping.
 	 * @return bool
 	 */
@@ -1280,7 +1280,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Get only items that need shipping.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	protected function get_items_needing_shipping() {
@@ -1716,7 +1716,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Return reference to fees API.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return WC_Cart_Fees
 	 */
 	public function fees_api() {

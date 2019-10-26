@@ -2,7 +2,7 @@
 /**
  * Personal data exporters.
  *
- * @since 3.4.0
+ * @since   WC-3.4.0
  * @package WooCommerce\Classes
  */
 
@@ -15,8 +15,8 @@ class WC_Privacy_Exporters {
 	/**
 	 * Finds and exports customer data by email address.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function customer_data_exporter( $email_address ) {
@@ -46,9 +46,9 @@ class WC_Privacy_Exporters {
 	 *
 	 * Orders are exported in blocks of 10 to avoid timeouts.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function order_data_exporter( $email_address, $page ) {
@@ -89,9 +89,9 @@ class WC_Privacy_Exporters {
 	/**
 	 * Finds and exports customer download logs by email address.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @throws Exception When WC_Data_Store validation fails.
 	 * @return array An array of personal data in name value pairs
 	 */
@@ -162,8 +162,8 @@ class WC_Privacy_Exporters {
 	/**
 	 * Get personal data (key/value pairs) for a user object.
 	 *
-	 * @since 3.4.0
-	 * @param WP_User $user user object.
+	 * @since  WC-3.4.0
+	 * @param  WP_User $user user object.
 	 * @throws Exception If customer cannot be read/found and $data is set to WC_Customer class.
 	 * @return array
 	 */
@@ -218,7 +218,7 @@ class WC_Privacy_Exporters {
 		/**
 		 * Allow extensions to register their own personal data for this customer for the export.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array    $personal_data Array of name value pairs.
 		 * @param WC_Order $order A customer object.
 		 */
@@ -230,8 +230,8 @@ class WC_Privacy_Exporters {
 	/**
 	 * Get personal data (key/value pairs) for an order object.
 	 *
-	 * @since 3.4.0
-	 * @param WC_Order $order Order object.
+	 * @since  WC-3.4.0
+	 * @param  WC_Order $order Order object.
 	 * @return array
 	 */
 	protected static function get_order_personal_data( $order ) {
@@ -308,7 +308,7 @@ class WC_Privacy_Exporters {
 		/**
 		 * Allow extensions to register their own personal data for this order for the export.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array    $personal_data Array of name value pairs to expose in the export.
 		 * @param WC_Order $order An order object.
 		 */
@@ -320,8 +320,8 @@ class WC_Privacy_Exporters {
 	/**
 	 * Get personal data (key/value pairs) for a download object.
 	 *
-	 * @since 3.4.0
-	 * @param WC_Order $download Download object.
+	 * @since  WC-3.4.0
+	 * @param  WC_Order $download Download object.
 	 * @return array
 	 */
 	protected static function get_download_personal_data( $download ) {
@@ -363,7 +363,7 @@ class WC_Privacy_Exporters {
 		/**
 		 * Allow extensions to register their own personal data for this download for the export.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array    $personal_data Array of name value pairs to expose in the export.
 		 * @param WC_Order $order An order object.
 		 */
@@ -375,9 +375,9 @@ class WC_Privacy_Exporters {
 	/**
 	 * Finds and exports payment tokens by email address for a customer.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function customer_tokens_exporter( $email_address, $page ) {

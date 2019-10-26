@@ -66,7 +66,7 @@ function wc_load_persistent_cart( $user_login, $user ) {
  *
  * Do not use for redirects, use {@see wp_get_referer()} instead.
  *
- * @since WC-2.6.1
+ * @since  WC-2.6.1
  * @return string|false Referer URL on success, false on failure.
  */
 function wc_get_raw_referer() {
@@ -374,7 +374,7 @@ function wc_cart_round_discount( $value, $precision ) {
 /**
  * Gets chosen shipping method IDs from chosen_shipping_methods session, without instance IDs.
  *
- * @since  2.6.2
+ * @since  WC-2.6.2
  * @return string[]
  */
 function wc_get_chosen_shipping_method_ids() {
@@ -390,7 +390,7 @@ function wc_get_chosen_shipping_method_ids() {
 /**
  * Get chosen method for package from session.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int   $key Key of package.
  * @param  array $package Package data array.
  * @return string|bool
@@ -426,7 +426,7 @@ function wc_get_chosen_shipping_method_for_package( $key, $package ) {
 /**
  * Choose the default method for a package.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int    $key Key of package.
  * @param  array  $package Package data array.
  * @param  string $chosen_method Chosen method id.
@@ -453,7 +453,7 @@ function wc_get_default_shipping_method_for_package( $key, $package, $chosen_met
 /**
  * See if the methods have changed since the last request.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int   $key Key of package.
  * @param  array $package Package data array.
  * @return bool

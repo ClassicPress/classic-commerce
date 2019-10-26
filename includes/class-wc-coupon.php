@@ -142,7 +142,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Prefix for action and filter hooks on data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_hook_prefix() {
@@ -161,7 +161,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon code.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -172,7 +172,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon description.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -183,7 +183,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get discount type.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -194,7 +194,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon amount.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return float
 	 */
@@ -205,7 +205,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon expiration date.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -216,7 +216,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get date_created
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -227,7 +227,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get date_modified
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|NULL object if the date is set or null if there is no date.
 	 */
@@ -238,7 +238,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon usage count.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return integer
 	 */
@@ -249,7 +249,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get the "indvidual use" checkbox status.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return bool
 	 */
@@ -260,7 +260,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get product IDs this coupon can apply to.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -271,7 +271,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get product IDs that this coupon should not apply to.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -282,7 +282,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon usage limit.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return integer
 	 */
@@ -293,7 +293,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get coupon usage limit per customer (for a single customer)
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return integer
 	 */
@@ -304,7 +304,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Usage limited to certain amount of items
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return integer|null
 	 */
@@ -315,7 +315,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * If this coupon grants free shipping or not.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return bool
 	 */
@@ -326,7 +326,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get product categories this coupon can apply to.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -337,7 +337,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get product categories this coupon cannot not apply to.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -348,7 +348,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * If this coupon should exclude items on sale.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return bool
 	 */
@@ -359,7 +359,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get minimum spend amount.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return float
 	 */
@@ -369,7 +369,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get maximum spend amount.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return float
 	 */
@@ -380,7 +380,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get emails to check customer usage restrictions.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -391,7 +391,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Get records of all users who have used the current coupon.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -523,7 +523,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set expiration date.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_expires( $date ) {
@@ -533,7 +533,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set date_created
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_created( $date ) {
@@ -543,7 +543,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	/**
 	 * Set date_modified
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if there is no date.
 	 */
 	public function set_date_modified( $date ) {

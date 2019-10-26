@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * Uses queries rather than update_post_meta so we can do this in one query (to avoid stock issues).
  *
- * @since  3.0.0 this supports set, increase and decrease.
+ * @since  WC-3.0.0 this supports set, increase and decrease.
  *
  * @param  int|WC_Product $product        Product ID or product instance.
  * @param  int|null       $stock_quantity Stock quantity.
@@ -321,7 +321,7 @@ function wc_get_held_stock_quantity( $product, $exclude_order_id = 0 ) {
  * Return low stock amount to determine if notification needs to be sent
  *
  * @param  WC_Product $product
- * @since  3.5.0
+ * @since  WC-3.5.0
  * @return int
  */
 function wc_get_low_stock_amount( WC_Product $product ) {

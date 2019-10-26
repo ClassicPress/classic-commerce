@@ -2,7 +2,7 @@
 /**
  * Personal data erasers.
  *
- * @since 3.4.0
+ * @since   WC-3.4.0
  * @package WooCommerce\Classes
  */
 
@@ -15,9 +15,9 @@ class WC_Privacy_Erasers {
 	/**
 	 * Finds and erases customer data by email address.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function customer_data_eraser( $email_address, $page ) {
@@ -89,7 +89,7 @@ class WC_Privacy_Erasers {
 		/**
 		 * Allow extensions to remove data for this customer and adjust the response.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array    $response Array resonse data. Must include messages, num_items_removed, num_items_retained, done.
 		 * @param WC_Order $order A customer object.
 		 */
@@ -101,9 +101,9 @@ class WC_Privacy_Erasers {
 	 *
 	 * Orders are erased in blocks of 10 to avoid timeouts.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function order_data_eraser( $email_address, $page ) {
@@ -154,9 +154,9 @@ class WC_Privacy_Erasers {
 	/**
 	 * Finds and removes customer download logs by email address.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function download_data_eraser( $email_address, $page ) {
@@ -216,7 +216,7 @@ class WC_Privacy_Erasers {
 		/**
 		 * Allow extensions to remove their own personal data for this order first, so order data is still available.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param WC_Order $order A customer object.
 		 */
 		do_action( 'woocommerce_privacy_before_remove_order_personal_data', $order );
@@ -224,7 +224,7 @@ class WC_Privacy_Erasers {
 		/**
 		 * Expose props and data types we'll be anonymizing.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array    $props Keys are the prop names, values are the data type we'll be passing to wp_privacy_anonymize_data().
 		 * @param WC_Order $order A customer object.
 		 */
@@ -270,7 +270,7 @@ class WC_Privacy_Erasers {
 				/**
 				 * Expose a way to control the anonymized value of a prop via 3rd party code.
 				 *
-				 * @since 3.4.0
+				 * @since WC-3.4.0
 				 * @param string   $anon_value Value of this prop after anonymization.
 				 * @param string   $prop Name of the prop being removed.
 				 * @param string   $value Current value of the data.
@@ -306,7 +306,7 @@ class WC_Privacy_Erasers {
 				/**
 				 * Expose a way to control the anonymized value of a value via 3rd party code.
 				 *
-				 * @since 3.4.0
+				 * @since WC-3.4.0
 				 * @param string   $anon_value Value of this data after anonymization.
 				 * @param string   $prop meta_key key being removed.
 				 * @param string   $value Current value of the data.
@@ -341,7 +341,7 @@ class WC_Privacy_Erasers {
 		/**
 		 * Allow extensions to remove their own personal data for this order.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param WC_Order $order A customer object.
 		 */
 		do_action( 'woocommerce_privacy_remove_order_personal_data', $order );
@@ -350,9 +350,9 @@ class WC_Privacy_Erasers {
 	/**
 	 * Finds and erases customer tokens by email address.
 	 *
-	 * @since 3.4.0
-	 * @param string $email_address The user email address.
-	 * @param int    $page  Page.
+	 * @since  WC-3.4.0
+	 * @param  string $email_address The user email address.
+	 * @param  int    $page  Page.
 	 * @return array An array of personal data in name value pairs
 	 */
 	public static function customer_tokens_eraser( $email_address, $page ) {
@@ -388,7 +388,7 @@ class WC_Privacy_Erasers {
 		/**
 		 * Allow extensions to remove data for tokens and adjust the response.
 		 *
-		 * @since 3.4.0
+		 * @since WC-3.4.0
 		 * @param array $response Array resonse data. Must include messages, num_items_removed, num_items_retained, done.
 		 * @param array $tokens   Array of tokens.
 		 */

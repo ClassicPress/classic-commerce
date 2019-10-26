@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class       WC_Payment_Token_ECheck
  * @version     3.0.0
- * @since       2.6.0
+ * @since       WC-2.6.0
  * @package     WooCommerce/PaymentTokens
  */
 class WC_Payment_Token_ECheck extends WC_Payment_Token {
@@ -40,7 +40,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Get type to display to user.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $deprecated Deprecated since WooCommerce 3.0.
 	 * @return string
 	 */
@@ -85,7 +85,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Returns the last four digits.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Last 4 digits
 	 */

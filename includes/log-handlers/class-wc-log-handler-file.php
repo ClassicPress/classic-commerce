@@ -358,7 +358,7 @@ class WC_Log_Handler_File extends WC_Log_Handler {
 	 *
 	 * File names consist of the handle, followed by the date, followed by a hash, .log.
 	 *
-	 * @since 3.3
+	 * @since WC-3.3
 	 * @param string $handle Log name.
 	 * @return bool|string The log file name or false if cannot be determined.
 	 */
@@ -398,7 +398,7 @@ class WC_Log_Handler_File extends WC_Log_Handler {
 	/**
 	 * Delete all logs older than a defined timestamp.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param integer $timestamp Timestamp to delete logs before.
 	 */
 	public static function delete_logs_before_timestamp( $timestamp = 0 ) {
@@ -420,7 +420,7 @@ class WC_Log_Handler_File extends WC_Log_Handler {
 	/**
 	 * Get all log files in the log directory.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @return array
 	 */
 	public static function get_log_files() {

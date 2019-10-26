@@ -2,7 +2,7 @@
 /**
  * Privacy/GDPR related functionality which ties into WordPress functionality.
  *
- * @since 3.4.0
+ * @since   WC-3.4.0
  * @package WooCommerce\Classes
  */
 
@@ -63,7 +63,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Add privacy policy content for the privacy policy page.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 */
 	public function get_privacy_message() {
 		$content = '
@@ -158,7 +158,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Find and trash old orders.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @param  int $limit Limit orders to process per batch.
 	 * @return int Number of orders processed.
 	 */
@@ -180,7 +180,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Find and trash old orders.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @param  int $limit Limit orders to process per batch.
 	 * @return int Number of orders processed.
 	 */
@@ -202,7 +202,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Find and trash old orders.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @param  int $limit Limit orders to process per batch.
 	 * @return int Number of orders processed.
 	 */
@@ -224,8 +224,8 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * For a given query trash all matches.
 	 *
-	 * @since 3.4.0
-	 * @param array $query Query array to pass to wc_get_orders().
+	 * @since  WC-3.4.0
+	 * @param  array $query Query array to pass to wc_get_orders().
 	 * @return int Count of orders that were trashed.
 	 */
 	protected static function trash_orders_query( $query ) {
@@ -245,7 +245,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Anonymize old completed orders.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @param  int $limit Limit orders to process per batch.
 	 * @return int Number of orders processed.
 	 */
@@ -268,8 +268,8 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * For a given query, anonymize all matches.
 	 *
-	 * @since 3.4.0
-	 * @param array $query Query array to pass to wc_get_orders().
+	 * @since  WC-3.4.0
+	 * @param  array $query Query array to pass to wc_get_orders().
 	 * @return int Count of orders that were anonymized.
 	 */
 	protected static function anonymize_orders_query( $query ) {
@@ -289,7 +289,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Delete inactive accounts.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @param  int $limit Limit users to process per batch.
 	 * @return int Number of users processed.
 	 */
@@ -306,7 +306,7 @@ class WC_Privacy extends WC_Abstract_Privacy {
 	/**
 	 * Delete inactive accounts.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param int $timestamp Timestamp to delete customers before.
 	 * @param int $limit     Limit number of users to delete per run.
 	 * @return int Count of customers that were deleted.

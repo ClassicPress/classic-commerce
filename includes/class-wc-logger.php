@@ -282,7 +282,7 @@ class WC_Logger implements WC_Logger_Interface {
 	/**
 	 * Clear all logs older than a defined number of days. Defaults to 30 days.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 */
 	public function clear_expired_logs() {
 		$days      = absint( apply_filters( 'woocommerce_logger_days_to_retain_logs', 30 ) );

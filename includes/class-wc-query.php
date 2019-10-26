@@ -143,7 +143,7 @@ class WC_Query {
 	/**
 	 * Endpoint mask describing the places the endpoint should be added.
 	 *
-	 * @since WC-2.6.2
+	 * @since  WC-2.6.2
 	 * @return int
 	 */
 	public function get_endpoints_mask() {

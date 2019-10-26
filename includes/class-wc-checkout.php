@@ -170,7 +170,7 @@ class WC_Checkout {
 	/**
 	 * Is registration required to checkout?
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function is_registration_required() {
@@ -180,7 +180,7 @@ class WC_Checkout {
 	/**
 	 * Is registration enabled on the checkout page?
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function is_registration_enabled() {
@@ -595,7 +595,7 @@ class WC_Checkout {
 	/**
 	 * Get posted data from the checkout form.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @return array of data.
 	 */
 	public function get_posted_data() {
@@ -654,7 +654,7 @@ class WC_Checkout {
 	/**
 	 * Validates the posted checkout data based on field properties.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array    $data   An array of posted data.
 	 * @param  WP_Error $errors Validation error.
 	 */
@@ -751,7 +751,7 @@ class WC_Checkout {
 	/**
 	 * Validates that the checkout has enough info to proceed.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array    $data   An array of posted data.
 	 * @param  WP_Error $errors Validation errors.
 	 */

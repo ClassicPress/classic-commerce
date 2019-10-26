@@ -56,7 +56,7 @@ class WC_Comments {
 	/**
 	 * See if comments are open.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @param  bool $open    Whether the current post is open for comments.
 	 * @param  int  $post_id Post ID.
 	 * @return bool
@@ -108,7 +108,7 @@ class WC_Comments {
 	/**
 	 * Exclude webhook comments from queries and RSS.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  array $clauses A compacted array of comment query clauses.
 	 * @return array
 	 */
@@ -130,7 +130,7 @@ class WC_Comments {
 	/**
 	 * Exclude webhook comments from queries and RSS.
 	 *
-	 * @since  2.1
+	 * @since  WC-2.1
 	 * @param  string $where The WHERE clause of the query.
 	 * @return string
 	 */
@@ -217,7 +217,7 @@ class WC_Comments {
 	/**
 	 * Remove order notes and webhook delivery logs from wp_count_comments().
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  object $stats   Comment stats.
 	 * @param  int    $post_id Post ID.
 	 * @return object
@@ -281,7 +281,7 @@ class WC_Comments {
 	/**
 	 * Make sure WP displays avatars for comments with the `review` type.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @param  array $comment_types Comment types.
 	 * @return array
 	 */
