@@ -1,10 +1,10 @@
 <!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
 
-Welcome to the ClassicCommerce repository on GitHub. This is a Fork of Woocommerce and is still in development. 
+Welcome to the Classic Commerce repository on GitHub. This is a fork of Woocommerce and is still in development. 
 
 Here you can browse the source, look at open issues and keep track of development. 
 
-We recommend all developers to follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
+We recommend all developers follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 
 
 ## Documentation
@@ -16,7 +16,7 @@ We recommend all developers to follow the [Issues](https://github.com/ClassicPre
 To disclose a security issue to our team. (security@classicpress.net)
 
 ## Support
-This repository is most suitable for development but for the little while will use it for support. We shall add a support tag to your issue. However, this might take a little longer to get response.
+This repository is most suitable for development but can also be used for support. We will add a support tag to your issue. However, this might take a little longer to get a response. You can also use the dedicated support area on the [ClassicPress community forum](https://forums.classicpress.net/c/support/classic-commerce/").
 
-## Contributing to WooCommerce
-If you have a patch or have stumbled upon an issue with WooCommerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information how you can do this.
+## Contributing to Classic Commerce
+If you have a patch or have stumbled upon an issue with Classic Commerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information about how you can do this.
