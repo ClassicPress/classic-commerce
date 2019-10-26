@@ -21,7 +21,7 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 	 */
 	public function __construct() {
 		$this->id    = 'checkout'; // @todo In future versions this may make more sense as 'payment' however to avoid breakage lets leave this alone until we refactor settings APIs in general.
-		$this->label = _x( 'Payments', 'Settings tab label', 'woocommerce' );
+		$this->label = _x( 'Payments', 'Settings tab label', 'classic-commerce' );
 
 		add_action( 'woocommerce_admin_field_payment_gateways', array( $this, 'payment_gateways_setting' ) );
 		parent::__construct();
@@ -34,7 +34,7 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 	 */
 	public function get_sections() {
 		$sections = array(
-			'' => __( 'Payment methods', 'woocommerce' ),
+			'' => __( 'Payment methods', 'classic-commerce' ),
 		);
 		return apply_filters( 'woocommerce_get_sections_' . $this->id, $sections );
 	}
@@ -52,8 +52,8 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 			$settings = apply_filters(
 				'woocommerce_payment_gateways_settings', array(
 					array(
-						'title' => __( 'Payment methods', 'woocommerce' ),
-						'desc'  => __( 'Installed payment methods are listed below and can be sorted to control their display order on the frontend.', 'woocommerce' ),
+						'title' => __( 'Payment methods', 'classic-commerce' ),
+						'desc'  => __( 'Installed payment methods are listed below and can be sorted to control their display order on the frontend.', 'classic-commerce' ),
 						'type'  => 'title',
 						'id'    => 'payment_gateways_options',
 					),
@@ -113,9 +113,9 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 						<?php
 						$default_columns = array(
 							'sort'        => '',
-							'name'        => __( 'Method', 'woocommerce' ),
-							'status'      => __( 'Enabled', 'woocommerce' ),
-							'description' => __( 'Description', 'woocommerce' ),
+							'name'        => __( 'Method', 'classic-commerce' ),
+							'status'      => __( 'Enabled', 'classic-commerce' ),
+							'description' => __( 'Description', 'classic-commerce' ),
 							'action'      => '',
 						);
 
@@ -154,8 +154,8 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 									case 'sort':
 										?>
 										<div class="wc-item-reorder-nav">
-											<button type="button" class="wc-move-up" tabindex="0" aria-hidden="false" aria-label="<?php /* Translators: %s Payment gateway name. */ echo esc_attr( sprintf( __( 'Move the "%s" payment method up', 'woocommerce' ), $method_title ) ); ?>"><?php esc_html_e( 'Move up', 'woocommerce' ); ?></button>
-											<button type="button" class="wc-move-down" tabindex="0" aria-hidden="false" aria-label="<?php /* Translators: %s Payment gateway name. */ echo esc_attr( sprintf( __( 'Move the "%s" payment method down', 'woocommerce' ), $method_title ) ); ?>"><?php esc_html_e( 'Move down', 'woocommerce' ); ?></button>
+											<button type="button" class="wc-move-up" tabindex="0" aria-hidden="false" aria-label="<?php /* Translators: %s Payment gateway name. */ echo esc_attr( sprintf( __( 'Move the "%s" payment method up', 'classic-commerce' ), $method_title ) ); ?>"><?php esc_html_e( 'Move up', 'classic-commerce' ); ?></button>
+											<button type="button" class="wc-move-down" tabindex="0" aria-hidden="false" aria-label="<?php /* Translators: %s Payment gateway name. */ echo esc_attr( sprintf( __( 'Move the "%s" payment method down', 'classic-commerce' ), $method_title ) ); ?>"><?php esc_html_e( 'Move down', 'classic-commerce' ); ?></button>
 											<input type="hidden" name="gateway_order[]" value="<?php echo esc_attr( $gateway->id ); ?>" />
 										</div>
 										<?php
@@ -173,20 +173,20 @@ class WC_Settings_Payment_Gateways extends WC_Settings_Page {
 									case 'action':
 										if ( wc_string_to_bool( $gateway->enabled ) ) {
 											/* Translators: %s Payment gateway name. */
-											echo '<a class="button alignright" aria-label="' . esc_attr( sprintf( __( 'Manage the "%s" payment method', 'woocommerce' ), $method_title ) ) . '" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . strtolower( $gateway->id ) ) ) . '">' . esc_html__( 'Manage', 'woocommerce' ) . '</a>';
+											echo '<a class="button alignright" aria-label="' . esc_attr( sprintf( __( 'Manage the "%s" payment method', 'classic-commerce' ), $method_title ) ) . '" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . strtolower( $gateway->id ) ) ) . '">' . esc_html__( 'Manage', 'classic-commerce' ) . '</a>';
 										} else {
 											/* Translators: %s Payment gateway name. */
-											echo '<a class="button alignright" aria-label="' . esc_attr( sprintf( __( 'Set up the "%s" payment method', 'woocommerce' ), $method_title ) ) . '" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . strtolower( $gateway->id ) ) ) . '">' . esc_html__( 'Set up', 'woocommerce' ) . '</a>';
+											echo '<a class="button alignright" aria-label="' . esc_attr( sprintf( __( 'Set up the "%s" payment method', 'classic-commerce' ), $method_title ) ) . '" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . strtolower( $gateway->id ) ) ) . '">' . esc_html__( 'Set up', 'classic-commerce' ) . '</a>';
 										}
 										break;
 									case 'status':
 										echo '<a class="wc-payment-gateway-method-toggle-enabled" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=' . strtolower( $gateway->id ) ) ) . '">';
 										if ( wc_string_to_bool( $gateway->enabled ) ) {
 											/* Translators: %s Payment gateway name. */
-											echo '<span class="woocommerce-input-toggle woocommerce-input-toggle--enabled" aria-label="' . esc_attr( sprintf( __( 'The "%s" payment method is currently enabled', 'woocommerce' ), $method_title ) ) . '">' . esc_attr__( 'Yes', 'woocommerce' ) . '</span>';
+											echo '<span class="woocommerce-input-toggle woocommerce-input-toggle--enabled" aria-label="' . esc_attr( sprintf( __( 'The "%s" payment method is currently enabled', 'classic-commerce' ), $method_title ) ) . '">' . esc_attr__( 'Yes', 'classic-commerce' ) . '</span>';
 										} else {
 											/* Translators: %s Payment gateway name. */
-											echo '<span class="woocommerce-input-toggle woocommerce-input-toggle--disabled" aria-label="' . esc_attr( sprintf( __( 'The "%s" payment method is currently disabled', 'woocommerce' ), $method_title ) ) . '">' . esc_attr__( 'No', 'woocommerce' ) . '</span>';
+											echo '<span class="woocommerce-input-toggle woocommerce-input-toggle--disabled" aria-label="' . esc_attr( sprintf( __( 'The "%s" payment method is currently disabled', 'classic-commerce' ), $method_title ) ) . '">' . esc_attr__( 'No', 'classic-commerce' ) . '</span>';
 										}
 										echo '</a>';
 										break;

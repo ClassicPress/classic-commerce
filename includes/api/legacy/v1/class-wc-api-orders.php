@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  * @version     2.1
  */
 
@@ -252,7 +252,7 @@ class WC_API_Orders extends WC_API_Resource {
 		$query = $this->query_orders( $filter );
 
 		if ( ! current_user_can( 'read_private_shop_orders' ) ) {
-			return new WP_Error( 'woocommerce_api_user_cannot_read_orders_count', __( 'You do not have permission to read the orders count', 'woocommerce' ), array( 'status' => 401 ) );
+			return new WP_Error( 'woocommerce_api_user_cannot_read_orders_count', __( 'You do not have permission to read the orders count', 'classic-commerce' ), array( 'status' => 401 ) );
 		}
 
 		return array( 'count' => (int) $query->found_posts );

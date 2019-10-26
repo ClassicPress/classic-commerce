@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.5.0
  */
 
@@ -22,14 +22,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 echo '= ' . esc_html( $email_heading ) . " =\n\n";
 
 /* translators: %s: Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $user_login ) ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $user_login ) ) . "\n\n";
 /* translators: %s: Store name */
-echo sprintf( esc_html__( 'Someone has requested a new password for the following account on %s:', 'woocommerce' ), esc_html( wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ) ) ) . "\n\n";
+echo sprintf( esc_html__( 'Someone has requested a new password for the following account on %s:', 'classic-commerce' ), esc_html( wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES ) ) ) . "\n\n";
 /* translators: %s: Customer username */
-echo sprintf( esc_html__( 'Username: %s', 'woocommerce' ), esc_html( $user_login ) ) . "\n\n";
-echo esc_html__( 'If you didn\'t make this request, just ignore this email. If you\'d like to proceed:', 'woocommerce' ) . "\n\n";
+echo sprintf( esc_html__( 'Username: %s', 'classic-commerce' ), esc_html( $user_login ) ) . "\n\n";
+echo esc_html__( 'If you didn\'t make this request, just ignore this email. If you\'d like to proceed:', 'classic-commerce' ) . "\n\n";
 echo esc_url( add_query_arg( array( 'key' => $reset_key, 'id' => $user_id ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ) . "\n\n"; // phpcs:ignore
-echo esc_html__( 'Thanks for reading.', 'woocommerce' ) . "\n\n";
+echo esc_html__( 'Thanks for reading.', 'classic-commerce' ) . "\n\n";
 
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 

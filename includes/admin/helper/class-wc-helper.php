@@ -176,8 +176,8 @@ class WC_Helper {
 			if ( $subscription['has_update'] && ! $subscription['expired'] ) {
 				$action = array(
 					/* translators: %s: version number */
-					'message'      => sprintf( __( 'Version %s is <strong>available</strong>.', 'woocommerce' ), esc_html( $updates[ $subscription['product_id'] ]['version'] ) ),
-					'button_label' => __( 'Update', 'woocommerce' ),
+					'message'      => sprintf( __( 'Version %s is <strong>available</strong>.', 'classic-commerce' ), esc_html( $updates[ $subscription['product_id'] ]['version'] ) ),
+					'button_label' => __( 'Update', 'classic-commerce' ),
 					'button_url'   => $subscription['update_url'],
 					'status'       => 'update-available',
 					'icon'         => 'dashicons-update',
@@ -185,7 +185,7 @@ class WC_Helper {
 
 				// Subscription is not active on this site.
 				if ( ! $subscription['active'] ) {
-					$action['message']     .= ' ' . __( 'To enable this update you need to <strong>activate</strong> this subscription.', 'woocommerce' );
+					$action['message']     .= ' ' . __( 'To enable this update you need to <strong>activate</strong> this subscription.', 'classic-commerce' );
 					$action['button_label'] = null;
 					$action['button_url']   = null;
 				}
@@ -196,19 +196,19 @@ class WC_Helper {
 			if ( $subscription['has_update'] && $subscription['expired'] ) {
 				$action = array(
 					/* translators: %s: version number */
-					'message' => sprintf( __( 'Version %s is <strong>available</strong>.', 'woocommerce' ), esc_html( $updates[ $subscription['product_id'] ]['version'] ) ),
+					'message' => sprintf( __( 'Version %s is <strong>available</strong>.', 'classic-commerce' ), esc_html( $updates[ $subscription['product_id'] ]['version'] ) ),
 					'status'  => 'expired',
 					'icon'    => 'dashicons-info',
 				);
 
-				$action['message']     .= ' ' . __( 'To enable this update you need to <strong>purchase</strong> a new subscription.', 'woocommerce' );
-				$action['button_label'] = __( 'Purchase', 'woocommerce' );
+				$action['message']     .= ' ' . __( 'To enable this update you need to <strong>purchase</strong> a new subscription.', 'classic-commerce' );
+				$action['button_label'] = __( 'Purchase', 'classic-commerce' );
 				$action['button_url']   = $subscription['product_url'];
 
 				$subscription['actions'][] = $action;
 			} elseif ( $subscription['expired'] && ! empty( $subscription['master_user_email'] ) ) {
 				$action = array(
-					'message' => sprintf( __( 'This subscription has expired. Contact the owner to <strong>renew</strong> the subscription to receive updates and support.', 'woocommerce' ) ),
+					'message' => sprintf( __( 'This subscription has expired. Contact the owner to <strong>renew</strong> the subscription to receive updates and support.', 'classic-commerce' ) ),
 					'status'  => 'expired',
 					'icon'    => 'dashicons-info',
 				);
@@ -216,8 +216,8 @@ class WC_Helper {
 				$subscription['actions'][] = $action;
 			} elseif ( $subscription['expired'] ) {
 				$action = array(
-					'message'      => sprintf( __( 'This subscription has expired. Please <strong>renew</strong> to receive updates and support.', 'woocommerce' ) ),
-					'button_label' => __( 'Renew', 'woocommerce' ),
+					'message'      => sprintf( __( 'This subscription has expired. Please <strong>renew</strong> to receive updates and support.', 'classic-commerce' ) ),
+					'button_label' => __( 'Renew', 'classic-commerce' ),
 					'button_url'   => 'https://woocommerce.com/my-account/my-subscriptions/',
 					'status'       => 'expired',
 					'icon'         => 'dashicons-info',
@@ -228,8 +228,8 @@ class WC_Helper {
 
 			if ( $subscription['expiring'] && ! $subscription['autorenew'] ) {
 				$action = array(
-					'message'      => __( 'Subscription is <strong>expiring</strong> soon.', 'woocommerce' ),
-					'button_label' => __( 'Enable auto-renew', 'woocommerce' ),
+					'message'      => __( 'Subscription is <strong>expiring</strong> soon.', 'classic-commerce' ),
+					'button_label' => __( 'Enable auto-renew', 'classic-commerce' ),
 					'button_url'   => 'https://woocommerce.com/my-account/my-subscriptions/',
 					'status'       => 'expired',
 					'icon'         => 'dashicons-info',
@@ -239,8 +239,8 @@ class WC_Helper {
 				$subscription['actions'][]        = $action;
 			} elseif ( $subscription['expiring'] ) {
 				$action = array(
-					'message'      => sprintf( __( 'This subscription is expiring soon. Please <strong>renew</strong> to continue receiving updates and support.', 'woocommerce' ) ),
-					'button_label' => __( 'Renew', 'woocommerce' ),
+					'message'      => sprintf( __( 'This subscription is expiring soon. Please <strong>renew</strong> to continue receiving updates and support.', 'classic-commerce' ) ),
+					'button_label' => __( 'Renew', 'classic-commerce' ),
 					'button_url'   => 'https://woocommerce.com/my-account/my-subscriptions/',
 					'status'       => 'expired',
 					'icon'         => 'dashicons-info',
@@ -286,8 +286,8 @@ class WC_Helper {
 
 			if ( $data['_has_update'] ) {
 				$action = array(
-					'message'      => sprintf( __( 'Version %s is <strong>available</strong>. To enable this update you need to <strong>purchase</strong> a new subscription.', 'woocommerce' ), esc_html( $updates[ $data['_product_id'] ]['version'] ) ),
-					'button_label' => __( 'Purchase', 'woocommerce' ),
+					'message'      => sprintf( __( 'Version %s is <strong>available</strong>. To enable this update you need to <strong>purchase</strong> a new subscription.', 'classic-commerce' ), esc_html( $updates[ $data['_product_id'] ]['version'] ) ),
+					'button_label' => __( 'Purchase', 'classic-commerce' ),
 					'button_url'   => $data['_product_url'],
 					'status'       => 'expired',
 					'icon'         => 'dashicons-info',
@@ -297,8 +297,8 @@ class WC_Helper {
 			} else {
 				$action = array(
 					/* translators: 1: subscriptions docs 2: subscriptions docs */
-					'message'      => sprintf( __( 'To receive updates and support for this extension, you need to <strong>purchase</strong> a new subscription or consolidate your extensions to one connected account by <strong><a href="%1$s" title="Sharing Docs">sharing</a> or <a href="%2$s" title="Transferring Docs">transferring</a></strong> this extension to this connected account.', 'woocommerce' ), 'https://docs.woocommerce.com/document/managing-woocommerce-com-subscriptions/#section-10', 'https://docs.woocommerce.com/document/managing-woocommerce-com-subscriptions/#section-5' ),
-					'button_label' => __( 'Purchase', 'woocommerce' ),
+					'message'      => sprintf( __( 'To receive updates and support for this extension, you need to <strong>purchase</strong> a new subscription or consolidate your extensions to one connected account by <strong><a href="%1$s" title="Sharing Docs">sharing</a> or <a href="%2$s" title="Transferring Docs">transferring</a></strong> this extension to this connected account.', 'classic-commerce' ), 'https://docs.woocommerce.com/document/managing-woocommerce-com-subscriptions/#section-10', 'https://docs.woocommerce.com/document/managing-woocommerce-com-subscriptions/#section-5' ),
+					'button_label' => __( 'Purchase', 'classic-commerce' ),
 					'button_url'   => $data['_product_url'],
 					'status'       => 'expired',
 					'icon'         => 'dashicons-info',
@@ -336,14 +336,14 @@ class WC_Helper {
 	 */
 	public static function get_filters() {
 		$filters = array(
-			'all'              => __( 'All', 'woocommerce' ),
-			'active'           => __( 'Active', 'woocommerce' ),
-			'inactive'         => __( 'Inactive', 'woocommerce' ),
-			'installed'        => __( 'Installed', 'woocommerce' ),
-			'update-available' => __( 'Update Available', 'woocommerce' ),
-			'expiring'         => __( 'Expiring Soon', 'woocommerce' ),
-			'expired'          => __( 'Expired', 'woocommerce' ),
-			'download'         => __( 'Download', 'woocommerce' ),
+			'all'              => __( 'All', 'classic-commerce' ),
+			'active'           => __( 'Active', 'classic-commerce' ),
+			'inactive'         => __( 'Inactive', 'classic-commerce' ),
+			'installed'        => __( 'Installed', 'classic-commerce' ),
+			'update-available' => __( 'Update Available', 'classic-commerce' ),
+			'expiring'         => __( 'Expiring Soon', 'classic-commerce' ),
+			'expired'          => __( 'Expired', 'classic-commerce' ),
+			'download'         => __( 'Download', 'classic-commerce' ),
 		);
 
 		return $filters;
@@ -445,7 +445,7 @@ class WC_Helper {
 	public static function admin_enqueue_scripts() {
 		$screen       = get_current_screen();
 		$screen_id    = $screen ? $screen->id : '';
-		$wc_screen_id = sanitize_title( __( 'WooCommerce', 'woocommerce' ) );
+		$wc_screen_id = sanitize_title( __( 'WooCommerce', 'classic-commerce' ) );
 
 		if ( $wc_screen_id . '_page_wc-addons' === $screen_id && isset( $_GET['section'] ) && 'helper' === $_GET['section'] ) {
 			wp_enqueue_style( 'woocommerce-helper', WC()->plugin_url() . '/assets/css/helper.css', array(), WC_VERSION );
@@ -470,7 +470,7 @@ class WC_Helper {
 					'type'    => 'updated',
 					/* translators: %s: product name */
 					'message' => sprintf(
-						__( '%s activated successfully. You will now receive updates for this product.', 'woocommerce' ),
+						__( '%s activated successfully. You will now receive updates for this product.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>'
 					),
 				);
@@ -482,7 +482,7 @@ class WC_Helper {
 					'type'    => 'error',
 					/* translators: %s: product name */
 					'message' => sprintf(
-						__( 'An error has occurred when activating %s. Please try again later.', 'woocommerce' ),
+						__( 'An error has occurred when activating %s. Please try again later.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>'
 					),
 				);
@@ -494,7 +494,7 @@ class WC_Helper {
 
 				/* translators: %s: product name */
 				$message = sprintf(
-					__( 'Subscription for %s deactivated successfully. You will no longer receive updates for this product.', 'woocommerce' ),
+					__( 'Subscription for %s deactivated successfully. You will no longer receive updates for this product.', 'classic-commerce' ),
 					'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>'
 				);
 
@@ -512,7 +512,7 @@ class WC_Helper {
 
 					/* translators: %1$s: product name, %2$s: deactivate url */
 					$message = sprintf(
-						__( 'Subscription for %1$s deactivated successfully. You will no longer receive updates for this product. <a href="%2$s">Click here</a> if you wish to deactivate the plugin as well.', 'woocommerce' ),
+						__( 'Subscription for %1$s deactivated successfully. You will no longer receive updates for this product. <a href="%2$s">Click here</a> if you wish to deactivate the plugin as well.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>', esc_url( $deactivate_plugin_url )
 					);
 				}
@@ -529,7 +529,7 @@ class WC_Helper {
 					'type'    => 'error',
 					/* translators: %s: product name */
 					'message' => sprintf(
-						__( 'An error has occurred when deactivating the subscription for %s. Please try again later.', 'woocommerce' ),
+						__( 'An error has occurred when deactivating the subscription for %s. Please try again later.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>'
 					),
 				);
@@ -541,7 +541,7 @@ class WC_Helper {
 					'type'    => 'updated',
 					/* translators: %s: product name */
 					'message' => sprintf(
-						__( 'The extension %s has been deactivated successfully.', 'woocommerce' ),
+						__( 'The extension %s has been deactivated successfully.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>'
 					),
 				);
@@ -553,7 +553,7 @@ class WC_Helper {
 					'type'    => 'error',
 					/* translators: %1$s: product name, %2$s: plugins screen url */
 					'message' => sprintf(
-						__( 'An error has occurred when deactivating the extension %1$s. Please proceed to the <a href="%2$s">Plugins screen</a> to deactivate it manually.', 'woocommerce' ),
+						__( 'An error has occurred when deactivating the extension %1$s. Please proceed to the <a href="%2$s">Plugins screen</a> to deactivate it manually.', 'classic-commerce' ),
 						'<strong>' . esc_html( $subscription['product_name'] ) . '</strong>', admin_url( 'plugins.php' )
 					),
 				);
@@ -561,21 +561,21 @@ class WC_Helper {
 
 			case 'helper-connected':
 				$notices[] = array(
-					'message' => __( 'You have successfully connected your store to WooCommerce.com', 'woocommerce' ),
+					'message' => __( 'You have successfully connected your store to WooCommerce.com', 'classic-commerce' ),
 					'type'    => 'updated',
 				);
 				break;
 
 			case 'helper-disconnected':
 				$notices[] = array(
-					'message' => __( 'You have successfully disconnected your store from WooCommerce.com', 'woocommerce' ),
+					'message' => __( 'You have successfully disconnected your store from WooCommerce.com', 'classic-commerce' ),
 					'type'    => 'updated',
 				);
 				break;
 
 			case 'helper-refreshed':
 				$notices[] = array(
-					'message' => __( 'Authentication and subscription caches refreshed successfully.', 'woocommerce' ),
+					'message' => __( 'Authentication and subscription caches refreshed successfully.', 'classic-commerce' ),
 					'type'    => 'updated',
 				);
 				break;
@@ -588,7 +588,7 @@ class WC_Helper {
 	 * Various early-phase actions with possible redirects.
 	 */
 	public static function current_screen( $screen ) {
-		$wc_screen_id = sanitize_title( __( 'WooCommerce', 'woocommerce' ) );
+		$wc_screen_id = sanitize_title( __( 'WooCommerce', 'classic-commerce' ) );
 
 		if ( $wc_screen_id . '_page_wc-addons' !== $screen->id ) {
 			return;
@@ -743,12 +743,6 @@ class WC_Helper {
 		self::_flush_subscriptions_cache();
 		self::_flush_updates_cache();
 
-		// Enable tracking when connected.
-		if ( class_exists( 'WC_Tracker' ) ) {
-			update_option( 'woocommerce_allow_tracking', 'yes' );
-			WC_Tracker::send_tracking_data( true );
-		}
-
 		wp_safe_redirect(
 			add_query_arg(
 				array(
@@ -789,9 +783,6 @@ class WC_Helper {
 
 		self::_flush_subscriptions_cache();
 		self::_flush_updates_cache();
-
-		// Disable tracking when disconnected.
-		update_option( 'woocommerce_allow_tracking', 'no' );
 
 		wp_safe_redirect( $redirect_uri );
 		die();
@@ -1335,7 +1326,7 @@ class WC_Helper {
 		}
 
 		// Don't show the notice on the Helper screens.
-		$screen_addons = sanitize_title( __( 'WooCommerce', 'woocommerce' ) ) . '_page_wc-addons';
+		$screen_addons = sanitize_title( __( 'WooCommerce', 'classic-commerce' ) ) . '_page_wc-addons';
 
 		if ( $screen_addons === $screen_id && ! empty( $_REQUEST['section'] ) && 'helper' === $_REQUEST['section'] ) {
 			return;
@@ -1361,7 +1352,7 @@ class WC_Helper {
 
 		if ( count( $active_woo_plugins ) > 0 ) {
 			/* translators: %s: helper screen url */
-			$notice = __( '<a href="%s">Connect your store</a> to WooCommerce.com to receive extensions updates and support.', 'woocommerce' );
+			$notice = __( '<a href="%s">Connect your store</a> to WooCommerce.com to receive extensions updates and support.', 'classic-commerce' );
 			$notice = sprintf( $notice, admin_url( 'admin.php?page=wc-addons&section=helper' ) );
 			echo '<div class="updated woocommerce-message"><p>' . $notice . '</p></div>';
 		}
@@ -1394,7 +1385,7 @@ class WC_Helper {
 
 		/* translators: %1$s: helper url, %2$d: number of extensions */
 		return sprintf(
-			_n( 'Note: You currently have <a href="%1$s">%2$d paid extension</a> which should be updated first before updating WooCommerce.', 'Note: You currently have <a href="%1$s">%2$d paid extensions</a> which should be updated first before updating WooCommerce.', $available, 'woocommerce' ),
+			_n( 'Note: You currently have <a href="%1$s">%2$d paid extension</a> which should be updated first before updating WooCommerce.', 'Note: You currently have <a href="%1$s">%2$d paid extensions</a> which should be updated first before updating WooCommerce.', $available, 'classic-commerce' ),
 			admin_url( 'admin.php?page=wc-addons&section=helper' ), $available
 		);
 	}

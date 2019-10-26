@@ -5,7 +5,7 @@
  * Handles requests to /products/<product_id>/reviews.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -42,7 +42,7 @@ class WC_REST_Product_Reviews_V2_Controller extends WC_REST_Product_Reviews_V1_C
 			$this->namespace, '/' . $this->rest_base . '/batch', array(
 				'args'   => array(
 					'product_id' => array(
-						'description' => __( 'Unique identifier for the variable product.', 'woocommerce' ),
+						'description' => __( 'Unique identifier for the variable product.', 'classic-commerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -65,7 +65,7 @@ class WC_REST_Product_Reviews_V2_Controller extends WC_REST_Product_Reviews_V1_C
 	 */
 	public function batch_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_post_permissions( 'product', 'batch' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you are not allowed to batch manipulate this resource.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you are not allowed to batch manipulate this resource.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 		return true;
 	}
@@ -112,7 +112,7 @@ class WC_REST_Product_Reviews_V2_Controller extends WC_REST_Product_Reviews_V1_C
 	/**
 	 * Bulk create, update and delete items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return array Of WP_Error or WP_REST_Response.
 	 */
@@ -150,43 +150,43 @@ class WC_REST_Product_Reviews_V2_Controller extends WC_REST_Product_Reviews_V1_C
 			'type'       => 'object',
 			'properties' => array(
 				'id'               => array(
-					'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'review'           => array(
-					'description' => __( 'The content of the review.', 'woocommerce' ),
+					'description' => __( 'The content of the review.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'date_created'     => array(
-					'description' => __( "The date the review was created, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date the review was created, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'date_created_gmt' => array(
-					'description' => __( 'The date the review was created, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date the review was created, as GMT.', 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'rating'           => array(
-					'description' => __( 'Review rating (0 to 5).', 'woocommerce' ),
+					'description' => __( 'Review rating (0 to 5).', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'name'             => array(
-					'description' => __( 'Reviewer name.', 'woocommerce' ),
+					'description' => __( 'Reviewer name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'email'            => array(
-					'description' => __( 'Reviewer email.', 'woocommerce' ),
+					'description' => __( 'Reviewer email.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'verified'         => array(
-					'description' => __( 'Shows if the reviewer bought the product or not.', 'woocommerce' ),
+					'description' => __( 'Shows if the reviewer bought the product or not.', 'classic-commerce' ),
 					'type'        => 'boolean',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

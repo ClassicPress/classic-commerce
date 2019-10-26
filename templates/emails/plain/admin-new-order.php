@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.5.0
  */
 
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 echo '= ' . esc_html( $email_heading ) . " =\n\n";
 
 /* translators: %s: Customer billing full name */
-echo sprintf( esc_html__( 'You’ve received the following order from %s:', 'woocommerce' ), esc_html( $order->get_formatted_billing_full_name() ) ) . "\n\n";
+echo sprintf( esc_html__( 'You’ve received the following order from %s:', 'classic-commerce' ), esc_html( $order->get_formatted_billing_full_name() ) ) . "\n\n";
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 

@@ -171,7 +171,7 @@ function wc_reduce_stock_levels( $order_id ) {
 
 		if ( is_wp_error( $new_stock ) ) {
 			/* translators: %s item name. */
-			$order->add_order_note( sprintf( __( 'Unable to reduce stock for item %s.', 'woocommerce' ), $item_name ) );
+			$order->add_order_note( sprintf( __( 'Unable to reduce stock for item %s.', 'classic-commerce' ), $item_name ) );
 			continue;
 		}
 
@@ -225,7 +225,7 @@ function wc_trigger_stock_change_notifications( $order, $changes ) {
 		}
 	}
 
-	$order->add_order_note( __( 'Stock levels reduced:', 'woocommerce' ) . ' ' . implode( ', ', $order_notes ) );
+	$order->add_order_note( __( 'Stock levels reduced:', 'classic-commerce' ) . ' ' . implode( ', ', $order_notes ) );
 }
 
 /**
@@ -268,7 +268,7 @@ function wc_increase_stock_levels( $order_id ) {
 
 		if ( is_wp_error( $new_stock ) ) {
 			/* translators: %s item name. */
-			$order->add_order_note( sprintf( __( 'Unable to restore stock for item %s.', 'woocommerce' ), $item_name ) );
+			$order->add_order_note( sprintf( __( 'Unable to restore stock for item %s.', 'classic-commerce' ), $item_name ) );
 			continue;
 		}
 
@@ -279,7 +279,7 @@ function wc_increase_stock_levels( $order_id ) {
 	}
 
 	if ( $changes ) {
-		$order->add_order_note( __( 'Stock levels increased:', 'woocommerce' ) . ' ' . implode( ', ', $changes ) );
+		$order->add_order_note( __( 'Stock levels increased:', 'classic-commerce' ) . ' ' . implode( ', ', $changes ) );
 	}
 
 	do_action( 'woocommerce_restore_order_stock', $order );

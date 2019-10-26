@@ -123,7 +123,7 @@ final class WooCommerce {
 	 * @since WC-2.1
 	 */
 	public function __clone() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -132,7 +132,7 @@ final class WooCommerce {
 	 * @since WC-2.1
 	 */
 	public function __wakeup() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -187,7 +187,7 @@ final class WooCommerce {
 			$logger = wc_get_logger();
 			$logger->critical(
 				/* translators: 1: error message 2: file name and path 3: line number */
-				sprintf( __( '%1$s in %2$s on line %3$s', 'woocommerce' ), $error['message'], $error['file'], $error['line'] ) . PHP_EOL,
+				sprintf( __( '%1$s in %2$s on line %3$s', 'classic-commerce' ), $error['message'], $error['file'], $error['line'] ) . PHP_EOL,
 				array(
 					'source' => 'fatal-errors',
 				)
@@ -390,10 +390,6 @@ final class WooCommerce {
 			$this->frontend_includes();
 		}
 
-		if ( $this->is_request( 'cron' ) && 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) ) {
-			include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
-		}
-
 		$this->theme_support_includes();
 		$this->query = new WC_Query();
 		$this->api   = new WC_API();
@@ -514,11 +510,11 @@ final class WooCommerce {
 	 */
 	public function load_plugin_textdomain() {
 		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
-		$locale = apply_filters( 'plugin_locale', $locale, 'woocommerce' );
+		$locale = apply_filters( 'plugin_locale', $locale, 'classic-commerce' );
 
-		unload_textdomain( 'woocommerce' );
-		load_textdomain( 'woocommerce', WP_LANG_DIR . '/woocommerce/woocommerce-' . $locale . '.mo' );
-		load_plugin_textdomain( 'woocommerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
+		unload_textdomain( 'classic-commerce' );
+		load_textdomain( 'classic-commerce', WP_LANG_DIR . '/classic-commerce/classic-commerce-' . $locale . '.mo' );
+		load_plugin_textdomain( 'classic-commerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
 	}
 
 	/**

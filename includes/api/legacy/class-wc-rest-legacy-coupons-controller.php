@@ -7,7 +7,7 @@
  * @author   WooThemes
  * @category API
  * @package  WooCommerce/API
- * @since    3.0.0
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -110,7 +110,7 @@ class WC_REST_Legacy_Coupons_Controller extends WC_REST_CRUD_Controller {
 		// Validate required POST fields.
 		if ( 'POST' === $request->get_method() && 0 === $coupon->get_id() ) {
 			if ( empty( $request['code'] ) ) {
-				return new WP_Error( 'woocommerce_rest_empty_coupon_code', sprintf( __( 'The coupon code cannot be empty.', 'woocommerce' ), 'code' ), array( 'status' => 400 ) );
+				return new WP_Error( 'woocommerce_rest_empty_coupon_code', sprintf( __( 'The coupon code cannot be empty.', 'classic-commerce' ), 'code' ), array( 'status' => 400 ) );
 			}
 		}
 
@@ -126,7 +126,7 @@ class WC_REST_Legacy_Coupons_Controller extends WC_REST_CRUD_Controller {
 						$id_from_code = wc_get_coupon_id_by_code( $coupon_code, $id );
 
 						if ( $id_from_code ) {
-							return new WP_Error( 'woocommerce_rest_coupon_code_already_exists', __( 'The coupon code already exists', 'woocommerce' ), array( 'status' => 400 ) );
+							return new WP_Error( 'woocommerce_rest_coupon_code_already_exists', __( 'The coupon code already exists', 'classic-commerce' ), array( 'status' => 400 ) );
 						}
 
 						$coupon->set_code( $coupon_code );

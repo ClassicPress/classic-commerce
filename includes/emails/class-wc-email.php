@@ -328,7 +328,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Get email subject.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @return string
 	 */
 	public function get_default_subject() {
@@ -338,7 +338,7 @@ class WC_Email extends WC_Settings_API {
 	/**
 	 * Get email heading.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @return string
 	 */
 	public function get_default_heading() {
@@ -616,33 +616,33 @@ class WC_Email extends WC_Settings_API {
 	public function init_form_fields() {
 		$this->form_fields = array(
 			'enabled'    => array(
-				'title'   => __( 'Enable/Disable', 'woocommerce' ),
+				'title'   => __( 'Enable/Disable', 'classic-commerce' ),
 				'type'    => 'checkbox',
-				'label'   => __( 'Enable this email notification', 'woocommerce' ),
+				'label'   => __( 'Enable this email notification', 'classic-commerce' ),
 				'default' => 'yes',
 			),
 			'subject'    => array(
-				'title'       => __( 'Subject', 'woocommerce' ),
+				'title'       => __( 'Subject', 'classic-commerce' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 				/* translators: %s: list of placeholders */
-				'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>' . implode( '</code>, <code>', array_keys( $this->placeholders ) ) . '</code>' ),
+				'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>' . implode( '</code>, <code>', array_keys( $this->placeholders ) ) . '</code>' ),
 				'placeholder' => $this->get_default_subject(),
 				'default'     => '',
 			),
 			'heading'    => array(
-				'title'       => __( 'Email heading', 'woocommerce' ),
+				'title'       => __( 'Email heading', 'classic-commerce' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 				/* translators: %s: list of placeholders */
-				'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>' . implode( '</code>, <code>', array_keys( $this->placeholders ) ) . '</code>' ),
+				'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>' . implode( '</code>, <code>', array_keys( $this->placeholders ) ) . '</code>' ),
 				'placeholder' => $this->get_default_heading(),
 				'default'     => '',
 			),
 			'email_type' => array(
-				'title'       => __( 'Email type', 'woocommerce' ),
+				'title'       => __( 'Email type', 'classic-commerce' ),
 				'type'        => 'select',
-				'description' => __( 'Choose which format of email to send.', 'woocommerce' ),
+				'description' => __( 'Choose which format of email to send.', 'classic-commerce' ),
 				'default'     => 'html',
 				'class'       => 'email_type wc-enhanced-select',
 				'options'     => $this->get_email_type_options(),
@@ -657,11 +657,11 @@ class WC_Email extends WC_Settings_API {
 	 * @return array
 	 */
 	public function get_email_type_options() {
-		$types = array( 'plain' => __( 'Plain text', 'woocommerce' ) );
+		$types = array( 'plain' => __( 'Plain text', 'classic-commerce' ) );
 
 		if ( class_exists( 'DOMDocument' ) ) {
-			$types['html']      = __( 'HTML', 'woocommerce' );
-			$types['multipart'] = __( 'Multipart', 'woocommerce' );
+			$types['html']      = __( 'HTML', 'classic-commerce' );
+			$types['multipart'] = __( 'Multipart', 'classic-commerce' );
 		}
 
 		return $types;
@@ -726,7 +726,7 @@ class WC_Email extends WC_Settings_API {
 			}
 
 			if ( ! $saved ) {
-				$redirect = add_query_arg( 'wc_error', urlencode( __( 'Could not write to template file.', 'woocommerce' ) ) );
+				$redirect = add_query_arg( 'wc_error', urlencode( __( 'Could not write to template file.', 'classic-commerce' ) ) );
 				wp_safe_redirect( $redirect );
 				exit;
 			}
@@ -773,7 +773,7 @@ class WC_Email extends WC_Settings_API {
 
 				?>
 				<div class="updated">
-					<p><?php echo esc_html__( 'Template file copied to theme.', 'woocommerce' ); ?></p>
+					<p><?php echo esc_html__( 'Template file copied to theme.', 'classic-commerce' ); ?></p>
 				</div>
 				<?php
 			}
@@ -804,7 +804,7 @@ class WC_Email extends WC_Settings_API {
 					do_action( 'woocommerce_delete_email_template', $template_type, $this );
 					?>
 					<div class="updated">
-						<p><?php echo esc_html__( 'Template file deleted from theme.', 'woocommerce' ); ?></p>
+						<p><?php echo esc_html__( 'Template file deleted from theme.', 'classic-commerce' ); ?></p>
 					</div>
 					<?php
 				}
@@ -823,11 +823,11 @@ class WC_Email extends WC_Settings_API {
 			&& 'GET' === $_SERVER['REQUEST_METHOD'] // phpcs:ignore WordPress.VIP.ValidatedSanitizedInput.InputNotValidated
 		) {
 			if ( empty( $_GET['_wc_email_nonce'] ) || ! wp_verify_nonce( wc_clean( wp_unslash( $_GET['_wc_email_nonce'] ) ), 'woocommerce_email_template_nonce' ) ) {
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 			}
 
 			if ( ! current_user_can( 'edit_themes' ) ) {
-				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'woocommerce' ) );
+				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'classic-commerce' ) );
 			}
 
 			if ( ! empty( $_GET['move_template'] ) ) {
@@ -852,7 +852,7 @@ class WC_Email extends WC_Settings_API {
 		// Do admin actions.
 		$this->admin_actions();
 		?>
-		<h2><?php echo esc_html( $this->get_title() ); ?> <?php wc_back_link( __( 'Return to emails', 'woocommerce' ), admin_url( 'admin.php?page=wc-settings&tab=email' ) ); ?></h2>
+		<h2><?php echo esc_html( $this->get_title() ); ?> <?php wc_back_link( __( 'Return to emails', 'classic-commerce' ), admin_url( 'admin.php?page=wc-settings&tab=email' ) ); ?></h2>
 
 		<?php echo wpautop( wp_kses_post( $this->get_description() ) ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
 
@@ -885,8 +885,8 @@ class WC_Email extends WC_Settings_API {
 			<div id="template">
 				<?php
 				$templates = array(
-					'template_html'  => __( 'HTML template', 'woocommerce' ),
-					'template_plain' => __( 'Plain text template', 'woocommerce' ),
+					'template_html'  => __( 'HTML template', 'classic-commerce' ),
+					'template_plain' => __( 'Plain text template', 'classic-commerce' ),
 				);
 
 				foreach ( $templates as $template_type => $title ) :
@@ -910,13 +910,13 @@ class WC_Email extends WC_Settings_API {
 
 								<?php if ( is_writable( $local_file ) ) : // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable ?>
 									<a href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'move_template', 'saved' ), add_query_arg( 'delete_template', $template_type ) ), 'woocommerce_email_template_nonce', '_wc_email_nonce' ) ); ?>" class="delete_template button">
-										<?php esc_html_e( 'Delete template file', 'woocommerce' ); ?>
+										<?php esc_html_e( 'Delete template file', 'classic-commerce' ); ?>
 									</a>
 								<?php endif; ?>
 
 								<?php
 								/* translators: %s: Path to template file */
-								printf( esc_html__( 'This template has been overridden by your theme and can be found in: %s.', 'woocommerce' ), '<code>' . esc_html( trailingslashit( basename( get_stylesheet_directory() ) ) . $template_dir . '/' . $template ) . '</code>' );
+								printf( esc_html__( 'This template has been overridden by your theme and can be found in: %s.', 'classic-commerce' ), '<code>' . esc_html( trailingslashit( basename( get_stylesheet_directory() ) ) . $template_dir . '/' . $template ) . '</code>' );
 								?>
 							</p>
 
@@ -949,13 +949,13 @@ class WC_Email extends WC_Settings_API {
 								if ( is_writable( $target_dir ) ) : // phpcs:ignore WordPress.VIP.FileSystemWritesDisallow.file_ops_is_writable
 									?>
 									<a href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'delete_template', 'saved' ), add_query_arg( 'move_template', $template_type ) ), 'woocommerce_email_template_nonce', '_wc_email_nonce' ) ); ?>" class="button">
-										<?php esc_html_e( 'Copy file to theme', 'woocommerce' ); ?>
+										<?php esc_html_e( 'Copy file to theme', 'classic-commerce' ); ?>
 									</a>
 								<?php endif; ?>
 
 								<?php
 								/* translators: 1: Path to template file 2: Path to theme folder */
-								printf( esc_html__( 'To override and edit this email template copy %1$s to your theme folder: %2$s.', 'woocommerce' ), '<code>' . esc_html( plugin_basename( $template_file ) ) . '</code>', '<code>' . esc_html( trailingslashit( basename( get_stylesheet_directory() ) ) . $template_dir . '/' . $template ) . '</code>' );
+								printf( esc_html__( 'To override and edit this email template copy %1$s to your theme folder: %2$s.', 'classic-commerce' ), '<code>' . esc_html( plugin_basename( $template_file ) ) . '</code>', '<code>' . esc_html( trailingslashit( basename( get_stylesheet_directory() ) ) . $template_dir . '/' . $template ) . '</code>' );
 								?>
 							</p>
 
@@ -963,7 +963,7 @@ class WC_Email extends WC_Settings_API {
 								<textarea class="code" readonly="readonly" disabled="disabled" cols="25" rows="20"><?php echo esc_html( file_get_contents( $template_file ) ); ?></textarea>
 							</div>
 						<?php else : ?>
-							<p><?php esc_html_e( 'File was not found.', 'woocommerce' ); ?></p>
+							<p><?php esc_html_e( 'File was not found.', 'classic-commerce' ); ?></p>
 						<?php endif; ?>
 					</div>
 				<?php endforeach; ?>
@@ -987,8 +987,8 @@ class WC_Email extends WC_Settings_API {
 
 				}).change();
 
-				var view = '" . esc_js( __( 'View template', 'woocommerce' ) ) . "';
-				var hide = '" . esc_js( __( 'Hide template', 'woocommerce' ) ) . "';
+				var view = '" . esc_js( __( 'View template', 'classic-commerce' ) ) . "';
+				var hide = '" . esc_js( __( 'Hide template', 'classic-commerce' ) ) . "';
 
 				jQuery( 'a.toggle_editor' ).text( view ).toggle( function() {
 					jQuery( this ).text( hide ).closest(' .template' ).find( '.editor' ).slideToggle();
@@ -999,7 +999,7 @@ class WC_Email extends WC_Settings_API {
 				} );
 
 				jQuery( 'a.delete_template' ).click( function() {
-					if ( window.confirm('" . esc_js( __( 'Are you sure you want to delete this template file?', 'woocommerce' ) ) . "') ) {
+					if ( window.confirm('" . esc_js( __( 'Are you sure you want to delete this template file?', 'classic-commerce' ) ) . "') ) {
 						return true;
 					}
 

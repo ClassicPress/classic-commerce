@@ -28,8 +28,8 @@ if ( ! class_exists( 'WC_Email_Failed_Order', false ) ) :
 		 */
 		public function __construct() {
 			$this->id             = 'failed_order';
-			$this->title          = __( 'Failed order', 'woocommerce' );
-			$this->description    = __( 'Failed order emails are sent to chosen recipient(s) when orders have been marked failed (if they were previously processing or on-hold).', 'woocommerce' );
+			$this->title          = __( 'Failed order', 'classic-commerce' );
+			$this->description    = __( 'Failed order emails are sent to chosen recipient(s) when orders have been marked failed (if they were previously processing or on-hold).', 'classic-commerce' );
 			$this->template_html  = 'emails/admin-failed-order.php';
 			$this->template_plain = 'emails/plain/admin-failed-order.php';
 			$this->placeholders   = array(
@@ -52,21 +52,21 @@ if ( ! class_exists( 'WC_Email_Failed_Order', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( '[{site_title}]: Order #{order_number} has failed', 'woocommerce' );
+			return __( '[{site_title}]: Order #{order_number} has failed', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Order Failed: #{order_number}', 'woocommerce' );
+			return __( 'Order Failed: #{order_number}', 'classic-commerce' );
 		}
 
 		/**
@@ -135,42 +135,42 @@ if ( ! class_exists( 'WC_Email_Failed_Order', false ) ) :
 		public function init_form_fields() {
 			$this->form_fields = array(
 				'enabled'    => array(
-					'title'   => __( 'Enable/Disable', 'woocommerce' ),
+					'title'   => __( 'Enable/Disable', 'classic-commerce' ),
 					'type'    => 'checkbox',
-					'label'   => __( 'Enable this email notification', 'woocommerce' ),
+					'label'   => __( 'Enable this email notification', 'classic-commerce' ),
 					'default' => 'yes',
 				),
 				'recipient'  => array(
-					'title'       => __( 'Recipient(s)', 'woocommerce' ),
+					'title'       => __( 'Recipient(s)', 'classic-commerce' ),
 					'type'        => 'text',
 					/* translators: %s: WP admin email */
-					'description' => sprintf( __( 'Enter recipients (comma separated) for this email. Defaults to %s.', 'woocommerce' ), '<code>' . esc_attr( get_option( 'admin_email' ) ) . '</code>' ),
+					'description' => sprintf( __( 'Enter recipients (comma separated) for this email. Defaults to %s.', 'classic-commerce' ), '<code>' . esc_attr( get_option( 'admin_email' ) ) . '</code>' ),
 					'placeholder' => '',
 					'default'     => '',
 					'desc_tip'    => true,
 				),
 				'subject'    => array(
-					'title'       => __( 'Subject', 'woocommerce' ),
+					'title'       => __( 'Subject', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_subject(),
 					'default'     => '',
 				),
 				'heading'    => array(
-					'title'       => __( 'Email heading', 'woocommerce' ),
+					'title'       => __( 'Email heading', 'classic-commerce' ),
 					'type'        => 'text',
 					'desc_tip'    => true,
 					/* translators: %s: list of placeholders */
-					'description' => sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
+					'description' => sprintf( __( 'Available placeholders: %s', 'classic-commerce' ), '<code>{site_title}, {order_date}, {order_number}</code>' ),
 					'placeholder' => $this->get_default_heading(),
 					'default'     => '',
 				),
 				'email_type' => array(
-					'title'       => __( 'Email type', 'woocommerce' ),
+					'title'       => __( 'Email type', 'classic-commerce' ),
 					'type'        => 'select',
-					'description' => __( 'Choose which format of email to send.', 'woocommerce' ),
+					'description' => __( 'Choose which format of email to send.', 'classic-commerce' ),
 					'default'     => 'html',
 					'class'       => 'email_type wc-enhanced-select',
 					'options'     => $this->get_email_type_options(),

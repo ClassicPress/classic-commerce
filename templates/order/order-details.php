@@ -10,9 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	https://docs.woocommerce.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-3.5.2
  */
 
@@ -36,14 +36,14 @@ if ( $show_downloads ) {
 <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php _e( 'Order details', 'woocommerce' ); ?></h2>
+	<h2 class="woocommerce-order-details__title"><?php _e( 'Order details', 'classic-commerce' ); ?></h2>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
 		<thead>
 			<tr>
-				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'classic-commerce' ); ?></th>
+				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'classic-commerce' ); ?></th>
 			</tr>
 		</thead>
 
@@ -81,7 +81,7 @@ if ( $show_downloads ) {
 			?>
 			<?php if ( $order->get_customer_note() ) : ?>
 				<tr>
-					<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
+					<th><?php _e( 'Note:', 'classic-commerce' ); ?></th>
 					<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
 				</tr>
 			<?php endif; ?>

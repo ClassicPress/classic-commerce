@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
@@ -25,10 +25,10 @@ if ( $max_value && $min_value === $max_value ) {
 	<?php
 } else {
 	/* translators: %s: Quantity. */
-	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'woocommerce' ), strip_tags( $args['product_name'] ) ) : '';
+	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'classic-commerce' ), strip_tags( $args['product_name'] ) ) : '';
 	?>
 	<div class="quantity">
-		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
+		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'classic-commerce' ); ?></label>
 		<input
 			type="number"
 			id="<?php echo esc_attr( $input_id ); ?>"
@@ -38,7 +38,7 @@ if ( $max_value && $min_value === $max_value ) {
 			max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
 			name="<?php echo esc_attr( $input_name ); ?>"
 			value="<?php echo esc_attr( $input_value ); ?>"
-			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ); ?>"
+			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'classic-commerce' ); ?>"
 			size="4"
 			pattern="<?php echo esc_attr( $pattern ); ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"

@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -91,7 +91,7 @@ class WC_API_Resource {
 
 		// Validate ID
 		if ( empty( $id ) ) {
-			return new WP_Error( "woocommerce_api_invalid_{$resource_name}_id", sprintf( __( 'Invalid %s ID', 'woocommerce' ), $type ), array( 'status' => 404 ) );
+			return new WP_Error( "woocommerce_api_invalid_{$resource_name}_id", sprintf( __( 'Invalid %s ID', 'classic-commerce' ), $type ), array( 'status' => 404 ) );
 		}
 
 		// Only custom post types have per-post type/permission checks
@@ -100,7 +100,7 @@ class WC_API_Resource {
 			$post = get_post( $id );
 
 			if ( null === $post ) {
-				return new WP_Error( "woocommerce_api_no_{$resource_name}_found", sprintf( __( 'No %1$s found with the ID equal to %2$s', 'woocommerce' ), $resource_name, $id ), array( 'status' => 404 ) );
+				return new WP_Error( "woocommerce_api_no_{$resource_name}_found", sprintf( __( 'No %1$s found with the ID equal to %2$s', 'classic-commerce' ), $resource_name, $id ), array( 'status' => 404 ) );
 			}
 
 			// For checking permissions, product variations are the same as the product post type
@@ -108,7 +108,7 @@ class WC_API_Resource {
 
 			// Validate post type
 			if ( $type !== $post_type ) {
-				return new WP_Error( "woocommerce_api_invalid_{$resource_name}", sprintf( __( 'Invalid %s', 'woocommerce' ), $resource_name ), array( 'status' => 404 ) );
+				return new WP_Error( "woocommerce_api_invalid_{$resource_name}", sprintf( __( 'Invalid %s', 'classic-commerce' ), $resource_name ), array( 'status' => 404 ) );
 			}
 
 			// Validate permissions
@@ -116,19 +116,19 @@ class WC_API_Resource {
 
 				case 'read':
 					if ( ! $this->is_readable( $post ) ) {
-						return new WP_Error( "woocommerce_api_user_cannot_read_{$resource_name}", sprintf( __( 'You do not have permission to read this %s', 'woocommerce' ), $resource_name ), array( 'status' => 401 ) );
+						return new WP_Error( "woocommerce_api_user_cannot_read_{$resource_name}", sprintf( __( 'You do not have permission to read this %s', 'classic-commerce' ), $resource_name ), array( 'status' => 401 ) );
 					}
 					break;
 
 				case 'edit':
 					if ( ! $this->is_editable( $post ) ) {
-						return new WP_Error( "woocommerce_api_user_cannot_edit_{$resource_name}", sprintf( __( 'You do not have permission to edit this %s', 'woocommerce' ), $resource_name ), array( 'status' => 401 ) );
+						return new WP_Error( "woocommerce_api_user_cannot_edit_{$resource_name}", sprintf( __( 'You do not have permission to edit this %s', 'classic-commerce' ), $resource_name ), array( 'status' => 401 ) );
 					}
 					break;
 
 				case 'delete':
 					if ( ! $this->is_deletable( $post ) ) {
-						return new WP_Error( "woocommerce_api_user_cannot_delete_{$resource_name}", sprintf( __( 'You do not have permission to delete this %s', 'woocommerce' ), $resource_name ), array( 'status' => 401 ) );
+						return new WP_Error( "woocommerce_api_user_cannot_delete_{$resource_name}", sprintf( __( 'You do not have permission to delete this %s', 'classic-commerce' ), $resource_name ), array( 'status' => 401 ) );
 					}
 					break;
 			}
@@ -369,9 +369,9 @@ class WC_API_Resource {
 			$result = wp_delete_user( $id );
 
 			if ( $result ) {
-				return array( 'message' => __( 'Permanently deleted customer', 'woocommerce' ) );
+				return array( 'message' => __( 'Permanently deleted customer', 'classic-commerce' ) );
 			} else {
-				return new WP_Error( 'woocommerce_api_cannot_delete_customer', __( 'The customer cannot be deleted', 'woocommerce' ), array( 'status' => 500 ) );
+				return new WP_Error( 'woocommerce_api_cannot_delete_customer', __( 'The customer cannot be deleted', 'classic-commerce' ), array( 'status' => 500 ) );
 			}
 		} else {
 
@@ -379,15 +379,15 @@ class WC_API_Resource {
 			$result = ( $force ) ? wp_delete_post( $id, true ) : wp_trash_post( $id );
 
 			if ( ! $result ) {
-				return new WP_Error( "woocommerce_api_cannot_delete_{$resource_name}", sprintf( __( 'This %s cannot be deleted', 'woocommerce' ), $resource_name ), array( 'status' => 500 ) );
+				return new WP_Error( "woocommerce_api_cannot_delete_{$resource_name}", sprintf( __( 'This %s cannot be deleted', 'classic-commerce' ), $resource_name ), array( 'status' => 500 ) );
 			}
 
 			if ( $force ) {
-				return array( 'message' => sprintf( __( 'Permanently deleted %s', 'woocommerce' ), $resource_name ) );
+				return array( 'message' => sprintf( __( 'Permanently deleted %s', 'classic-commerce' ), $resource_name ) );
 			} else {
 				$this->server->send_status( '202' );
 
-				return array( 'message' => sprintf( __( 'Deleted %s', 'woocommerce' ), $resource_name ) );
+				return array( 'message' => sprintf( __( 'Deleted %s', 'classic-commerce' ), $resource_name ) );
 			}
 		}
 	}
