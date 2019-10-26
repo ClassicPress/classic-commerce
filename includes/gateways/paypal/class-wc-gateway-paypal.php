@@ -39,10 +39,10 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	public function __construct() {
 		$this->id                = 'paypal';
 		$this->has_fields        = false;
-		$this->order_button_text = __( 'Proceed to PayPal', 'woocommerce' );
-		$this->method_title      = __( 'PayPal', 'woocommerce' );
+		$this->order_button_text = __( 'Proceed to PayPal', 'classic-commerce' );
+		$this->method_title      = __( 'PayPal', 'classic-commerce' );
 		/* translators: %s: Link to WC system status page */
-		$this->method_description = __( 'PayPal Standard redirects customers to PayPal to enter their payment information.', 'woocommerce' );
+		$this->method_description = __( 'PayPal Standard redirects customers to PayPal to enter their payment information.', 'classic-commerce' );
 		$this->supports           = array(
 			'products',
 			'refunds',
@@ -64,7 +64,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 
 		if ( $this->testmode ) {
 			/* translators: %s: Link to PayPal sandbox testing guide page */
-			$this->description .= ' ' . sprintf( __( 'SANDBOX ENABLED. You can use sandbox testing accounts only. See the <a href="%s">PayPal Sandbox Testing Guide</a> for more details.', 'woocommerce' ), 'https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/' );
+			$this->description .= ' ' . sprintf( __( 'SANDBOX ENABLED. You can use sandbox testing accounts only. See the <a href="%s">PayPal Sandbox Testing Guide</a> for more details.', 'classic-commerce' ), 'https://developer.paypal.com/docs/classic/lifecycle/ug_sandbox/' );
 			$this->description  = trim( $this->description );
 		}
 
@@ -92,7 +92,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * When this gateway is toggled on via AJAX, if this returns true a
 	 * redirect will occur to the settings page instead.
 	 *
-	 * @since 3.4.0
+	 * @since  WC-3.4.0
 	 * @return bool
 	 */
 	public function needs_setup() {
@@ -150,10 +150,10 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 		$icon      = (array) $this->get_icon_image( $base_country );
 
 		foreach ( $icon as $i ) {
-			$icon_html .= '<img src="' . esc_attr( $i ) . '" alt="' . esc_attr__( 'PayPal acceptance mark', 'woocommerce' ) . '" />';
+			$icon_html .= '<img src="' . esc_attr( $i ) . '" alt="' . esc_attr__( 'PayPal acceptance mark', 'classic-commerce' ) . '" />';
 		}
 
-		$icon_html .= sprintf( '<a href="%1$s" class="about_paypal" onclick="javascript:window.open(\'%1$s\',\'WIPaypal\',\'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700\'); return false;">' . esc_attr__( 'What is PayPal?', 'woocommerce' ) . '</a>', esc_url( $this->get_icon_url( $base_country ) ) );
+		$icon_html .= sprintf( '<a href="%1$s" class="about_paypal" onclick="javascript:window.open(\'%1$s\',\'WIPaypal\',\'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700\'); return false;">' . esc_attr__( 'What is PayPal?', 'classic-commerce' ) . '</a>', esc_url( $this->get_icon_url( $base_country ) ) );
 
 		return apply_filters( 'woocommerce_gateway_icon', $icon_html, $this->id );
 	}
@@ -277,7 +277,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 			?>
 			<div class="inline error">
 				<p>
-					<strong><?php esc_html_e( 'Gateway disabled', 'woocommerce' ); ?></strong>: <?php esc_html_e( 'PayPal does not support your store currency.', 'woocommerce' ); ?>
+					<strong><?php esc_html_e( 'Gateway disabled', 'classic-commerce' ); ?></strong>: <?php esc_html_e( 'PayPal does not support your store currency.', 'classic-commerce' ); ?>
 				</p>
 			</div>
 			<?php
@@ -366,7 +366,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 		$order = wc_get_order( $order_id );
 
 		if ( ! $this->can_refund_order( $order ) ) {
-			return new WP_Error( 'error', __( 'Refund failed.', 'woocommerce' ) );
+			return new WP_Error( 'error', __( 'Refund failed.', 'classic-commerce' ) );
 		}
 
 		$this->init_api();
@@ -385,7 +385,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 			case 'successwithwarning':
 				$order->add_order_note(
 					/* translators: 1: Refund amount, 2: Refund ID */
-					sprintf( __( 'Refunded %1$s - Refund ID: %2$s', 'woocommerce' ), $result->GROSSREFUNDAMT, $result->REFUNDTRANSACTIONID ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar
+					sprintf( __( 'Refunded %1$s - Refund ID: %2$s', 'classic-commerce' ), $result->GROSSREFUNDAMT, $result->REFUNDTRANSACTIONID ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar
 				);
 				return true;
 		}
@@ -408,7 +408,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 			if ( is_wp_error( $result ) ) {
 				$this->log( 'Capture Failed: ' . $result->get_error_message(), 'error' );
 				/* translators: %s: Paypal gateway error message */
-				$order->add_order_note( sprintf( __( 'Payment could not captured: %s', 'woocommerce' ), $result->get_error_message() ) );
+				$order->add_order_note( sprintf( __( 'Payment could not captured: %s', 'classic-commerce' ), $result->get_error_message() ) );
 				return;
 			}
 
@@ -419,13 +419,13 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 				switch ( $result->PAYMENTSTATUS ) {
 					case 'Completed':
 						/* translators: 1: Amount, 2: Authorization ID, 3: Transaction ID */
-						$order->add_order_note( sprintf( __( 'Payment of %1$s was captured - Auth ID: %2$s, Transaction ID: %3$s', 'woocommerce' ), $result->AMT, $result->AUTHORIZATIONID, $result->TRANSACTIONID ) );
+						$order->add_order_note( sprintf( __( 'Payment of %1$s was captured - Auth ID: %2$s, Transaction ID: %3$s', 'classic-commerce' ), $result->AMT, $result->AUTHORIZATIONID, $result->TRANSACTIONID ) );
 						update_post_meta( $order->get_id(), '_paypal_status', $result->PAYMENTSTATUS );
 						update_post_meta( $order->get_id(), '_transaction_id', $result->TRANSACTIONID );
 						break;
 					default:
 						/* translators: 1: Authorization ID, 2: Payment status */
-						$order->add_order_note( sprintf( __( 'Payment could not captured - Auth ID: %1$s, Status: %2$s', 'woocommerce' ), $result->AUTHORIZATIONID, $result->PAYMENTSTATUS ) );
+						$order->add_order_note( sprintf( __( 'Payment could not captured - Auth ID: %1$s, Status: %2$s', 'classic-commerce' ), $result->AUTHORIZATIONID, $result->PAYMENTSTATUS ) );
 						break;
 				}
 			}
@@ -436,7 +436,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	/**
 	 * Load admin scripts.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function admin_scripts() {
 		$screen    = get_current_screen();

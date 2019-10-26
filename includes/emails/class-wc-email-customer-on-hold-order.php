@@ -29,8 +29,8 @@ if ( ! class_exists( 'WC_Email_Customer_On_Hold_Order', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_on_hold_order';
 			$this->customer_email = true;
-			$this->title          = __( 'Order on-hold', 'woocommerce' );
-			$this->description    = __( 'This is an order notification sent to customers containing order details after an order is placed on-hold.', 'woocommerce' );
+			$this->title          = __( 'Order on-hold', 'classic-commerce' );
+			$this->description    = __( 'This is an order notification sent to customers containing order details after an order is placed on-hold.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-on-hold-order.php';
 			$this->template_plain = 'emails/plain/customer-on-hold-order.php';
 			$this->placeholders   = array(
@@ -51,21 +51,21 @@ if ( ! class_exists( 'WC_Email_Customer_On_Hold_Order', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Your {site_title} order has been received!', 'woocommerce' );
+			return __( 'Your {site_title} order has been received!', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Thank you for your order', 'woocommerce' );
+			return __( 'Thank you for your order', 'classic-commerce' );
 		}
 
 		/**

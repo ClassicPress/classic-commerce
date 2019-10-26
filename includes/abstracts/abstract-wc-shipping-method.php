@@ -313,7 +313,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 				$product            = $item['data'];
 				$items_in_package[] = $product->get_name() . ' &times; ' . $item['quantity'];
 			}
-			$rate->add_meta_data( __( 'Items', 'woocommerce' ), implode( ', ', $items_in_package ) );
+			$rate->add_meta_data( __( 'Items', 'classic-commerce' ), implode( ', ', $items_in_package ) );
 		}
 
 		$this->rates[ $args['id'] ] = apply_filters( 'woocommerce_shipping_method_add_rate', $rate, $args, $this );

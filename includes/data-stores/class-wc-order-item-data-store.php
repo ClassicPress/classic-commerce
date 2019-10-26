@@ -19,7 +19,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Add an order item to an order.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int   $order_id Order ID.
 	 * @param  array $item order_item_name and order_item_type.
 	 * @return int Order Item ID
@@ -46,7 +46,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Update an order item.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int   $item_id Item ID.
 	 * @param  array $item order_item_name or order_item_type.
 	 * @return boolean
@@ -59,7 +59,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Delete an order item.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $item_id Item ID.
 	 */
 	public function delete_order_item( $item_id ) {
@@ -71,7 +71,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Update term meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int    $item_id Item ID.
 	 * @param  string $meta_key Meta key.
 	 * @param  mixed  $meta_value Meta value.
@@ -85,7 +85,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Add term meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int    $item_id Item ID.
 	 * @param  string $meta_key Meta key.
 	 * @param  mixed  $meta_value Meta value.
@@ -99,7 +99,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Delete term meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int    $item_id Item ID.
 	 * @param  string $meta_key Meta key.
 	 * @param  string $meta_value (default: '').
@@ -113,7 +113,7 @@ class WC_Order_Item_Data_Store implements WC_Order_Item_Data_Store_Interface {
 	/**
 	 * Get term meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int    $item_id Item ID.
 	 * @param  string $key Meta key.
 	 * @param  bool   $single (default: true).

@@ -7,7 +7,7 @@
  * @author   WooThemes
  * @category API
  * @package  WooCommerce/API
- * @since    2.5.0
+ * @since    WC-2.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -125,14 +125,14 @@ class WC_API_Taxes extends WC_API_Resource {
 
 			// Permissions check
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax', __( 'You do not have permission to read tax rate', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax', __( 'You do not have permission to read tax rate', 'classic-commerce' ), 401 );
 			}
 
 			// Get tax rate details
 			$tax = WC_Tax::_get_tax_rate( $id );
 
 			if ( is_wp_error( $tax ) || empty( $tax ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_tax_id', __( 'A tax rate with the provided ID could not be found', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_tax_id', __( 'A tax rate with the provided ID could not be found', 'classic-commerce' ), 404 );
 			}
 
 			$tax_data = array(
@@ -181,12 +181,12 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function create_tax( $data ) {
 		try {
 			if ( ! isset( $data['tax'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_tax_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'tax' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_tax_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'tax' ), 400 );
 			}
 
 			// Check permissions
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_tax', __( 'You do not have permission to create tax rates', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_tax', __( 'You do not have permission to create tax rates', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_tax_data', $data['tax'], $this );
@@ -251,12 +251,12 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function edit_tax( $id, $data ) {
 		try {
 			if ( ! isset( $data['tax'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_tax_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'tax' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_tax_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'tax' ), 400 );
 			}
 
 			// Check permissions
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_tax', __( 'You do not have permission to edit tax rates', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_tax', __( 'You do not have permission to edit tax rates', 'classic-commerce' ), 401 );
 			}
 
 			$data = $data['tax'];
@@ -340,7 +340,7 @@ class WC_API_Taxes extends WC_API_Resource {
 		try {
 			// Check permissions
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_tax', __( 'You do not have permission to delete tax rates', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_tax', __( 'You do not have permission to delete tax rates', 'classic-commerce' ), 401 );
 			}
 
 			$id = absint( $id );
@@ -348,10 +348,10 @@ class WC_API_Taxes extends WC_API_Resource {
 			WC_Tax::_delete_tax_rate( $id );
 
 			if ( 0 === $wpdb->rows_affected ) {
-				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_tax', __( 'Could not delete the tax rate', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_tax', __( 'Could not delete the tax rate', 'classic-commerce' ), 401 );
 			}
 
-			return array( 'message' => sprintf( __( 'Deleted %s', 'woocommerce' ), 'tax' ) );
+			return array( 'message' => sprintf( __( 'Deleted %s', 'classic-commerce' ), 'tax' ) );
 		} catch ( WC_API_Exception $e ) {
 			return new WP_Error( $e->getErrorCode(), $e->getMessage(), array( 'status' => $e->getCode() ) );
 		}
@@ -370,7 +370,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function get_taxes_count( $class = null, $filter = array() ) {
 		try {
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_taxes_count', __( 'You do not have permission to read the taxes count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_taxes_count', __( 'You do not have permission to read the taxes count', 'classic-commerce' ), 401 );
 			}
 
 			if ( ! empty( $class ) ) {
@@ -454,7 +454,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function bulk( $data ) {
 		try {
 			if ( ! isset( $data['taxes'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_taxes_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'woocommerce' ), 'taxes' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_taxes_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'classic-commerce' ), 'taxes' ), 400 );
 			}
 
 			$data  = $data['taxes'];
@@ -462,7 +462,7 @@ class WC_API_Taxes extends WC_API_Resource {
 
 			// Limit bulk operation
 			if ( count( $data ) > $limit ) {
-				throw new WC_API_Exception( 'woocommerce_api_taxes_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'woocommerce' ), $limit ), 413 );
+				throw new WC_API_Exception( 'woocommerce_api_taxes_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'classic-commerce' ), $limit ), 413 );
 			}
 
 			$taxes = array();
@@ -523,7 +523,7 @@ class WC_API_Taxes extends WC_API_Resource {
 		try {
 			// Permissions check
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax_classes', __( 'You do not have permission to read tax classes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax_classes', __( 'You do not have permission to read tax classes', 'classic-commerce' ), 401 );
 			}
 
 			$tax_classes = array();
@@ -531,7 +531,7 @@ class WC_API_Taxes extends WC_API_Resource {
 			// Add standard class
 			$tax_classes[] = array(
 				'slug' => 'standard',
-				'name' => __( 'Standard rate', 'woocommerce' ),
+				'name' => __( 'Standard rate', 'classic-commerce' ),
 			);
 
 			$classes = WC_Tax::get_tax_classes();
@@ -561,18 +561,18 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function create_tax_class( $data ) {
 		try {
 			if ( ! isset( $data['tax_class'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_tax_class_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'tax_class' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_tax_class_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'tax_class' ), 400 );
 			}
 
 			// Check permissions
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_tax_class', __( 'You do not have permission to create tax classes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_tax_class', __( 'You do not have permission to create tax classes', 'classic-commerce' ), 401 );
 			}
 
 			$data = $data['tax_class'];
 
 			if ( empty( $data['name'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_tax_class_name', sprintf( __( 'Missing parameter %s', 'woocommerce' ), 'name' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_tax_class_name', sprintf( __( 'Missing parameter %s', 'classic-commerce' ), 'name' ), 400 );
 			}
 
 			$name    = sanitize_text_field( $data['name'] );
@@ -590,7 +590,7 @@ class WC_API_Taxes extends WC_API_Resource {
 
 			// Return error if tax class already exists.
 			if ( $exists ) {
-				throw new WC_API_Exception( 'woocommerce_api_cannot_create_tax_class', __( 'Tax class already exists', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_cannot_create_tax_class', __( 'Tax class already exists', 'classic-commerce' ), 401 );
 			}
 
 			// Add the new class.
@@ -628,7 +628,7 @@ class WC_API_Taxes extends WC_API_Resource {
 		try {
 			// Check permissions
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_tax_class', __( 'You do not have permission to delete tax classes', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_tax_class', __( 'You do not have permission to delete tax classes', 'classic-commerce' ), 401 );
 			}
 
 			$slug    = sanitize_title( $slug );
@@ -644,7 +644,7 @@ class WC_API_Taxes extends WC_API_Resource {
 			}
 
 			if ( ! $deleted ) {
-				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_tax_class', __( 'Could not delete the tax class', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_cannot_delete_tax_class', __( 'Could not delete the tax class', 'classic-commerce' ), 401 );
 			}
 
 			update_option( 'woocommerce_tax_classes', implode( "\n", $classes ) );
@@ -662,7 +662,7 @@ class WC_API_Taxes extends WC_API_Resource {
 			// Delete tax rates in the selected class.
 			$wpdb->delete( $wpdb->prefix . 'woocommerce_tax_rates', array( 'tax_rate_class' => $slug ), array( '%s' ) );
 
-			return array( 'message' => sprintf( __( 'Deleted %s', 'woocommerce' ), 'tax_class' ) );
+			return array( 'message' => sprintf( __( 'Deleted %s', 'classic-commerce' ), 'tax_class' ) );
 		} catch ( WC_API_Exception $e ) {
 			return new WP_Error( $e->getErrorCode(), $e->getMessage(), array( 'status' => $e->getCode() ) );
 		}
@@ -678,7 +678,7 @@ class WC_API_Taxes extends WC_API_Resource {
 	public function get_tax_classes_count() {
 		try {
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax_classes_count', __( 'You do not have permission to read the tax classes count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_tax_classes_count', __( 'You do not have permission to read the tax classes count', 'classic-commerce' ), 401 );
 			}
 
 			$total = count( WC_Tax::get_tax_classes() ) + 1; // +1 for Standard Rate

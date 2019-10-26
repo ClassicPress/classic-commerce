@@ -55,7 +55,7 @@ function wc_get_products( $args ) {
 function wc_get_product( $the_product = false, $deprecated = array() ) {
 	if ( ! did_action( 'woocommerce_init' ) ) {
 		/* translators: 1: wc_get_product 2: woocommerce_init */
-		wc_doing_it_wrong( __FUNCTION__, sprintf( __( '%1$s should not be called before the %2$s action.', 'woocommerce' ), 'wc_get_product', 'woocommerce_init' ), '2.5' );
+		wc_doing_it_wrong( __FUNCTION__, sprintf( __( '%1$s should not be called before the %2$s action.', 'classic-commerce' ), 'wc_get_product', 'woocommerce_init' ), '2.5' );
 		return false;
 	}
 	if ( ! empty( $deprecated ) ) {
@@ -238,7 +238,7 @@ function wc_product_post_type_link( $permalink, $post ) {
 		}
 	} else {
 		// If no terms are assigned to this post, use a string instead (can't leave the placeholder there).
-		$product_cat = _x( 'uncategorized', 'slug', 'woocommerce' );
+		$product_cat = _x( 'uncategorized', 'slug', 'classic-commerce' );
 	}
 
 	$find = array(
@@ -306,7 +306,7 @@ function wc_placeholder_img_src( $size = 'woocommerce_thumbnail' ) {
 function wc_placeholder_img( $size = 'woocommerce_thumbnail' ) {
 	$dimensions = wc_get_image_size( $size );
 
-	return apply_filters( 'woocommerce_placeholder_img', '<img src="' . wc_placeholder_img_src( $size ) . '" alt="' . esc_attr__( 'Placeholder', 'woocommerce' ) . '" width="' . esc_attr( $dimensions['width'] ) . '" class="woocommerce-placeholder wp-post-image" height="' . esc_attr( $dimensions['height'] ) . '" />', $size, $dimensions );
+	return apply_filters( 'woocommerce_placeholder_img', '<img src="' . wc_placeholder_img_src( $size ) . '" alt="' . esc_attr__( 'Placeholder', 'classic-commerce' ) . '" width="' . esc_attr( $dimensions['width'] ) . '" class="woocommerce-placeholder wp-post-image" height="' . esc_attr( $dimensions['height'] ) . '" />', $size, $dimensions );
 }
 
 /**
@@ -531,10 +531,10 @@ add_action( 'template_redirect', 'wc_track_product_view', 20 );
 function wc_get_product_types() {
 	return (array) apply_filters(
 		'product_type_selector', array(
-			'simple'   => __( 'Simple product', 'woocommerce' ),
-			'grouped'  => __( 'Grouped product', 'woocommerce' ),
-			'external' => __( 'External/Affiliate product', 'woocommerce' ),
-			'variable' => __( 'Variable product', 'woocommerce' ),
+			'simple'   => __( 'Simple product', 'classic-commerce' ),
+			'grouped'  => __( 'Grouped product', 'classic-commerce' ),
+			'external' => __( 'External/Affiliate product', 'classic-commerce' ),
+			'variable' => __( 'Variable product', 'classic-commerce' ),
 		)
 	);
 }
@@ -767,10 +767,10 @@ function wc_get_product_attachment_props( $attachment_id = null, $product = fals
 function wc_get_product_visibility_options() {
 	return apply_filters(
 		'woocommerce_product_visibility_options', array(
-			'visible' => __( 'Shop and search results', 'woocommerce' ),
-			'catalog' => __( 'Shop only', 'woocommerce' ),
-			'search'  => __( 'Search results only', 'woocommerce' ),
-			'hidden'  => __( 'Hidden', 'woocommerce' ),
+			'visible' => __( 'Shop and search results', 'classic-commerce' ),
+			'catalog' => __( 'Shop only', 'classic-commerce' ),
+			'search'  => __( 'Search results only', 'classic-commerce' ),
+			'hidden'  => __( 'Hidden', 'classic-commerce' ),
 		)
 	);
 }
@@ -825,7 +825,7 @@ function wc_get_min_max_price_meta_query( $args ) {
 function wc_get_product_tax_class_options() {
 	$tax_classes           = WC_Tax::get_tax_classes();
 	$tax_class_options     = array();
-	$tax_class_options[''] = __( 'Standard', 'woocommerce' );
+	$tax_class_options[''] = __( 'Standard', 'classic-commerce' );
 
 	if ( ! empty( $tax_classes ) ) {
 		foreach ( $tax_classes as $class ) {
@@ -843,9 +843,9 @@ function wc_get_product_tax_class_options() {
  */
 function wc_get_product_stock_status_options() {
 	return array(
-		'instock'     => __( 'In stock', 'woocommerce' ),
-		'outofstock'  => __( 'Out of stock', 'woocommerce' ),
-		'onbackorder' => __( 'On backorder', 'woocommerce' ),
+		'instock'     => __( 'In stock', 'classic-commerce' ),
+		'outofstock'  => __( 'Out of stock', 'classic-commerce' ),
+		'onbackorder' => __( 'On backorder', 'classic-commerce' ),
 	);
 }
 
@@ -857,9 +857,9 @@ function wc_get_product_stock_status_options() {
  */
 function wc_get_product_backorder_options() {
 	return array(
-		'no'     => __( 'Do not allow', 'woocommerce' ),
-		'notify' => __( 'Allow, but notify customer', 'woocommerce' ),
-		'yes'    => __( 'Allow', 'woocommerce' ),
+		'no'     => __( 'Do not allow', 'classic-commerce' ),
+		'notify' => __( 'Allow, but notify customer', 'classic-commerce' ),
+		'yes'    => __( 'Allow', 'classic-commerce' ),
 	);
 }
 

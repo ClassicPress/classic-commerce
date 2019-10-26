@@ -13,7 +13,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-3.5.0
  */
 

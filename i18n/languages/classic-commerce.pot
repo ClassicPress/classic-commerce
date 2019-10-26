@@ -6644,7 +6644,19 @@ msgstr ""
 msgid "You do not have permission to revoke API Keys"
 msgstr ""
 
+<<<<<<< HEAD:i18n/languages/classic-commerce.pot
+#: includes/admin/class-wc-admin-assets.php:84
+#: includes/admin/class-wc-admin-menus.php:59
+#: includes/admin/helper/class-wc-helper.php:448
+#: includes/admin/helper/class-wc-helper.php:591
+#: includes/admin/helper/class-wc-helper.php:1329
+#: includes/admin/wc-admin-functions.php:22
+#: includes/api/class-wc-rest-order-notes-controller.php:38
+#: includes/class-wc-order.php:1632 includes/class-wc-order.php:1633
+#: includes/class-wc-privacy.php:31 includes/wc-order-functions.php:915
+=======
 #. Plugin Name of the plugin/theme
+>>>>>>> 966aa6ac33a2130a3e41b9f2eebce5669fbcccba:i18n/languages/woocommerce.pot
 msgid "WooCommerce"
 msgstr ""
 

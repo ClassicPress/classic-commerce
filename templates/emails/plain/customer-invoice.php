@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.5.0
  */
 
@@ -22,19 +22,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 echo '= ' . esc_html( $email_heading ) . " =\n\n";
 
 /* translators: %s: Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
 
 if ( $order->has_status( 'pending' ) ) {
 	echo sprintf(
 		/* translators: %1$s Site title, %2$s Order pay link */
-		__( 'An order has been created for you on %1$s. Your invoice is below, with a link to make payment when you’re ready: %2$s', 'woocommerce' ),
+		__( 'An order has been created for you on %1$s. Your invoice is below, with a link to make payment when you’re ready: %2$s', 'classic-commerce' ),
 		esc_html( get_bloginfo( 'name', 'display' ) ),
 		esc_url( $order->get_checkout_payment_url() )
 	) . "\n\n";
 
 } else {
 	/* translators: %s Order date */
-	echo sprintf( esc_html__( 'Here are the details of your order placed on %s:', 'woocommerce' ), esc_html( wc_format_datetime( $order->get_date_created() ) ) ) . "\n\n";
+	echo sprintf( esc_html__( 'Here are the details of your order placed on %s:', 'classic-commerce' ), esc_html( wc_format_datetime( $order->get_date_created() ) ) ) . "\n\n";
 }
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
@@ -65,7 +65,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
  */
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 
-echo esc_html__( 'Thanks for reading.', 'woocommerce' ) . "\n\n";
+echo esc_html__( 'Thanks for reading.', 'classic-commerce' ) . "\n\n";
 
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 

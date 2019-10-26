@@ -157,7 +157,7 @@ class WC_Log_Handler_Email extends WC_Log_Handler {
 				'[%1$s] %2$s: %3$s WooCommerce log message',
 				'[%1$s] %2$s: %3$s WooCommerce log messages',
 				$log_count,
-				'woocommerce'
+				'classic-commerce'
 			),
 			$site_name,
 			$max_level,
@@ -178,14 +178,14 @@ class WC_Log_Handler_Email extends WC_Log_Handler {
 			'You have received the following WooCommerce log message:',
 			'You have received the following WooCommerce log messages:',
 			$log_count,
-			'woocommerce'
+			'classic-commerce'
 		) . PHP_EOL
 			. PHP_EOL
 			. $entries
 			. PHP_EOL
 			. PHP_EOL
 			/* translators: %s: Site name */
-			. sprintf( __( 'Visit %s admin area:', 'woocommerce' ), $site_name )
+			. sprintf( __( 'Visit %s admin area:', 'classic-commerce' ), $site_name )
 			. PHP_EOL
 			. admin_url();
 	}

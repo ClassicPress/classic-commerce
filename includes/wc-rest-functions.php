@@ -71,7 +71,7 @@ function wc_rest_upload_image_from_url( $image_url ) {
 	// Check parsed URL.
 	if ( ! $parsed_url || ! is_array( $parsed_url ) ) {
 		/* translators: %s: image URL */
-		return new WP_Error( 'woocommerce_rest_invalid_image_url', sprintf( __( 'Invalid URL %s.', 'woocommerce' ), $image_url ), array( 'status' => 400 ) );
+		return new WP_Error( 'woocommerce_rest_invalid_image_url', sprintf( __( 'Invalid URL %s.', 'classic-commerce' ), $image_url ), array( 'status' => 400 ) );
 	}
 
 	// Ensure url is valid.
@@ -87,13 +87,13 @@ function wc_rest_upload_image_from_url( $image_url ) {
 	if ( is_wp_error( $response ) ) {
 		return new WP_Error( 'woocommerce_rest_invalid_remote_image_url',
 			/* translators: %s: image URL */
-			sprintf( __( 'Error getting remote image %s.', 'woocommerce' ), $image_url ) . ' '
+			sprintf( __( 'Error getting remote image %s.', 'classic-commerce' ), $image_url ) . ' '
 			/* translators: %s: error message */
-			. sprintf( __( 'Error: %s.', 'woocommerce' ), $response->get_error_message() ), array( 'status' => 400 )
+			. sprintf( __( 'Error: %s.', 'classic-commerce' ), $response->get_error_message() ), array( 'status' => 400 )
 		);
 	} elseif ( 200 !== wp_remote_retrieve_response_code( $response ) ) {
 		/* translators: %s: image URL */
-		return new WP_Error( 'woocommerce_rest_invalid_remote_image_url', sprintf( __( 'Error getting remote image %s.', 'woocommerce' ), $image_url ), array( 'status' => 400 ) );
+		return new WP_Error( 'woocommerce_rest_invalid_remote_image_url', sprintf( __( 'Error getting remote image %s.', 'classic-commerce' ), $image_url ), array( 'status' => 400 ) );
 	}
 
 	// Ensure we have a file name and type.
@@ -115,7 +115,7 @@ function wc_rest_upload_image_from_url( $image_url ) {
 		$wp_filetype = wp_check_filetype( $file_name, wc_rest_allowed_image_mime_types() );
 
 		if ( ! $wp_filetype['type'] ) {
-			return new WP_Error( 'woocommerce_rest_invalid_image_type', __( 'Invalid image type.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( 'woocommerce_rest_invalid_image_type', __( 'Invalid image type.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 	}
 
@@ -133,7 +133,7 @@ function wc_rest_upload_image_from_url( $image_url ) {
 		@unlink( $upload['file'] ); // @codingStandardsIgnoreLine
 		unset( $upload );
 
-		return new WP_Error( 'woocommerce_rest_image_upload_file_error', __( 'Zero size file downloaded.', 'woocommerce' ), array( 'status' => 400 ) );
+		return new WP_Error( 'woocommerce_rest_image_upload_file_error', __( 'Zero size file downloaded.', 'classic-commerce' ), array( 'status' => 400 ) );
 	}
 
 	do_action( 'woocommerce_rest_api_uploaded_image_from_url', $upload, $image_url );
@@ -203,14 +203,14 @@ function wc_rest_validate_reports_request_arg( $value, $request, $param ) {
 
 	if ( 'string' === $args['type'] && ! is_string( $value ) ) {
 		/* translators: 1: param 2: type */
-		return new WP_Error( 'woocommerce_rest_invalid_param', sprintf( __( '%1$s is not of type %2$s', 'woocommerce' ), $param, 'string' ) );
+		return new WP_Error( 'woocommerce_rest_invalid_param', sprintf( __( '%1$s is not of type %2$s', 'classic-commerce' ), $param, 'string' ) );
 	}
 
 	if ( 'date' === $args['format'] ) {
 		$regex = '#^\d{4}-\d{2}-\d{2}$#';
 
 		if ( ! preg_match( $regex, $value, $matches ) ) {
-			return new WP_Error( 'woocommerce_rest_invalid_date', __( 'The date you provided is invalid.', 'woocommerce' ) );
+			return new WP_Error( 'woocommerce_rest_invalid_date', __( 'The date you provided is invalid.', 'classic-commerce' ) );
 		}
 	}
 

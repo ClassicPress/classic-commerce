@@ -109,13 +109,13 @@ final class WC_Cart_Session {
 				if ( ! $product->is_purchasable() ) {
 					$update_cart_session = true;
 					/* translators: %s: product name */
-					wc_add_notice( sprintf( __( '%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance.', 'woocommerce' ), $product->get_name() ), 'error' );
+					wc_add_notice( sprintf( __( '%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance.', 'classic-commerce' ), $product->get_name() ), 'error' );
 					do_action( 'woocommerce_remove_cart_item_from_session', $key, $values );
 
 				} elseif ( ! empty( $values['data_hash'] ) && ! hash_equals( $values['data_hash'], wc_get_cart_item_data_hash( $product ) ) ) { // phpcs:ignore PHPCompatibility.PHP.NewFunctions.hash_equalsFound
 					$update_cart_session = true;
 					/* translators: %1$s: product name. %2$s product permalink */
-					wc_add_notice( sprintf( __( '%1$s has been removed from your cart because it has since been modified. You can add it back to your cart <a href="%2$s">here</a>.', 'woocommerce' ), $product->get_name(), $product->get_permalink() ), 'notice' );
+					wc_add_notice( sprintf( __( '%1$s has been removed from your cart because it has since been modified. You can add it back to your cart <a href="%2$s">here</a>.', 'classic-commerce' ), $product->get_name(), $product->get_permalink() ), 'notice' );
 					do_action( 'woocommerce_remove_cart_item_from_session', $key, $values );
 
 				} else {
@@ -355,7 +355,7 @@ final class WC_Cart_Session {
 						'%d item from your previous order is currently unavailable and could not be added to your cart.',
 						'%d items from your previous order are currently unavailable and could not be added to your cart.',
 						$num_items_added,
-						'woocommerce'
+						'classic-commerce'
 					),
 					$num_items_added
 				),
@@ -364,7 +364,7 @@ final class WC_Cart_Session {
 		}
 
 		if ( 0 < $num_items_added ) {
-			wc_add_notice( __( 'The cart has been filled with the items from your previous order.', 'woocommerce' ) );
+			wc_add_notice( __( 'The cart has been filled with the items from your previous order.', 'classic-commerce' ) );
 		}
 
 		return $cart;

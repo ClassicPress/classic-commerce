@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
@@ -49,11 +49,11 @@ if ( $available_gateways ) : ?>
 
 			<div class="form-row">
 				<?php wp_nonce_field( 'woocommerce-add-payment-method', 'woocommerce-add-payment-method-nonce' ); ?>
-				<button type="submit" class="woocommerce-Button woocommerce-Button--alt button alt" id="place_order" value="<?php esc_attr_e( 'Add payment method', 'woocommerce' ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></button>
+				<button type="submit" class="woocommerce-Button woocommerce-Button--alt button alt" id="place_order" value="<?php esc_attr_e( 'Add payment method', 'classic-commerce' ); ?>"><?php esc_html_e( 'Add payment method', 'classic-commerce' ); ?></button>
 				<input type="hidden" name="woocommerce_add_payment_method" id="woocommerce_add_payment_method" value="1" />
 			</div>
 		</div>
 	</form>
 <?php else : ?>
-	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'New payment methods can only be added during checkout. Please contact us if you require assistance.', 'woocommerce' ); ?></p>
+	<p class="woocommerce-notice woocommerce-notice--info woocommerce-info"><?php esc_html_e( 'New payment methods can only be added during checkout. Please contact us if you require assistance.', 'classic-commerce' ); ?></p>
 <?php endif; ?>

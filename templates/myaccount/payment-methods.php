@@ -12,9 +12,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	https://docs.woocommerce.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-2.6.0
  */
 
@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 							} elseif ( 'method' === $column_id ) {
 								if ( ! empty( $method['method']['last4'] ) ) {
 									/* translators: 1: credit card type 2: last 4 digits */
-									echo sprintf( __( '%1$s ending in %2$s', 'woocommerce' ), esc_html( wc_get_credit_card_type_label( $method['method']['brand'] ) ), esc_html( $method['method']['last4'] ) );
+									echo sprintf( __( '%1$s ending in %2$s', 'classic-commerce' ), esc_html( wc_get_credit_card_type_label( $method['method']['brand'] ) ), esc_html( $method['method']['last4'] ) );
 								} else {
 									echo esc_html( wc_get_credit_card_type_label( $method['method']['brand'] ) );
 								}
@@ -70,12 +70,12 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 
 <?php else : ?>
 
-	<p class="woocommerce-Message woocommerce-Message--info woocommerce-info"><?php esc_html_e( 'No saved methods found.', 'woocommerce' ); ?></p>
+	<p class="woocommerce-Message woocommerce-Message--info woocommerce-info"><?php esc_html_e( 'No saved methods found.', 'classic-commerce' ); ?></p>
 
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_account_payment_methods', $has_methods ); ?>
 
 <?php if ( WC()->payment_gateways->get_available_payment_gateways() ) : ?>
-	<a class="button" href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'woocommerce' ); ?></a>
+	<a class="button" href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'classic-commerce' ); ?></a>
 <?php endif; ?>

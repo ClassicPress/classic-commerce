@@ -170,7 +170,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 			$types[] = 'variation';
 
 			if ( ! in_array( $data['type'], $types, true ) ) {
-				return new WP_Error( 'woocommerce_product_importer_invalid_type', __( 'Invalid product type.', 'woocommerce' ), array( 'status' => 401 ) );
+				return new WP_Error( 'woocommerce_product_importer_invalid_type', __( 'Invalid product type.', 'classic-commerce' ), array( 'status' => 401 ) );
 			}
 
 			$classname = WC_Product_Factory::get_classname_from_product_type( $data['type'] );
@@ -187,7 +187,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 				return new WP_Error(
 					'woocommerce_product_csv_importer_invalid_id',
 					/* translators: %d: product ID */
-					sprintf( __( 'Invalid product ID %d.', 'woocommerce' ), $id ),
+					sprintf( __( 'Invalid product ID %d.', 'classic-commerce' ), $id ),
 					array(
 						'id'     => $id,
 						'status' => 401,
@@ -430,12 +430,12 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 
 		// Stop if parent does not exists.
 		if ( ! $parent ) {
-			return new WP_Error( 'woocommerce_product_importer_missing_variation_parent_id', __( 'Variation cannot be imported: Missing parent ID or parent does not exist yet.', 'woocommerce' ), array( 'status' => 401 ) );
+			return new WP_Error( 'woocommerce_product_importer_missing_variation_parent_id', __( 'Variation cannot be imported: Missing parent ID or parent does not exist yet.', 'classic-commerce' ), array( 'status' => 401 ) );
 		}
 
 		// Stop if parent is a product variation.
 		if ( $parent->is_type( 'variation' ) ) {
-			return new WP_Error( 'woocommerce_product_importer_parent_set_as_variation', __( 'Variation cannot be imported: Parent product cannot be a product variation', 'woocommerce' ), array( 'status' => 401 ) );
+			return new WP_Error( 'woocommerce_product_importer_parent_set_as_variation', __( 'Variation cannot be imported: Parent product cannot be a product variation', 'classic-commerce' ), array( 'status' => 401 ) );
 		}
 
 		if ( isset( $data['raw_attributes'] ) ) {
@@ -602,7 +602,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 
 			if ( ! wp_attachment_is_image( $id ) ) {
 				/* translators: %s: image URL */
-				throw new Exception( sprintf( __( 'Not able to attach "%s".', 'woocommerce' ), $url ), 400 );
+				throw new Exception( sprintf( __( 'Not able to attach "%s".', 'classic-commerce' ), $url ), 400 );
 			}
 
 			// Save attachment source for future reference.
@@ -611,7 +611,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 
 		if ( ! $id ) {
 			/* translators: %s: image URL */
-			throw new Exception( sprintf( __( 'Unable to use image "%s".', 'woocommerce' ), $url ), 400 );
+			throw new Exception( sprintf( __( 'Unable to use image "%s".', 'classic-commerce' ), $url ), 400 );
 		}
 
 		return $id;
@@ -741,7 +741,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	 * Explode CSV cell values using commas by default, and handling escaped
 	 * separators.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $value Value to explode.
 	 * @return array
 	 */
@@ -756,7 +756,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	/**
 	 * Remove formatting and trim each value.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $value Value to format.
 	 * @return string
 	 */
@@ -769,7 +769,7 @@ abstract class WC_Product_Importer implements WC_Importer_Interface {
 	 * issues with negative numbers. This removes the ' if the input is still a valid
 	 * number after removal.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 * @param string $value A numeric string that may or may not have ' prepended.
 	 * @return string
 	 */

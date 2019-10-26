@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.5.0
  */
 
@@ -22,9 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 echo '= ' . esc_html( $email_heading ) . " =\n\n";
 
 /* translators: %s: Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
 /* translators: %s: Order number */
-echo sprintf( esc_html__( 'Just to let you know &mdash; your payment has been confirmed, and order #%s is now being processed:', 'woocommerce' ), esc_html( $order->get_order_number() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Just to let you know &mdash; your payment has been confirmed, and order #%s is now being processed:', 'classic-commerce' ), esc_html( $order->get_order_number() ) ) . "\n\n";
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
@@ -49,7 +49,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
  */
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 
-echo esc_html_e( 'Thanks!', 'woocommerce' ) . "\n\n";
+echo esc_html_e( 'Thanks!', 'classic-commerce' ) . "\n\n";
 
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 

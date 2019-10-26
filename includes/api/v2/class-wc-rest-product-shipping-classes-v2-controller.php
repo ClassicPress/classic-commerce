@@ -5,7 +5,7 @@
  * Handles requests to the products/shipping_classes endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

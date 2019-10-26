@@ -2,7 +2,7 @@
 /**
  * Australian states
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-2.0.0
  */
 
@@ -11,12 +11,12 @@ global $states;
 defined( 'ABSPATH' ) || exit;
 
 $states['AU'] = array(
-	'ACT' => __( 'Australian Capital Territory', 'woocommerce' ),
-	'NSW' => __( 'New South Wales', 'woocommerce' ),
-	'NT'  => __( 'Northern Territory', 'woocommerce' ),
-	'QLD' => __( 'Queensland', 'woocommerce' ),
-	'SA'  => __( 'South Australia', 'woocommerce' ),
-	'TAS' => __( 'Tasmania', 'woocommerce' ),
-	'VIC' => __( 'Victoria', 'woocommerce' ),
-	'WA'  => __( 'Western Australia', 'woocommerce' ),
+	'ACT' => __( 'Australian Capital Territory', 'classic-commerce' ),
+	'NSW' => __( 'New South Wales', 'classic-commerce' ),
+	'NT'  => __( 'Northern Territory', 'classic-commerce' ),
+	'QLD' => __( 'Queensland', 'classic-commerce' ),
+	'SA'  => __( 'South Australia', 'classic-commerce' ),
+	'TAS' => __( 'Tasmania', 'classic-commerce' ),
+	'VIC' => __( 'Victoria', 'classic-commerce' ),
+	'WA'  => __( 'Western Australia', 'classic-commerce' ),
 );

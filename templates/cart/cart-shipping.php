@@ -12,8 +12,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates
  * @version WC-3.5.0
  */
 
@@ -48,23 +48,23 @@ $calculator_text          = '';
 					<?php
 					if ( $formatted_destination ) {
 						// Translators: $s shipping destination.
-						printf( esc_html__( 'Estimate for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
-						$calculator_text = __( 'Change address', 'woocommerce' );
+						printf( esc_html__( 'Estimate for %s.', 'classic-commerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
+						$calculator_text = __( 'Change address', 'classic-commerce' );
 					} else {
-						echo esc_html__( 'This is only an estimate. Prices will be updated during checkout.', 'woocommerce' );
+						echo esc_html__( 'This is only an estimate. Prices will be updated during checkout.', 'classic-commerce' );
 					}
 					?>
 				</p>
 			<?php endif; ?>
 		<?php
 		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
-			esc_html_e( 'Enter your address to view shipping options.', 'woocommerce' );
+			esc_html_e( 'Enter your address to view shipping options.', 'classic-commerce' );
 		elseif ( ! is_cart() ) :
-			echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'There are no shipping methods available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
+			echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'There are no shipping methods available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'classic-commerce' ) ) );
 		else :
 			// Translators: $s shipping destination.
-			echo wp_kses_post( apply_filters( 'woocommerce_cart_no_shipping_available_html', sprintf( esc_html__( 'No shipping options were found for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ) ) );
-			$calculator_text = __( 'Enter a different address', 'woocommerce' );
+			echo wp_kses_post( apply_filters( 'woocommerce_cart_no_shipping_available_html', sprintf( esc_html__( 'No shipping options were found for %s.', 'classic-commerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ) ) );
+			$calculator_text = __( 'Enter a different address', 'classic-commerce' );
 		endif;
 		?>
 
