@@ -61,7 +61,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 
 					array(
 						'title' => __( 'Page setup', 'woocommerce' ),
-						'desc'  => __( 'These pages need to be set so that WooCommerce knows where to send users to checkout.', 'woocommerce' ),
+						'desc'  => __( 'These pages need to be set so that Classic Commerce knows where to send users to checkout.', 'woocommerce' ),
 						'type'  => 'title',
 						'id'    => 'advanced_page_options',
 					),
