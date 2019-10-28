@@ -19,7 +19,7 @@ class WC_Meta_Data implements JsonSerializable {
 	/**
 	 * Current data for metadata
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $current_data;
@@ -27,7 +27,7 @@ class WC_Meta_Data implements JsonSerializable {
 	/**
 	 * Metadata data
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $data;

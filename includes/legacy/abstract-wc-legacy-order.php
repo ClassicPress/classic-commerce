@@ -161,7 +161,7 @@ abstract class WC_Abstract_Legacy_Order extends WC_Data {
 		// Handle qty if set.
 		if ( isset( $args['qty'] ) ) {
 			if ( $product->backorders_require_notification() && $product->is_on_backorder( $args['qty'] ) ) {
-				$item->add_meta_data( apply_filters( 'woocommerce_backordered_item_meta_name', __( 'Backordered', 'woocommerce' ), $item ), $args['qty'] - max( 0, $product->get_stock_quantity() ), true );
+				$item->add_meta_data( apply_filters( 'woocommerce_backordered_item_meta_name', __( 'Backordered', 'classic-commerce' ), $item ), $args['qty'] - max( 0, $product->get_stock_quantity() ), true );
 			}
 			$args['subtotal'] = $args['subtotal'] ? $args['subtotal'] : wc_get_price_excluding_tax( $product, array( 'qty' => $args['qty'] ) );
 			$args['total']	= $args['total'] ? $args['total'] : wc_get_price_excluding_tax( $product, array( 'qty' => $args['qty'] ) );
@@ -283,7 +283,7 @@ abstract class WC_Abstract_Legacy_Order extends WC_Data {
 	 * Update tax line on order.
 	 * Note this does not update order totals.
 	 *
-	 * @since 3.0
+	 * @since WC-3.0
 	 * @param object|int $item
 	 * @param array $args
 	 * @return int updated order item ID
@@ -504,7 +504,7 @@ abstract class WC_Abstract_Legacy_Order extends WC_Data {
 			foreach ( $download_files as $download_id => $file ) {
 				$i++;
 				/* translators: 1: current item count */
-				$prefix  = count( $download_files ) > 1 ? sprintf( __( 'Download %d', 'woocommerce' ), $i ) : __( 'Download', 'woocommerce' );
+				$prefix  = count( $download_files ) > 1 ? sprintf( __( 'Download %d', 'classic-commerce' ), $i ) : __( 'Download', 'classic-commerce' );
 				$links[] = '<small class="download-url">' . $prefix . ': <a href="' . esc_url( $file['download_url'] ) . '" target="_blank">' . esc_html( $file['name'] ) . '</a></small>' . "\n";
 			}
 

@@ -5,7 +5,7 @@
  * Handles requests to the /settings endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -53,14 +53,14 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Get all settings groups items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
 	public function get_items( $request ) {
 		$groups = apply_filters( 'woocommerce_settings_groups', array() );
 		if ( empty( $groups ) ) {
-			return new WP_Error( 'rest_setting_groups_empty', __( 'No setting groups have been registered.', 'woocommerce' ), array( 'status' => 500 ) );
+			return new WP_Error( 'rest_setting_groups_empty', __( 'No setting groups have been registered.', 'classic-commerce' ), array( 'status' => 500 ) );
 		}
 
 		$defaults        = $this->group_defaults();
@@ -108,7 +108,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Prepare a report sales object for serialization.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param array           $item Group object.
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_REST_Response $response Response data.
@@ -143,7 +143,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Callback for allowed keys for each group response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $key Key to check.
 	 * @return boolean
 	 */
@@ -154,7 +154,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Returns default settings for groups. null means the field is required.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	protected function group_defaults() {
@@ -170,13 +170,13 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Makes sure the current user has access to READ the settings APIs.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full data about the request.
 	 * @return WP_Error|boolean
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'settings', 'read' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -185,7 +185,7 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Get the groups schema, conforming to JSON Schema.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public function get_item_schema() {
@@ -195,31 +195,31 @@ class WC_REST_Settings_V2_Controller extends WC_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'          => array(
-					'description' => __( 'A unique identifier that can be used to link settings together.', 'woocommerce' ),
+					'description' => __( 'A unique identifier that can be used to link settings together.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'label'       => array(
-					'description' => __( 'A human readable label for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable label for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'description' => array(
-					'description' => __( 'A human readable description for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable description for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'parent_id'   => array(
-					'description' => __( 'ID of parent grouping.', 'woocommerce' ),
+					'description' => __( 'ID of parent grouping.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'sub_groups'  => array(
-					'description' => __( 'IDs for settings sub groups.', 'woocommerce' ),
+					'description' => __( 'IDs for settings sub groups.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

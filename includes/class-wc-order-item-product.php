@@ -4,7 +4,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -57,7 +57,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	 */
 	public function set_tax_class( $value ) {
 		if ( $value && ! in_array( $value, WC_Tax::get_tax_class_slugs(), true ) ) {
-			$this->error( 'order_item_product_invalid_tax_class', __( 'Invalid tax class', 'woocommerce' ) );
+			$this->error( 'order_item_product_invalid_tax_class', __( 'Invalid tax class', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'tax_class', $value );
 	}
@@ -69,7 +69,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	 */
 	public function set_product_id( $value ) {
 		if ( $value > 0 && 'product' !== get_post_type( absint( $value ) ) ) {
-			$this->error( 'order_item_product_invalid_product_id', __( 'Invalid product ID', 'woocommerce' ) );
+			$this->error( 'order_item_product_invalid_product_id', __( 'Invalid product ID', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'product_id', absint( $value ) );
 	}
@@ -81,7 +81,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	 */
 	public function set_variation_id( $value ) {
 		if ( $value > 0 && 'product_variation' !== get_post_type( $value ) ) {
-			$this->error( 'order_item_product_invalid_variation_id', __( 'Invalid variation ID', 'woocommerce' ) );
+			$this->error( 'order_item_product_invalid_variation_id', __( 'Invalid variation ID', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'variation_id', absint( $value ) );
 	}
@@ -184,7 +184,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	 */
 	public function set_product( $product ) {
 		if ( ! is_a( $product, 'WC_Product' ) ) {
-			$this->error( 'order_item_product_invalid_product', __( 'Invalid product', 'woocommerce' ) );
+			$this->error( 'order_item_product_invalid_product', __( 'Invalid product', 'classic-commerce' ) );
 		}
 		if ( $product->is_type( 'variation' ) ) {
 			$this->set_product_id( $product->get_parent_id() );
@@ -203,7 +203,7 @@ class WC_Order_Item_Product extends WC_Order_Item {
 	public function set_backorder_meta() {
 		$product = $this->get_product();
 		if ( $product && $product->backorders_require_notification() && $product->is_on_backorder( $this->get_quantity() ) ) {
-			$this->add_meta_data( apply_filters( 'woocommerce_backordered_item_meta_name', __( 'Backordered', 'woocommerce' ), $this ), $this->get_quantity() - max( 0, $product->get_stock_quantity() ), true );
+			$this->add_meta_data( apply_filters( 'woocommerce_backordered_item_meta_name', __( 'Backordered', 'classic-commerce' ), $this ), $this->get_quantity() - max( 0, $product->get_stock_quantity() ), true );
 		}
 	}
 

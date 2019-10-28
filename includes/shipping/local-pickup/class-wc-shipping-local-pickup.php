@@ -28,8 +28,8 @@ class WC_Shipping_Local_Pickup extends WC_Shipping_Method {
 	public function __construct( $instance_id = 0 ) {
 		$this->id                 = 'local_pickup';
 		$this->instance_id        = absint( $instance_id );
-		$this->method_title       = __( 'Local pickup', 'woocommerce' );
-		$this->method_description = __( 'Allow customers to pick up orders themselves. By default, when using local pickup store base taxes will apply regardless of customer address.', 'woocommerce' );
+		$this->method_title       = __( 'Local pickup', 'classic-commerce' );
+		$this->method_description = __( 'Allow customers to pick up orders themselves. By default, when using local pickup store base taxes will apply regardless of customer address.', 'classic-commerce' );
 		$this->supports           = array(
 			'shipping-zones',
 			'instance-settings',
@@ -77,27 +77,27 @@ class WC_Shipping_Local_Pickup extends WC_Shipping_Method {
 	public function init_form_fields() {
 		$this->instance_form_fields = array(
 			'title'      => array(
-				'title'       => __( 'Title', 'woocommerce' ),
+				'title'       => __( 'Title', 'classic-commerce' ),
 				'type'        => 'text',
-				'description' => __( 'This controls the title which the user sees during checkout.', 'woocommerce' ),
-				'default'     => __( 'Local pickup', 'woocommerce' ),
+				'description' => __( 'This controls the title which the user sees during checkout.', 'classic-commerce' ),
+				'default'     => __( 'Local pickup', 'classic-commerce' ),
 				'desc_tip'    => true,
 			),
 			'tax_status' => array(
-				'title'   => __( 'Tax status', 'woocommerce' ),
+				'title'   => __( 'Tax status', 'classic-commerce' ),
 				'type'    => 'select',
 				'class'   => 'wc-enhanced-select',
 				'default' => 'taxable',
 				'options' => array(
-					'taxable' => __( 'Taxable', 'woocommerce' ),
-					'none'    => _x( 'None', 'Tax status', 'woocommerce' ),
+					'taxable' => __( 'Taxable', 'classic-commerce' ),
+					'none'    => _x( 'None', 'Tax status', 'classic-commerce' ),
 				),
 			),
 			'cost'       => array(
-				'title'       => __( 'Cost', 'woocommerce' ),
+				'title'       => __( 'Cost', 'classic-commerce' ),
 				'type'        => 'text',
 				'placeholder' => '0',
-				'description' => __( 'Optional cost for local pickup.', 'woocommerce' ),
+				'description' => __( 'Optional cost for local pickup.', 'classic-commerce' ),
 				'default'     => '',
 				'desc_tip'    => true,
 			),

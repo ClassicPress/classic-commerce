@@ -2,7 +2,7 @@
 /**
  * Twenty Seventeen support.
  *
- * @since   2.6.9
+ * @since   WC-2.6.9
  * @package WooCommerce/Classes
  */
 

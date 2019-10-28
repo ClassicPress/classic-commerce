@@ -4,7 +4,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -296,7 +296,7 @@ class WC_Customer_Download extends WC_Data implements ArrayAccess {
 
 		// Must have a permission_id to track download log.
 		if ( ! ( $this->get_id() > 0 ) ) {
-			throw new Exception( __( 'Invalid permission ID.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid permission ID.', 'classic-commerce' ) );
 		}
 
 		// Increment download count, and decrement downloads remaining.

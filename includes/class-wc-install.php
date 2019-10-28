@@ -226,7 +226,7 @@ class WC_Install {
 	/**
 	 * Reset any notices added to admin.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function remove_admin_notices() {
 		include_once dirname( __FILE__ ) . '/admin/class-wc-admin-notices.php';
@@ -236,7 +236,7 @@ class WC_Install {
 	/**
 	 * Setup WC environment - post types, taxonomies, endpoints.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function setup_environment() {
 		WC_Post_types::register_post_types();
@@ -250,7 +250,7 @@ class WC_Install {
 	/**
 	 * Is this a brand new WC install?
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return boolean
 	 */
 	private static function is_new_install() {
@@ -260,7 +260,7 @@ class WC_Install {
 	/**
 	 * Is a DB update needed?
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return boolean
 	 */
 	private static function needs_db_update() {
@@ -273,7 +273,7 @@ class WC_Install {
 	/**
 	 * See if we need the wizard or not.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function maybe_enable_setup_wizard() {
 		if ( apply_filters( 'woocommerce_enable_setup_wizard', self::is_new_install() ) ) {
@@ -285,7 +285,7 @@ class WC_Install {
 	/**
 	 * See if we need to show or run database updates during install.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function maybe_update_db_version() {
 		if ( self::needs_db_update() ) {
@@ -311,7 +311,7 @@ class WC_Install {
 	/**
 	 * Get list of DB update callbacks.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public static function get_db_update_callbacks() {
@@ -364,7 +364,7 @@ class WC_Install {
 	public static function cron_schedules( $schedules ) {
 		$schedules['monthly'] = array(
 			'interval' => 2635200,
-			'display'  => __( 'Monthly', 'woocommerce' ),
+			'display'  => __( 'Monthly', 'classic-commerce' ),
 		);
 		return $schedules;
 	}
@@ -410,23 +410,23 @@ class WC_Install {
 		$pages = apply_filters(
 			'woocommerce_create_pages', array(
 				'shop'      => array(
-					'name'    => _x( 'shop', 'Page slug', 'woocommerce' ),
-					'title'   => _x( 'Shop', 'Page title', 'woocommerce' ),
+					'name'    => _x( 'shop', 'Page slug', 'classic-commerce' ),
+					'title'   => _x( 'Shop', 'Page title', 'classic-commerce' ),
 					'content' => '',
 				),
 				'cart'      => array(
-					'name'    => _x( 'cart', 'Page slug', 'woocommerce' ),
-					'title'   => _x( 'Cart', 'Page title', 'woocommerce' ),
+					'name'    => _x( 'cart', 'Page slug', 'classic-commerce' ),
+					'title'   => _x( 'Cart', 'Page title', 'classic-commerce' ),
 					'content' => '[' . apply_filters( 'woocommerce_cart_shortcode_tag', 'woocommerce_cart' ) . ']',
 				),
 				'checkout'  => array(
-					'name'    => _x( 'checkout', 'Page slug', 'woocommerce' ),
-					'title'   => _x( 'Checkout', 'Page title', 'woocommerce' ),
+					'name'    => _x( 'checkout', 'Page slug', 'classic-commerce' ),
+					'title'   => _x( 'Checkout', 'Page title', 'classic-commerce' ),
 					'content' => '[' . apply_filters( 'woocommerce_checkout_shortcode_tag', 'woocommerce_checkout' ) . ']',
 				),
 				'myaccount' => array(
-					'name'    => _x( 'my-account', 'Page slug', 'woocommerce' ),
-					'title'   => _x( 'My account', 'Page title', 'woocommerce' ),
+					'name'    => _x( 'my-account', 'Page slug', 'classic-commerce' ),
+					'title'   => _x( 'My account', 'Page title', 'classic-commerce' ),
 					'content' => '[' . apply_filters( 'woocommerce_my_account_shortcode_tag', 'woocommerce_my_account' ) . ']',
 				),
 			)
@@ -507,13 +507,13 @@ class WC_Install {
 
 		if ( ! $woocommerce_default_category || ! term_exists( $woocommerce_default_category, 'product_cat' ) ) {
 			$default_product_cat_id   = 0;
-			$default_product_cat_slug = sanitize_title( _x( 'Uncategorized', 'Default category slug', 'woocommerce' ) );
+			$default_product_cat_slug = sanitize_title( _x( 'Uncategorized', 'Default category slug', 'classic-commerce' ) );
 			$default_product_cat      = get_term_by( 'slug', $default_product_cat_slug, 'product_cat' ); // @codingStandardsIgnoreLine.
 
 			if ( $default_product_cat ) {
 				$default_product_cat_id = absint( $default_product_cat->term_taxonomy_id );
 			} else {
-				$result = wp_insert_term( _x( 'Uncategorized', 'Default category slug', 'woocommerce' ), 'product_cat', array( 'slug' => $default_product_cat_slug ) );
+				$result = wp_insert_term( _x( 'Uncategorized', 'Default category slug', 'classic-commerce' ), 'product_cat', array( 'slug' => $default_product_cat_slug ) );
 
 				if ( ! is_wp_error( $result ) && ! empty( $result['term_taxonomy_id'] ) ) {
 					$default_product_cat_id = absint( $result['term_taxonomy_id'] );
@@ -923,9 +923,9 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 
 		// Dummy gettext calls to get strings in the catalog.
 		/* translators: user role */
-		_x( 'Customer', 'User role', 'woocommerce' );
+		_x( 'Customer', 'User role', 'classic-commerce' );
 		/* translators: user role */
-		_x( 'Shop manager', 'User role', 'woocommerce' );
+		_x( 'Shop manager', 'User role', 'classic-commerce' );
 
 		// Customer role.
 		add_role(
@@ -1121,7 +1121,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	/**
 	 * Create a placeholder image in the media library.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	private static function create_placeholder_image() {
 		$placeholder_image = get_option( 'woocommerce_placeholder_image', 0 );
@@ -1176,7 +1176,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 */
 	public static function plugin_action_links( $links ) {
 		$action_links = array(
-			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings' ) . '" aria-label="' . esc_attr__( 'View WooCommerce settings', 'woocommerce' ) . '">' . esc_html__( 'Settings', 'woocommerce' ) . '</a>',
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings' ) . '" aria-label="' . esc_attr__( 'View WooCommerce settings', 'classic-commerce' ) . '">' . esc_html__( 'Settings', 'classic-commerce' ) . '</a>',
 		);
 
 		return array_merge( $action_links, $links );
@@ -1193,9 +1193,9 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	public static function plugin_row_meta( $links, $file ) {
 		if ( WC_PLUGIN_BASENAME === $file ) {
 			$row_meta = array(
-				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/documentation/plugins/woocommerce/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce documentation', 'woocommerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'woocommerce' ) . '</a>',
-				'apidocs' => '<a href="' . esc_url( apply_filters( 'woocommerce_apidocs_url', 'https://docs.woocommerce.com/wc-apidocs/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce API docs', 'woocommerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'API docs', 'woocommerce' ) . '</a>',
-				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://github.com/ClassicPress-research/classic-commerce/issues' ) ) . '" aria-label="' . esc_attr__( 'Visit issues  support section on github', 'woocommerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'woocommerce' ) . '</a>',
+				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/documentation/plugins/woocommerce/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce documentation', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'classic-commerce' ) . '</a>',
+				'apidocs' => '<a href="' . esc_url( apply_filters( 'woocommerce_apidocs_url', 'https://docs.woocommerce.com/wc-apidocs/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce API docs', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'API docs', 'classic-commerce' ) . '</a>',
+				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://github.com/ClassicPress-research/classic-commerce/issues' ) ) . '" aria-label="' . esc_attr__( 'Visit issues  support section on github', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'classic-commerce' ) . '</a>',
 			);
 
 			return array_merge( $links, $row_meta );
@@ -1225,7 +1225,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 * @param array  $plugin_to_install Plugin information.
 	 *
 	 * @throws Exception If unable to proceed with plugin installation.
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 */
 	public static function background_installer( $plugin_to_install_id, $plugin_to_install ) {
 		// Explicitly clear the event.
@@ -1323,7 +1323,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 						$plugin_to_install_id . '_install_error',
 						sprintf(
 							// translators: 1: plugin name, 2: error message, 3: URL to install plugin manually.
-							__( '%1$s could not be installed (%2$s). <a href="%3$s">Please install it manually by clicking here.</a>', 'woocommerce' ),
+							__( '%1$s could not be installed (%2$s). <a href="%3$s">Please install it manually by clicking here.</a>', 'classic-commerce' ),
 							$plugin_to_install['name'],
 							$e->getMessage(),
 							esc_url( admin_url( 'index.php?wc-install-plugin-redirect=' . $plugin_slug ) )
@@ -1351,7 +1351,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 						$plugin_to_install_id . '_install_error',
 						sprintf(
 							// translators: 1: plugin name, 2: URL to WP plugin page.
-							__( '%1$s was installed but could not be activated. <a href="%2$s">Please activate it manually by clicking here.</a>', 'woocommerce' ),
+							__( '%1$s was installed but could not be activated. <a href="%2$s">Please activate it manually by clicking here.</a>', 'classic-commerce' ),
 							$plugin_to_install['name'],
 							admin_url( 'plugins.php' )
 						)
@@ -1381,7 +1381,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 * @param string $theme_slug Theme slug.
 	 *
 	 * @throws Exception If unable to proceed with theme installation.
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 */
 	public static function theme_background_installer( $theme_slug ) {
 		// Explicitly clear the event.
@@ -1426,7 +1426,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 					$theme_slug . '_install_error',
 					sprintf(
 						// translators: 1: theme slug, 2: error message, 3: URL to install theme manually.
-						__( '%1$s could not be installed (%2$s). <a href="%3$s">Please install it manually by clicking here.</a>', 'woocommerce' ),
+						__( '%1$s could not be installed (%2$s). <a href="%3$s">Please install it manually by clicking here.</a>', 'classic-commerce' ),
 						$theme_slug,
 						$e->getMessage(),
 						esc_url( admin_url( 'update.php?action=install-theme&theme=' . $theme_slug . '&_wpnonce=' . wp_create_nonce( 'install-theme_' . $theme_slug ) ) )

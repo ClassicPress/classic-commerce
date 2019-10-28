@@ -5,7 +5,7 @@
  * Handles requests to the reports endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ class WC_REST_Reports_Controller extends WC_REST_Reports_V2_Controller {
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {
@@ -36,35 +36,35 @@ class WC_REST_Reports_Controller extends WC_REST_Reports_V2_Controller {
 
 		$reports[] = array(
 			'slug'        => 'orders/totals',
-			'description' => __( 'Orders totals.', 'woocommerce' ),
+			'description' => __( 'Orders totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'products/totals',
-			'description' => __( 'Products totals.', 'woocommerce' ),
+			'description' => __( 'Products totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'customers/totals',
-			'description' => __( 'Customers totals.', 'woocommerce' ),
+			'description' => __( 'Customers totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'coupons/totals',
-			'description' => __( 'Coupons totals.', 'woocommerce' ),
+			'description' => __( 'Coupons totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'reviews/totals',
-			'description' => __( 'Reviews totals.', 'woocommerce' ),
+			'description' => __( 'Reviews totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'categories/totals',
-			'description' => __( 'Categories totals.', 'woocommerce' ),
+			'description' => __( 'Categories totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'tags/totals',
-			'description' => __( 'Tags totals.', 'woocommerce' ),
+			'description' => __( 'Tags totals.', 'classic-commerce' ),
 		);
 		$reports[] = array(
 			'slug'        => 'attributes/totals',
-			'description' => __( 'Attributes totals.', 'woocommerce' ),
+			'description' => __( 'Attributes totals.', 'classic-commerce' ),
 		);
 
 		return $reports;

@@ -10,14 +10,14 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-echo esc_html( wc_strtoupper( __( 'Downloads', 'woocommerce' ) ) ) . "\n\n";
+echo esc_html( wc_strtoupper( __( 'Downloads', 'classic-commerce' ) ) ) . "\n\n";
 
 foreach ( $downloads as $download ) {
 	foreach ( $columns as $column_id => $column_name ) {
@@ -37,7 +37,7 @@ foreach ( $downloads as $download ) {
 					if ( ! empty( $download['access_expires'] ) ) {
 						echo esc_html( date_i18n( get_option( 'date_format' ), strtotime( $download['access_expires'] ) ) );
 					} else {
-						esc_html_e( 'Never', 'woocommerce' );
+						esc_html_e( 'Never', 'classic-commerce' );
 					}
 					break;
 			}

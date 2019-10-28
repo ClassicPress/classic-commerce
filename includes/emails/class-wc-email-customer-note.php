@@ -36,8 +36,8 @@ if ( ! class_exists( 'WC_Email_Customer_Note', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_note';
 			$this->customer_email = true;
-			$this->title          = __( 'Customer note', 'woocommerce' );
-			$this->description    = __( 'Customer note emails are sent when you add a note to an order.', 'woocommerce' );
+			$this->title          = __( 'Customer note', 'classic-commerce' );
+			$this->description    = __( 'Customer note emails are sent when you add a note to an order.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-note.php';
 			$this->template_plain = 'emails/plain/customer-note.php';
 			$this->placeholders   = array(
@@ -56,21 +56,21 @@ if ( ! class_exists( 'WC_Email_Customer_Note', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Note added to your {site_title} order from {order_date}', 'woocommerce' );
+			return __( 'Note added to your {site_title} order from {order_date}', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'A note has been added to your order', 'woocommerce' );
+			return __( 'A note has been added to your order', 'classic-commerce' );
 		}
 
 		/**

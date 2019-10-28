@@ -7,7 +7,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -37,7 +37,7 @@ class WC_Order_Item_Fee extends WC_Order_Item {
 	/**
 	 * Get item costs grouped by tax class.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  WC_Order $order Order object.
 	 * @return array
 	 */
@@ -65,7 +65,7 @@ class WC_Order_Item_Fee extends WC_Order_Item {
 	/**
 	 * Calculate item taxes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $calculate_tax_for Location data to get taxes for. Required.
 	 * @return bool  True if taxes were calculated.
 	 */
@@ -128,7 +128,7 @@ class WC_Order_Item_Fee extends WC_Order_Item {
 	 */
 	public function set_tax_class( $value ) {
 		if ( $value && ! in_array( $value, WC_Tax::get_tax_class_slugs(), true ) ) {
-			$this->error( 'order_item_fee_invalid_tax_class', __( 'Invalid tax class', 'woocommerce' ) );
+			$this->error( 'order_item_fee_invalid_tax_class', __( 'Invalid tax class', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'tax_class', $value );
 	}
@@ -208,7 +208,7 @@ class WC_Order_Item_Fee extends WC_Order_Item {
 	public function get_name( $context = 'view' ) {
 		$name = $this->get_prop( 'name', $context );
 		if ( 'view' === $context ) {
-			return $name ? $name : __( 'Fee', 'woocommerce' );
+			return $name ? $name : __( 'Fee', 'classic-commerce' );
 		} else {
 			return $name;
 		}

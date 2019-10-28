@@ -117,26 +117,26 @@ class WC_Admin_Meta_Boxes {
 		$screen_id = $screen ? $screen->id : '';
 
 		// Products.
-		add_meta_box( 'postexcerpt', __( 'Product short description', 'woocommerce' ), 'WC_Meta_Box_Product_Short_Description::output', 'product', 'normal' );
-		add_meta_box( 'woocommerce-product-data', __( 'Product data', 'woocommerce' ), 'WC_Meta_Box_Product_Data::output', 'product', 'normal', 'high' );
-		add_meta_box( 'woocommerce-product-images', __( 'Product gallery', 'woocommerce' ), 'WC_Meta_Box_Product_Images::output', 'product', 'side', 'low' );
+		add_meta_box( 'postexcerpt', __( 'Product short description', 'classic-commerce' ), 'WC_Meta_Box_Product_Short_Description::output', 'product', 'normal' );
+		add_meta_box( 'woocommerce-product-data', __( 'Product data', 'classic-commerce' ), 'WC_Meta_Box_Product_Data::output', 'product', 'normal', 'high' );
+		add_meta_box( 'woocommerce-product-images', __( 'Product gallery', 'classic-commerce' ), 'WC_Meta_Box_Product_Images::output', 'product', 'side', 'low' );
 
 		// Orders.
 		foreach ( wc_get_order_types( 'order-meta-boxes' ) as $type ) {
 			$order_type_object = get_post_type_object( $type );
-			add_meta_box( 'woocommerce-order-data', sprintf( __( '%s data', 'woocommerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Data::output', $type, 'normal', 'high' );
-			add_meta_box( 'woocommerce-order-items', __( 'Items', 'woocommerce' ), 'WC_Meta_Box_Order_Items::output', $type, 'normal', 'high' );
-			add_meta_box( 'woocommerce-order-notes', sprintf( __( '%s notes', 'woocommerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Notes::output', $type, 'side', 'default' );
-			add_meta_box( 'woocommerce-order-downloads', __( 'Downloadable product permissions', 'woocommerce' ) . wc_help_tip( __( 'Note: Permissions for order items will automatically be granted when the order status changes to processing/completed.', 'woocommerce' ) ), 'WC_Meta_Box_Order_Downloads::output', $type, 'normal', 'default' );
-			add_meta_box( 'woocommerce-order-actions', sprintf( __( '%s actions', 'woocommerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Actions::output', $type, 'side', 'high' );
+			add_meta_box( 'woocommerce-order-data', sprintf( __( '%s data', 'classic-commerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Data::output', $type, 'normal', 'high' );
+			add_meta_box( 'woocommerce-order-items', __( 'Items', 'classic-commerce' ), 'WC_Meta_Box_Order_Items::output', $type, 'normal', 'high' );
+			add_meta_box( 'woocommerce-order-notes', sprintf( __( '%s notes', 'classic-commerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Notes::output', $type, 'side', 'default' );
+			add_meta_box( 'woocommerce-order-downloads', __( 'Downloadable product permissions', 'classic-commerce' ) . wc_help_tip( __( 'Note: Permissions for order items will automatically be granted when the order status changes to processing/completed.', 'classic-commerce' ) ), 'WC_Meta_Box_Order_Downloads::output', $type, 'normal', 'default' );
+			add_meta_box( 'woocommerce-order-actions', sprintf( __( '%s actions', 'classic-commerce' ), $order_type_object->labels->singular_name ), 'WC_Meta_Box_Order_Actions::output', $type, 'side', 'high' );
 		}
 
 		// Coupons.
-		add_meta_box( 'woocommerce-coupon-data', __( 'Coupon data', 'woocommerce' ), 'WC_Meta_Box_Coupon_Data::output', 'shop_coupon', 'normal', 'high' );
+		add_meta_box( 'woocommerce-coupon-data', __( 'Coupon data', 'classic-commerce' ), 'WC_Meta_Box_Coupon_Data::output', 'shop_coupon', 'normal', 'high' );
 
 		// Comment rating.
 		if ( 'comment' === $screen_id && isset( $_GET['c'] ) && metadata_exists( 'comment', $_GET['c'], 'rating' ) ) {
-			add_meta_box( 'woocommerce-rating', __( 'Rating', 'woocommerce' ), 'WC_Meta_Box_Product_Reviews::output', 'comment', 'normal', 'high' );
+			add_meta_box( 'woocommerce-rating', __( 'Rating', 'classic-commerce' ), 'WC_Meta_Box_Product_Reviews::output', 'comment', 'normal', 'high' );
 		}
 	}
 
@@ -171,7 +171,7 @@ class WC_Admin_Meta_Boxes {
 		// Comments/Reviews
 		if ( isset( $post ) && ( 'publish' == $post->post_status || 'private' == $post->post_status ) && post_type_supports( 'product', 'comments' ) ) {
 			remove_meta_box( 'commentsdiv', 'product', 'normal' );
-			add_meta_box( 'commentsdiv', __( 'Reviews', 'woocommerce' ), 'post_comment_meta_box', 'product', 'normal' );
+			add_meta_box( 'commentsdiv', __( 'Reviews', 'classic-commerce' ), 'post_comment_meta_box', 'product', 'normal' );
 		}
 	}
 

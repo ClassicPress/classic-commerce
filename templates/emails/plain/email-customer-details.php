@@ -13,7 +13,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.4.0
  */
 
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-echo esc_html( wc_strtoupper( __( 'Customer details', 'woocommerce' ) ) ) . "\n\n";
+echo esc_html( wc_strtoupper( __( 'Customer details', 'classic-commerce' ) ) ) . "\n\n";
 
 foreach ( $fields as $field ) {
 	echo wp_kses_post( $field['label'] ) . ': ' . wp_kses_post( $field['value'] ) . "\n";

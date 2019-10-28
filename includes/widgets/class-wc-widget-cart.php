@@ -20,19 +20,19 @@ class WC_Widget_Cart extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
-		$this->widget_description = __( 'Display the customer shopping cart.', 'woocommerce' );
+		$this->widget_description = __( 'Display the customer shopping cart.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_widget_cart';
-		$this->widget_name        = __( 'Cart', 'woocommerce' );
+		$this->widget_name        = __( 'Cart', 'classic-commerce' );
 		$this->settings           = array(
 			'title'         => array(
 				'type'  => 'text',
-				'std'   => __( 'Cart', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Cart', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 			'hide_if_empty' => array(
 				'type'  => 'checkbox',
 				'std'   => 0,
-				'label' => __( 'Hide if cart is empty', 'woocommerce' ),
+				'label' => __( 'Hide if cart is empty', 'classic-commerce' ),
 			),
 		);
 

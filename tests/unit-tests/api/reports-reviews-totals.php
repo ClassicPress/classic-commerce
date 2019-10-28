@@ -56,7 +56,7 @@ class WC_Tests_API_Reports_Reviews_Totals extends WC_REST_Unit_Test_Case {
 			$data[] = array(
 				'slug'  => 'rated_' . $i . '_out_of_5',
 				/* translators: %s: average rating */
-				'name'  => sprintf( __( 'Rated %s out of 5', 'woocommerce' ), $i ),
+				'name'  => sprintf( __( 'Rated %s out of 5', 'classic-commerce' ), $i ),
 				'total' => (int) get_comments( $query_data ),
 			);
 		}

@@ -5,7 +5,7 @@
  * Handles requests to the /system_status/tools/* endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

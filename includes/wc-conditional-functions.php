@@ -194,7 +194,7 @@ if ( ! function_exists( 'is_edit_account_page' ) ) {
 	 * Check for edit account page.
 	 * Returns true when viewing the edit account page.
 	 *
-	 * @since WC-2.5.1
+	 * @since  WC-2.5.1
 	 * @return bool
 	 */
 	function is_edit_account_page() {
@@ -390,7 +390,7 @@ function wc_is_valid_url( $url ) {
 /**
  * Check if the home URL is https. If it is, we don't need to do things such as 'force ssl'.
  *
- * @since  2.4.13
+ * @since  WC-2.4.13
  * @return bool
  */
 function wc_site_is_https() {
@@ -400,7 +400,7 @@ function wc_site_is_https() {
 /**
  * Check if the checkout is configured for https. Look at options, WP HTTPS plugin, or the permalink itself.
  *
- * @since  2.5.0
+ * @since  WC-2.5.0
  * @return bool
  */
 function wc_checkout_is_https() {
