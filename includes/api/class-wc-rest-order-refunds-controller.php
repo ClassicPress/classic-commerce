@@ -5,7 +5,7 @@
  * Handles requests to the /orders/<order_id>/refunds endpoint.
  *
  * @package WooCommerce/API
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ class WC_REST_Order_Refunds_Controller extends WC_REST_Order_Refunds_V2_Controll
 	/**
 	 * Prepares one object for create or update operation.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request object.
 	 * @param  bool            $creating If is creating a new object.
 	 * @return WP_Error|WC_Data The prepared item, or WP_Error object on failure.
@@ -37,11 +37,11 @@ class WC_REST_Order_Refunds_Controller extends WC_REST_Order_Refunds_V2_Controll
 		$order = wc_get_order( (int) $request['order_id'] );
 
 		if ( ! $order ) {
-			return new WP_Error( 'woocommerce_rest_invalid_order_id', __( 'Invalid order ID.', 'woocommerce' ), 404 );
+			return new WP_Error( 'woocommerce_rest_invalid_order_id', __( 'Invalid order ID.', 'classic-commerce' ), 404 );
 		}
 
 		if ( 0 > $request['amount'] ) {
-			return new WP_Error( 'woocommerce_rest_invalid_order_refund', __( 'Refund amount must be greater than zero.', 'woocommerce' ), 400 );
+			return new WP_Error( 'woocommerce_rest_invalid_order_refund', __( 'Refund amount must be greater than zero.', 'classic-commerce' ), 400 );
 		}
 
 		// Create the refund.
@@ -61,7 +61,7 @@ class WC_REST_Order_Refunds_Controller extends WC_REST_Order_Refunds_V2_Controll
 		}
 
 		if ( ! $refund ) {
-			return new WP_Error( 'woocommerce_rest_cannot_create_order_refund', __( 'Cannot create order refund, please try again.', 'woocommerce' ), 500 );
+			return new WP_Error( 'woocommerce_rest_cannot_create_order_refund', __( 'Cannot create order refund, please try again.', 'classic-commerce' ), 500 );
 		}
 
 		if ( ! empty( $request['meta_data'] ) && is_array( $request['meta_data'] ) ) {

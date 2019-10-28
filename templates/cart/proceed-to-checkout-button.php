@@ -14,7 +14,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-2.4.0
  */
 
@@ -24,5 +24,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button button alt wc-forward">
-	<?php esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
+	<?php esc_html_e( 'Proceed to checkout', 'classic-commerce' ); ?>
 </a>

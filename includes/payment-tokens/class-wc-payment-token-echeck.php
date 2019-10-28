@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class       WC_Payment_Token_ECheck
  * @version     3.0.0
- * @since       2.6.0
+ * @since       WC-2.6.0
  * @package     WooCommerce/PaymentTokens
  */
 class WC_Payment_Token_ECheck extends WC_Payment_Token {
@@ -40,14 +40,14 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Get type to display to user.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $deprecated Deprecated since WooCommerce 3.0.
 	 * @return string
 	 */
 	public function get_display_name( $deprecated = '' ) {
 		$display = sprintf(
 			/* translators: 1: credit card type 2: last 4 digits 3: expiry month 4: expiry year */
-			__( 'eCheck ending in %1$s', 'woocommerce' ),
+			__( 'eCheck ending in %1$s', 'classic-commerce' ),
 			$this->get_last4()
 		);
 		return $display;
@@ -85,7 +85,7 @@ class WC_Payment_Token_ECheck extends WC_Payment_Token {
 	/**
 	 * Returns the last four digits.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Last 4 digits
 	 */

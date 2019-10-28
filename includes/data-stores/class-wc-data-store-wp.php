@@ -45,7 +45,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Get and store terms from a taxonomy.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data|integer $object WC_Data object or object ID.
 	 * @param  string          $taxonomy Taxonomy name e.g. product_cat.
 	 * @return array of terms
@@ -66,7 +66,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Returns an array of meta for an object.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data $object WC_Data object.
 	 * @return array
 	 */
@@ -93,7 +93,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Deletes meta based on meta ID.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data  $object WC_Data object.
 	 * @param  stdClass $meta (containing at least ->id).
 	 */
@@ -104,7 +104,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Add new piece of meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data  $object WC_Data object.
 	 * @param  stdClass $meta (containing ->key and ->value).
 	 * @return int meta ID
@@ -116,7 +116,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Update meta.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Data  $object WC_Data object.
 	 * @param  stdClass $meta (containing ->id, ->key and ->value).
 	 */
@@ -127,7 +127,7 @@ class WC_Data_Store_WP {
 	/**
 	 * Table structure is slightly different between meta types, this function will return what we need to know.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array Array elements: table, object_id_field, meta_id_field
 	 */
 	protected function get_db_info() {
@@ -500,7 +500,7 @@ class WC_Data_Store_WP {
 					',', _x(
 						'about,an,are,as,at,be,by,com,for,from,how,in,is,it,of,on,or,that,the,this,to,was,what,when,where,who,will,with,www',
 						'Comma-separated list of search stopwords in your language',
-						'woocommerce'
+						'classic-commerce'
 					)
 				)
 			)

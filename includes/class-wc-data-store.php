@@ -3,7 +3,7 @@
  * WC Data Store.
  *
  * @package WooCommerce\Classes
- * @since   3.0.0
+ * @since   WC-3.0.0
  * @version WC-3.0.0
  */
 
@@ -92,19 +92,19 @@ class WC_Data_Store {
 			$store = apply_filters( 'woocommerce_' . $object_type . '_data_store', $this->stores[ $object_type ] );
 			if ( is_object( $store ) ) {
 				if ( ! $store instanceof WC_Object_Data_Store_Interface ) {
-					throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+					throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 				}
 				$this->current_class_name = get_class( $store );
 				$this->instance           = $store;
 			} else {
 				if ( ! class_exists( $store ) ) {
-					throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+					throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 				}
 				$this->current_class_name = $store;
 				$this->instance           = new $store();
 			}
 		} else {
-			throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 		}
 	}
 

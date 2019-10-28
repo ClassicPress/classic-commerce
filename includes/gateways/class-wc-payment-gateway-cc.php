@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Credit Card Payment Gateway
  *
- * @since       2.6.0
+ * @since       WC-2.6.0
  * @package     WooCommerce/Classes
  */
 class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
@@ -39,7 +39,7 @@ class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
 	 *
 	 * Gateways which support tokenization do not require names - we don't want the data to post to the server.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $name Field name.
 	 * @return string
 	 */
@@ -58,18 +58,18 @@ class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
 		$fields = array();
 
 		$cvc_field = '<p class="form-row form-row-last">
-			<label for="' . esc_attr( $this->id ) . '-card-cvc">' . esc_html__( 'Card code', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label>
-			<input id="' . esc_attr( $this->id ) . '-card-cvc" class="input-text wc-credit-card-form-card-cvc" inputmode="numeric" autocomplete="off" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" maxlength="4" placeholder="' . esc_attr__( 'CVC', 'woocommerce' ) . '" ' . $this->field_name( 'card-cvc' ) . ' style="width:100px" />
+			<label for="' . esc_attr( $this->id ) . '-card-cvc">' . esc_html__( 'Card code', 'classic-commerce' ) . '&nbsp;<span class="required">*</span></label>
+			<input id="' . esc_attr( $this->id ) . '-card-cvc" class="input-text wc-credit-card-form-card-cvc" inputmode="numeric" autocomplete="off" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" maxlength="4" placeholder="' . esc_attr__( 'CVC', 'classic-commerce' ) . '" ' . $this->field_name( 'card-cvc' ) . ' style="width:100px" />
 		</p>';
 
 		$default_fields = array(
 			'card-number-field' => '<p class="form-row form-row-wide">
-				<label for="' . esc_attr( $this->id ) . '-card-number">' . esc_html__( 'Card number', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label>
+				<label for="' . esc_attr( $this->id ) . '-card-number">' . esc_html__( 'Card number', 'classic-commerce' ) . '&nbsp;<span class="required">*</span></label>
 				<input id="' . esc_attr( $this->id ) . '-card-number" class="input-text wc-credit-card-form-card-number" inputmode="numeric" autocomplete="cc-number" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;" ' . $this->field_name( 'card-number' ) . ' />
 			</p>',
 			'card-expiry-field' => '<p class="form-row form-row-first">
-				<label for="' . esc_attr( $this->id ) . '-card-expiry">' . esc_html__( 'Expiry (MM/YY)', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label>
-				<input id="' . esc_attr( $this->id ) . '-card-expiry" class="input-text wc-credit-card-form-card-expiry" inputmode="numeric" autocomplete="cc-exp" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="' . esc_attr__( 'MM / YY', 'woocommerce' ) . '" ' . $this->field_name( 'card-expiry' ) . ' />
+				<label for="' . esc_attr( $this->id ) . '-card-expiry">' . esc_html__( 'Expiry (MM/YY)', 'classic-commerce' ) . '&nbsp;<span class="required">*</span></label>
+				<input id="' . esc_attr( $this->id ) . '-card-expiry" class="input-text wc-credit-card-form-card-expiry" inputmode="numeric" autocomplete="cc-exp" autocorrect="no" autocapitalize="no" spellcheck="no" type="tel" placeholder="' . esc_attr__( 'MM / YY', 'classic-commerce' ) . '" ' . $this->field_name( 'card-expiry' ) . ' />
 			</p>',
 		);
 

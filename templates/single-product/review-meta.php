@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
@@ -24,7 +24,7 @@ if ( '0' === $comment->comment_approved ) { ?>
 
 	<p class="meta">
 		<em class="woocommerce-review__awaiting-approval">
-			<?php esc_html_e( 'Your review is awaiting approval', 'woocommerce' ); ?>
+			<?php esc_html_e( 'Your review is awaiting approval', 'classic-commerce' ); ?>
 		</em>
 	</p>
 
@@ -34,7 +34,7 @@ if ( '0' === $comment->comment_approved ) { ?>
 		<strong class="woocommerce-review__author"><?php comment_author(); ?> </strong>
 		<?php
 		if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
-			echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'woocommerce' ) . ')</em> ';
+			echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'classic-commerce' ) . ')</em> ';
 		}
 
 		?>

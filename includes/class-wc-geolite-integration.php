@@ -7,7 +7,7 @@
  * Requires PHP 5.4+.
  *
  * @package WooCommerce\Classes
- * @since   3.4.0
+ * @since   WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -4,7 +4,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -34,7 +34,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	/**
 	 * Calculate item taxes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $calculate_tax_for Location data to get taxes for. Required.
 	 * @return bool  True if taxes were calculated.
 	 */
@@ -193,7 +193,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	public function get_method_title( $context = 'view' ) {
 		$method_title = $this->get_prop( 'method_title', $context );
 		if ( 'view' === $context ) {
-			return $method_title ? $method_title : __( 'Shipping', 'woocommerce' );
+			return $method_title ? $method_title : __( 'Shipping', 'classic-commerce' );
 		} else {
 			return $method_title;
 		}

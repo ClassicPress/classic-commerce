@@ -504,10 +504,10 @@ class WC_Admin_Report {
 
 		if ( 'sales' === $type ) {
 			/* translators: 1: total income 2: days */
-			$tooltip = sprintf( __( 'Sold %1$s worth in the last %2$d days', 'woocommerce' ), strip_tags( wc_price( $total ) ), $days );
+			$tooltip = sprintf( __( 'Sold %1$s worth in the last %2$d days', 'classic-commerce' ), strip_tags( wc_price( $total ) ), $days );
 		} else {
 			/* translators: 1: total items sold 2: days */
-			$tooltip = sprintf( _n( 'Sold 1 item in the last %2$d days', 'Sold %1$d items in the last %2$d days', $total, 'woocommerce' ), $total, $days );
+			$tooltip = sprintf( _n( 'Sold 1 item in the last %2$d days', 'Sold %1$d items in the last %2$d days', $total, 'classic-commerce' ), $total, $days );
 		}
 
 		$sparkline_data = array_values( $this->prepare_chart_data( $data, 'post_date', 'sparkline_value', $days - 1, strtotime( 'midnight -' . ( $days - 1 ) . ' days', current_time( 'timestamp' ) ), 'day' ) );
@@ -658,7 +658,7 @@ class WC_Admin_Report {
 	/**
 	 * Check nonce for current range.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @param  string $current_range Current range.
 	 */
 	public function check_current_range_nonce( $current_range ) {
@@ -669,8 +669,8 @@ class WC_Admin_Report {
 		if ( ! isset( $_GET['wc_reports_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_GET['wc_reports_nonce'] ), 'custom_range' ) ) { // WPCS: input var ok, CSRF ok.
 			wp_die(
 				/* translators: %1$s: open link, %2$s: close link */
-				sprintf( esc_html__( 'This report link has expired. %1$sClick here to view the filtered report%2$s.', 'woocommerce' ), '<a href="' . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'custom_range', 'wc_reports_nonce' ) ) . '">', '</a>' ), // @codingStandardsIgnoreLine.
-				esc_attr__( 'Confirm navigation', 'woocommerce' )
+				sprintf( esc_html__( 'This report link has expired. %1$sClick here to view the filtered report%2$s.', 'classic-commerce' ), '<a href="' . esc_url( wp_nonce_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'custom_range', 'wc_reports_nonce' ) ) . '">', '</a>' ), // @codingStandardsIgnoreLine.
+				esc_attr__( 'Confirm navigation', 'classic-commerce' )
 			);
 			exit;
 		}

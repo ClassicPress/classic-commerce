@@ -32,14 +32,14 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 		 * Register customize new nav menu item types.
 		 * This will register WooCommerce account endpoints as a nav menu item type.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @param  array $item_types Menu item types.
 		 * @return array
 		 */
 		public function register_customize_nav_menu_item_types( $item_types ) {
 			$item_types[] = array(
-				'title'      => __( 'WooCommerce Endpoints', 'woocommerce' ),
-				'type_label' => __( 'WooCommerce Endpoint', 'woocommerce' ),
+				'title'      => __( 'WooCommerce Endpoints', 'classic-commerce' ),
+				'type_label' => __( 'WooCommerce Endpoint', 'classic-commerce' ),
 				'type'       => 'woocommerce_nav',
 				'object'     => 'woocommerce_endpoint',
 			);
@@ -50,7 +50,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 		/**
 		 * Register account endpoints to customize nav menu items.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @param  array   $items  List of nav menu items.
 		 * @param  string  $type   Nav menu type.
 		 * @param  string  $object Nav menu object.
@@ -76,7 +76,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 			}
 
 			// Include missing lost password.
-			$endpoints['lost-password'] = __( 'Lost password', 'woocommerce' );
+			$endpoints['lost-password'] = __( 'Lost password', 'classic-commerce' );
 
 			$endpoints = apply_filters( 'woocommerce_custom_nav_menu_items', $endpoints );
 
@@ -84,7 +84,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 				$items[] = array(
 					'id'         => $endpoint,
 					'title'      => $title,
-					'type_label' => __( 'Custom Link', 'woocommerce' ),
+					'type_label' => __( 'Custom Link', 'classic-commerce' ),
 					'url'        => esc_url_raw( wc_get_account_endpoint_url( $endpoint ) ),
 				);
 			}

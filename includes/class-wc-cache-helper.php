@@ -168,7 +168,7 @@ class WC_Cache_Helper {
 	 *
 	 * Note; this only works on transients appended with the transient version, and when object caching is not being used.
 	 *
-	 * @since  2.3.10
+	 * @since  WC-2.3.10
 	 * @param string $version Version of the transient to remove.
 	 */
 	public static function delete_version_transients( $version = '' ) {
@@ -221,7 +221,7 @@ class WC_Cache_Helper {
 				<p>
 				<?php
 				/* translators: 1: key 2: URL */
-				echo wp_kses_post( sprintf( __( 'In order for <strong>database caching</strong> to work with WooCommerce you must add %1$s to the "Ignored Query Strings" option in <a href="%2$s">W3 Total Cache settings</a>.', 'woocommerce' ), '<code>_wc_session_</code>', esc_url( admin_url( 'admin.php?page=w3tc_dbcache' ) ) ) );
+				echo wp_kses_post( sprintf( __( 'In order for <strong>database caching</strong> to work with WooCommerce you must add %1$s to the "Ignored Query Strings" option in <a href="%2$s">W3 Total Cache settings</a>.', 'classic-commerce' ), '<code>_wc_session_</code>', esc_url( admin_url( 'admin.php?page=w3tc_dbcache' ) ) ) );
 				?>
 				</p>
 			</div>
@@ -232,7 +232,7 @@ class WC_Cache_Helper {
 	/**
 	 * Clean term caches added by WooCommerce.
 	 *
-	 * @since 3.3.4
+	 * @since WC-3.3.4
 	 * @param array|int $ids Array of ids or single ID to clear cache for.
 	 * @param string    $taxonomy Taxonomy name.
 	 */

@@ -100,7 +100,7 @@ function wc_caught_exception( $exception_object, $function = '', $args = array()
 /**
  * Wrapper for wc_doing_it_wrong.
  *
- * @since  3.0.0
+ * @since WC-3.0.0
  * @param string $function Function used.
  * @param string $message Message to log.
  * @param string $version Version the message was added in.
@@ -121,7 +121,7 @@ function wc_doing_it_wrong( $function, $message, $version ) {
 /**
  * Wrapper for deprecated arguments so we can apply some extra logic.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  string $argument
  * @param  string $version
  * @param  string $replacement
@@ -883,7 +883,7 @@ function woocommerce_track_product_view() {
 }
 
 /**
- * @since WC-2.3
+ * @since  WC-2.3
  * @deprecated has no replacement
  */
 function woocommerce_compile_less_styles() {
@@ -893,7 +893,7 @@ function woocommerce_compile_less_styles() {
 /**
  * woocommerce_calc_shipping was an option used to determine if shipping was enabled prior to version 2.6.0. This has since been replaced with wc_shipping_enabled() function and
  * the woocommerce_ship_to_countries setting.
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return string
  */
 function woocommerce_calc_shipping_backwards_compatibility( $value ) {

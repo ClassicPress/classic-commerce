@@ -10,10 +10,10 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.0.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package Classic Commerce/Templates
+ * @version WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +24,7 @@ if ( $related_products ) : ?>
 
 	<section class="related products">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2><?php esc_html_e( 'Related products', 'classic-commerce' ); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

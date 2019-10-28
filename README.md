@@ -2,7 +2,9 @@
 
 Welcome to the Classic Commerce repository on GitHub. This is a fork of Woocommerce and is still in development. 
 
-Here you can browse the source, look at open issues and keep track of development. 
+Classic Commerce is a simple, powerful and independent e-commerce platform. Sell anything with ease.
+
+You can browse the source, look at open issues and keep track of development here. 
 
 We recommend all developers follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 

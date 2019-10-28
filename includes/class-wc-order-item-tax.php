@@ -4,7 +4,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -156,7 +156,7 @@ class WC_Order_Item_Tax extends WC_Order_Item {
 	public function get_label( $context = 'view' ) {
 		$label = $this->get_prop( 'label', $context );
 		if ( 'view' === $context ) {
-			return $label ? $label : __( 'Tax', 'woocommerce' );
+			return $label ? $label : __( 'Tax', 'classic-commerce' );
 		} else {
 			return $label;
 		}

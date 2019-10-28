@@ -7,7 +7,7 @@
  * @author   WooThemes
  * @category API
  * @package  WooCommerce/API
- * @since    2.2
+ * @since    WC-2.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -205,10 +205,10 @@ class WC_API_Customers extends WC_API_Resource {
 			if ( is_email( $email ) ) {
 				$customer = get_user_by( 'email', $email );
 				if ( ! is_object( $customer ) ) {
-					throw new WC_API_Exception( 'woocommerce_api_invalid_customer_email', __( 'Invalid customer email', 'woocommerce' ), 404 );
+					throw new WC_API_Exception( 'woocommerce_api_invalid_customer_email', __( 'Invalid customer email', 'classic-commerce' ), 404 );
 				}
 			} else {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_customer_email', __( 'Invalid customer email', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_customer_email', __( 'Invalid customer email', 'classic-commerce' ), 404 );
 			}
 
 			return $this->get_customer( $customer->ID, $fields );
@@ -229,7 +229,7 @@ class WC_API_Customers extends WC_API_Resource {
 	public function get_customers_count( $filter = array() ) {
 		try {
 			if ( ! current_user_can( 'list_users' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_customers_count', __( 'You do not have permission to read the customers count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_customers_count', __( 'You do not have permission to read the customers count', 'classic-commerce' ), 401 );
 			}
 
 			$query = $this->query_customers( $filter );
@@ -243,7 +243,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get customer billing address fields.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @return array
 	 */
 	protected function get_customer_billing_address() {
@@ -267,7 +267,7 @@ class WC_API_Customers extends WC_API_Resource {
 	/**
 	 * Get customer shipping address fields.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @return array
 	 */
 	protected function get_customer_shipping_address() {
@@ -347,21 +347,21 @@ class WC_API_Customers extends WC_API_Resource {
 	public function create_customer( $data ) {
 		try {
 			if ( ! isset( $data['customer'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_customer_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'customer' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_customer_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'customer' ), 400 );
 			}
 
 			$data = $data['customer'];
 
 			// Checks with can create new users.
 			if ( ! current_user_can( 'create_users' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_customer', __( 'You do not have permission to create this customer', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_customer', __( 'You do not have permission to create this customer', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_customer_data', $data, $this );
 
 			// Checks with the email is missing.
 			if ( ! isset( $data['email'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_customer_email', sprintf( __( 'Missing parameter %s', 'woocommerce' ), 'email' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_customer_email', sprintf( __( 'Missing parameter %s', 'classic-commerce' ), 'email' ), 400 );
 			}
 
 			// Create customer.
@@ -372,7 +372,7 @@ class WC_API_Customers extends WC_API_Resource {
 			$customer->save();
 
 			if ( ! $customer->get_id() ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_customer', __( 'This resource cannot be created.', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_customer', __( 'This resource cannot be created.', 'classic-commerce' ), 400 );
 			}
 
 			// Added customer data.
@@ -402,7 +402,7 @@ class WC_API_Customers extends WC_API_Resource {
 	public function edit_customer( $id, $data ) {
 		try {
 			if ( ! isset( $data['customer'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_customer_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'customer' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_customer_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'customer' ), 400 );
 			}
 
 			$data = $data['customer'];
@@ -706,14 +706,14 @@ class WC_API_Customers extends WC_API_Resource {
 
 			// validate ID
 			if ( empty( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_customer_id', __( 'Invalid customer ID', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_customer_id', __( 'Invalid customer ID', 'classic-commerce' ), 404 );
 			}
 
 			// non-existent IDs return a valid WP_User object with the user ID = 0
 			$customer = new WP_User( $id );
 
 			if ( 0 === $customer->ID ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_customer', __( 'Invalid customer', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_customer', __( 'Invalid customer', 'classic-commerce' ), 404 );
 			}
 
 			// validate permissions
@@ -721,19 +721,19 @@ class WC_API_Customers extends WC_API_Resource {
 
 				case 'read':
 					if ( ! current_user_can( 'list_users' ) ) {
-						throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_customer', __( 'You do not have permission to read this customer', 'woocommerce' ), 401 );
+						throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_customer', __( 'You do not have permission to read this customer', 'classic-commerce' ), 401 );
 					}
 					break;
 
 				case 'edit':
 					if ( ! wc_rest_check_user_permissions( 'edit', $customer->ID ) ) {
-						throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_customer', __( 'You do not have permission to edit this customer', 'woocommerce' ), 401 );
+						throw new WC_API_Exception( 'woocommerce_api_user_cannot_edit_customer', __( 'You do not have permission to edit this customer', 'classic-commerce' ), 401 );
 					}
 					break;
 
 				case 'delete':
 					if ( ! wc_rest_check_user_permissions( 'delete', $customer->ID ) ) {
-						throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_customer', __( 'You do not have permission to delete this customer', 'woocommerce' ), 401 );
+						throw new WC_API_Exception( 'woocommerce_api_user_cannot_delete_customer', __( 'You do not have permission to delete this customer', 'classic-commerce' ), 401 );
 					}
 					break;
 			}
@@ -771,7 +771,7 @@ class WC_API_Customers extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['customers'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_customers_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'woocommerce' ), 'customers' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_customers_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'classic-commerce' ), 'customers' ), 400 );
 			}
 
 			$data  = $data['customers'];
@@ -779,7 +779,7 @@ class WC_API_Customers extends WC_API_Resource {
 
 			// Limit bulk operation
 			if ( count( $data ) > $limit ) {
-				throw new WC_API_Exception( 'woocommerce_api_customers_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'woocommerce' ), $limit ), 413 );
+				throw new WC_API_Exception( 'woocommerce_api_customers_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'classic-commerce' ), $limit ), 413 );
 			}
 
 			$customers = array();

@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
@@ -24,9 +24,9 @@ $totals = $order->get_order_item_totals();
 	<table class="shop_table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php esc_html_e( 'Qty', 'woocommerce' ); ?></th>
-				<th class="product-total"><?php esc_html_e( 'Totals', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'classic-commerce' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Qty', 'classic-commerce' ); ?></th>
+				<th class="product-total"><?php esc_html_e( 'Totals', 'classic-commerce' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -76,7 +76,7 @@ $totals = $order->get_order_item_totals();
 						wc_get_template( 'checkout/payment-method.php', array( 'gateway' => $gateway ) );
 					}
 				} else {
-					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'woocommerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
+					echo '<li class="woocommerce-notice woocommerce-notice--info woocommerce-info">' . apply_filters( 'woocommerce_no_available_payment_methods_message', __( 'Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements.', 'classic-commerce' ) ) . '</li>'; // @codingStandardsIgnoreLine
 				}
 				?>
 			</ul>

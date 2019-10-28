@@ -10,14 +10,14 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates
  * @version WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'woocommerce' ) : __( 'Shipping address', 'woocommerce' );
+$page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'classic-commerce' ) : __( 'Shipping address', 'classic-commerce' );
 
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
@@ -46,7 +46,7 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
 			<p>
-				<button type="submit" class="button" name="save_address" value="<?php esc_attr_e( 'Save address', 'woocommerce' ); ?>"><?php esc_html_e( 'Save address', 'woocommerce' ); ?></button>
+				<button type="submit" class="button" name="save_address" value="<?php esc_attr_e( 'Save address', 'classic-commerce' ); ?>"><?php esc_html_e( 'Save address', 'classic-commerce' ); ?></button>
 				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
 				<input type="hidden" name="action" value="edit_address" />
 			</p>

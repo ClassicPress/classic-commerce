@@ -601,7 +601,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 */
 	public function get_cart() {
 		if ( ! did_action( 'wp_loaded' ) ) {
-			wc_doing_it_wrong( __FUNCTION__, __( 'Get cart should not be called before the wp_loaded action.', 'woocommerce' ), '2.3' );
+			wc_doing_it_wrong( __FUNCTION__, __( 'Get cart should not be called before the wp_loaded action.', 'classic-commerce' ), '2.3' );
 		}
 		if ( ! did_action( 'woocommerce_load_cart_from_session' ) ) {
 			$this->session->get_cart_from_session();
@@ -744,7 +744,7 @@ class WC_Cart extends WC_Legacy_Cart {
 
 			if ( ! $product || ! $product->exists() || 'trash' === $product->get_status() ) {
 				$this->set_quantity( $cart_item_key, 0 );
-				$return = new WP_Error( 'invalid', __( 'An item which is no longer available was removed from your cart.', 'woocommerce' ) );
+				$return = new WP_Error( 'invalid', __( 'An item which is no longer available was removed from your cart.', 'classic-commerce' ) );
 			}
 		}
 
@@ -768,7 +768,7 @@ class WC_Cart extends WC_Legacy_Cart {
 			// Check stock based on stock-status.
 			if ( ! $product->is_in_stock() ) {
 				/* translators: %s: product name */
-				$error->add( 'out-of-stock', sprintf( __( 'Sorry, "%s" is not in stock. Please edit your cart and try again. We apologize for any inconvenience caused.', 'woocommerce' ), $product->get_name() ) );
+				$error->add( 'out-of-stock', sprintf( __( 'Sorry, "%s" is not in stock. Please edit your cart and try again. We apologize for any inconvenience caused.', 'classic-commerce' ), $product->get_name() ) );
 				return $error;
 			}
 
@@ -783,7 +783,7 @@ class WC_Cart extends WC_Legacy_Cart {
 
 			if ( $product->get_stock_quantity() < ( $held_stock + $required_stock ) ) {
 				/* translators: 1: product name 2: quantity in stock */
-				$error->add( 'out-of-stock', sprintf( __( 'Sorry, we do not have enough "%1$s" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused.', 'woocommerce' ), $product->get_name(), wc_format_stock_quantity_for_display( $product->get_stock_quantity() - $held_stock, $product ) ) );
+				$error->add( 'out-of-stock', sprintf( __( 'Sorry, we do not have enough "%1$s" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused.', 'classic-commerce' ), $product->get_name(), wc_format_stock_quantity_for_display( $product->get_stock_quantity() - $held_stock, $product ) ) );
 				return $error;
 			}
 		}
@@ -1034,23 +1034,23 @@ class WC_Cart extends WC_Legacy_Cart {
 
 				if ( $found_in_cart ) {
 					/* translators: %s: product name */
-					throw new Exception( sprintf( '<a href="%s" class="button wc-forward">%s</a> %s', wc_get_cart_url(), __( 'View cart', 'woocommerce' ), sprintf( __( 'You cannot add another "%s" to your cart.', 'woocommerce' ), $product_data->get_name() ) ) );
+					throw new Exception( sprintf( '<a href="%s" class="button wc-forward">%s</a> %s', wc_get_cart_url(), __( 'View cart', 'classic-commerce' ), sprintf( __( 'You cannot add another "%s" to your cart.', 'classic-commerce' ), $product_data->get_name() ) ) );
 				}
 			}
 
 			if ( ! $product_data->is_purchasable() ) {
-				throw new Exception( __( 'Sorry, this product cannot be purchased.', 'woocommerce' ) );
+				throw new Exception( __( 'Sorry, this product cannot be purchased.', 'classic-commerce' ) );
 			}
 
 			// Stock check - only check if we're managing stock and backorders are not allowed.
 			if ( ! $product_data->is_in_stock() ) {
 				/* translators: %s: product name */
-				throw new Exception( sprintf( __( 'You cannot add &quot;%s&quot; to the cart because the product is out of stock.', 'woocommerce' ), $product_data->get_name() ) );
+				throw new Exception( sprintf( __( 'You cannot add &quot;%s&quot; to the cart because the product is out of stock.', 'classic-commerce' ), $product_data->get_name() ) );
 			}
 
 			if ( ! $product_data->has_enough_stock( $quantity ) ) {
 				/* translators: 1: product name 2: quantity in stock */
-				throw new Exception( sprintf( __( 'You cannot add that amount of &quot;%1$s&quot; to the cart because there is not enough stock (%2$s remaining).', 'woocommerce' ), $product_data->get_name(), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ) ) );
+				throw new Exception( sprintf( __( 'You cannot add that amount of &quot;%1$s&quot; to the cart because there is not enough stock (%2$s remaining).', 'classic-commerce' ), $product_data->get_name(), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ) ) );
 			}
 
 			// Stock check - this time accounting for whats already in-cart.
@@ -1062,9 +1062,9 @@ class WC_Cart extends WC_Legacy_Cart {
 						sprintf(
 							'<a href="%s" class="button wc-forward">%s</a> %s',
 							wc_get_cart_url(),
-							__( 'View cart', 'woocommerce' ),
+							__( 'View cart', 'classic-commerce' ),
 							/* translators: 1: quantity in stock 2: current quantity */
-							sprintf( __( 'You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart.', 'woocommerce' ), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ), wc_format_stock_quantity_for_display( $products_qty_in_cart[ $product_data->get_stock_managed_by_id() ], $product_data ) )
+							sprintf( __( 'You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart.', 'classic-commerce' ), wc_format_stock_quantity_for_display( $product_data->get_stock_quantity(), $product_data ), wc_format_stock_quantity_for_display( $products_qty_in_cart[ $product_data->get_stock_managed_by_id() ], $product_data ) )
 						)
 					);
 				}
@@ -1110,7 +1110,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Remove a cart item.
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @param  string $cart_item_key Cart item key to remove from the cart.
 	 * @return bool
 	 */
@@ -1182,7 +1182,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Get cart's owner.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return WC_Customer
 	 */
 	public function get_customer() {
@@ -1268,7 +1268,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Filter items needing shipping callback.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $item Item to check for shipping.
 	 * @return bool
 	 */
@@ -1280,7 +1280,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Get only items that need shipping.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	protected function get_items_needing_shipping() {
@@ -1385,7 +1385,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	public function get_cart_shipping_total() {
 
 		// Default total assumes Free shipping.
-		$total = __( 'Free!', 'woocommerce' );
+		$total = __( 'Free!', 'classic-commerce' );
 
 		if ( 0 < $this->get_shipping_total() ) {
 
@@ -1716,7 +1716,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Return reference to fees API.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return WC_Cart_Fees
 	 */
 	public function fees_api() {

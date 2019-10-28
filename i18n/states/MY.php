@@ -2,7 +2,7 @@
 /**
  * Malaysian states
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-2.0.0
  */
 
@@ -11,20 +11,20 @@ global $states;
 defined( 'ABSPATH' ) || exit;
 
 $states['MY'] = array(
-	'JHR' => __( 'Johor', 'woocommerce' ),
-	'KDH' => __( 'Kedah', 'woocommerce' ),
-	'KTN' => __( 'Kelantan', 'woocommerce' ),
-	'LBN' => __( 'Labuan', 'woocommerce' ),
-	'MLK' => __( 'Malacca (Melaka)', 'woocommerce' ),
-	'NSN' => __( 'Negeri Sembilan', 'woocommerce' ),
-	'PHG' => __( 'Pahang', 'woocommerce' ),
-	'PNG' => __( 'Penang (Pulau Pinang)', 'woocommerce' ),
-	'PRK' => __( 'Perak', 'woocommerce' ),
-	'PLS' => __( 'Perlis', 'woocommerce' ),
-	'SBH' => __( 'Sabah', 'woocommerce' ),
-	'SWK' => __( 'Sarawak', 'woocommerce' ),
-	'SGR' => __( 'Selangor', 'woocommerce' ),
-	'TRG' => __( 'Terengganu', 'woocommerce' ),
-	'PJY' => __( 'Putrajaya', 'woocommerce' ),
-	'KUL' => __( 'Kuala Lumpur', 'woocommerce' ),
+	'JHR' => __( 'Johor', 'classic-commerce' ),
+	'KDH' => __( 'Kedah', 'classic-commerce' ),
+	'KTN' => __( 'Kelantan', 'classic-commerce' ),
+	'LBN' => __( 'Labuan', 'classic-commerce' ),
+	'MLK' => __( 'Malacca (Melaka)', 'classic-commerce' ),
+	'NSN' => __( 'Negeri Sembilan', 'classic-commerce' ),
+	'PHG' => __( 'Pahang', 'classic-commerce' ),
+	'PNG' => __( 'Penang (Pulau Pinang)', 'classic-commerce' ),
+	'PRK' => __( 'Perak', 'classic-commerce' ),
+	'PLS' => __( 'Perlis', 'classic-commerce' ),
+	'SBH' => __( 'Sabah', 'classic-commerce' ),
+	'SWK' => __( 'Sarawak', 'classic-commerce' ),
+	'SGR' => __( 'Selangor', 'classic-commerce' ),
+	'TRG' => __( 'Terengganu', 'classic-commerce' ),
+	'PJY' => __( 'Putrajaya', 'classic-commerce' ),
+	'KUL' => __( 'Kuala Lumpur', 'classic-commerce' ),
 );

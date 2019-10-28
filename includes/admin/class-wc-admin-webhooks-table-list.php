@@ -34,7 +34,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 	 * No items found text.
 	 */
 	public function no_items() {
-		esc_html_e( 'No webhooks found.', 'woocommerce' );
+		esc_html_e( 'No webhooks found.', 'classic-commerce' );
 	}
 
 	/**
@@ -45,10 +45,10 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'           => '<input type="checkbox" />',
-			'title'        => __( 'Name', 'woocommerce' ),
-			'status'       => __( 'Status', 'woocommerce' ),
-			'topic'        => __( 'Topic', 'woocommerce' ),
-			'delivery_url' => __( 'Delivery URL', 'woocommerce' ),
+			'title'        => __( 'Name', 'classic-commerce' ),
+			'status'       => __( 'Status', 'classic-commerce' ),
+			'topic'        => __( 'Topic', 'classic-commerce' ),
+			'delivery_url' => __( 'Delivery URL', 'classic-commerce' ),
 		);
 	}
 
@@ -78,10 +78,10 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 		// Get actions.
 		$actions = array(
 			/* translators: %s: webhook ID. */
-			'id'     => sprintf( __( 'ID: %d', 'woocommerce' ), $webhook->get_id() ),
-			'edit'   => '<a href="' . esc_url( $edit_link ) . '">' . esc_html__( 'Edit', 'woocommerce' ) . '</a>',
+			'id'     => sprintf( __( 'ID: %d', 'classic-commerce' ), $webhook->get_id() ),
+			'edit'   => '<a href="' . esc_url( $edit_link ) . '">' . esc_html__( 'Edit', 'classic-commerce' ) . '</a>',
 			/* translators: %s: webhook name */
-			'delete' => '<a class="submitdelete" aria-label="' . esc_attr( sprintf( __( 'Delete "%s" permanently', 'woocommerce' ), $webhook->get_name() ) ) . '" href="' . esc_url(
+			'delete' => '<a class="submitdelete" aria-label="' . esc_attr( sprintf( __( 'Delete "%s" permanently', 'classic-commerce' ), $webhook->get_name() ) ) . '" href="' . esc_url(
 				wp_nonce_url(
 					add_query_arg(
 						array(
@@ -89,7 +89,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 						), admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks' )
 					), 'delete-webhook'
 				)
-			) . '">' . esc_html__( 'Delete permanently', 'woocommerce' ) . '</a>',
+			) . '">' . esc_html__( 'Delete permanently', 'classic-commerce' ) . '</a>',
 		);
 
 		$actions     = apply_filters( 'webhook_row_actions', $actions, $webhook );
@@ -175,7 +175,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 		$class          = empty( $_REQUEST['status'] ) ? ' class="current"' : ''; // WPCS: input var okay. CSRF ok.
 
 		/* translators: %s: count */
-		$status_links['all'] = "<a href='admin.php?page=wc-settings&amp;tab=advanced&amp;section=webhooks'$class>" . sprintf( _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $total_webhooks, 'posts', 'woocommerce' ), number_format_i18n( $total_webhooks ) ) . '</a>';
+		$status_links['all'] = "<a href='admin.php?page=wc-settings&amp;tab=advanced&amp;section=webhooks'$class>" . sprintf( _nx( 'All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $total_webhooks, 'posts', 'classic-commerce' ), number_format_i18n( $total_webhooks ) ) . '</a>';
 
 		foreach ( $statuses as $status_name ) {
 			$class = '';
@@ -203,7 +203,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 	 */
 	protected function get_bulk_actions() {
 		return array(
-			'delete' => __( 'Delete permanently', 'woocommerce' ),
+			'delete' => __( 'Delete permanently', 'classic-commerce' ),
 		);
 	}
 
@@ -215,7 +215,7 @@ class WC_Admin_Webhooks_Table_List extends WP_List_Table {
 		$webhooks = isset( $_REQUEST['webhook'] ) ? array_map( 'absint', (array) $_REQUEST['webhook'] ) : array(); // WPCS: input var okay, CSRF ok.
 
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You do not have permission to edit Webhooks', 'woocommerce' ) );
+			wp_die( esc_html__( 'You do not have permission to edit Webhooks', 'classic-commerce' ) );
 		}
 
 		if ( 'delete' === $action ) {

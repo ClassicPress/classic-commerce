@@ -24,7 +24,7 @@ if ( ! class_exists( 'WC_Settings_Integrations', false ) ) :
 		 */
 		public function __construct() {
 			$this->id    = 'integration';
-			$this->label = __( 'Integration', 'woocommerce' );
+			$this->label = __( 'Integration', 'classic-commerce' );
 
 			if ( isset( WC()->integrations ) && WC()->integrations->get_integrations() ) {
 				parent::__construct();
