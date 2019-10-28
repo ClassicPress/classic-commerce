@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class       WC_Payment_Token_CC
  * @version     3.0.0
- * @since       2.6.0
+ * @since       WC-2.6.0
  * @package     WooCommerce/PaymentTokens
  */
 class WC_Payment_Token_CC extends WC_Payment_Token {
@@ -43,7 +43,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Get type to display to user.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $deprecated Deprecated since WooCommerce 3.0.
 	 * @return string
 	 */
@@ -115,7 +115,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Returns the card type (mastercard, visa, ...).
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Card type
 	 */
@@ -136,7 +136,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Returns the card expiration year (YYYY).
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Expiration year
 	 */
@@ -157,7 +157,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Returns the card expiration month (MM).
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Expiration month
 	 */
@@ -178,7 +178,7 @@ class WC_Payment_Token_CC extends WC_Payment_Token {
 	/**
 	 * Returns the last four digits.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string Last 4 digits
 	 */

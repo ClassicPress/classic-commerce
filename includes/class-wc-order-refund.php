@@ -81,7 +81,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund reason.
 	 *
-	 * @since WC-2.2
+	 * @since  WC-2.2
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int|float
 	 */
@@ -92,7 +92,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get ID of user who did the refund.
 	 *
-	 * @since WC-3.0
+	 * @since  WC-3.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -114,7 +114,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get formatted refunded amount.
 	 *
-	 * @since WC-2.4
+	 * @since  WC-2.4
 	 * @return string
 	 */
 	public function get_formatted_refund_amount() {

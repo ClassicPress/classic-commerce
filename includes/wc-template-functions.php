@@ -73,7 +73,7 @@ add_action( 'template_redirect', 'wc_template_redirect' );
  *
  * Can be disabled with: remove_action( 'template_redirect', 'wc_send_frame_options_header' );
  *
- * @since  2.3.10
+ * @since  WC-2.3.10
  */
 function wc_send_frame_options_header() {
 	if ( is_checkout() || is_account_page() ) {
@@ -3010,7 +3010,7 @@ if ( ! function_exists( 'wc_display_item_meta' ) ) {
 	/**
 	 * Display item meta data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Order_Item $item Order Item.
 	 * @param  array         $args Arguments.
 	 * @return string|void
@@ -3051,7 +3051,7 @@ if ( ! function_exists( 'wc_display_item_downloads' ) ) {
 	/**
 	 * Display item download links.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Order_Item $item Order Item.
 	 * @param  array         $args Arguments.
 	 * @return string|void
@@ -3113,7 +3113,7 @@ if ( ! function_exists( 'woocommerce_photoswipe' ) ) {
 /**
  * Outputs a list of product attributes for a product.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  WC_Product $product Product Object.
  */
 function wc_display_product_attributes( $product ) {
@@ -3127,7 +3127,7 @@ function wc_display_product_attributes( $product ) {
 /**
  * Get HTML to show product stock.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  WC_Product $product Product Object.
  * @return string
  */
@@ -3158,7 +3158,7 @@ function wc_get_stock_html( $product ) {
 /**
  * Get HTML for ratings.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  float $rating Rating being shown.
  * @param  int   $count  Total number of ratings.
  * @return string
@@ -3171,7 +3171,7 @@ function wc_get_rating_html( $rating, $count = 0 ) {
 /**
  * Get HTML for star rating.
  *
- * @since  3.1.0
+ * @since  WC-3.1.0
  * @param  float $rating Rating being shown.
  * @param  int   $count  Total number of ratings.
  * @return string
@@ -3195,7 +3195,7 @@ function wc_get_star_rating_html( $rating, $count = 0 ) {
 /**
  * Returns a 'from' prefix if you want to show where prices start at.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @return string
  */
 function wc_get_price_html_from_text() {
@@ -3205,7 +3205,7 @@ function wc_get_price_html_from_text() {
 /**
  * Get logout endpoint.
  *
- * @since  2.6.9
+ * @since  WC-2.6.9
  *
  * @param string $redirect Redirect URL.
  *

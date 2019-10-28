@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Get the count of notices added, either for all notices (default) or for one.
  * particular notice type specified by $notice_type.
  *
- * @since  2.1
+ * @since  WC-2.1
  * @param  string $notice_type Optional. The name of the notice type - either error, success or notice.
  * @return int
  */
@@ -46,7 +46,7 @@ function wc_notice_count( $notice_type = '' ) {
 /**
  * Check if a notice has already been added.
  *
- * @since  2.1
+ * @since  WC-2.1
  * @param  string $message The text to display in the notice.
  * @param  string $notice_type Optional. The name of the notice type - either error, success or notice.
  * @return bool
@@ -118,8 +118,8 @@ function wc_clear_notices() {
 /**
  * Prints messages and errors which are stored in the session, then clears them.
  *
- * @since WC-2.1
- * @param bool $return true to return rather than echo. @since WC-3.5.0.
+ * @since  WC-2.1
+ * @param  bool $return true to return rather than echo. @since WC-3.5.0.
  * @return string|null
  */
 function wc_print_notices( $return = false ) {
@@ -173,7 +173,7 @@ function wc_print_notice( $message, $notice_type = 'success' ) {
 /**
  * Returns all queued notices, optionally filtered by a notice type.
  *
- * @since  2.1
+ * @since  WC-2.1
  * @param  string $notice_type Optional. The singular name of the notice type - either error, success or notice.
  * @return array|mixed
  */

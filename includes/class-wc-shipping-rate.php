@@ -5,7 +5,7 @@
  * Simple Class for storing rates.
  *
  * @package WooCommerce/Classes/Shipping
- * @since   2.6.0
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -60,8 +60,8 @@ class WC_Shipping_Rate {
 	/**
 	 * Magic methods to support direct access to props.
 	 *
-	 * @since WC-3.2.0
-	 * @param string $key Key.
+	 * @since  WC-3.2.0
+	 * @param  string $key Key.
 	 * @return bool
 	 */
 	public function __isset( $key ) {
@@ -71,8 +71,8 @@ class WC_Shipping_Rate {
 	/**
 	 * Magic methods to support direct access to props.
 	 *
-	 * @since WC-3.2.0
-	 * @param string $key Key.
+	 * @since  WC-3.2.0
+	 * @param  string $key Key.
 	 * @return mixed
 	 */
 	public function __get( $key ) {
@@ -143,7 +143,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate cost.
 	 *
-	 * @todo 4.0 Prevent negative value being set. #19293
+	 * @todo  4.0 Prevent negative value being set. #19293
 	 * @since WC-3.2.0
 	 * @param string $cost Shipping rate cost.
 	 */
@@ -164,7 +164,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set ID for the rate. This is usually a combination of the method and instance IDs.
 	 *
-	 * @since WC-3.2.0
+	 * @since  WC-3.2.0
 	 * @return string
 	 */
 	public function get_id() {
@@ -174,7 +174,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set shipping method ID the rate belongs to.
 	 *
-	 * @since WC-3.2.0
+	 * @since  WC-3.2.0
 	 * @return string
 	 */
 	public function get_method_id() {
@@ -184,7 +184,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set instance ID the rate belongs to.
 	 *
-	 * @since WC-3.2.0
+	 * @since  WC-3.2.0
 	 * @return int
 	 */
 	public function get_instance_id() {
@@ -203,7 +203,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate cost.
 	 *
-	 * @since WC-3.2.0
+	 * @since  WC-3.2.0
 	 * @return string
 	 */
 	public function get_cost() {
@@ -213,7 +213,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Set rate taxes.
 	 *
-	 * @since WC-3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_taxes() {
@@ -243,7 +243,7 @@ class WC_Shipping_Rate {
 	/**
 	 * Get all meta data for this rate.
 	 *
-	 * @since WC-2.6.0
+	 * @since  WC-2.6.0
 	 * @return array
 	 */
 	public function get_meta_data() {

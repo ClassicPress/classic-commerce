@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * Args and usage: https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query
  *
- * @since  2.6.0
+ * @since  WC-2.6.0
  * @param  array $args Array of args (above).
  * @return WC_Order[]|stdClass Number of pages and an array of order objects if
  *                             paginate is true, or just an array of values.
@@ -69,7 +69,7 @@ function wc_get_orders( $args ) {
 /**
  * Main function for returning orders, uses the WC_Order_Factory class.
  *
- * @since  2.2
+ * @since  WC-2.2
  *
  * @param  mixed $the_order Post object or post ID of the order.
  *
@@ -117,7 +117,7 @@ function wc_is_order_status( $maybe_status ) {
 /**
  * Get list of statuses which are consider 'paid'.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @return array
  */
 function wc_get_is_paid_statuses() {
@@ -127,7 +127,7 @@ function wc_get_is_paid_statuses() {
 /**
  * Get the nice name for an order status.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @param  string $status Status.
  * @return string
  */
@@ -152,7 +152,7 @@ function wc_get_order_id_by_order_key( $order_key ) {
 /**
  * Get all registered order types.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @param  string $for Optionally define what you are getting order types for so
  *                     only relevant types are returned.
  *                     e.g. for 'order-meta-boxes', 'order-count'.
@@ -250,7 +250,7 @@ function wc_get_order_type( $type ) {
  *      - exclude_from_order_reports (bool) Whether or not to exclude this type from core reports.
  *      - exclude_from_order_sales_reports (bool) Whether or not to exclude this type from core sales reports.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @see    register_post_type for $args used in that function
  * @param  string $type Post type. (max. 20 characters, can not contain capital letters or spaces).
  * @param  array  $args An array of arguments.
@@ -464,9 +464,9 @@ function wc_ship_to_billing_address_only() {
  *
  * Returns a new refund object on success which can then be used to add additional data.
  *
- * @since WC-2.2
+ * @since  WC-2.2
  * @throws Exception Throws exceptions when fail to create, but returns WP_Error instead.
- * @param array $args New refund arguments.
+ * @param  array $args New refund arguments.
  * @return WC_Order_Refund|WP_Error
  */
 function wc_create_refund( $args = array() ) {
@@ -612,11 +612,11 @@ function wc_create_refund( $args = array() ) {
 /**
  * Try to refund the payment for an order via the gateway.
  *
- * @since WC-3.0.0
+ * @since  WC-3.0.0
  * @throws Exception Throws exceptions when fail to refund, but returns WP_Error instead.
- * @param WC_Order $order  Order instance.
- * @param string   $amount Amount to refund.
- * @param string   $reason Refund reason.
+ * @param  WC_Order $order  Order instance.
+ * @param  string   $amount Amount to refund.
+ * @param  string   $reason Refund reason.
  * @return bool|WP_Error
  */
 function wc_refund_payment( $order, $amount, $reason = '' ) {
@@ -686,8 +686,8 @@ function wc_restock_refunded_items( $order, $refunded_line_items ) {
 /**
  * Get tax class by tax id.
  *
- * @since WC-2.2
- * @param int $tax_id Tax ID.
+ * @since  WC-2.2
+ * @param  int $tax_id Tax ID.
  * @return string
  */
 function wc_get_tax_class_by_tax_id( $tax_id ) {
@@ -698,8 +698,8 @@ function wc_get_tax_class_by_tax_id( $tax_id ) {
 /**
  * Get payment gateway class by order data.
  *
- * @since WC-2.2
- * @param int|WC_Order $order Order instance.
+ * @since  WC-2.2
+ * @param  int|WC_Order $order Order instance.
  * @return WC_Payment_Gateway|bool
  */
 function wc_get_payment_gateway_by_order( $order ) {
@@ -748,7 +748,7 @@ add_action( 'woocommerce_order_status_refunded', 'wc_order_fully_refunded' );
 /**
  * Search orders.
  *
- * @since  2.6.0
+ * @since  WC-2.6.0
  * @param  string $term Term to search.
  * @return array List of orders ID.
  */
@@ -893,7 +893,7 @@ add_filter( 'woocommerce_shortcode_order_tracking_order_id', 'wc_sanitize_order_
 /**
  * Get an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int|WP_Comment $data Note ID (or WP_Comment instance for internal use only).
  * @return stdClass|null        Object with order note details or null when does not exists.
  */
@@ -920,7 +920,7 @@ function wc_get_order_note( $data ) {
 /**
  * Get order notes.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  array $args Query arguments {
  *     Array of query parameters.
  *
@@ -1007,7 +1007,7 @@ function wc_get_order_notes( $args ) {
 /**
  * Create an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int    $order_id         Order ID.
  * @param  string $note             Note to add.
  * @param  bool   $is_customer_note If is a costumer note.
@@ -1027,7 +1027,7 @@ function wc_create_order_note( $order_id, $note, $is_customer_note = false, $add
 /**
  * Delete an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int $note_id Order note.
  * @return bool         True on success, false on failure.
  */

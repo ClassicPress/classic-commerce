@@ -3,7 +3,7 @@
  * WooCommerce setup
  *
  * @package WooCommerce
- * @since   3.2.0
+ * @since   WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -25,7 +25,7 @@ final class WooCommerce {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WooCommerce
+	 * @var   WooCommerce
 	 * @since WC-2.1
 	 */
 	protected static $_instance = null;

@@ -25,7 +25,7 @@ class WC_Payment_Gateways {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WC_Payment_Gateways
+	 * @var   WC_Payment_Gateways
 	 * @since WC-2.1.0
 	 */
 	protected static $_instance = null;
@@ -35,7 +35,7 @@ class WC_Payment_Gateways {
 	 *
 	 * Ensures only one instance of WC_Payment_Gateways is loaded or can be loaded.
 	 *
-	 * @since WC-2.1
+	 * @since  WC-2.1
 	 * @return WC_Payment_Gateways Main instance
 	 */
 	public static function instance() {
@@ -140,7 +140,7 @@ class WC_Payment_Gateways {
 	/**
 	 * Get array of registered gateway ids
 	 *
-	 * @since WC-2.6.0
+	 * @since  WC-2.6.0
 	 * @return array of strings
 	 */
 	public function get_payment_gateway_ids() {

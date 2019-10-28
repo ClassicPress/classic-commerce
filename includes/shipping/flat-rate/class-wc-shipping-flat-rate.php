@@ -250,7 +250,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Sanitize the cost field.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $value Unsanitized value.
 	 * @return string
 	 */

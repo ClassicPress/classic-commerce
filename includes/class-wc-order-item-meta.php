@@ -119,8 +119,8 @@ class WC_Order_Item_Meta {
 	 *   )
 	 * )
 	 *
-	 * @since WC-2.4
-	 * @param string $hideprefix exclude meta when key is prefixed with this, defaults to '_'.
+	 * @since  WC-2.4
+	 * @param  string $hideprefix exclude meta when key is prefixed with this, defaults to '_'.
 	 * @return array
 	 */
 	public function get_formatted( $hideprefix = '_' ) {

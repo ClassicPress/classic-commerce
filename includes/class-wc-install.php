@@ -226,7 +226,7 @@ class WC_Install {
 	/**
 	 * Reset any notices added to admin.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function remove_admin_notices() {
 		include_once dirname( __FILE__ ) . '/admin/class-wc-admin-notices.php';
@@ -236,7 +236,7 @@ class WC_Install {
 	/**
 	 * Setup WC environment - post types, taxonomies, endpoints.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function setup_environment() {
 		WC_Post_types::register_post_types();
@@ -250,7 +250,7 @@ class WC_Install {
 	/**
 	 * Is this a brand new WC install?
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return boolean
 	 */
 	private static function is_new_install() {
@@ -260,7 +260,7 @@ class WC_Install {
 	/**
 	 * Is a DB update needed?
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return boolean
 	 */
 	private static function needs_db_update() {
@@ -273,7 +273,7 @@ class WC_Install {
 	/**
 	 * See if we need the wizard or not.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function maybe_enable_setup_wizard() {
 		if ( apply_filters( 'woocommerce_enable_setup_wizard', self::is_new_install() ) ) {
@@ -285,7 +285,7 @@ class WC_Install {
 	/**
 	 * See if we need to show or run database updates during install.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	private static function maybe_update_db_version() {
 		if ( self::needs_db_update() ) {
@@ -311,7 +311,7 @@ class WC_Install {
 	/**
 	 * Get list of DB update callbacks.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public static function get_db_update_callbacks() {
@@ -1121,7 +1121,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	/**
 	 * Create a placeholder image in the media library.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	private static function create_placeholder_image() {
 		$placeholder_image = get_option( 'woocommerce_placeholder_image', 0 );
@@ -1225,7 +1225,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 * @param array  $plugin_to_install Plugin information.
 	 *
 	 * @throws Exception If unable to proceed with plugin installation.
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 */
 	public static function background_installer( $plugin_to_install_id, $plugin_to_install ) {
 		// Explicitly clear the event.
@@ -1381,7 +1381,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 * @param string $theme_slug Theme slug.
 	 *
 	 * @throws Exception If unable to proceed with theme installation.
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 */
 	public static function theme_background_installer( $theme_slug ) {
 		// Explicitly clear the event.

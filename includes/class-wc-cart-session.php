@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Cart_Session class.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  */
 final class WC_Cart_Session {
 
 	/**
 	 * Reference to cart object.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var WC_Cart
 	 */
 	protected $cart;
@@ -28,7 +28,7 @@ final class WC_Cart_Session {
 	/**
 	 * Sets up the items provided, and calculate totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @throws Exception If missing WC_Cart object.
 	 * @param WC_Cart $cart Cart object to calculate totals for.
 	 */
@@ -58,7 +58,7 @@ final class WC_Cart_Session {
 	/**
 	 * Get the cart data from the PHP session and store it in class variables.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function get_cart_from_session() {
 		do_action( 'woocommerce_load_cart_from_session' );
@@ -156,7 +156,7 @@ final class WC_Cart_Session {
 	/**
 	 * Destroy cart session data.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function destroy_cart_session() {
 		WC()->session->set( 'cart', null );
@@ -171,7 +171,7 @@ final class WC_Cart_Session {
 	/**
 	 * Will set cart cookies if needed and when possible.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function maybe_set_cart_cookies() {
 		if ( ! headers_sent() && did_action( 'wp_loaded' ) ) {
@@ -254,7 +254,7 @@ final class WC_Cart_Session {
 	/**
 	 * Get the persistent cart from the database.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	private function get_saved_cart() {
@@ -274,7 +274,7 @@ final class WC_Cart_Session {
 	/**
 	 * Get a cart from an order, if user has permission.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param int   $order_id Order ID to try to load.
 	 * @param array $cart Current cart array.
 	 * @return array
