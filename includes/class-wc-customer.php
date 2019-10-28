@@ -120,7 +120,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Prefix for action and filter hooks on data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_hook_prefix() {
@@ -333,7 +333,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the customer's username.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -344,7 +344,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the customer's email.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -355,7 +355,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's first name.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -366,7 +366,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's last name.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -377,7 +377,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's display name.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -388,7 +388,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's user role.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -399,7 +399,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the date this customer was created.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null object if the date is set or null if there is no date.
 	 */
@@ -410,7 +410,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null object if the date is set or null if there is no date.
 	 */
@@ -421,7 +421,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Gets a prop for a getter method.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $prop Name of prop to get.
 	 * @param  string $address billing or shipping.
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'. What the value is for. Valid values are view and edit.
@@ -443,7 +443,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Get billing.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -574,7 +574,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Get shipping.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -685,7 +685,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Is the user a paying customer?
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return bool
 	 */
@@ -771,7 +771,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_created( $date = null ) {
@@ -781,7 +781,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_modified( $date = null ) {

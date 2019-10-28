@@ -13,8 +13,8 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Converts a string (e.g. 'yes' or 'no') to a bool.
  *
- * @since WC-3.0.0
- * @param string $string String to convert.
+ * @since  WC-3.0.0
+ * @param  string $string String to convert.
  * @return bool
  */
 function wc_string_to_bool( $string ) {
@@ -24,8 +24,8 @@ function wc_string_to_bool( $string ) {
 /**
  * Converts a bool to a 'yes' or 'no'.
  *
- * @since WC-3.0.0
- * @param bool $bool String to convert.
+ * @since  WC-3.0.0
+ * @param  bool $bool String to convert.
  * @return string
  */
 function wc_bool_to_string( $bool ) {
@@ -38,9 +38,9 @@ function wc_bool_to_string( $bool ) {
 /**
  * Explode a string into an array by $delimiter and remove empty values.
  *
- * @since WC-3.0.0
- * @param string $string    String to convert.
- * @param string $delimiter Delimiter, defaults to ','.
+ * @since  WC-3.0.0
+ * @param  string $string    String to convert.
+ * @param  string $delimiter Delimiter, defaults to ','.
  * @return array
  */
 function wc_string_to_array( $string, $delimiter = ',' ) {
@@ -63,7 +63,7 @@ function wc_sanitize_taxonomy_name( $taxonomy ) {
  *
  * Cannot use wc_clean because it sometimes strips % chars and breaks the user's setting.
  *
- * @since  2.6.0
+ * @since  WC-2.6.0
  * @param  string $value Permalink.
  * @return string
  */
@@ -241,9 +241,9 @@ function wc_round_tax_total( $value, $precision = null ) {
 /**
  * Round half down in PHP 5.2.
  *
- * @since WC-3.2.6
- * @param float $value Value to round.
- * @param int   $precision Precision to round down to.
+ * @since  WC-3.2.6
+ * @param  float $value Value to round.
+ * @param  int   $precision Precision to round down to.
  * @return float
  */
 function wc_legacy_round_half_down( $value, $precision ) {
@@ -354,7 +354,7 @@ function wc_format_localized_decimal( $value ) {
 /**
  * Format a coupon code.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  string $value Coupon code to format.
  * @return string
  */
@@ -394,7 +394,7 @@ function wc_check_invalid_utf8( $var ) {
 /**
  * Run wc_clean over posted textarea but maintain line breaks.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  string $var Data to sanitize.
  * @return string
  */
@@ -405,7 +405,7 @@ function wc_sanitize_textarea( $var ) {
 /**
  * Sanitize a string destined to be a tooltip.
  *
- * @since  2.3.10 Tooltips are encoded with htmlspecialchars to prevent XSS. Should not be used in conjunction with esc_attr()
+ * @since  WC-2.3.10 Tooltips are encoded with htmlspecialchars to prevent XSS. Should not be used in conjunction with esc_attr()
  * @param  string $var Data to sanitize.
  * @return string
  */
@@ -488,7 +488,7 @@ function get_woocommerce_price_format() {
 /**
  * Return the thousand separator for prices.
  *
- * @since  2.3
+ * @since  WC-2.3
  * @return string
  */
 function wc_get_price_thousand_separator() {
@@ -498,7 +498,7 @@ function wc_get_price_thousand_separator() {
 /**
  * Return the decimal separator for prices.
  *
- * @since  2.3
+ * @since  WC-2.3
  * @return string
  */
 function wc_get_price_decimal_separator() {
@@ -509,7 +509,7 @@ function wc_get_price_decimal_separator() {
 /**
  * Return the number of decimals after the decimal point.
  *
- * @since  2.3
+ * @since  WC-2.3
  * @return int
  */
 function wc_get_price_decimals() {
@@ -636,7 +636,7 @@ function wc_time_format() {
  *
  * Based on wcs_strtotime_dark_knight() from WC Subscriptions by Prospress.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  string   $time_string    Time string.
  * @param  int|null $from_timestamp Timestamp to convert from.
  * @return int
@@ -662,7 +662,7 @@ function wc_string_to_timestamp( $time_string, $from_timestamp = null ) {
 /**
  * Convert a date string to a WC_DateTime.
  *
- * @since  3.1.0
+ * @since  WC-3.1.0
  * @param  string $time_string Time string.
  * @return WC_DateTime
  */
@@ -692,7 +692,7 @@ function wc_string_to_datetime( $time_string ) {
  *
  * Adapted from https://secure.php.net/manual/en/function.timezone-name-from-abbr.php#89155.
  *
- * @since WC-2.1
+ * @since  WC-2.1
  * @return string PHP timezone string for the site
  */
 function wc_timezone_string() {
@@ -733,7 +733,7 @@ function wc_timezone_string() {
 /**
  * Get timezone offset in seconds.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @return float
  */
 function wc_timezone_offset() {
@@ -750,7 +750,7 @@ function wc_timezone_offset() {
 /**
  * Callback which can flatten post meta (gets the first value if it's an array).
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  array $value Value to flatten.
  * @return mixed
  */
@@ -940,8 +940,8 @@ function wc_format_postcode( $postcode, $country ) {
  *
  * Remove spaces and convert characters to uppercase.
  *
- * @since WC-2.6.0
- * @param string $postcode Postcode.
+ * @since  WC-2.6.0
+ * @param  string $postcode Postcode.
  * @return string
  */
 function wc_normalize_postcode( $postcode ) {
@@ -964,7 +964,7 @@ function wc_format_phone_number( $phone ) {
 /**
  * Wrapper for mb_strtoupper which see's if supported first.
  *
- * @since  3.1.0
+ * @since  WC-3.1.0
  * @param  string $string String to format.
  * @return string
  */
@@ -976,7 +976,7 @@ function wc_strtoupper( $string ) {
  * Make a string lowercase.
  * Try to use mb_strtolower() when available.
  *
- * @since  2.3
+ * @since  WC-2.3
  * @param  string $string String to format.
  * @return string
  */
@@ -1008,7 +1008,7 @@ function wc_trim_string( $string, $chars = 200, $suffix = '...' ) {
 /**
  * Format content to display shortcodes.
  *
- * @since  2.3.0
+ * @since  WC-2.3.0
  * @param  string $raw_string Raw string.
  * @return string
  */
@@ -1021,7 +1021,7 @@ function wc_format_content( $raw_string ) {
  * Adds support for Jetpack Markdown.
  *
  * @codeCoverageIgnore
- * @since  2.4.0
+ * @since  WC-2.4.0
  * @param  string $content Product short description.
  * @return string
  */
@@ -1096,7 +1096,7 @@ add_filter( 'woocommerce_admin_settings_sanitize_option_woocommerce_hold_stock_m
 /**
  * Sanitize terms from an attribute text based.
  *
- * @since  2.4.5
+ * @since  WC-2.4.5
  * @param  string $term Term value.
  * @return string
  */
@@ -1111,8 +1111,8 @@ if ( ! function_exists( 'wc_make_numeric_postcode' ) ) {
 	 * Converts letters to numbers so we can do a simple range check on postcodes.
 	 * E.g. PE30 becomes 16050300 (P = 16, E = 05, 3 = 03, 0 = 00)
 	 *
-	 * @since WC-2.6.0
-	 * @param string $postcode Regular postcode.
+	 * @since  WC-2.6.0
+	 * @param  string $postcode Regular postcode.
 	 * @return string
 	 */
 	function wc_make_numeric_postcode( $postcode ) {
@@ -1139,7 +1139,7 @@ if ( ! function_exists( 'wc_make_numeric_postcode' ) ) {
 /**
  * Format the stock amount ready for display based on settings.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  WC_Product $product Product object for which the stock you need to format.
  * @return string
  */
@@ -1170,7 +1170,7 @@ function wc_format_stock_for_display( $product ) {
 /**
  * Format the stock quantity ready for display.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  int        $stock_quantity Stock quantity.
  * @param  WC_Product $product        Product instance so that we can pass through the filters.
  * @return string
@@ -1182,7 +1182,7 @@ function wc_format_stock_quantity_for_display( $stock_quantity, $product ) {
 /**
  * Format a sale price for display.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  string $regular_price Regular price.
  * @param  string $sale_price    Sale price.
  * @return string
@@ -1208,7 +1208,7 @@ function wc_format_price_range( $from, $to ) {
 /**
  * Format a weight for display.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  float $weight Weight.
  * @return string
  */
@@ -1227,7 +1227,7 @@ function wc_format_weight( $weight ) {
 /**
  * Format dimensions for display.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  array $dimensions Array of dimensions.
  * @return string
  */
@@ -1246,7 +1246,7 @@ function wc_format_dimensions( $dimensions ) {
 /**
  * Format a date for output.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  WC_DateTime $date   Instance of WC_DateTime.
  * @param  string      $format Data format.
  *                             Defaults to the wc_date_format function if not set.
@@ -1265,7 +1265,7 @@ function wc_format_datetime( $date, $format = '' ) {
 /**
  * Process oEmbeds.
  *
- * @since  3.1.0
+ * @since  WC-3.1.0
  * @param  string $content Content.
  * @return string
  */
@@ -1283,7 +1283,7 @@ function wc_do_oembeds( $content ) {
  * Used for example in shipping methods ids where they take the format
  * method_id:instance_id
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  string $string String to extract.
  * @return string
  */
@@ -1296,7 +1296,7 @@ function wc_get_string_before_colon( $string ) {
  *
  * Source:  https://gist.github.com/Nickology/f700e319cbafab5eaedc
  *
- * @since WC-3.2.0
+ * @since  WC-3.2.0
  * @return array
  */
 function wc_array_merge_recursive_numeric() {
@@ -1353,8 +1353,8 @@ function wc_array_merge_recursive_numeric() {
 /**
  * Implode and escape HTML attributes for output.
  *
- * @since WC-3.3.0
- * @param array $raw_attributes Attribute name value pairs.
+ * @since  WC-3.3.0
+ * @param  array $raw_attributes Attribute name value pairs.
  * @return string
  */
 function wc_implode_html_attributes( $raw_attributes ) {
@@ -1368,8 +1368,8 @@ function wc_implode_html_attributes( $raw_attributes ) {
 /**
  * Parse a relative date option from the settings API into a standard format.
  *
- * @since WC-3.4.0
- * @param mixed $raw_value Value stored in DB.
+ * @since  WC-3.4.0
+ * @param  mixed $raw_value Value stored in DB.
  * @return array Nicely formatted array with number and unit values.
  */
 function wc_parse_relative_date_option( $raw_value ) {
@@ -1397,8 +1397,8 @@ function wc_parse_relative_date_option( $raw_value ) {
 /**
  * Format the endpoint slug, strip out anything not allowed in a url.
  *
- * @since WC-3.5.0
- * @param string $raw_value The raw value.
+ * @since  WC-3.5.0
+ * @param  string $raw_value The raw value.
  * @return string
  */
 function wc_sanitize_endpoint_slug( $raw_value ) {

@@ -553,7 +553,7 @@ class WC_Post_Types {
 	/**
 	 * Flush rules if the event is queued.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public static function maybe_flush_rewrite_rules() {
 		if ( 'yes' === get_option( 'woocommerce_queue_flush_rewrite_rules' ) ) {

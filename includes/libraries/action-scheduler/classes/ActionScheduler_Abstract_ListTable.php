@@ -19,7 +19,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
  *  - Automatic translations of the columns
  *
  * @codeCoverageIgnore
- * @since  2.0.0
+ * @since  WC-2.0.0
  */
 abstract class ActionScheduler_Abstract_ListTable extends WP_List_Table {
 

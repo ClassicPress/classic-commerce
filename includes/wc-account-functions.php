@@ -81,7 +81,7 @@ function wc_edit_address_i18n( $id, $flip = false ) {
 /**
  * Get My Account menu items.
  *
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return array
  */
 function wc_get_account_menu_items() {
@@ -132,8 +132,8 @@ function wc_get_account_menu_items() {
 /**
  * Get account menu item classes.
  *
- * @since WC-2.6.0
- * @param string $endpoint Endpoint.
+ * @since  WC-2.6.0
+ * @param  string $endpoint Endpoint.
  * @return string
  */
 function wc_get_account_menu_item_classes( $endpoint ) {
@@ -162,8 +162,8 @@ function wc_get_account_menu_item_classes( $endpoint ) {
 /**
  * Get account endpoint URL.
  *
- * @since WC-2.6.0
- * @param string $endpoint Endpoint.
+ * @since  WC-2.6.0
+ * @param  string $endpoint Endpoint.
  * @return string
  */
 function wc_get_account_endpoint_url( $endpoint ) {
@@ -181,7 +181,7 @@ function wc_get_account_endpoint_url( $endpoint ) {
 /**
  * Get My Account > Orders columns.
  *
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return array
  */
 function wc_get_account_orders_columns() {
@@ -202,7 +202,7 @@ function wc_get_account_orders_columns() {
 /**
  * Get My Account > Downloads columns.
  *
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return array
  */
 function wc_get_account_downloads_columns() {
@@ -226,7 +226,7 @@ function wc_get_account_downloads_columns() {
 /**
  * Get My Account > Payment methods columns.
  *
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return array
  */
 function wc_get_account_payment_methods_columns() {
@@ -242,7 +242,7 @@ function wc_get_account_payment_methods_columns() {
 /**
  * Get My Account > Payment methods types
  *
- * @since WC-2.6.0
+ * @since  WC-2.6.0
  * @return array
  */
 function wc_get_account_payment_methods_types() {
@@ -257,7 +257,7 @@ function wc_get_account_payment_methods_types() {
 /**
  * Get account orders actions.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int|WC_Order $order Order instance or ID.
  * @return array
  */
@@ -296,7 +296,7 @@ function wc_get_account_orders_actions( $order ) {
 /**
  * Get account formatted address.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  string $address_type Address type.
  *                              Accepts: 'billing' or 'shipping'.
  *                              Default to 'billing'.
@@ -325,7 +325,7 @@ function wc_get_account_formatted_address( $address_type = 'billing', $customer_
 /**
  * Returns an array of a user's saved payments list for output on the account tab.
  *
- * @since  2.6
+ * @since  WC-2.6
  * @param  array $list         List of payment methods passed from wc_get_customer_saved_methods_list().
  * @param  int   $customer_id  The customer to fetch payment methods for.
  * @return array               Filtered list of customers payment methods.
@@ -371,7 +371,7 @@ add_filter( 'woocommerce_saved_payment_methods_list', 'wc_get_account_saved_paym
 /**
  * Controls the output for credit cards on the my account page.
  *
- * @since WC-2.6
+ * @since  WC-2.6
  * @param  array            $item         Individual list item from woocommerce_saved_payment_methods_list.
  * @param  WC_Payment_Token $payment_token The payment token associated with this method entry.
  * @return array                           Filtered item.
@@ -394,7 +394,7 @@ add_filter( 'woocommerce_payment_methods_list_item', 'wc_get_account_saved_payme
 /**
  * Controls the output for eChecks on the my account page.
  *
- * @since WC-2.6
+ * @since  WC-2.6
  * @param  array            $item         Individual list item from woocommerce_saved_payment_methods_list.
  * @param  WC_Payment_Token $payment_token The payment token associated with this method entry.
  * @return array                           Filtered item.

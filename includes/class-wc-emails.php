@@ -274,7 +274,7 @@ class WC_Emails {
 	/**
 	 * Filter callback to replace {site_title} in email footer
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @param  string $string Email footer text.
 	 * @return string         Email footer text with any replacements done.
 	 */

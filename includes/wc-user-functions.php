@@ -641,8 +641,8 @@ function wc_set_user_last_update_time( $user_id ) {
 /**
  * Get customer saved payment methods list.
  *
- * @since WC-2.6.0
- * @param int $customer_id Customer ID.
+ * @since  WC-2.6.0
+ * @param  int $customer_id Customer ID.
  * @return array
  */
 function wc_get_customer_saved_methods_list( $customer_id ) {
@@ -652,8 +652,8 @@ function wc_get_customer_saved_methods_list( $customer_id ) {
 /**
  * Get info about customer's last order.
  *
- * @since WC-2.6.0
- * @param int $customer_id Customer ID.
+ * @since  WC-2.6.0
+ * @param  int $customer_id Customer ID.
  * @return WC_Order|bool Order object if successful or false.
  */
 function wc_get_customer_last_order( $customer_id ) {
@@ -665,8 +665,8 @@ function wc_get_customer_last_order( $customer_id ) {
 /**
  * Add support for searching by display_name.
  *
- * @since WC-3.2.0
- * @param array $search_columns Column names.
+ * @since  WC-3.2.0
+ * @param  array $search_columns Column names.
  * @return array
  */
 function wc_user_search_columns( $search_columns ) {

@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * WC_Cart_Fees class.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  */
 final class WC_Cart_Fees {
 
@@ -29,7 +29,7 @@ final class WC_Cart_Fees {
 	/**
 	 * Reference to cart object.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var WC_Cart
 	 */
 	private $cart;
@@ -51,7 +51,7 @@ final class WC_Cart_Fees {
 	/**
 	 * Constructor. Reference to the cart.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @throws Exception If missing WC_Cart object.
 	 * @param WC_Cart $cart Cart object.
 	 */
@@ -71,7 +71,7 @@ final class WC_Cart_Fees {
 	/**
 	 * Add a fee. Fee IDs must be unique.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $args Array of fee properties.
 	 * @return object Either a fee object if added, or a WP_Error if it failed.
 	 */
@@ -122,7 +122,7 @@ final class WC_Cart_Fees {
 	/**
 	 * Remove all fees.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	public function remove_all_fees() {
 		$this->set_fees();

@@ -6,10 +6,10 @@
  *
  * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates/Emails/Plain
- * @version     3.2.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package Classic Commerce/Templates/Emails/Plain
+ * @version WC-3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

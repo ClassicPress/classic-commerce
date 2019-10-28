@@ -50,7 +50,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 <table class="wc_status_table widefat" cellspacing="0" id="status">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="WordPress Environment"><h2><?php esc_html_e( 'WordPress environment', 'classic-commerce' ); ?></h2></th>
+			<th colspan="3" data-export-label="CMS Environment"><h2><?php esc_html_e( 'CMS environment', 'classic-commerce' ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -65,13 +65,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			<td><?php echo esc_html( $environment['site_url'] ); ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WC Version"><?php esc_html_e( 'WooCommerce version', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WooCommerce installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="CC Version"><?php esc_html_e( 'Classic Commerce version', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of Classic Commerce installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['version'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="Log Directory Writable"><?php esc_html_e( 'Log directory writable', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several WooCommerce extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Several extensions can write logs which makes debugging problems easier. The directory must be writable for this to happen.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['log_directory_writable'] ) {
@@ -84,40 +84,65 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Version"><?php esc_html_e( 'WordPress version', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WordPress installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="CMS Version"><?php esc_html_e( 'CMS version', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of the CMS installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
-				$latest_version = get_transient( 'woocommerce_system_status_wp_version_check' );
+				// Check if Core is ClassicPress
+				if ( function_exists( 'classicpress_version' ) ) {
+					$latest_version = get_transient( 'classic_commerce_system_status_cp_version_check' );
+					$classicpress_version = classicpress_version();
+					$cp_url = 'https://api.classicpress.net/upgrade/' . $classicpress_version . '.json';
 
-				if ( false === $latest_version ) {
-					$version_check = wp_remote_get( 'https://api.wordpress.org/core/version-check/1.7/' );
-					$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
-
-					if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
-						$latest_version = $api_response['offers'][0]['version'];
-					} else {
-						$latest_version = $environment['wp_version'];
+					if ( false === $latest_version ) {
+						$version_check = wp_remote_get( $cp_url );
+						$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
+						if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
+							$latest_version = $api_response['offers'][0]['version'];
+						} else {
+							$latest_version = $classicpress_version;
+						}
+						set_transient( 'classic_commerce_system_status_cp_version_check', $latest_version, DAY_IN_SECONDS );
 					}
-					set_transient( 'woocommerce_system_status_wp_version_check', $latest_version, DAY_IN_SECONDS );
-				}
 
-				if ( version_compare( $environment['wp_version'], $latest_version, '<' ) ) {
-					/* Translators: %1$s: Current version, %2$s: New version */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'classic-commerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
+					if ( version_compare( $classicpress_version, $latest_version, '<' ) ) {
+						/* Translators: %1$s: Current version, %2$s: New version */
+						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of ClassicPress available (%2$s)', 'classic-commerce' ), esc_html( $classicpress_version ), esc_html( $latest_version ) ) . '</mark>';
+					} else {
+						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running ClassicPress Version %s', 'classic-commerce' ), esc_html( $classicpress_version ) );
+					}
 				} else {
-					echo '<mark class="yes">' . esc_html( $environment['wp_version'] ) . '</mark>';
+					$latest_version = get_transient( 'woocommerce_system_status_wp_version_check' );
+
+					if ( false === $latest_version ) {
+						$version_check = wp_remote_get( 'https://api.wordpress.org/core/version-check/1.7/' );
+						$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
+
+						if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
+							$latest_version = $api_response['offers'][0]['version'];
+						} else {
+							$latest_version = $environment['wp_version'];
+						}
+						set_transient( 'woocommerce_system_status_wp_version_check', $latest_version, DAY_IN_SECONDS );
+					}
+
+					if ( version_compare( $environment['wp_version'], $latest_version, '<' ) ) {
+						/* Translators: %1$s: Current version, %2$s: New version */
+						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'classic-commerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
+					} else {
+						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running WordPress Version %s', 'classic-commerce' ), esc_html( $environment['wp_version'] ) );
+					}
 				}
 				?>
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Multisite"><?php esc_html_e( 'WordPress multisite', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have WordPress Multisite enabled.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Multisite"><?php esc_html_e( 'Multisite', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Whether or not you have Multisite enabled.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo ( $environment['wp_multisite'] ) ? '<span class="dashicons dashicons-yes"></span>' : '&ndash;'; ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Memory Limit"><?php esc_html_e( 'WordPress memory limit', 'classic-commerce' ); ?>:</td>
+			<td data-export-label="Memory Limit"><?php esc_html_e( 'Memory limit', 'classic-commerce' ); ?>:</td>
 			<td class="help"><?php echo wc_help_tip( esc_html__( 'The maximum amount of memory (RAM) that your site can use at one time.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
@@ -131,8 +156,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Debug Mode"><?php esc_html_e( 'WordPress debug mode', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is in Debug Mode.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Debug Mode"><?php esc_html_e( 'Debug mode', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not your CMS is in Debug Mode.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_debug_mode'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -142,8 +167,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</td>
 		</tr>
 		<tr>
-			<td data-export-label="WP Cron"><?php esc_html_e( 'WordPress cron', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WP Cron Jobs are enabled.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Cron"><?php esc_html_e( 'Cron', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not Cron Jobs are enabled.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php if ( $environment['wp_cron'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -154,12 +179,12 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		</tr>
 		<tr>
 			<td data-export-label="Language"><?php esc_html_e( 'Language', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by WordPress. Default = English', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The current language used by your CMS. Default = English', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['language'] ); ?></td>
 		</tr>
 		<tr>
 			<td data-export-label="External object cache"><?php esc_html_e( 'External object cache', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not WordPress is using an external object cache.', 'classic-commerce' ) ); ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not your CMS is using an external object cache.', 'classic-commerce' ) ); ?></td>
 			<td>
 				<?php if ( $environment['external_object_cache'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
@@ -194,9 +219,9 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					$class       = 'error';
 
 					if ( version_compare( $environment['php_version'], '5.4', '<' ) ) {
-						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'WooCommerce will run under this version of PHP, however, some features such as geolocation are not compatible. Support for this version will be dropped in the next major release. We recommend using PHP version 7.2 or above for greater performance and security.', 'classic-commerce' ) . $update_link;
+						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'Classic Commerce will run under this version of PHP, however, some features such as geolocation are not compatible. Support for this version will be dropped in the next major release. We recommend using PHP version 7.2 or above for greater performance and security.', 'classic-commerce' ) . $update_link;
 					} elseif ( version_compare( $environment['php_version'], '5.6', '<' ) ) {
-						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'WooCommerce will run under this version of PHP, however, it has reached end of life. We recommend using PHP version 7.2 or above for greater performance and security.', 'classic-commerce' ) . $update_link;
+						$notice = '<span class="dashicons dashicons-warning"></span> ' . __( 'Classic Commerce will run under this version of PHP, however, it has reached end of life. We recommend using PHP version 7.2 or above for greater performance and security.', 'classic-commerce' ) . $update_link;
 					} elseif ( version_compare( $environment['php_version'], '7.2', '<' ) ) {
 						$notice = __( 'We recommend using PHP version 7.2 or above for greater performance and security.', 'classic-commerce' ) . $update_link;
 						$class  = 'recommendation';
@@ -256,7 +281,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		<?php endif; ?>
 		<tr>
 			<td data-export-label="Max Upload Size"><?php esc_html_e( 'Max upload size', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your WordPress installation.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The largest filesize that can be uploaded to your installation.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( size_format( $environment['max_upload_size'] ) ); ?></td>
 		</tr>
 		<tr>
@@ -358,7 +383,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 		</tr>
 		<tr>
 			<td data-export-label="Remote Get"><?php esc_html_e( 'Remote get', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'WooCommerce plugins may use this method of communication when checking for plugin updates.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Plugins may use this method of communication when checking for plugin updates.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( $environment['remote_get_successful'] ) {
@@ -403,8 +428,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	</thead>
 	<tbody>
 		<tr>
-			<td data-export-label="WC Database Version"><?php esc_html_e( 'WooCommerce database version', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WooCommerce that the database is formatted for. This should be the same as your WooCommerce version.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="CC Database Version"><?php esc_html_e( 'Classic Commerce database version', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of Classic Commerce that the database is formatted for. This should be the same as your Classic Commerce version.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $database['wc_database_version'] ); ?></td>
 		</tr>
 		<tr>
@@ -578,7 +603,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				}
 				$untested_string = '';
 				if ( array_key_exists( $plugin['plugin'], $untested_plugins ) ) {
-					$untested_string = ' &ndash; <strong style="color:red;">' . esc_html__( 'Not tested with the active version of WooCommerce', 'classic-commerce' ) . '</strong>';
+					$untested_string = ' &ndash; <strong style="color:red;">' . esc_html__( 'Not tested with the active version of Classic Commerce', 'classic-commerce' ) . '</strong>';
 				}
 				?>
 				<tr>
@@ -671,7 +696,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="WC Pages"><h2><?php esc_html_e( 'WooCommerce pages', 'classic-commerce' ); ?></h2></th>
+			<th colspan="3" data-export-label="WC Pages"><h2><?php esc_html_e( 'Classic Commerce pages', 'classic-commerce' ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -760,7 +785,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>';
 				} else {
 					/* Translators: %s docs link. */
-					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying WooCommerce on a parent theme that you did not build personally we recommend using a child theme. See: <a href="%s" target="_blank">How to create a child theme</a>', 'classic-commerce' ), 'https://codex.wordpress.org/Child_Themes' ) );
+					echo '<span class="dashicons dashicons-no-alt"></span> &ndash; ' . wp_kses_post( sprintf( __( 'If you are modifying Classic Commerce on a parent theme that you did not build personally we recommend using a child theme. See: <a href="%s" target="_blank">How to create a child theme</a>', 'classic-commerce' ), 'https://codex.wordpress.org/Child_Themes' ) );
 				}
 				?>
 				</td>
@@ -791,8 +816,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			</tr>
 		<?php endif ?>
 		<tr>
-			<td data-export-label="WooCommerce Support"><?php esc_html_e( 'WooCommerce support', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares WooCommerce support.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="Classic Commerce Support"><?php esc_html_e( 'Classic Commerce support', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Displays whether or not the current active theme declares Classic Commerce support.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td>
 				<?php
 				if ( ! $theme['has_woocommerce_support'] ) {
@@ -808,7 +833,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 <table class="wc_status_table widefat" cellspacing="0">
 	<thead>
 		<tr>
-			<th colspan="3" data-export-label="Templates"><h2><?php esc_html_e( 'Templates', 'classic-commerce' ); ?><?php echo wc_help_tip( esc_html__( 'This section shows any files that are overriding the default WooCommerce template pages.', 'classic-commerce' ) ); ?></h2></th>
+			<th colspan="3" data-export-label="Templates"><h2><?php esc_html_e( 'Templates', 'classic-commerce' ); ?><?php echo wc_help_tip( esc_html__( 'This section shows any files that are overriding the default Classic Commerce template pages.', 'classic-commerce' ) ); ?></h2></th>
 		</tr>
 	</thead>
 	<tbody>

@@ -2,7 +2,7 @@
 /**
  * Locales information
  *
- * @package WooCommerce/i18n
+ * @package Classic Commerce/i18n
  * @version WC-3.5.0
  */
 

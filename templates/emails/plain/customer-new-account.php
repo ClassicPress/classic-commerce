@@ -6,8 +6,8 @@
  *
  * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails/Plain
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package Classic Commerce/Templates/Emails/Plain
  * @version WC-3.5.2
  */
 

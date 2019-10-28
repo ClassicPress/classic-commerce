@@ -3,7 +3,7 @@
  * WooCommerce setup
  *
  * @package WooCommerce
- * @since   3.2.0
+ * @since   WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -25,7 +25,7 @@ final class WooCommerce {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WooCommerce
+	 * @var   WooCommerce
 	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
@@ -512,9 +512,9 @@ final class WooCommerce {
 		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
 		$locale = apply_filters( 'plugin_locale', $locale, 'classic-commerce' );
 
-		unload_textdomain( 'woocommerce' );
-		load_textdomain( 'woocommerce', WP_LANG_DIR . '/woocommerce/woocommerce-' . $locale . '.mo' );
-		load_plugin_textdomain( 'woocommerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
+		unload_textdomain( 'classic-commerce' );
+		load_textdomain( 'classic-commerce', WP_LANG_DIR . '/classic-commerce/classic-commerce-' . $locale . '.mo' );
+		load_plugin_textdomain( 'classic-commerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
 	}
 
 	/**

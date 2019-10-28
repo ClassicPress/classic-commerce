@@ -7,7 +7,7 @@
  * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails
+ * @package Classic Commerce/Templates/Emails
  * @version WC-3.3.0
  */
 
