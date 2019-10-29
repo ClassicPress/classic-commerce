@@ -4,7 +4,7 @@
  *
  * Takes new users through some basic steps to setup their store.
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     2.6.0
  */
 
@@ -68,7 +68,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * The theme "extra" should only be shown if the current user can modify themes
-	 * and the store doesn't already have a WooCommerce theme.
+	 * and the store doesn't already have a ClassicCommerce theme.
 	 *
 	 * @return boolean
 	 */

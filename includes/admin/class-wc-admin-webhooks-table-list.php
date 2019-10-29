@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Webhooks Table List
+ * ClassicCommerce Webhooks Table List
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-3.3.0
  */
 

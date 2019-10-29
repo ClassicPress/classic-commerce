@@ -2,7 +2,7 @@
 /**
  * Order items HTML for meta box.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

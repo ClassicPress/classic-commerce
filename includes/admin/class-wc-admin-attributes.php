@@ -4,7 +4,7 @@
  *
  * The attributes section lets users add custom attributes to assign to products - they can also be used in the "Filter Products by Attribute" widget.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  * @version WC-2.3.0
  */
 
@@ -213,7 +213,7 @@ class WC_Admin_Attributes {
 							/**
 							 * Attribute types can change the way attributes are displayed on the frontend and admin.
 							 *
-							 * By Default WooCommerce only includes the `select` type. Others can be added with the
+							 * By Default ClassicCommerce only includes the `select` type. Others can be added with the
 							 * `product_attributes_type_selector` filter. If there is only the default type registered,
 							 * this setting will be hidden.
 							 */
@@ -405,7 +405,7 @@ class WC_Admin_Attributes {
 								/**
 								 * Attribute types can change the way attributes are displayed on the frontend and admin.
 								 *
-								 * By Default WooCommerce only includes the `select` type. Others can be added with the
+								 * By Default ClassicCommerce only includes the `select` type. Others can be added with the
 								 * `product_attributes_type_selector` filter. If there is only the default type registered,
 								 * this setting will be hidden.
 								 */

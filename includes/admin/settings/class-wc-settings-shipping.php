@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Shipping Settings
+ * ClassicCommerce Shipping Settings
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     2.6.0
  */
 

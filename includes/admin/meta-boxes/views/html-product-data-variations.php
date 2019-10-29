@@ -2,7 +2,7 @@
 /**
  * Product data variations
  *
- * @package WooCommerce\Admin\Metaboxes\Views
+ * @package ClassicCommerce\Admin\Metaboxes\Views
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						$selected_value = isset( $default_attributes[ sanitize_title( $attribute->get_name() ) ] ) ? $default_attributes[ sanitize_title( $attribute->get_name() ) ] : '';
 						?>
 						<select name="default_attribute_<?php echo esc_attr( sanitize_title( $attribute->get_name() ) ); ?>" data-current="<?php echo esc_attr( $selected_value ); ?>">
-							<?php /* translators: WooCommerce attribute label */ ?>
+							<?php /* translators: ClassicCommerce attribute label */ ?>
 							<option value=""><?php echo esc_html( sprintf( __( 'No default %s&hellip;', 'woocommerce' ), wc_attribute_label( $attribute->get_name() ) ) ); ?></option>
 							<?php if ( $attribute->is_taxonomy() ) : ?>
 								<?php foreach ( $attribute->get_terms() as $option ) : ?>

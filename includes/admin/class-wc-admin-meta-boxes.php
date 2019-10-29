@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce Meta Boxes
+ * ClassicCommerce Meta Boxes
  *
  * Sets up the write panels used by products and orders (custom post types).
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Meta Boxes
+ * @package     ClassicCommerce/Admin/Meta Boxes
  * @version     2.1.0
  */
 

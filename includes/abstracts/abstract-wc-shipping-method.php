@@ -3,7 +3,7 @@
  * Abstract shipping method
  *
  * @class WC_Shipping_Method
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Shipping Method Class.
+ * ClassicCommerce Shipping Method Class.
  *
  * Extended by shipping methods to handle shipping calculations etc.
  *
  * @class       WC_Shipping_Method
  * @version     3.0.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Shipping_Method extends WC_Settings_API {
 

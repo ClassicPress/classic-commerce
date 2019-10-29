@@ -2,7 +2,7 @@
 /**
  * Debug/Status page
  *
- * @package WooCommerce/Admin/System Status
+ * @package ClassicCommerce/Admin/System Status
  * @version WC-2.2.0
  */
 
@@ -50,7 +50,7 @@ class WC_Admin_Status {
 				$tool = array_merge( $tool, $response );
 
 				/**
-				 * Fires after a WooCommerce system status tool has been executed.
+				 * Fires after a ClassicCommerce system status tool has been executed.
 				 *
 				 * @param array  $tool  Details about the tool that has been executed.
 				 */

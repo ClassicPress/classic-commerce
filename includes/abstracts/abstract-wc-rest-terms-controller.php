@@ -2,7 +2,7 @@
 /**
  * Abstract Rest Terms Controller
  *
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  * @version  3.3.0
  */
 

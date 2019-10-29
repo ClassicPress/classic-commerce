@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce product base class.
+ * ClassicCommerce product base class.
  *
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,10 +18,10 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-product.php';
 /**
  * Abstract Product Class
  *
- * The WooCommerce product class handles individual product data.
+ * The ClassicCommerce product class handles individual product data.
  *
  * @version  3.0.0
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  */
 class WC_Product extends WC_Abstract_Legacy_Product {
 

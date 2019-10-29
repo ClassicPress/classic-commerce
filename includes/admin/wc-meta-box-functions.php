@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Meta Box Functions
+ * ClassicCommerce Meta Box Functions
  *
  * @author      WooThemes
  * @category    Core
- * @package     WooCommerce/Admin/Functions
+ * @package     ClassicCommerce/Admin/Functions
  * @version     2.3.0
  */
 if ( ! defined( 'ABSPATH' ) ) {

@@ -4,7 +4,7 @@
  *
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  2.5.0
  */
 
@@ -339,7 +339,7 @@ class WC_Admin_Addons {
 	}
 
 	/**
-	 * Handles the outputting of the WooCommerce Services banner block.
+	 * Handles the outputting of the ClassicCommerce Services banner block.
 	 *
 	 * @param object $block
 	 */
@@ -535,7 +535,7 @@ class WC_Admin_Addons {
 	}
 
 	/**
-	 * Install WooCommerce Services from Extensions screens.
+	 * Install ClassicCommerce Services from Extensions screens.
 	 */
 	public static function install_woocommerce_services_addon() {
 		check_admin_referer( 'install-addon_woocommerce-services' );

@@ -4,7 +4,7 @@
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
+ * @package     ClassicCommerce/Admin/Reports
  * @version     3.3.0
  */
 

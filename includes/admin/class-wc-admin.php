@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Admin
+ * ClassicCommerce Admin
  *
  * @class    WC_Admin
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  2.6.0
  */
 
@@ -216,7 +216,7 @@ class WC_Admin {
 	}
 
 	/**
-	 * Change the admin footer text on WooCommerce admin pages.
+	 * Change the admin footer text on ClassicCommerce admin pages.
 	 *
 	 * @since  2.3
 	 * @param  string $footer_text
@@ -232,12 +232,12 @@ class WC_Admin {
 		// Set only WC pages.
 		$wc_pages = array_diff( $wc_pages, array( 'profile', 'user-edit' ) );
 
-		// Check to make sure we're on a WooCommerce admin page.
+		// Check to make sure we're on a ClassicCommerce admin page.
 		if ( isset( $current_screen->id ) && apply_filters( 'woocommerce_display_admin_footer_text', in_array( $current_screen->id, $wc_pages ) ) ) {
 			// Change the footer text
 			if ( ! get_option( 'woocommerce_admin_footer_text_rated' ) ) {
 				$footer_text = sprintf(
-					/* translators: 1: WooCommerce 2:: five stars */
+					/* translators: 1: ClassicCommerce 2:: five stars */
 					__( 'If you like %1$s please leave us a %2$s rating. A huge thanks in advance!', 'woocommerce' ),
 					sprintf( '<strong>%s</strong>', esc_html__( 'WooCommerce', 'woocommerce' ) ),
 					'<a href="https://wordpress.org/support/plugin/woocommerce/reviews?rate=5#new-post" target="_blank" class="wc-rating-link" data-rated="' . esc_attr__( 'Thanks :)', 'woocommerce' ) . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'

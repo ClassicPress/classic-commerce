@@ -6,7 +6,7 @@
  *
  * @class WC_Payment_Gateway
  * @version WC-2.1.0
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,14 +14,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Payment Gateway class.
+ * ClassicCommerce Payment Gateway class.
  *
  * Extended by individual payment gateways to handle payments.
  *
  * @class       WC_Payment_Gateway
  * @extends     WC_Settings_API
  * @version     2.1.0
- * @package     WooCommerce/Abstracts
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Payment_Gateway extends WC_Settings_API {
 

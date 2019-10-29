@@ -2,7 +2,7 @@
 /**
  * Admin View: Notice - Update
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

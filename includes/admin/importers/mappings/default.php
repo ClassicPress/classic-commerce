@@ -2,7 +2,7 @@
 /**
  * Default mappings
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
