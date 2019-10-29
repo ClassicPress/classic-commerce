@@ -401,22 +401,16 @@ final class WooCommerce {
 	 * @since WC-3.3.0
 	 */
 	private function theme_support_includes() {
-		if ( wc_is_active_theme( array( 'twentynineteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', 'twentyfourteen', 'twentythirteen', 'twentyeleven', 'twentytwelve', 'twentyten' ) ) ) {
+		if ( wc_is_active_theme( array( 'classicpress-twentyseventeen', 'classicpress-twentysixteen', 'classicpress-twentyfifteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', ) ) ) {
 			switch ( get_template() ) {
-				case 'twentyten':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-ten.php';
+				case 'classicpress-twentyfifteen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fifteen.php';
 					break;
-				case 'twentyeleven':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-eleven.php';
+				case 'classicpress-twentysixteen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-sixteen.php';
 					break;
-				case 'twentytwelve':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-twelve.php';
-					break;
-				case 'twentythirteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-thirteen.php';
-					break;
-				case 'twentyfourteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fourteen.php';
+				case 'classicpress-twentyseventeen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-seventeen.php';
 					break;
 				case 'twentyfifteen':
 					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fifteen.php';
@@ -426,9 +420,6 @@ final class WooCommerce {
 					break;
 				case 'twentyseventeen':
 					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-seventeen.php';
-					break;
-				case 'twentynineteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-nineteen.php';
 					break;
 			}
 		}
