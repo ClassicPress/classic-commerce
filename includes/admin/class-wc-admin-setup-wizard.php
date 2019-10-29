@@ -102,44 +102,13 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * The "automated tax" extra should only be shown if the current user can
-	 * install plugins and the store is in a supported country.
-	 */
-	protected function should_show_automated_tax() {
-		if ( ! current_user_can( 'install_plugins' ) ) {
-			return false;
-		}
-
-		$country_code = WC()->countries->get_base_country();
-		// https://developers.taxjar.com/api/reference/#countries .
-		$tax_supported_countries = array_merge(
-			array( 'US', 'CA', 'AU' ),
-			WC()->countries->get_european_union_countries()
-		);
-
-		return in_array( $country_code, $tax_supported_countries, true );
-	}
-
-	/**
-	 * Should we show the MailChimp install option?
-	 * True only if the user can install plugins.
-	 *
-	 * @return boolean
-	 */
-	protected function should_show_mailchimp() {
-		return current_user_can( 'install_plugins' );
-	}
-
-	/**
 	 * Should we display the 'Recommended' step?
 	 * True if at least one of the recommendations will be displayed.
 	 *
 	 * @return boolean
 	 */
 	protected function should_show_recommended_step() {
-		return $this->should_show_theme()
-			|| $this->should_show_automated_tax()
-			|| $this->should_show_mailchimp();
+		return $this->should_show_theme();
 	}
 
 	/**
@@ -149,7 +118,6 @@ class WC_Admin_Setup_Wizard {
 	 */
 	public function enqueue_scripts() {
 		// Whether or not there is a pending background install of Jetpack.
-		$pending_jetpack = ! class_exists( 'Jetpack' ) && get_option( 'woocommerce_setup_background_installing_jetpack' );
 		$suffix          = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		wp_register_script( 'jquery-blockui', WC()->plugin_url() . '/assets/js/jquery-blockui/jquery.blockUI' . $suffix . '.js', array( 'jquery' ), '2.70', true );
@@ -300,7 +268,7 @@ class WC_Admin_Setup_Wizard {
 			<?php do_action( 'admin_head' ); ?>
 		</head>
 		<body class="wc-setup wp-core-ui">
-			<h1 id="wc-logo"><a href="https://woocommerce.com/"><img src="<?php echo esc_url( WC()->plugin_url() ); ?>/assets/images/woocommerce_logo.png" alt="Classic Commerce" /></a></h1>
+			<h1 id="wc-logo"><a href="https://github.com/ClassicPress-research/classic-commerce/"><img src="<?php echo esc_url( WC()->plugin_url() ); ?>/assets/images/woocommerce_logo.png" alt="Classic Commerce" /></a></h1>
 		<?php
 	}
 
@@ -324,7 +292,6 @@ class WC_Admin_Setup_Wizard {
 	 */
 	public function setup_wizard_steps() {
 		$output_steps      = $this->steps;
-		$selected_features = array_filter( $this->wc_setup_activate_get_feature_list() );
 
 		?>
 		<ol class="wc-setup-steps">
@@ -989,154 +956,6 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * Is PayPal currency supported.
-	 *
-	 * @param string $currency Currency code.
-	 * @return boolean
-	 */
-	protected function is_paypal_supported_currency( $currency ) {
-		$supported_currencies = array(
-			'AUD',
-			'BRL',
-			'CAD',
-			'MXN',
-			'NZD',
-			'HKD',
-			'SGD',
-			'USD',
-			'EUR',
-			'JPY',
-			'TRY',
-			'NOK',
-			'CZK',
-			'DKK',
-			'HUF',
-			'ILS',
-			'MYR',
-			'PHP',
-			'PLN',
-			'SEK',
-			'CHF',
-			'TWD',
-			'THB',
-			'GBP',
-			'RMB',
-			'RUB',
-			'INR',
-		);
-		return in_array( $currency, $supported_currencies, true );
-	}
-
-	/**
-	 * Helper method to retrieve the current user's email address.
-	 *
-	 * @return string Email address
-	 */
-	protected function get_current_user_email() {
-		$current_user = wp_get_current_user();
-		$user_email   = $current_user->user_email;
-
-		return $user_email;
-	}
-
-	/**
-	 * Array of all possible "in cart" gateways that can be offered.
-	 *
-	 * @return array
-	 */
-	protected function get_wizard_available_in_cart_payment_gateways() {
-		$user_email = $this->get_current_user_email();
-
-		$paypal_checkout_description = '<p>' . sprintf(
-			/* translators: %s: URL */
-			__( 'Safe and secure payments using credit cards or your customer\'s PayPal account. <a href="%s" target="_blank">Learn more</a>.', 'classic-commerce' ),
-			'https://woocommerce.com/products/woocommerce-gateway-paypal-checkout/'
-		) . '</p>';
-
-		return array(
-			'ppec_paypal'     => array(
-				'name'        => __( 'WooCommerce PayPal Checkout Gateway', 'classic-commerce' ),
-				'image'       => WC()->plugin_url() . '/assets/images/paypal.png',
-				'description' => $paypal_checkout_description,
-				'enabled'     => true,
-				'class'       => 'checked paypal-logo',
-				'repo-slug'   => 'woocommerce-gateway-paypal-express-checkout',
-				'settings'    => array(
-					'reroute_requests' => array(
-						'label'       => __( 'Set up PayPal for me using this email:', 'classic-commerce' ),
-						'type'        => 'checkbox',
-						'value'       => 'yes',
-						'default'     => 'yes',
-						'placeholder' => '',
-						'required'    => false,
-						'plugins'     => $this->get_wcs_requisite_plugins(),
-					),
-					'email'            => array(
-						'label'       => __( 'Direct payments to email address:', 'classic-commerce' ),
-						'type'        => 'email',
-						'value'       => $user_email,
-						'placeholder' => __( 'Email address to receive payments', 'classic-commerce' ),
-						'required'    => true,
-					),
-				),
-			),
-			'paypal'          => array(
-				'name'        => __( 'PayPal Standard', 'classic-commerce' ),
-				'description' => __( 'Accept payments via PayPal using account balance or credit card.', 'classic-commerce' ),
-				'image'       => '',
-				'settings'    => array(
-					'email' => array(
-						'label'       => __( 'PayPal email address:', 'classic-commerce' ),
-						'type'        => 'email',
-						'value'       => $user_email,
-						'placeholder' => __( 'PayPal email address', 'classic-commerce' ),
-						'required'    => true,
-					),
-				),
-			),
-		);
-	}
-
-	/**
-	 * Simple array of "in cart" gateways to show in wizard.
-	 *
-	 * @return array
-	 */
-	public function get_wizard_in_cart_payment_gateways() {
-		$gateways = $this->get_wizard_available_in_cart_payment_gateways();
-		$country  = WC()->countries->get_base_country();
-		$currency = get_woocommerce_currency();
-
-		$can_paypal  = $this->is_paypal_supported_currency( $currency );
-
-		if ( ! current_user_can( 'install_plugins' ) ) {
-			return $can_paypal ? array( 'paypal' => $gateways['paypal'] ) : array();
-		}
-
-		$spotlight = '';
-
-		if ( $spotlight ) {
-			$offered_gateways = array(
-				$spotlight => $gateways[ $spotlight ],
-			);
-
-			if ( $can_paypal ) {
-				$offered_gateways += array( 'ppec_paypal' => $gateways['ppec_paypal'] );
-			}
-
-			return $offered_gateways;
-		}
-
-		$offered_gateways = array();
-
-		if ( $can_paypal ) {
-			$offered_gateways += array( 'ppec_paypal' => $gateways['ppec_paypal'] );
-		}
-
-		return $offered_gateways;
-	}
-
-	/**
 	 * Simple array of "manual" gateways to show in wizard.
 	 *
 	 * @return array
@@ -1272,31 +1091,9 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * Is it a featured service?
-	 *
-	 * @param array $service Service info array.
-	 * @return boolean
-	 */
-	public function is_featured_service( $service ) {
-		return ! empty( $service['featured'] );
-	}
-
-	/**
-	 * Is this a non featured service?
-	 *
-	 * @param array $service Service info array.
-	 * @return boolean
-	 */
-	public function is_not_featured_service( $service ) {
-		return ! $this->is_featured_service( $service );
-	}
-
-	/**
 	 * Payment Step.
 	 */
 	public function wc_setup_payment() {
-		$featured_gateways = array_filter( $this->get_wizard_in_cart_payment_gateways(), array( $this, 'is_featured_service' ) );
-		$in_cart_gateways  = array_filter( $this->get_wizard_in_cart_payment_gateways(), array( $this, 'is_not_featured_service' ) );
 		$manual_gateways   = $this->get_wizard_manual_payment_gateways();
 		?>
 		<h1><?php esc_html_e( 'Payment', 'classic-commerce' ); ?></h1>
@@ -1370,7 +1167,7 @@ class WC_Admin_Setup_Wizard {
 	public function wc_setup_payment_save() {
 		check_admin_referer( 'wc-setup' );
 
-		$gateways = array_merge( $this->get_wizard_in_cart_payment_gateways(), $this->get_wizard_manual_payment_gateways() );
+		$gateways = $this->get_wizard_manual_payment_gateways();
 
 		foreach ( $gateways as $gateway_id => $gateway ) {
 			// If repo-slug is defined, download and install plugin from .org.
@@ -1466,25 +1263,6 @@ class WC_Admin_Setup_Wizard {
 		exit;
 	}
 
-	protected function wc_setup_activate_get_feature_list() {
-		$features = array();
-
-		$ppec_settings   = get_option( 'woocommerce_ppec_paypal_settings', false );
-		$ppec_enabled    = is_array( $ppec_settings )
-			&& isset( $ppec_settings['reroute_requests'] ) && 'yes' === $ppec_settings['reroute_requests']
-			&& isset( $ppec_settings['enabled'] ) && 'yes' === $ppec_settings['enabled'];
-
-		return $features;
-	}
-
-	protected function wc_setup_activate_get_feature_list_str() {
-		$features = $this->wc_setup_activate_get_feature_list();
-		if ( $features['payment'] ) {
-			return __( 'payment setup', 'classic-commerce' );
-		}
-		return false;
-	}
-
 	protected function get_activate_error_message( $code = '' ) {
 		$errors = '';
 		return array_key_exists( $code, $errors ) ? $errors[ $code ] : $errors['default'];
@@ -1497,7 +1275,6 @@ class WC_Admin_Setup_Wizard {
 		// We've made it! Don't prompt the user to run the wizard again.
 		WC_Admin_Notices::remove_notice( 'install' );
 
-		$user_email   = $this->get_current_user_email();
 		$videos_url   = 'https://docs.woocommerce.com/document/woocommerce-guided-tour-videos/';
 		$docs_url     = 'https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/';
 		$help_text    = sprintf(

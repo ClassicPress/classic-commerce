@@ -1337,42 +1337,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 
 			wp_clean_plugins_cache();
 
-			// Activate this thing.
-			if ( $activate ) {
-				try {
-					add_action( 'add_option_mailchimp_woocommerce_plugin_do_activation_redirect', array( __CLASS__, 'remove_mailchimps_redirect' ), 10, 2 );
-					$result = activate_plugin( $installed ? $installed_plugins[ $plugin_file ] : $plugin_slug . '/' . $plugin_file );
-
-					if ( is_wp_error( $result ) ) {
-						throw new Exception( $result->get_error_message() );
-					}
-				} catch ( Exception $e ) {
-					WC_Admin_Notices::add_custom_notice(
-						$plugin_to_install_id . '_install_error',
-						sprintf(
-							// translators: 1: plugin name, 2: URL to WP plugin page.
-							__( '%1$s was installed but could not be activated. <a href="%2$s">Please activate it manually by clicking here.</a>', 'classic-commerce' ),
-							$plugin_to_install['name'],
-							admin_url( 'plugins.php' )
-						)
-					);
-				}
-			}
 		}
-	}
-
-	/**
-	 * Removes redirect added during MailChimp plugin's activation.
-	 *
-	 * @param string $option Option name.
-	 * @param string $value  Option value.
-	 */
-	public static function remove_mailchimps_redirect( $option, $value ) {
-		// Remove this action to prevent infinite looping.
-		remove_action( 'add_option_mailchimp_woocommerce_plugin_do_activation_redirect', array( __CLASS__, 'remove_mailchimps_redirect' ) );
-
-		// Update redirect back to false.
-		update_option( 'mailchimp_woocommerce_plugin_do_activation_redirect', false );
 	}
 
 	/**
