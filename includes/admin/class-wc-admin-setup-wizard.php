@@ -1185,11 +1185,6 @@ class WC_Admin_Setup_Wizard {
 						: false;
 				}
 			}
-			// @codingStandardsIgnoreSEnd
-
-			if ( 'ppec_paypal' === $gateway_id && empty( $settings['reroute_requests'] ) ) {
-				unset( $settings['enabled'] );
-			}
 
 			$settings_key = 'woocommerce_' . $gateway_id . '_settings';
 			$previously_saved_settings = array_filter( (array) get_option( $settings_key, array() ) );
@@ -1252,20 +1247,6 @@ class WC_Admin_Setup_Wizard {
 			</p>
 		</form>
 		<?php
-	}
-
-	/**
-	 * Recommended step save.
-	 */
-	public function wc_setup_recommended_save() {
-		check_admin_referer( 'wc-setup' );
-		wp_redirect( esc_url_raw( $this->get_next_step_link() ) );
-		exit;
-	}
-
-	protected function get_activate_error_message( $code = '' ) {
-		$errors = '';
-		return array_key_exists( $code, $errors ) ? $errors[ $code ] : $errors['default'];
 	}
 
 	/**
