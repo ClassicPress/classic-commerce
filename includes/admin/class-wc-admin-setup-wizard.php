@@ -620,19 +620,6 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * TODO: Remove if not used plugin_install_info()
-	 * Plugin install info message markup with heading.
-	 */
-	public function plugin_install_info() {
-		?>
-		<span class="plugin-install-info">
-			<span class="plugin-install-info-label"><?php esc_html_e( 'The following plugins will be installed and activated for you:', 'classic-commerce' ); ?></span>
-			<span class="plugin-install-info-list"></span>
-		</span>
-		<?php
-	}
-
-	/**
 	 * Get shipping methods based on country code.
 	 *
 	 * @param string $country_code Country code.
@@ -866,7 +853,6 @@ class WC_Admin_Setup_Wizard {
 			</div>
 
 			<p class="wc-setup-actions step">
-				<?php $this->plugin_install_info(); ?>
 				<button type="submit" class="button-primary button button-large button-next" value="<?php esc_attr_e( 'Continue', 'classic-commerce' ); ?>" name="save_step"><?php esc_html_e( 'Continue', 'classic-commerce' ); ?></button>
 				<?php wp_nonce_field( 'wc-setup' ); ?>
 			</p>
@@ -1153,7 +1139,6 @@ class WC_Admin_Setup_Wizard {
 				?>
 			</ul>
 			<p class="wc-setup-actions step">
-				<?php $this->plugin_install_info(); ?>
 				<button type="submit" class="button-primary button button-large button-next" value="<?php esc_attr_e( 'Continue', 'classic-commerce' ); ?>" name="save_step"><?php esc_html_e( 'Continue', 'classic-commerce' ); ?></button>
 				<?php wp_nonce_field( 'wc-setup' ); ?>
 			</p>
@@ -1241,7 +1226,6 @@ class WC_Admin_Setup_Wizard {
 
 		<form method="post">
 			<p class="wc-setup-actions step">
-				<?php $this->plugin_install_info(); ?>
 				<button type="submit" class="button-primary button button-large button-next" value="<?php esc_attr_e( 'Continue', 'classic-commerce' ); ?>" name="save_step"><?php esc_html_e( 'Continue', 'classic-commerce' ); ?></button>
 				<?php wp_nonce_field( 'wc-setup' ); ?>
 			</p>
