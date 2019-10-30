@@ -2,7 +2,7 @@
 /**
  * Represents a single shipping zone
  *
- * @since   2.6.0
+ * @since   WC-2.6.0
  * @version WC-3.0.0
  * @package WooCommerce/Classes
  */
@@ -140,12 +140,12 @@ class WC_Shipping_Zone extends WC_Legacy_Shipping_Zone {
 		if ( count( $location_parts ) > $max ) {
 			$remaining = count( $location_parts ) - $max;
 			// @codingStandardsIgnoreStart
-			return sprintf( _n( '%s and %d other region', '%s and %d other regions', $remaining, 'woocommerce' ), implode( ', ', array_splice( $location_parts, 0, $max ) ), $remaining );
+			return sprintf( _n( '%s and %d other region', '%s and %d other regions', $remaining, 'classic-commerce' ), implode( ', ', array_splice( $location_parts, 0, $max ) ), $remaining );
 			// @codingStandardsIgnoreEnd
 		} elseif ( ! empty( $location_parts ) ) {
 			return implode( ', ', $location_parts );
 		} else {
-			return __( 'Everywhere', 'woocommerce' );
+			return __( 'Everywhere', 'classic-commerce' );
 		}
 	}
 
@@ -281,7 +281,7 @@ class WC_Shipping_Zone extends WC_Legacy_Shipping_Zone {
 		$zone_name = $this->get_formatted_location();
 
 		if ( empty( $zone_name ) ) {
-			$zone_name = __( 'Zone', 'woocommerce' );
+			$zone_name = __( 'Zone', 'classic-commerce' );
 		}
 
 		return $zone_name;

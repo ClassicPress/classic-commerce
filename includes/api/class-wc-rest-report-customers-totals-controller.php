@@ -5,7 +5,7 @@
  * Handles requests to the /reports/customers/count endpoint.
  *
  * @package WooCommerce/API
- * @since   3.5.0
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -35,7 +35,7 @@ class WC_REST_Report_Customers_Totals_Controller extends WC_REST_Reports_Control
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {
@@ -71,12 +71,12 @@ class WC_REST_Report_Customers_Totals_Controller extends WC_REST_Reports_Control
 		$data = array(
 			array(
 				'slug'  => 'paying',
-				'name'  => __( 'Paying customer', 'woocommerce' ),
+				'name'  => __( 'Paying customer', 'classic-commerce' ),
 				'total' => $total_paying,
 			),
 			array(
 				'slug'  => 'non_paying',
-				'name'  => __( 'Non-paying customer', 'woocommerce' ),
+				'name'  => __( 'Non-paying customer', 'classic-commerce' ),
 				'total' => $total_customers - $total_paying,
 			),
 		);
@@ -129,19 +129,19 @@ class WC_REST_Report_Customers_Totals_Controller extends WC_REST_Reports_Control
 			'type'       => 'object',
 			'properties' => array(
 				'slug'  => array(
-					'description' => __( 'An alphanumeric identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'An alphanumeric identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'name'  => array(
-					'description' => __( 'Customer type name.', 'woocommerce' ),
+					'description' => __( 'Customer type name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'total' => array(
-					'description' => __( 'Amount of customers.', 'woocommerce' ),
+					'description' => __( 'Amount of customers.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

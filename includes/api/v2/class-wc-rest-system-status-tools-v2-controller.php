@@ -5,7 +5,7 @@
  * Handles requests to the /system_status/tools/* endpoints.
  *
  * @package WooCommerce/API
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -52,7 +52,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 			$this->namespace, '/' . $this->rest_base . '/(?P<id>[\w-]+)', array(
 				'args'   => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+						'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 						'type'        => 'string',
 					),
 				),
@@ -80,7 +80,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'system_status', 'read' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 		return true;
 	}
@@ -93,7 +93,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	 */
 	public function get_item_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'system_status', 'read' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot view this resource.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot view this resource.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 		return true;
 	}
@@ -106,7 +106,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	 */
 	public function update_item_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'system_status', 'edit' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_update', __( 'Sorry, you cannot update resource.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_update', __( 'Sorry, you cannot update resource.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 		return true;
 	}
@@ -120,84 +120,79 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	public function get_tools() {
 		$tools = array(
 			'clear_transients'                   => array(
-				'name'   => __( 'WooCommerce transients', 'woocommerce' ),
-				'button' => __( 'Clear transients', 'woocommerce' ),
-				'desc'   => __( 'This tool will clear the product/shop transients cache.', 'woocommerce' ),
+				'name'   => __( 'Classic Commerce transients', 'classic-commerce' ),
+				'button' => __( 'Clear transients', 'classic-commerce' ),
+				'desc'   => __( 'This tool will clear the product/shop transients cache.', 'classic-commerce' ),
 			),
 			'clear_expired_transients'           => array(
-				'name'   => __( 'Expired transients', 'woocommerce' ),
-				'button' => __( 'Clear transients', 'woocommerce' ),
-				'desc'   => __( 'This tool will clear ALL expired transients from WordPress.', 'woocommerce' ),
+				'name'   => __( 'Expired transients', 'classic-commerce' ),
+				'button' => __( 'Clear transients', 'classic-commerce' ),
+				'desc'   => __( 'This tool will clear ALL expired transients.', 'classic-commerce' ),
 			),
 			'delete_orphaned_variations'         => array(
-				'name'   => __( 'Orphaned variations', 'woocommerce' ),
-				'button' => __( 'Delete orphaned variations', 'woocommerce' ),
-				'desc'   => __( 'This tool will delete all variations which have no parent.', 'woocommerce' ),
+				'name'   => __( 'Orphaned variations', 'classic-commerce' ),
+				'button' => __( 'Delete orphaned variations', 'classic-commerce' ),
+				'desc'   => __( 'This tool will delete all variations which have no parent.', 'classic-commerce' ),
 			),
 			'clear_expired_download_permissions' => array(
-				'name'   => __( 'Used-up download permissions', 'woocommerce' ),
-				'button' => __( 'Clean up download permissions', 'woocommerce' ),
-				'desc'   => __( 'This tool will delete expired download permissions and permissions with 0 remaining downloads.', 'woocommerce' ),
+				'name'   => __( 'Used-up download permissions', 'classic-commerce' ),
+				'button' => __( 'Clean up download permissions', 'classic-commerce' ),
+				'desc'   => __( 'This tool will delete expired download permissions and permissions with 0 remaining downloads.', 'classic-commerce' ),
 			),
 			'add_order_indexes'                  => array(
-				'name'   => __( 'Order address indexes', 'woocommerce' ),
-				'button' => __( 'Index orders', 'woocommerce' ),
-				'desc'   => __( 'This tool will add address indexes to orders that do not have them yet. This improves order search results.', 'woocommerce' ),
+				'name'   => __( 'Order address indexes', 'classic-commerce' ),
+				'button' => __( 'Index orders', 'classic-commerce' ),
+				'desc'   => __( 'This tool will add address indexes to orders that do not have them yet. This improves order search results.', 'classic-commerce' ),
 			),
 			'recount_terms'                      => array(
-				'name'   => __( 'Term counts', 'woocommerce' ),
-				'button' => __( 'Recount terms', 'woocommerce' ),
-				'desc'   => __( 'This tool will recount product terms - useful when changing your settings in a way which hides products from the catalog.', 'woocommerce' ),
+				'name'   => __( 'Term counts', 'classic-commerce' ),
+				'button' => __( 'Recount terms', 'classic-commerce' ),
+				'desc'   => __( 'This tool will recount product terms - useful when changing your settings in a way which hides products from the catalog.', 'classic-commerce' ),
 			),
 			'reset_roles'                        => array(
-				'name'   => __( 'Capabilities', 'woocommerce' ),
-				'button' => __( 'Reset capabilities', 'woocommerce' ),
-				'desc'   => __( 'This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the WooCommerce admin pages.', 'woocommerce' ),
+				'name'   => __( 'Capabilities', 'classic-commerce' ),
+				'button' => __( 'Reset capabilities', 'classic-commerce' ),
+				'desc'   => __( 'This tool will reset the admin, customer and shop_manager roles to default. Use this if your users cannot access all of the Classic Commerce admin pages.', 'classic-commerce' ),
 			),
 			'clear_sessions'                     => array(
-				'name'   => __( 'Clear customer sessions', 'woocommerce' ),
-				'button' => __( 'Clear', 'woocommerce' ),
+				'name'   => __( 'Clear customer sessions', 'classic-commerce' ),
+				'button' => __( 'Clear', 'classic-commerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
-					__( 'Note:', 'woocommerce' ),
-					__( 'This tool will delete all customer session data from the database, including current carts and saved carts in the database.', 'woocommerce' )
+					__( 'Note:', 'classic-commerce' ),
+					__( 'This tool will delete all customer session data from the database, including current carts and saved carts in the database.', 'classic-commerce' )
 				),
 			),
 			'install_pages'                      => array(
-				'name'   => __( 'Create default WooCommerce pages', 'woocommerce' ),
-				'button' => __( 'Create pages', 'woocommerce' ),
+				'name'   => __( 'Create default Classic Commerce pages', 'classic-commerce' ),
+				'button' => __( 'Create pages', 'classic-commerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
-					__( 'Note:', 'woocommerce' ),
-					__( 'This tool will install all the missing WooCommerce pages. Pages already defined and set up will not be replaced.', 'woocommerce' )
+					__( 'Note:', 'classic-commerce' ),
+					__( 'This tool will install all the missing Classic Commerce pages. Pages already defined and set up will not be replaced.', 'classic-commerce' )
 				),
 			),
 			'delete_taxes'                       => array(
-				'name'   => __( 'Delete WooCommerce tax rates', 'woocommerce' ),
-				'button' => __( 'Delete tax rates', 'woocommerce' ),
+				'name'   => __( 'Delete Classic Commerce tax rates', 'classic-commerce' ),
+				'button' => __( 'Delete tax rates', 'classic-commerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
-					__( 'Note:', 'woocommerce' ),
-					__( 'This option will delete ALL of your tax rates, use with caution. This action cannot be reversed.', 'woocommerce' )
+					__( 'Note:', 'classic-commerce' ),
+					__( 'This option will delete ALL of your tax rates, use with caution. This action cannot be reversed.', 'classic-commerce' )
 				),
 			),
-			'reset_tracking'                     => array(
-				'name'   => __( 'Reset usage tracking', 'woocommerce' ),
-				'button' => __( 'Reset', 'woocommerce' ),
-				'desc'   => __( 'This will reset your usage tracking settings, causing it to show the opt-in banner again and not sending any data.', 'woocommerce' ),
-			),
 			'regenerate_thumbnails'              => array(
-				'name'   => __( 'Regenerate shop thumbnails', 'woocommerce' ),
-				'button' => __( 'Regenerate', 'woocommerce' ),
-				'desc'   => __( 'This will regenerate all shop thumbnails to match your theme and/or image settings.', 'woocommerce' ),
+				'name'   => __( 'Regenerate shop thumbnails', 'classic-commerce' ),
+				'button' => __( 'Regenerate', 'classic-commerce' ),
+				'desc'   => __( 'This will regenerate all shop thumbnails to match your theme and/or image settings.', 'classic-commerce' ),
 			),
 			'db_update_routine'                  => array(
-				'name'   => __( 'Update database', 'woocommerce' ),
-				'button' => __( 'Update database', 'woocommerce' ),
+				'name'   => __( 'Update database', 'classic-commerce' ),
+				'button' => __( 'Update database', 'classic-commerce' ),
 				'desc'   => sprintf(
 					'<strong class="red">%1$s</strong> %2$s',
-					__( 'Note:', 'woocommerce' ),
-					__( 'This tool will update your WooCommerce database to the latest version. Please ensure you make sufficient backups before proceeding.', 'woocommerce' )
+					__( 'Note:', 'classic-commerce' ),
+					__( 'This tool will update your Classic Commerce database to the latest version. Please ensure you make sufficient backups before proceeding.', 'classic-commerce' )
 				),
 			)
 		);
@@ -244,7 +239,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	public function get_item( $request ) {
 		$tools = $this->get_tools();
 		if ( empty( $tools[ $request['id'] ] ) ) {
-			return new WP_Error( 'woocommerce_rest_system_status_tool_invalid_id', __( 'Invalid tool ID.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'woocommerce_rest_system_status_tool_invalid_id', __( 'Invalid tool ID.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 		$tool = $tools[ $request['id'] ];
 		return rest_ensure_response(
@@ -268,7 +263,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 	public function update_item( $request ) {
 		$tools = $this->get_tools();
 		if ( empty( $tools[ $request['id'] ] ) ) {
-			return new WP_Error( 'woocommerce_rest_system_status_tool_invalid_id', __( 'Invalid tool ID.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'woocommerce_rest_system_status_tool_invalid_id', __( 'Invalid tool ID.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$tool = $tools[ $request['id'] ];
@@ -326,7 +321,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'          => array(
-					'description' => __( 'A unique identifier for the tool.', 'woocommerce' ),
+					'description' => __( 'A unique identifier for the tool.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'arg_options' => array(
@@ -334,7 +329,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'name'        => array(
-					'description' => __( 'Tool name.', 'woocommerce' ),
+					'description' => __( 'Tool name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'arg_options' => array(
@@ -342,7 +337,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'action'      => array(
-					'description' => __( 'What running the tool will do.', 'woocommerce' ),
+					'description' => __( 'What running the tool will do.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'arg_options' => array(
@@ -350,7 +345,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'description' => array(
-					'description' => __( 'Tool description.', 'woocommerce' ),
+					'description' => __( 'Tool description.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'arg_options' => array(
@@ -358,12 +353,12 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'success'     => array(
-					'description' => __( 'Did the tool run successfully?', 'woocommerce' ),
+					'description' => __( 'Did the tool run successfully?', 'classic-commerce' ),
 					'type'        => 'boolean',
 					'context'     => array( 'edit' ),
 				),
 				'message'     => array(
-					'description' => __( 'Tool return message.', 'woocommerce' ),
+					'description' => __( 'Tool return message.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'edit' ),
 					'arg_options' => array(
@@ -428,12 +423,12 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				}
 
 				WC_Cache_Helper::get_transient_version( 'shipping', true );
-				$message = __( 'Product transients cleared', 'woocommerce' );
+				$message = __( 'Product transients cleared', 'classic-commerce' );
 				break;
 
 			case 'clear_expired_transients':
 				/* translators: %d: amount of expired transients */
-				$message = sprintf( __( '%d transients rows cleared', 'woocommerce' ), wc_delete_expired_transients() );
+				$message = sprintf( __( '%d transients rows cleared', 'classic-commerce' ), wc_delete_expired_transients() );
 				break;
 
 			case 'delete_orphaned_variations':
@@ -447,7 +442,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					)
 				);
 				/* translators: %d: amount of orphaned variations */
-				$message = sprintf( __( '%d orphaned variations deleted', 'woocommerce' ), $result );
+				$message = sprintf( __( '%d orphaned variations deleted', 'classic-commerce' ), $result );
 				break;
 
 			case 'clear_expired_download_permissions':
@@ -462,7 +457,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					)
 				);
 				/* translators: %d: amount of permissions */
-				$message = sprintf( __( '%d permissions deleted', 'woocommerce' ), $result );
+				$message = sprintf( __( '%d permissions deleted', 'classic-commerce' ), $result );
 				break;
 
 			case 'add_order_indexes':
@@ -482,14 +477,14 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				$rows += $wpdb->query( $wpdb->prepare( $sql, '_shipping_address_index', '_shipping_first_name', '_shipping_last_name', '_shipping_address_index', '_shipping_last_name' ) ); // WPCS: unprepared SQL ok.
 
 				/* translators: %d: amount of indexes */
-				$message = sprintf( __( '%d indexes added', 'woocommerce' ), $rows );
+				$message = sprintf( __( '%d indexes added', 'classic-commerce' ), $rows );
 				break;
 
 			case 'reset_roles':
 				// Remove then re-add caps and roles.
 				WC_Install::remove_roles();
 				WC_Install::create_roles();
-				$message = __( 'Roles successfully reset', 'woocommerce' );
+				$message = __( 'Roles successfully reset', 'classic-commerce' );
 				break;
 
 			case 'recount_terms':
@@ -507,7 +502,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 					)
 				);
 				_wc_term_recount( $product_tags, get_taxonomy( 'product_tag' ), true, false );
-				$message = __( 'Terms successfully recounted', 'woocommerce' );
+				$message = __( 'Terms successfully recounted', 'classic-commerce' );
 				break;
 
 			case 'clear_sessions':
@@ -515,34 +510,24 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				$result = absint( $wpdb->query( "DELETE FROM {$wpdb->usermeta} WHERE meta_key='_woocommerce_persistent_cart_" . get_current_blog_id() . "';" ) ); // WPCS: unprepared SQL ok.
 				wp_cache_flush();
 				/* translators: %d: amount of sessions */
-				$message = sprintf( __( 'Deleted all active sessions, and %d saved carts.', 'woocommerce' ), absint( $result ) );
+				$message = sprintf( __( 'Deleted all active sessions, and %d saved carts.', 'classic-commerce' ), absint( $result ) );
 				break;
 
 			case 'install_pages':
 				WC_Install::create_pages();
-				$message = __( 'All missing WooCommerce pages successfully installed', 'woocommerce' );
+				$message = __( 'All missing WooCommerce pages successfully installed', 'classic-commerce' );
 				break;
 
 			case 'delete_taxes':
 				$wpdb->query( "TRUNCATE TABLE {$wpdb->prefix}woocommerce_tax_rates;" );
 				$wpdb->query( "TRUNCATE TABLE {$wpdb->prefix}woocommerce_tax_rate_locations;" );
 				WC_Cache_Helper::incr_cache_prefix( 'taxes' );
-				$message = __( 'Tax rates successfully deleted', 'woocommerce' );
+				$message = __( 'Tax rates successfully deleted', 'classic-commerce' );
 				break;
-
-			case 'reset_tracking':
-				if ( ! class_exists( 'WC_Tracker' ) ) {
-					include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
-				}
-				WC_Tracker::opt_out_request();
-				delete_option( 'woocommerce_allow_tracking' );
-				WC_Admin_Notices::add_notice( 'tracking' );
-				$message = __( 'Usage tracking settings successfully reset.', 'woocommerce' );
-				break;
-
+        
 			case 'regenerate_thumbnails':
 				WC_Regenerate_Images::queue_image_regeneration();
-				$message = __( 'Thumbnail regeneration has been scheduled to run in the background.', 'woocommerce' );
+				$message = __( 'Thumbnail regeneration has been scheduled to run in the background.', 'classic-commerce' );
 				break;
 
 			case 'db_update_routine':
@@ -550,7 +535,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 				// Used to fire an action added in WP_Background_Process::_construct() that calls WP_Background_Process::handle_cron_healthcheck().
 				// This method will make sure the database updates are executed even if cron is disabled. Nothing will happen if the updates are already running.
 				do_action( 'wp_' . $blog_id . '_wc_updater_cron' );
-				$message = __( 'Database upgrade routine has been scheduled to run in the background.', 'woocommerce' );
+				$message = __( 'Database upgrade routine has been scheduled to run in the background.', 'classic-commerce' );
 				break;
 
 			default:
@@ -564,13 +549,13 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 						$callback_string = is_array( $callback ) ? get_class( $callback[0] ) . '::' . $callback[1] : $callback;
 						$ran             = false;
 						/* translators: %s: callback string */
-						$message = sprintf( __( 'There was an error calling %s', 'woocommerce' ), $callback_string );
+						$message = sprintf( __( 'There was an error calling %s', 'classic-commerce' ), $callback_string );
 					} else {
-						$message = __( 'Tool ran.', 'woocommerce' );
+						$message = __( 'Tool ran.', 'classic-commerce' );
 					}
 				} else {
 					$ran     = false;
-					$message = __( 'There was an error calling this tool. There is no callback present.', 'woocommerce' );
+					$message = __( 'There was an error calling this tool. There is no callback present.', 'classic-commerce' );
 				}
 				break;
 		}

@@ -2,18 +2,18 @@
 
 <div class="wrap woocommerce wc_addons_wrap wc-helper">
 	<?php require WC_Helper::get_view_filename( 'html-section-nav.php' ); ?>
-	<h1 class="screen-reader-text"><?php _e( 'WooCommerce Extensions', 'woocommerce' ); ?></h1>
+	<h1 class="screen-reader-text"><?php _e( 'WooCommerce Extensions', 'classic-commerce' ); ?></h1>
 
 	<?php require WC_Helper::get_view_filename( 'html-section-notices.php' ); ?>
 
 	<div class="subscriptions-header">
-		<h2><?php _e( 'Subscriptions', 'woocommerce' ); ?></h2>
+		<h2><?php _e( 'Subscriptions', 'classic-commerce' ); ?></h2>
 		<?php require WC_Helper::get_view_filename( 'html-section-account.php' ); ?>
-		<p><?php printf( __( 'Below is a list of extensions available on your WooCommerce.com account. To receive extension updates please make sure the extension is installed, and its subscription activated and connected to your WooCommerce.com account. Extensions can be activated from the <a href="%s">Plugins</a> screen.', 'woocommerce' ), admin_url( 'plugins.php' ) ); ?></p>
+		<p><?php printf( __( 'Below is a list of extensions available on your WooCommerce.com account. To receive extension updates please make sure the extension is installed, and its subscription activated and connected to your WooCommerce.com account. Extensions can be activated from the <a href="%s">Plugins</a> screen.', 'classic-commerce' ), admin_url( 'plugins.php' ) ); ?></p>
 	</div>
 
 	<ul class="subscription-filter">
-		<label><?php _e( 'Sort by:', 'woocommerce' ); ?> <span class="chevron dashicons dashicons-arrow-up-alt2"></span></label>
+		<label><?php _e( 'Sort by:', 'classic-commerce' ); ?> <span class="chevron dashicons dashicons-arrow-up-alt2"></span></label>
 		<?php
 			$filters        = array_keys( WC_Helper::get_filters() );
 			$last_filter    = array_pop( $filters );
@@ -55,26 +55,26 @@
 						<div class="wp-list-table__ext-description">
 							<?php if ( $subscription['lifetime'] ) : ?>
 								<span class="renews">
-									<?php _e( 'Lifetime Subscription', 'woocommerce' ); ?>
+									<?php _e( 'Lifetime Subscription', 'classic-commerce' ); ?>
 								</span>
 							<?php elseif ( $subscription['expired'] ) : ?>
 								<span class="renews">
-									<strong><?php _e( 'Expired :(', 'woocommerce' ); ?></strong>
+									<strong><?php _e( 'Expired :(', 'classic-commerce' ); ?></strong>
 									<?php echo date_i18n( 'F jS, Y', $subscription['expires'] ); ?>
 								</span>
 							<?php elseif ( $subscription['autorenew'] ) : ?>
 								<span class="renews">
-									<?php _e( 'Auto renews on:', 'woocommerce' ); ?>
+									<?php _e( 'Auto renews on:', 'classic-commerce' ); ?>
 									<?php echo date_i18n( 'F jS, Y', $subscription['expires'] ); ?>
 								</span>
 							<?php elseif ( $subscription['expiring'] ) : ?>
 								<span class="renews">
-									<strong><?php _e( 'Expiring soon!', 'woocommerce' ); ?></strong>
+									<strong><?php _e( 'Expiring soon!', 'classic-commerce' ); ?></strong>
 									<?php echo date_i18n( 'F jS, Y', $subscription['expires'] ); ?>
 								</span>
 							<?php else : ?>
 								<span class="renews">
-									<?php _e( 'Expires on:', 'woocommerce' ); ?>
+									<?php _e( 'Expires on:', 'classic-commerce' ); ?>
 									<?php echo date_i18n( 'F jS, Y', $subscription['expires'] ); ?>
 								</span>
 							<?php endif; ?>
@@ -84,19 +84,19 @@
 								<?php
 								if ( ! $subscription['active'] && $subscription['maxed'] ) {
 									/* translators: %1$d: sites active, %2$d max sites active */
-									printf( __( 'Subscription: Not available - %1$d of %2$d already in use', 'woocommerce' ), absint( $subscription['sites_active'] ), absint( $subscription['sites_max'] ) );
+									printf( __( 'Subscription: Not available - %1$d of %2$d already in use', 'classic-commerce' ), absint( $subscription['sites_active'] ), absint( $subscription['sites_max'] ) );
 								} elseif ( $subscription['sites_max'] > 0 ) {
 									/* translators: %1$d: sites active, %2$d max sites active */
-									printf( __( 'Subscription: Using %1$d of %2$d sites available', 'woocommerce' ), absint( $subscription['sites_active'] ), absint( $subscription['sites_max'] ) );
+									printf( __( 'Subscription: Using %1$d of %2$d sites available', 'classic-commerce' ), absint( $subscription['sites_active'] ), absint( $subscription['sites_max'] ) );
 								} else {
-									_e( 'Subscription: Unlimited', 'woocommerce' );
+									_e( 'Subscription: Unlimited', 'classic-commerce' );
 								}
 
 								// Check shared.
 								if ( ! empty( $subscription['is_shared'] ) && ! empty( $subscription['owner_email'] ) ) {
-									printf( '</br>' . __( 'Shared by %s', 'woocommerce' ), esc_html( $subscription['owner_email'] ) );
+									printf( '</br>' . __( 'Shared by %s', 'classic-commerce' ), esc_html( $subscription['owner_email'] ) );
 								} elseif ( isset( $subscription['master_user_email'] ) ) {
-									printf( '</br>' . __( 'Shared by %s', 'woocommerce' ), esc_html( $subscription['master_user_email'] ) );
+									printf( '</br>' . __( 'Shared by %s', 'classic-commerce' ), esc_html( $subscription['master_user_email'] ) );
 								}
 								?>
 							</span>
@@ -104,35 +104,35 @@
 					</td>
 					<td class="wp-list-table__ext-actions">
 						<?php if ( ! $subscription['active'] && $subscription['maxed'] ) : ?>
-							<a class="button" href="https://woocommerce.com/my-account/my-subscriptions/" target="_blank"><?php _e( 'Upgrade', 'woocommerce' ); ?></a>
+							<a class="button" href="https://woocommerce.com/my-account/my-subscriptions/" target="_blank"><?php _e( 'Upgrade', 'classic-commerce' ); ?></a>
 						<?php elseif ( ! $subscription['local']['installed'] && ! $subscription['expired'] ) : ?>
-							<a class="button <?php echo empty( $subscription['download_primary'] ) ? 'button-secondary' : ''; ?>" href="<?php echo esc_url( $subscription['download_url'] ); ?>" target="_blank"><?php _e( 'Download', 'woocommerce' ); ?></a>
+							<a class="button <?php echo empty( $subscription['download_primary'] ) ? 'button-secondary' : ''; ?>" href="<?php echo esc_url( $subscription['download_url'] ); ?>" target="_blank"><?php _e( 'Download', 'classic-commerce' ); ?></a>
 						<?php elseif ( $subscription['active'] ) : ?>
 							<span class="form-toggle__wrapper">
-								<a href="<?php echo esc_url( $subscription['deactivate_url'] ); ?>" class="form-toggle active is-compact" role="link" aria-checked="true"><?php _e( 'Active', 'woocommerce' ); ?></a>
+								<a href="<?php echo esc_url( $subscription['deactivate_url'] ); ?>" class="form-toggle active is-compact" role="link" aria-checked="true"><?php _e( 'Active', 'classic-commerce' ); ?></a>
 								<label class="form-toggle__label" for="activate-extension">
 									<span class="form-toggle__label-content">
-										<label for="activate-extension"><?php _e( 'Active', 'woocommerce' ); ?></label>
+										<label for="activate-extension"><?php _e( 'Active', 'classic-commerce' ); ?></label>
 									</span>
 									<span class="form-toggle__switch"></span>
 								</label>
 							</span>
 						<?php elseif ( ! $subscription['expired'] ) : ?>
 							<span class="form-toggle__wrapper">
-								<a href="<?php echo esc_url( $subscription['activate_url'] ); ?>" class="form-toggle is-compact" role="link" aria-checked="false"><?php _e( 'Inactive', 'woocommerce' ); ?></a>
+								<a href="<?php echo esc_url( $subscription['activate_url'] ); ?>" class="form-toggle is-compact" role="link" aria-checked="false"><?php _e( 'Inactive', 'classic-commerce' ); ?></a>
 								<label class="form-toggle__label" for="activate-extension">
 									<span class="form-toggle__label-content">
-										<label for="activate-extension"><?php _e( 'Inactive', 'woocommerce' ); ?></label>
+										<label for="activate-extension"><?php _e( 'Inactive', 'classic-commerce' ); ?></label>
 									</span>
 									<span class="form-toggle__switch"></span>
 								</label>
 							</span>
 						<?php else : ?>
 							<span class="form-toggle__wrapper">
-								<span class="form-toggle disabled is-compact"><?php _e( 'Inactive', 'woocommerce' ); ?></span>
+								<span class="form-toggle disabled is-compact"><?php _e( 'Inactive', 'classic-commerce' ); ?></span>
 								<label class="form-toggle__label" for="activate-extension">
 									<span class="form-toggle__label-content">
-										<label for="activate-extension"><?php _e( 'Inactive', 'woocommerce' ); ?></label>
+										<label for="activate-extension"><?php _e( 'Inactive', 'classic-commerce' ); ?></label>
 									</span>
 								</label>
 							</span>
@@ -159,14 +159,14 @@
 			<?php endforeach; ?>
 		<?php else : ?>
 			<tr>
-				<td colspan="3"><em><?php _e( 'Could not find any subscriptions on your WooCommerce.com account', 'woocommerce' ); ?></td>
+				<td colspan="3"><em><?php _e( 'Could not find any subscriptions on your WooCommerce.com account', 'classic-commerce' ); ?></td>
 			</tr>
 		<?php endif; ?>
 		</tbody>
 	</table>
 
 	<?php if ( ! empty( $no_subscriptions ) ) : ?>
-		<h2><?php _e( 'Installed Extensions without a Subscription', 'woocommerce' ); ?></h2>
+		<h2><?php _e( 'Installed Extensions without a Subscription', 'classic-commerce' ); ?></h2>
 		<p>Below is a list of WooCommerce.com products available on your site - but are either out-dated or do not have a valid subscription.</p>
 
 		<table class="wp-list-table widefat fixed striped">
@@ -183,10 +183,10 @@
 						</td>
 						<td class="wp-list-table__ext-actions">
 							<span class="form-toggle__wrapper">
-								<span class="form-toggle disabled is-compact" ><?php _e( 'Inactive', 'woocommerce' ); ?></span>
+								<span class="form-toggle disabled is-compact" ><?php _e( 'Inactive', 'classic-commerce' ); ?></span>
 								<label class="form-toggle__label" for="activate-extension">
 									<span class="form-toggle__label-content">
-										<label for="activate-extension"><?php _e( 'Inactive', 'woocommerce' ); ?></label>
+										<label for="activate-extension"><?php _e( 'Inactive', 'classic-commerce' ); ?></label>
 									</span>
 								</label>
 							</span>

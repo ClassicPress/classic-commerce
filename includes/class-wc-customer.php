@@ -120,7 +120,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Prefix for action and filter hooks on data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_hook_prefix() {
@@ -333,7 +333,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the customer's username.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -344,7 +344,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the customer's email.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -355,7 +355,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's first name.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -366,7 +366,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's last name.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -377,7 +377,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's display name.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -388,7 +388,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return customer's user role.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return string
 	 */
@@ -399,7 +399,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the date this customer was created.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null object if the date is set or null if there is no date.
 	 */
@@ -410,7 +410,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Return the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null object if the date is set or null if there is no date.
 	 */
@@ -421,7 +421,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Gets a prop for a getter method.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $prop Name of prop to get.
 	 * @param  string $address billing or shipping.
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'. What the value is for. Valid values are view and edit.
@@ -443,7 +443,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Get billing.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -574,7 +574,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Get shipping.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return array
 	 */
@@ -685,7 +685,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Is the user a paying customer?
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are 'view' and 'edit'.
 	 * @return bool
 	 */
@@ -717,7 +717,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 */
 	public function set_email( $value ) {
 		if ( $value && ! is_email( $value ) ) {
-			$this->error( 'customer_invalid_email', __( 'Invalid email address', 'woocommerce' ) );
+			$this->error( 'customer_invalid_email', __( 'Invalid email address', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'email', sanitize_email( $value ) );
 	}
@@ -750,7 +750,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 */
 	public function set_display_name( $display_name ) {
 		/* translators: 1: first name 2: last name */
-		$this->set_prop( 'display_name', is_email( $display_name ) ? sprintf( _x( '%1$s %2$s', 'display name', 'woocommerce' ), $this->get_first_name(), $this->get_last_name() ) : $display_name );
+		$this->set_prop( 'display_name', is_email( $display_name ) ? sprintf( _x( '%1$s %2$s', 'display name', 'classic-commerce' ), $this->get_first_name(), $this->get_last_name() ) : $display_name );
 	}
 
 	/**
@@ -763,7 +763,7 @@ class WC_Customer extends WC_Legacy_Customer {
 		global $wp_roles;
 
 		if ( $role && ! empty( $wp_roles->roles ) && ! in_array( $role, array_keys( $wp_roles->roles ), true ) ) {
-			$this->error( 'customer_invalid_role', __( 'Invalid role', 'woocommerce' ) );
+			$this->error( 'customer_invalid_role', __( 'Invalid role', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'role', $role );
 	}
@@ -771,7 +771,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_created( $date = null ) {
@@ -781,7 +781,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	/**
 	 * Set the date this customer was last updated.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string|integer|null $date UTC timestamp, or ISO 8601 DateTime. If the DateTime string has no timezone or offset, WordPress site timezone will be assumed. Null if their is no date.
 	 */
 	public function set_date_modified( $date = null ) {
@@ -959,7 +959,7 @@ class WC_Customer extends WC_Legacy_Customer {
 	 */
 	public function set_billing_email( $value ) {
 		if ( $value && ! is_email( $value ) ) {
-			$this->error( 'customer_invalid_billing_email', __( 'Invalid billing email address', 'woocommerce' ) );
+			$this->error( 'customer_invalid_billing_email', __( 'Invalid billing email address', 'classic-commerce' ) );
 		}
 		$this->set_address_prop( 'email', 'billing', sanitize_email( $value ) );
 	}

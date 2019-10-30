@@ -51,7 +51,7 @@ class WC_Logger implements WC_Logger_Interface {
 						__METHOD__,
 						sprintf(
 							/* translators: 1: class name 2: WC_Log_Handler_Interface */
-							__( 'The provided handler %1$s does not implement %2$s.', 'woocommerce' ),
+							__( 'The provided handler %1$s does not implement %2$s.', 'classic-commerce' ),
 							'<code>' . esc_html( is_object( $handler ) ? get_class( $handler ) : $handler ) . '</code>',
 							'<code>WC_Log_Handler_Interface</code>'
 						),
@@ -129,7 +129,7 @@ class WC_Logger implements WC_Logger_Interface {
 	public function log( $level, $message, $context = array() ) {
 		if ( ! WC_Log_Levels::is_valid_level( $level ) ) {
 			/* translators: 1: WC_Logger::log 2: level */
-			wc_doing_it_wrong( __METHOD__, sprintf( __( '%1$s was called with an invalid level "%2$s".', 'woocommerce' ), '<code>WC_Logger::log</code>', $level ), '3.0' );
+			wc_doing_it_wrong( __METHOD__, sprintf( __( '%1$s was called with an invalid level "%2$s".', 'classic-commerce' ), '<code>WC_Logger::log</code>', $level ), '3.0' );
 		}
 
 		if ( $this->should_handle( $level ) ) {
@@ -282,7 +282,7 @@ class WC_Logger implements WC_Logger_Interface {
 	/**
 	 * Clear all logs older than a defined number of days. Defaults to 30 days.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 */
 	public function clear_expired_logs() {
 		$days      = absint( apply_filters( 'woocommerce_logger_days_to_retain_logs', 30 ) );

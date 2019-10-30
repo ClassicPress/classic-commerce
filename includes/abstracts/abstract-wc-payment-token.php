@@ -22,7 +22,7 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-payment-token.php'
  *
  * @class       WC_Payment_Token
  * @version     3.0.0
- * @since       2.6.0
+ * @since       WC-2.6.0
  * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
@@ -89,7 +89,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	/**
 	 * Returns the raw payment token.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $context Context in which to call this.
 	 * @return string Raw token
 	 */
@@ -101,7 +101,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	 * Returns the type of this payment token (CC, eCheck, or something else).
 	 * Overwritten by child classes.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $deprecated Deprecated since WooCommerce 3.0.
 	 * @return string Payment Token Type (CC, eCheck)
 	 */
@@ -113,7 +113,7 @@ abstract class WC_Payment_Token extends WC_Legacy_Payment_Token {
 	 * Get type to display to user.
 	 * Get's overwritten by child classes.
 	 *
-	 * @since  2.6.0
+	 * @since  WC-2.6.0
 	 * @param  string $deprecated Deprecated since WooCommerce 3.0.
 	 * @return string
 	 */

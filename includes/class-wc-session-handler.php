@@ -63,7 +63,7 @@ class WC_Session_Handler extends WC_Session {
 	/**
 	 * Init hooks and session data.
 	 *
-	 * @since 3.3.0
+	 * @since WC-3.3.0
 	 */
 	public function init() {
 		$cookie = $this->get_session_cookie();

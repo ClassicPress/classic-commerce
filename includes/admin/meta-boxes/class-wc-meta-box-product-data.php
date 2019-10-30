@@ -60,15 +60,15 @@ class WC_Meta_Box_Product_Data {
 				'virtual'      => array(
 					'id'            => '_virtual',
 					'wrapper_class' => 'show_if_simple',
-					'label'         => __( 'Virtual', 'woocommerce' ),
-					'description'   => __( 'Virtual products are intangible and are not shipped.', 'woocommerce' ),
+					'label'         => __( 'Virtual', 'classic-commerce' ),
+					'description'   => __( 'Virtual products are intangible and are not shipped.', 'classic-commerce' ),
 					'default'       => 'no',
 				),
 				'downloadable' => array(
 					'id'            => '_downloadable',
 					'wrapper_class' => 'show_if_simple',
-					'label'         => __( 'Downloadable', 'woocommerce' ),
-					'description'   => __( 'Downloadable products give access to a file upon purchase.', 'woocommerce' ),
+					'label'         => __( 'Downloadable', 'classic-commerce' ),
+					'description'   => __( 'Downloadable products give access to a file upon purchase.', 'classic-commerce' ),
 					'default'       => 'no',
 				),
 			)
@@ -84,43 +84,43 @@ class WC_Meta_Box_Product_Data {
 		$tabs = apply_filters(
 			'woocommerce_product_data_tabs', array(
 				'general'        => array(
-					'label'    => __( 'General', 'woocommerce' ),
+					'label'    => __( 'General', 'classic-commerce' ),
 					'target'   => 'general_product_data',
 					'class'    => array( 'hide_if_grouped' ),
 					'priority' => 10,
 				),
 				'inventory'      => array(
-					'label'    => __( 'Inventory', 'woocommerce' ),
+					'label'    => __( 'Inventory', 'classic-commerce' ),
 					'target'   => 'inventory_product_data',
 					'class'    => array( 'show_if_simple', 'show_if_variable', 'show_if_grouped', 'show_if_external' ),
 					'priority' => 20,
 				),
 				'shipping'       => array(
-					'label'    => __( 'Shipping', 'woocommerce' ),
+					'label'    => __( 'Shipping', 'classic-commerce' ),
 					'target'   => 'shipping_product_data',
 					'class'    => array( 'hide_if_virtual', 'hide_if_grouped', 'hide_if_external' ),
 					'priority' => 30,
 				),
 				'linked_product' => array(
-					'label'    => __( 'Linked Products', 'woocommerce' ),
+					'label'    => __( 'Linked Products', 'classic-commerce' ),
 					'target'   => 'linked_product_data',
 					'class'    => array(),
 					'priority' => 40,
 				),
 				'attribute'      => array(
-					'label'    => __( 'Attributes', 'woocommerce' ),
+					'label'    => __( 'Attributes', 'classic-commerce' ),
 					'target'   => 'product_attributes',
 					'class'    => array(),
 					'priority' => 50,
 				),
 				'variations'     => array(
-					'label'    => __( 'Variations', 'woocommerce' ),
+					'label'    => __( 'Variations', 'classic-commerce' ),
 					'target'   => 'variable_product_options',
 					'class'    => array( 'variations_tab', 'show_if_variable' ),
 					'priority' => 60,
 				),
 				'advanced'       => array(
-					'label'    => __( 'Advanced', 'woocommerce' ),
+					'label'    => __( 'Advanced', 'classic-commerce' ),
 					'target'   => 'advanced_product_data',
 					'class'    => array(),
 					'priority' => 70,
@@ -333,7 +333,7 @@ class WC_Meta_Box_Product_Data {
 		if ( isset( $_POST['_stock'] ) ) {
 			if ( isset( $_POST['_original_stock'] ) && wc_stock_amount( $product->get_stock_quantity( 'edit' ) ) !== wc_stock_amount( $_POST['_original_stock'] ) ) {
 				/* translators: 1: product ID 2: quantity in stock */
-				WC_Admin_Meta_Boxes::add_error( sprintf( __( 'The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.', 'woocommerce' ), $product->get_id(), $product->get_stock_quantity( 'edit' ) ) );
+				WC_Admin_Meta_Boxes::add_error( sprintf( __( 'The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.', 'classic-commerce' ), $product->get_id(), $product->get_stock_quantity( 'edit' ) ) );
 			} else {
 				$stock = wc_stock_amount( wp_unslash( $_POST['_stock'] ) );
 			}
@@ -429,7 +429,7 @@ class WC_Meta_Box_Product_Data {
 				if ( isset( $_POST['variable_stock'], $_POST['variable_stock'][ $i ] ) ) {
 					if ( isset( $_POST['variable_original_stock'], $_POST['variable_original_stock'][ $i ] ) && wc_stock_amount( $variation->get_stock_quantity( 'edit' ) ) !== wc_stock_amount( $_POST['variable_original_stock'][ $i ] ) ) {
 						/* translators: 1: product ID 2: quantity in stock */
-						WC_Admin_Meta_Boxes::add_error( sprintf( __( 'The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.', 'woocommerce' ), $variation->get_id(), $variation->get_stock_quantity( 'edit' ) ) );
+						WC_Admin_Meta_Boxes::add_error( sprintf( __( 'The stock has not been updated because the value has changed since editing. Product %1$d has %2$d units in stock.', 'classic-commerce' ), $variation->get_id(), $variation->get_stock_quantity( 'edit' ) ) );
 					} else {
 						$stock = wc_stock_amount( $_POST['variable_stock'][ $i ] );
 					}

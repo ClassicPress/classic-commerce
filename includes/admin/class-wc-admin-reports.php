@@ -44,34 +44,34 @@ class WC_Admin_Reports {
 	public static function get_reports() {
 		$reports = array(
 			'orders'    => array(
-				'title'   => __( 'Orders', 'woocommerce' ),
+				'title'   => __( 'Orders', 'classic-commerce' ),
 				'reports' => array(
 					'sales_by_date'     => array(
-						'title'       => __( 'Sales by date', 'woocommerce' ),
+						'title'       => __( 'Sales by date', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'sales_by_product'  => array(
-						'title'       => __( 'Sales by product', 'woocommerce' ),
+						'title'       => __( 'Sales by product', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'sales_by_category' => array(
-						'title'       => __( 'Sales by category', 'woocommerce' ),
+						'title'       => __( 'Sales by category', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'coupon_usage'      => array(
-						'title'       => __( 'Coupons by date', 'woocommerce' ),
+						'title'       => __( 'Coupons by date', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'downloads'         => array(
-						'title'       => __( 'Customer downloads', 'woocommerce' ),
+						'title'       => __( 'Customer downloads', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
@@ -79,16 +79,16 @@ class WC_Admin_Reports {
 				),
 			),
 			'customers' => array(
-				'title'   => __( 'Customers', 'woocommerce' ),
+				'title'   => __( 'Customers', 'classic-commerce' ),
 				'reports' => array(
 					'customers'     => array(
-						'title'       => __( 'Customers vs. guests', 'woocommerce' ),
+						'title'       => __( 'Customers vs. guests', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'customer_list' => array(
-						'title'       => __( 'Customer list', 'woocommerce' ),
+						'title'       => __( 'Customer list', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
@@ -96,22 +96,22 @@ class WC_Admin_Reports {
 				),
 			),
 			'stock'     => array(
-				'title'   => __( 'Stock', 'woocommerce' ),
+				'title'   => __( 'Stock', 'classic-commerce' ),
 				'reports' => array(
 					'low_in_stock' => array(
-						'title'       => __( 'Low in stock', 'woocommerce' ),
+						'title'       => __( 'Low in stock', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'out_of_stock' => array(
-						'title'       => __( 'Out of stock', 'woocommerce' ),
+						'title'       => __( 'Out of stock', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'most_stocked' => array(
-						'title'       => __( 'Most stocked', 'woocommerce' ),
+						'title'       => __( 'Most stocked', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
@@ -122,16 +122,16 @@ class WC_Admin_Reports {
 
 		if ( wc_tax_enabled() ) {
 			$reports['taxes'] = array(
-				'title'   => __( 'Taxes', 'woocommerce' ),
+				'title'   => __( 'Taxes', 'classic-commerce' ),
 				'reports' => array(
 					'taxes_by_code' => array(
-						'title'       => __( 'Taxes by code', 'woocommerce' ),
+						'title'       => __( 'Taxes by code', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),
 					),
 					'taxes_by_date' => array(
-						'title'       => __( 'Taxes by date', 'woocommerce' ),
+						'title'       => __( 'Taxes by date', 'classic-commerce' ),
 						'description' => '',
 						'hide_title'  => true,
 						'callback'    => array( __CLASS__, 'get_report' ),

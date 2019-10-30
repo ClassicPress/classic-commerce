@@ -107,21 +107,21 @@ class WC_Admin_Taxonomies {
 	public function add_category_fields() {
 		?>
 		<div class="form-field term-display-type-wrap">
-			<label for="display_type"><?php _e( 'Display type', 'woocommerce' ); ?></label>
+			<label for="display_type"><?php _e( 'Display type', 'classic-commerce' ); ?></label>
 			<select id="display_type" name="display_type" class="postform">
-				<option value=""><?php _e( 'Default', 'woocommerce' ); ?></option>
-				<option value="products"><?php _e( 'Products', 'woocommerce' ); ?></option>
-				<option value="subcategories"><?php _e( 'Subcategories', 'woocommerce' ); ?></option>
-				<option value="both"><?php _e( 'Both', 'woocommerce' ); ?></option>
+				<option value=""><?php _e( 'Default', 'classic-commerce' ); ?></option>
+				<option value="products"><?php _e( 'Products', 'classic-commerce' ); ?></option>
+				<option value="subcategories"><?php _e( 'Subcategories', 'classic-commerce' ); ?></option>
+				<option value="both"><?php _e( 'Both', 'classic-commerce' ); ?></option>
 			</select>
 		</div>
 		<div class="form-field term-thumbnail-wrap">
-			<label><?php _e( 'Thumbnail', 'woocommerce' ); ?></label>
+			<label><?php _e( 'Thumbnail', 'classic-commerce' ); ?></label>
 			<div id="product_cat_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( wc_placeholder_img_src() ); ?>" width="60px" height="60px" /></div>
 			<div style="line-height: 60px;">
 				<input type="hidden" id="product_cat_thumbnail_id" name="product_cat_thumbnail_id" />
-				<button type="button" class="upload_image_button button"><?php _e( 'Upload/Add image', 'woocommerce' ); ?></button>
-				<button type="button" class="remove_image_button button"><?php _e( 'Remove image', 'woocommerce' ); ?></button>
+				<button type="button" class="upload_image_button button"><?php _e( 'Upload/Add image', 'classic-commerce' ); ?></button>
+				<button type="button" class="remove_image_button button"><?php _e( 'Remove image', 'classic-commerce' ); ?></button>
 			</div>
 			<script type="text/javascript">
 
@@ -145,9 +145,9 @@ class WC_Admin_Taxonomies {
 
 					// Create the media frame.
 					file_frame = wp.media.frames.downloadable_file = wp.media({
-						title: '<?php _e( 'Choose an image', 'woocommerce' ); ?>',
+						title: '<?php _e( 'Choose an image', 'classic-commerce' ); ?>',
 						button: {
-							text: '<?php _e( 'Use image', 'woocommerce' ); ?>'
+							text: '<?php _e( 'Use image', 'classic-commerce' ); ?>'
 						},
 						multiple: false
 					});
@@ -214,24 +214,24 @@ class WC_Admin_Taxonomies {
 		}
 		?>
 		<tr class="form-field term-display-type-wrap">
-			<th scope="row" valign="top"><label><?php _e( 'Display type', 'woocommerce' ); ?></label></th>
+			<th scope="row" valign="top"><label><?php _e( 'Display type', 'classic-commerce' ); ?></label></th>
 			<td>
 				<select id="display_type" name="display_type" class="postform">
-					<option value="" <?php selected( '', $display_type ); ?>><?php _e( 'Default', 'woocommerce' ); ?></option>
-					<option value="products" <?php selected( 'products', $display_type ); ?>><?php _e( 'Products', 'woocommerce' ); ?></option>
-					<option value="subcategories" <?php selected( 'subcategories', $display_type ); ?>><?php _e( 'Subcategories', 'woocommerce' ); ?></option>
-					<option value="both" <?php selected( 'both', $display_type ); ?>><?php _e( 'Both', 'woocommerce' ); ?></option>
+					<option value="" <?php selected( '', $display_type ); ?>><?php _e( 'Default', 'classic-commerce' ); ?></option>
+					<option value="products" <?php selected( 'products', $display_type ); ?>><?php _e( 'Products', 'classic-commerce' ); ?></option>
+					<option value="subcategories" <?php selected( 'subcategories', $display_type ); ?>><?php _e( 'Subcategories', 'classic-commerce' ); ?></option>
+					<option value="both" <?php selected( 'both', $display_type ); ?>><?php _e( 'Both', 'classic-commerce' ); ?></option>
 				</select>
 			</td>
 		</tr>
 		<tr class="form-field term-thumbnail-wrap">
-			<th scope="row" valign="top"><label><?php _e( 'Thumbnail', 'woocommerce' ); ?></label></th>
+			<th scope="row" valign="top"><label><?php _e( 'Thumbnail', 'classic-commerce' ); ?></label></th>
 			<td>
 				<div id="product_cat_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( $image ); ?>" width="60px" height="60px" /></div>
 				<div style="line-height: 60px;">
 					<input type="hidden" id="product_cat_thumbnail_id" name="product_cat_thumbnail_id" value="<?php echo $thumbnail_id; ?>" />
-					<button type="button" class="upload_image_button button"><?php _e( 'Upload/Add image', 'woocommerce' ); ?></button>
-					<button type="button" class="remove_image_button button"><?php _e( 'Remove image', 'woocommerce' ); ?></button>
+					<button type="button" class="upload_image_button button"><?php _e( 'Upload/Add image', 'classic-commerce' ); ?></button>
+					<button type="button" class="remove_image_button button"><?php _e( 'Remove image', 'classic-commerce' ); ?></button>
 				</div>
 				<script type="text/javascript">
 
@@ -255,9 +255,9 @@ class WC_Admin_Taxonomies {
 
 						// Create the media frame.
 						file_frame = wp.media.frames.downloadable_file = wp.media({
-							title: '<?php _e( 'Choose an image', 'woocommerce' ); ?>',
+							title: '<?php _e( 'Choose an image', 'classic-commerce' ); ?>',
 							button: {
-								text: '<?php _e( 'Use image', 'woocommerce' ); ?>'
+								text: '<?php _e( 'Use image', 'classic-commerce' ); ?>'
 							},
 							multiple: false
 						});
@@ -310,7 +310,7 @@ class WC_Admin_Taxonomies {
 	 * Description for product_cat page to aid users.
 	 */
 	public function product_cat_description() {
-		echo wpautop( __( 'Product categories for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the "screen options" link at the top-right of this page.', 'woocommerce' ) );
+		echo wpautop( __( 'Product categories for your store can be managed here. To change the order of categories on the front-end you can drag and drop to sort them. To see more categories listed click the "screen options" link at the top-right of this page.', 'classic-commerce' ) );
 	}
 
 	/**
@@ -319,15 +319,15 @@ class WC_Admin_Taxonomies {
 	public function product_cat_notes() {
 		$category_id   = get_option( 'default_product_cat', 0 );
 		$category      = get_term( $category_id, 'product_cat' );
-		$category_name = ( ! $category || is_wp_error( $category ) ) ? _x( 'Uncategorized', 'Default category slug', 'woocommerce' ) : $category->name;
+		$category_name = ( ! $category || is_wp_error( $category ) ) ? _x( 'Uncategorized', 'Default category slug', 'classic-commerce' ) : $category->name;
 		?>
 		<div class="form-wrap edit-term-notes">
 			<p>
-				<strong><?php _e( 'Note:', 'woocommerce' ); ?></strong><br>
+				<strong><?php _e( 'Note:', 'classic-commerce' ); ?></strong><br>
 				<?php
 					printf(
 						/* translators: %s: default category */
-						__( 'Deleting a category does not delete the products in that category. Instead, products that were only assigned to the deleted category are set to the category %s.', 'woocommerce' ),
+						__( 'Deleting a category does not delete the products in that category. Instead, products that were only assigned to the deleted category are set to the category %s.', 'classic-commerce' ),
 						'<strong>' . esc_html( $category_name ) . '</strong>'
 					);
 				?>
@@ -340,7 +340,7 @@ class WC_Admin_Taxonomies {
 	 * Description for shipping class page to aid users.
 	 */
 	public function product_attribute_description() {
-		echo wpautop( __( 'Attribute terms can be assigned to products and variations.<br/><br/><b>Note</b>: Deleting a term will remove it from all products and variations to which it has been assigned. Recreating a term will not automatically assign it back to products.', 'woocommerce' ) );
+		echo wpautop( __( 'Attribute terms can be assigned to products and variations.<br/><br/><b>Note</b>: Deleting a term will remove it from all products and variations to which it has been assigned. Recreating a term will not automatically assign it back to products.', 'classic-commerce' ) );
 	}
 
 	/**
@@ -357,7 +357,7 @@ class WC_Admin_Taxonomies {
 			unset( $columns['cb'] );
 		}
 
-		$new_columns['thumb'] = __( 'Image', 'woocommerce' );
+		$new_columns['thumb'] = __( 'Image', 'classic-commerce' );
 
 		$columns           = array_merge( $new_columns, $columns );
 		$columns['handle'] = '';
@@ -380,8 +380,8 @@ class WC_Admin_Taxonomies {
 				'<a href="%s" aria-label="%s">%s</a>',
 				wp_nonce_url( 'edit-tags.php?action=make_default&amp;taxonomy=product_cat&amp;tag_ID=' . absint( $term->term_id ), 'make_default_' . absint( $term->term_id ) ),
 				/* translators: %s: taxonomy term name */
-				esc_attr( sprintf( __( 'Make &#8220;%s&#8221; the default category', 'woocommerce' ), $term->name ) ),
-				__( 'Make default', 'woocommerce' )
+				esc_attr( sprintf( __( 'Make &#8220;%s&#8221; the default category', 'classic-commerce' ), $term->name ) ),
+				__( 'Make default', 'classic-commerce' )
 			);
 		}
 
@@ -416,7 +416,7 @@ class WC_Admin_Taxonomies {
 			$default_category_id = absint( get_option( 'default_product_cat', 0 ) );
 
 			if ( $default_category_id === $id ) {
-				$columns .= wc_help_tip( __( 'This is the default category and it cannot be deleted. It will be automatically assigned to products with no category.', 'woocommerce' ) );
+				$columns .= wc_help_tip( __( 'This is the default category and it cannot be deleted. It will be automatically assigned to products with no category.', 'classic-commerce' ) );
 			}
 
 			$thumbnail_id = get_woocommerce_term_meta( $id, 'thumbnail_id', true );
@@ -429,7 +429,7 @@ class WC_Admin_Taxonomies {
 
 			// Prevent esc_url from breaking spaces in urls for image embeds. Ref: https://core.trac.wordpress.org/ticket/23605
 			$image    = str_replace( ' ', '%20', $image );
-			$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'woocommerce' ) . '" class="wp-post-image" height="48" width="48" />';
+			$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'classic-commerce' ) . '" class="wp-post-image" height="48" width="48" />';
 		}
 		if ( 'handle' === $column ) {
 			$columns .= '<input type="hidden" name="term_id" value="' . esc_attr( $id ) . '" />';

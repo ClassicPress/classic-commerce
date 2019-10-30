@@ -111,7 +111,7 @@ class WC_Form_Handler {
 
 			// Validation: Required fields.
 			if ( ! empty( $field['required'] ) && empty( $_POST[ $key ] ) ) {
-				wc_add_notice( sprintf( __( '%s is a required field.', 'woocommerce' ), $field['label'] ), 'error' );
+				wc_add_notice( sprintf( __( '%s is a required field.', 'classic-commerce' ), $field['label'] ), 'error' );
 			}
 
 			if ( ! empty( $_POST[ $key ] ) ) {
@@ -124,21 +124,21 @@ class WC_Form_Handler {
 								$_POST[ $key ] = strtoupper( str_replace( ' ', '', $_POST[ $key ] ) );
 
 								if ( ! WC_Validation::is_postcode( $_POST[ $key ], $_POST[ $load_address . '_country' ] ) ) {
-									wc_add_notice( __( 'Please enter a valid postcode / ZIP.', 'woocommerce' ), 'error' );
+									wc_add_notice( __( 'Please enter a valid postcode / ZIP.', 'classic-commerce' ), 'error' );
 								} else {
 									$_POST[ $key ] = wc_format_postcode( $_POST[ $key ], $_POST[ $load_address . '_country' ] );
 								}
 								break;
 							case 'phone' :
 								if ( ! WC_Validation::is_phone( $_POST[ $key ] ) ) {
-									wc_add_notice( sprintf( __( '%s is not a valid phone number.', 'woocommerce' ), '<strong>' . $field['label'] . '</strong>' ), 'error' );
+									wc_add_notice( sprintf( __( '%s is not a valid phone number.', 'classic-commerce' ), '<strong>' . $field['label'] . '</strong>' ), 'error' );
 								}
 								break;
 							case 'email' :
 								$_POST[ $key ] = strtolower( $_POST[ $key ] );
 
 								if ( ! is_email( $_POST[ $key ] ) ) {
-									wc_add_notice( sprintf( __( '%s is not a valid email address.', 'woocommerce' ), '<strong>' . $field['label'] . '</strong>' ), 'error' );
+									wc_add_notice( sprintf( __( '%s is not a valid email address.', 'classic-commerce' ), '<strong>' . $field['label'] . '</strong>' ), 'error' );
 								}
 								break;
 						}
@@ -168,7 +168,7 @@ class WC_Form_Handler {
 				$customer->save();
 			}
 
-			wc_add_notice( __( 'Address changed successfully.', 'woocommerce' ) );
+			wc_add_notice( __( 'Address changed successfully.', 'classic-commerce' ) );
 
 			do_action( 'woocommerce_customer_save_address', $user_id, $load_address );
 
@@ -227,47 +227,47 @@ class WC_Form_Handler {
 
 		// Prevent display name to be changed to email.
 		if ( is_email( $account_display_name ) ) {
-			wc_add_notice( __( 'Display name cannot be changed to email address due to privacy concern.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Display name cannot be changed to email address due to privacy concern.', 'classic-commerce' ), 'error' );
 		}
 
 		// Handle required fields.
 		$required_fields = apply_filters( 'woocommerce_save_account_details_required_fields', array(
-			'account_first_name'    => __( 'First name', 'woocommerce' ),
-			'account_last_name'     => __( 'Last name', 'woocommerce' ),
-			'account_display_name'  => __( 'Display name', 'woocommerce' ),
-			'account_email'         => __( 'Email address', 'woocommerce' ),
+			'account_first_name'    => __( 'First name', 'classic-commerce' ),
+			'account_last_name'     => __( 'Last name', 'classic-commerce' ),
+			'account_display_name'  => __( 'Display name', 'classic-commerce' ),
+			'account_email'         => __( 'Email address', 'classic-commerce' ),
 		) );
 
 		foreach ( $required_fields as $field_key => $field_name ) {
 			if ( empty( $_POST[ $field_key ] ) ) {
-				wc_add_notice( sprintf( __( '%s is a required field.', 'woocommerce' ), '<strong>' . esc_html( $field_name ) . '</strong>' ), 'error' );
+				wc_add_notice( sprintf( __( '%s is a required field.', 'classic-commerce' ), '<strong>' . esc_html( $field_name ) . '</strong>' ), 'error' );
 			}
 		}
 
 		if ( $account_email ) {
 			$account_email = sanitize_email( $account_email );
 			if ( ! is_email( $account_email ) ) {
-				wc_add_notice( __( 'Please provide a valid email address.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Please provide a valid email address.', 'classic-commerce' ), 'error' );
 			} elseif ( email_exists( $account_email ) && $account_email !== $current_user->user_email ) {
-				wc_add_notice( __( 'This email address is already registered.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'This email address is already registered.', 'classic-commerce' ), 'error' );
 			}
 			$user->user_email = $account_email;
 		}
 
 		if ( ! empty( $pass_cur ) && empty( $pass1 ) && empty( $pass2 ) ) {
-			wc_add_notice( __( 'Please fill out all password fields.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Please fill out all password fields.', 'classic-commerce' ), 'error' );
 			$save_pass = false;
 		} elseif ( ! empty( $pass1 ) && empty( $pass_cur ) ) {
-			wc_add_notice( __( 'Please enter your current password.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Please enter your current password.', 'classic-commerce' ), 'error' );
 			$save_pass = false;
 		} elseif ( ! empty( $pass1 ) && empty( $pass2 ) ) {
-			wc_add_notice( __( 'Please re-enter your password.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Please re-enter your password.', 'classic-commerce' ), 'error' );
 			$save_pass = false;
 		} elseif ( ( ! empty( $pass1 ) || ! empty( $pass2 ) ) && $pass1 !== $pass2 ) {
-			wc_add_notice( __( 'New passwords do not match.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'New passwords do not match.', 'classic-commerce' ), 'error' );
 			$save_pass = false;
 		} elseif ( ! empty( $pass1 ) && ! wp_check_password( $pass_cur, $current_user->user_pass, $current_user->ID ) ) {
-			wc_add_notice( __( 'Your current password is incorrect.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Your current password is incorrect.', 'classic-commerce' ), 'error' );
 			$save_pass = false;
 		}
 
@@ -308,7 +308,7 @@ class WC_Form_Handler {
 				$customer->save();
 			}
 
-			wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
+			wc_add_notice( __( 'Account details changed successfully.', 'classic-commerce' ) );
 
 			do_action( 'woocommerce_save_account_details', $user->ID );
 
@@ -371,7 +371,7 @@ class WC_Form_Handler {
 
 				// Terms
 				if ( ! empty( $_POST['terms-field'] ) && empty( $_POST['terms'] ) ) {
-					wc_add_notice( __( 'Please read and accept the terms and conditions to proceed with your order.', 'woocommerce' ), 'error' );
+					wc_add_notice( __( 'Please read and accept the terms and conditions to proceed with your order.', 'classic-commerce' ), 'error' );
 					return;
 				}
 
@@ -381,7 +381,7 @@ class WC_Form_Handler {
 					$available_gateways = WC()->payment_gateways->get_available_payment_gateways();
 
 					if ( ! $payment_method ) {
-						wc_add_notice( __( 'Invalid payment method.', 'woocommerce' ), 'error' );
+						wc_add_notice( __( 'Invalid payment method.', 'classic-commerce' ), 'error' );
 						return;
 					}
 
@@ -445,7 +445,7 @@ class WC_Form_Handler {
 				$gateway = $available_gateways[ $payment_method_id ];
 
 				if ( ! $gateway->supports( 'add_payment_method' ) && ! $gateway->supports( 'tokenization' ) ) {
-					wc_add_notice( __( 'Invalid payment gateway.', 'woocommerce' ), 'error' );
+					wc_add_notice( __( 'Invalid payment gateway.', 'classic-commerce' ), 'error' );
 					return;
 				}
 
@@ -458,11 +458,11 @@ class WC_Form_Handler {
 				$result = $gateway->add_payment_method();
 
 				if ( 'success' === $result['result'] ) {
-					wc_add_notice( __( 'Payment method successfully added.', 'woocommerce' ) );
+					wc_add_notice( __( 'Payment method successfully added.', 'classic-commerce' ) );
 				}
 
 				if ( 'failure' === $result['result'] ) {
-					wc_add_notice( __( 'Unable to add payment method to your account.', 'woocommerce' ), 'error' );
+					wc_add_notice( __( 'Unable to add payment method to your account.', 'classic-commerce' ), 'error' );
 				}
 
 				if ( ! empty( $result['redirect'] ) ) {
@@ -486,10 +486,10 @@ class WC_Form_Handler {
 			$token    = WC_Payment_Tokens::get( $token_id );
 
 			if ( is_null( $token ) || get_current_user_id() !== $token->get_user_id() || false === wp_verify_nonce( $_REQUEST['_wpnonce'], 'delete-payment-method-' . $token_id ) ) {
-				wc_add_notice( __( 'Invalid payment method.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Invalid payment method.', 'classic-commerce' ), 'error' );
 			} else {
 				WC_Payment_Tokens::delete( $token_id );
-				wc_add_notice( __( 'Payment method deleted.', 'woocommerce' ) );
+				wc_add_notice( __( 'Payment method deleted.', 'classic-commerce' ) );
 			}
 
 			wp_redirect( wc_get_account_endpoint_url( 'payment-methods' ) );
@@ -511,10 +511,10 @@ class WC_Form_Handler {
 			$token    = WC_Payment_Tokens::get( $token_id );
 
 			if ( is_null( $token ) || get_current_user_id() !== $token->get_user_id() || false === wp_verify_nonce( $_REQUEST['_wpnonce'], 'set-default-payment-method-' . $token_id ) ) {
-				wc_add_notice( __( 'Invalid payment method.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Invalid payment method.', 'classic-commerce' ), 'error' );
 			} else {
 				WC_Payment_Tokens::set_users_default( $token->get_user_id(), intval( $token_id ) );
-				wc_add_notice( __( 'This payment method was successfully set as your default.', 'woocommerce' ) );
+				wc_add_notice( __( 'This payment method was successfully set as your default.', 'classic-commerce' ) );
 			}
 
 			wp_redirect( wc_get_account_endpoint_url( 'payment-methods' ) );
@@ -550,16 +550,16 @@ class WC_Form_Handler {
 
 				$product = wc_get_product( $cart_item['product_id'] );
 
-				$item_removed_title = apply_filters( 'woocommerce_cart_item_removed_title', $product ? sprintf( _x( '&ldquo;%s&rdquo;', 'Item name in quotes', 'woocommerce' ), $product->get_name() ) : __( 'Item', 'woocommerce' ), $cart_item );
+				$item_removed_title = apply_filters( 'woocommerce_cart_item_removed_title', $product ? sprintf( _x( '&ldquo;%s&rdquo;', 'Item name in quotes', 'classic-commerce' ), $product->get_name() ) : __( 'Item', 'classic-commerce' ), $cart_item );
 
 				// Don't show undo link if removed item is out of stock.
 				if ( $product && $product->is_in_stock() && $product->has_enough_stock( $cart_item['quantity'] ) ) {
 					/* Translators: %s Product title. */
-					$removed_notice  = sprintf( __( '%s removed.', 'woocommerce' ), $item_removed_title );
-					$removed_notice .= ' <a href="' . esc_url( wc_get_cart_undo_url( $cart_item_key ) ) . '" class="restore-item">' . __( 'Undo?', 'woocommerce' ) . '</a>';
+					$removed_notice  = sprintf( __( '%s removed.', 'classic-commerce' ), $item_removed_title );
+					$removed_notice .= ' <a href="' . esc_url( wc_get_cart_undo_url( $cart_item_key ) ) . '" class="restore-item">' . __( 'Undo?', 'classic-commerce' ) . '</a>';
 				} else {
 					/* Translators: %s Product title. */
-					$removed_notice = sprintf( __( '%s removed.', 'woocommerce' ), $item_removed_title );
+					$removed_notice = sprintf( __( '%s removed.', 'classic-commerce' ), $item_removed_title );
 				}
 
 				wc_add_notice( $removed_notice );
@@ -611,7 +611,7 @@ class WC_Form_Handler {
 					// is_sold_individually.
 					if ( $_product->is_sold_individually() && $quantity > 1 ) {
 						/* Translators: %s Product title. */
-						wc_add_notice( sprintf( __( 'You can only have 1 %s in your cart.', 'woocommerce' ), $_product->get_name() ), 'error' );
+						wc_add_notice( sprintf( __( 'You can only have 1 %s in your cart.', 'classic-commerce' ), $_product->get_name() ), 'error' );
 						$passed_validation = false;
 					}
 
@@ -633,7 +633,7 @@ class WC_Form_Handler {
 				wp_safe_redirect( wc_get_checkout_url() );
 				exit;
 			} elseif ( $cart_updated ) {
-				wc_add_notice( __( 'Cart updated.', 'woocommerce' ) );
+				wc_add_notice( __( 'Cart updated.', 'classic-commerce' ) );
 				$referer = remove_query_arg( array( 'remove_coupon', 'add-to-cart' ), ( wp_get_referer() ? wp_get_referer() : wc_get_cart_url() ) );
 				wp_safe_redirect( $referer );
 				exit;
@@ -675,17 +675,17 @@ class WC_Form_Handler {
 
 				// Cancel the order + restore stock
 				WC()->session->set( 'order_awaiting_payment', false );
-				$order->update_status( 'cancelled', __( 'Order cancelled by customer.', 'woocommerce' ) );
+				$order->update_status( 'cancelled', __( 'Order cancelled by customer.', 'classic-commerce' ) );
 
 				// Message
-				wc_add_notice( apply_filters( 'woocommerce_order_cancelled_notice', __( 'Your order was cancelled.', 'woocommerce' ) ), apply_filters( 'woocommerce_order_cancelled_notice_type', 'notice' ) );
+				wc_add_notice( apply_filters( 'woocommerce_order_cancelled_notice', __( 'Your order was cancelled.', 'classic-commerce' ) ), apply_filters( 'woocommerce_order_cancelled_notice_type', 'notice' ) );
 
 				do_action( 'woocommerce_cancelled_order', $order->get_id() );
 
 			} elseif ( $user_can_cancel && ! $order_can_cancel ) {
-				wc_add_notice( __( 'Your order can no longer be cancelled. Please contact us if you need assistance.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Your order can no longer be cancelled. Please contact us if you need assistance.', 'classic-commerce' ), 'error' );
 			} else {
-				wc_add_notice( __( 'Invalid order.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Invalid order.', 'classic-commerce' ), 'error' );
 			}
 
 			if ( $redirect ) {
@@ -794,7 +794,7 @@ class WC_Form_Handler {
 			}
 
 			if ( ! $was_added_to_cart && ! $quantity_set ) {
-				wc_add_notice( __( 'Please choose the quantity of items you wish to add to your cart&hellip;', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Please choose the quantity of items you wish to add to your cart&hellip;', 'classic-commerce' ), 'error' );
 			} elseif ( $was_added_to_cart ) {
 				wc_add_to_cart_message( $added_to_cart );
 				WC()->cart->calculate_totals();
@@ -802,7 +802,7 @@ class WC_Form_Handler {
 			}
 		} elseif ( $product_id ) {
 			/* Link on product archives */
-			wc_add_notice( __( 'Please choose a product to add to your cart&hellip;', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Please choose a product to add to your cart&hellip;', 'classic-commerce' ), 'error' );
 		}
 		return false;
 	}
@@ -866,7 +866,7 @@ class WC_Form_Handler {
 
 			// Do we have a variation ID?
 			if ( empty( $variation_id ) ) {
-				throw new Exception( __( 'Please choose product options&hellip;', 'woocommerce' ) );
+				throw new Exception( __( 'Please choose product options&hellip;', 'classic-commerce' ) );
 			}
 
 			// Check the data we have is valid.
@@ -896,14 +896,14 @@ class WC_Form_Handler {
 						// If valid values are empty, this is an 'any' variation so get all possible values.
 						$variations[ $attribute_key ] = $value;
 					} else {
-						throw new Exception( sprintf( __( 'Invalid value posted for %s', 'woocommerce' ), wc_attribute_label( $attribute['name'] ) ) );
+						throw new Exception( sprintf( __( 'Invalid value posted for %s', 'classic-commerce' ), wc_attribute_label( $attribute['name'] ) ) );
 					}
 				} elseif ( '' === $valid_value ) {
 					$missing_attributes[] = wc_attribute_label( $attribute['name'] );
 				}
 			}
 			if ( ! empty( $missing_attributes ) ) {
-				throw new Exception( sprintf( _n( '%s is a required field', '%s are required fields', count( $missing_attributes ), 'woocommerce' ), wc_format_list_of_items( $missing_attributes ) ) );
+				throw new Exception( sprintf( _n( '%s is a required field', '%s are required fields', count( $missing_attributes ), 'classic-commerce' ), wc_format_list_of_items( $missing_attributes ) ) );
 			}
 		} catch ( Exception $e ) {
 			wc_add_notice( $e->getMessage(), 'error' );
@@ -940,11 +940,11 @@ class WC_Form_Handler {
 				$validation_error = apply_filters( 'woocommerce_process_login_errors', $validation_error, $_POST['username'], $_POST['password'] );
 
 				if ( $validation_error->get_error_code() ) {
-					throw new Exception( '<strong>' . __( 'Error:', 'woocommerce' ) . '</strong> ' . $validation_error->get_error_message() );
+					throw new Exception( '<strong>' . __( 'Error:', 'classic-commerce' ) . '</strong> ' . $validation_error->get_error_message() );
 				}
 
 				if ( empty( $creds['user_login'] ) ) {
-					throw new Exception( '<strong>' . __( 'Error:', 'woocommerce' ) . '</strong> ' . __( 'Username is required.', 'woocommerce' ) );
+					throw new Exception( '<strong>' . __( 'Error:', 'classic-commerce' ) . '</strong> ' . __( 'Username is required.', 'classic-commerce' ) );
 				}
 
 				// On multisite, ensure user exists on current site, if not add them before allowing login.
@@ -1027,11 +1027,11 @@ class WC_Form_Handler {
 
 		if ( $user instanceof WP_User ) {
 			if ( empty( $posted_fields['password_1'] ) ) {
-				wc_add_notice( __( 'Please enter your password.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Please enter your password.', 'classic-commerce' ), 'error' );
 			}
 
 			if ( $posted_fields['password_1'] !== $posted_fields['password_2'] ) {
-				wc_add_notice( __( 'Passwords do not match.', 'woocommerce' ), 'error' );
+				wc_add_notice( __( 'Passwords do not match.', 'classic-commerce' ), 'error' );
 			}
 
 			$errors = new WP_Error();
@@ -1093,7 +1093,7 @@ class WC_Form_Handler {
 				exit;
 
 			} catch ( Exception $e ) {
-				wc_add_notice( '<strong>' . __( 'Error:', 'woocommerce' ) . '</strong> ' . $e->getMessage(), 'error' );
+				wc_add_notice( '<strong>' . __( 'Error:', 'classic-commerce' ) . '</strong> ' . $e->getMessage(), 'error' );
 			}
 		}
 	}

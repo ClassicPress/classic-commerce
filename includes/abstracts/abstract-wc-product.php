@@ -394,7 +394,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Get low stock amount.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return int|string Returns empty string if value not set
 	 */
 	public function get_low_stock_amount( $context = 'view' ) {
@@ -776,7 +776,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	public function set_catalog_visibility( $visibility ) {
 		$options = array_keys( wc_get_product_visibility_options() );
 		if ( ! in_array( $visibility, $options, true ) ) {
-			$this->error( 'product_invalid_catalog_visibility', __( 'Invalid catalog visibility option.', 'woocommerce' ) );
+			$this->error( 'product_invalid_catalog_visibility', __( 'Invalid catalog visibility option.', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'catalog_visibility', $visibility );
 	}
@@ -813,7 +813,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 		if ( $this->get_object_read() && ! empty( $sku ) && ! wc_product_has_unique_sku( $this->get_id(), $sku ) ) {
 			$sku_found = wc_get_product_id_by_sku( $sku );
 
-			$this->error( 'product_invalid_sku', __( 'Invalid or duplicated SKU.', 'woocommerce' ), 400, array( 'resource_id' => $sku_found ) );
+			$this->error( 'product_invalid_sku', __( 'Invalid or duplicated SKU.', 'classic-commerce' ), 400, array( 'resource_id' => $sku_found ) );
 		}
 		$this->set_prop( 'sku', $sku );
 	}
@@ -897,7 +897,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 		}
 
 		if ( ! in_array( $status, $options, true ) ) {
-			$this->error( 'product_invalid_tax_status', __( 'Invalid product tax status.', 'woocommerce' ) );
+			$this->error( 'product_invalid_tax_status', __( 'Invalid product tax status.', 'classic-commerce' ) );
 		}
 
 		$this->set_prop( 'tax_status', $status );
@@ -1212,7 +1212,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 			if ( ! $download_object->is_allowed_filetype() ) {
 				if ( $this->get_object_read() ) {
 					/* translators: %1$s: Downloadable file */
-					$errors[] = sprintf( __( 'The downloadable file %1$s cannot be used as it does not have an allowed file type. Allowed types include: %2$s', 'woocommerce' ), '<code>' . basename( $download_object->get_file() ) . '</code>', '<code>' . implode( ', ', array_keys( $download_object->get_allowed_mime_types() ) ) . '</code>' );
+					$errors[] = sprintf( __( 'The downloadable file %1$s cannot be used as it does not have an allowed file type. Allowed types include: %2$s', 'classic-commerce' ), '<code>' . basename( $download_object->get_file() ) . '</code>', '<code>' . implode( ', ', array_keys( $download_object->get_allowed_mime_types() ) ) . '</code>' );
 				}
 				continue;
 			}
@@ -1221,7 +1221,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 			if ( ! $download_object->file_exists() ) {
 				if ( $this->get_object_read() ) {
 					/* translators: %s: Downloadable file */
-					$errors[] = sprintf( __( 'The downloadable file %s cannot be used as it does not exist on the server.', 'woocommerce' ), '<code>' . $download_object->get_file() . '</code>' );
+					$errors[] = sprintf( __( 'The downloadable file %s cannot be used as it does not exist on the server.', 'classic-commerce' ), '<code>' . $download_object->get_file() . '</code>' );
 				}
 				continue;
 			}
@@ -1671,7 +1671,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * Returns whether or not the product has additional options that need
 	 * selecting before adding to cart.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function has_options() {
@@ -1714,7 +1714,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * If the stock level comes from another product ID, this should be modified.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_stock_managed_by_id() {
@@ -1757,7 +1757,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get min quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_min_purchase_quantity() {
@@ -1767,7 +1767,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	/**
 	 * Get max quantity which can be purchased at once.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int Quantity or -1 if unlimited.
 	 */
 	public function get_max_purchase_quantity() {
@@ -1789,7 +1789,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * @return string
 	 */
 	public function single_add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_single_add_to_cart_text', __( 'Add to cart', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -1798,7 +1798,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_add_to_cart_text', __( 'Read more', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_text', __( 'Read more', 'classic-commerce' ), $this );
 	}
 
 	/**
@@ -1809,7 +1809,7 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 */
 	public function add_to_cart_description() {
 		/* translators: %s: Product title */
-		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Read more about &ldquo;%s&rdquo;', 'woocommerce' ), $this->get_name() ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Read more about &ldquo;%s&rdquo;', 'classic-commerce' ), $this->get_name() ), $this );
 	}
 
 	/**
@@ -1965,9 +1965,9 @@ class WC_Product extends WC_Abstract_Legacy_Product {
 	 */
 	protected function get_availability_text() {
 		if ( ! $this->is_in_stock() ) {
-			$availability = __( 'Out of stock', 'woocommerce' );
+			$availability = __( 'Out of stock', 'classic-commerce' );
 		} elseif ( $this->managing_stock() && $this->is_on_backorder( 1 ) ) {
-			$availability = $this->backorders_require_notification() ? __( 'Available on backorder', 'woocommerce' ) : '';
+			$availability = $this->backorders_require_notification() ? __( 'Available on backorder', 'classic-commerce' ) : '';
 		} elseif ( $this->managing_stock() ) {
 			$availability = wc_format_stock_for_display( $this );
 		} else {

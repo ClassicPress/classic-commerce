@@ -22,7 +22,7 @@ class WC_Report_Out_Of_Stock extends WC_Report_Stock {
 	 * No items found text.
 	 */
 	public function no_items() {
-		_e( 'No out of stock products found.', 'woocommerce' );
+		_e( 'No out of stock products found.', 'classic-commerce' );
 	}
 
 	/**

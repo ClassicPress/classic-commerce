@@ -56,7 +56,7 @@ class WC_Comments {
 	/**
 	 * See if comments are open.
 	 *
-	 * @since  3.1.0
+	 * @since  WC-3.1.0
 	 * @param  bool $open    Whether the current post is open for comments.
 	 * @param  int  $post_id Post ID.
 	 * @return bool
@@ -108,7 +108,7 @@ class WC_Comments {
 	/**
 	 * Exclude webhook comments from queries and RSS.
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  array $clauses A compacted array of comment query clauses.
 	 * @return array
 	 */
@@ -130,7 +130,7 @@ class WC_Comments {
 	/**
 	 * Exclude webhook comments from queries and RSS.
 	 *
-	 * @since  2.1
+	 * @since  WC-2.1
 	 * @param  string $where The WHERE clause of the query.
 	 * @return string
 	 */
@@ -147,7 +147,7 @@ class WC_Comments {
 	public static function check_comment_rating( $comment_data ) {
 		// If posting a comment (not trackback etc) and not logged in.
 		if ( ! is_admin() && isset( $_POST['comment_post_ID'], $_POST['rating'], $comment_data['comment_type'] ) && 'product' === get_post_type( absint( $_POST['comment_post_ID'] ) ) && empty( $_POST['rating'] ) && '' === $comment_data['comment_type'] && 'yes' === get_option( 'woocommerce_enable_review_rating' ) && 'yes' === get_option( 'woocommerce_review_rating_required' ) ) { // WPCS: input var ok, CSRF ok.
-			wp_die( esc_html__( 'Please rate the product.', 'woocommerce' ) );
+			wp_die( esc_html__( 'Please rate the product.', 'classic-commerce' ) );
 			exit;
 		}
 		return $comment_data;
@@ -217,7 +217,7 @@ class WC_Comments {
 	/**
 	 * Remove order notes and webhook delivery logs from wp_count_comments().
 	 *
-	 * @since  2.2
+	 * @since  WC-2.2
 	 * @param  object $stats   Comment stats.
 	 * @param  int    $post_id Post ID.
 	 * @return object
@@ -281,7 +281,7 @@ class WC_Comments {
 	/**
 	 * Make sure WP displays avatars for comments with the `review` type.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @param  array $comment_types Comment types.
 	 * @return array
 	 */

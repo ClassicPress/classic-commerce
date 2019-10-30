@@ -4,7 +4,7 @@
  *
  * @package  WooCommerce/Classes
  * @version  3.0.0
- * @since    3.0.0
+ * @since    WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -49,7 +49,7 @@ class WC_Register_WP_Admin_Settings {
 	 * Register's all of our different notification emails as sub groups
 	 * of email settings.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $groups Existing registered groups.
 	 * @return array
 	 */
@@ -66,7 +66,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Registers all of the setting form fields for emails to each email type's group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $settings Existing registered settings.
 	 * @return array
 	 */
@@ -85,7 +85,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Registers a setting group, based on admin page ID & label as parent group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $groups Array of previously registered groups.
 	 * @return array
 	 */
@@ -100,7 +100,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Registers settings to a specific group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $settings Existing registered settings.
 	 * @return array
 	 */
@@ -136,7 +136,7 @@ class WC_Register_WP_Admin_Settings {
 	/**
 	 * Register a setting into the format expected for the Settings REST API.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  array $setting Setting data.
 	 * @return array|bool
 	 */

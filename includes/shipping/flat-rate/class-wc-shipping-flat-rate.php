@@ -28,8 +28,8 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	public function __construct( $instance_id = 0 ) {
 		$this->id                 = 'flat_rate';
 		$this->instance_id        = absint( $instance_id );
-		$this->method_title       = __( 'Flat rate', 'woocommerce' );
-		$this->method_description = __( 'Lets you charge a fixed rate for shipping.', 'woocommerce' );
+		$this->method_title       = __( 'Flat rate', 'classic-commerce' );
+		$this->method_description = __( 'Lets you charge a fixed rate for shipping.', 'classic-commerce' );
 		$this->supports           = array(
 			'shipping-zones',
 			'instance-settings',
@@ -250,7 +250,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Sanitize the cost field.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $value Unsanitized value.
 	 * @return string
 	 */

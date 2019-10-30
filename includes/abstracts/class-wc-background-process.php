@@ -169,7 +169,7 @@ abstract class WC_Background_Process extends WP_Background_Process {
 		$schedules[ $this->identifier . '_cron_interval' ] = array(
 			'interval' => MINUTE_IN_SECONDS * $interval,
 			/* translators: %d: interval */
-			'display'  => sprintf( __( 'Every %d minutes', 'woocommerce' ), $interval ),
+			'display'  => sprintf( __( 'Every %d minutes', 'classic-commerce' ), $interval ),
 		);
 
 		return $schedules;

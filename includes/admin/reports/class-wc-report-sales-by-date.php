@@ -443,12 +443,12 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 			case 'day':
 				/* translators: %s: average total sales */
 				$average_total_sales_title = sprintf(
-					__( '%s average gross daily sales', 'woocommerce' ),
+					__( '%s average gross daily sales', 'classic-commerce' ),
 					'<strong>' . wc_price( $data->average_total_sales ) . '</strong>'
 				);
 				/* translators: %s: average sales */
 				$average_sales_title = sprintf(
-					__( '%s average net daily sales', 'woocommerce' ),
+					__( '%s average net daily sales', 'classic-commerce' ),
 					'<strong>' . wc_price( $data->average_sales ) . '</strong>'
 				);
 				break;
@@ -456,12 +456,12 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 			default:
 				/* translators: %s: average total sales */
 				$average_total_sales_title = sprintf(
-					__( '%s average gross monthly sales', 'woocommerce' ),
+					__( '%s average gross monthly sales', 'classic-commerce' ),
 					'<strong>' . wc_price( $data->average_total_sales ) . '</strong>'
 				);
 				/* translators: %s: average sales */
 				$average_sales_title = sprintf(
-					__( '%s average net monthly sales', 'woocommerce' ),
+					__( '%s average net monthly sales', 'classic-commerce' ),
 					'<strong>' . wc_price( $data->average_sales ) . '</strong>'
 				);
 				break;
@@ -470,10 +470,10 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: total sales */
 			'title'            => sprintf(
-				__( '%s gross sales in this period', 'woocommerce' ),
+				__( '%s gross sales in this period', 'classic-commerce' ),
 				'<strong>' . wc_price( $data->total_sales ) . '</strong>'
 			),
-			'placeholder'      => __( 'This is the sum of the order totals after any refunds and including shipping and taxes.', 'woocommerce' ),
+			'placeholder'      => __( 'This is the sum of the order totals after any refunds and including shipping and taxes.', 'classic-commerce' ),
 			'color'            => $this->chart_colours['sales_amount'],
 			'highlight_series' => 6,
 		);
@@ -488,10 +488,10 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: net sales */
 			'title'            => sprintf(
-				__( '%s net sales in this period', 'woocommerce' ),
+				__( '%s net sales in this period', 'classic-commerce' ),
 				'<strong>' . wc_price( $data->net_sales ) . '</strong>'
 			),
-			'placeholder'      => __( 'This is the sum of the order totals after any refunds and excluding shipping and taxes.', 'woocommerce' ),
+			'placeholder'      => __( 'This is the sum of the order totals after any refunds and excluding shipping and taxes.', 'classic-commerce' ),
 			'color'            => $this->chart_colours['net_sales_amount'],
 			'highlight_series' => 7,
 		);
@@ -506,7 +506,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: total orders */
 			'title'            => sprintf(
-				__( '%s orders placed', 'woocommerce' ),
+				__( '%s orders placed', 'classic-commerce' ),
 				'<strong>' . $data->total_orders . '</strong>'
 			),
 			'color'            => $this->chart_colours['order_count'],
@@ -516,7 +516,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: total items */
 			'title'            => sprintf(
-				__( '%s items purchased', 'woocommerce' ),
+				__( '%s items purchased', 'classic-commerce' ),
 				'<strong>' . $data->total_items . '</strong>'
 			),
 			'color'            => $this->chart_colours['item_count'],
@@ -525,7 +525,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: 1: total refunds 2: total refunded orders 3: refunded items */
 			'title'            => sprintf(
-				_n( '%1$s refunded %2$d order (%3$d item)', '%1$s refunded %2$d orders (%3$d items)', $this->report_data->total_refunded_orders, 'woocommerce' ),
+				_n( '%1$s refunded %2$d order (%3$d item)', '%1$s refunded %2$d orders (%3$d items)', $this->report_data->total_refunded_orders, 'classic-commerce' ),
 				'<strong>' . wc_price( $data->total_refunds ) . '</strong>',
 				$this->report_data->total_refunded_orders,
 				$this->report_data->refunded_order_items
@@ -536,7 +536,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: total shipping */
 			'title'            => sprintf(
-				__( '%s charged for shipping', 'woocommerce' ),
+				__( '%s charged for shipping', 'classic-commerce' ),
 				'<strong>' . wc_price( $data->total_shipping ) . '</strong>'
 			),
 			'color'            => $this->chart_colours['shipping_amount'],
@@ -545,7 +545,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 		$legend[] = array(
 			/* translators: %s: total coupons */
 			'title'            => sprintf(
-				__( '%s worth of coupons used', 'woocommerce' ),
+				__( '%s worth of coupons used', 'classic-commerce' ),
 				'<strong>' . wc_price( $data->total_coupons ) . '</strong>'
 			),
 			'color'            => $this->chart_colours['coupon_amount'],
@@ -560,10 +560,10 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 	 */
 	public function output_report() {
 		$ranges = array(
-			'year'       => __( 'Year', 'woocommerce' ),
-			'last_month' => __( 'Last month', 'woocommerce' ),
-			'month'      => __( 'This month', 'woocommerce' ),
-			'7day'       => __( 'Last 7 days', 'woocommerce' ),
+			'year'       => __( 'Year', 'classic-commerce' ),
+			'last_month' => __( 'Last month', 'classic-commerce' ),
+			'month'      => __( 'This month', 'classic-commerce' ),
+			'7day'       => __( 'Last 7 days', 'classic-commerce' ),
 		);
 
 		$this->chart_colours = array(
@@ -601,11 +601,11 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 			download="report-<?php echo esc_attr( $current_range ); ?>-<?php echo date_i18n( 'Y-m-d', current_time( 'timestamp' ) ); ?>.csv"
 			class="export_csv"
 			data-export="chart"
-			data-xaxes="<?php esc_attr_e( 'Date', 'woocommerce' ); ?>"
+			data-xaxes="<?php esc_attr_e( 'Date', 'classic-commerce' ); ?>"
 			data-exclude_series="2"
 			data-groupby="<?php echo $this->chart_groupby; ?>"
 		>
-			<?php _e( 'Export CSV', 'woocommerce' ); ?>
+			<?php _e( 'Export CSV', 'classic-commerce' ); ?>
 		</a>
 		<?php
 	}
@@ -687,7 +687,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 				var drawGraph = function( highlight ) {
 					var series = [
 						{
-							label: "<?php echo esc_js( __( 'Number of items sold', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Number of items sold', 'classic-commerce' ) ); ?>",
 							data: order_data.order_item_counts,
 							color: '<?php echo $this->chart_colours['item_count']; ?>',
 							bars: { fillColor: '<?php echo $this->chart_colours['item_count']; ?>', fill: true, show: true, lineWidth: 0, barWidth: <?php echo $this->barwidth; ?> * 0.5, align: 'center' },
@@ -695,7 +695,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							hoverable: false
 						},
 						{
-							label: "<?php echo esc_js( __( 'Number of orders', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Number of orders', 'classic-commerce' ) ); ?>",
 							data: order_data.order_counts,
 							color: '<?php echo $this->chart_colours['order_count']; ?>',
 							bars: { fillColor: '<?php echo $this->chart_colours['order_count']; ?>', fill: true, show: true, lineWidth: 0, barWidth: <?php echo $this->barwidth; ?> * 0.5, align: 'center' },
@@ -703,7 +703,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							hoverable: false
 						},
 						{
-							label: "<?php echo esc_js( __( 'Average gross sales amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Average gross sales amount', 'classic-commerce' ) ); ?>",
 							data: [ [ <?php echo min( array_keys( $data['order_amounts'] ) ); ?>, <?php echo $this->report_data->average_total_sales; ?> ], [ <?php echo max( array_keys( $data['order_amounts'] ) ); ?>, <?php echo $this->report_data->average_total_sales; ?> ] ],
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['average']; ?>',
@@ -713,7 +713,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							hoverable: false
 						},
 						{
-							label: "<?php echo esc_js( __( 'Average net sales amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Average net sales amount', 'classic-commerce' ) ); ?>",
 							data: [ [ <?php echo min( array_keys( $data['order_amounts'] ) ); ?>, <?php echo $this->report_data->average_sales; ?> ], [ <?php echo max( array_keys( $data['order_amounts'] ) ); ?>, <?php echo $this->report_data->average_sales; ?> ] ],
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['net_average']; ?>',
@@ -723,7 +723,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							hoverable: false
 						},
 						{
-							label: "<?php echo esc_js( __( 'Coupon amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Coupon amount', 'classic-commerce' ) ); ?>",
 							data: order_data.coupon_amounts,
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['coupon_amount']; ?>',
@@ -733,7 +733,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							<?php echo $this->get_currency_tooltip(); ?>
 						},
 						{
-							label: "<?php echo esc_js( __( 'Shipping amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Shipping amount', 'classic-commerce' ) ); ?>",
 							data: order_data.shipping_amounts,
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['shipping_amount']; ?>',
@@ -743,7 +743,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							prepend_tooltip: "<?php echo get_woocommerce_currency_symbol(); ?>"
 						},
 						{
-							label: "<?php echo esc_js( __( 'Gross sales amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Gross sales amount', 'classic-commerce' ) ); ?>",
 							data: order_data.gross_order_amounts,
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['sales_amount']; ?>',
@@ -753,7 +753,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							<?php echo $this->get_currency_tooltip(); ?>
 						},
 						{
-							label: "<?php echo esc_js( __( 'Net sales amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Net sales amount', 'classic-commerce' ) ); ?>",
 							data: order_data.net_order_amounts,
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['net_sales_amount']; ?>',
@@ -763,7 +763,7 @@ class WC_Report_Sales_By_Date extends WC_Admin_Report {
 							<?php echo $this->get_currency_tooltip(); ?>
 						},
 						{
-							label: "<?php echo esc_js( __( 'Refund amount', 'woocommerce' ) ); ?>",
+							label: "<?php echo esc_js( __( 'Refund amount', 'classic-commerce' ) ); ?>",
 							data: order_data.refund_amounts,
 							yaxis: 2,
 							color: '<?php echo $this->chart_colours['refund_amount']; ?>',

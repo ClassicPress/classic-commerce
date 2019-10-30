@@ -22,13 +22,13 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 
 		$order_statuses = apply_filters(
 			'wc_order_statuses', array(
-				'wc-pending'    => _x( 'Pending payment', 'Order status', 'woocommerce' ),
-				'wc-processing' => _x( 'Processing', 'Order status', 'woocommerce' ),
-				'wc-on-hold'    => _x( 'On hold', 'Order status', 'woocommerce' ),
-				'wc-completed'  => _x( 'Completed', 'Order status', 'woocommerce' ),
-				'wc-cancelled'  => _x( 'Cancelled', 'Order status', 'woocommerce' ),
-				'wc-refunded'   => _x( 'Refunded', 'Order status', 'woocommerce' ),
-				'wc-failed'     => _x( 'Failed', 'Order status', 'woocommerce' ),
+				'wc-pending'    => _x( 'Pending payment', 'Order status', 'classic-commerce' ),
+				'wc-processing' => _x( 'Processing', 'Order status', 'classic-commerce' ),
+				'wc-on-hold'    => _x( 'On hold', 'Order status', 'classic-commerce' ),
+				'wc-completed'  => _x( 'Completed', 'Order status', 'classic-commerce' ),
+				'wc-cancelled'  => _x( 'Cancelled', 'Order status', 'classic-commerce' ),
+				'wc-refunded'   => _x( 'Refunded', 'Order status', 'classic-commerce' ),
+				'wc-failed'     => _x( 'Failed', 'Order status', 'classic-commerce' ),
 			)
 		);
 
@@ -52,8 +52,8 @@ class WC_Tests_Order_Functions extends WC_Unit_Test_Case {
 	 */
 	public function test_wc_get_order_status_name() {
 
-		$this->assertEquals( _x( 'Pending payment', 'Order status', 'woocommerce' ), wc_get_order_status_name( 'wc-pending' ) );
-		$this->assertEquals( _x( 'Pending payment', 'Order status', 'woocommerce' ), wc_get_order_status_name( 'pending' ) );
+		$this->assertEquals( _x( 'Pending payment', 'Order status', 'classic-commerce' ), wc_get_order_status_name( 'wc-pending' ) );
+		$this->assertEquals( _x( 'Pending payment', 'Order status', 'classic-commerce' ), wc_get_order_status_name( 'pending' ) );
 	}
 
 	/**

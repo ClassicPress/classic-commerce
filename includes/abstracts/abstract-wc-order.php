@@ -487,7 +487,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 */
 	public function set_parent_id( $value ) {
 		if ( $value && ( $value === $this->get_id() || ! wc_get_order( $value ) ) ) {
-			$this->error( 'order_invalid_parent_id', __( 'Invalid parent ID', 'woocommerce' ) );
+			$this->error( 'order_invalid_parent_id', __( 'Invalid parent ID', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'parent_id', absint( $value ) );
 	}
@@ -542,7 +542,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 */
 	public function set_currency( $value ) {
 		if ( $value && ! in_array( $value, array_keys( get_woocommerce_currencies() ), true ) ) {
-			$this->error( 'order_invalid_currency', __( 'Invalid currency code', 'woocommerce' ) );
+			$this->error( 'order_invalid_currency', __( 'Invalid currency code', 'classic-commerce' ) );
 		}
 		$this->set_prop( 'currency', $value ? $value : get_woocommerce_currency() );
 	}
@@ -804,7 +804,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get an order item object, based on its type.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int  $item_id ID of item to get.
 	 * @param  bool $load_from_db Prior to 3.2 this item was loaded direct from WC_Order_Factory, not this object. This param is here for backwards compatility with that. If false, uses the local items variable instead.
 	 * @return WC_Order_Item|false
@@ -838,7 +838,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get key for where a certain item type is stored in _items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $item object Order item (product, shipping, fee, coupon, tax).
 	 * @return string
 	 */
@@ -923,7 +923,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 			$coupon = new WC_Coupon( $code );
 
 			if ( $coupon->get_code() !== $code ) {
-				return new WP_Error( 'invalid_coupon', __( 'Invalid coupon code', 'woocommerce' ) );
+				return new WP_Error( 'invalid_coupon', __( 'Invalid coupon code', 'classic-commerce' ) );
 			}
 
 			$discounts = new WC_Discounts( $this );
@@ -933,14 +933,14 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 				return $valid;
 			}
 		} else {
-			return new WP_Error( 'invalid_coupon', __( 'Invalid coupon', 'woocommerce' ) );
+			return new WP_Error( 'invalid_coupon', __( 'Invalid coupon', 'classic-commerce' ) );
 		}
 
 		// Check to make sure coupon is not already applied.
 		$applied_coupons = $this->get_items( 'coupon' );
 		foreach ( $applied_coupons as $applied_coupon ) {
 			if ( $applied_coupon->get_code() === $coupon->get_code() ) {
-				return new WP_Error( 'invalid_coupon', __( 'Coupon code already applied!', 'woocommerce' ) );
+				return new WP_Error( 'invalid_coupon', __( 'Coupon code already applied!', 'classic-commerce' ) );
 			}
 		}
 
@@ -980,7 +980,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 * Manual discounts are not affected; those are separate and do not affect
 	 * stored line totals.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $code Coupon code.
 	 * @return void
 	 */
@@ -1002,7 +1002,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Apply all coupons in this order again to all line items.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 */
 	protected function recalculate_coupons() {
 		// Reset line item totals.
@@ -1723,12 +1723,12 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 			}
 
 			/* translators: %s: method */
-			$shipping .= apply_filters( 'woocommerce_order_shipping_to_display_shipped_via', '&nbsp;<small class="shipped_via">' . sprintf( __( 'via %s', 'woocommerce' ), $this->get_shipping_method() ) . '</small>', $this );
+			$shipping .= apply_filters( 'woocommerce_order_shipping_to_display_shipped_via', '&nbsp;<small class="shipped_via">' . sprintf( __( 'via %s', 'classic-commerce' ), $this->get_shipping_method() ) . '</small>', $this );
 
 		} elseif ( $this->get_shipping_method() ) {
 			$shipping = $this->get_shipping_method();
 		} else {
-			$shipping = __( 'Free!', 'woocommerce' );
+			$shipping = __( 'Free!', 'classic-commerce' );
 		}
 
 		return apply_filters( 'woocommerce_order_shipping_to_display', $shipping, $this );
@@ -1737,7 +1737,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	/**
 	 * Get the discount amount (formatted).
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @param string $tax_display Excl or incl tax display mode.
 	 * @return string
 	 */
@@ -1757,7 +1757,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 
 		if ( $subtotal ) {
 			$total_rows['cart_subtotal'] = array(
-				'label' => __( 'Subtotal:', 'woocommerce' ),
+				'label' => __( 'Subtotal:', 'classic-commerce' ),
 				'value' => $subtotal,
 			);
 		}
@@ -1772,7 +1772,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	protected function add_order_item_totals_discount_row( &$total_rows, $tax_display ) {
 		if ( $this->get_total_discount() > 0 ) {
 			$total_rows['discount'] = array(
-				'label' => __( 'Discount:', 'woocommerce' ),
+				'label' => __( 'Discount:', 'classic-commerce' ),
 				'value' => '-' . $this->get_discount_to_display( $tax_display ),
 			);
 		}
@@ -1787,7 +1787,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	protected function add_order_item_totals_shipping_row( &$total_rows, $tax_display ) {
 		if ( $this->get_shipping_method() ) {
 			$total_rows['shipping'] = array(
-				'label' => __( 'Shipping:', 'woocommerce' ),
+				'label' => __( 'Shipping:', 'classic-commerce' ),
 				'value' => $this->get_shipping_to_display( $tax_display ),
 			);
 		}
@@ -1848,7 +1848,7 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 	 */
 	protected function add_order_item_totals_total_row( &$total_rows, $tax_display ) {
 		$total_rows['order_total'] = array(
-			'label' => __( 'Total:', 'woocommerce' ),
+			'label' => __( 'Total:', 'classic-commerce' ),
 			'value' => $this->get_formatted_order_total( $tax_display ),
 		);
 	}

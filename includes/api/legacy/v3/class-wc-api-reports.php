@@ -7,7 +7,7 @@
  * @author      WooThemes
  * @category    API
  * @package     WooCommerce/API
- * @since       2.1
+ * @since       WC-2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -323,7 +323,7 @@ class WC_API_Reports extends WC_API_Resource {
 
 		return new WP_Error(
 			'woocommerce_api_user_cannot_read_report',
-			__( 'You do not have permission to read this report', 'woocommerce' ),
+			__( 'You do not have permission to read this report', 'classic-commerce' ),
 			array( 'status' => 401 )
 		);
 	}

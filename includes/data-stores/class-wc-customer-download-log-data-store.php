@@ -64,7 +64,7 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 			$download_log->set_id( $wpdb->insert_id );
 			$download_log->apply_changes();
 		} else {
-			wp_die( esc_html__( 'Unable to insert download log entry in database.', 'woocommerce' ) );
+			wp_die( esc_html__( 'Unable to insert download log entry in database.', 'classic-commerce' ) );
 		}
 	}
 
@@ -81,7 +81,7 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 
 		// Ensure we have an id to pull from the DB.
 		if ( ! $download_log->get_id() ) {
-			throw new Exception( __( 'Invalid download log: no ID.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid download log: no ID.', 'classic-commerce' ) );
 		}
 
 		$table = $wpdb->prefix . self::get_table_name();
@@ -90,7 +90,7 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 		$raw_download_log = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$table} WHERE download_log_id = %d", $download_log->get_id() ) ); // WPCS: unprepared SQL ok.
 
 		if ( ! $raw_download_log ) {
-			throw new Exception( __( 'Invalid download log: not found.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid download log: not found.', 'classic-commerce' ) );
 		}
 
 		$download_log->set_props(
@@ -226,7 +226,7 @@ class WC_Customer_Download_Log_Data_Store implements WC_Customer_Download_Log_Da
 	/**
 	 * Method to delete download logs for a given permission ID.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param int $id download_id of the downloads that will be deleted.
 	 */
 	public function delete_by_permission_id( $id ) {

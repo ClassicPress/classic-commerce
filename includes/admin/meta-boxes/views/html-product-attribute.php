@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div data-taxonomy="<?php echo esc_attr( $attribute->get_taxonomy() ); ?>" class="woocommerce_attribute wc-metabox closed <?php echo esc_attr( implode( ' ', $metabox_class ) ); ?>" rel="<?php echo esc_attr( $attribute->get_position() ); ?>">
 	<h3>
-		<a href="#" class="remove_row delete"><?php esc_html_e( 'Remove', 'woocommerce' ); ?></a>
-		<div class="handlediv" title="<?php esc_attr_e( 'Click to toggle', 'woocommerce' ); ?>"></div>
+		<a href="#" class="remove_row delete"><?php esc_html_e( 'Remove', 'classic-commerce' ); ?></a>
+		<div class="handlediv" title="<?php esc_attr_e( 'Click to toggle', 'classic-commerce' ); ?>"></div>
 		<strong class="attribute_name"><?php echo wc_attribute_label( $attribute->get_name() ); ?></strong>
 	</h3>
 	<div class="woocommerce_attribute_data wc-metabox-content hidden">
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<tbody>
 				<tr>
 					<td class="attribute_name">
-						<label><?php esc_html_e( 'Name', 'woocommerce' ); ?>:</label>
+						<label><?php esc_html_e( 'Name', 'classic-commerce' ); ?>:</label>
 
 						<?php if ( $attribute->is_taxonomy() ) : ?>
 							<strong><?php echo wc_attribute_label( $attribute->get_name() ); ?></strong>
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<input type="hidden" name="attribute_position[<?php echo esc_attr( $i ); ?>]" class="attribute_position" value="<?php echo esc_attr( $attribute->get_position() ); ?>" />
 					</td>
 					<td rowspan="3">
-						<label><?php esc_html_e( 'Value(s)', 'woocommerce' ); ?>:</label>
+						<label><?php esc_html_e( 'Value(s)', 'classic-commerce' ); ?>:</label>
 						<?php
 						if ( $attribute->is_taxonomy() && $attribute_taxonomy = $attribute->get_taxonomy_object() ) {
 							$attribute_types = wc_get_attribute_types();
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 							if ( 'select' === $attribute_taxonomy->attribute_type ) {
 								?>
-								<select multiple="multiple" data-placeholder="<?php esc_attr_e( 'Select terms', 'woocommerce' ); ?>" class="multiselect attribute_values wc-enhanced-select" name="attribute_values[<?php echo esc_attr( $i ); ?>][]">
+								<select multiple="multiple" data-placeholder="<?php esc_attr_e( 'Select terms', 'classic-commerce' ); ?>" class="multiselect attribute_values wc-enhanced-select" name="attribute_values[<?php echo esc_attr( $i ); ?>][]">
 									<?php
 									$args      = array(
 										'orderby'    => 'name',
@@ -53,9 +53,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 									}
 									?>
 								</select>
-								<button class="button plus select_all_attributes"><?php esc_html_e( 'Select all', 'woocommerce' ); ?></button>
-								<button class="button minus select_no_attributes"><?php esc_html_e( 'Select none', 'woocommerce' ); ?></button>
-								<button class="button fr plus add_new_attribute"><?php esc_html_e( 'Add new', 'woocommerce' ); ?></button>
+								<button class="button plus select_all_attributes"><?php esc_html_e( 'Select all', 'classic-commerce' ); ?></button>
+								<button class="button minus select_no_attributes"><?php esc_html_e( 'Select none', 'classic-commerce' ); ?></button>
+								<button class="button fr plus add_new_attribute"><?php esc_html_e( 'Add new', 'classic-commerce' ); ?></button>
 								<?php
 							}
 
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						} else {
 							/* translators: %s: WC_DELIMITER */
 							?>
-							<textarea name="attribute_values[<?php echo esc_attr( $i ); ?>]" cols="5" rows="5" placeholder="<?php printf( esc_attr__( 'Enter some text, or some attributes by "%s" separating values.', 'woocommerce' ), WC_DELIMITER ); ?>"><?php echo esc_textarea( wc_implode_text_attributes( $attribute->get_options() ) ); ?></textarea>
+							<textarea name="attribute_values[<?php echo esc_attr( $i ); ?>]" cols="5" rows="5" placeholder="<?php printf( esc_attr__( 'Enter some text, or some attributes by "%s" separating values.', 'classic-commerce' ), WC_DELIMITER ); ?>"><?php echo esc_textarea( wc_implode_text_attributes( $attribute->get_options() ) ); ?></textarea>
 							<?php
 						}
 						?>
@@ -71,13 +71,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</tr>
 				<tr>
 					<td>
-						<label><input type="checkbox" class="checkbox" <?php checked( $attribute->get_visible(), true ); ?> name="attribute_visibility[<?php echo esc_attr( $i ); ?>]" value="1" /> <?php esc_html_e( 'Visible on the product page', 'woocommerce' ); ?></label>
+						<label><input type="checkbox" class="checkbox" <?php checked( $attribute->get_visible(), true ); ?> name="attribute_visibility[<?php echo esc_attr( $i ); ?>]" value="1" /> <?php esc_html_e( 'Visible on the product page', 'classic-commerce' ); ?></label>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<div class="enable_variation show_if_variable">
-							<label><input type="checkbox" class="checkbox" <?php checked( $attribute->get_variation(), true ); ?> name="attribute_variation[<?php echo esc_attr( $i ); ?>]" value="1" /> <?php esc_html_e( 'Used for variations', 'woocommerce' ); ?></label>
+							<label><input type="checkbox" class="checkbox" <?php checked( $attribute->get_variation(), true ); ?> name="attribute_variation[<?php echo esc_attr( $i ); ?>]" value="1" /> <?php esc_html_e( 'Used for variations', 'classic-commerce' ); ?></label>
 						</div>
 					</td>
 				</tr>

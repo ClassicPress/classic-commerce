@@ -6,7 +6,7 @@
  *
  * @package WooCommerce/Classes
  * @version WC-3.5.0
- * @since   3.3.0
+ * @since   WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -153,7 +153,7 @@ class WC_Regenerate_Images {
 
 			$log = wc_get_logger();
 			$log->info(
-				__( 'Cancelled product image regeneration job.', 'woocommerce' ),
+				__( 'Cancelled product image regeneration job.', 'classic-commerce' ),
 				array(
 					'source' => 'wc-image-regeneration',
 				)
