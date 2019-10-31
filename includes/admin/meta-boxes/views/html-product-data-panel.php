@@ -2,7 +2,7 @@
 /**
  * Product data meta box.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

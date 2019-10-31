@@ -13,7 +13,7 @@ if ( ! class_exists( 'WC_Report_Stock' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
+ * @package     ClassicCommerce/Admin/Reports
  * @version     2.1.0
  */
 class WC_Report_Most_Stocked extends WC_Report_Stock {

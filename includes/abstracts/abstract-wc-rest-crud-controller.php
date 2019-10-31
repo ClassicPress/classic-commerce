@@ -3,7 +3,7 @@
  * Abstract Rest CRUD Controller Class
  *
  * @class    WC_REST_CRUD_Controller
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  * @version  3.0.0
  */
 

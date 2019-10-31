@@ -2,8 +2,7 @@
 /**
  * Abstract deprecated hooks
  *
- * @package WooCommerce\Abstracts
- * @since   WC-3.0.0
+ * @package ClassicCommerce\Abstracts
  * @version WC-3.3.0
  */
 

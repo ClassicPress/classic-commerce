@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce advanced settings
+ * ClassicCommerce advanced settings
  *
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

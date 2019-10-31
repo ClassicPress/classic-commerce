@@ -4,7 +4,7 @@
  *
  * @author   WooCommerce
  * @category Admin
- * @package  WooCommerce/Admin/Customize
+ * @package  ClassicCommerce/Admin/Customize
  * @version  3.1.0
  */
 
@@ -30,7 +30,7 @@ if ( ! class_exists( 'WC_Admin_Customize', false ) ) :
 
 		/**
 		 * Register customize new nav menu item types.
-		 * This will register WooCommerce account endpoints as a nav menu item type.
+		 * This will register ClassicCommerce account endpoints as a nav menu item type.
 		 *
 		 * @since  WC-3.1.0
 		 * @param  array $item_types Menu item types.

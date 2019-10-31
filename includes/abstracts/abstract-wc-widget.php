@@ -3,7 +3,7 @@
  * Abstract widget class
  *
  * @class WC_Widget
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Widget
  *
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  * @version  2.5.0
  * @extends  WP_Widget
  */

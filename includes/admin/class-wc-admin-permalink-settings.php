@@ -5,7 +5,7 @@
  * @class       WC_Admin_Permalink_Settings
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     2.3.0
  */
 

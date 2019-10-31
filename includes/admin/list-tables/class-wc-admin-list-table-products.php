@@ -2,7 +2,7 @@
 /**
  * List tables: products.
  *
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  3.3.0
  */
 

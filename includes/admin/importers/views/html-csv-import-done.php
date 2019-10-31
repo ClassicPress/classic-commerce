@@ -2,7 +2,7 @@
 /**
  * Admin View: Importer - Done!
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

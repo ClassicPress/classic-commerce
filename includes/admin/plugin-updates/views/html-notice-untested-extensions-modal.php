@@ -2,7 +2,7 @@
 /**
  * Admin View: Notice - Untested extensions.
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

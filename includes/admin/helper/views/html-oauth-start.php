@@ -2,7 +2,7 @@
 /**
  * Admin -> WooCommerce -> Extensions -> WooCommerce.com Subscriptions main page.
  *
- * @package WooCommerce\Views
+ * @package ClassicCommerce\Views
  */
 
 defined( 'ABSPATH' ) || exit();

@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if ( wc_product_dimensions_enabled() ) {
 			?>
 			<p class="form-field dimensions_field">
-				<?php /* translators: WooCommerce dimension unit*/ ?>
+				<?php /* translators: Classic Commerce dimension unit*/ ?>
 				<label for="product_length"><?php printf( __( 'Dimensions (%s)', 'classic-commerce' ), get_option( 'woocommerce_dimension_unit' ) ); ?></label>
 				<span class="wrap">
 					<input id="product_length" placeholder="<?php esc_attr_e( 'Length', 'classic-commerce' ); ?>" class="input-text wc_input_decimal" size="6" type="text" name="_length" value="<?php echo esc_attr( wc_format_localized_decimal( $product_object->get_length( 'edit' ) ) ); ?>" />

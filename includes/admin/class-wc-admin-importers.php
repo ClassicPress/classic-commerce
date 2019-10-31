@@ -1,8 +1,8 @@
 <?php
 /**
- * Init WooCommerce data importers.
+ * Init ClassicCommerce data importers.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class WC_Admin_Importers {
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		add_action( 'wp_ajax_woocommerce_do_ajax_product_import', array( $this, 'do_ajax_product_import' ) );
 
-		// Register WooCommerce importers.
+		// Register ClassicCommerce importers.
 		$this->importers['product_importer'] = array(
 			'menu'       => 'edit.php?post_type=product',
 			'name'       => __( 'Product Import', 'classic-commerce' ),
@@ -43,7 +43,7 @@ class WC_Admin_Importers {
 	}
 
 	/**
-	 * Return true if WooCommerce imports are allowed for current user, false otherwise.
+	 * Return true if ClassicCommerce imports are allowed for current user, false otherwise.
 	 *
 	 * @return bool Whether current user can perform imports.
 	 */

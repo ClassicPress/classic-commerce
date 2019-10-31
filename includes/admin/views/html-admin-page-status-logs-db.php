@@ -2,7 +2,7 @@
 /**
  * Admin View: Page - Status Database Logs
  *
- * @package WooCommerce/Admin/Logs
+ * @package ClassicCommerce/Admin/Logs
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

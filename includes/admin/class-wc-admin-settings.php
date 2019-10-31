@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Admin Settings Class
+ * ClassicCommerce Admin Settings Class
  *
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  3.4.0
  */
 

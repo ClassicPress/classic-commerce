@@ -1,8 +1,8 @@
 <?php // @codingStandardsIgnoreLine.
 /**
- * WooCommerce Checkout Settings
+ * ClassicCommerce Checkout Settings
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;

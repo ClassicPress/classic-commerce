@@ -1,9 +1,9 @@
 <?php
 /**
- * WooCommerce abstract privacy class.
+ * ClassicCommerce abstract privacy class.
  *
  * @since WC-3.4.0
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  * privacy data to be exported and privacy data to be deleted.
  *
  * @version  3.4.0
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  */
 abstract class WC_Abstract_Privacy {
 	/**
@@ -72,7 +72,7 @@ abstract class WC_Abstract_Privacy {
 	 */
 	protected function init() {
 		add_action( 'admin_init', array( $this, 'add_privacy_message' ) );
-		// We set priority to 5 to help WooCommerce's findings appear before those from extensions in exported items.
+		// We set priority to 5 to help ClassicCommerce's findings appear before those from extensions in exported items.
 		add_filter( 'wp_privacy_personal_data_exporters', array( $this, 'register_exporters' ), $this->export_priority );
 		add_filter( 'wp_privacy_personal_data_erasers', array( $this, 'register_erasers' ), $this->erase_priority );
 	}

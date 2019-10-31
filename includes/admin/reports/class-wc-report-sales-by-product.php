@@ -2,7 +2,7 @@
 /**
  * Sales By Product Reporting
  *
- * @package WooCommerce/Admin/Reporting
+ * @package ClassicCommerce/Admin/Reporting
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
+ * @package     ClassicCommerce/Admin/Reports
  * @version     2.1.0
  */
 class WC_Report_Sales_By_Product extends WC_Admin_Report {

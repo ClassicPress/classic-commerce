@@ -2,7 +2,7 @@
 /**
  * Setup menus in WP admin.
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-2.5.0
  */
 
@@ -161,7 +161,7 @@ class WC_Admin_Menus {
 		global $submenu;
 
 		if ( isset( $submenu['woocommerce'] ) ) {
-			// Remove 'WooCommerce' sub menu item.
+			// Remove 'ClassicCommerce' sub menu item.
 			unset( $submenu['woocommerce'][0] );
 
 			$order_count = wc_processing_order_count();

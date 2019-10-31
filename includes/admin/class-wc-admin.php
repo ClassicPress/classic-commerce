@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Admin
+ * ClassicCommerce Admin
  *
  * @class    WC_Admin
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  2.6.0
  */
 

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
+ * @package     ClassicCommerce/Admin/Reports
  * @version     2.1.0
  */
 class WC_Admin_Report {
@@ -598,7 +598,7 @@ class WC_Admin_Report {
 	}
 
 	/**
-	 * Return currency tooltip JS based on WooCommerce currency position settings.
+	 * Return currency tooltip JS based on ClassicCommerce currency position settings.
 	 *
 	 * @return string
 	 */

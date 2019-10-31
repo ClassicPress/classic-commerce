@@ -1,8 +1,8 @@
 <?php
 /**
- * Init WooCommerce data exporters.
+ * Init ClassicCommerce data exporters.
  *
- * @package     WooCommerce/Admin
+ * @package     ClassicCommerce/Admin
  * @version     3.1.0
  */
 
@@ -36,7 +36,7 @@ class WC_Admin_Exporters {
 		add_action( 'admin_init', array( $this, 'download_export_file' ) );
 		add_action( 'wp_ajax_woocommerce_do_ajax_product_export', array( $this, 'do_ajax_product_export' ) );
 
-		// Register WooCommerce exporters.
+		// Register ClassicCommerce exporters.
 		$this->exporters['product_exporter'] = array(
 			'menu'       => 'edit.php?post_type=product',
 			'name'       => __( 'Product Export', 'classic-commerce' ),
@@ -46,7 +46,7 @@ class WC_Admin_Exporters {
 	}
 
 	/**
-	 * Return true if WooCommerce export is allowed for current user, false otherwise.
+	 * Return true if ClassicCommerce export is allowed for current user, false otherwise.
 	 *
 	 * @return bool Whether current user can perform export.
 	 */

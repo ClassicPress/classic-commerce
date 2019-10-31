@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Log Table List
+ * ClassicCommerce Log Table List
  *
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
+ * @package  ClassicCommerce/Admin
  * @version  1.0.0
  */
 

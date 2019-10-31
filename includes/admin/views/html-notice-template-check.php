@@ -2,7 +2,7 @@
 /**
  * Admin View: Notice - Template Check
  *
- * @package WooCommerce/Views
+ * @package ClassicCommerce/Views
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
