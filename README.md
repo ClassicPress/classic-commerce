@@ -18,7 +18,7 @@ We recommend all developers follow the [Issues](https://github.com/ClassicPress-
 To disclose a security issue to our team. (security@classicpress.net)
 
 ## Support
-This repository is most suitable for development but can also be used for support. We will add a support tag to your issue. However, this might take a little longer to get a response. You can also use the dedicated support area on the [ClassicPress community forum](https://forums.classicpress.net/c/support/classic-commerce/").
+This repository is most suitable for development but can also be used for support. We will add a support tag to your issue. However, this might take a little longer to get a response. You can also use the dedicated support area on the [ClassicPress community forum](https://forums.classicpress.net/c/support/classic-commerce/).
 
 ## Contributing to Classic Commerce
 If you have a patch or have stumbled upon an issue with Classic Commerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/ClassicPress-research/classic-commerce/blob/master/.github/CONTRIBUTING.md) for more information about how you can do this.
