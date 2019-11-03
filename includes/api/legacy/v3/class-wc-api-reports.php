@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Reports Class
+ * ClassicCommerce API Reports Class
  *
  * Handles requests to the /reports endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  */
 

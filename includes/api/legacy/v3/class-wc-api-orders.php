@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Orders Class
+ * ClassicCommerce API Orders Class
  *
  * Handles requests to the /orders endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  */
 

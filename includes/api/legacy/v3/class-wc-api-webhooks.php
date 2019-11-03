@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Webhooks class
+ * ClassicCommerce API Webhooks class
  *
  * Handles requests to the /webhooks endpoint
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-2.2
  */
 

@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce API Authentication Class
+ * ClassicCommerce API Authentication Class
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-2.1.0
  * @version  2.4.0
  */

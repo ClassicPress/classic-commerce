@@ -4,7 +4,7 @@
  *
  * Handles requests to the /system_status endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-3.0.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * System status controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
@@ -708,7 +708,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 		$core_tables = array_map( array( $this, 'add_db_table_prefix' ), $core_tables );
 
 		/**
-		 * Organize WooCommerce and non-WooCommerce tables separately for display purposes later.
+		 * Organize ClassicCommerce and non-ClassicCommerce tables separately for display purposes later.
 		 *
 		 * To ensure we include all WC tables, even if they do not exist, pre-populate the WC array with all the tables.
 		 */

@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce API
+ * ClassicCommerce API
  *
  * Handles REST API requests
  *
@@ -9,7 +9,7 @@
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-2.1
  */
 

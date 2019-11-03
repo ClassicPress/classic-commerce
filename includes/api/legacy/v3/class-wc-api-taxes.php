@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Taxes Class
+ * ClassicCommerce API Taxes Class
  *
  * Handles requests to the /taxes endpoint
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-2.5.0
  */
 

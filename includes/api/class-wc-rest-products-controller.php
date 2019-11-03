@@ -4,7 +4,7 @@
  *
  * Handles requests to the /products endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-2.6.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Products controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Products_V2_Controller
  */
 class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
@@ -71,7 +71,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 	}
 
 	/**
-	 * Make extra product orderby features supported by WooCommerce available to the WC API.
+	 * Make extra product orderby features supported by ClassicCommerce available to the WC API.
 	 * This includes 'price', 'popularity', and 'rating'.
 	 *
 	 * @param WP_REST_Request $request Request data.

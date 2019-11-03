@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Coupons Class
+ * ClassicCommerce API Coupons Class
  *
  * Handles requests to the /coupons endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  * @version     2.1
  */

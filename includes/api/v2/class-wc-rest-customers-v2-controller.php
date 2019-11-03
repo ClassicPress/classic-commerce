@@ -4,7 +4,7 @@
  *
  * Handles requests to the /customers endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-2.6.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Customers controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Customers_V1_Controller
  */
 class WC_REST_Customers_V2_Controller extends WC_REST_Customers_V1_Controller {

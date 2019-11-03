@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Resource class
+ * ClassicCommerce API Resource class
  *
  * Provides shared functionality for resource-specific API classes
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  * @version     2.1
  */

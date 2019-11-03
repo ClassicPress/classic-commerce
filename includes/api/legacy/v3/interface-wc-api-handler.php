@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API
+ * ClassicCommerce API
  *
  * Defines an interface that API request/response handlers should implement
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  */
 
