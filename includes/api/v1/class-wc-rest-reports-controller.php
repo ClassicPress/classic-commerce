@@ -6,7 +6,7 @@
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-3.0.0
  */
 
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Reports controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Reports_V1_Controller extends WC_REST_Controller {

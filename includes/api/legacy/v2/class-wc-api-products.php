@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API Products Class
+ * ClassicCommerce API Products Class
  *
  * Handles requests to the /products endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  * @version     3.0
  */

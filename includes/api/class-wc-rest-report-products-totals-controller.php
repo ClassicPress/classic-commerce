@@ -4,7 +4,7 @@
  *
  * Handles requests to the /reports/products/count endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-3.5.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Reports Products Totals controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Reports_Controller
  */
 class WC_REST_Report_Products_Totals_Controller extends WC_REST_Reports_Controller {

@@ -4,7 +4,7 @@
  *
  * Handles requests to the /settings endpoints.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-3.0.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Settings controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Settings_V2_Controller
  */
 class WC_REST_Settings_Controller extends WC_REST_Settings_V2_Controller {

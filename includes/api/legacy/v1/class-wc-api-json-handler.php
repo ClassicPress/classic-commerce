@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce API
+ * ClassicCommerce API
  *
  * Handles parsing JSON request bodies and generating JSON responses
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
+ * @package     ClassicCommerce/API
  * @since       WC-2.1
  * @version     2.1
  */

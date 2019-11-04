@@ -4,7 +4,7 @@
  *
  * Handles requests to the /data endpoint.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-3.5.0
  */
 
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Data controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Data_Controller extends WC_REST_Controller {
