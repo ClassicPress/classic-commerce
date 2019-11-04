@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Cancelled_Order file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! class_exists( 'WC_Email_Cancelled_Order', false ) ) :
 	 *
 	 * @class       WC_Email_Cancelled_Order
 	 * @version     2.2.7
-	 * @package     WooCommerce/Classes/Emails
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Cancelled_Order extends WC_Email {

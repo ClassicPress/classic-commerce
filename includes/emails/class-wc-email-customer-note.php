@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_Note file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! class_exists( 'WC_Email_Customer_Note', false ) ) :
 	 *
 	 * @class       WC_Email_Customer_Note
 	 * @version     3.5.0
-	 * @package     WooCommerce/Classes/Emails
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Customer_Note extends WC_Email {

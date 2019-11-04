@@ -2,7 +2,7 @@
 /**
  * Handles CSV export.
  *
- * @package  WooCommerce/Export
+ * @package  ClassicCommerce/Export
  * @version  3.1.0
  */
 

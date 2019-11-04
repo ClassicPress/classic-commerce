@@ -2,7 +2,7 @@
 /**
  * WP_CLI_Runner class file.
  *
- * @package WooCommerce\CLI
+ * @package ClassicCommerce\CLI
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * https://github.com/wp-cli/restful
  *
  * @version WC-3.0.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 class WC_CLI_Runner {
 	/**

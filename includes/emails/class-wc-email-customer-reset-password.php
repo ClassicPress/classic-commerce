@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_Reset_Password file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 	 *
 	 * @class       WC_Email_Customer_Reset_Password
 	 * @version     3.5.0
-	 * @package     WooCommerce/Classes/Emails
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Customer_Reset_Password extends WC_Email {
