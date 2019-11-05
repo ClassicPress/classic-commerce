@@ -8,7 +8,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  Automattic
- * @package Classic Commerce/Templates
+ * @package ClassicCommerce/Templates
  * @version WC-3.3.0
  */
 

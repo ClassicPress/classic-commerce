@@ -2,7 +2,7 @@
 /**
  * Bolivian states
  *
- * @package Classic Commerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-3.1.0
  */
 

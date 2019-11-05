@@ -10,7 +10,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package Classic Commerce/Templates/Emails
+ * @package ClassicCommerce/Templates/Emails
  * @version WC-2.5.0
  */
 

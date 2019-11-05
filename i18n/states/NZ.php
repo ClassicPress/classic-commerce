@@ -2,7 +2,7 @@
 /**
  * New Zealand States
  *
- * @package Classic Commerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.3.0
  */
 

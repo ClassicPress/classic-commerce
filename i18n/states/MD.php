@@ -8,7 +8,7 @@
  * https://en.wikipedia.org/wiki/ISO_3166-2:MD
  * https://en.wikipedia.org/wiki/Romanian_alphabet#Unicode_and_HTML
  *
- * @package Classic Commerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-3.3.0
  */
 
