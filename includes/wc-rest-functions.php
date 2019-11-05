@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce REST Functions
+ * ClassicCommerce REST Functions
  *
  * Functions for REST specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.6.0
  */
 

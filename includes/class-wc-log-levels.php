@@ -3,7 +3,7 @@
  * Standard log levels
  *
  * @version WC-3.2.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

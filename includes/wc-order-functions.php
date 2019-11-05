@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Order Functions
+ * ClassicCommerce Order Functions
  *
  * Functions for order specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 
@@ -968,7 +968,7 @@ function wc_get_order_notes( $args ) {
 
 	$args['orderby'] = ! empty( $args['orderby'] ) && in_array( $args['orderby'], array( 'date_created', 'date_created_gmt', 'id' ), true ) ? $orderby_mapping[ $args['orderby'] ] : 'comment_ID';
 
-	// Set WooCommerce order type.
+	// Set ClassicCommerce order type.
 	if ( isset( $args['type'] ) && 'customer' === $args['type'] ) {
 		$args['meta_query'] = array( // WPCS: slow query ok.
 			array(

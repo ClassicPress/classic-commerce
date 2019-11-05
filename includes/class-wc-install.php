@@ -2,7 +2,7 @@
 /**
  * Installation related functions and actions.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 
@@ -142,7 +142,7 @@ class WC_Install {
 	}
 
 	/**
-	 * Check WooCommerce version and run the updater is required.
+	 * Check ClassicCommerce version and run the updater is required.
 	 *
 	 * This check is done on all requests and runs if the versions do not match.
 	 */
@@ -336,7 +336,7 @@ class WC_Install {
 	/**
 	 * Update DB version to current.
 	 *
-	 * @param string|null $version New WooCommerce DB version or null.
+	 * @param string|null $version New ClassicCommerce DB version or null.
 	 */
 	public static function update_db_version( $version = null ) {
 		delete_option( 'woocommerce_db_version' );
@@ -826,7 +826,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	}
 
 	/**
-	 * Return a list of WooCommerce tables. Used to make sure all WC tables are dropped when uninstalling the plugin
+	 * Return a list of ClassicCommerce tables. Used to make sure all WC tables are dropped when uninstalling the plugin
 	 * in a single site or multi site environment.
 	 *
 	 * @return array WC tables.
@@ -859,11 +859,11 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 		}
 
 		/**
-		 * Filter the list of known WooCommerce tables.
+		 * Filter the list of known ClassicCommerce tables.
 		 *
-		 * If WooCommerce plugins need to add new tables, they can inject them here.
+		 * If ClassicCommerce plugins need to add new tables, they can inject them here.
 		 *
-		 * @param array $tables An array of WooCommerce-specific database table names.
+		 * @param array $tables An array of ClassicCommerce-specific database table names.
 		 */
 		$tables = apply_filters( 'woocommerce_install_get_tables', $tables );
 
@@ -871,7 +871,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	}
 
 	/**
-	 * Drop WooCommerce tables.
+	 * Drop ClassicCommerce tables.
 	 *
 	 * @return void
 	 */
@@ -984,7 +984,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	}
 
 	/**
-	 * Get capabilities for WooCommerce - these are assigned to admin/shop manager during installation or reset.
+	 * Get capabilities for ClassicCommerce - these are assigned to admin/shop manager during installation or reset.
 	 *
 	 * @return array
 	 */
@@ -1028,7 +1028,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	}
 
 	/**
-	 * Remove WooCommerce roles.
+	 * Remove ClassicCommerce roles.
 	 */
 	public static function remove_roles() {
 		global $wp_roles;

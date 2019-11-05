@@ -7,7 +7,7 @@
  * Webhooks are enqueued to their associated actions, delivered, and logged.
  *
  * @version  3.2.0
- * @package  WooCommerce/Webhooks
+ * @package  ClassicCommerce/Webhooks
  * @since    WC-2.2.0
  */
 

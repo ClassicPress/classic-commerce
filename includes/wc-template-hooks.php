@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Template Hooks
+ * ClassicCommerce Template Hooks
  *
- * Action/filter hooks used for WooCommerce functions/templates.
+ * Action/filter hooks used for ClassicCommerce functions/templates.
  *
- * @package WooCommerce/Templates
+ * @package ClassicCommerce/Templates
  * @version WC-2.1.0
  */
 

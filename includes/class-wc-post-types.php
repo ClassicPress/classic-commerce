@@ -4,7 +4,7 @@
  *
  * Registers post types and taxonomies.
  *
- * @package WooCommerce/Classes/Products
+ * @package ClassicCommerce/Classes/Products
  * @version WC-2.5.0
  */
 

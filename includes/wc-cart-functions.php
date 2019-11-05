@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Cart Functions
+ * ClassicCommerce Cart Functions
  *
  * Functions for cart specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.5.0
  */
 

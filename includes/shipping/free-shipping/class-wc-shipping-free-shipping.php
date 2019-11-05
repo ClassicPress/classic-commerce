@@ -2,7 +2,7 @@
 /**
  * Class WC_Shipping_Free_Shipping file.
  *
- * @package WooCommerce\Shipping
+ * @package ClassicCommerce\Shipping
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class   WC_Shipping_Free_Shipping
  * @version WC-2.6.0
- * @package WooCommerce/Classes/Shipping
+ * @package ClassicCommerce/Classes/Shipping
  */
 class WC_Shipping_Free_Shipping extends WC_Shipping_Method {
 

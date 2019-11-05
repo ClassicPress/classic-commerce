@@ -2,9 +2,9 @@
 /**
  * Product Factory
  *
- * The WooCommerce product factory creating the right product object.
+ * The ClassicCommerce product factory creating the right product object.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 

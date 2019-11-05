@@ -2,7 +2,7 @@
 /**
  * Regular order
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @version WC-2.2.0
  */
 
@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Order Class.
  *
- * These are regular WooCommerce orders, which extend the abstract order class.
+ * These are regular ClassicCommerce orders, which extend the abstract order class.
  */
 class WC_Order extends WC_Abstract_Order {
 
@@ -181,7 +181,7 @@ class WC_Order extends WC_Abstract_Order {
 		}
 
 		/**
-		 * Filter WooCommerce formatted order total.
+		 * Filter ClassicCommerce formatted order total.
 		 *
 		 * @param string   $formatted_total  Total to display.
 		 * @param WC_Order $order            Order data.

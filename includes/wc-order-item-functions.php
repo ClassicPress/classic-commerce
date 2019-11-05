@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Order Item Functions
+ * ClassicCommerce Order Item Functions
  *
  * Functions for order specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 
@@ -91,7 +91,7 @@ function wc_delete_order_item( $item_id ) {
 }
 
 /**
- * WooCommerce Order Item Meta API - Update term meta.
+ * ClassicCommerce Order Item Meta API - Update term meta.
  *
  * @param int    $item_id    Item ID.
  * @param string $meta_key   Meta key.
@@ -111,7 +111,7 @@ function wc_update_order_item_meta( $item_id, $meta_key, $meta_value, $prev_valu
 }
 
 /**
- * WooCommerce Order Item Meta API - Add term meta.
+ * ClassicCommerce Order Item Meta API - Add term meta.
  *
  * @param int    $item_id    Item ID.
  * @param string $meta_key   Meta key.
@@ -133,7 +133,7 @@ function wc_add_order_item_meta( $item_id, $meta_key, $meta_value, $unique = fal
 }
 
 /**
- * WooCommerce Order Item Meta API - Delete term meta.
+ * ClassicCommerce Order Item Meta API - Delete term meta.
  *
  * @param int    $item_id    Item ID.
  * @param string $meta_key   Meta key.
@@ -153,7 +153,7 @@ function wc_delete_order_item_meta( $item_id, $meta_key, $meta_value = '', $dele
 }
 
 /**
- * WooCommerce Order Item Meta API - Get term meta.
+ * ClassicCommerce Order Item Meta API - Get term meta.
  *
  * @param int    $item_id Item ID.
  * @param string $key     Meta key.

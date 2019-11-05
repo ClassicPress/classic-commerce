@@ -3,7 +3,7 @@
  * Privacy/GDPR related functionality which ties into WordPress functionality.
  *
  * @since   WC-3.4.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -38,13 +38,13 @@ class WC_Privacy extends WC_Abstract_Privacy {
 		include_once 'class-wc-privacy-erasers.php';
 		include_once 'class-wc-privacy-exporters.php';
 
-		// This hook registers WooCommerce data exporters.
+		// This hook registers ClassicCommerce data exporters.
 		$this->add_exporter( 'woocommerce-customer-data', __( 'WooCommerce Customer Data', 'classic-commerce' ), array( 'WC_Privacy_Exporters', 'customer_data_exporter' ) );
 		$this->add_exporter( 'woocommerce-customer-orders', __( 'WooCommerce Customer Orders', 'classic-commerce' ), array( 'WC_Privacy_Exporters', 'order_data_exporter' ) );
 		$this->add_exporter( 'woocommerce-customer-downloads', __( 'WooCommerce Customer Downloads', 'classic-commerce' ), array( 'WC_Privacy_Exporters', 'download_data_exporter' ) );
 		$this->add_exporter( 'woocommerce-customer-tokens', __( 'WooCommerce Customer Payment Tokens', 'classic-commerce' ), array( 'WC_Privacy_Exporters', 'customer_tokens_exporter' ) );
 
-		// This hook registers WooCommerce data erasers.
+		// This hook registers ClassicCommerce data erasers.
 		$this->add_eraser( 'woocommerce-customer-data', __( 'WooCommerce Customer Data', 'classic-commerce' ), array( 'WC_Privacy_Erasers', 'customer_data_eraser' ) );
 		$this->add_eraser( 'woocommerce-customer-orders', __( 'WooCommerce Customer Orders', 'classic-commerce' ), array( 'WC_Privacy_Erasers', 'order_data_eraser' ) );
 		$this->add_eraser( 'woocommerce-customer-downloads', __( 'WooCommerce Customer Downloads', 'classic-commerce' ), array( 'WC_Privacy_Erasers', 'download_data_eraser' ) );

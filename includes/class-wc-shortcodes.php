@@ -2,14 +2,14 @@
 /**
  * Shortcodes
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * WooCommerce Shortcodes class.
+ * ClassicCommerce Shortcodes class.
  */
 class WC_Shortcodes {
 

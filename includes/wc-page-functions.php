@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Page Functions
+ * ClassicCommerce Page Functions
  *
  * Functions related to pages and menus.
  *
- * @package  WooCommerce\Functions
+ * @package  ClassicCommerce\Functions
  * @version  2.6.0
  */
 

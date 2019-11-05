@@ -2,7 +2,7 @@
 /**
  * WC_Cache_Helper class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -230,7 +230,7 @@ class WC_Cache_Helper {
 	}
 
 	/**
-	 * Clean term caches added by WooCommerce.
+	 * Clean term caches added by ClassicCommerce.
 	 *
 	 * @since WC-3.3.4
 	 * @param array|int $ids Array of ids or single ID to clear cache for.

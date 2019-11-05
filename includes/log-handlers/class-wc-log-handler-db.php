@@ -2,7 +2,7 @@
 /**
  * Class WC_Log_Handler_DB file.
  *
- * @package WooCommerce\Log Handlers
+ * @package ClassicCommerce\Log Handlers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class          WC_Log_Handler_DB
  * @version        1.0.0
- * @package        WooCommerce/Classes/Log_Handlers
+ * @package        ClassicCommerce/Classes/Log_Handlers
  */
 class WC_Log_Handler_DB extends WC_Log_Handler {
 

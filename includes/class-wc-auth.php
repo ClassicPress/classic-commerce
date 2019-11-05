@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Auth
+ * ClassicCommerce Auth
  *
  * Handles wc-auth endpoint requests.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @since   WC-2.4.0
  */
 

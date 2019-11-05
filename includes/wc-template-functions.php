@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Template
+ * ClassicCommerce Template
  *
  * Functions for the templating system.
  *
- * @package  WooCommerce\Functions
+ * @package  ClassicCommerce\Functions
  * @version  2.5.0
  */
 
@@ -223,7 +223,7 @@ function wc_set_loop_prop( $prop, $value = '' ) {
 }
 
 /**
- * Should the WooCommerce loop be displayed?
+ * Should the ClassicCommerce loop be displayed?
  *
  * This will return true if we have posts (products) or if we have subcats to display.
  *
@@ -833,7 +833,7 @@ function wc_privacy_policy_text( $type = 'checkout' ) {
 }
 
 /**
- * Replaces placeholders with links to WooCommerce policy pages.
+ * Replaces placeholders with links to ClassicCommerce policy pages.
  *
  * @since WC-3.4.0
  * @param string $text Text to find/replace within.
@@ -860,7 +860,7 @@ function wc_replace_policy_page_link_placeholders( $text ) {
 if ( ! function_exists( 'woocommerce_content' ) ) {
 
 	/**
-	 * Output WooCommerce content.
+	 * Output ClassicCommerce content.
 	 *
 	 * This function is only used in the optional 'woocommerce.php' template.
 	 * which people can add to their themes to add basic woocommerce support.
@@ -2006,7 +2006,7 @@ if ( ! function_exists( 'woocommerce_mini_cart' ) ) {
 if ( ! function_exists( 'woocommerce_login_form' ) ) {
 
 	/**
-	 * Output the WooCommerce Login Form.
+	 * Output the ClassicCommerce Login Form.
 	 *
 	 * @param array $args Arguments.
 	 */
@@ -2027,7 +2027,7 @@ if ( ! function_exists( 'woocommerce_login_form' ) ) {
 if ( ! function_exists( 'woocommerce_checkout_login_form' ) ) {
 
 	/**
-	 * Output the WooCommerce Checkout Login Form.
+	 * Output the ClassicCommerce Checkout Login Form.
 	 */
 	function woocommerce_checkout_login_form() {
 		wc_get_template( 'checkout/form-login.php', array(
@@ -2039,7 +2039,7 @@ if ( ! function_exists( 'woocommerce_checkout_login_form' ) ) {
 if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 
 	/**
-	 * Output the WooCommerce Breadcrumb.
+	 * Output the ClassicCommerce Breadcrumb.
 	 *
 	 * @param array $args Arguments.
 	 */
@@ -2062,7 +2062,7 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 		$args['breadcrumb'] = $breadcrumbs->generate();
 
 		/**
-		 * WooCommerce Breadcrumb hook
+		 * ClassicCommerce Breadcrumb hook
 		 *
 		 * @hooked WC_Structured_Data::generate_breadcrumblist_data() - 10
 		 */

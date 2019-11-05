@@ -4,7 +4,7 @@
  *
  * Displays shopping cart widget.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.3.0
  */
 

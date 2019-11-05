@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Webhook functions
+ * ClassicCommerce Webhook functions
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.3.0
  */
 

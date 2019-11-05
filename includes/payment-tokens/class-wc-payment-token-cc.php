@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Token_CC file.
  *
- * @package WooCommerce\PaymentTokens
+ * @package ClassicCommerce\PaymentTokens
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Credit Card Payment Token.
+ * ClassicCommerce Credit Card Payment Token.
  *
  * Representation of a payment token for credit cards.
  *
  * @class       WC_Payment_Token_CC
  * @version     3.0.0
  * @since       WC-2.6.0
- * @package     WooCommerce/PaymentTokens
+ * @package     ClassicCommerce/PaymentTokens
  */
 class WC_Payment_Token_CC extends WC_Payment_Token {
 

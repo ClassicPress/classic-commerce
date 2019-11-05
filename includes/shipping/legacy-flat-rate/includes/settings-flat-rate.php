@@ -2,7 +2,7 @@
 /**
  * Legacy flat rate settings.
  *
- * @package WooCommerce\Shipping
+ * @package ClassicCommerce\Shipping
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 /**
  * Represents a file which can be downloaded.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  * @since   WC-3.0.0
  */

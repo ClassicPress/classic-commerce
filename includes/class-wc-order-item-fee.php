@@ -5,7 +5,7 @@
  * Fee is an amount of money charged for a particular piece of work
  * or for a particular right or service, and not supposed to be negative.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  * @since   WC-3.0.0
  */
