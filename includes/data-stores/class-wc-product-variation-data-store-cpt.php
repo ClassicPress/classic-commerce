@@ -2,7 +2,7 @@
 /**
  * Class WC_Product_Variation_Data_Store_CPT file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

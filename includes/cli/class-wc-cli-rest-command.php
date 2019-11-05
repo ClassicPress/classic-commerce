@@ -2,7 +2,7 @@
 /**
  * WP_CLI_Rest_Command class file.
  *
- * @package WooCommerce\Cli
+ * @package ClassicCommerce\Cli
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Main Command for WooCommere CLI.
  *
  * Since a lot of WC operations can be handled via the REST API, we base our CLI
- * off of Restful to generate commands for each WooCommerce REST API endpoint
+ * off of Restful to generate commands for each ClassicCommerce REST API endpoint
  * so most of the logic is shared.
  *
  * Forked from wp-cli/restful (by Daniel Bachhuber, released under the MIT license https://opensource.org/licenses/MIT).
  * https://github.com/wp-cli/restful
  *
  * @version WC-3.0.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 class WC_CLI_REST_Command {
 	/**

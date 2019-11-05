@@ -2,7 +2,7 @@
 /**
  * Class WC_Shipping_Zone_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

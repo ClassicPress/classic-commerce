@@ -2,7 +2,7 @@
 /**
  * Class Abstract_WC_Order_Item_Type_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

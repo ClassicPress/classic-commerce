@@ -2,7 +2,7 @@
 /**
  * WC_CLI_Update_Command class file.
  *
- * @package WooCommerce\CLI
+ * @package ClassicCommerce\CLI
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Allows updates via CLI.
  *
  * @version WC-3.0.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 class WC_CLI_Update_Command {
 
@@ -25,7 +25,7 @@ class WC_CLI_Update_Command {
 	}
 
 	/**
-	 * Runs all pending WooCommerce database updates.
+	 * Runs all pending ClassicCommerce database updates.
 	 */
 	public static function update() {
 		global $wpdb;

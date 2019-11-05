@@ -3,7 +3,7 @@
  * Class WC_Customer_Download_Log_Data_Store file.
  *
  * @version  3.3.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;

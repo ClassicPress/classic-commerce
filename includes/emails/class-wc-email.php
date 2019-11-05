@@ -2,7 +2,7 @@
 /**
  * Class WC_Email file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,11 +16,11 @@ if ( class_exists( 'WC_Email', false ) ) {
 /**
  * Email Class
  *
- * WooCommerce Email Class which is extended by specific email template classes to add emails to WooCommerce
+ * ClassicCommerce Email Class which is extended by specific email template classes to add emails to ClassicCommerce
  *
  * @class       WC_Email
  * @version     2.5.0
- * @package     WooCommerce/Classes/Emails
+ * @package     ClassicCommerce/Classes/Emails
  * @extends     WC_Settings_API
  */
 class WC_Email extends WC_Settings_API {
