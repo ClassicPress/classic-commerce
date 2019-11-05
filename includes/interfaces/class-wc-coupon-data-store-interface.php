@@ -3,7 +3,7 @@
  * Coupon Data Store Interface
  *
  * @version WC-3.0.0
- * @package WooCommerce/Interfaces
+ * @package ClassicCommerce/Interfaces
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

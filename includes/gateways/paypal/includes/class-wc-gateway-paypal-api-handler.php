@@ -2,7 +2,7 @@
 /**
  * Class WC_Gateway_Paypal_API_Handler file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

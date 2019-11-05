@@ -2,7 +2,7 @@
 /**
  * Class WC_Gateway_Cheque file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @class       WC_Gateway_Cheque
  * @extends     WC_Payment_Gateway
  * @version     2.1.0
- * @package     WooCommerce/Classes/Payment
+ * @package     ClassicCommerce/Classes/Payment
  */
 class WC_Gateway_Cheque extends WC_Payment_Gateway {
 

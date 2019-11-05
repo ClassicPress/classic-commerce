@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Gateway_CC file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Credit Card Payment Gateway
  *
  * @since       WC-2.6.0
- * @package     WooCommerce/Classes
+ * @package     ClassicCommerce/Classes
  */
 class WC_Payment_Gateway_CC extends WC_Payment_Gateway {
 

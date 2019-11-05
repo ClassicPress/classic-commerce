@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Importer Interface
+ * ClassicCommerce Importer Interface
  *
- * @package  WooCommerce/Interface
+ * @package  ClassicCommerce/Interface
  * @version  3.1.0
  */
 
