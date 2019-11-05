@@ -2,7 +2,7 @@
 /**
  * WC Data Store.
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @since   WC-3.0.0
  * @version WC-3.0.0
  */
@@ -153,7 +153,7 @@ class WC_Data_Store {
 	 * Reads an object from the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function read( &$data ) {
 		$this->instance->read( $data );
@@ -163,7 +163,7 @@ class WC_Data_Store {
 	 * Create an object in the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function create( &$data ) {
 		$this->instance->create( $data );
@@ -173,7 +173,7 @@ class WC_Data_Store {
 	 * Update an object in the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function update( &$data ) {
 		$this->instance->update( $data );
@@ -183,7 +183,7 @@ class WC_Data_Store {
 	 * Delete an object from the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 * @param array   $args Array of args to pass to the delete method.
 	 */
 	public function delete( &$data, $args = array() ) {

@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Formatting
+ * ClassicCommerce Formatting
  *
  * Functions for formatting data.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.1.0
  */
 
@@ -614,7 +614,7 @@ function wc_let_to_num( $size ) {
 }
 
 /**
- * WooCommerce Date Format - Allows to change date format for everything WooCommerce.
+ * ClassicCommerce Date Format - Allows to change date format for everything ClassicCommerce.
  *
  * @return string
  */
@@ -623,7 +623,7 @@ function wc_date_format() {
 }
 
 /**
- * WooCommerce Time Format - Allows to change time format for everything WooCommerce.
+ * ClassicCommerce Time Format - Allows to change time format for everything ClassicCommerce.
  *
  * @return string
  */
@@ -687,7 +687,7 @@ function wc_string_to_datetime( $time_string ) {
 }
 
 /**
- * WooCommerce Timezone - helper to retrieve the timezone string for a site until.
+ * ClassicCommerce Timezone - helper to retrieve the timezone string for a site until.
  * a WP core method exists (see https://core.trac.wordpress.org/ticket/24730).
  *
  * Adapted from https://secure.php.net/manual/en/function.timezone-name-from-abbr.php#89155.

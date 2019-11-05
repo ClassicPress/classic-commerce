@@ -2,7 +2,7 @@
 /**
  * Take settings registered for WP-Admin and hooks them up to the REST API
  *
- * @package  WooCommerce/Classes
+ * @package  ClassicCommerce/Classes
  * @version  3.0.0
  * @since    WC-3.0.0
  */

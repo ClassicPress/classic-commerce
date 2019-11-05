@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Payment Tokens
+ * ClassicCommerce Payment Tokens
  *
  * An API for storing and managing tokens for gateways and customers.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  * @since   WC-2.6.0
  */

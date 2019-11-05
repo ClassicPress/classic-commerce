@@ -2,7 +2,7 @@
 /**
  * List products. One widget to rule them all.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-3.3.0
  */
 

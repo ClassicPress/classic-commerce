@@ -4,7 +4,7 @@
  *
  * All functionality pertaining to regenerating product images in realtime.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.5.0
  * @since   WC-3.3.0
  */

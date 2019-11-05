@@ -3,7 +3,7 @@
  * Background Updater
  *
  * @version WC-2.6.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

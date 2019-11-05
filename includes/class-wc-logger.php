@@ -4,7 +4,7 @@
  *
  * @class          WC_Logger
  * @version        2.0.0
- * @package        WooCommerce/Classes
+ * @package        ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 /**
  * General user data validation methods
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @version  2.4.0
  */
 

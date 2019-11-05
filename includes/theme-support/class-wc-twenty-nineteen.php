@@ -3,7 +3,7 @@
  * Twenty Nineteen support.
  *
  * @since   WC-3.5.X
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -18,7 +18,7 @@ class WC_Twenty_Nineteen {
 	 */
 	public static function init() {
 
-		// Change WooCommerce wrappers.
+		// Change ClassicCommerce wrappers.
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 

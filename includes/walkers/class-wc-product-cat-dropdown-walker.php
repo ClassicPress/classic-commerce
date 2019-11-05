@@ -2,7 +2,7 @@
 /**
  * WC_Product_Cat_Dropdown_Walker class
  *
- * @package WooCommerce/Classes/Walkers
+ * @package ClassicCommerce/Classes/Walkers
  * @version WC-3.4.0
  */
 

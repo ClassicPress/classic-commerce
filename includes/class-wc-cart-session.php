@@ -2,7 +2,7 @@
 /**
  * Cart session handling class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 

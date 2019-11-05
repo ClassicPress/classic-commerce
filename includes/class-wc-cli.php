@@ -1,8 +1,8 @@
 <?php
 /**
- * Enables WooCommerce, via the the command line.
+ * Enables ClassicCommerce, via the the command line.
  *
- * @package WooCommerce\CLI
+ * @package ClassicCommerce\CLI
  * @version WC-3.0.0
  */
 

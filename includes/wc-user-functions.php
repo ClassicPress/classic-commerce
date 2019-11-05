@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Customer Functions
+ * ClassicCommerce Customer Functions
  *
  * Functions for customers.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.2.0
  */
 
@@ -676,7 +676,7 @@ function wc_user_search_columns( $search_columns ) {
 add_filter( 'user_search_columns', 'wc_user_search_columns' );
 
 /**
- * When a user is deleted in WordPress, delete corresponding WooCommerce data.
+ * When a user is deleted in WordPress, delete corresponding ClassicCommerce data.
  *
  * @param int $user_id User ID being deleted.
  */

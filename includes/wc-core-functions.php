@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Core Functions
+ * ClassicCommerce Core Functions
  *
  * General core functions available on both the front-end and admin.
  *
- * @package WooCommerce\Functions
+ * @package ClassicCommerce\Functions
  * @version WC-3.3.0
  */
 
@@ -645,7 +645,7 @@ function get_woocommerce_currency_symbol( $currency = '' ) {
 }
 
 /**
- * Send HTML emails from WooCommerce.
+ * Send HTML emails from ClassicCommerce.
  *
  * @param mixed  $to          Receiver.
  * @param mixed  $subject     Subject.
@@ -834,7 +834,7 @@ function wc_setcookie( $name, $value, $expire = 0, $secure = false ) {
 }
 
 /**
- * Get the URL to the WooCommerce REST API.
+ * Get the URL to the ClassicCommerce REST API.
  *
  * @since  WC-2.1
  * @param  string $path an endpoint to include in the URL.
@@ -1339,7 +1339,7 @@ function wc_back_link( $label, $url ) {
 }
 
 /**
- * Display a WooCommerce help tip.
+ * Display a ClassicCommerce help tip.
  *
  * @since  WC-2.5.0
  *
@@ -1858,7 +1858,7 @@ function wc_get_permalink_structure() {
 }
 
 /**
- * Switch WooCommerce to site language.
+ * Switch ClassicCommerce to site language.
  *
  * @since WC-3.1.0
  */
@@ -1875,7 +1875,7 @@ function wc_switch_to_site_locale() {
 }
 
 /**
- * Switch WooCommerce language to original.
+ * Switch ClassicCommerce language to original.
  *
  * @since WC-3.1.0
  */
@@ -1933,7 +1933,7 @@ function wc_get_var( &$var, $default = null ) {
 }
 
 /**
- * Read in WooCommerce headers when reading plugin headers.
+ * Read in ClassicCommerce headers when reading plugin headers.
  *
  * @since  WC-3.2.0
  * @param  array $headers Headers.
@@ -1951,7 +1951,7 @@ function wc_enable_wc_plugin_headers( $headers ) {
 add_filter( 'extra_plugin_headers', 'wc_enable_wc_plugin_headers' );
 
 /**
- * Prevent auto-updating the WooCommerce plugin on major releases if there are untested extensions active.
+ * Prevent auto-updating the ClassicCommerce plugin on major releases if there are untested extensions active.
  *
  * @since  WC-3.2.0
  * @param  bool   $should_update If should update.

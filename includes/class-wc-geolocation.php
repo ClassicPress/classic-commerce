@@ -6,7 +6,7 @@
  *
  * This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.4.0
  */
 

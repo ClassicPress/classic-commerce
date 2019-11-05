@@ -2,7 +2,7 @@
 /**
  * Handle frontend scripts
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-2.3.0
  */
 

@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Data Exception Class
+ * ClassicCommerce Data Exception Class
  *
  * Extends Exception to provide additional data.
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @since   WC-3.0.0
  */
 

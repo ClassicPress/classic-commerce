@@ -1,9 +1,9 @@
 <?php
 /**
- * WooCommerce WC_AJAX. AJAX Event Handlers.
+ * ClassicCommerce WC_AJAX. AJAX Event Handlers.
  *
  * @class    WC_AJAX
- * @package  WooCommerce/Classes
+ * @package  ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

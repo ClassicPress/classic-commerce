@@ -1,9 +1,9 @@
 <?php
 /**
- * WooCommerce product embed
+ * ClassicCommerce product embed
  *
  * @version  2.4.11
- * @package  WooCommerce/Classes/Embed
+ * @package  ClassicCommerce/Classes/Embed
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Embed Class which handles any WooCommerce Products that are embedded on this site or another site.
+ * Embed Class which handles any ClassicCommerce Products that are embedded on this site or another site.
  */
 class WC_Embed {
 

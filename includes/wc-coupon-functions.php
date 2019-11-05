@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Coupons Functions
+ * ClassicCommerce Coupons Functions
  *
  * Functions for coupon specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.0.0
  */
 

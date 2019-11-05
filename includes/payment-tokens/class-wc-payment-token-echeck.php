@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Token_eCheck file.
  *
- * @package WooCommerce\PaymentTokens
+ * @package ClassicCommerce\PaymentTokens
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce eCheck Payment Token.
+ * ClassicCommerce eCheck Payment Token.
  *
  * Representation of a payment token for eChecks.
  *
  * @class       WC_Payment_Token_ECheck
  * @version     3.0.0
  * @since       WC-2.6.0
- * @package     WooCommerce/PaymentTokens
+ * @package     ClassicCommerce/PaymentTokens
  */
 class WC_Payment_Token_ECheck extends WC_Payment_Token {
 

@@ -2,7 +2,7 @@
 /**
  * Deprecated filter hooks
  *
- * @package WooCommerce\Abstracts
+ * @package ClassicCommerce\Abstracts
  * @since   WC-3.0.0
  * @version WC-3.3.0
  */

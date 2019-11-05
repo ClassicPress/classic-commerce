@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce coupons.
+ * ClassicCommerce coupons.
  *
- * The WooCommerce coupons class gets coupon data from storage and checks coupon validity.
+ * The ClassicCommerce coupons class gets coupon data from storage and checks coupon validity.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 

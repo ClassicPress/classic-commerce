@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Product Functions
+ * ClassicCommerce Product Functions
  *
  * Functions for product specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.0.0
  */
 

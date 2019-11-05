@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Stock Functions
+ * ClassicCommerce Stock Functions
  *
  * Functions used to manage product stock levels.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 

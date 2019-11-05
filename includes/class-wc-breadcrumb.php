@@ -2,7 +2,7 @@
 /**
  * WC_Breadcrumb class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-2.3.0
  */
 

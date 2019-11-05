@@ -1,15 +1,15 @@
 <?php
 /**
- * WooCommerce countries
+ * ClassicCommerce countries
  *
- * @package WooCommerce\l10n
+ * @package ClassicCommerce\l10n
  * @version WC-3.3.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * The WooCommerce countries class stores country/state data.
+ * The ClassicCommerce countries class stores country/state data.
  */
 class WC_Countries {
 

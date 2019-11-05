@@ -3,7 +3,7 @@
  * Personal data erasers.
  *
  * @since   WC-3.4.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -97,7 +97,7 @@ class WC_Privacy_Erasers {
 	}
 
 	/**
-	 * Finds and erases data which could be used to identify a person from WooCommerce data assocated with an email address.
+	 * Finds and erases data which could be used to identify a person from ClassicCommerce data assocated with an email address.
 	 *
 	 * Orders are erased in blocks of 10 to avoid timeouts.
 	 *
@@ -204,7 +204,7 @@ class WC_Privacy_Erasers {
 	}
 
 	/**
-	 * Remove personal data specific to WooCommerce from an order object.
+	 * Remove personal data specific to ClassicCommerce from an order object.
 	 *
 	 * Note; this will hinder order processing for obvious reasons!
 	 *

@@ -2,7 +2,7 @@
 /**
  * Discount calculation
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @since   WC-3.2.0
  */
 

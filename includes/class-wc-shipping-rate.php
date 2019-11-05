@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Shipping Rate
+ * ClassicCommerce Shipping Rate
  *
  * Simple Class for storing rates.
  *
- * @package WooCommerce/Classes/Shipping
+ * @package ClassicCommerce/Classes/Shipping
  * @since   WC-2.6.0
  */
 
