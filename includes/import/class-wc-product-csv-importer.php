@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Product CSV importer
+ * ClassicCommerce Product CSV importer
  *
- * @package  WooCommerce/Import
+ * @package  ClassicCommerce/Import
  * @version  3.1.0
  */
 

@@ -3,7 +3,7 @@
  * Webhook Data Store Interface
  *
  * @version  3.2.0
- * @package  WooCommerce/Interface
+ * @package  ClassicCommerce/Interface
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Webhook data store interface.
+ * ClassicCommerce Webhook data store interface.
  */
 interface WC_Webhook_Data_Store_Interface {
 

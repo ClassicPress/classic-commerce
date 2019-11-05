@@ -6,7 +6,7 @@
  * This class will be removed in future versions.
  *
  * @version  3.2.0
- * @package  WooCommerce/Classes
+ * @package  ClassicCommerce/Classes
  * @category Class
  * @author   Automattic
  */

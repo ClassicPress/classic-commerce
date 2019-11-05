@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Legacy API. Was deprecated with 2.6.0.
+ * ClassicCommerce Legacy API. Was deprecated with 2.6.0.
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
+ * @package  ClassicCommerce/API
  * @since    WC-2.6
  */
 

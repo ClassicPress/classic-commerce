@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * directly on the object.
  *
  * @version  3.0.0
- * @package  WooCommerce/Classes
+ * @package  ClassicCommerce/Classes
  * @category Class
- * @author   WooCommerce
+ * @author   ClassicCommerce
  */
 abstract class WC_Legacy_Payment_Token extends WC_Data {
 

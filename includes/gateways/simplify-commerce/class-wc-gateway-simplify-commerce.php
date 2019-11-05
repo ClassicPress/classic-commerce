@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @extends     WC_Payment_Gateway_CC
  * @since       WC-2.2.0
  * @version     1.0.0
- * @package     WooCommerce/Classes/Payment
+ * @package     ClassicCommerce/Classes/Payment
  * @author      WooThemes
  */
 class WC_Gateway_Simplify_Commerce extends WC_Payment_Gateway_CC {
@@ -719,7 +719,7 @@ class WC_Gateway_Simplify_Commerce extends WC_Payment_Gateway_CC {
 
 	/**
 	 * Process refunds.
-	 * WooCommerce 2.2 or later.
+	 * ClassicCommerce 2.2 or later.
 	 *
 	 * @param  int    $order_id
 	 * @param  float  $amount
