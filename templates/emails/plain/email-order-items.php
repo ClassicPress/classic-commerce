@@ -8,7 +8,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package Classic Commerce/Templates/Emails/Plain
+ * @package ClassicCommerce/Templates/Emails/Plain
  * @version WC-3.2.0
  */
 

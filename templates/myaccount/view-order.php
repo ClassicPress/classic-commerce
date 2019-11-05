@@ -10,7 +10,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package Classic Commerce/Templates
+ * @package ClassicCommerce/Templates
  * @version WC-3.0.0
  */
 

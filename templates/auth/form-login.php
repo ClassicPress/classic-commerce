@@ -7,7 +7,7 @@
  * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package Classic Commerce/Templates/Auth
+ * @package ClassicCommerce/Templates/Auth
  * @version WC-3.4.0
  */
 

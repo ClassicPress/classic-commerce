@@ -2,7 +2,7 @@
 /**
  * Japan States
  *
- * @package Classic Commerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-2.0.0
  *
  * English notation of prefectures conform to the notation of Japan Post.
