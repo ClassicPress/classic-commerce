@@ -8,6 +8,8 @@ You can browse the source, look at open issues and keep track of development her
 
 We recommend all developers follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 
+## Roadmap
+You can follow up on the development cycle by reading our [roadmap](https://github.com/ClassicPress-research/classic-commerce/wiki/Plugin-Roadmap).
 
 ## Documentation
 * [WooCommerce Documentation](https://docs.woocommerce.com/documentation/plugins/woocommerce/)
