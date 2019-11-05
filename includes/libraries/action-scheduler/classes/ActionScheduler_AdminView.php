@@ -39,7 +39,7 @@ class ActionScheduler_AdminView extends ActionScheduler_AdminView_Deprecated {
 
 
 	/**
-	 * Registers action-scheduler into WooCommerce > System status.
+	 * Registers action-scheduler into ClassicCommerce > System status.
 	 *
 	 * @param array $tabs An associative array of tab key => label.
 	 * @return array $tabs An associative array of tab key => label, including Action Scheduler's tabs
@@ -54,8 +54,8 @@ class ActionScheduler_AdminView extends ActionScheduler_AdminView_Deprecated {
 	 * Include Action Scheduler's administration under the Tools menu.
 	 *
 	 * A menu under the Tools menu is important for backward compatibility (as that's
-	 * where it started), and also provides more convenient access than the WooCommerce
-	 * System Status page, and for sites where WooCommerce isn't active.
+	 * where it started), and also provides more convenient access than the ClassicCommerce
+	 * System Status page, and for sites where ClassicCommerce isn't active.
 	 */
 	public function register_menu() {
 		add_submenu_page(
