@@ -2,7 +2,7 @@
 /**
  * Class Functions.
  *
- * @package WooCommerce\Tests\Integrations
+ * @package ClassicCommerce\Tests\Integrations
  */
 
 /**

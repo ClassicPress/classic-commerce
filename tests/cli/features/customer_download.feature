@@ -1,4 +1,4 @@
-Feature: List WooCommerce customer downloads
+Feature: List ClassicCommerce customer downloads
 
 Background:
 

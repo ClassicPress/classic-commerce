@@ -92,7 +92,7 @@ class WC_Helper_Customer {
 	}
 
 	/**
-	 * Get the "Tax Based On" WooCommerce option.
+	 * Get the "Tax Based On" ClassicCommerce option.
 	 *
 	 * @return string base or billing
 	 */
@@ -119,7 +119,7 @@ class WC_Helper_Customer {
 	}
 
 	/**
-	 * Set the "Tax Based On" WooCommerce option.
+	 * Set the "Tax Based On" ClassicCommerce option.
 	 *
 	 * @param string $default_shipping_method Shipping Method slug
 	 */

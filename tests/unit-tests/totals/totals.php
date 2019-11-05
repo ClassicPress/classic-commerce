@@ -2,7 +2,7 @@
 /**
  * Tests for the totals class.
  *
- * @package WooCommerce\Tests\Discounts
+ * @package ClassicCommerce\Tests\Discounts
  */
 
 /**

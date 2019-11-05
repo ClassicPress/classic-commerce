@@ -2,7 +2,7 @@
 /**
  * Unit tests for the WC_Order_Item_Product class.
  *
- * @package WooCommerce\Tests\Order_Items
+ * @package ClassicCommerce\Tests\Order_Items
  * @since 3.2.0
  */
 

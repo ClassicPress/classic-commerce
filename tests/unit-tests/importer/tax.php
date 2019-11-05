@@ -2,7 +2,7 @@
 
 /**
  * Meta
- * @package WooCommerce\Tests\Importer
+ * @package ClassicCommerce\Tests\Importer
  */
 class WC_Tests_Tax_CSV_Importer extends WC_Unit_Test_Case {
 

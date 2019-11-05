@@ -2,7 +2,7 @@
 /**
  * Account function tests
  *
- * @package WooCommerce\Tests\Account
+ * @package ClassicCommerce\Tests\Account
  */
 
 /**

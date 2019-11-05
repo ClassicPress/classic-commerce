@@ -2,7 +2,7 @@
 /**
  * Tests for the orders REST API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since WC-3.0.0
  */
 class WC_Tests_API_Orders_V2 extends WC_REST_Unit_Test_Case {

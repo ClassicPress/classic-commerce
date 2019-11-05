@@ -2,7 +2,7 @@
 /**
  * Class WC_Tests_Admin_Report file.
  *
- * @package WooCommerce\Tests\Admin\Reports
+ * @package ClassicCommerce\Tests\Admin\Reports
  */
 
 /**
@@ -11,7 +11,7 @@
 class WC_Tests_Admin_Report extends WC_Unit_Test_Case {
 
 	/**
-	 * Load the necessary files, as they're not automatically loaded by WooCommerce.
+	 * Load the necessary files, as they're not automatically loaded by ClassicCommerce.
 	 *
 	 */
 	public static function setUpBeforeClass() {

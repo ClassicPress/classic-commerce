@@ -1,4 +1,4 @@
-# WooCommerce Unit Tests
+# ClassicCommerce Unit Tests
 
 ## Initial Setup
 

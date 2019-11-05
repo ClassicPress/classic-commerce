@@ -2,7 +2,7 @@
 /**
  * Tests for the reports coupons totals REST API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce Unit Tests Bootstrap
+ * ClassicCommerce Unit Tests Bootstrap
  *
  * @since WC-2.2
  */
@@ -69,7 +69,7 @@ class WC_Unit_Tests_Bootstrap {
 	}
 
 	/**
-	 * Install WooCommerce after the test environment and WC have been loaded.
+	 * Install ClassicCommerce after the test environment and WC have been loaded.
 	 *
 	 * @since WC-2.2
 	 */

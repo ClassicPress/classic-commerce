@@ -1,4 +1,4 @@
-Feature: Manage WooCommerce Product Reviews
+Feature: Manage ClassicCommerce Product Reviews
 
 Background:
 

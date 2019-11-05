@@ -2,7 +2,7 @@
 
 /**
  * Order Item Fee Tests.
- * @package WooCommerce\Tests\Order_Items
+ * @package ClassicCommerce\Tests\Order_Items
  * @since 3.2.0
  */
 class WC_Tests_Order_Item_Fee extends WC_Unit_Test_Case {

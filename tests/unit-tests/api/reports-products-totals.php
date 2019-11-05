@@ -2,7 +2,7 @@
 /**
  * Tests for the reports products totals REST API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 

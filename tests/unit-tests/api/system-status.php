@@ -2,13 +2,13 @@
 /**
  * Class WC_Tests_REST_System_Status file.
  *
- * @package WooCommerce/Tests
+ * @package ClassicCommerce/Tests
  */
 
 /**
  * System Status REST Tests.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
