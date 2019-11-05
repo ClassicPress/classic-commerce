@@ -2,7 +2,7 @@
 
 /**
  * Class Product_Simple.
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  * @since WC-2.3
  */
 class WC_Tests_Product_Simple extends WC_Unit_Test_Case {

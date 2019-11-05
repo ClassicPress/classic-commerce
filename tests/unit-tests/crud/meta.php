@@ -2,7 +2,7 @@
 /**
  * Test meta for https://github.com/woocommerce/woocommerce/issues/13533.
  *
- * @package WooCommerce\Tests\CRUD
+ * @package ClassicCommerce\Tests\CRUD
  */
 class WC_Tests_CRUD_Meta_Data extends WC_Unit_Test_Case {
 

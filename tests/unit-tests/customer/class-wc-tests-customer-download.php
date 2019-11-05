@@ -2,14 +2,14 @@
 /**
  * WC_Customer_Download tests file.
  *
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 
 /**
  * Class WC_Customer_Download.
  *
  * @since 3.3.0
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 class WC_Tests_Customer_Download extends WC_Unit_Test_Case {
 

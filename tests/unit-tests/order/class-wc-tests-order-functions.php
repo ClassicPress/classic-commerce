@@ -2,13 +2,13 @@
 /**
  * Class WC_Tests_Order_Functions file.
  *
- * @package WooCommerce/Tests
+ * @package ClassicCommerce/Tests
  */
 
 /**
  * Class Functions.
  *
- * @package WooCommerce\Tests\Order
+ * @package ClassicCommerce\Tests\Order
  * @since WC-2.3
  */
 class WC_Tests_Order_Functions extends WC_Unit_Test_Case {

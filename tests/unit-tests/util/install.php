@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Tests_Install.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  */
 class WC_Tests_Install extends WC_Unit_Test_Case {
 

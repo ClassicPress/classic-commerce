@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce Mock Session Handler
+ * ClassicCommerce Mock Session Handler
  *
  * @since WC-2.2
  */

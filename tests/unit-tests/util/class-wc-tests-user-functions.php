@@ -2,7 +2,7 @@
 /**
  * Unit tests for the user functions.
  *
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since 3.4.6
  */
 

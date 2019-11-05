@@ -2,7 +2,7 @@
 /**
  * Tests for the WC_Query class.
  *
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since 3.3.0
  */
 

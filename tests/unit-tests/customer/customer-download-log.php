@@ -3,7 +3,7 @@
 /**
  * Class Customer_Download_Log.
  * @since 3.3.0
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 class WC_Tests_Customer_Download_Log extends WC_Unit_Test_Case {
 

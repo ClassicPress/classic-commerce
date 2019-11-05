@@ -3,7 +3,7 @@
  * Class WC_Tests_Customer_Download_Log_Data_Store file.
  *
  * @version  3.5.0
- * @package WooCommerce\Tests\Customer
+ * @package ClassicCommerce\Tests\Customer
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -2,7 +2,7 @@
 
 /**
  * Classes WC_Deprecated_Filter_Hooks & WC_Deprecated_Action_Hooks.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since 3.0
  */
 class WC_Tests_Deprecated_Hooks extends WC_Unit_Test_Case {

@@ -2,7 +2,7 @@
 /**
  * Dummy integration class
  *
- * @package WooCommerce\Tests\Integrations
+ * @package ClassicCommerce\Tests\Integrations
  */
 
 /**

@@ -2,7 +2,7 @@
 
 /**
  * Shipping Zones API Tests
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.0.0
  */
 class WC_Tests_API_Shipping_Zones_V2 extends WC_REST_Unit_Test_Case {

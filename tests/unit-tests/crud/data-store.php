@@ -1,7 +1,7 @@
 <?php
 /**
  * Data Store Tests
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  * @since WC-3.0.0
  */
 class WC_Tests_Data_Store extends WC_Unit_Test_Case {

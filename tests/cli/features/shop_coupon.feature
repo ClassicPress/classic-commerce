@@ -1,4 +1,4 @@
-Feature: Manage WooCommerce Coupons
+Feature: Manage ClassicCommerce Coupons
 
 Background:
 

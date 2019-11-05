@@ -2,7 +2,7 @@
 
 /**
  * Class Payment_Token_eCheck.
- * @package WooCommerce\Tests\Payment_Tokens
+ * @package ClassicCommerce\Tests\Payment_Tokens
  */
 class WC_Tests_Payment_Token_eCheck extends WC_Unit_Test_Case {
 

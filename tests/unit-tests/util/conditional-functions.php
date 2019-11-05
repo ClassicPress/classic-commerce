@@ -2,7 +2,7 @@
 
 /**
  * Class Conditional_Functions.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since WC-2.3.0
  */
 class WC_Tests_Conditional_Functions extends WC_Unit_Test_Case {

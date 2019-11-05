@@ -3,7 +3,7 @@
 /**
  * Test template funcitons.
  *
- * @package WooCommerce/Tests/Templates
+ * @package ClassicCommerce/Tests/Templates
  * @since   3.4.0
  */
 class WC_Tests_Template_Functions extends WC_Unit_Test_Case {

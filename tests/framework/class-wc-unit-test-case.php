@@ -1,14 +1,14 @@
 <?php
 /**
- * Base test case for all WooCommerce tests.
+ * Base test case for all ClassicCommerce tests.
  *
- * @package WooCommerce\Tests
+ * @package ClassicCommerce\Tests
  */
 
 /**
  * WC Unit Test Case.
  *
- * Provides WooCommerce-specific setup/tear down/assert methods, custom factories,
+ * Provides ClassicCommerce-specific setup/tear down/assert methods, custom factories,
  * and helper functions.
  *
  * @since WC-2.2

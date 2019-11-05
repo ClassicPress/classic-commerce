@@ -2,7 +2,7 @@
 /**
  * Unit tests for gateways.
  *
- * @package WooCommerce\Tests\Gateways
+ * @package ClassicCommerce\Tests\Gateways
  */
 class WC_Tests_Gateways extends WC_Unit_Test_Case {
 
