@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Extended by classes to provide a query abstraction layer for safe object searching.
  *
- * @version  3.1.0
+ * @version  WC-3.1.0
  * @package  ClassicCommerce/Abstracts
  */
 abstract class WC_Object_Query {

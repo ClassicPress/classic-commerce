@@ -6,7 +6,7 @@
  * WC_Order (regular orders) and WC_Order_Refund (refunds are negative orders).
  *
  * @class       WC_Abstract_Order
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @package     ClassicCommerce/Classes
  */
 

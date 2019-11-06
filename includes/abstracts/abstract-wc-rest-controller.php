@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @package  ClassicCommerce/Abstracts
  * @extends  WP_REST_Controller
- * @version  2.6.0
+ * @version  WC-2.6.0
  */
 abstract class WC_REST_Controller extends WP_REST_Controller {
 

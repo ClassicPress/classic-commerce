@@ -5,7 +5,7 @@
  * @author   WooCommerce
  * @category Admin
  * @package  ClassicCommerce/Admin/Customize
- * @version  3.1.0
+ * @version  WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

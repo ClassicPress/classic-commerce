@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  * of the privacy message of the privacy id to the admin,
  * privacy data to be exported and privacy data to be deleted.
  *
- * @version  3.4.0
+ * @version  WC-3.4.0
  * @package  ClassicCommerce/Abstracts
  */
 abstract class WC_Abstract_Privacy {

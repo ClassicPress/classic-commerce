@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Extended by shipping methods to handle shipping calculations etc.
  *
  * @class       WC_Shipping_Method
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Shipping_Method extends WC_Settings_API {

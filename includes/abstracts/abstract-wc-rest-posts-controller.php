@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * WC_REST_Posts_Controller
  *
  * @package  ClassicCommerce/Abstracts
- * @version  2.6.0
+ * @version  WC-2.6.0
  */
 abstract class WC_REST_Posts_Controller extends WC_REST_Controller {
 

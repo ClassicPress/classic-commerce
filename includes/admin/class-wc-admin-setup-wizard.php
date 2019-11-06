@@ -5,7 +5,7 @@
  * Takes new users through some basic steps to setup their store.
  *
  * @package     ClassicCommerce/Admin
- * @version     2.6.0
+ * @version     WC-2.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

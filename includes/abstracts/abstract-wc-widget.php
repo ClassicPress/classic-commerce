@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * WC_Widget
  *
  * @package  ClassicCommerce/Abstracts
- * @version  2.5.0
+ * @version  WC-2.5.0
  * @extends  WP_Widget
  */
 abstract class WC_Widget extends WP_Widget {

@@ -6,7 +6,7 @@
  * the different data store classes.
  *
  * @class       WC_Data
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @package     ClassicCommerce/Classes
  */
 
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Implemented by classes using the same CRUD(s) pattern.
  *
- * @version  2.6.0
+ * @version  WC-2.6.0
  * @package  ClassicCommerce/Abstracts
  */
 abstract class WC_Data {

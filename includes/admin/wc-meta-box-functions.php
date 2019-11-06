@@ -5,7 +5,7 @@
  * @author      WooThemes
  * @category    Core
  * @package     ClassicCommerce/Admin/Functions
- * @version     2.3.0
+ * @version     WC-2.3.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

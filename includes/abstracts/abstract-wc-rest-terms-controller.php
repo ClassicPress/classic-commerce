@@ -3,7 +3,7 @@
  * Abstract Rest Terms Controller
  *
  * @package  ClassicCommerce/Abstracts
- * @version  3.3.0
+ * @version  WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
