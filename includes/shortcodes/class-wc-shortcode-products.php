@@ -3,7 +3,7 @@
  * Products shortcode
  *
  * @package  ClassicCommerce/Shortcodes
- * @version  3.2.4
+ * @version  WC-3.2.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

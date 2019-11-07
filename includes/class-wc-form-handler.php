@@ -2,7 +2,7 @@
 /**
  * Handle frontend forms.
  *
- * @version	2.2.0
+ * @version	WC-2.2.0
  * @package	ClassicCommerce/Classes/
  */
 

@@ -5,8 +5,8 @@
  * This class is a fork of GeoIP class from MaxMind LLC.
  *
  * @package    ClassicCommerce/Classes
- * @version    2.4.0
- * @deprecated 3.4.0
+ * @version    WC-2.4.0
+ * @deprecated WC-3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

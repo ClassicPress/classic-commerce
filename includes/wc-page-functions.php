@@ -5,7 +5,7 @@
  * Functions related to pages and menus.
  *
  * @package  ClassicCommerce\Functions
- * @version  2.6.0
+ * @version  WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

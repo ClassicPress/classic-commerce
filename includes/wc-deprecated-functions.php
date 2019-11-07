@@ -7,7 +7,7 @@
  * @author   Automattic
  * @category Core
  * @package  ClassicCommerce\Functions
- * @version  3.3.0
+ * @version  WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

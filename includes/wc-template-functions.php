@@ -5,7 +5,7 @@
  * Functions for the templating system.
  *
  * @package  ClassicCommerce\Functions
- * @version  2.5.0
+ * @version  WC-2.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
