@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 	 * An email sent to the customer when they reset their password.
 	 *
 	 * @class       WC_Email_Customer_Reset_Password
-	 * @version     3.5.0
+	 * @version     WC-3.5.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

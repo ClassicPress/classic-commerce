@@ -8,7 +8,7 @@
  * @category    API
  * @package     ClassicCommerce/API
  * @since       WC-2.1
- * @version     3.0
+ * @version     WC-3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

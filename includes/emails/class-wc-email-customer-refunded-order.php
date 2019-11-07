@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Customer_Refunded_Order', false ) ) :
 	 * Order refunded emails are sent to the customer when the order is marked refunded.
 	 *
 	 * @class    WC_Email_Customer_Refunded_Order
-	 * @version  3.5.0
+	 * @version  WC-3.5.0
 	 * @package  ClassicCommerce/Classes/Emails
 	 * @extends  WC_Email
 	 */

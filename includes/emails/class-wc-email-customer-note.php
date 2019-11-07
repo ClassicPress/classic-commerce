@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Customer_Note', false ) ) :
 	 * Customer note emails are sent when you add a note to an order.
 	 *
 	 * @class       WC_Email_Customer_Note
-	 * @version     3.5.0
+	 * @version     WC-3.5.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

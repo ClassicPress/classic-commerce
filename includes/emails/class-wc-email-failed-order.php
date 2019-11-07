@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Failed_Order', false ) ) :
 	 * An email sent to the admin when payment fails to go through.
 	 *
 	 * @class       WC_Email_Failed_Order
-	 * @version     2.5.0
+	 * @version     WC-2.5.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

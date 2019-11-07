@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Cancelled_Order', false ) ) :
 	 * An email sent to the admin when an order is cancelled.
 	 *
 	 * @class       WC_Email_Cancelled_Order
-	 * @version     2.2.7
+	 * @version     WC-2.2.7
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

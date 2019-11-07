@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Customer_Processing_Order', false ) ) :
 	 * An email sent to the customer when a new order is paid for.
 	 *
 	 * @class       WC_Email_Customer_Processing_Order
-	 * @version     3.5.0
+	 * @version     WC-3.5.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

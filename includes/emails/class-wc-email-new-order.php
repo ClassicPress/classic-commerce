@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_New_Order' ) ) :
 	 * An email sent to the admin when a new order is received/paid for.
 	 *
 	 * @class       WC_Email_New_Order
-	 * @version     2.0.0
+	 * @version     WC-2.0.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */

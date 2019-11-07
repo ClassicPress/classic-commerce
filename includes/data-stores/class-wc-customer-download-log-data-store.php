@@ -2,7 +2,7 @@
 /**
  * Class WC_Customer_Download_Log_Data_Store file.
  *
- * @version  3.3.0
+ * @version  WC-3.3.0
  * @package ClassicCommerce\Classes
  */
 

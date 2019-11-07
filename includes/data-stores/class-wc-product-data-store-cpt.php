@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Product Data Store: Stored in CPT.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Product_Data_Store_CPT extends WC_Data_Store_WP implements WC_Object_Data_Store_Interface, WC_Product_Data_Store_Interface {
 
