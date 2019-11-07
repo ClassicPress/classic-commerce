@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * clean.
  * This class will be removed in future versions.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  * @package  ClassicCommerce/Abstracts
  * @category Abstract Class
  * @author   WooThemes

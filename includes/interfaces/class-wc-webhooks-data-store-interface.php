@@ -2,7 +2,7 @@
 /**
  * Webhook Data Store Interface
  *
- * @version  3.2.0
+ * @version  WC-3.2.0
  * @package  ClassicCommerce/Interface
  */
 

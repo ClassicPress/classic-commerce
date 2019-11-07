@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * to implement your own!
  *
  * @class          WC_Log_Handler_Email
- * @version        1.0.0
+ * @version        WC-1.0.0
  * @package        ClassicCommerce/Classes/Log_Handlers
  */
 class WC_Log_Handler_Email extends WC_Log_Handler {

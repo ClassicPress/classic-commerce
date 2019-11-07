@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * This legacy class is for backwards compatibility in case any code called ->read, ->update or ->create
  * directly on the object.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  * @package  ClassicCommerce/Classes
  * @category Class
  * @author   ClassicCommerce

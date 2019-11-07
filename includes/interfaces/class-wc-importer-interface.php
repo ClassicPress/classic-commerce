@@ -3,7 +3,7 @@
  * ClassicCommerce Importer Interface
  *
  * @package  ClassicCommerce/Interface
- * @version  3.1.0
+ * @version  WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

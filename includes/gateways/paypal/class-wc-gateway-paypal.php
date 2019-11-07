@@ -6,7 +6,7 @@
  *
  * @class       WC_Gateway_Paypal
  * @extends     WC_Payment_Gateway
- * @version     2.3.0
+ * @version     WC-2.3.0
  * @package     ClassicCommerce/Classes/Payment
  */
 

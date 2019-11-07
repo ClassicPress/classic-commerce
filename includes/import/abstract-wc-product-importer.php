@@ -3,7 +3,7 @@
  * Abstract Product importer
  *
  * @package  ClassicCommerce/Import
- * @version  3.1.0
+ * @version  WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

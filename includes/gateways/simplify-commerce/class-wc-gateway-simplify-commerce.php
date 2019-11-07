@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @class       WC_Gateway_Simplify_Commerce
  * @extends     WC_Payment_Gateway_CC
  * @since       WC-2.2.0
- * @version     1.0.0
+ * @version     WC-1.0.0
  * @package     ClassicCommerce/Classes/Payment
  * @author      WooThemes
  */

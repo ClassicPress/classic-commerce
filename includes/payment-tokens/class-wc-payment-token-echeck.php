@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Representation of a payment token for eChecks.
  *
  * @class       WC_Payment_Token_ECheck
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @since       WC-2.6.0
  * @package     ClassicCommerce/PaymentTokens
  */

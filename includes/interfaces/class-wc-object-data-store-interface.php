@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Data Store Interface
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 interface WC_Object_Data_Store_Interface {
 	/**
