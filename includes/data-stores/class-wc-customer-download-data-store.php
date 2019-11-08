@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Customer Download Data Store.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store_Interface {
 

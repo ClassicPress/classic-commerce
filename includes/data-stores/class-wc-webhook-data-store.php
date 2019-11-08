@@ -2,7 +2,7 @@
 /**
  * Webhook Data Store
  *
- * @version  3.3.0
+ * @version  WC-3.3.0
  * @package  ClassicCommerce/Classes/Data_Store
  */
 

@@ -17,7 +17,7 @@ if ( ! class_exists( 'WC_Email_Customer_Invoice', false ) ) :
 	 * An email sent to the customer via admin.
 	 *
 	 * @class       WC_Email_Customer_Invoice
-	 * @version     3.5.0
+	 * @version     WC-3.5.0
 	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
