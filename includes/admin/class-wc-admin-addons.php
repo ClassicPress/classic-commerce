@@ -5,7 +5,7 @@
  * @author   WooThemes
  * @category Admin
  * @package  ClassicCommerce/Admin
- * @version  2.5.0
+ * @version  WC-2.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

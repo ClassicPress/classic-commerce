@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author      WooCommerce
  * @category    Admin
  * @package     ClassicCommerce/Admin
- * @version     3.0.0
+ * @version     WC-3.0.0
  */
 
 if ( class_exists( 'WC_Admin_Duplicate_Product', false ) ) {

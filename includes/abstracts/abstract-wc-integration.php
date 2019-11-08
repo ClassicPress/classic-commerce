@@ -6,7 +6,7 @@
  * by individual integrations to offer additional functionality.
  *
  * @class       WC_Settings_API
- * @version     2.6.0
+ * @version     WC-2.6.0
  * @package     ClassicCommerce/Abstracts
  */
 
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class    WC_Integration
  * @extends  WC_Settings_API
- * @version  2.6.0
+ * @version  WC-2.6.0
  * @package  ClassicCommerce/Abstracts
  */
 abstract class WC_Integration extends WC_Settings_API {

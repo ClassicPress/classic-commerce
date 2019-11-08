@@ -20,7 +20,7 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-product.php';
  *
  * The ClassicCommerce product class handles individual product data.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  * @package  ClassicCommerce/Abstracts
  */
 class WC_Product extends WC_Abstract_Legacy_Product {

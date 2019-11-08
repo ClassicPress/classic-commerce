@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Abstract WC Log Handler Class
  *
- * @version        1.0.0
+ * @version        WC-1.0.0
  * @package        ClassicCommerce/Abstracts
  */
 abstract class WC_Log_Handler implements WC_Log_Handler_Interface {

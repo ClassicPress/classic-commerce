@@ -4,7 +4,7 @@
  *
  * @class    WC_REST_CRUD_Controller
  * @package  ClassicCommerce/Abstracts
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

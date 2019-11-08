@@ -3,7 +3,7 @@
  * ClassicCommerce Shipping Settings
  *
  * @package     ClassicCommerce/Admin
- * @version     2.6.0
+ * @version     WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -21,7 +21,7 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-payment-token.php'
  * examples: Credit Card, eCheck.
  *
  * @class       WC_Payment_Token
- * @version     3.0.0
+ * @version     WC-3.0.0
  * @since       WC-2.6.0
  * @package     ClassicCommerce/Abstracts
  */

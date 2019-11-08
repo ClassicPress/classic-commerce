@@ -3,7 +3,7 @@
  * ClassicCommerce Admin Settings Class
  *
  * @package  ClassicCommerce/Admin
- * @version  3.4.0
+ * @version  WC-3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
