@@ -497,9 +497,9 @@ class WC_Tax {
 	/**
 	 * Alias for get_base_tax_rates().
 	 *
-	 * @deprecated 2.3
-	 * @param   string	Tax Class
-	 * @return  array
+	 * @deprecated WC-2.3
+	 * @param      string	Tax Class
+	 * @return     array
 	 */
 	public static function get_shop_base_rate( $tax_class = '' ) {
 		return self::get_base_tax_rates( $tax_class );

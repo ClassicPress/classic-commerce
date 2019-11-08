@@ -110,7 +110,7 @@ class WC_Shortcode_My_Account {
 	private static function my_account( $atts ) {
 		$args = shortcode_atts(
 			array(
-				'order_count' => 15, // @deprecated 2.6.0. Keep for backward compatibility.
+				'order_count' => 15, // @deprecated WC-2.6.0. Keep for backward compatibility.
 			), $atts, 'woocommerce_my_account'
 		);
 
@@ -142,7 +142,7 @@ class WC_Shortcode_My_Account {
 
 		wc_get_template(
 			'myaccount/view-order.php', array(
-				'status'   => $status, // @deprecated 2.2.
+				'status'   => $status, // @deprecated WC-2.2.
 				'order'    => wc_get_order( $order_id ),
 				'order_id' => $order_id,
 			)

@@ -272,8 +272,8 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	 * Offset get: for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Key.
-	 * @return mixed
+	 * @param      string $offset Key.
+	 * @return     mixed
 	 */
 	public function offsetGet( $offset ) {
 		if ( 'cost' === $offset ) {
@@ -286,8 +286,8 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	 * Offset set: for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Key.
-	 * @param mixed  $value Value to set.
+	 * @param      string $offset Key.
+	 * @param      mixed  $value Value to set.
 	 */
 	public function offsetSet( $offset, $value ) {
 		if ( 'cost' === $offset ) {

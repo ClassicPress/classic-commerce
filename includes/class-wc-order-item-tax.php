@@ -224,8 +224,8 @@ class WC_Order_Item_Tax extends WC_Order_Item {
 	 * O for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Offset.
-	 * @return mixed
+	 * @param      string $offset Offset.
+	 * @return     mixed
 	 */
 	public function offsetGet( $offset ) {
 		if ( 'tax_amount' === $offset ) {
@@ -240,8 +240,8 @@ class WC_Order_Item_Tax extends WC_Order_Item {
 	 * OffsetSet for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Offset.
-	 * @param mixed  $value  Value.
+	 * @param      string $offset Offset.
+	 * @param      mixed  $value  Value.
 	 */
 	public function offsetSet( $offset, $value ) {
 		if ( 'tax_amount' === $offset ) {

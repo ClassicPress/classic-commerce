@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Geo_IP Class.
  *
- * @deprecated 3.4.0
+ * @deprecated WC-3.4.0
  */
 class WC_Geo_IP {
 

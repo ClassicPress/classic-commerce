@@ -39,9 +39,9 @@ function wc_empty_cart() {
 /**
  * Load the persistent cart.
  *
- * @param string  $user_login User login.
- * @param WP_User $user       User data.
- * @deprecated 2.3
+ * @param      string  $user_login User login.
+ * @param      WP_User $user       User data.
+ * @deprecated WC-2.3
  */
 function wc_load_persistent_cart( $user_login, $user ) {
 	if ( ! $user || ! apply_filters( 'woocommerce_persistent_cart_enabled', true ) ) {
