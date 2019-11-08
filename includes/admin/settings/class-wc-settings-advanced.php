@@ -328,9 +328,9 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 	/**
 	 * Form method.
 	 *
-	 * @deprecated 3.4.4
-	 * @param  string $method Method name.
-	 * @return string
+	 * @deprecated WC-3.4.4
+	 * @param      string $method Method name.
+	 * @return     string
 	 */
 	public function form_method( $method ) {
 		return 'post';
@@ -390,8 +390,8 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 /**
  * WC_Settings_Rest_API class.
  *
- * @deprecated 3.4 in favour of WC_Settings_Advanced.
- * @todo remove in 4.0.
+ * @deprecated WC-3.4 in favour of WC_Settings_Advanced.
+ * @todo       remove in 4.0.
  */
 class WC_Settings_Rest_API extends WC_Settings_Advanced {} // @codingStandardsIgnoreLine.
 

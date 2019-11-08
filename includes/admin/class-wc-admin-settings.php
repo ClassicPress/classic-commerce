@@ -795,7 +795,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 				/**
 				 * Fire an action when a certain 'type' of field is being saved.
 				 *
-				 * @deprecated 2.4.0 - doesn't allow manipulation of values!
+				 * @deprecated WC-2.4.0 - doesn't allow manipulation of values!
 				 */
 				if ( has_action( 'woocommerce_update_option_' . sanitize_title( $option['type'] ) ) ) {
 					wc_deprecated_function( 'The woocommerce_update_option_X action', '2.4.0', 'woocommerce_admin_settings_sanitize_option filter' );
@@ -839,7 +839,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 				/**
 				 * Fire an action before saved.
 				 *
-				 * @deprecated 2.4.0 - doesn't allow manipulation of values!
+				 * @deprecated WC-2.4.0 - doesn't allow manipulation of values!
 				 */
 				do_action( 'woocommerce_update_option', $option );
 			}

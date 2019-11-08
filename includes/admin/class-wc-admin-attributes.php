@@ -232,8 +232,8 @@ class WC_Admin_Attributes {
 												/**
 												 * Deprecated action in favor of product_attributes_type_selector filter.
 												 *
-												 * @todo Remove in 4.0.0
-												 * @deprecated 2.4.0
+												 * @todo       Remove in 4.0.0
+												 * @deprecated WC-2.4.0
 												 */
 												do_action( 'woocommerce_admin_attribute_types' );
 											?>
@@ -421,8 +421,8 @@ class WC_Admin_Attributes {
 												/**
 												 * Deprecated action in favor of product_attributes_type_selector filter.
 												 *
-												 * @todo Remove in 4.0.0
-												 * @deprecated 2.4.0
+												 * @todo       Remove in 4.0.0
+												 * @deprecated WC-2.4.0
 												 */
 												do_action( 'woocommerce_admin_attribute_types' );
 											?>
