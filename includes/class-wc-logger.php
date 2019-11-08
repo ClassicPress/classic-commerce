@@ -3,7 +3,7 @@
  * Provides logging capabilities for debugging purposes.
  *
  * @class          WC_Logger
- * @version        2.0.0
+ * @version        WC-2.0.0
  * @package        ClassicCommerce/Classes
  */
 

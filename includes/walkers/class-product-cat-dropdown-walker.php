@@ -2,8 +2,8 @@
 /**
  * Legacy WC_Product_Cat_Dropdown_Walker file
  *
- * @package ClassicCommerce/Classes/Walkers
- * @deprecated 3.4.0
+ * @package    ClassicCommerce/Classes/Walkers
+ * @deprecated WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -5,8 +5,8 @@
  * A Simple class for managing order item meta so plugins add it in the correct format.
  *
  * @package     ClassicCommerce/Classes
- * @deprecated  3.0.0 wc_display_item_meta function is used instead.
- * @version     2.4
+ * @deprecated  WC-3.0.0 wc_display_item_meta function is used instead.
+ * @version     WC-2.4
  */
 
 defined( 'ABSPATH' ) || exit;

@@ -6,7 +6,7 @@
  * From 2.5 this uses a custom table for session storage. Based on https://github.com/kloon/woocommerce-large-sessions.
  *
  * @class    WC_Session_Handler
- * @version  2.5.0
+ * @version  WC-2.5.0
  * @package  ClassicCommerce/Classes
  */
 

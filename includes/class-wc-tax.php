@@ -7,11 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Performs tax calculations and loads tax rates
  *
- * @class 		WC_Tax
- * @version		2.2.0
- * @package		ClassicCommerce/Classes
- * @category	Class
- * @author 		WooThemes
+ * @class     WC_Tax
+ * @version   WC-2.2.0
+ * @package   ClassicCommerce/Classes
+ * @category  Class
+ * @author    WooThemes
  */
 class WC_Tax {
 

@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * This class is here for backwards compatibility for methods existing before zones existed.
  *
- * @deprecated  2.6.0
- * @version WC-2.4.0
- * @package ClassicCommerce/Classes/Shipping
+ * @deprecated  WC-2.6.0
+ * @version     WC-2.4.0
+ * @package     ClassicCommerce/Classes/Shipping
  */
 class WC_Shipping_Legacy_Free_Shipping extends WC_Shipping_Method {
 

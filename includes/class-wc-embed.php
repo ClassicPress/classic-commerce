@@ -2,7 +2,7 @@
 /**
  * ClassicCommerce product embed
  *
- * @version  2.4.11
+ * @version  WC-2.4.11
  * @package  ClassicCommerce/Classes/Embed
  */
 

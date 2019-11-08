@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * This class is here for backwards compatibility for methods existing before zones existed.
  *
- * @deprecated  2.6.0
- * @version     2.3.0
+ * @deprecated  WC-2.6.0
+ * @version     WC-2.3.0
  * @package     ClassicCommerce/Classes/Shipping
  */
 class WC_Shipping_Legacy_Local_Delivery extends WC_Shipping_Local_Pickup {
