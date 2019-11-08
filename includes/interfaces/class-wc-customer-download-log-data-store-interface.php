@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Customer Download Log Data Store Interface.
  *
- * @version  3.3.0
+ * @version  WC-3.3.0
  */
 interface WC_Customer_Download_Log_Data_Store_Interface {
 

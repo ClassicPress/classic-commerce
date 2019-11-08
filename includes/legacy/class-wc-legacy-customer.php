@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Legacy Customer.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  * @package  ClassicCommerce/Classes
  * @category Class
  * @author   WooThemes

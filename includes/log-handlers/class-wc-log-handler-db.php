@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Handles log entries by writing to database.
  *
  * @class          WC_Log_Handler_DB
- * @version        1.0.0
+ * @version        WC-1.0.0
  * @package        ClassicCommerce/Classes/Log_Handlers
  */
 class WC_Log_Handler_DB extends WC_Log_Handler {

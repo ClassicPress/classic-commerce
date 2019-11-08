@@ -5,7 +5,7 @@
  * Legacy and deprecated functions are here to keep the WC_Legacy_Webhook class clean.
  * This class will be removed in future versions.
  *
- * @version  3.2.0
+ * @version  WC-3.2.0
  * @package  ClassicCommerce/Classes
  * @category Class
  * @author   Automattic

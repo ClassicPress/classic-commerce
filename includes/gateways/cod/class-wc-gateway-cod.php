@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @class       WC_Gateway_COD
  * @extends     WC_Payment_Gateway
- * @version     2.1.0
+ * @version     WC-2.1.0
  * @package     ClassicCommerce/Classes/Payment
  */
 class WC_Gateway_COD extends WC_Payment_Gateway {

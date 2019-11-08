@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined by shipping zone store classes.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 interface WC_Shipping_Zone_Data_Store_Interface {
 	/**
