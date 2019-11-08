@@ -361,7 +361,7 @@ class WC_Customer_Download_Data_Store implements WC_Customer_Download_Data_Store
 	/**
 	 * Update download ids if the hash changes.
 	 *
-	 * @deprecated 3.3.0 Download id is now a static UUID and should not be changed based on file hash.
+	 * @deprecated WC-3.3.0 Download id is now a static UUID and should not be changed based on file hash.
 	 *
 	 * @param  int    $product_id Product ID.
 	 * @param  string $old_id Old download_id.

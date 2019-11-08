@@ -420,7 +420,7 @@ class WC_REST_Products_V2_Controller extends WC_REST_Legacy_Products_Controller 
 	/**
 	 * Get attribute taxonomy label.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param  string $name Taxonomy name.
 	 * @return string

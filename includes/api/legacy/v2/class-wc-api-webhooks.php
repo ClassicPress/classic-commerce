@@ -410,11 +410,11 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get deliveries for a webhook
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
-	 * @param string $webhook_id webhook ID
-	 * @param string|null $fields fields to include in response
-	 * @return array|WP_Error
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0 Webhooks deliveries logs now uses logging system.
+	 * @param      string $webhook_id webhook ID
+	 * @param      string|null $fields fields to include in response
+	 * @return     array|WP_Error
 	 */
 	public function get_webhook_deliveries( $webhook_id, $fields = null ) {
 
@@ -431,13 +431,13 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get the delivery log for the given webhook ID and delivery ID
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
-	 * @param string $webhook_id webhook ID
-	 * @param string $id delivery log ID
-	 * @param string|null $fields fields to limit response to
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0 Webhooks deliveries logs now uses logging system.
+	 * @param      string $webhook_id webhook ID
+	 * @param      string $id delivery log ID
+	 * @param      string|null $fields fields to limit response to
 	 *
-	 * @return array|WP_Error
+	 * @return     array|WP_Error
 	 */
 	public function get_webhook_delivery( $webhook_id, $id, $fields = null ) {
 		try {

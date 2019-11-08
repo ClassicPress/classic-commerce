@@ -25,7 +25,7 @@ class WC_REST_Legacy_Coupons_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Query args.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param array $args Query args
 	 * @param WP_REST_Request $request Request data.
@@ -43,7 +43,7 @@ class WC_REST_Legacy_Coupons_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single coupon output for response.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_Post $post Post object.
 	 * @param WP_REST_Request $request Request object.
@@ -94,7 +94,7 @@ class WC_REST_Legacy_Coupons_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single coupon for create or update.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_Error|stdClass $data Post object.

@@ -32,7 +32,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Query args.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param array $args
 	 * @param WP_REST_Request $request
@@ -91,7 +91,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single order output for response.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param WP_Post $post Post object.
 	 * @param WP_REST_Request $request Request object.
@@ -157,7 +157,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single order for create.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_Error|WC_Order $data Object.
@@ -225,7 +225,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Create base WC Order object.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param array $data
 	 * @return WC_Order
@@ -237,7 +237,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Create order.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return int|WP_Error
@@ -276,7 +276,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Update order.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return int|WP_Error
