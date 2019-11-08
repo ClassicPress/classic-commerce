@@ -32,7 +32,7 @@ function wc_schedule_single_action( $timestamp, $hook, $args = array(), $group =
  * @param array $args Arguments to pass when the hook triggers
  * @param string $group The group to assign this job to
  *
- * @deprecated 2.1.0
+ * @deprecated WC-2.1.0
  *
  * @return string The job ID
  */
@@ -60,7 +60,7 @@ function wc_schedule_recurring_action( $timestamp, $interval_in_seconds, $hook, 
  * @param array $args Arguments to pass when the hook triggers
  * @param string $group The group to assign this job to
  *
- * @deprecated 2.1.0
+ * @deprecated WC-2.1.0
  *
  * @return string The job ID
  */
@@ -76,7 +76,7 @@ function wc_schedule_cron_action( $timestamp, $schedule, $hook, $args = array(),
  * @param array $args Args that would have been passed to the job
  * @param string $group
  *
- * @deprecated 2.1.0
+ * @deprecated WC-2.1.0
  */
 function wc_unschedule_action( $hook, $args = array(), $group = '' ) {
 	_deprecated_function( __FUNCTION__, '2.1.0', 'as_unschedule_action()' );
@@ -88,7 +88,7 @@ function wc_unschedule_action( $hook, $args = array(), $group = '' ) {
  * @param array $args
  * @param string $group
  *
- * @deprecated 2.1.0
+ * @deprecated WC-2.1.0
  *
  * @return int|bool The timestamp for the next occurrence, or false if nothing was found
  */
@@ -116,7 +116,7 @@ function wc_next_scheduled_action( $hook, $args = NULL, $group = '' ) {
  *        'order' => 'ASC'
  * @param string $return_format OBJECT, ARRAY_A, or ids
  *
- * @deprecated 2.1.0
+ * @deprecated WC-2.1.0
  *
  * @return array
  */

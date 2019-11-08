@@ -97,7 +97,7 @@ abstract class ActionScheduler_TimezoneHelper {
 	}
 
 	/**
-	 * @deprecated 2.1.0
+	 * @deprecated WC-2.1.0
 	 */
 	public static function get_local_timezone( $reset = FALSE ) {
 		_deprecated_function( __FUNCTION__, '2.1.0', 'ActionScheduler_TimezoneHelper::set_local_timezone()' );
