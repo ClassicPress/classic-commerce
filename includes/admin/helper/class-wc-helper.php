@@ -602,10 +602,6 @@ class WC_Helper {
 			return self::_helper_auth_connect();
 		}
 
-		if ( ! empty( $_GET['wc-helper-return'] ) ) {
-			return self::_helper_auth_return();
-		}
-
 		if ( ! empty( $_GET['wc-helper-disconnect'] ) ) {
 			return self::_helper_auth_disconnect();
 		}
@@ -676,82 +672,6 @@ class WC_Helper {
 		);
 
 		wp_redirect( esc_url_raw( $connect_url ) );
-		die();
-	}
-
-	/**
-	 * Return from WooCommerce.com OAuth flow.
-	 */
-	private static function _helper_auth_return() {
-		if ( empty( $_GET['wc-helper-nonce'] ) || ! wp_verify_nonce( $_GET['wc-helper-nonce'], 'connect' ) ) {
-			self::log( 'Could not verify nonce in _helper_auth_return' );
-			wp_die( 'Something went wrong' );
-		}
-
-		// Bail if the user clicked deny.
-		if ( ! empty( $_GET['deny'] ) ) {
-			wp_safe_redirect( admin_url( 'admin.php?page=wc-addons&section=helper' ) );
-			die();
-		}
-
-		// We do need a request token...
-		if ( empty( $_GET['request_token'] ) ) {
-			self::log( 'Request token not found in _helper_auth_return' );
-			wp_die( 'Something went wrong' );
-		}
-
-		// Obtain an access token.
-		$request = WC_Helper_API::post(
-			'oauth/access_token', array(
-				'body' => array(
-					'request_token' => $_GET['request_token'],
-					'home_url'      => home_url(),
-				),
-			)
-		);
-
-		$code = wp_remote_retrieve_response_code( $request );
-
-		if ( 200 !== $code ) {
-			self::log( sprintf( 'Call to oauth/access_token returned a non-200 response code (%d)', $code ) );
-			wp_die( 'Something went wrong' );
-		}
-
-		$access_token = json_decode( wp_remote_retrieve_body( $request ), true );
-		if ( ! $access_token ) {
-			self::log( sprintf( 'Call to oauth/access_token returned an invalid body: %s', wp_remote_retrieve_body( $request ) ) );
-			wp_die( 'Something went wrong' );
-		}
-
-		WC_Helper_Options::update(
-			'auth', array(
-				'access_token'        => $access_token['access_token'],
-				'access_token_secret' => $access_token['access_token_secret'],
-				'site_id'             => $access_token['site_id'],
-				'user_id'             => get_current_user_id(),
-				'updated'             => time(),
-			)
-		);
-
-		// Obtain the connected user info.
-		if ( ! self::_flush_authentication_cache() ) {
-			self::log( 'Could not obtain connected user info in _helper_auth_return' );
-			WC_Helper_Options::update( 'auth', array() );
-			wp_die( 'Something went wrong.' );
-		}
-
-		self::_flush_subscriptions_cache();
-		self::_flush_updates_cache();
-
-		wp_safe_redirect(
-			add_query_arg(
-				array(
-					'page'             => 'wc-addons',
-					'section'          => 'helper',
-					'wc-helper-status' => 'helper-connected',
-				), admin_url( 'admin.php' )
-			)
-		);
 		die();
 	}
 

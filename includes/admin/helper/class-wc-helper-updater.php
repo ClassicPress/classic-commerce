@@ -49,10 +49,6 @@ class WC_Helper_Updater {
 				'upgrade_notice' => $data['upgrade_notice'],
 			);
 
-			if ( self::_has_active_subscription( $plugin['_product_id'] ) ) {
-				$item['package'] = $data['package'];
-			}
-
 			if ( version_compare( $plugin['Version'], $data['version'], '<' ) ) {
 				$transient->response[ $filename ] = (object) $item;
 				unset( $transient->no_update[ $filename ] );
@@ -90,10 +86,6 @@ class WC_Helper_Updater {
 				'url'         => $data['url'],
 				'package'     => '',
 			);
-
-			if ( self::_has_active_subscription( $theme['_product_id'] ) ) {
-				$item['package'] = $data['package'];
-			}
 
 			if ( version_compare( $theme['Version'], $data['version'], '<' ) ) {
 				$transient->response[ $slug ] = $item;
@@ -192,113 +184,6 @@ class WC_Helper_Updater {
 
 		set_transient( $cache_key, $data, 12 * HOUR_IN_SECONDS );
 		return $data['products'];
-	}
-
-	/**
-	 * Check for an active subscription.
-	 *
-	 * Checks a given product id against all subscriptions on
-	 * the current site. Returns true if at least one active
-	 * subscription is found.
-	 *
-	 * @param int $product_id The product id to look for.
-	 *
-	 * @return bool True if active subscription found.
-	 */
-	private static function _has_active_subscription( $product_id ) {
-		if ( ! isset( $auth ) ) {
-			$auth = WC_Helper_Options::get( 'auth' );
-		}
-
-		if ( ! isset( $subscriptions ) ) {
-			$subscriptions = WC_Helper::get_subscriptions();
-		}
-
-		if ( empty( $auth['site_id'] ) || empty( $subscriptions ) ) {
-			return false;
-		}
-
-		// Check for an active subscription.
-		foreach ( $subscriptions as $subscription ) {
-			if ( $subscription['product_id'] != $product_id ) {
-				continue;
-			}
-
-			if ( in_array( absint( $auth['site_id'] ), $subscription['connections'] ) ) {
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	/**
-	 * Get the number of products that have updates.
-	 *
-	 * @return int The number of products with updates.
-	 */
-	public static function get_updates_count() {
-		$cache_key = '_woocommerce_helper_updates_count';
-		if ( false !== ( $count = get_transient( $cache_key ) ) ) {
-			return $count;
-		}
-
-		// Don't fetch any new data since this function in high-frequency.
-		if ( ! get_transient( '_woocommerce_helper_subscriptions' ) ) {
-			return 0;
-		}
-
-		if ( ! get_transient( '_woocommerce_helper_updates' ) ) {
-			return 0;
-		}
-
-		$count       = 0;
-		$update_data = self::get_update_data();
-
-		if ( empty( $update_data ) ) {
-			set_transient( $cache_key, $count, 12 * HOUR_IN_SECONDS );
-			return $count;
-		}
-
-		// Scan local plugins.
-		foreach ( WC_Helper::get_local_woo_plugins() as $plugin ) {
-			if ( empty( $update_data[ $plugin['_product_id'] ] ) ) {
-				continue;
-			}
-
-			if ( version_compare( $plugin['Version'], $update_data[ $plugin['_product_id'] ]['version'], '<' ) ) {
-				$count++;
-			}
-		}
-
-		// Scan local themes.
-		foreach ( WC_Helper::get_local_woo_themes() as $theme ) {
-			if ( empty( $update_data[ $theme['_product_id'] ] ) ) {
-				continue;
-			}
-
-			if ( version_compare( $theme['Version'], $update_data[ $theme['_product_id'] ]['version'], '<' ) ) {
-				$count++;
-			}
-		}
-
-		set_transient( $cache_key, $count, 12 * HOUR_IN_SECONDS );
-		return $count;
-	}
-
-	/**
-	 * Return the updates count markup.
-	 *
-	 * @return string Updates count markup, empty string if no updates avairable.
-	 */
-	public static function get_updates_count_html() {
-		$count = self::get_updates_count();
-		if ( ! $count ) {
-			return '';
-		}
-
-		$count_html = sprintf( '<span class="update-plugins count-%d"><span class="update-count">%d</span></span>', $count, number_format_i18n( $count ) );
-		return $count_html;
 	}
 
 	/**
