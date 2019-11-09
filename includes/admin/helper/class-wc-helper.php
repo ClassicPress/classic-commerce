@@ -18,7 +18,6 @@ class WC_Helper {
 	 * Loads the helper class, runs on init.
 	 */
 	public static function load() {
-		add_action( 'current_screen', array( __CLASS__, 'current_screen' ) );
 		add_filter( 'extra_plugin_headers', array( __CLASS__, 'extra_headers' ) );
 		add_filter( 'extra_theme_headers', array( __CLASS__, 'extra_headers' ) );
 
