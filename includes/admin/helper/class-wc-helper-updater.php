@@ -187,16 +187,6 @@ class WC_Helper_Updater {
 	}
 
 	/**
-	 * Flushes cached update data.
-	 */
-	public static function flush_updates_cache() {
-		delete_transient( '_woocommerce_helper_updates' );
-		delete_transient( '_woocommerce_helper_updates_count' );
-		delete_site_transient( 'update_plugins' );
-		delete_site_transient( 'update_themes' );
-	}
-
-	/**
 	 * Fires when a user successfully updated a theme or a plugin.
 	 */
 	public static function upgrader_process_complete() {

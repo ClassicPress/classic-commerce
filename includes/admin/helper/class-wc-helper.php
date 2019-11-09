@@ -702,7 +702,7 @@ class WC_Helper {
 		WC_Helper_Options::update( 'auth_user_data', array() );
 
 		self::_flush_subscriptions_cache();
-		self::_flush_updates_cache();
+
 
 		wp_safe_redirect( $redirect_uri );
 		die();
@@ -728,7 +728,7 @@ class WC_Helper {
 
 		self::_flush_authentication_cache();
 		self::_flush_subscriptions_cache();
-		self::_flush_updates_cache();
+
 
 		wp_safe_redirect( $redirect_uri );
 		die();
@@ -770,7 +770,7 @@ class WC_Helper {
 		}
 
 		self::_flush_subscriptions_cache();
-		self::_flush_updates_cache();
+
 
 		$redirect_uri = add_query_arg(
 			array(
@@ -1134,7 +1134,7 @@ class WC_Helper {
 
 		self::log( 'Auto-activated a subscription for ' . $filename );
 		self::_flush_subscriptions_cache();
-		self::_flush_updates_cache();
+
 	}
 
 	/**
@@ -1195,7 +1195,7 @@ class WC_Helper {
 		if ( $deactivated ) {
 			self::log( sprintf( 'Auto-deactivated %d subscription(s) for %s', $deactivated, $filename ) );
 			self::_flush_subscriptions_cache();
-			self::_flush_updates_cache();
+	
 		}
 	}
 
@@ -1369,13 +1369,6 @@ class WC_Helper {
 		);
 
 		return true;
-	}
-
-	/**
-	 * Flush updates cache.
-	 */
-	private static function _flush_updates_cache() {
-		WC_Helper_Updater::flush_updates_cache();
 	}
 
 	/**
