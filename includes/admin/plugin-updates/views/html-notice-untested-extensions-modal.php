@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $untested_plugins_msg = sprintf(
 	/* translators: %s: version number */
-	__( 'The following active plugin(s) have not declared compatibility with WooCommerce %s yet and should be updated and examined further before you proceed:', 'classic-commerce' ),
+	__( 'The following active plugin(s) have not declared compatibility with Classic Commerce %s yet and should be updated and examined further before you proceed:', 'classic-commerce' ),
 	$new_version
 );
 
@@ -27,7 +27,7 @@ $untested_plugins_msg = sprintf(
 					<thead>
 						<tr>
 							<th><?php esc_html_e( 'Plugin', 'classic-commerce' ); ?></th>
-							<th><?php esc_html_e( 'Tested up to WooCommerce version', 'classic-commerce' ); ?></th>
+							<th><?php esc_html_e( 'Tested up to Classic Commerce version', 'classic-commerce' ); ?></th>
 						</tr>
 					</thead>
 					<tbody>

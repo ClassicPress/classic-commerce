@@ -16,14 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<thead>
 			<tr>
 				<th><?php esc_html_e( 'Plugin', 'classic-commerce' ); ?></th>
-				<th><?php esc_html_e( 'Tested up to WooCommerce version', 'classic-commerce' ); ?></th>
+				<th><?php esc_html_e( 'Tested up to Classic Commerce version', 'classic-commerce' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php foreach ( $plugins as $plugin ) : ?>
 				<tr>
 					<td><?php echo esc_html( $plugin['Name'] ); ?></td>
-					<td><?php echo esc_html( $plugin['WC tested up to'] ); ?></td>
+					<td><?php echo esc_html( $plugin['CC tested up to'] ); ?></td>
 				</tr>
 			<?php endforeach ?>
 		</tbody>

@@ -18,7 +18,7 @@ $force_update_url = wp_nonce_url(
 ?>
 <div id="message" class="updated woocommerce-message wc-connect">
 	<p>
-		<strong><?php esc_html_e( 'WooCommerce data update', 'classic-commerce' ); ?></strong> &#8211; <?php esc_html_e( 'Your database is being updated in the background.', 'classic-commerce' ); ?>
+		<strong><?php esc_html_e( 'Classic Commerce data update', 'classic-commerce' ); ?></strong> &#8211; <?php esc_html_e( 'Your database is being updated in the background.', 'classic-commerce' ); ?>
 		<a href="<?php echo esc_url( $force_update_url ); ?>">
 			<?php esc_html_e( 'Taking a while? Click here to run it now.', 'classic-commerce' ); ?>
 		</a>
