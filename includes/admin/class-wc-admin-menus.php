@@ -27,6 +27,10 @@ class WC_Admin_Menus {
 		add_action( 'admin_menu', array( $this, 'settings_menu' ), 50 );
 		add_action( 'admin_menu', array( $this, 'status_menu' ), 60 );
 
+		if ( apply_filters( 'woocommerce_show_addons_page', true ) ) {
+			add_action( 'admin_menu', array( $this, 'addons_menu' ), 70 );
+		}
+
 		add_action( 'admin_head', array( $this, 'menu_highlight' ) );
 		add_action( 'admin_head', array( $this, 'menu_order_count' ) );
 		add_filter( 'menu_order', array( $this, 'menu_order' ) );
@@ -117,6 +121,15 @@ class WC_Admin_Menus {
 	 */
 	public function status_menu() {
 		add_submenu_page( 'woocommerce', __( 'Classic Commerce status', 'classic-commerce' ), __( 'Status', 'classic-commerce' ), 'manage_woocommerce', 'wc-status', array( $this, 'status_page' ) );
+	}
+
+	/**
+	 * Addons menu item.
+	 */
+	public function addons_menu() {
+		/* translators: %s: extensions count */
+		$menu_title = sprintf( __( 'Extensions %s', 'classic-commerce' ), $count_html );
+		add_submenu_page( 'woocommerce', __( 'Classic Commerce extensions', 'classic-commerce' ), $menu_title, 'manage_woocommerce', 'wc-addons', array( $this, 'addons_page' ) );
 	}
 
 	/**
