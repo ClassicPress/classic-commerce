@@ -297,8 +297,8 @@ class WC_Admin_Webhooks {
 	/**
 	 * Logs output.
 	 *
-	 * @deprecated 3.3.0
-	 * @param WC_Webhook $webhook Deprecated.
+	 * @deprecated WC-3.3.0
+	 * @param      WC_Webhook $webhook Deprecated.
 	 */
 	public static function logs_output( $webhook = 'deprecated' ) {
 		wc_deprecated_function( 'WC_Admin_Webhooks::logs_output', '3.3' );
@@ -336,9 +336,9 @@ class WC_Admin_Webhooks {
 	/**
 	 * Get the logs navigation.
 	 *
-	 * @deprecated 3.3.0
-	 * @param int        $total Deprecated.
-	 * @param WC_Webhook $webhook Deprecated.
+	 * @deprecated WC-3.3.0
+	 * @param      int        $total Deprecated.
+	 * @param      WC_Webhook $webhook Deprecated.
 	 */
 	public static function get_logs_navigation( $total, $webhook ) {
 		wc_deprecated_function( 'WC_Admin_Webhooks::get_logs_navigation', '3.3' );

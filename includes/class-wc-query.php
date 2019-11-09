@@ -794,9 +794,9 @@ class WC_Query {
 	/**
 	 * Order by rating post clauses.
 	 *
-	 * @deprecated 3.0.0
-	 * @param array $args
-	 * @return array
+	 * @deprecated WC-3.0.0
+	 * @param      array $args
+	 * @return     array
 	 */
 	public function order_by_rating_post_clauses( $args ) {
 		global $wpdb;
@@ -818,8 +818,8 @@ class WC_Query {
 	/**
 	 * Return a meta query for filtering by rating.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @return     array
 	 */
 	public function rating_filter_meta_query() {
 		return array();
@@ -828,9 +828,9 @@ class WC_Query {
 	/**
 	 * Returns a meta query to handle product visibility.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @param string $compare (default: 'IN')
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @param      string $compare (default: 'IN')
+	 * @return     array
 	 */
 	public function visibility_meta_query( $compare = 'IN' ) {
 		return array();
@@ -839,9 +839,9 @@ class WC_Query {
 	/**
 	 * Returns a meta query to handle product stock status.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @param string $status (default: 'instock')
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @param      string $status (default: 'instock')
+	 * @return     array
 	 */
 	public function stock_status_meta_query( $status = 'instock' ) {
 		return array();
@@ -850,7 +850,7 @@ class WC_Query {
 	/**
 	 * Layered nav init.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 */
 	public function layered_nav_init() {
 		wc_deprecated_function( 'layered_nav_init', '2.6' );
@@ -859,7 +859,7 @@ class WC_Query {
 	/**
 	 * Get an unpaginated list all product IDs (both filtered and unfiltered). Makes use of transients.
 	 *
-	 * @deprecated 2.6.0 due to performance concerns
+	 * @deprecated WC-2.6.0 due to performance concerns
 	 */
 	public function get_products_in_view() {
 		wc_deprecated_function( 'get_products_in_view', '2.6' );
@@ -868,7 +868,7 @@ class WC_Query {
 	/**
 	 * Layered Nav post filter.
 	 *
-	 * @deprecated 2.6.0 due to performance concerns
+	 * @deprecated WC-2.6.0 due to performance concerns
 	 *
 	 * @param mixed $deprecated Deprecated.
 	 */
@@ -879,7 +879,7 @@ class WC_Query {
 	/**
 	 * Search post excerpt.
 	 *
-	 * @deprecated 3.2.0 - Not needed anymore since WordPress 4.5.
+	 * @deprecated WC-3.2.0 - Not needed anymore since WordPress 4.5.
 	 */
 	public function search_post_excerpt( $where = '' ) {
 		wc_deprecated_function( 'WC_Query::search_post_excerpt', '3.2.0', 'Excerpt added to search query by default since WordPress 4.5.' );
@@ -888,7 +888,7 @@ class WC_Query {
 
 	/**
 	 * Remove the posts_where filter.
-	 * @deprecated 3.2.0 - Nothing to remove anymore because search_post_excerpt() is deprecated.
+	 * @deprecated WC-3.2.0 - Nothing to remove anymore because search_post_excerpt() is deprecated.
 	 */
 	public function remove_posts_where() {
 		wc_deprecated_function( 'WC_Query::remove_posts_where', '3.2.0', 'Nothing to remove anymore because search_post_excerpt() is deprecated.' );

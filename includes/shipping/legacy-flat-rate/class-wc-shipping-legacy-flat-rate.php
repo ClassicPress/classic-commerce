@@ -78,7 +78,7 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 		$this->tax_status   = $this->get_option( 'tax_status' );
 		$this->cost         = $this->get_option( 'cost' );
 		$this->type         = $this->get_option( 'type', 'class' );
-		$this->options      = $this->get_option( 'options', false ); // @deprecated in 2.4.0
+		$this->options      = $this->get_option( 'options', false ); // @deprecated in WC-2.4.0
 	}
 
 	/**
@@ -294,7 +294,7 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Adds extra calculated flat rates.
 	 *
-	 * @deprecated 2.4.0
+	 * @deprecated WC-2.4.0
 	 *
 	 * Additional rates defined like this:
 	 *  Option Name | Additional Cost [+- Percents%] | Per Cost Type (order, class, or item).
@@ -329,12 +329,12 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Calculate the percentage adjustment for each shipping rate.
 	 *
-	 * @deprecated 2.4.0
-	 * @param  float  $cost Cost.
-	 * @param  float  $percent_adjustment Percent adjusment.
-	 * @param  string $percent_operator Percent operator.
-	 * @param  float  $base_price Base price.
-	 * @return float
+	 * @deprecated WC-2.4.0
+	 * @param      float  $cost Cost.
+	 * @param      float  $percent_adjustment Percent adjusment.
+	 * @param      string $percent_operator Percent operator.
+	 * @param      float  $base_price Base price.
+	 * @return     float
 	 */
 	public function calc_percentage_adjustment( $cost, $percent_adjustment, $percent_operator, $base_price ) {
 		if ( '+' === $percent_operator ) {
@@ -348,11 +348,11 @@ class WC_Shipping_Legacy_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Get extra cost.
 	 *
-	 * @deprecated 2.4.0
-	 * @param  string $cost_string Cost string.
-	 * @param  string $type Type.
-	 * @param  array  $package Package information.
-	 * @return float
+	 * @deprecated WC-2.4.0
+	 * @param      string $cost_string Cost string.
+	 * @param      string $type Type.
+	 * @param      array  $package Package information.
+	 * @return     float
 	 */
 	public function get_extra_cost( $cost_string, $type, $package ) {
 		$cost         = $cost_string;

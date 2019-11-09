@@ -378,8 +378,8 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Get all orders matching the passed in args.
 	 *
-	 * @deprecated 3.1.0 - Use wc_get_orders instead.
-	 * @see    wc_get_orders()
+	 * @deprecated WC-3.1.0 - Use wc_get_orders instead.
+	 * @see        wc_get_orders()
 	 *
 	 * @param  array $args List of args passed to wc_get_orders().
 	 *

@@ -20,14 +20,14 @@ class WC_Geolocation {
 	/**
 	 * GeoLite IPv4 DB.
 	 *
-	 * @deprecated 3.4.0
+	 * @deprecated WC-3.4.0
 	 */
 	const GEOLITE_DB = 'http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz';
 
 	/**
 	 * GeoLite IPv6 DB.
 	 *
-	 * @deprecated 3.4.0
+	 * @deprecated WC-3.4.0
 	 */
 	const GEOLITE_IPV6_DB = 'http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz';
 

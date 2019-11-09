@@ -173,7 +173,7 @@ class WC_Download_Handler {
 	 * Count download.
 	 *
 	 * @deprecated unknown
-	 * @param array $download_data Download data.
+	 * @param      array $download_data Download data.
 	 */
 	public static function count_download( $download_data ) {}
 

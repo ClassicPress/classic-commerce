@@ -648,8 +648,8 @@ class WC_Emails {
 	/**
 	 * Adds Schema.org markup for order in JSON-LD format.
 	 *
-	 * @deprecated 3.0.0
-	 * @see WC_Structured_Data::generate_order_data()
+	 * @deprecated WC-3.0.0
+	 * @see        WC_Structured_Data::generate_order_data()
 	 *
 	 * @since WC-2.6.0
 	 * @param WC_Order $order         Order instance.

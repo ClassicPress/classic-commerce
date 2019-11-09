@@ -18,7 +18,7 @@ $update_url = wp_nonce_url(
 ?>
 <div id="message" class="updated woocommerce-message wc-connect">
 	<p>
-		<strong><?php esc_html_e( 'WooCommerce data update', 'classic-commerce' ); ?></strong> &#8211; <?php esc_html_e( 'We need to update your store database to the latest version.', 'classic-commerce' ); ?>
+		<strong><?php esc_html_e( 'Classic Commerce data update', 'classic-commerce' ); ?></strong> &#8211; <?php esc_html_e( 'We need to update your store database to the latest version.', 'classic-commerce' ); ?>
 	</p>
 	<p class="submit">
 		<a href="<?php echo esc_url( $update_url ); ?>" class="wc-update-now button-primary">

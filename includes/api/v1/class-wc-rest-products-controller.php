@@ -443,9 +443,9 @@ class WC_REST_Products_V1_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Get product menu order.
 	 *
-	 * @deprecated 3.0.0
-	 * @param WC_Product $product Product instance.
-	 * @return int
+	 * @deprecated WC-3.0.0
+	 * @param      WC_Product $product Product instance.
+	 * @return     int
 	 */
 	protected function get_product_menu_order( $product ) {
 		return $product->get_menu_order();
@@ -823,10 +823,10 @@ class WC_REST_Products_V1_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Save product images.
 	 *
-	 * @deprecated 3.0.0
-	 * @param int $product_id
-	 * @param array $images
-	 * @throws WC_REST_Exception
+	 * @deprecated WC-3.0.0
+	 * @param      int $product_id
+	 * @param      array $images
+	 * @throws     WC_REST_Exception
 	 */
 	protected function save_product_images( $product_id, $images ) {
 		$product = wc_get_product( $product_id );
@@ -1053,11 +1053,11 @@ class WC_REST_Products_V1_Controller extends WC_REST_Posts_Controller {
 	/**
 	 * Save product meta.
 	 *
-	 * @deprecated 3.0.0
-	 * @param WC_Product $product
-	 * @param WP_REST_Request $request
-	 * @return bool
-	 * @throws WC_REST_Exception
+	 * @deprecated WC-3.0.0
+	 * @param      WC_Product $product
+	 * @param      WP_REST_Request $request
+	 * @return     bool
+	 * @throws     WC_REST_Exception
 	 */
 	protected function save_product_meta( $product, $request ) {
 		$product = $this->set_product_meta( $product, $request );

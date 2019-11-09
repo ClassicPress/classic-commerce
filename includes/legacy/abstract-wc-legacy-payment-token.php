@@ -28,7 +28,7 @@ abstract class WC_Legacy_Payment_Token extends WC_Data {
 
 	/**
 	 * Read a token by ID.
-	 * @deprecated 3.0.0 - Init a token class with an ID.
+	 * @deprecated WC-3.0.0 - Init a token class with an ID.
 	 *
 	 * @param int $token_id
 	 */
@@ -41,7 +41,7 @@ abstract class WC_Legacy_Payment_Token extends WC_Data {
 
 	/**
 	 * Update a token.
-	 * @deprecated 3.0.0 - Use ::save instead.
+	 * @deprecated WC-3.0.0 - Use ::save instead.
 	 */
 	public function update() {
 		wc_deprecated_function( 'WC_Payment_Token::update', '3.0.0', 'WC_Payment_Token::save instead.' );
@@ -55,7 +55,7 @@ abstract class WC_Legacy_Payment_Token extends WC_Data {
 
 	/**
 	 * Create a token.
-	 * @deprecated 3.0.0 - Use ::save instead.
+	 * @deprecated WC-3.0.0 - Use ::save instead.
 	 */
 	public function create() {
 		wc_deprecated_function( 'WC_Payment_Token::create', '3.0.0', 'WC_Payment_Token::save instead.' );

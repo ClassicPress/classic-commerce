@@ -88,8 +88,8 @@ class WC_Comments {
 	/**
 	 * Exclude order comments from feed.
 	 *
-	 * @deprecated 3.1
-	 * @param mixed $join Deprecated.
+	 * @deprecated WC-3.1
+	 * @param      mixed $join Deprecated.
 	 */
 	public static function exclude_order_comments_from_feed_join( $join ) {
 		wc_deprecated_function( 'WC_Comments::exclude_order_comments_from_feed_join', '3.1' );
@@ -120,8 +120,8 @@ class WC_Comments {
 	/**
 	 * Exclude webhooks comments from feed.
 	 *
-	 * @deprecated 3.1
-	 * @param mixed $join Deprecated.
+	 * @deprecated WC-3.1
+	 * @param      mixed $join Deprecated.
 	 */
 	public static function exclude_webhook_comments_from_feed_join( $join ) {
 		wc_deprecated_function( 'WC_Comments::exclude_webhook_comments_from_feed_join', '3.1' );
