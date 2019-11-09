@@ -1089,7 +1089,7 @@ class WC_Admin_Setup_Wizard {
 				printf(
 					wp_kses(
 						/* translators: %s: Link */
-						__( 'WooCommerce can accept both online and offline payments. A <a href="%1s" target="_blank">basic PayPal option</a> is already included. This can be enabled and configured from the Payments tab under Settings. <a href="%2s" target="_blank">Additional payment methods</a> can be installed later.', 'classic-commerce' ),
+						__( 'WooCommerce can accept both online and offline payments. A <a href="%1$s" target="_blank">basic PayPal option</a> is already included. This can be enabled and configured from the Payments tab under Settings. <a href="%2$s" target="_blank">Additional payment methods</a> can be installed later.', 'classic-commerce' ),
 						array(
 							'a' => array(
 								'href'   => array(),
