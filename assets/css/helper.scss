@@ -1,26 +1,4 @@
-/*------------------------------------------------------------------------------
-  General table styling
-------------------------------------------------------------------------------*/
-
-$white: #ffffff;
-
-// Grays
-$gray:                   #87a6bc;
-$gray-light:             lighten( $gray, 33% ); //#f3f6f8
-$gray-dark:              darken( $gray, 38% ); //#2e4453
-
-// $gray-text: ideal for standard, non placeholder text
-// $gray-text-min: minimum contrast needed for WCAG 2.0 AA on white background
-$gray-text:              $gray-dark;
-$gray-text-min:          darken( $gray, 18% ); //#537994
-
-$woo_pink1: #955a89;
-$woo_pink2: #bb77ae;
-
-
-$color_text_blue: #0073AA;
-$color_button_primary: $woo_pink1;
-$color_button_secondary: $woo_pink2;
+@import 'variables';
 
 /*------------------------------------------------------------------------------
   Tab navigation
@@ -50,7 +28,7 @@ $color_button_secondary: $woo_pink2;
 		border-width: 0;
 		box-shadow: none;
 		border-radius: 3px;
-		color: #fff;
+		color: $white;
 		height: auto;
 		padding: 3px 14px;
 		text-align: center;
@@ -61,7 +39,7 @@ $color_button_secondary: $woo_pink2;
 		}
 
 		&.button-secondary {
-			background-color: #e6e6e6;
+			background-color: $gray-light;
 			color: #3c3c3c;
 			text-shadow: none;
 		}
@@ -73,7 +51,7 @@ $color_button_secondary: $woo_pink2;
 }
 
 .wc-helper .subscription-filter {
-	color: #2E4453;
+	color: $gray-dark;
 	font-size: 13px;
 	line-height: 13px;
 	margin: 22px 0;
@@ -93,7 +71,7 @@ $color_button_secondary: $woo_pink2;
 		}
 	}
 	li {
-		color: #0073AA;
+		color: color_text_blue; //#0073AA;
 		display: inline-block;
 		padding: 0 4px 0 8px;
 		position: relative;
@@ -771,7 +749,7 @@ $color_button_secondary: $woo_pink2;
 			display: none;
 
 			&:hover {
-				color: $woo_pink1;
+				color: $primary_light;
 				cursor: pointer;
 			}
 		}
@@ -950,7 +928,7 @@ $color_button_secondary: $woo_pink2;
 	}
 
 	.accessible-focus &:focus {
-		box-shadow: 0 0 0 2px $woo_pink1;
+		box-shadow: 0 0 0 2px $primary_light;
 	}
 
 
@@ -979,10 +957,10 @@ $color_button_secondary: $woo_pink2;
 .form-toggle {
 	.accessible-focus &:focus {
 		+ .form-toggle__label .form-toggle__switch {
-			box-shadow: 0 0 0 2px $woo_pink1;
+			box-shadow: 0 0 0 2px $primary_light;
 		}
 		&:checked + .form-toggle__label .form-toggle__switch {
-			box-shadow: 0 0 0 2px $woo_pink2;
+			box-shadow: 0 0 0 2px $primary;
 		}
 	}
 
@@ -998,7 +976,7 @@ $color_button_secondary: $woo_pink2;
 
 	&.active {
 		+ .form-toggle__label .form-toggle__switch {
-			background: $woo_pink1;
+			background: $primary_light;
 
 			&::after {
 				left: 8px;
@@ -1006,7 +984,7 @@ $color_button_secondary: $woo_pink2;
 		}
 
 		+ .form-toggle__label:hover .form-toggle__switch {
-			background: $woo_pink2;
+			background: $primary;
 		}
 	}
 
@@ -1020,7 +998,7 @@ $color_button_secondary: $woo_pink2;
 // Classes for toggle state before action is complete (updating plugin or something)
 .form-toggle.is-toggling {
 	+ .form-toggle__label .form-toggle__switch {
-		background: $woo_pink1;
+		background: $primary_light;
 	}
 	&:checked {
 		+ .form-toggle__label .form-toggle__switch {

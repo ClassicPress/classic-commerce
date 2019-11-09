@@ -1,56 +1,9 @@
 /**
  * Twenty Seventeen integration styles
  */
+@import 'variables';
 @import 'mixins';
 @import 'animation';
-
-/**
- * Fonts
- */
-@font-face {
-	font-family: 'star';
-	src: url('../fonts/star.eot');
-	src: url('../fonts/star.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/star.woff') format('woff'),
-		url('../fonts/star.ttf') format('truetype'),
-		url('../fonts/star.svg#star') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'WooCommerce';
-	src: url('../fonts/WooCommerce.eot');
-	src: url('../fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/WooCommerce.woff') format('woff'),
-		url('../fonts/WooCommerce.ttf') format('truetype'),
-		url('../fonts/WooCommerce.svg#WooCommerce') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/**
- * Mixins
- */
-@mixin link() {
-	box-shadow: 0 1px 0 rgba(15, 15, 15, 1);
-	transition: box-shadow ease-in-out 130ms;
-
-	&:hover {
-		box-shadow: 0 3px 0 rgba(15, 15, 15, 1);
-	}
-}
-
-@mixin link_white() {
-	color: #fff;
-	box-shadow: 0 1px 0 rgba(#fff, 1) !important;
-	transition: box-shadow ease-in-out 130ms;
-
-	&:hover {
-		color: #fff !important;
-		box-shadow: 0 3px 0 rgba(#fff, 1) !important;
-	}
-}
 
 /**
  * Global elements
@@ -255,7 +208,7 @@ ul.products {
 	line-height: 1;
 	font-size: 1em;
 	width: 5.4em;
-	font-family: 'star';
+	font-family: $star_font;
 
 	&::before {
 		content: '\73\73\73\73\73';
@@ -541,7 +494,7 @@ table.variations {
 					width: 1em;
 					height: 1em;
 					line-height: 1;
-					font-family: 'WooCommerce';
+					font-family: $woocommerce_font;
 					content: '\e021';
 					text-indent: 0;
 				}

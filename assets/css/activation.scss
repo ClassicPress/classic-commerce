@@ -3,13 +3,15 @@
  * Styles applied to elements displayed on activation
  */
 
+@import 'variables';
+
 /**
  * Styling begins
  */
 div.woocommerce-message {
 	overflow: hidden;
 	position: relative;
-	border-left-color: #cc99c2 !important;
+	border-left-color: $purple !important;
 	p {
 		max-width: 700px;
 	}
@@ -21,16 +23,16 @@ div.woocommerce-message {
 p.woocommerce-actions,
 .woocommerce-message {
 	.button-primary {
-		background: #bb77ae;
-		border-color: #a36597;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 #a36597;
-		color: #fff;
-		text-shadow: 0 -1px 1px #a36597, 1px 0 1px #a36597, 0 1px 1px #a36597, -1px 0 1px #a36597;
+		background: $primary;
+		border-color: $primary;
+		box-shadow: inset 0 1px 0 rgba($black, 0.25), 0 1px 0 $primary;
+		color: $white;
+		text-shadow: 0 -1px 1px $primary, 1px 0 1px $primary, 0 1px 1px $primary, -1px 0 1px $primary;
 
 		&:hover, &:focus, &:active {
-			background: #a36597;
-			border-color: #a36597;
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 #a36597;
+			background: $primary;
+			border-color: $primary;
+			box-shadow: inset 0 1px 0 rgba($black, 0.25), 0 1px 0 $primary;
 		}
 	}
 
@@ -86,10 +88,10 @@ div.woocommerce-no-shipping-methods-notice {
 	}
 	&::before {
 		content: '\e01b';
-		font-family: 'WooCommerce';
+		font-family: $woocommerce_font;
 		text-align: center;
 		line-height: 1;
-		color: #f7f1f6;
+		color: lighten($white, 15%);
 		display: block;
 		width: 1em;
 		font-size: 20em;
