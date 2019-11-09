@@ -9,7 +9,6 @@
  */
 @import 'mixins';
 @import 'variables';
-@import 'fonts';
 
 /**
  * Mixins
@@ -78,7 +77,7 @@ div.pp_woocommerce {
 	.pp_next {
 		&::before {
 			@include button();
-			font-family: 'WooCommerce';
+			font-family: $woocommerce_font;
 			content: '\e00b';
 			text-indent: 0;
 			display: none;
@@ -104,7 +103,7 @@ div.pp_woocommerce {
 	.pp_next {
 		&::before {
 			right: 1em;
-			font-family: 'WooCommerce';
+			font-family: $woocommerce_font;
 			content: '\e008';
 		}
 	}
@@ -140,7 +139,7 @@ div.pp_woocommerce {
 		font-size: 1.618em !important;
 
 		&::before {
-			font-family: 'WooCommerce';
+			font-family: $woocommerce_font;
 			content: '\e013';
 			display: block;
 			position: absolute;
@@ -160,7 +159,7 @@ div.pp_woocommerce {
 		margin-top: -1px;
 
 		&::before {
-			font-family: 'WooCommerce';
+			font-family: $woocommerce_font;
 			content: '\e00b';
 			display: block;
 			position: absolute;
@@ -194,7 +193,7 @@ div.pp_woocommerce {
 		font-size: 1.618em !important;
 
 		&::before {
-			font-family: 'WooCommerce';
+			font-family: $woocommerce_font;
 			content: '\e005';
 			display: block;
 			position: absolute;

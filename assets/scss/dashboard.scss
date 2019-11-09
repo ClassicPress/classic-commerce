@@ -23,8 +23,8 @@ ul.woocommerce_stats {
 		text-align: center;
 		float: left;
 		font-size: 0.8em;
-		border-left: 1px solid #fff;
-		border-right: 1px solid #ececec;
+		border-left: 1px solid $white;
+		border-right: 1px solid $stat-light;
 		box-sizing: border-box;
 	}
 
@@ -70,12 +70,12 @@ ul.woocommerce_stats {
 			padding: 0;
 			box-sizing: border-box;
 			margin: 0;
-			border-top: 1px solid #ececec;
-			color: #aaa;
+			border-top: 1px solid $stat-light;
+			color: $gray-text;
 
 			a {
 				display: block;
-				color: #aaa;
+				color: $gray-dark;
 				padding: 9px 12px;
 				transition: all ease 0.5s;
 				position: relative;
@@ -98,15 +98,15 @@ ul.woocommerce_stats {
 					line-height: 1.2em;
 					font-weight: normal;
 					display: block;
-					color: #21759b;
+					color: $color_text_blue;
 				}
 
 				&:hover {
-					color: #2ea2cc;
+					color: $blue;
 
 					&::before,
 					strong {
-						color: #2ea2cc !important;
+						color: $blue !important;
 					}
 				}
 
@@ -116,7 +116,7 @@ ul.woocommerce_stats {
 					position: relative;
 					width: auto;
 					line-height: 1.2em;
-					color: #464646;
+					color: $gray-text;
 					float: left;
 					margin-right: 12px;
 					margin-bottom: 12px;
@@ -146,23 +146,23 @@ ul.woocommerce_stats {
 		}
 
 		li.processing-orders {
-			border-right: 1px solid #ececec;
+			border-right: 1px solid $stat-light;
 
 			a::before {
 				content: '\e011';
-				color: $green;
+				color: $purple;
 			}
 		}
 
 		li.on-hold-orders {
 			a::before {
 				content: '\e033';
-				color: #999;
+				color: lighten($black, 90%);
 			}
 		}
 
 		li.low-in-stock {
-			border-right: 1px solid #ececec;
+			border-right: 1px solid $stat-light;
 
 			a::before {
 				content: '\e016';
@@ -189,7 +189,7 @@ ul.woocommerce_stats {
 		line-height: 1.4;
 		margin: -0.2em 0 0 0;
 		font-weight: normal;
-		color: #999;
+		color: lighten($black, 90%);
 	}
 
 	blockquote {
@@ -210,11 +210,11 @@ ul.woocommerce_stats {
 		line-height: 1.5;
 		margin-left: 0.5em;
 		width: 5.4em;
-		font-family: 'WooCommerce' !important;
+		font-family: $woocommerce_font !important;
 
 		&::before {
 			content: '\e021\e021\e021\e021\e021';
-			color: darken( #ccc, 10% );
+			color: darken( $gray-light, 10% );
 			float: left;
 			top: 0;
 			left: 0;
@@ -239,12 +239,12 @@ ul.woocommerce_stats {
 			left: 0;
 			letter-spacing: 0.1em;
 			letter-spacing: 0\9; // IE8 & below hack ;-(
-			color: #9c5d90;
+			color: adjust-hue($purple, 90deg);
 		}
 	}
 }
 
 #dash-right-now li.product-count a::before {
-	font-family: 'WooCommerce';
+	font-family: $woocommerce_font;
 	content: '\e01d';
 }

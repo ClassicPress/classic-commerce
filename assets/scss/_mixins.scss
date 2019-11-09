@@ -173,7 +173,7 @@
 }
 
 @mixin icon( $glyph: '\e001' ) {
-	font-family: 'WooCommerce';
+	font-family: $woocommerce_font;
 	speak: none;
 	font-weight: normal;
 	font-variant: normal;
@@ -210,7 +210,7 @@
 }
 
 @mixin iconbefore( $glyph: '\e001' ) {
-	font-family: 'WooCommerce';
+	font-family: $woocommerce_font;
 	speak: none;
 	font-weight: normal;
 	font-variant: normal;
@@ -235,7 +235,7 @@
 }
 
 @mixin iconafter( $glyph: '\e001' ) {
-	font-family: 'WooCommerce';
+	font-family: $woocommerce_font;
 	speak: none;
 	font-weight: normal;
 	font-variant: normal;
@@ -265,5 +265,25 @@
 		text-align: center;
 		font-size: 2em;
 		color: rgba(#000, 0.75);
+	}
+}
+
+@mixin link() {
+	box-shadow: 0 1px 0 rgba(15, 15, 15, 1);
+	transition: box-shadow ease-in-out 130ms;
+
+	&:hover {
+		box-shadow: 0 3px 0 rgba(15, 15, 15, 1);
+	}
+}
+
+@mixin link_white() {
+	color: #fff;
+	box-shadow: 0 1px 0 rgba(#fff, 1) !important;
+	transition: box-shadow ease-in-out 130ms;
+
+	&:hover {
+		color: #fff !important;
+		box-shadow: 0 3px 0 rgba(#fff, 1) !important;
 	}
 }

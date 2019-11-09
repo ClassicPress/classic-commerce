@@ -6,6 +6,7 @@ module.exports = function( grunt ) {
 
 		// Setting folder templates.
 		dirs: {
+			scss: 'assets/scss',
 			css: 'assets/css',
 			fonts: 'assets/fonts',
 			images: 'assets/images',
@@ -34,8 +35,8 @@ module.exports = function( grunt ) {
 				configFile: '.stylelintrc'
 			},
 			all: [
-				'<%= dirs.css %>/*.scss',
-				'!<%= dirs.css %>/select2.scss'
+				'<%= dirs.scss %>/*.scss',
+				'!<%= dirs.scss %>/select2.scss'
 			]
 		},
 
@@ -116,7 +117,7 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					expand: true,
-					cwd: '<%= dirs.css %>/',
+					cwd: '<%= dirs.scss %>/',
 					src: ['*.scss'],
 					dest: '<%= dirs.css %>/',
 					ext: '.css'
@@ -163,7 +164,7 @@ module.exports = function( grunt ) {
 		// Watch changes for assets.
 		watch: {
 			css: {
-				files: ['<%= dirs.css %>/*.scss'],
+				files: ['<%= dirs.scss %>/*.scss'],
 				tasks: ['sass', 'rtlcss', 'postcss', 'cssmin', 'concat']
 			},
 			js: {
