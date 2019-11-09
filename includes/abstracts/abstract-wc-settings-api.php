@@ -928,7 +928,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Validate the data on the "Settings" form.
 	 *
-	 * @deprecated 2.6.0 No longer used.
+	 * @deprecated WC-2.6.0 No longer used.
 	 * @param array $form_fields Array of fields.
 	 */
 	public function validate_settings_fields( $form_fields = array() ) {
@@ -938,7 +938,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Format settings if needed.
 	 *
-	 * @deprecated 2.6.0 Unused.
+	 * @deprecated WC-2.6.0 Unused.
 	 * @param  array $value Value to format.
 	 * @return array
 	 */

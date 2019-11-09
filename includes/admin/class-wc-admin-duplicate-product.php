@@ -192,10 +192,10 @@ class WC_Admin_Duplicate_Product {
 	/**
 	 * Get a product from the database to duplicate.
 	 *
-	 * @deprecated 3.0.0
-	 * @param mixed $id
-	 * @return object|bool
-	 * @see duplicate_product
+	 * @deprecated WC-3.0.0
+	 * @param      mixed $id
+	 * @return     object|bool
+	 * @see        duplicate_product
 	 */
 	private function get_product_to_duplicate( $id ) {
 		global $wpdb;
