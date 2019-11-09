@@ -80,9 +80,6 @@ class WC_Admin {
 		// Helper
 		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-options.php';
 		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-api.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-updater.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-plugin-info.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-compat.php';
 		include_once dirname( __FILE__ ) . '/helper/class-wc-helper.php';
 	}
 
