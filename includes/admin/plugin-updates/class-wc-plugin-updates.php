@@ -30,7 +30,7 @@ class WC_Plugin_Updates {
 	const VERSION_TESTED_HEADER = 'WC tested up to';
 
 	/**
-	 * The version for the update to WooCommerce.
+	 * The version for the update to Classic Commerce.
 	 *
 	 * @var string
 	 */
@@ -117,7 +117,7 @@ class WC_Plugin_Updates {
 		}
 
 		/* translators: %s: version number */
-		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with the latest version of WooCommerce (%s).", 'classic-commerce' ), $new_version );
+		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with the latest version of Classic Commerce (%s).", 'classic-commerce' ), $new_version );
 
 		ob_start();
 		include 'views/html-notice-untested-extensions-inline.php';
@@ -140,7 +140,7 @@ class WC_Plugin_Updates {
 		}
 
 		/* translators: %s: version number */
-		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with WooCommerce %s. Please update them or confirm compatibility before updating WooCommerce, or you may experience issues:", 'classic-commerce' ), $new_version );
+		$message = sprintf( __( "<strong>Heads up!</strong> The versions of the following plugins you're running haven't been tested with Classic Commerce %s. Please update them or confirm compatibility before updating Classic Commerce, or you may experience issues:", 'classic-commerce' ), $new_version );
 
 		ob_start();
 		include 'views/html-notice-untested-extensions-inline.php';
@@ -173,7 +173,7 @@ class WC_Plugin_Updates {
 	/**
 	 * Get active plugins that have a tested version lower than the input version.
 	 *
-	 * @param string $new_version WooCommerce version to test against.
+	 * @param string $new_version Classic Commerce version to test against.
 	 * @param string $release 'major' or 'minor'.
 	 * @return array of plugin info arrays
 	 */

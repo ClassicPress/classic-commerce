@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Helper_Compat Class
  *
- * Some level of compatibility with the legacy WooCommerce Helper plugin.
+ * Some level of compatibility with the legacy Classic Commerce Helper plugin.
  */
 class WC_Helper_Compat {
 
@@ -156,7 +156,7 @@ class WC_Helper_Compat {
 	public static function plugin_deactivation_notice() {
 		?>
 		<div id="message" class="error is-dismissible">
-			<p><?php printf( __( 'The WooCommerce Helper plugin is no longer needed. <a href="%s">Manage subscriptions</a> from the extensions tab instead.', 'classic-commerce' ), esc_url( admin_url( 'admin.php?page=wc-addons&section=helper' ) ) ); ?></p>
+			<p><?php printf( __( 'The Classic Commerce Helper plugin is no longer needed. <a href="%s">Manage subscriptions</a> from the extensions tab instead.', 'classic-commerce' ), esc_url( admin_url( 'admin.php?page=wc-addons&section=helper' ) ) ); ?></p>
 		</div>
 		<?php
 	}
@@ -177,7 +177,7 @@ class WC_Helper_Compat {
 			return;
 		}
 
-		add_dashboard_page( __( 'WooCommerce Helper', 'classic-commerce' ), __( 'WooCommerce Helper', 'classic-commerce' ), 'manage_options', 'woothemes-helper', array( __CLASS__, 'render_compat_menu' ) );
+		add_dashboard_page( __( 'Classic Commerce Helper', 'classic-commerce' ), __( 'Classic Commerce Helper', 'classic-commerce' ), 'manage_options', 'woothemes-helper', array( __CLASS__, 'render_compat_menu' ) );
 	}
 
 	/**
