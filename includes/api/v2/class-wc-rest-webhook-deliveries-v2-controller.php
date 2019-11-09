@@ -13,9 +13,9 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Webhook Deliveries controller class.
  *
- * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
- * @package ClassicCommerce/API
- * @extends WC_REST_Webhook_Deliveries_V1_Controller
+ * @deprecated WC-3.3.0 Webhooks deliveries logs now uses logging system.
+ * @package    ClassicCommerce/API
+ * @extends    WC_REST_Webhook_Deliveries_V1_Controller
  */
 class WC_REST_Webhook_Deliveries_V2_Controller extends WC_REST_Webhook_Deliveries_V1_Controller {
 

@@ -122,8 +122,8 @@ if ( ! class_exists( 'WC_Email_Customer_Refunded_Order', false ) ) :
 		/**
 		 * Set email strings.
 		 *
-		 * @param bool $partial_refund Whether it is a partial refund or a full refund.
-		 * @deprecated 3.1.0 Unused.
+		 * @param      bool $partial_refund Whether it is a partial refund or a full refund.
+		 * @deprecated WC-3.1.0 Unused.
 		 */
 		public function set_email_strings( $partial_refund = false ) {}
 

@@ -504,9 +504,9 @@ class WC_REST_Orders_V1_Controller extends WC_REST_Posts_Controller {
 
 	/**
 	 * Create base WC Order object.
-	 * @deprecated 3.0.0
-	 * @param array $data
-	 * @return WC_Order
+	 * @deprecated WC-3.0.0
+	 * @param      array $data
+	 * @return     WC_Order
 	 */
 	protected function create_base_order( $data ) {
 		return wc_create_order( $data );

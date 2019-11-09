@@ -2236,14 +2236,14 @@ class WC_API_Products extends WC_API_Resource {
 	/**
 	 * Get product by SKU
 	 *
-	 * @deprecated 2.4.0
+	 * @deprecated WC-2.4.0
 	 *
-	 * @since  WC-2.3.0
+	 * @since      WC-2.3.0
 	 *
-	 * @param  int    $sku the product SKU
-	 * @param  string $fields
+	 * @param      int    $sku the product SKU
+	 * @param      string $fields
 	 *
-	 * @return array|WP_Error
+	 * @return     array|WP_Error
 	 */
 	public function get_product_by_sku( $sku, $fields = null ) {
 		try {
