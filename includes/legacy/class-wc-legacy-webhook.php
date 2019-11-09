@@ -103,7 +103,7 @@ abstract class WC_Legacy_Webhook extends WC_Data {
 	/**
 	 * Get the post data for the webhook.
 	 *
-	 * @deprecated 3.2.0
+	 * @deprecated WC-3.2.0
 	 * @since      WC-2.2
 	 * @return     null|WP_Post
 	 */
@@ -116,7 +116,7 @@ abstract class WC_Legacy_Webhook extends WC_Data {
 	/**
 	 * Update the webhook status.
 	 *
-	 * @deprecated 3.2.0
+	 * @deprecated WC-3.2.0
 	 * @since      WC-2.2.0
 	 * @param      string $status Status to set.
 	 */
