@@ -183,9 +183,9 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Gets an refund from the database.
 	 *
-	 * @deprecated 3.0
-	 * @param int $id (default: 0).
-	 * @return bool
+	 * @deprecated WC-3.0
+	 * @param      int $id (default: 0).
+	 * @return     bool
 	 */
 	public function get_refund( $id = 0 ) {
 		wc_deprecated_function( 'get_refund', '3.0', 'read' );
@@ -207,8 +207,8 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund amount.
 	 *
-	 * @deprecated 3.0
-	 * @return int|float
+	 * @deprecated WC-3.0
+	 * @return     int|float
 	 */
 	public function get_refund_amount() {
 		wc_deprecated_function( 'get_refund_amount', '3.0', 'get_amount' );
@@ -218,8 +218,8 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund reason.
 	 *
-	 * @deprecated 3.0
-	 * @return int|float
+	 * @deprecated WC-3.0
+	 * @return     int|float
 	 */
 	public function get_refund_reason() {
 		wc_deprecated_function( 'get_refund_reason', '3.0', 'get_reason' );

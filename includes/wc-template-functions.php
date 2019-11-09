@@ -2229,9 +2229,10 @@ if ( ! function_exists( 'woocommerce_product_subcategories' ) ) {
 	 * This is a legacy function which also checks if things should display.
 	 * Themes no longer need to call these functions. It's all done via hooks.
 	 *
-	 * @deprecated 3.3.1 @todo Add a notice in a future version.
-	 * @param array $args Arguments.
-	 * @return null|boolean
+	 * @deprecated WC-3.3.1
+	 * @todo       Add a notice in a future version.
+	 * @param      array $args Arguments.
+	 * @return     null|boolean
 	 */
 	function woocommerce_product_subcategories( $args = array() ) {
 		$defaults = array(
@@ -3369,7 +3370,7 @@ function woocommerce_output_all_notices() {
 /**
  * Products RSS Feed.
  *
- * @deprecated 2.6
+ * @deprecated WC-2.6
  */
 function wc_products_rss_feed() {
 	wc_deprecated_function( 'wc_products_rss_feed', '2.6' );
@@ -3380,7 +3381,7 @@ if ( ! function_exists( 'woocommerce_reset_loop' ) ) {
 	/**
 	 * Reset the loop's index and columns when we're done outputting a product loop.
 	 *
-	 * @deprecated 3.3
+	 * @deprecated WC-3.3
 	 */
 	function woocommerce_reset_loop() {
 		wc_reset_loop();
@@ -3391,7 +3392,7 @@ if ( ! function_exists( 'woocommerce_product_reviews_tab' ) ) {
 	/**
 	 * Output the reviews tab content.
 	 *
-	 * @deprecated 2.4.0 Unused.
+	 * @deprecated WC-2.4.0 Unused.
 	 */
 	function woocommerce_product_reviews_tab() {
 		wc_deprecated_function( 'woocommerce_product_reviews_tab', '2.4' );

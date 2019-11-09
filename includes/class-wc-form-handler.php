@@ -644,7 +644,7 @@ class WC_Form_Handler {
 	/**
 	 * Place a previous order again.
 	 *
-	 * @deprecated 3.5.0 Logic moved to cart session handling.
+	 * @deprecated WC-3.5.0 Logic moved to cart session handling.
 	 */
 	public static function order_again() {
 		wc_deprecated_function( 'WC_Form_Handler::order_again', '3.5', 'This method should not be called manually.' );

@@ -496,10 +496,10 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * + request headers/body
 	 * + response code/message/headers/body
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0
-	 * @param int $delivery_id Delivery ID.
-	 * @return void
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0
+	 * @param      int $delivery_id Delivery ID.
+	 * @return     void
 	 */
 	public function get_delivery_log( $delivery_id ) {
 		wc_deprecated_function( 'WC_Webhook::get_delivery_log', '3.3' );
