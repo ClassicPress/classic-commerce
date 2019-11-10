@@ -192,7 +192,6 @@ module.exports = function( grunt ) {
 				options: {
 					potFilename: 'classic-commerce.pot',
 					exclude: [
-						'apigen/.*',
 						'vendor/.*',
 						'tests/.*',
 						'tmp/.*'
@@ -225,7 +224,6 @@ module.exports = function( grunt ) {
 			files: {
 				src:  [
 					'**/*.php',               // Include all files
-					'!apigen/**',             // Exclude apigen/
 					'!includes/libraries/**', // Exclude libraries/
 					'!node_modules/**',       // Exclude node_modules/
 					'!tests/**',              // Exclude tests/
@@ -241,13 +239,6 @@ module.exports = function( grunt ) {
 			options: {
 				stdout: true,
 				stderr: true
-			},
-			apidocs: {
-				command: [
-					'vendor/bin/apigen generate -q',
-					'cd apigen',
-					'php hook-docs.php'
-				].join( '&&' )
 			},
 			e2e_test: {
 				command: 'npm run --silent test:single tests/e2e-tests/' + grunt.option( 'file' )
@@ -300,7 +291,6 @@ module.exports = function( grunt ) {
 			dist: {
 				src:  [
 					'**/*.php',                                                  // Include all files
-					'!apigen/**',                                                // Exclude apigen/
 					'!includes/api/legacy/**',                                   // Exclude legacy REST API
 					'!includes/gateways/simplify-commerce/includes/Simplify/**', // Exclude simplify commerce SDK
 					'!includes/libraries/**',                                    // Exclude libraries/
