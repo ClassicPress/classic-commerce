@@ -1089,7 +1089,7 @@ class WC_Admin_Setup_Wizard {
 				printf(
 					wp_kses(
 						/* translators: %s: Link */
-						__( 'WooCommerce can accept both online and offline payments. A <a href="%1$s" target="_blank">basic PayPal option</a> is already included. This can be enabled and configured from the Payments tab under Settings. <a href="%2$s" target="_blank">Additional payment methods</a> can be installed later.', 'classic-commerce' ),
+						__( 'Classic Commerce can accept both online and offline payments. A <a href="%1$s" target="_blank">basic PayPal option</a> is already included. This can be enabled and configured from the Payments tab under Settings. <a href="%2$s" target="_blank">Additional payment methods</a> can be installed later.', 'classic-commerce' ),
 						array(
 							'a' => array(
 								'href'   => array(),
@@ -1223,7 +1223,7 @@ class WC_Admin_Setup_Wizard {
 	 */
 	public function wc_setup_recommended() {
 		?>
-		<h1><?php esc_html_e( 'Recommended for All WooCommerce Stores', 'classic-commerce' ); ?></h1>
+		<h1><?php esc_html_e( 'Recommended for all Classic Commerce stores', 'classic-commerce' ); ?></h1>
 
 		<form method="post">
 			<p class="wc-setup-actions step">
@@ -1245,7 +1245,7 @@ class WC_Admin_Setup_Wizard {
 		$docs_url     = 'https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/';
 		$help_text    = sprintf(
 			/* translators: %1$s: link to videos, %2$s: link to docs */
-			__( 'Watch <a href="%1$s" target="_blank">guided tour videos</a> to learn more about WooCommerce, and visit WooCommerce.com to learn more about <a href="%2$s" target="_blank">getting started</a>.', 'classic-commerce' ),
+			__( 'Watch <a href="%1$s" target="_blank">guided tour videos</a> to learn more about Classic Commerce, or visit WooCommerce.com to learn more about <a href="%2$s" target="_blank">getting started</a>.', 'classic-commerce' ),
 			$videos_url,
 			$docs_url
 		);
