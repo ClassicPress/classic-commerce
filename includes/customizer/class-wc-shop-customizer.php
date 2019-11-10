@@ -519,7 +519,7 @@ class WC_Shop_Customizer {
 			$regen_description = __( 'After publishing your changes, new image sizes will be generated automatically.', 'classic-commerce' );
 		} elseif ( apply_filters( 'woocommerce_background_image_regeneration', true ) && is_multisite() ) {
 			/* translators: 1: tools URL 2: regen thumbs url */
-			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in WooCommerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'classic-commerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
+			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in Classic Commerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'classic-commerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
 		} else {
 			/* translators: %s: regen thumbs url */
 			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you <a href="%s" target="_blank">Regenerate Thumbnails</a>.', 'classic-commerce' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
@@ -668,7 +668,7 @@ class WC_Shop_Customizer {
 				'title'       => __( 'Checkout', 'classic-commerce' ),
 				'priority'    => 20,
 				'panel'       => 'woocommerce',
-				'description' => __( 'These options let you change the appearance of the WooCommerce checkout.', 'classic-commerce' ),
+				'description' => __( 'These options let you change the appearance of the Classic Commerce checkout.', 'classic-commerce' ),
 			)
 		);
 
