@@ -129,7 +129,7 @@ Action Scheduler has a built in administration screen for monitoring, debugging 
 The administration interface is accesible through both:
 
 1. **Tools > Scheduled Actions**
-1. **WooCommerce > Status > Scheduled Actions**, when WooCommerce is installed.
+1. **Classic Commerce > Status > Scheduled Actions**, when Classic Commerce is installed.
 
 ![](https://cldup.com/5BA2BNB1sw.png)
 
@@ -520,8 +520,6 @@ Because of this, you can effectively customise queue running however you need. W
 ### Is Action Scheduler safe to use on my production site?
 
 Yes, absolutely! Action Scheduler is actively used on tens of thousands of production sites already. Right now it's responsible for scheduling everything from emails to payments.
-
-In fact, every month, Action Scheduler processes millions of payments as part of the [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/) extension.
 
 It requires no setup, and won't override any WordPress APIs (unless you want it to).
 

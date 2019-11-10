@@ -1165,7 +1165,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	 */
 	public static function plugin_action_links( $links ) {
 		$action_links = array(
-			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings' ) . '" aria-label="' . esc_attr__( 'View WooCommerce settings', 'classic-commerce' ) . '">' . esc_html__( 'Settings', 'classic-commerce' ) . '</a>',
+			'settings' => '<a href="' . admin_url( 'admin.php?page=wc-settings' ) . '" aria-label="' . esc_attr__( 'View Classic Commerce settings', 'classic-commerce' ) . '">' . esc_html__( 'Settings', 'classic-commerce' ) . '</a>',
 		);
 
 		return array_merge( $action_links, $links );
