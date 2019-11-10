@@ -154,8 +154,8 @@ class WC_Log_Handler_Email extends WC_Log_Handler {
 		return sprintf(
 			/* translators: 1: Site name 2: Maximum level 3: Log count */
 			_n(
-				'[%1$s] %2$s: %3$s WooCommerce log message',
-				'[%1$s] %2$s: %3$s WooCommerce log messages',
+				'[%1$s] %2$s: %3$s Classic Commerce log message',
+				'[%1$s] %2$s: %3$s Classic Commerce log messages',
 				$log_count,
 				'classic-commerce'
 			),
@@ -175,8 +175,8 @@ class WC_Log_Handler_Email extends WC_Log_Handler {
 		$entries   = implode( PHP_EOL, $this->logs );
 		$log_count = count( $this->logs );
 		return _n(
-			'You have received the following WooCommerce log message:',
-			'You have received the following WooCommerce log messages:',
+			'You have received the following Classic Commerce log message:',
+			'You have received the following Classic Commerce log messages:',
 			$log_count,
 			'classic-commerce'
 		) . PHP_EOL
