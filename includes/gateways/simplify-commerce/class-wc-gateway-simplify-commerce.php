@@ -93,13 +93,13 @@ class WC_Gateway_Simplify_Commerce extends WC_Payment_Gateway_CC {
 			<div class="simplify-commerce-banner updated">
 				<img src="<?php echo WC()->plugin_url() . '/includes/gateways/simplify-commerce/assets/images/logo.png'; ?>" />
 				<p class="main"><strong><?php _e( 'Getting started', 'classic-commerce' ); ?></strong></p>
-				<p><?php _e( 'Simplify Commerce is your merchant account and payment gateway all rolled into one. Choose Simplify Commerce as your WooCommerce payment gateway to get access to your money quickly with a powerful, secure payment engine backed by MasterCard.', 'classic-commerce' ); ?></p>
+				<p><?php _e( 'Simplify Commerce is your merchant account and payment gateway all rolled into one. Choose Simplify Commerce as your Classic Commerce payment gateway to get access to your money quickly with a powerful, secure payment engine backed by MasterCard.', 'classic-commerce' ); ?></p>
 
 				<p><a href="https://www.simplify.com/commerce/partners/woocommerce#/signup" target="_blank" class="button button-primary"><?php _e( 'Sign up for Simplify Commerce', 'classic-commerce' ); ?></a> <a href="https://www.simplify.com/commerce/partners/woocommerce#/" target="_blank" class="button"><?php _e( 'Learn more', 'classic-commerce' ); ?></a></p>
 
 			</div>
 		<?php else : ?>
-			<p><?php _e( 'Simplify Commerce is your merchant account and payment gateway all rolled into one. Choose Simplify Commerce as your WooCommerce payment gateway to get access to your money quickly with a powerful, secure payment engine backed by MasterCard.', 'classic-commerce' ); ?></p>
+			<p><?php _e( 'Simplify Commerce is your merchant account and payment gateway all rolled into one. Choose Simplify Commerce as your Classic Commerce payment gateway to get access to your money quickly with a powerful, secure payment engine backed by MasterCard.', 'classic-commerce' ); ?></p>
 		<?php endif; ?>
 
 		<?php $this->checks(); ?>
