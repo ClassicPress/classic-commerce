@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/ClassicPress-Research/classic-commerce/issues\n"
-"POT-Creation-Date: 2019-11-09 14:32:59+00:00\n"
+"POT-Creation-Date: 2019-11-11 11:17:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6932,7 +6932,7 @@ msgid "Limit result set to resources with a specific slug."
 msgstr ""
 
 #: includes/abstracts/abstract-wc-settings-api.php:774
-#: includes/admin/class-wc-admin-menus.php:326
+#: includes/admin/class-wc-admin-menus.php:325
 #: includes/admin/class-wc-admin-settings.php:621
 #: includes/admin/meta-boxes/views/html-product-attribute.php:56
 msgid "Select all"
@@ -7106,9 +7106,6 @@ msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:84
 #: includes/admin/class-wc-admin-menus.php:59
-#: includes/admin/helper/class-wc-helper.php:448
-#: includes/admin/helper/class-wc-helper.php:591
-#: includes/admin/helper/class-wc-helper.php:1329
 #: includes/admin/wc-admin-functions.php:22
 #: includes/api/class-wc-rest-order-notes-controller.php:38
 #: includes/class-wc-order.php:1632 includes/class-wc-order.php:1633
@@ -7509,7 +7506,6 @@ msgid ""
 msgstr ""
 
 #: includes/admin/class-wc-admin-attributes.php:264
-#: includes/admin/helper/class-wc-helper.php:180
 #: includes/admin/meta-boxes/class-wc-meta-box-order-actions.php:74
 #: templates/cart/shipping-calculator.php:82
 msgid "Update"
@@ -7600,7 +7596,7 @@ msgid "WooCommerce Endpoint"
 msgstr ""
 
 #: includes/admin/class-wc-admin-customize.php:79
-#: includes/admin/class-wc-admin-menus.php:297
+#: includes/admin/class-wc-admin-menus.php:296
 #: includes/admin/settings/class-wc-settings-advanced.php:274
 #: includes/class-wc-query.php:133
 msgid "Lost password"
@@ -7611,15 +7607,16 @@ msgid "Custom Link"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:42
-msgid "WooCommerce recent reviews"
+msgid "Classic Commerce recent reviews"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:44
-msgid "WooCommerce status"
+#: includes/admin/class-wc-admin-menus.php:123
+msgid "Classic Commerce status"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:56
-msgid "WooCommerce network orders"
+msgid "Classic Commerce network orders"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:121
@@ -7848,7 +7845,7 @@ msgid "Product Import"
 msgstr ""
 
 #: includes/admin/class-wc-admin-importers.php:113
-msgid "WooCommerce products (CSV)"
+msgid "Classic Commerce products (CSV)"
 msgstr ""
 
 #: includes/admin/class-wc-admin-importers.php:113
@@ -7856,7 +7853,7 @@ msgid "Import <strong>products</strong> to your store via a csv file."
 msgstr ""
 
 #: includes/admin/class-wc-admin-importers.php:114
-msgid "WooCommerce tax rates (CSV)"
+msgid "Classic Commerce tax rates (CSV)"
 msgstr ""
 
 #: includes/admin/class-wc-admin-importers.php:114
@@ -7975,28 +7972,24 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:123
-msgid "Classic Commerce status"
-msgstr ""
-
-#: includes/admin/class-wc-admin-menus.php:132
+#: includes/admin/class-wc-admin-menus.php:131
 #. translators: %s: extensions count
 msgid "Extensions %s"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:133
+#: includes/admin/class-wc-admin-menus.php:132
 msgid "Classic Commerce extensions"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:281
+#: includes/admin/class-wc-admin-menus.php:280
 msgid "Classic Commerce endpoints"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:329
+#: includes/admin/class-wc-admin-menus.php:328
 msgid "Add to menu"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:363
+#: includes/admin/class-wc-admin-menus.php:362
 msgid "Visit Store"
 msgstr ""
 
@@ -9025,8 +9018,8 @@ msgid "We'll use %1$s for product weight and %2$s for product dimensions."
 msgstr ""
 
 #: includes/admin/class-wc-admin-setup-wizard.php:856
-#: includes/admin/class-wc-admin-setup-wizard.php:1142
-#: includes/admin/class-wc-admin-setup-wizard.php:1229
+#: includes/admin/class-wc-admin-setup-wizard.php:1143
+#: includes/admin/class-wc-admin-setup-wizard.php:1230
 #: includes/admin/importers/views/html-product-csv-import-form.php:101
 msgid "Continue"
 msgstr ""
@@ -9056,76 +9049,79 @@ msgstr ""
 #: includes/admin/class-wc-admin-setup-wizard.php:1092
 #. translators: %s: Link
 msgid ""
-"WooCommerce can accept both online and offline payments. <a href=\"%s\" "
-"target=\"_blank\">Additional payment methods</a> can be installed later."
+"Classic Commerce can accept both online and offline payments. A <a "
+"href=\"%1$s\" target=\"_blank\">basic PayPal option</a> is already "
+"included. This can be enabled and configured from the Payments tab under "
+"Settings. <a href=\"%2$s\" target=\"_blank\">Additional payment methods</a> "
+"can be installed later."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1125
+#: includes/admin/class-wc-admin-setup-wizard.php:1126
 msgid "Offline Payments"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1128
+#: includes/admin/class-wc-admin-setup-wizard.php:1129
 msgid "Collect payments from customers offline."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1225
-msgid "Recommended for All WooCommerce Stores"
+#: includes/admin/class-wc-admin-setup-wizard.php:1226
+msgid "Recommended for all Classic Commerce stores"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1247
+#: includes/admin/class-wc-admin-setup-wizard.php:1248
 #. translators: %1$s: link to videos, %2$s: link to docs
 msgid ""
 "Watch <a href=\"%1$s\" target=\"_blank\">guided tour videos</a> to learn "
-"more about WooCommerce, and visit WooCommerce.com to learn more about <a "
-"href=\"%2$s\" target=\"_blank\">getting started</a>."
+"more about Classic Commerce, or visit WooCommerce.com to learn more about "
+"<a href=\"%2$s\" target=\"_blank\">getting started</a>."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1252
+#: includes/admin/class-wc-admin-setup-wizard.php:1253
 msgid "You're ready to start selling!"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1257
+#: includes/admin/class-wc-admin-setup-wizard.php:1258
 msgid "Next step"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1258
+#: includes/admin/class-wc-admin-setup-wizard.php:1259
 msgid "Create some products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1259
+#: includes/admin/class-wc-admin-setup-wizard.php:1260
 msgid "You're ready to add products to your store."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1264
+#: includes/admin/class-wc-admin-setup-wizard.php:1265
 msgid "Create a product"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1271
+#: includes/admin/class-wc-admin-setup-wizard.php:1272
 msgid "Have an existing store?"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1272
-#: includes/admin/class-wc-admin-setup-wizard.php:1278
+#: includes/admin/class-wc-admin-setup-wizard.php:1273
+#: includes/admin/class-wc-admin-setup-wizard.php:1279
 msgid "Import products"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1273
+#: includes/admin/class-wc-admin-setup-wizard.php:1274
 msgid "Transfer existing products to your new store — just import a CSV file."
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1285
+#: includes/admin/class-wc-admin-setup-wizard.php:1286
 msgid "You can also:"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1290
+#: includes/admin/class-wc-admin-setup-wizard.php:1291
 msgid "Visit Dashboard"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1293
+#: includes/admin/class-wc-admin-setup-wizard.php:1294
 msgid "Review Settings"
 msgstr ""
 
-#: includes/admin/class-wc-admin-setup-wizard.php:1296
+#: includes/admin/class-wc-admin-setup-wizard.php:1297
 msgid "View &amp; Customize"
 msgstr ""
 
@@ -9324,206 +9320,13 @@ msgstr ""
 msgid "Create a new webhook"
 msgstr ""
 
-#: includes/admin/class-wc-admin.php:199
+#: includes/admin/class-wc-admin.php:195
 msgid "HTML email template"
 msgstr ""
 
-#: includes/admin/class-wc-admin.php:237
+#: includes/admin/class-wc-admin.php:233
 msgid "Thank you for using Classic Commerce."
 msgstr ""
-
-#: includes/admin/helper/class-wc-helper-compat.php:159
-msgid ""
-"The Classic Commerce Helper plugin is no longer needed. <a "
-"href=\"%s\">Manage subscriptions</a> from the extensions tab instead."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper-compat.php:180
-msgid "Classic Commerce Helper"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:179
-#: includes/admin/helper/class-wc-helper.php:199
-#. translators: %s: version number
-msgid "Version %s is <strong>available</strong>."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:188
-msgid ""
-"To enable this update you need to <strong>activate</strong> this "
-"subscription."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:204
-msgid ""
-"To enable this update you need to <strong>purchase</strong> a new "
-"subscription."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:205
-#: includes/admin/helper/class-wc-helper.php:290
-#: includes/admin/helper/class-wc-helper.php:301
-msgid "Purchase"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:211
-msgid ""
-"This subscription has expired. Contact the owner to <strong>renew</strong> "
-"the subscription to receive updates and support."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:219
-msgid ""
-"This subscription has expired. Please <strong>renew</strong> to receive "
-"updates and support."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:220
-#: includes/admin/helper/class-wc-helper.php:243
-msgid "Renew"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:231
-msgid "Subscription is <strong>expiring</strong> soon."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:232
-msgid "Enable auto-renew"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:242
-msgid ""
-"This subscription is expiring soon. Please <strong>renew</strong> to "
-"continue receiving updates and support."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:289
-msgid ""
-"Version %s is <strong>available</strong>. To enable this update you need to "
-"<strong>purchase</strong> a new subscription."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:300
-#. translators: 1: subscriptions docs 2: subscriptions docs
-msgid ""
-"To receive updates and support for this extension, you need to "
-"<strong>purchase</strong> a new subscription or consolidate your extensions "
-"to one connected account by <strong><a href=\"%1$s\" title=\"Sharing "
-"Docs\">sharing</a> or <a href=\"%2$s\" title=\"Transferring "
-"Docs\">transferring</a></strong> this extension to this connected account."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:339
-#: includes/admin/reports/class-wc-report-sales-by-category.php:232
-msgid "All"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:340
-#: includes/wc-webhook-functions.php:100
-msgid "Active"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:341
-msgid "Inactive"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:342
-msgid "Installed"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:343
-msgid "Update Available"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:344
-msgid "Expiring Soon"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:345
-msgid "Expired"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:346
-#: includes/class-wc-emails.php:410
-#: includes/legacy/abstract-wc-legacy-order.php:507
-#: includes/wc-account-functions.php:214
-#: includes/wc-template-functions.php:3082
-msgid "Download"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:473
-#. translators: %s: product name
-msgid "%s activated successfully. You will now receive updates for this product."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:485
-#. translators: %s: product name
-msgid "An error has occurred when activating %s. Please try again later."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:497
-#. translators: %s: product name
-msgid ""
-"Subscription for %s deactivated successfully. You will no longer receive "
-"updates for this product."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:515
-#. translators: %1$s: product name, %2$s: deactivate url
-msgid ""
-"Subscription for %1$s deactivated successfully. You will no longer receive "
-"updates for this product. <a href=\"%2$s\">Click here</a> if you wish to "
-"deactivate the plugin as well."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:532
-#. translators: %s: product name
-msgid ""
-"An error has occurred when deactivating the subscription for %s. Please try "
-"again later."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:544
-#. translators: %s: product name
-msgid "The extension %s has been deactivated successfully."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:556
-#. translators: %1$s: product name, %2$s: plugins screen url
-msgid ""
-"An error has occurred when deactivating the extension %1$s. Please proceed "
-"to the <a href=\"%2$s\">Plugins screen</a> to deactivate it manually."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:564
-msgid "You have successfully connected your store to WooCommerce.com"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:571
-msgid "You have successfully disconnected your store from WooCommerce.com"
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:578
-msgid "Authentication and subscription caches refreshed successfully."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:1355
-#. translators: %s: helper screen url
-msgid ""
-"<a href=\"%s\">Connect your store</a> to WooCommerce.com to receive "
-"extensions updates and support."
-msgstr ""
-
-#: includes/admin/helper/class-wc-helper.php:1388
-#. translators: %1$s: helper url, %2$d: number of extensions
-msgid ""
-"Note: You currently have <a href=\"%1$s\">%2$d paid extension</a> which "
-"should be updated first before updating WooCommerce."
-msgid_plural ""
-"Note: You currently have <a href=\"%1$s\">%2$d paid extensions</a> which "
-"should be updated first before updating WooCommerce."
-msgstr[0] ""
-msgstr[1] ""
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:127
 msgid "Upload CSV file"
@@ -12202,6 +12005,10 @@ msgstr ""
 
 #: includes/admin/reports/class-wc-report-sales-by-category.php:231
 msgid "None"
+msgstr ""
+
+#: includes/admin/reports/class-wc-report-sales-by-category.php:232
+msgid "All"
 msgstr ""
 
 #: includes/admin/reports/class-wc-report-sales-by-category.php:291
@@ -20370,8 +20177,8 @@ msgstr ""
 #: includes/class-wc-cache-helper.php:224
 #. translators: 1: key 2: URL
 msgid ""
-"In order for <strong>database caching</strong> to work with WooCommerce you "
-"must add %1$s to the \"Ignored Query Strings\" option in <a "
+"In order for <strong>database caching</strong> to work with Classic "
+"Commerce you must add %1$s to the \"Ignored Query Strings\" option in <a "
 "href=\"%2$s\">W3 Total Cache settings</a>."
 msgstr ""
 
@@ -20892,6 +20699,13 @@ msgstr ""
 msgid "Expires"
 msgstr ""
 
+#: includes/class-wc-emails.php:410
+#: includes/legacy/abstract-wc-legacy-order.php:507
+#: includes/wc-account-functions.php:214
+#: includes/wc-template-functions.php:3082
+msgid "Download"
+msgstr ""
+
 #: includes/class-wc-emails.php:571
 msgid "Product low in stock"
 msgstr ""
@@ -21108,7 +20922,7 @@ msgid "Monthly"
 msgstr ""
 
 #: includes/class-wc-install.php:1168
-msgid "View WooCommerce settings"
+msgid "View Classic Commerce settings"
 msgstr ""
 
 #: includes/class-wc-install.php:1185
@@ -22325,8 +22139,8 @@ msgstr ""
 msgid ""
 "After publishing your changes, new image sizes may not be shown until you "
 "regenerate thumbnails. You can do this from the <a href=\"%1$s\" "
-"target=\"_blank\">tools section in WooCommerce</a> or by using a plugin "
-"such as <a href=\"%2$s\" target=\"_blank\">Regenerate Thumbnails</a>."
+"target=\"_blank\">tools section in Classic Commerce</a> or by using a "
+"plugin such as <a href=\"%2$s\" target=\"_blank\">Regenerate Thumbnails</a>."
 msgstr ""
 
 #: includes/customizer/class-wc-shop-customizer.php:525
@@ -22392,7 +22206,9 @@ msgid "Checkout"
 msgstr ""
 
 #: includes/customizer/class-wc-shop-customizer.php:671
-msgid "These options let you change the appearance of the WooCommerce checkout."
+msgid ""
+"These options let you change the appearance of the Classic Commerce "
+"checkout."
 msgstr ""
 
 #: includes/customizer/class-wc-shop-customizer.php:695
@@ -23588,8 +23404,8 @@ msgstr ""
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:102
 msgid ""
 "Simplify Commerce is your merchant account and payment gateway all rolled "
-"into one. Choose Simplify Commerce as your WooCommerce payment gateway to "
-"get access to your money quickly with a powerful, secure payment engine "
+"into one. Choose Simplify Commerce as your Classic Commerce payment gateway "
+"to get access to your money quickly with a powerful, secure payment engine "
 "backed by MasterCard."
 msgstr ""
 
@@ -24157,14 +23973,14 @@ msgstr ""
 
 #: includes/log-handlers/class-wc-log-handler-email.php:156
 #. translators: 1: Site name 2: Maximum level 3: Log count
-msgid "[%1$s] %2$s: %3$s WooCommerce log message"
-msgid_plural "[%1$s] %2$s: %3$s WooCommerce log messages"
+msgid "[%1$s] %2$s: %3$s Classic Commerce log message"
+msgid_plural "[%1$s] %2$s: %3$s Classic Commerce log messages"
 msgstr[0] ""
 msgstr[1] ""
 
 #: includes/log-handlers/class-wc-log-handler-email.php:177
-msgid "You have received the following WooCommerce log message:"
-msgid_plural "You have received the following WooCommerce log messages:"
+msgid "You have received the following Classic Commerce log message:"
+msgid_plural "You have received the following Classic Commerce log messages:"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -25583,6 +25399,10 @@ msgid ""
 "have problems."
 msgstr ""
 
+#: includes/wc-webhook-functions.php:100
+msgid "Active"
+msgstr ""
+
 #: includes/wc-webhook-functions.php:101
 msgid "Paused"
 msgstr ""
@@ -26770,7 +26590,7 @@ msgctxt "enhanced select"
 msgid "Searching&hellip;"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:172
+#: includes/admin/class-wc-admin-menus.php:171
 #: includes/class-wc-post-types.php:383
 msgctxt "Admin menu name"
 msgid "Orders"

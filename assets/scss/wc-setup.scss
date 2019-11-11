@@ -499,62 +499,6 @@ body {
 	text-align: center;
 }
 
-.wc-wizard-storefront {
-	.wc-wizard-storefront-intro {
-		padding: 40px 40px 0;
-		background: #F5F5F5;
-		text-align: center;
-
-		img {
-			margin: 40px 0 0 0;
-			width: 100%;
-			display: block;
-		}
-	}
-	.wc-wizard-storefront-features {
-		list-style: none outside;
-		margin: 0 0 20px;
-		padding: 0 0 0 30px;
-		overflow: hidden;
-	}
-	.wc-wizard-storefront-feature {
-		margin: 0;
-		padding: 20px 30px 20px 2em;
-		width: 50%;
-		box-sizing: border-box;
-
-		&::before {
-			margin-left: -2em;
-			position: absolute;
-		}
-		&.first {
-			clear: both;
-			float: left;
-		}
-		&.last {
-			float: right;
-		}
-	}
-	.wc-wizard-storefront-feature__bulletproof::before {
-		content: '🔒';
-	}
-	.wc-wizard-storefront-feature__mobile::before {
-		content: '📱';
-	}
-	.wc-wizard-storefront-feature__accessibility::before {
-		content: '👓';
-	}
-	.wc-wizard-storefront-feature__search::before {
-		content: '🔍';
-	}
-	.wc-wizard-storefront-feature__compatibility::before {
-		content: '🔧';
-	}
-	.wc-wizard-storefront-feature__extendable::before {
-		content: '🎨';
-	}
-}
-
 // List of services
 .wc-wizard-services {
 	border: 1px solid #eee;
@@ -608,42 +552,7 @@ body {
 			max-width: 75px;
 		}
 	}
-
-	&.stripe-logo .wc-wizard-service-name img {
-		padding: 8px 0;
-	}
-
-	&.paypal-logo .wc-wizard-service-name img {
-		max-width: 87px;
-		padding: 2px 0;
-	}
-
-	&.klarna-logo .wc-wizard-service-name {
-		background: #000000;
-
-		img {
-			max-width: 87px;
-			padding: 12px 0;
-		}
-	}
-
-	&.square-logo .wc-wizard-service-name {
-		background: #000000;
-
-		img {
-			max-width: 95px;
-			padding: 12px 0;
-		}
-	}
-
-	&.eway-logo .wc-wizard-service-name img {
-		max-width: 87px;
-	}
-
-	&.payfast-logo .wc-wizard-service-name img {
-		max-width: 140px;
-	}
-
+	
 	.wc-wizard-service-description {
 		flex-grow: 1;
 		padding: 20px;
@@ -1213,47 +1122,6 @@ p.jetpack-terms {
 	}
 }
 
-.wc-wizard-service-setting-stripe_create_account, .wc-wizard-service-setting-ppec_paypal_reroute_requests {
-	display: flex;
-	align-items: flex-start;
-
-	.payment-checkbox-input {
-		order: 1;
-		margin-top: 5px;
-		margin-left: 0;
-		margin-right: 0;
-		width: 1.5em;
-	}
-
-	.stripe_create_account, .ppec_paypal_reroute_requests {
-		order: 2;
-		margin-left: 0.3em;
-	}
-}
-
-.wc-wizard-service-setting-stripe_email, .wc-wizard-service-setting-ppec_paypal_email {
-	margin-top: 0.75em;
-	margin-left: 1.5em;
-
-	label.stripe_email, label.ppec_paypal_email {
-		position: absolute;
-		margin: -1px;
-		padding: 0;
-		height: 1px;
-		width: 1px;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-		border: 0;
-	}
-
-	input.payment-email-input {
-		box-sizing: border-box;
-		margin-bottom: .5em;
-		width: 100%;
-		height: 32px;
-	}
-}
-
 .wc-setup-content .recommended-step {
 	border: 1px solid #ebebeb;
 	border-radius: 4px;
@@ -1287,23 +1155,10 @@ p.jetpack-terms {
 		margin-right: 1em;
 		margin-left: 4px;
 
-		&.recommended-item-icon-storefront_theme {
-			background-color: #f4a224;
-			max-height: 3em;
-			max-width: 3em;
-			padding: ( 3.5em - 3em ) / 2;
-		}
-
 		&.recommended-item-icon-automated_taxes {
 			background-color: #d0011b;
 			max-height: 1.75em;
 			padding: ( 3.5em - 1.75em ) / 2;
-		}
-
-		&.recommended-item-icon-mailchimp {
-			background-color: #209bbb;
-			height: 2em;
-			padding: ( 3.5em - 2em ) / 2;
 		}
 
 		&.recommended-item-icon-woocommerce_services {
@@ -1312,10 +1167,6 @@ p.jetpack-terms {
 			padding: 1.3em .7em;
 		}
 
-		&.recommended-item-icon-shipstation {
-			background-color: #f0f0f0;
-			padding: .3em;
-		}
 	}
 
 	.recommended-item-description-container {

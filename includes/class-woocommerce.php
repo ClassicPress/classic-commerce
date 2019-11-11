@@ -401,7 +401,7 @@ final class WooCommerce {
 	 * @since WC-3.3.0
 	 */
 	private function theme_support_includes() {
-		if ( wc_is_active_theme( array( 'classicpress-twentyseventeen', 'classicpress-twentysixteen', 'classicpress-twentyfifteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', ) ) ) {
+		if ( wc_is_active_theme( array( 'classicpress-twentyseventeen', 'classicpress-twentysixteen', 'classicpress-twentyfifteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen' ) ) ) {
 			switch ( get_template() ) {
 				case 'classicpress-twentyfifteen':
 					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fifteen.php';
