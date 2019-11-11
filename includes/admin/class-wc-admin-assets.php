@@ -23,6 +23,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 		public function __construct() {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+			add_action( 'admin_head', array( $this, 'admin_menu_inline_css' ) );
 		}
 
 		/**
@@ -416,6 +417,42 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 					)
 				);
 			}
+		}
+
+		/**
+		 * Enqueue inline CSS for the admin menu.
+		 *
+		 * We register the top-level menu item as __( 'WooCommerce' ), which
+		 * causes the admin screen ID to be
+		 * `sanitize_title( __( 'WooCommerce' ) )`.
+		 *
+		 * This is still 'WooCommerce' for compatibility with extensions that
+		 * need to use screen IDs directly.  More info:
+		 *
+		 * - https://www.skyverge.com/blog/screen-id-checks-wordpress-submenu-pages/
+		 * - https://wpdirectory.net/search/01DSDNR9N8X79VRR1F01GZ3HVP
+		 * - https://github.com/ClassicPress-research/classic-commerce/pull/TODO
+		 *
+		 * To avoid showing WooCommerce in the admin menu, we override that
+		 * text with CSS, echoed inline so that the name can be translated.
+		 *
+		 * @since 1.0.0
+		 */
+		public function admin_menu_inline_css() {
+?>
+<style>
+ul#adminmenu > li#toplevel_page_woocommerce > a > div.wp-menu-name {
+	font-size: 0px;
+	color: rgba(0, 0, 0, 0);
+}
+ul#adminmenu > li#toplevel_page_woocommerce > a > div.wp-menu-name:after {
+	font-size: 14px;
+	color: #eee;
+	display: inline;
+	content: "<?php _e( 'Commerce', 'classic-commerce' ); ?>";
+}
+</style>
+<?php
 		}
 	}
 
