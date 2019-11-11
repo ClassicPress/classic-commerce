@@ -127,8 +127,8 @@ class WC_Admin_Menus {
 	 * Addons menu item.
 	 */
 	public function addons_menu() {
-		/* translators: %s: extensions count */
-		$menu_title = sprintf( __( 'Extensions %s', 'classic-commerce' ), $count_html );
+		
+		$menu_title = __( 'Extensions', 'classic-commerce' );
 		add_submenu_page( 'woocommerce', __( 'Classic Commerce extensions', 'classic-commerce' ), $menu_title, 'manage_woocommerce', 'wc-addons', array( $this, 'addons_page' ) );
 	}
 
