@@ -431,7 +431,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 		 *
 		 * - https://www.skyverge.com/blog/screen-id-checks-wordpress-submenu-pages/
 		 * - https://wpdirectory.net/search/01DSDNR9N8X79VRR1F01GZ3HVP
-		 * - https://github.com/ClassicPress-research/classic-commerce/pull/TODO
+		 * - https://github.com/ClassicPress-research/classic-commerce/pull/118
 		 *
 		 * To avoid showing WooCommerce in the admin menu, we override that
 		 * text with CSS, echoed inline so that the name can be translated.
