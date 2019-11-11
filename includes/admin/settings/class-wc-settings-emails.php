@@ -1,6 +1,6 @@
 <?php
 /**
- * WooCommerce Email Settings
+ * Classic Commerce Email Settings
  *
  * @package WooCommerce/Admin
  * @version WC-2.1.0
@@ -51,7 +51,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 
 				array(
 					'title' => __( 'Email notifications', 'woocommerce' ),
-					'desc'  => __( 'Email notifications sent from WooCommerce are listed below. Click on an email to configure it.', 'woocommerce' ),
+					'desc'  => __( 'Email notifications sent from Classic Commerce are listed below. Click on an email to configure it.', 'woocommerce' ),
 					'type'  => 'title',
 					'id'    => 'email_notification_settings',
 				),
@@ -77,7 +77,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 
 				array(
 					'title'    => __( '"From" name', 'woocommerce' ),
-					'desc'     => __( 'How the sender name appears in outgoing WooCommerce emails.', 'woocommerce' ),
+					'desc'     => __( 'How the sender name appears in outgoing Classic Commerce emails.', 'woocommerce' ),
 					'id'       => 'woocommerce_email_from_name',
 					'type'     => 'text',
 					'css'      => 'min-width:300px;',
@@ -88,7 +88,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 
 				array(
 					'title'             => __( '"From" address', 'woocommerce' ),
-					'desc'              => __( 'How the sender email appears in outgoing WooCommerce emails.', 'woocommerce' ),
+					'desc'              => __( 'How the sender email appears in outgoing Classic Commerce emails.', 'woocommerce' ),
 					'id'                => 'woocommerce_email_from_address',
 					'type'              => 'email',
 					'custom_attributes' => array(
@@ -109,7 +109,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 					'title' => __( 'Email template', 'woocommerce' ),
 					'type'  => 'title',
 					/* translators: %s: Nonced email preview link */
-					'desc'  => sprintf( __( 'This section lets you customize the WooCommerce emails. <a href="%s" target="_blank">Click here to preview your email template</a>.', 'woocommerce' ), wp_nonce_url( admin_url( '?preview_woocommerce_mail=true' ), 'preview-mail' ) ),
+					'desc'  => sprintf( __( 'This section lets you customize the Classic Commerce emails. <a href="%s" target="_blank">Click here to preview your email template</a>.', 'woocommerce' ), wp_nonce_url( admin_url( '?preview_woocommerce_mail=true' ), 'preview-mail' ) ),
 					'id'    => 'email_template_options',
 				),
 
@@ -128,12 +128,12 @@ class WC_Settings_Emails extends WC_Settings_Page {
 				array(
 					'title'       => __( 'Footer text', 'woocommerce' ),
 					/* translators: %s: Available placeholders for use */
-					'desc'        => __( 'The text to appear in the footer of WooCommerce emails.', 'woocommerce' ) . ' ' . sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '{site_title}' ),
+					'desc'        => __( 'The text to appear in the footer of Classic Commerce emails.', 'woocommerce' ) . ' ' . sprintf( __( 'Available placeholders: %s', 'woocommerce' ), '{site_title}' ),
 					'id'          => 'woocommerce_email_footer_text',
 					'css'         => 'width:300px; height: 75px;',
 					'placeholder' => __( 'N/A', 'woocommerce' ),
 					'type'        => 'textarea',
-					'default'     => '{site_title}<br/>Powered by <a href="https://woocommerce.com/">WooCommerce</a>',
+					'default'     => '{site_title}<br/>Powered by <a href="https://github.com/ClassicPress-research/classic-commerce/">Classic Commerce</a>',
 					'autoload'    => false,
 					'desc_tip'    => true,
 				),
@@ -141,7 +141,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 				array(
 					'title'    => __( 'Base color', 'woocommerce' ),
 					/* translators: %s: default color */
-					'desc'     => sprintf( __( 'The base color for WooCommerce email templates. Default %s.', 'woocommerce' ), '<code>#96588a</code>' ),
+					'desc'     => sprintf( __( 'The base color for Classic Commerce email templates. Default %s.', 'woocommerce' ), '<code>#96588a</code>' ),
 					'id'       => 'woocommerce_email_base_color',
 					'type'     => 'color',
 					'css'      => 'width:6em;',
@@ -153,7 +153,7 @@ class WC_Settings_Emails extends WC_Settings_Page {
 				array(
 					'title'    => __( 'Background color', 'woocommerce' ),
 					/* translators: %s: default color */
-					'desc'     => sprintf( __( 'The background color for WooCommerce email templates. Default %s.', 'woocommerce' ), '<code>#f7f7f7</code>' ),
+					'desc'     => sprintf( __( 'The background color for Classic Commerce email templates. Default %s.', 'woocommerce' ), '<code>#f7f7f7</code>' ),
 					'id'       => 'woocommerce_email_background_color',
 					'type'     => 'color',
 					'css'      => 'width:6em;',
