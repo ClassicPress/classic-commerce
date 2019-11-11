@@ -1018,7 +1018,6 @@ function wc_format_content( $raw_string ) {
 
 /**
  * Format product short description.
- * Adds support for Jetpack Markdown.
  *
  * @codeCoverageIgnore
  * @since  WC-2.4.0
@@ -1026,19 +1025,6 @@ function wc_format_content( $raw_string ) {
  * @return string
  */
 function wc_format_product_short_description( $content ) {
-	// Add support for Jetpack Markdown.
-	if ( class_exists( 'WPCom_Markdown' ) ) {
-		$markdown = WPCom_Markdown::get_instance();
-
-		return wpautop(
-			$markdown->transform(
-				$content, array(
-					'unslash' => false,
-				)
-			)
-		);
-	}
-
 	return $content;
 }
 

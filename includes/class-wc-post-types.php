@@ -22,7 +22,6 @@ class WC_Post_Types {
 		add_action( 'init', array( __CLASS__, 'register_taxonomies' ), 5 );
 		add_action( 'init', array( __CLASS__, 'register_post_types' ), 5 );
 		add_action( 'init', array( __CLASS__, 'register_post_status' ), 9 );
-		add_action( 'init', array( __CLASS__, 'support_jetpack_omnisearch' ) );
 		add_filter( 'rest_api_allowed_post_types', array( __CLASS__, 'rest_api_allowed_post_types' ) );
 		add_action( 'woocommerce_after_register_post_type', array( __CLASS__, 'maybe_flush_rewrite_rules' ) );
 		add_action( 'woocommerce_flush_rewrite_rules', array( __CLASS__, 'flush_rewrite_rules' ) );
@@ -578,15 +577,6 @@ class WC_Post_Types {
 	 */
 	public static function gutenberg_can_edit_post_type( $can_edit, $post_type ) {
 		return 'product' === $post_type ? false : $can_edit;
-	}
-
-	/**
-	 * Add Product Support to Jetpack Omnisearch.
-	 */
-	public static function support_jetpack_omnisearch() {
-		if ( class_exists( 'Jetpack_Omnisearch_Posts' ) ) {
-			new Jetpack_Omnisearch_Posts( 'product' );
-		}
 	}
 
 	/**
