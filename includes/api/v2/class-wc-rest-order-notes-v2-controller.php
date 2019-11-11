@@ -4,8 +4,8 @@
  *
  * Handles requests to the /orders/<order_id>/notes endpoint.
  *
- * @package WooCommerce/API
- * @since   2.6.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Order Notes controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Order_Notes_V1_Controller
  */
 class WC_REST_Order_Notes_V2_Controller extends WC_REST_Order_Notes_V1_Controller {
@@ -36,7 +36,7 @@ class WC_REST_Order_Notes_V2_Controller extends WC_REST_Order_Notes_V1_Controlle
 		$order = wc_get_order( (int) $request['order_id'] );
 
 		if ( ! $order || $this->post_type !== $order->get_type() ) {
-			return new WP_Error( "woocommerce_rest_{$this->post_type}_invalid_id", __( 'Invalid order ID.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( "woocommerce_rest_{$this->post_type}_invalid_id", __( 'Invalid order ID.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$args = array(
@@ -126,30 +126,30 @@ class WC_REST_Order_Notes_V2_Controller extends WC_REST_Order_Notes_V1_Controlle
 			'type'       => 'object',
 			'properties' => array(
 				'id'               => array(
-					'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_created'     => array(
-					'description' => __( "The date the order note was created, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date the order note was created, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_created_gmt' => array(
-					'description' => __( 'The date the order note was created, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date the order note was created, as GMT.', 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'note'             => array(
-					'description' => __( 'Order note content.', 'woocommerce' ),
+					'description' => __( 'Order note content.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'customer_note'    => array(
-					'description' => __( 'If true, the note will be shown to customers and they will be notified. If false, the note will be for admin reference only.', 'woocommerce' ),
+					'description' => __( 'If true, the note will be shown to customers and they will be notified. If false, the note will be for admin reference only.', 'classic-commerce' ),
 					'type'        => 'boolean',
 					'default'     => false,
 					'context'     => array( 'view', 'edit' ),
@@ -170,7 +170,7 @@ class WC_REST_Order_Notes_V2_Controller extends WC_REST_Order_Notes_V1_Controlle
 		$params['context'] = $this->get_context_param( array( 'default' => 'view' ) );
 		$params['type']    = array(
 			'default'           => 'any',
-			'description'       => __( 'Limit result to customers or internal notes.', 'woocommerce' ),
+			'description'       => __( 'Limit result to customers or internal notes.', 'classic-commerce' ),
 			'type'              => 'string',
 			'enum'              => array( 'any', 'customer', 'internal' ),
 			'sanitize_callback' => 'sanitize_key',

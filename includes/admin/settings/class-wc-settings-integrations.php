@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Integration Settings
+ * ClassicCommerce Integration Settings
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,7 +24,7 @@ if ( ! class_exists( 'WC_Settings_Integrations', false ) ) :
 		 */
 		public function __construct() {
 			$this->id    = 'integration';
-			$this->label = __( 'Integration', 'woocommerce' );
+			$this->label = __( 'Integration', 'classic-commerce' );
 
 			if ( isset( WC()->integrations ) && WC()->integrations->get_integrations() ) {
 				parent::__construct();

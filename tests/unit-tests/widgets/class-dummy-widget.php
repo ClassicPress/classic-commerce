@@ -8,9 +8,9 @@ class Dummy_Widget extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'widget_dummy';
-		$this->widget_description = __( 'A dummy widget', 'woocommerce' );
+		$this->widget_description = __( 'A dummy widget', 'classic-commerce' );
 		$this->widget_id          = 'wc_dummy_widget';
-		$this->widget_name        = __( 'Dummy Widget', 'woocommerce' );
+		$this->widget_name        = __( 'Dummy Widget', 'classic-commerce' );
 		parent::__construct();
 	}
 

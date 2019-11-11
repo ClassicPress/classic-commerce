@@ -2,7 +2,7 @@
 /**
  * Product Search Widget.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.3.0
  */
 
@@ -18,14 +18,14 @@ class WC_Widget_Product_Search extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_product_search';
-		$this->widget_description = __( 'A search form for your store.', 'woocommerce' );
+		$this->widget_description = __( 'A search form for your store.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_product_search';
-		$this->widget_name        = __( 'Product Search', 'woocommerce' );
+		$this->widget_name        = __( 'Product Search', 'classic-commerce' );
 		$this->settings           = array(
 			'title' => array(
 				'type'  => 'text',
 				'std'   => '',
-				'label' => __( 'Title', 'woocommerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 		);
 

@@ -1,9 +1,9 @@
 <?php
 /**
- * WooCommerce Admin Settings Class
+ * ClassicCommerce Admin Settings Class
  *
- * @package  WooCommerce/Admin
- * @version  3.4.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -76,7 +76,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 			do_action( 'woocommerce_update_options_' . $current_tab );
 			do_action( 'woocommerce_update_options' );
 
-			self::add_message( __( 'Your settings have been saved.', 'woocommerce' ) );
+			self::add_message( __( 'Your settings have been saved.', 'classic-commerce' ) );
 			self::check_download_folder_protection();
 
 			// Clear any unwanted data and flush rules.
@@ -136,9 +136,9 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 
 			wp_localize_script(
 				'woocommerce_settings', 'woocommerce_settings_params', array(
-					'i18n_nav_warning' => __( 'The changes you made will be lost if you navigate away from this page.', 'woocommerce' ),
-					'i18n_moved_up'    => __( 'Item moved up', 'woocommerce' ),
-					'i18n_moved_down'  => __( 'Item moved down', 'woocommerce' ),
+					'i18n_nav_warning' => __( 'The changes you made will be lost if you navigate away from this page.', 'classic-commerce' ),
+					'i18n_moved_up'    => __( 'Item moved up', 'classic-commerce' ),
+					'i18n_moved_down'  => __( 'Item moved down', 'classic-commerce' ),
 				)
 			);
 
@@ -519,7 +519,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 
 						if ( has_filter( 'woocommerce_get_image_size_' . $image_size ) ) {
 							$disabled_attr    = 'disabled="disabled"';
-							$disabled_message = '<p><small>' . esc_html__( 'The settings of this image size have been disabled because its values are being overwritten by a filter.', 'woocommerce' ) . '</small></p>';
+							$disabled_message = '<p><small>' . esc_html__( 'The settings of this image size have been disabled because its values are being overwritten by a filter.', 'classic-commerce' ) . '</small></p>';
 						}
 
 						?>
@@ -531,7 +531,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 
 								<input name="<?php echo esc_attr( $value['id'] ); ?>[width]" <?php echo $disabled_attr; // WPCS: XSS ok. ?> id="<?php echo esc_attr( $value['id'] ); ?>-width" type="text" size="3" value="<?php echo esc_attr( $width ); ?>" /> &times; <input name="<?php echo esc_attr( $value['id'] ); ?>[height]" <?php echo $disabled_attr; // WPCS: XSS ok. ?> id="<?php echo esc_attr( $value['id'] ); ?>-height" type="text" size="3" value="<?php echo esc_attr( $height ); ?>" />px
 
-								<label><input name="<?php echo esc_attr( $value['id'] ); ?>[crop]" <?php echo $disabled_attr; // WPCS: XSS ok. ?> id="<?php echo esc_attr( $value['id'] ); ?>-crop" type="checkbox" value="1" <?php checked( 1, $crop ); ?> /> <?php esc_html_e( 'Hard crop?', 'woocommerce' ); ?></label>
+								<label><input name="<?php echo esc_attr( $value['id'] ); ?>[crop]" <?php echo $disabled_attr; // WPCS: XSS ok. ?> id="<?php echo esc_attr( $value['id'] ); ?>-crop" type="checkbox" value="1" <?php checked( 1, $crop ); ?> /> <?php esc_html_e( 'Hard crop?', 'classic-commerce' ); ?></label>
 
 								</td>
 						</tr>
@@ -562,7 +562,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 								<label><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // WPCS: XSS ok. ?></label>
 							</th>
 							<td class="forminp">
-								<?php echo str_replace( ' id=', " data-placeholder='" . esc_attr__( 'Select a page&hellip;', 'woocommerce' ) . "' style='" . $value['css'] . "' class='" . $value['class'] . "' id=", wp_dropdown_pages( $args ) ); // WPCS: XSS ok. ?> <?php echo $description; // WPCS: XSS ok. ?>
+								<?php echo str_replace( ' id=', " data-placeholder='" . esc_attr__( 'Select a page&hellip;', 'classic-commerce' ) . "' style='" . $value['css'] . "' class='" . $value['class'] . "' id=", wp_dropdown_pages( $args ) ); // WPCS: XSS ok. ?> <?php echo $description; // WPCS: XSS ok. ?>
 							</td>
 						</tr>
 						<?php
@@ -585,7 +585,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 							<th scope="row" class="titledesc">
 								<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // WPCS: XSS ok. ?></label>
 							</th>
-							<td class="forminp"><select name="<?php echo esc_attr( $value['id'] ); ?>" style="<?php echo esc_attr( $value['css'] ); ?>" data-placeholder="<?php esc_attr_e( 'Choose a country&hellip;', 'woocommerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'woocommerce' ); ?>" class="wc-enhanced-select">
+							<td class="forminp"><select name="<?php echo esc_attr( $value['id'] ); ?>" style="<?php echo esc_attr( $value['css'] ); ?>" data-placeholder="<?php esc_attr_e( 'Choose a country&hellip;', 'classic-commerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'classic-commerce' ); ?>" class="wc-enhanced-select">
 								<?php WC()->countries->country_dropdown_options( $country, $state ); ?>
 							</select> <?php echo $description; // WPCS: XSS ok. ?>
 							</td>
@@ -610,7 +610,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 								<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?> <?php echo $tooltip_html; // WPCS: XSS ok. ?></label>
 							</th>
 							<td class="forminp">
-								<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose countries&hellip;', 'woocommerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'woocommerce' ); ?>" class="wc-enhanced-select">
+								<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose countries&hellip;', 'classic-commerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'classic-commerce' ); ?>" class="wc-enhanced-select">
 									<?php
 									if ( ! empty( $countries ) ) {
 										foreach ( $countries as $key => $val ) {
@@ -618,7 +618,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 										}
 									}
 									?>
-								</select> <?php echo ( $description ) ? $description : ''; // WPCS: XSS ok. ?> <br /><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'woocommerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'woocommerce' ); ?></a>
+								</select> <?php echo ( $description ) ? $description : ''; // WPCS: XSS ok. ?> <br /><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'classic-commerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'classic-commerce' ); ?></a>
 							</td>
 						</tr>
 						<?php
@@ -627,10 +627,10 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 					// Days/months/years selector.
 					case 'relative_date_selector':
 						$periods      = array(
-							'days'   => __( 'Day(s)', 'woocommerce' ),
-							'weeks'  => __( 'Week(s)', 'woocommerce' ),
-							'months' => __( 'Month(s)', 'woocommerce' ),
-							'years'  => __( 'Year(s)', 'woocommerce' ),
+							'days'   => __( 'Day(s)', 'classic-commerce' ),
+							'weeks'  => __( 'Week(s)', 'classic-commerce' ),
+							'months' => __( 'Month(s)', 'classic-commerce' ),
+							'years'  => __( 'Year(s)', 'classic-commerce' ),
 						);
 						$option_value = wc_parse_relative_date_option( self::get_option( $value['id'], $value['default'] ) );
 						?>
@@ -795,7 +795,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 				/**
 				 * Fire an action when a certain 'type' of field is being saved.
 				 *
-				 * @deprecated 2.4.0 - doesn't allow manipulation of values!
+				 * @deprecated WC-2.4.0 - doesn't allow manipulation of values!
 				 */
 				if ( has_action( 'woocommerce_update_option_' . sanitize_title( $option['type'] ) ) ) {
 					wc_deprecated_function( 'The woocommerce_update_option_X action', '2.4.0', 'woocommerce_admin_settings_sanitize_option filter' );
@@ -839,7 +839,7 @@ if ( ! class_exists( 'WC_Admin_Settings', false ) ) :
 				/**
 				 * Fire an action before saved.
 				 *
-				 * @deprecated 2.4.0 - doesn't allow manipulation of values!
+				 * @deprecated WC-2.4.0 - doesn't allow manipulation of values!
 				 */
 				do_action( 'woocommerce_update_option', $option );
 			}

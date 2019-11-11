@@ -6,7 +6,7 @@
  *
  * This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.4.0
  */
 
@@ -20,21 +20,21 @@ class WC_Geolocation {
 	/**
 	 * GeoLite IPv4 DB.
 	 *
-	 * @deprecated 3.4.0
+	 * @deprecated WC-3.4.0
 	 */
 	const GEOLITE_DB = 'http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz';
 
 	/**
 	 * GeoLite IPv6 DB.
 	 *
-	 * @deprecated 3.4.0
+	 * @deprecated WC-3.4.0
 	 */
 	const GEOLITE_IPV6_DB = 'http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz';
 
 	/**
 	 * GeoLite2 DB.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 */
 	const GEOLITE2_DB = 'http://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz';
 
@@ -63,7 +63,7 @@ class WC_Geolocation {
 	/**
 	 * Check if server supports MaxMind GeoLite2 Reader.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @return bool
 	 */
 	private static function supports_geolite2() {
@@ -73,7 +73,7 @@ class WC_Geolocation {
 	/**
 	 * Check if geolocation is enabled.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $current_settings Current geolocation settings.
 	 * @return bool
 	 */
@@ -84,7 +84,7 @@ class WC_Geolocation {
 	/**
 	 * Prevent geolocation via MaxMind when using legacy versions of php.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param string $default_customer_address current value.
 	 * @return string
 	 */

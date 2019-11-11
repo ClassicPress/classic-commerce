@@ -2,9 +2,9 @@
 /**
  * Represents a file which can be downloaded.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -150,8 +150,8 @@ class WC_Product_Download implements ArrayAccess {
 	/**
 	 * Set previous_hash.
 	 *
-	 * @deprecated 3.3.0 No longer using filename based hashing to keep track of files.
-	 * @param string $value Previous hash.
+	 * @deprecated WC-3.3.0 No longer using filename based hashing to keep track of files.
+	 * @param      string $value Previous hash.
 	 */
 	public function set_previous_hash( $value ) {
 		wc_deprecated_function( __FUNCTION__, '3.3' );
@@ -201,8 +201,8 @@ class WC_Product_Download implements ArrayAccess {
 	/**
 	 * Get previous_hash.
 	 *
-	 * @deprecated 3.3.0 No longer using filename based hashing to keep track of files.
-	 * @return string
+	 * @deprecated WC-3.3.0 No longer using filename based hashing to keep track of files.
+	 * @return     string
 	 */
 	public function get_previous_hash() {
 		wc_deprecated_function( __FUNCTION__, '3.3' );

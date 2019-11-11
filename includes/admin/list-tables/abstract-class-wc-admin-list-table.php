@@ -2,8 +2,8 @@
 /**
  * List tables.
  *
- * @package  WooCommerce/Admin
- * @version  3.3.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -4,7 +4,7 @@
  * contain much of the same data.
  *
  * @version WC-3.0.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -64,7 +64,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	 */
 	public function get_post_title() {
 		// @codingStandardsIgnoreStart
-		return sprintf( __( 'Refund &ndash; %s', 'woocommerce' ), strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'woocommerce' ) ) );
+		return sprintf( __( 'Refund &ndash; %s', 'classic-commerce' ), strftime( _x( '%b %d, %Y @ %I:%M %p', 'Order date parsed by strftime', 'classic-commerce' ) ) );
 		// @codingStandardsIgnoreEnd
 	}
 
@@ -81,7 +81,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund reason.
 	 *
-	 * @since WC-2.2
+	 * @since  WC-2.2
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int|float
 	 */
@@ -92,7 +92,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get ID of user who did the refund.
 	 *
-	 * @since WC-3.0
+	 * @since  WC-3.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -114,7 +114,7 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get formatted refunded amount.
 	 *
-	 * @since WC-2.4
+	 * @since  WC-2.4
 	 * @return string
 	 */
 	public function get_formatted_refund_amount() {
@@ -183,9 +183,9 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Gets an refund from the database.
 	 *
-	 * @deprecated 3.0
-	 * @param int $id (default: 0).
-	 * @return bool
+	 * @deprecated WC-3.0
+	 * @param      int $id (default: 0).
+	 * @return     bool
 	 */
 	public function get_refund( $id = 0 ) {
 		wc_deprecated_function( 'get_refund', '3.0', 'read' );
@@ -207,8 +207,8 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund amount.
 	 *
-	 * @deprecated 3.0
-	 * @return int|float
+	 * @deprecated WC-3.0
+	 * @return     int|float
 	 */
 	public function get_refund_amount() {
 		wc_deprecated_function( 'get_refund_amount', '3.0', 'get_amount' );
@@ -218,8 +218,8 @@ class WC_Order_Refund extends WC_Abstract_Order {
 	/**
 	 * Get refund reason.
 	 *
-	 * @deprecated 3.0
-	 * @return int|float
+	 * @deprecated WC-3.0
+	 * @return     int|float
 	 */
 	public function get_refund_reason() {
 		wc_deprecated_function( 'get_refund_reason', '3.0', 'get_reason' );

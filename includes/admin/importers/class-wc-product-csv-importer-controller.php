@@ -2,7 +2,7 @@
 /**
  * Class WC_Product_CSV_Importer_Controller file.
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,8 +16,8 @@ if ( ! class_exists( 'WP_Importer' ) ) {
 /**
  * Product importer controller - handles file upload and forms in admin.
  *
- * @package     WooCommerce/Admin/Importers
- * @version     3.1.0
+ * @package     ClassicCommerce/Admin/Importers
+ * @version     WC-3.1.0
  */
 class WC_Product_CSV_Importer_Controller {
 
@@ -124,22 +124,22 @@ class WC_Product_CSV_Importer_Controller {
 	public function __construct() {
 		$default_steps = array(
 			'upload'  => array(
-				'name'    => __( 'Upload CSV file', 'woocommerce' ),
+				'name'    => __( 'Upload CSV file', 'classic-commerce' ),
 				'view'    => array( $this, 'upload_form' ),
 				'handler' => array( $this, 'upload_form_handler' ),
 			),
 			'mapping' => array(
-				'name'    => __( 'Column mapping', 'woocommerce' ),
+				'name'    => __( 'Column mapping', 'classic-commerce' ),
 				'view'    => array( $this, 'mapping_form' ),
 				'handler' => '',
 			),
 			'import'  => array(
-				'name'    => __( 'Import', 'woocommerce' ),
+				'name'    => __( 'Import', 'classic-commerce' ),
 				'view'    => array( $this, 'import' ),
 				'handler' => '',
 			),
 			'done'    => array(
-				'name'    => __( 'Done!', 'woocommerce' ),
+				'name'    => __( 'Done!', 'classic-commerce' ),
 				'view'    => array( $this, 'done' ),
 				'handler' => '',
 			),
@@ -311,11 +311,11 @@ class WC_Product_CSV_Importer_Controller {
 
 		if ( empty( $file_url ) ) {
 			if ( ! isset( $_FILES['import'] ) ) {
-				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_empty', __( 'File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'woocommerce' ) );
+				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_empty', __( 'File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'classic-commerce' ) );
 			}
 
 			if ( ! self::is_file_valid_csv( wc_clean( wp_unslash( $_FILES['import']['name'] ) ), false ) ) {
-				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_invalid', __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'woocommerce' ) );
+				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_invalid', __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
 			}
 
 			$overrides = array(
@@ -351,14 +351,14 @@ class WC_Product_CSV_Importer_Controller {
 			return $upload['file'];
 		} elseif ( file_exists( ABSPATH . $file_url ) ) {
 			if ( ! self::is_file_valid_csv( ABSPATH . $file_url ) ) {
-				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_invalid', __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'woocommerce' ) );
+				return new WP_Error( 'woocommerce_product_csv_importer_upload_file_invalid', __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
 			}
 
 			return ABSPATH . $file_url;
 		}
 		// phpcs:enable
 
-		return new WP_Error( 'woocommerce_product_csv_importer_upload_invalid_file', __( 'Please upload or provide the link to a valid CSV file.', 'woocommerce' ) );
+		return new WP_Error( 'woocommerce_product_csv_importer_upload_invalid_file', __( 'Please upload or provide the link to a valid CSV file.', 'classic-commerce' ) );
 	}
 
 	/**
@@ -377,11 +377,11 @@ class WC_Product_CSV_Importer_Controller {
 
 		if ( empty( $sample ) ) {
 			$this->add_error(
-				__( 'The file is empty or using a different encoding than UTF-8, please try again with a new file.', 'woocommerce' ),
+				__( 'The file is empty or using a different encoding than UTF-8, please try again with a new file.', 'classic-commerce' ),
 				array(
 					array(
 						'url'   => admin_url( 'edit.php?post_type=product&page=product_importer' ),
-						'label' => __( 'Upload a new file', 'woocommerce' ),
+						'label' => __( 'Upload a new file', 'classic-commerce' ),
 					),
 				)
 			);
@@ -399,13 +399,13 @@ class WC_Product_CSV_Importer_Controller {
 	 */
 	public function import() {
 		if ( ! self::is_file_valid_csv( $this->file ) ) {
-			$this->add_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'woocommerce' ) );
+			$this->add_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
 			$this->output_errors();
 			return;
 		}
 
 		if ( ! is_file( $this->file ) ) {
-			$this->add_error( __( 'The file does not exist, please try again.', 'woocommerce' ) );
+			$this->add_error( __( 'The file does not exist, please try again.', 'classic-commerce' ) );
 			$this->output_errors();
 			return;
 		}
@@ -492,49 +492,49 @@ class WC_Product_CSV_Importer_Controller {
 		$default_columns = $this->normalize_columns_names(
 			apply_filters(
 				'woocommerce_csv_product_import_mapping_default_columns', array(
-					__( 'ID', 'woocommerce' )             => 'id',
-					__( 'Type', 'woocommerce' )           => 'type',
-					__( 'SKU', 'woocommerce' )            => 'sku',
-					__( 'Name', 'woocommerce' )           => 'name',
-					__( 'Published', 'woocommerce' )      => 'published',
-					__( 'Is featured?', 'woocommerce' )   => 'featured',
-					__( 'Visibility in catalog', 'woocommerce' ) => 'catalog_visibility',
-					__( 'Short description', 'woocommerce' ) => 'short_description',
-					__( 'Description', 'woocommerce' )    => 'description',
-					__( 'Date sale price starts', 'woocommerce' ) => 'date_on_sale_from',
-					__( 'Date sale price ends', 'woocommerce' ) => 'date_on_sale_to',
-					__( 'Tax status', 'woocommerce' )     => 'tax_status',
-					__( 'Tax class', 'woocommerce' )      => 'tax_class',
-					__( 'In stock?', 'woocommerce' )      => 'stock_status',
-					__( 'Stock', 'woocommerce' )          => 'stock_quantity',
-					__( 'Backorders allowed?', 'woocommerce' ) => 'backorders',
-					__( 'Low stock amount', 'woocommerce' ) => 'low_stock_amount',
-					__( 'Sold individually?', 'woocommerce' ) => 'sold_individually',
+					__( 'ID', 'classic-commerce' )             => 'id',
+					__( 'Type', 'classic-commerce' )           => 'type',
+					__( 'SKU', 'classic-commerce' )            => 'sku',
+					__( 'Name', 'classic-commerce' )           => 'name',
+					__( 'Published', 'classic-commerce' )      => 'published',
+					__( 'Is featured?', 'classic-commerce' )   => 'featured',
+					__( 'Visibility in catalog', 'classic-commerce' ) => 'catalog_visibility',
+					__( 'Short description', 'classic-commerce' ) => 'short_description',
+					__( 'Description', 'classic-commerce' )    => 'description',
+					__( 'Date sale price starts', 'classic-commerce' ) => 'date_on_sale_from',
+					__( 'Date sale price ends', 'classic-commerce' ) => 'date_on_sale_to',
+					__( 'Tax status', 'classic-commerce' )     => 'tax_status',
+					__( 'Tax class', 'classic-commerce' )      => 'tax_class',
+					__( 'In stock?', 'classic-commerce' )      => 'stock_status',
+					__( 'Stock', 'classic-commerce' )          => 'stock_quantity',
+					__( 'Backorders allowed?', 'classic-commerce' ) => 'backorders',
+					__( 'Low stock amount', 'classic-commerce' ) => 'low_stock_amount',
+					__( 'Sold individually?', 'classic-commerce' ) => 'sold_individually',
 					/* translators: %s: Weight unit */
-					sprintf( __( 'Weight (%s)', 'woocommerce' ), $weight_unit ) => 'weight',
+					sprintf( __( 'Weight (%s)', 'classic-commerce' ), $weight_unit ) => 'weight',
 					/* translators: %s: Length unit */
-					sprintf( __( 'Length (%s)', 'woocommerce' ), $dimension_unit ) => 'length',
+					sprintf( __( 'Length (%s)', 'classic-commerce' ), $dimension_unit ) => 'length',
 					/* translators: %s: Width unit */
-					sprintf( __( 'Width (%s)', 'woocommerce' ), $dimension_unit ) => 'width',
+					sprintf( __( 'Width (%s)', 'classic-commerce' ), $dimension_unit ) => 'width',
 					/* translators: %s: Height unit */
-					sprintf( __( 'Height (%s)', 'woocommerce' ), $dimension_unit ) => 'height',
-					__( 'Allow customer reviews?', 'woocommerce' ) => 'reviews_allowed',
-					__( 'Purchase note', 'woocommerce' )  => 'purchase_note',
-					__( 'Sale price', 'woocommerce' )     => 'sale_price',
-					__( 'Regular price', 'woocommerce' )  => 'regular_price',
-					__( 'Categories', 'woocommerce' )     => 'category_ids',
-					__( 'Tags', 'woocommerce' )           => 'tag_ids',
-					__( 'Shipping class', 'woocommerce' ) => 'shipping_class_id',
-					__( 'Images', 'woocommerce' )         => 'images',
-					__( 'Download limit', 'woocommerce' ) => 'download_limit',
-					__( 'Download expiry days', 'woocommerce' ) => 'download_expiry',
-					__( 'Parent', 'woocommerce' )         => 'parent_id',
-					__( 'Upsells', 'woocommerce' )        => 'upsell_ids',
-					__( 'Cross-sells', 'woocommerce' )    => 'cross_sell_ids',
-					__( 'Grouped products', 'woocommerce' ) => 'grouped_products',
-					__( 'External URL', 'woocommerce' )   => 'product_url',
-					__( 'Button text', 'woocommerce' )    => 'button_text',
-					__( 'Position', 'woocommerce' )       => 'menu_order',
+					sprintf( __( 'Height (%s)', 'classic-commerce' ), $dimension_unit ) => 'height',
+					__( 'Allow customer reviews?', 'classic-commerce' ) => 'reviews_allowed',
+					__( 'Purchase note', 'classic-commerce' )  => 'purchase_note',
+					__( 'Sale price', 'classic-commerce' )     => 'sale_price',
+					__( 'Regular price', 'classic-commerce' )  => 'regular_price',
+					__( 'Categories', 'classic-commerce' )     => 'category_ids',
+					__( 'Tags', 'classic-commerce' )           => 'tag_ids',
+					__( 'Shipping class', 'classic-commerce' ) => 'shipping_class_id',
+					__( 'Images', 'classic-commerce' )         => 'images',
+					__( 'Download limit', 'classic-commerce' ) => 'download_limit',
+					__( 'Download expiry days', 'classic-commerce' ) => 'download_expiry',
+					__( 'Parent', 'classic-commerce' )         => 'parent_id',
+					__( 'Upsells', 'classic-commerce' )        => 'upsell_ids',
+					__( 'Cross-sells', 'classic-commerce' )    => 'cross_sell_ids',
+					__( 'Grouped products', 'classic-commerce' ) => 'grouped_products',
+					__( 'External URL', 'classic-commerce' )   => 'product_url',
+					__( 'Button text', 'classic-commerce' )    => 'button_text',
+					__( 'Position', 'classic-commerce' )       => 'menu_order',
 				)
 			)
 		);
@@ -545,21 +545,21 @@ class WC_Product_CSV_Importer_Controller {
 					'woocommerce_csv_product_import_mapping_special_columns',
 					array(
 						/* translators: %d: Attribute number */
-						__( 'Attribute %d name', 'woocommerce' ) => 'attributes:name',
+						__( 'Attribute %d name', 'classic-commerce' ) => 'attributes:name',
 						/* translators: %d: Attribute number */
-						__( 'Attribute %d value(s)', 'woocommerce' ) => 'attributes:value',
+						__( 'Attribute %d value(s)', 'classic-commerce' ) => 'attributes:value',
 						/* translators: %d: Attribute number */
-						__( 'Attribute %d visible', 'woocommerce' ) => 'attributes:visible',
+						__( 'Attribute %d visible', 'classic-commerce' ) => 'attributes:visible',
 						/* translators: %d: Attribute number */
-						__( 'Attribute %d global', 'woocommerce' ) => 'attributes:taxonomy',
+						__( 'Attribute %d global', 'classic-commerce' ) => 'attributes:taxonomy',
 						/* translators: %d: Attribute number */
-						__( 'Attribute %d default', 'woocommerce' ) => 'attributes:default',
+						__( 'Attribute %d default', 'classic-commerce' ) => 'attributes:default',
 						/* translators: %d: Download number */
-						__( 'Download %d name', 'woocommerce' ) => 'downloads:name',
+						__( 'Download %d name', 'classic-commerce' ) => 'downloads:name',
 						/* translators: %d: Download number */
-						__( 'Download %d URL', 'woocommerce' ) => 'downloads:url',
+						__( 'Download %d URL', 'classic-commerce' ) => 'downloads:url',
 						/* translators: %d: Meta number */
-						__( 'Meta: %s', 'woocommerce' ) => 'meta:',
+						__( 'Meta: %s', 'classic-commerce' ) => 'meta:',
 					)
 				)
 			)
@@ -651,82 +651,82 @@ class WC_Product_CSV_Importer_Controller {
 		$weight_unit    = get_option( 'woocommerce_weight_unit' );
 		$dimension_unit = get_option( 'woocommerce_dimension_unit' );
 		$options        = array(
-			'id'                 => __( 'ID', 'woocommerce' ),
-			'type'               => __( 'Type', 'woocommerce' ),
-			'sku'                => __( 'SKU', 'woocommerce' ),
-			'name'               => __( 'Name', 'woocommerce' ),
-			'published'          => __( 'Published', 'woocommerce' ),
-			'featured'           => __( 'Is featured?', 'woocommerce' ),
-			'catalog_visibility' => __( 'Visibility in catalog', 'woocommerce' ),
-			'short_description'  => __( 'Short description', 'woocommerce' ),
-			'description'        => __( 'Description', 'woocommerce' ),
+			'id'                 => __( 'ID', 'classic-commerce' ),
+			'type'               => __( 'Type', 'classic-commerce' ),
+			'sku'                => __( 'SKU', 'classic-commerce' ),
+			'name'               => __( 'Name', 'classic-commerce' ),
+			'published'          => __( 'Published', 'classic-commerce' ),
+			'featured'           => __( 'Is featured?', 'classic-commerce' ),
+			'catalog_visibility' => __( 'Visibility in catalog', 'classic-commerce' ),
+			'short_description'  => __( 'Short description', 'classic-commerce' ),
+			'description'        => __( 'Description', 'classic-commerce' ),
 			'price'              => array(
-				'name'    => __( 'Price', 'woocommerce' ),
+				'name'    => __( 'Price', 'classic-commerce' ),
 				'options' => array(
-					'regular_price'     => __( 'Regular price', 'woocommerce' ),
-					'sale_price'        => __( 'Sale price', 'woocommerce' ),
-					'date_on_sale_from' => __( 'Date sale price starts', 'woocommerce' ),
-					'date_on_sale_to'   => __( 'Date sale price ends', 'woocommerce' ),
+					'regular_price'     => __( 'Regular price', 'classic-commerce' ),
+					'sale_price'        => __( 'Sale price', 'classic-commerce' ),
+					'date_on_sale_from' => __( 'Date sale price starts', 'classic-commerce' ),
+					'date_on_sale_to'   => __( 'Date sale price ends', 'classic-commerce' ),
 				),
 			),
-			'tax_status'         => __( 'Tax status', 'woocommerce' ),
-			'tax_class'          => __( 'Tax class', 'woocommerce' ),
-			'stock_status'       => __( 'In stock?', 'woocommerce' ),
-			'stock_quantity'     => _x( 'Stock', 'Quantity in stock', 'woocommerce' ),
-			'backorders'         => __( 'Backorders allowed?', 'woocommerce' ),
-			'low_stock_amount'   => __( 'Low stock amount', 'woocommerce' ),
-			'sold_individually'  => __( 'Sold individually?', 'woocommerce' ),
+			'tax_status'         => __( 'Tax status', 'classic-commerce' ),
+			'tax_class'          => __( 'Tax class', 'classic-commerce' ),
+			'stock_status'       => __( 'In stock?', 'classic-commerce' ),
+			'stock_quantity'     => _x( 'Stock', 'Quantity in stock', 'classic-commerce' ),
+			'backorders'         => __( 'Backorders allowed?', 'classic-commerce' ),
+			'low_stock_amount'   => __( 'Low stock amount', 'classic-commerce' ),
+			'sold_individually'  => __( 'Sold individually?', 'classic-commerce' ),
 			/* translators: %s: weight unit */
-			'weight'             => sprintf( __( 'Weight (%s)', 'woocommerce' ), $weight_unit ),
+			'weight'             => sprintf( __( 'Weight (%s)', 'classic-commerce' ), $weight_unit ),
 			'dimensions'         => array(
-				'name'    => __( 'Dimensions', 'woocommerce' ),
+				'name'    => __( 'Dimensions', 'classic-commerce' ),
 				'options' => array(
 					/* translators: %s: dimension unit */
-					'length' => sprintf( __( 'Length (%s)', 'woocommerce' ), $dimension_unit ),
+					'length' => sprintf( __( 'Length (%s)', 'classic-commerce' ), $dimension_unit ),
 					/* translators: %s: dimension unit */
-					'width'  => sprintf( __( 'Width (%s)', 'woocommerce' ), $dimension_unit ),
+					'width'  => sprintf( __( 'Width (%s)', 'classic-commerce' ), $dimension_unit ),
 					/* translators: %s: dimension unit */
-					'height' => sprintf( __( 'Height (%s)', 'woocommerce' ), $dimension_unit ),
+					'height' => sprintf( __( 'Height (%s)', 'classic-commerce' ), $dimension_unit ),
 				),
 			),
-			'category_ids'       => __( 'Categories', 'woocommerce' ),
-			'tag_ids'            => __( 'Tags', 'woocommerce' ),
-			'shipping_class_id'  => __( 'Shipping class', 'woocommerce' ),
-			'images'             => __( 'Images', 'woocommerce' ),
-			'parent_id'          => __( 'Parent', 'woocommerce' ),
-			'upsell_ids'         => __( 'Upsells', 'woocommerce' ),
-			'cross_sell_ids'     => __( 'Cross-sells', 'woocommerce' ),
-			'grouped_products'   => __( 'Grouped products', 'woocommerce' ),
+			'category_ids'       => __( 'Categories', 'classic-commerce' ),
+			'tag_ids'            => __( 'Tags', 'classic-commerce' ),
+			'shipping_class_id'  => __( 'Shipping class', 'classic-commerce' ),
+			'images'             => __( 'Images', 'classic-commerce' ),
+			'parent_id'          => __( 'Parent', 'classic-commerce' ),
+			'upsell_ids'         => __( 'Upsells', 'classic-commerce' ),
+			'cross_sell_ids'     => __( 'Cross-sells', 'classic-commerce' ),
+			'grouped_products'   => __( 'Grouped products', 'classic-commerce' ),
 			'external'           => array(
-				'name'    => __( 'External product', 'woocommerce' ),
+				'name'    => __( 'External product', 'classic-commerce' ),
 				'options' => array(
-					'product_url' => __( 'External URL', 'woocommerce' ),
-					'button_text' => __( 'Button text', 'woocommerce' ),
+					'product_url' => __( 'External URL', 'classic-commerce' ),
+					'button_text' => __( 'Button text', 'classic-commerce' ),
 				),
 			),
 			'downloads'          => array(
-				'name'    => __( 'Downloads', 'woocommerce' ),
+				'name'    => __( 'Downloads', 'classic-commerce' ),
 				'options' => array(
-					'downloads:name' . $index => __( 'Download name', 'woocommerce' ),
-					'downloads:url' . $index  => __( 'Download URL', 'woocommerce' ),
-					'download_limit'          => __( 'Download limit', 'woocommerce' ),
-					'download_expiry'         => __( 'Download expiry days', 'woocommerce' ),
+					'downloads:name' . $index => __( 'Download name', 'classic-commerce' ),
+					'downloads:url' . $index  => __( 'Download URL', 'classic-commerce' ),
+					'download_limit'          => __( 'Download limit', 'classic-commerce' ),
+					'download_expiry'         => __( 'Download expiry days', 'classic-commerce' ),
 				),
 			),
 			'attributes'         => array(
-				'name'    => __( 'Attributes', 'woocommerce' ),
+				'name'    => __( 'Attributes', 'classic-commerce' ),
 				'options' => array(
-					'attributes:name' . $index     => __( 'Attribute name', 'woocommerce' ),
-					'attributes:value' . $index    => __( 'Attribute value(s)', 'woocommerce' ),
-					'attributes:taxonomy' . $index => __( 'Is a global attribute?', 'woocommerce' ),
-					'attributes:visible' . $index  => __( 'Attribute visibility', 'woocommerce' ),
-					'attributes:default' . $index  => __( 'Default attribute', 'woocommerce' ),
+					'attributes:name' . $index     => __( 'Attribute name', 'classic-commerce' ),
+					'attributes:value' . $index    => __( 'Attribute value(s)', 'classic-commerce' ),
+					'attributes:taxonomy' . $index => __( 'Is a global attribute?', 'classic-commerce' ),
+					'attributes:visible' . $index  => __( 'Attribute visibility', 'classic-commerce' ),
+					'attributes:default' . $index  => __( 'Default attribute', 'classic-commerce' ),
 				),
 			),
-			'reviews_allowed'    => __( 'Allow customer reviews?', 'woocommerce' ),
-			'purchase_note'      => __( 'Purchase note', 'woocommerce' ),
-			'meta:' . $meta      => __( 'Import as meta', 'woocommerce' ),
-			'menu_order'         => __( 'Position', 'woocommerce' ),
+			'reviews_allowed'    => __( 'Allow customer reviews?', 'classic-commerce' ),
+			'purchase_note'      => __( 'Purchase note', 'classic-commerce' ),
+			'meta:' . $meta      => __( 'Import as meta', 'classic-commerce' ),
+			'menu_order'         => __( 'Position', 'classic-commerce' ),
 		);
 
 		return apply_filters( 'woocommerce_csv_product_import_mapping_options', $options, $item );

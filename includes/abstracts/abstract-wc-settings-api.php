@@ -4,7 +4,7 @@
  *
  * Admin Settings API used by Integrations, Shipping Methods, and Payment Gateways.
  *
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -90,7 +90,7 @@ abstract class WC_Settings_API {
 	 *
 	 * Add an array of fields to be displayed on the gateway's settings screen.
 	 *
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 */
 	public function init_form_fields() {}
 
@@ -313,7 +313,7 @@ abstract class WC_Settings_API {
 	 * @param array $form_fields (default: array()) Array of form fields.
 	 * @param bool  $echo Echo or return.
 	 * @return string the html for the settings
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @uses   method_exists()
 	 */
 	public function generate_settings_html( $form_fields = array(), $echo = true ) {
@@ -400,7 +400,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_text_html( $key, $data ) {
@@ -443,7 +443,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_price_html( $key, $data ) {
@@ -486,7 +486,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_decimal_html( $key, $data ) {
@@ -529,7 +529,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_password_html( $key, $data ) {
@@ -542,7 +542,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_color_html( $key, $data ) {
@@ -586,7 +586,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_textarea_html( $key, $data ) {
@@ -629,7 +629,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_checkbox_html( $key, $data ) {
@@ -677,7 +677,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_select_html( $key, $data ) {
@@ -725,7 +725,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_multiselect_html( $key, $data ) {
@@ -771,7 +771,7 @@ abstract class WC_Settings_API {
 					</select>
 					<?php echo $this->get_description_html( $data ); // WPCS: XSS ok. ?>
 					<?php if ( $data['select_buttons'] ) : ?>
-						<br/><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'woocommerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'woocommerce' ); ?></a>
+						<br/><a class="select_all button" href="#"><?php esc_html_e( 'Select all', 'classic-commerce' ); ?></a> <a class="select_none button" href="#"><?php esc_html_e( 'Select none', 'classic-commerce' ); ?></a>
 					<?php endif; ?>
 				</fieldset>
 			</td>
@@ -786,7 +786,7 @@ abstract class WC_Settings_API {
 	 *
 	 * @param string $key Field key.
 	 * @param array  $data Field data.
-	 * @since  1.0.0
+	 * @since  WC-1.0.0
 	 * @return string
 	 */
 	public function generate_title_html( $key, $data ) {
@@ -928,7 +928,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Validate the data on the "Settings" form.
 	 *
-	 * @deprecated 2.6.0 No longer used.
+	 * @deprecated WC-2.6.0 No longer used.
 	 * @param array $form_fields Array of fields.
 	 */
 	public function validate_settings_fields( $form_fields = array() ) {
@@ -938,7 +938,7 @@ abstract class WC_Settings_API {
 	/**
 	 * Format settings if needed.
 	 *
-	 * @deprecated 2.6.0 Unused.
+	 * @deprecated WC-2.6.0 Unused.
 	 * @param  array $value Value to format.
 	 * @return array
 	 */

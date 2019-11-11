@@ -6,16 +6,12 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-attributes.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.1.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package ClassicCommerce/Templates
+ * @version WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_attributes">
 	<?php if ( $display_dimensions && $product->has_weight() ) : ?>
 		<tr>
-			<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
+			<th><?php _e( 'Weight', 'classic-commerce' ) ?></th>
 			<td class="product_weight"><?php echo esc_html( wc_format_weight( $product->get_weight() ) ); ?></td>
 		</tr>
 	<?php endif; ?>
 
 	<?php if ( $display_dimensions && $product->has_dimensions() ) : ?>
 		<tr>
-			<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+			<th><?php _e( 'Dimensions', 'classic-commerce' ) ?></th>
 			<td class="product_dimensions"><?php echo esc_html( wc_format_dimensions( $product->get_dimensions( false ) ) ); ?></td>
 		</tr>
 	<?php endif; ?>

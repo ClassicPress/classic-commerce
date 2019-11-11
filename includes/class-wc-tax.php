@@ -7,11 +7,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Performs tax calculations and loads tax rates
  *
- * @class 		WC_Tax
- * @version		2.2.0
- * @package		WooCommerce/Classes
- * @category	Class
- * @author 		WooThemes
+ * @class     WC_Tax
+ * @version   WC-2.2.0
+ * @package   ClassicCommerce/Classes
+ * @category  Class
+ * @author    WooThemes
  */
 class WC_Tax {
 
@@ -497,9 +497,9 @@ class WC_Tax {
 	/**
 	 * Alias for get_base_tax_rates().
 	 *
-	 * @deprecated 2.3
-	 * @param   string	Tax Class
-	 * @return  array
+	 * @deprecated WC-2.3
+	 * @param      string	Tax Class
+	 * @return     array
 	 */
 	public static function get_shop_base_rate( $tax_class = '' ) {
 		return self::get_base_tax_rates( $tax_class );
@@ -717,7 +717,7 @@ class WC_Tax {
 	/**
 	 * Get store tax classes as slugs.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array Array of class slugs ("reduced-rate", "zero-rate", etc).
 	 */
 	public static function get_tax_class_slugs() {
@@ -759,7 +759,7 @@ class WC_Tax {
 	 * @return string
 	 */
 	private static function format_tax_rate_name( $name ) {
-		return $name ? $name : __( 'Tax', 'woocommerce' );
+		return $name ? $name : __( 'Tax', 'classic-commerce' );
 	}
 
 	/**
@@ -817,7 +817,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param  array $tax_rate
@@ -841,7 +841,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.5.0
+	 * @since  WC-2.5.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id
@@ -864,7 +864,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id
@@ -893,7 +893,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -914,7 +914,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -936,7 +936,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param  int $tax_rate_id
@@ -956,7 +956,7 @@ class WC_Tax {
 	 *
 	 * Internal use only.
 	 *
-	 * @since WC-2.3.0
+	 * @since  WC-2.3.0
 	 * @access private
 	 *
 	 * @param int $tax_rate_id

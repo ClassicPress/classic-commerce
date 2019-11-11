@@ -2,7 +2,7 @@
 /**
  * Republic of Ireland
  *
- * @package WooCommerce/i18n
+ * @package ClassicCommerce/i18n
  * @version WC-3.0.0
  */
 
@@ -11,30 +11,30 @@ global $states;
 defined( 'ABSPATH' ) || exit;
 
 $states['IE'] = array(
-	'CW' => __( 'Carlow', 'woocommerce' ),
-	'CN' => __( 'Cavan', 'woocommerce' ),
-	'CE' => __( 'Clare', 'woocommerce' ),
-	'CO' => __( 'Cork', 'woocommerce' ),
-	'DL' => __( 'Donegal', 'woocommerce' ),
-	'D'  => __( 'Dublin', 'woocommerce' ),
-	'G'  => __( 'Galway', 'woocommerce' ),
-	'KY' => __( 'Kerry', 'woocommerce' ),
-	'KE' => __( 'Kildare', 'woocommerce' ),
-	'KK' => __( 'Kilkenny', 'woocommerce' ),
-	'LS' => __( 'Laois', 'woocommerce' ),
-	'LM' => __( 'Leitrim', 'woocommerce' ),
-	'LK' => __( 'Limerick', 'woocommerce' ),
-	'LD' => __( 'Longford', 'woocommerce' ),
-	'LH' => __( 'Louth', 'woocommerce' ),
-	'MO' => __( 'Mayo', 'woocommerce' ),
-	'MH' => __( 'Meath', 'woocommerce' ),
-	'MN' => __( 'Monaghan', 'woocommerce' ),
-	'OY' => __( 'Offaly', 'woocommerce' ),
-	'RN' => __( 'Roscommon', 'woocommerce' ),
-	'SO' => __( 'Sligo', 'woocommerce' ),
-	'TA' => __( 'Tipperary', 'woocommerce' ),
-	'WD' => __( 'Waterford', 'woocommerce' ),
-	'WH' => __( 'Westmeath', 'woocommerce' ),
-	'WX' => __( 'Wexford', 'woocommerce' ),
-	'WW' => __( 'Wicklow', 'woocommerce' ),
+	'CW' => __( 'Carlow', 'classic-commerce' ),
+	'CN' => __( 'Cavan', 'classic-commerce' ),
+	'CE' => __( 'Clare', 'classic-commerce' ),
+	'CO' => __( 'Cork', 'classic-commerce' ),
+	'DL' => __( 'Donegal', 'classic-commerce' ),
+	'D'  => __( 'Dublin', 'classic-commerce' ),
+	'G'  => __( 'Galway', 'classic-commerce' ),
+	'KY' => __( 'Kerry', 'classic-commerce' ),
+	'KE' => __( 'Kildare', 'classic-commerce' ),
+	'KK' => __( 'Kilkenny', 'classic-commerce' ),
+	'LS' => __( 'Laois', 'classic-commerce' ),
+	'LM' => __( 'Leitrim', 'classic-commerce' ),
+	'LK' => __( 'Limerick', 'classic-commerce' ),
+	'LD' => __( 'Longford', 'classic-commerce' ),
+	'LH' => __( 'Louth', 'classic-commerce' ),
+	'MO' => __( 'Mayo', 'classic-commerce' ),
+	'MH' => __( 'Meath', 'classic-commerce' ),
+	'MN' => __( 'Monaghan', 'classic-commerce' ),
+	'OY' => __( 'Offaly', 'classic-commerce' ),
+	'RN' => __( 'Roscommon', 'classic-commerce' ),
+	'SO' => __( 'Sligo', 'classic-commerce' ),
+	'TA' => __( 'Tipperary', 'classic-commerce' ),
+	'WD' => __( 'Waterford', 'classic-commerce' ),
+	'WH' => __( 'Westmeath', 'classic-commerce' ),
+	'WX' => __( 'Wexford', 'classic-commerce' ),
+	'WW' => __( 'Wicklow', 'classic-commerce' ),
 );

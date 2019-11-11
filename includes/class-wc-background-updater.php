@@ -3,7 +3,7 @@
  * Background Updater
  *
  * @version WC-2.6.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -39,7 +39,7 @@ class WC_Background_Updater extends WC_Background_Process {
 
 		if ( is_wp_error( $dispatched ) ) {
 			$logger->error(
-				sprintf( 'Unable to dispatch WooCommerce updater: %s', $dispatched->get_error_message() ),
+				sprintf( 'Unable to dispatch Classic Commerce updater: %s', $dispatched->get_error_message() ),
 				array( 'source' => 'wc_db_updates' )
 			);
 		}

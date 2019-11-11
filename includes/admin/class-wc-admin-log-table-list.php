@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Log Table List
+ * ClassicCommerce Log Table List
  *
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
- * @version  1.0.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -41,43 +41,43 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 		$levels = array(
 			array(
 				'value' => WC_Log_Levels::EMERGENCY,
-				'label' => __( 'Emergency', 'woocommerce' ),
+				'label' => __( 'Emergency', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::ALERT,
-				'label' => __( 'Alert', 'woocommerce' ),
+				'label' => __( 'Alert', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::CRITICAL,
-				'label' => __( 'Critical', 'woocommerce' ),
+				'label' => __( 'Critical', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::ERROR,
-				'label' => __( 'Error', 'woocommerce' ),
+				'label' => __( 'Error', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::WARNING,
-				'label' => __( 'Warning', 'woocommerce' ),
+				'label' => __( 'Warning', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::NOTICE,
-				'label' => __( 'Notice', 'woocommerce' ),
+				'label' => __( 'Notice', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::INFO,
-				'label' => __( 'Info', 'woocommerce' ),
+				'label' => __( 'Info', 'classic-commerce' ),
 			),
 			array(
 				'value' => WC_Log_Levels::DEBUG,
-				'label' => __( 'Debug', 'woocommerce' ),
+				'label' => __( 'Debug', 'classic-commerce' ),
 			),
 		);
 
 		$selected_level = isset( $_REQUEST['level'] ) ? $_REQUEST['level'] : '';
 		?>
-			<label for="filter-by-level" class="screen-reader-text"><?php _e( 'Filter by level', 'woocommerce' ); ?></label>
+			<label for="filter-by-level" class="screen-reader-text"><?php _e( 'Filter by level', 'classic-commerce' ); ?></label>
 			<select name="level" id="filter-by-level">
-				<option<?php selected( $selected_level, '' ); ?> value=""><?php _e( 'All levels', 'woocommerce' ); ?></option>
+				<option<?php selected( $selected_level, '' ); ?> value=""><?php _e( 'All levels', 'classic-commerce' ); ?></option>
 				<?php
 				foreach ( $levels as $l ) {
 					printf(
@@ -100,10 +100,10 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'        => '<input type="checkbox" />',
-			'timestamp' => __( 'Timestamp', 'woocommerce' ),
-			'level'     => __( 'Level', 'woocommerce' ),
-			'message'   => __( 'Message', 'woocommerce' ),
-			'source'    => __( 'Source', 'woocommerce' ),
+			'timestamp' => __( 'Timestamp', 'classic-commerce' ),
+			'level'     => __( 'Level', 'classic-commerce' ),
+			'message'   => __( 'Message', 'classic-commerce' ),
+			'source'    => __( 'Source', 'classic-commerce' ),
 		);
 	}
 
@@ -141,14 +141,14 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 	public function column_level( $log ) {
 		$level_key = WC_Log_Levels::get_severity_level( $log['level'] );
 		$levels    = array(
-			'emergency' => __( 'Emergency', 'woocommerce' ),
-			'alert'     => __( 'Alert', 'woocommerce' ),
-			'critical'  => __( 'Critical', 'woocommerce' ),
-			'error'     => __( 'Error', 'woocommerce' ),
-			'warning'   => __( 'Warning', 'woocommerce' ),
-			'notice'    => __( 'Notice', 'woocommerce' ),
-			'info'      => __( 'Info', 'woocommerce' ),
-			'debug'     => __( 'Debug', 'woocommerce' ),
+			'emergency' => __( 'Emergency', 'classic-commerce' ),
+			'alert'     => __( 'Alert', 'classic-commerce' ),
+			'critical'  => __( 'Critical', 'classic-commerce' ),
+			'error'     => __( 'Error', 'classic-commerce' ),
+			'warning'   => __( 'Warning', 'classic-commerce' ),
+			'notice'    => __( 'Notice', 'classic-commerce' ),
+			'info'      => __( 'Info', 'classic-commerce' ),
+			'debug'     => __( 'Debug', 'classic-commerce' ),
 		);
 
 		if ( ! isset( $levels[ $level_key ] ) ) {
@@ -187,7 +187,7 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 	 */
 	protected function get_bulk_actions() {
 		return array(
-			'delete' => __( 'Delete', 'woocommerce' ),
+			'delete' => __( 'Delete', 'classic-commerce' ),
 		);
 	}
 
@@ -201,7 +201,7 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 			echo '<div class="alignleft actions">';
 				$this->level_dropdown();
 				$this->source_dropdown();
-				submit_button( __( 'Filter', 'woocommerce' ), '', 'filter-action', false );
+				submit_button( __( 'Filter', 'classic-commerce' ), '', 'filter-action', false );
 			echo '</div>';
 		}
 	}
@@ -237,9 +237,9 @@ class WC_Admin_Log_Table_List extends WP_List_Table {
 		if ( ! empty( $sources ) ) {
 			$selected_source = isset( $_REQUEST['source'] ) ? $_REQUEST['source'] : '';
 			?>
-				<label for="filter-by-source" class="screen-reader-text"><?php _e( 'Filter by source', 'woocommerce' ); ?></label>
+				<label for="filter-by-source" class="screen-reader-text"><?php _e( 'Filter by source', 'classic-commerce' ); ?></label>
 				<select name="source" id="filter-by-source">
-					<option<?php selected( $selected_source, '' ); ?> value=""><?php _e( 'All sources', 'woocommerce' ); ?></option>
+					<option<?php selected( $selected_source, '' ); ?> value=""><?php _e( 'All sources', 'classic-commerce' ); ?></option>
 					<?php
 					foreach ( $sources as $s ) {
 						printf(

@@ -1,14 +1,14 @@
 <?php
 
 /**
- * WooCommerce class.
+ * ClassicCommerce class.
  *
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  */
 class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 
 	/**
-	 * WooCommerce instance.
+	 * ClassicCommerce instance.
 	 *
 	 * @var \WooCommerce instance
 	 */
@@ -30,7 +30,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	 * @since WC-2.2
 	 */
 	public function test_wc_instance() {
-		$this->assertClassHasStaticAttribute( '_instance', 'WooCommerce' );
+		$this->assertClassHasStaticAttribute( '_instance', 'classic-commerce' );
 	}
 
 	/**

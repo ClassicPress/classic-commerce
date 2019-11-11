@@ -6,8 +6,8 @@
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
- * @since    3.0.0
+ * @package  ClassicCommerce/API
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Reports controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Reports_V1_Controller extends WC_REST_Controller {
@@ -59,7 +59,7 @@ class WC_REST_Reports_V1_Controller extends WC_REST_Controller {
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'reports', 'read' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -68,18 +68,18 @@ class WC_REST_Reports_V1_Controller extends WC_REST_Controller {
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {
 		return array(
 			array(
 				'slug'        => 'sales',
-				'description' => __( 'List of sales reports.', 'woocommerce' ),
+				'description' => __( 'List of sales reports.', 'classic-commerce' ),
 			),
 			array(
 				'slug'        => 'top_sellers',
-				'description' => __( 'List of top sellers products.', 'woocommerce' ),
+				'description' => __( 'List of top sellers products.', 'classic-commerce' ),
 			),
 		);
 	}
@@ -154,13 +154,13 @@ class WC_REST_Reports_V1_Controller extends WC_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'slug' => array(
-					'description' => __( 'An alphanumeric identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'An alphanumeric identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'description' => array(
-					'description' => __( 'A human-readable description of the resource.', 'woocommerce' ),
+					'description' => __( 'A human-readable description of the resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

@@ -2,7 +2,7 @@
 /**
  * Class WC_Gateway_Paypal_PDT_Handler file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -109,9 +109,9 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 				if ( number_format( $order->get_total(), 2, '.', '' ) !== number_format( $amount, 2, '.', '' ) ) {
 					WC_Gateway_Paypal::log( 'Payment error: Amounts do not match (amt ' . $amount . ')', 'error' );
 					/* translators: 1: Payment amount */
-					$this->payment_on_hold( $order, sprintf( __( 'Validation error: PayPal amounts do not match (amt %s).', 'woocommerce' ), $amount ) );
+					$this->payment_on_hold( $order, sprintf( __( 'Validation error: PayPal amounts do not match (amt %s).', 'classic-commerce' ), $amount ) );
 				} else {
-					$this->payment_complete( $order, $transaction, __( 'PDT payment completed', 'woocommerce' ) );
+					$this->payment_complete( $order, $transaction, __( 'PDT payment completed', 'classic-commerce' ) );
 
 					// Log paypal transaction fee and payment type.
 					if ( ! empty( $transaction_result['mc_fee'] ) ) {
@@ -123,10 +123,10 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 				}
 			} else {
 				if ( 'authorization' === $transaction_result['pending_reason'] ) {
-					$this->payment_on_hold( $order, __( 'Payment authorized. Change payment status to processing or complete to capture funds.', 'woocommerce' ) );
+					$this->payment_on_hold( $order, __( 'Payment authorized. Change payment status to processing or complete to capture funds.', 'classic-commerce' ) );
 				} else {
 					/* translators: 1: Pending reason */
-					$this->payment_on_hold( $order, sprintf( __( 'Payment pending (%s).', 'woocommerce' ), $transaction_result['pending_reason'] ) );
+					$this->payment_on_hold( $order, sprintf( __( 'Payment pending (%s).', 'classic-commerce' ), $transaction_result['pending_reason'] ) );
 				}
 			}
 		} else {

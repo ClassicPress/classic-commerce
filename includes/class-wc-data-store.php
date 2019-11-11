@@ -2,8 +2,8 @@
 /**
  * WC Data Store.
  *
- * @package WooCommerce\Classes
- * @since   3.0.0
+ * @package ClassicCommerce\Classes
+ * @since   WC-3.0.0
  * @version WC-3.0.0
  */
 
@@ -92,19 +92,19 @@ class WC_Data_Store {
 			$store = apply_filters( 'woocommerce_' . $object_type . '_data_store', $this->stores[ $object_type ] );
 			if ( is_object( $store ) ) {
 				if ( ! $store instanceof WC_Object_Data_Store_Interface ) {
-					throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+					throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 				}
 				$this->current_class_name = get_class( $store );
 				$this->instance           = $store;
 			} else {
 				if ( ! class_exists( $store ) ) {
-					throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+					throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 				}
 				$this->current_class_name = $store;
 				$this->instance           = new $store();
 			}
 		} else {
-			throw new Exception( __( 'Invalid data store.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid data store.', 'classic-commerce' ) );
 		}
 	}
 
@@ -153,7 +153,7 @@ class WC_Data_Store {
 	 * Reads an object from the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function read( &$data ) {
 		$this->instance->read( $data );
@@ -163,7 +163,7 @@ class WC_Data_Store {
 	 * Create an object in the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function create( &$data ) {
 		$this->instance->create( $data );
@@ -173,7 +173,7 @@ class WC_Data_Store {
 	 * Update an object in the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 */
 	public function update( &$data ) {
 		$this->instance->update( $data );
@@ -183,7 +183,7 @@ class WC_Data_Store {
 	 * Delete an object from the data store.
 	 *
 	 * @since WC-3.0.0
-	 * @param WC_Data $data WooCommerce data instance.
+	 * @param WC_Data $data ClassicCommerce data instance.
 	 * @param array   $args Array of args to pass to the delete method.
 	 */
 	public function delete( &$data, $args = array() ) {

@@ -11,9 +11,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				array(
 					'id'          => '_purchase_note',
 					'value'       => $product_object->get_purchase_note( 'edit' ),
-					'label'       => __( 'Purchase note', 'woocommerce' ),
+					'label'       => __( 'Purchase note', 'classic-commerce' ),
 					'desc_tip'    => true,
-					'description' => __( 'Enter an optional note to send the customer after purchase.', 'woocommerce' ),
+					'description' => __( 'Enter an optional note to send the customer after purchase.', 'classic-commerce' ),
 				)
 			);
 		?>
@@ -25,9 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				array(
 					'id'                => 'menu_order',
 					'value'             => $product_object->get_menu_order( 'edit' ),
-					'label'             => __( 'Menu order', 'woocommerce' ),
+					'label'             => __( 'Menu order', 'classic-commerce' ),
 					'desc_tip'          => true,
-					'description'       => __( 'Custom ordering position.', 'woocommerce' ),
+					'description'       => __( 'Custom ordering position.', 'classic-commerce' ),
 					'type'              => 'number',
 					'custom_attributes' => array(
 						'step' => '1',
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					array(
 						'id'      => 'comment_status',
 						'value'   => $product_object->get_reviews_allowed( 'edit' ) ? 'open' : 'closed',
-						'label'   => __( 'Enable reviews', 'woocommerce' ),
+						'label'   => __( 'Enable reviews', 'classic-commerce' ),
 						'cbvalue' => 'open',
 					)
 				);

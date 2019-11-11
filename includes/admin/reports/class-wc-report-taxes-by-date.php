@@ -9,8 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin/Reports
+ * @version     WC-2.1.0
  */
 class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 
@@ -36,7 +36,7 @@ class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 			class="export_csv"
 			data-export="table"
 		>
-			<?php _e( 'Export CSV', 'woocommerce' ); ?>
+			<?php _e( 'Export CSV', 'classic-commerce' ); ?>
 		</a>
 		<?php
 	}
@@ -47,9 +47,9 @@ class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 	public function output_report() {
 
 		$ranges = array(
-			'year'       => __( 'Year', 'woocommerce' ),
-			'last_month' => __( 'Last month', 'woocommerce' ),
-			'month'      => __( 'This month', 'woocommerce' ),
+			'year'       => __( 'Year', 'classic-commerce' ),
+			'last_month' => __( 'Last month', 'classic-commerce' ),
+			'month'      => __( 'This month', 'classic-commerce' ),
 		);
 
 		$current_range = ! empty( $_GET['range'] ) ? sanitize_text_field( $_GET['range'] ) : 'last_month';
@@ -207,12 +207,12 @@ class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 		<table class="widefat">
 			<thead>
 				<tr>
-					<th><?php _e( 'Period', 'woocommerce' ); ?></th>
-					<th class="total_row"><?php _e( 'Number of orders', 'woocommerce' ); ?></th>
-					<th class="total_row"><?php _e( 'Total sales', 'woocommerce' ); ?> <?php echo wc_help_tip( __( "This is the sum of the 'Order total' field within your orders.", 'woocommerce' ) ); ?></th>
-					<th class="total_row"><?php _e( 'Total shipping', 'woocommerce' ); ?> <?php echo wc_help_tip( __( "This is the sum of the 'Shipping total' field within your orders.", 'woocommerce' ) ); ?></th>
-					<th class="total_row"><?php _e( 'Total tax', 'woocommerce' ); ?> <?php echo wc_help_tip( __( 'This is the total tax for the rate (shipping tax + product tax).', 'woocommerce' ) ); ?></th>
-					<th class="total_row"><?php _e( 'Net profit', 'woocommerce' ); ?> <?php echo wc_help_tip( __( 'Total sales minus shipping and tax.', 'woocommerce' ) ); ?></th>
+					<th><?php _e( 'Period', 'classic-commerce' ); ?></th>
+					<th class="total_row"><?php _e( 'Number of orders', 'classic-commerce' ); ?></th>
+					<th class="total_row"><?php _e( 'Total sales', 'classic-commerce' ); ?> <?php echo wc_help_tip( __( "This is the sum of the 'Order total' field within your orders.", 'classic-commerce' ) ); ?></th>
+					<th class="total_row"><?php _e( 'Total shipping', 'classic-commerce' ); ?> <?php echo wc_help_tip( __( "This is the sum of the 'Shipping total' field within your orders.", 'classic-commerce' ) ); ?></th>
+					<th class="total_row"><?php _e( 'Total tax', 'classic-commerce' ); ?> <?php echo wc_help_tip( __( 'This is the total tax for the rate (shipping tax + product tax).', 'classic-commerce' ) ); ?></th>
+					<th class="total_row"><?php _e( 'Net profit', 'classic-commerce' ); ?> <?php echo wc_help_tip( __( 'Total sales minus shipping and tax.', 'classic-commerce' ) ); ?></th>
 				</tr>
 			</thead>
 			<?php if ( ! empty( $tax_rows ) ) : ?>
@@ -242,7 +242,7 @@ class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 						$total_tax = array_sum( wp_list_pluck( (array) $tax_rows, 'tax_amount' ) ) + array_sum( wp_list_pluck( (array) $tax_rows, 'shipping_tax_amount' ) );
 					?>
 					<tr>
-						<th scope="row"><?php _e( 'Totals', 'woocommerce' ); ?></th>
+						<th scope="row"><?php _e( 'Totals', 'classic-commerce' ); ?></th>
 						<th class="total_row"><?php echo array_sum( wp_list_pluck( (array) $tax_rows, 'total_orders' ) ); ?></th>
 						<th class="total_row"><?php echo wc_price( $gross ); ?></th>
 						<th class="total_row"><?php echo wc_price( array_sum( wp_list_pluck( (array) $tax_rows, 'total_shipping' ) ) ); ?></th>
@@ -253,7 +253,7 @@ class WC_Report_Taxes_By_Date extends WC_Admin_Report {
 			<?php else : ?>
 				<tbody>
 					<tr>
-						<td><?php _e( 'No taxes found in this period', 'woocommerce' ); ?></td>
+						<td><?php _e( 'No taxes found in this period', 'classic-commerce' ); ?></td>
 					</tr>
 				</tbody>
 			<?php endif; ?>

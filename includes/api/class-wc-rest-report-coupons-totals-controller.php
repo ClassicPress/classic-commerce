@@ -4,8 +4,8 @@
  *
  * Handles requests to the /reports/coupons/count endpoint.
  *
- * @package WooCommerce/API
- * @since   3.5.0
+ * @package ClassicCommerce/API
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Reports Coupons Totals controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Reports_Controller
  */
 class WC_REST_Report_Coupons_Totals_Controller extends WC_REST_Reports_Controller {
@@ -35,7 +35,7 @@ class WC_REST_Report_Coupons_Totals_Controller extends WC_REST_Reports_Controlle
 	/**
 	 * Get reports list.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 * @return array
 	 */
 	protected function get_reports() {
@@ -118,19 +118,19 @@ class WC_REST_Report_Coupons_Totals_Controller extends WC_REST_Reports_Controlle
 			'type'       => 'object',
 			'properties' => array(
 				'slug'  => array(
-					'description' => __( 'An alphanumeric identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'An alphanumeric identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'name'  => array(
-					'description' => __( 'Coupon type name.', 'woocommerce' ),
+					'description' => __( 'Coupon type name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'total' => array(
-					'description' => __( 'Amount of coupons.', 'woocommerce' ),
+					'description' => __( 'Amount of coupons.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,

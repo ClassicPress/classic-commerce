@@ -4,8 +4,8 @@
  *
  * Handles requests to the /taxes endpoint.
  *
- * @package WooCommerce/API
- * @since   2.6.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Taxes controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Taxes_V2_Controller
  */
 class WC_REST_Taxes_Controller extends WC_REST_Taxes_V2_Controller {

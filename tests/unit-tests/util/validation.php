@@ -2,7 +2,7 @@
 
 /**
  * Class Validation.
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  * @since WC-2.3
  */
 class WC_Tests_Validation extends WC_Unit_Test_Case {

@@ -1,9 +1,9 @@
 <?php
 /**
- * Init WooCommerce data exporters.
+ * Init ClassicCommerce data exporters.
  *
- * @package     WooCommerce/Admin
- * @version     3.1.0
+ * @package     ClassicCommerce/Admin
+ * @version     WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,17 +36,17 @@ class WC_Admin_Exporters {
 		add_action( 'admin_init', array( $this, 'download_export_file' ) );
 		add_action( 'wp_ajax_woocommerce_do_ajax_product_export', array( $this, 'do_ajax_product_export' ) );
 
-		// Register WooCommerce exporters.
+		// Register ClassicCommerce exporters.
 		$this->exporters['product_exporter'] = array(
 			'menu'       => 'edit.php?post_type=product',
-			'name'       => __( 'Product Export', 'woocommerce' ),
+			'name'       => __( 'Product Export', 'classic-commerce' ),
 			'capability' => 'export',
 			'callback'   => array( $this, 'product_exporter' ),
 		);
 	}
 
 	/**
-	 * Return true if WooCommerce export is allowed for current user, false otherwise.
+	 * Return true if ClassicCommerce export is allowed for current user, false otherwise.
 	 *
 	 * @return bool Whether current user can perform export.
 	 */
@@ -126,7 +126,7 @@ class WC_Admin_Exporters {
 		check_ajax_referer( 'wc-product-export', 'security' );
 
 		if ( ! $this->export_allowed() ) {
-			wp_send_json_error( array( 'message' => __( 'Insufficient privileges to export products.', 'woocommerce' ) ) );
+			wp_send_json_error( array( 'message' => __( 'Insufficient privileges to export products.', 'classic-commerce' ) ) );
 		}
 
 		include_once WC_ABSPATH . 'includes/export/class-wc-product-csv-exporter.php';

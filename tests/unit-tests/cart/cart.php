@@ -2,7 +2,7 @@
 
 /**
  * Class Cart.
- * @package WooCommerce\Tests\Cart
+ * @package ClassicCommerce\Tests\Cart
  */
 class WC_Tests_Cart extends WC_Unit_Test_Case {
 	public function tearDown() {

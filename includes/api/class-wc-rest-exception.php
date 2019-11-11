@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce REST Exception Class
+ * ClassicCommerce REST Exception Class
  *
  * Extends Exception to provide additional data.
  *
- * @package WooCommerce/API
- * @since   2.6.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

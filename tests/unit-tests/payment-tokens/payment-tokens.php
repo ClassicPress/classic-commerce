@@ -2,7 +2,7 @@
 
 /**
  * Class Payment_Tokens
- * @package WooCommerce\Tests\Payment_Tokens
+ * @package ClassicCommerce\Tests\Payment_Tokens
  */
 class WC_Tests_Payment_Tokens extends WC_Unit_Test_Case {
 

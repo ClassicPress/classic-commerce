@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Data Exception Class
+ * ClassicCommerce Data Exception Class
  *
  * Extends Exception to provide additional data.
  *
- * @package WooCommerce\Classes
- * @since   3.0.0
+ * @package ClassicCommerce\Classes
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;

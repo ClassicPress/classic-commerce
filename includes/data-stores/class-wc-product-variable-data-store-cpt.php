@@ -2,7 +2,7 @@
 /**
  * File for WC Variable Product Data Store class.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Variable Product Data Store: Stored in CPT.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT implements WC_Object_Data_Store_Interface, WC_Product_Variable_Data_Store_Interface {
 
@@ -230,7 +230,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	 * Can be filtered by plugins which modify costs, but otherwise will include the raw meta costs unlike get_price() which runs costs through the woocommerce_get_price filter.
 	 * This is to ensure modified prices are not cached, unless intended.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product $product Product object.
 	 * @param  bool       $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
 	 * @return array of prices
@@ -353,7 +353,7 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 	 * Create unique cache key based on the tax location (affects displayed/cached prices), product version and active price filters.
 	 * DEVELOPERS should filter this hash if offering conditional pricing to keep it unique.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product $product Product object.
 	 * @param  bool       $for_display If taxes should be calculated or not.
 	 * @return string

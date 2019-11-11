@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_New_Account file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,8 +17,8 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 	 * An email sent to the customer when they create an account.
 	 *
 	 * @class       WC_Email_Customer_New_Account
-	 * @version     3.5.0
-	 * @package     WooCommerce/Classes/Emails
+	 * @version     WC-3.5.0
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Customer_New_Account extends WC_Email {
@@ -57,8 +57,8 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 		public function __construct() {
 			$this->id             = 'customer_new_account';
 			$this->customer_email = true;
-			$this->title          = __( 'New account', 'woocommerce' );
-			$this->description    = __( 'Customer "new account" emails are sent to the customer when a customer signs up via checkout or account pages.', 'woocommerce' );
+			$this->title          = __( 'New account', 'classic-commerce' );
+			$this->description    = __( 'Customer "new account" emails are sent to the customer when a customer signs up via checkout or account pages.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-new-account.php';
 			$this->template_plain = 'emails/plain/customer-new-account.php';
 
@@ -69,21 +69,21 @@ if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Your {site_title} account has been created!', 'woocommerce' );
+			return __( 'Your {site_title} account has been created!', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Welcome to {site_title}', 'woocommerce' );
+			return __( 'Welcome to {site_title}', 'classic-commerce' );
 		}
 
 		/**

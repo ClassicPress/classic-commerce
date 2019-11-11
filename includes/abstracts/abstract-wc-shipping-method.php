@@ -3,7 +3,7 @@
  * Abstract shipping method
  *
  * @class WC_Shipping_Method
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * WooCommerce Shipping Method Class.
+ * ClassicCommerce Shipping Method Class.
  *
  * Extended by shipping methods to handle shipping calculations etc.
  *
  * @class       WC_Shipping_Method
- * @version     3.0.0
- * @package     WooCommerce/Abstracts
+ * @version     WC-3.0.0
+ * @package     ClassicCommerce/Abstracts
  */
 abstract class WC_Shipping_Method extends WC_Settings_API {
 
@@ -120,7 +120,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Availability - legacy. Used for method Availability.
 	 * No longer useful for instance based shipping methods.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 * @var string
 	 */
 	public $availability;
@@ -129,7 +129,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 	 * Availability countries - legacy. Used for method Availability.
 	 * No longer useful for instance based shipping methods.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 * @var array
 	 */
 	public $countries = array();
@@ -313,7 +313,7 @@ abstract class WC_Shipping_Method extends WC_Settings_API {
 				$product            = $item['data'];
 				$items_in_package[] = $product->get_name() . ' &times; ' . $item['quantity'];
 			}
-			$rate->add_meta_data( __( 'Items', 'woocommerce' ), implode( ', ', $items_in_package ) );
+			$rate->add_meta_data( __( 'Items', 'classic-commerce' ), implode( ', ', $items_in_package ) );
 		}
 
 		$this->rates[ $args['id'] ] = apply_filters( 'woocommerce_shipping_method_add_rate', $rate, $args, $this );

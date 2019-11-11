@@ -2,7 +2,7 @@
 /**
  * Regular order
  *
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  * @version WC-2.2.0
  */
 
@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Order Class.
  *
- * These are regular WooCommerce orders, which extend the abstract order class.
+ * These are regular ClassicCommerce orders, which extend the abstract order class.
  */
 class WC_Order extends WC_Abstract_Order {
 
@@ -133,7 +133,7 @@ class WC_Order extends WC_Abstract_Order {
 					'error' => $e,
 				)
 			);
-			$this->add_order_note( __( 'Payment complete event failed.', 'woocommerce' ) . ' ' . $e->getMessage() );
+			$this->add_order_note( __( 'Payment complete event failed.', 'classic-commerce' ) . ' ' . $e->getMessage() );
 			return false;
 		}
 		return true;
@@ -170,7 +170,7 @@ class WC_Order extends WC_Abstract_Order {
 
 			if ( ! empty( $tax_string_array ) ) {
 				/* translators: %s: taxes */
-				$tax_string = ' <small class="includes_tax">' . sprintf( __( '(includes %s)', 'woocommerce' ), implode( ', ', $tax_string_array ) ) . '</small>';
+				$tax_string = ' <small class="includes_tax">' . sprintf( __( '(includes %s)', 'classic-commerce' ), implode( ', ', $tax_string_array ) ) . '</small>';
 			}
 		}
 
@@ -181,7 +181,7 @@ class WC_Order extends WC_Abstract_Order {
 		}
 
 		/**
-		 * Filter WooCommerce formatted order total.
+		 * Filter ClassicCommerce formatted order total.
 		 *
 		 * @param string   $formatted_total  Total to display.
 		 * @param WC_Order $order            Order data.
@@ -236,7 +236,7 @@ class WC_Order extends WC_Abstract_Order {
 					'error' => $e,
 				)
 			);
-			$this->add_order_note( __( 'Error saving order.', 'woocommerce' ) . ' ' . $e->getMessage() );
+			$this->add_order_note( __( 'Error saving order.', 'classic-commerce' ) . ' ' . $e->getMessage() );
 		}
 
 		return $this->get_id();
@@ -330,7 +330,7 @@ class WC_Order extends WC_Abstract_Order {
 					'error' => $e,
 				)
 			);
-			$this->add_order_note( __( 'Update status event failed.', 'woocommerce' ) . ' ' . $e->getMessage() );
+			$this->add_order_note( __( 'Update status event failed.', 'classic-commerce' ) . ' ' . $e->getMessage() );
 			return false;
 		}
 		return true;
@@ -351,13 +351,13 @@ class WC_Order extends WC_Abstract_Order {
 
 				if ( ! empty( $status_transition['from'] ) ) {
 					/* translators: 1: old order status 2: new order status */
-					$transition_note = sprintf( __( 'Order status changed from %1$s to %2$s.', 'woocommerce' ), wc_get_order_status_name( $status_transition['from'] ), wc_get_order_status_name( $status_transition['to'] ) );
+					$transition_note = sprintf( __( 'Order status changed from %1$s to %2$s.', 'classic-commerce' ), wc_get_order_status_name( $status_transition['from'] ), wc_get_order_status_name( $status_transition['to'] ) );
 
 					do_action( 'woocommerce_order_status_' . $status_transition['from'] . '_to_' . $status_transition['to'], $this->get_id(), $this );
 					do_action( 'woocommerce_order_status_changed', $this->get_id(), $status_transition['from'], $status_transition['to'], $this );
 				} else {
 					/* translators: %s: new order status */
-					$transition_note = sprintf( __( 'Order status set to %s.', 'woocommerce' ), wc_get_order_status_name( $status_transition['to'] ) );
+					$transition_note = sprintf( __( 'Order status set to %s.', 'classic-commerce' ), wc_get_order_status_name( $status_transition['to'] ) );
 				}
 
 				// Note the transition occurred.
@@ -370,7 +370,7 @@ class WC_Order extends WC_Abstract_Order {
 						'error' => $e,
 					)
 				);
-				$this->add_order_note( __( 'Error during status transition.', 'woocommerce' ) . ' ' . $e->getMessage() );
+				$this->add_order_note( __( 'Error during status transition.', 'classic-commerce' ) . ' ' . $e->getMessage() );
 			}
 		}
 	}
@@ -439,7 +439,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get order key.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -479,7 +479,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Gets a prop for a getter method.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $prop Name of prop to get.
 	 * @param  string $address billing or shipping.
 	 * @param  string $context What the value is for. Valid values are view and edit.
@@ -808,7 +808,7 @@ class WC_Order extends WC_Abstract_Order {
 	 * Returns the requested address in raw, non-formatted way.
 	 * Note: Merges raw data with get_prop data so changes are returned too.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  string $type Billing or shipping. Anything else besides 'billing' will return shipping address.
 	 * @return array The stored address after filter.
 	 */
@@ -839,7 +839,7 @@ class WC_Order extends WC_Abstract_Order {
 	 */
 	public function get_formatted_billing_full_name() {
 		/* translators: 1: first name 2: last name */
-		return sprintf( _x( '%1$s %2$s', 'full name', 'woocommerce' ), $this->get_billing_first_name(), $this->get_billing_last_name() );
+		return sprintf( _x( '%1$s %2$s', 'full name', 'classic-commerce' ), $this->get_billing_first_name(), $this->get_billing_last_name() );
 	}
 
 	/**
@@ -849,7 +849,7 @@ class WC_Order extends WC_Abstract_Order {
 	 */
 	public function get_formatted_shipping_full_name() {
 		/* translators: 1: first name 2: last name */
-		return sprintf( _x( '%1$s %2$s', 'full name', 'woocommerce' ), $this->get_shipping_first_name(), $this->get_shipping_last_name() );
+		return sprintf( _x( '%1$s %2$s', 'full name', 'classic-commerce' ), $this->get_shipping_first_name(), $this->get_shipping_last_name() );
 	}
 
 	/**
@@ -885,7 +885,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Returns true if the order has a billing address.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @return boolean
 	 */
 	public function has_billing_address() {
@@ -895,7 +895,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Returns true if the order has a shipping address.
 	 *
-	 * @since  3.0.4
+	 * @since  WC-3.0.4
 	 * @return boolean
 	 */
 	public function has_shipping_address() {
@@ -1066,7 +1066,7 @@ class WC_Order extends WC_Abstract_Order {
 	 */
 	public function set_billing_email( $value ) {
 		if ( $value && ! is_email( $value ) ) {
-			$this->error( 'order_invalid_billing_email', __( 'Invalid billing email address', 'woocommerce' ) );
+			$this->error( 'order_invalid_billing_email', __( 'Invalid billing email address', 'classic-commerce' ) );
 		}
 		$this->set_address_prop( 'email', 'billing', sanitize_email( $value ) );
 	}
@@ -1383,7 +1383,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get downloads from all line items for this order.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	public function get_downloadable_items() {
@@ -1629,8 +1629,8 @@ class WC_Order extends WC_Abstract_Order {
 			$comment_author       = $user->display_name;
 			$comment_author_email = $user->user_email;
 		} else {
-			$comment_author        = __( 'WooCommerce', 'woocommerce' );
-			$comment_author_email  = strtolower( __( 'WooCommerce', 'woocommerce' ) ) . '@';
+			$comment_author        = __( 'WooCommerce', 'classic-commerce' );
+			$comment_author_email  = strtolower( __( 'WooCommerce', 'classic-commerce' ) ) . '@';
 			$comment_author_email .= isset( $_SERVER['HTTP_HOST'] ) ? str_replace( 'www.', '', sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ) : 'noreply.com'; // WPCS: input var ok.
 			$comment_author_email  = sanitize_email( $comment_author_email );
 		}
@@ -1756,7 +1756,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total tax refunded.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @return float
 	 */
 	public function get_total_tax_refunded() {
@@ -1777,7 +1777,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total shipping refunded.
 	 *
-	 * @since  2.4
+	 * @since  WC-2.4
 	 * @return float
 	 */
 	public function get_total_shipping_refunded() {
@@ -1798,7 +1798,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Gets the count of order items of a certain type that have been refunded.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param string $item_type Item type.
 	 * @return string
 	 */
@@ -1823,7 +1823,7 @@ class WC_Order extends WC_Abstract_Order {
 	/**
 	 * Get the total number of items refunded.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 *
 	 * @param  string $item_type Type of the item we're checking, if not a line_item.
 	 * @return int
@@ -1945,7 +1945,7 @@ class WC_Order extends WC_Abstract_Order {
 	protected function add_order_item_totals_payment_method_row( &$total_rows, $tax_display ) {
 		if ( $this->get_total() > 0 && $this->get_payment_method_title() ) {
 			$total_rows['payment_method'] = array(
-				'label' => __( 'Payment method:', 'woocommerce' ),
+				'label' => __( 'Payment method:', 'classic-commerce' ),
 				'value' => $this->get_payment_method_title(),
 			);
 		}
@@ -1962,7 +1962,7 @@ class WC_Order extends WC_Abstract_Order {
 		if ( $refunds ) {
 			foreach ( $refunds as $id => $refund ) {
 				$total_rows[ 'refund_' . $id ] = array(
-					'label' => $refund->get_reason() ? $refund->get_reason() : __( 'Refund', 'woocommerce' ) . ':',
+					'label' => $refund->get_reason() ? $refund->get_reason() : __( 'Refund', 'classic-commerce' ) . ':',
 					'value' => wc_price( '-' . $refund->get_amount(), array( 'currency' => $this->get_currency() ) ),
 				);
 			}

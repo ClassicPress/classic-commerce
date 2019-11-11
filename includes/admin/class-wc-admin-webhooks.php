@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Admin Webhooks Class
+ * ClassicCommerce Admin Webhooks Class
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-3.3.0
  */
 
@@ -53,7 +53,7 @@ class WC_Admin_Webhooks {
 		check_admin_referer( 'woocommerce-settings' );
 
 		if ( ! current_user_can( 'manage_woocommerce' ) ) {
-			wp_die( esc_html__( 'You do not have permission to update Webhooks', 'woocommerce' ) );
+			wp_die( esc_html__( 'You do not have permission to update Webhooks', 'classic-commerce' ) );
 		}
 
 		$errors     = array();
@@ -66,9 +66,9 @@ class WC_Admin_Webhooks {
 		} else {
 			$name = sprintf(
 				/* translators: %s: date */
-				__( 'Webhook created on %s', 'woocommerce' ),
+				__( 'Webhook created on %s', 'classic-commerce' ),
 				// @codingStandardsIgnoreStart
-				strftime( _x( '%b %d, %Y @ %I:%M %p', 'Webhook created on date parsed by strftime', 'woocommerce' ) )
+				strftime( _x( '%b %d, %Y @ %I:%M %p', 'Webhook created on date parsed by strftime', 'classic-commerce' ) )
 				// @codingStandardsIgnoreEnd
 			);
 		}
@@ -114,7 +114,7 @@ class WC_Admin_Webhooks {
 			if ( wc_is_webhook_valid_topic( $topic ) ) {
 				$webhook->set_topic( $topic );
 			} else {
-				$errors[] = __( 'Webhook topic unknown. Please select a valid topic.', 'woocommerce' );
+				$errors[] = __( 'Webhook topic unknown. Please select a valid topic.', 'classic-commerce' );
 			}
 		}
 
@@ -223,15 +223,15 @@ class WC_Admin_Webhooks {
 			$deleted = absint( $_GET['deleted'] ); // WPCS: input var okay, CSRF ok.
 
 			/* translators: %d: count */
-			WC_Admin_Settings::add_message( sprintf( _n( '%d webhook permanently deleted.', '%d webhooks permanently deleted.', $deleted, 'woocommerce' ), $deleted ) );
+			WC_Admin_Settings::add_message( sprintf( _n( '%d webhook permanently deleted.', '%d webhooks permanently deleted.', $deleted, 'classic-commerce' ), $deleted ) );
 		}
 
 		if ( isset( $_GET['updated'] ) ) { // WPCS: input var okay, CSRF ok.
-			WC_Admin_Settings::add_message( __( 'Webhook updated successfully.', 'woocommerce' ) );
+			WC_Admin_Settings::add_message( __( 'Webhook updated successfully.', 'classic-commerce' ) );
 		}
 
 		if ( isset( $_GET['created'] ) ) { // WPCS: input var okay, CSRF ok.
-			WC_Admin_Settings::add_message( __( 'Webhook created successfully.', 'woocommerce' ) );
+			WC_Admin_Settings::add_message( __( 'Webhook created successfully.', 'classic-commerce' ) );
 		}
 
 		if ( isset( $_GET['error'] ) ) { // WPCS: input var okay, CSRF ok.
@@ -267,7 +267,7 @@ class WC_Admin_Webhooks {
 	private static function table_list_output() {
 		global $webhooks_table_list;
 
-		echo '<h2>' . esc_html__( 'Webhooks', 'woocommerce' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=0' ) ) . '" class="add-new-h2">' . esc_html__( 'Add webhook', 'woocommerce' ) . '</a></h2>';
+		echo '<h2>' . esc_html__( 'Webhooks', 'classic-commerce' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=0' ) ) . '" class="add-new-h2">' . esc_html__( 'Add webhook', 'classic-commerce' ) . '</a></h2>';
 
 		// Get the webhooks count.
 		$data_store = WC_Data_Store::load( 'webhook' );
@@ -282,13 +282,13 @@ class WC_Admin_Webhooks {
 			echo '<input type="hidden" name="section" value="webhooks" />';
 
 			$webhooks_table_list->views();
-			$webhooks_table_list->search_box( __( 'Search webhooks', 'woocommerce' ), 'webhook' );
+			$webhooks_table_list->search_box( __( 'Search webhooks', 'classic-commerce' ), 'webhook' );
 			$webhooks_table_list->display();
 		} else {
 			echo '<div class="woocommerce-BlankState woocommerce-BlankState--webhooks">';
 			?>
-			<h2 class="woocommerce-BlankState-message"><?php esc_html_e( 'Webhooks are event notifications sent to URLs of your choice. They can be used to integrate with third-party services which support them.', 'woocommerce' ); ?></h2>
-			<a class="woocommerce-BlankState-cta button-primary button" href="<?php echo esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=0' ) ); ?>"><?php esc_html_e( 'Create a new webhook', 'woocommerce' ); ?></a>
+			<h2 class="woocommerce-BlankState-message"><?php esc_html_e( 'Webhooks are event notifications sent to URLs of your choice. They can be used to integrate with third-party services which support them.', 'classic-commerce' ); ?></h2>
+			<a class="woocommerce-BlankState-cta button-primary button" href="<?php echo esc_url( admin_url( 'admin.php?page=wc-settings&tab=advanced&section=webhooks&edit-webhook=0' ) ); ?>"><?php esc_html_e( 'Create a new webhook', 'classic-commerce' ); ?></a>
 			<style type="text/css">#posts-filter .wp-list-table, #posts-filter .tablenav.top, .tablenav.bottom .actions { display: none; }</style>
 			<?php
 		}
@@ -297,8 +297,8 @@ class WC_Admin_Webhooks {
 	/**
 	 * Logs output.
 	 *
-	 * @deprecated 3.3.0
-	 * @param WC_Webhook $webhook Deprecated.
+	 * @deprecated WC-3.3.0
+	 * @param      WC_Webhook $webhook Deprecated.
 	 */
 	public static function logs_output( $webhook = 'deprecated' ) {
 		wc_deprecated_function( 'WC_Admin_Webhooks::logs_output', '3.3' );
@@ -336,9 +336,9 @@ class WC_Admin_Webhooks {
 	/**
 	 * Get the logs navigation.
 	 *
-	 * @deprecated 3.3.0
-	 * @param int        $total Deprecated.
-	 * @param WC_Webhook $webhook Deprecated.
+	 * @deprecated WC-3.3.0
+	 * @param      int        $total Deprecated.
+	 * @param      WC_Webhook $webhook Deprecated.
 	 */
 	public static function get_logs_navigation( $total, $webhook ) {
 		wc_deprecated_function( 'WC_Admin_Webhooks::get_logs_navigation', '3.3' );

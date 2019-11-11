@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Tax Settings
+ * ClassicCommerce Tax Settings
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ class WC_Settings_Tax extends WC_Settings_Page {
 	 */
 	public function __construct() {
 		$this->id    = 'tax';
-		$this->label = __( 'Tax', 'woocommerce' );
+		$this->label = __( 'Tax', 'classic-commerce' );
 
 		add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_settings_page' ), 20 );
 
@@ -58,15 +58,15 @@ class WC_Settings_Tax extends WC_Settings_Page {
 	 */
 	public function get_sections() {
 		$sections = array(
-			''         => __( 'Tax options', 'woocommerce' ),
-			'standard' => __( 'Standard rates', 'woocommerce' ),
+			''         => __( 'Tax options', 'classic-commerce' ),
+			'standard' => __( 'Standard rates', 'classic-commerce' ),
 		);
 
 		// Get tax classes and display as links.
 		$tax_classes = WC_Tax::get_tax_classes();
 
 		foreach ( $tax_classes as $class ) {
-			$sections[ sanitize_title( $class ) ] = sprintf( __( '%s rates', 'woocommerce' ), $class );
+			$sections[ sanitize_title( $class ) ] = sprintf( __( '%s rates', 'classic-commerce' ), $class );
 		}
 
 		return apply_filters( 'woocommerce_get_sections_' . $this->id, $sections );
@@ -187,19 +187,19 @@ class WC_Settings_Tax extends WC_Settings_Page {
 					'tax_rate_class'    => $current_class,
 				),
 				'strings'       => array(
-					'no_rows_selected'        => __( 'No row(s) selected', 'woocommerce' ),
-					'unload_confirmation_msg' => __( 'Your changed data will be lost if you leave this page without saving.', 'woocommerce' ),
+					'no_rows_selected'        => __( 'No row(s) selected', 'classic-commerce' ),
+					'unload_confirmation_msg' => __( 'Your changed data will be lost if you leave this page without saving.', 'classic-commerce' ),
 					'csv_data_cols'           => array(
-						__( 'Country code', 'woocommerce' ),
-						__( 'State code', 'woocommerce' ),
-						__( 'Postcode / ZIP', 'woocommerce' ),
-						__( 'City', 'woocommerce' ),
-						__( 'Rate %', 'woocommerce' ),
-						__( 'Tax name', 'woocommerce' ),
-						__( 'Priority', 'woocommerce' ),
-						__( 'Compound', 'woocommerce' ),
-						__( 'Shipping', 'woocommerce' ),
-						__( 'Tax class', 'woocommerce' ),
+						__( 'Country code', 'classic-commerce' ),
+						__( 'State code', 'classic-commerce' ),
+						__( 'Postcode / ZIP', 'classic-commerce' ),
+						__( 'City', 'classic-commerce' ),
+						__( 'Rate %', 'classic-commerce' ),
+						__( 'Tax name', 'classic-commerce' ),
+						__( 'Priority', 'classic-commerce' ),
+						__( 'Compound', 'classic-commerce' ),
+						__( 'Shipping', 'classic-commerce' ),
+						__( 'Tax class', 'classic-commerce' ),
 					),
 				),
 			)

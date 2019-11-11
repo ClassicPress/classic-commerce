@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_Processing_Order file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,8 +17,8 @@ if ( ! class_exists( 'WC_Email_Customer_Processing_Order', false ) ) :
 	 * An email sent to the customer when a new order is paid for.
 	 *
 	 * @class       WC_Email_Customer_Processing_Order
-	 * @version     3.5.0
-	 * @package     WooCommerce/Classes/Emails
+	 * @version     WC-3.5.0
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Customer_Processing_Order extends WC_Email {
@@ -30,8 +30,8 @@ if ( ! class_exists( 'WC_Email_Customer_Processing_Order', false ) ) :
 			$this->id             = 'customer_processing_order';
 			$this->customer_email = true;
 
-			$this->title          = __( 'Processing order', 'woocommerce' );
-			$this->description    = __( 'This is an order notification sent to customers containing order details after payment.', 'woocommerce' );
+			$this->title          = __( 'Processing order', 'classic-commerce' );
+			$this->description    = __( 'This is an order notification sent to customers containing order details after payment.', 'classic-commerce' );
 			$this->template_html  = 'emails/customer-processing-order.php';
 			$this->template_plain = 'emails/plain/customer-processing-order.php';
 			$this->placeholders   = array(
@@ -53,21 +53,21 @@ if ( ! class_exists( 'WC_Email_Customer_Processing_Order', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Payment received for your order', 'woocommerce' );
+			return __( 'Payment received for your order', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Thank you for your payment', 'woocommerce' );
+			return __( 'Thank you for your payment', 'classic-commerce' );
 		}
 
 		/**

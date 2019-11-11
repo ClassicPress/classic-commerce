@@ -1,13 +1,13 @@
 <?php
 /**
- * WooCommerce API Exception Class
+ * ClassicCommerce API Exception Class
  *
  * Extends Exception to provide additional data
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
- * @since       2.2
+ * @package     ClassicCommerce/API
+ * @since       WC-2.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

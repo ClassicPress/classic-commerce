@@ -2,9 +2,9 @@
 /**
  * Order cleanup background process.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.4.0
- * @since   3.4.0
+ * @since   WC-3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

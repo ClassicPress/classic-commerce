@@ -2,7 +2,7 @@
 /**
  * Class WC_Product_Grouped_Data_Store_CPT file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Grouped Product Data Store: Stored in CPT.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Product_Grouped_Data_Store_CPT extends WC_Product_Data_Store_CPT implements WC_Object_Data_Store_Interface {
 
@@ -44,7 +44,7 @@ class WC_Product_Grouped_Data_Store_CPT extends WC_Product_Data_Store_CPT implem
 	/**
 	 * Handle updated meta props after updating meta data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product $product Product object.
 	 */
 	protected function handle_updated_props( &$product ) {

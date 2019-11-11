@@ -3,7 +3,7 @@
  * Order Refund Data Store Interface
  *
  * @version WC-3.0.0
- * @package WooCommerce/Interface
+ * @package ClassicCommerce/Interface
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined by order store classes.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 interface WC_Order_Refund_Data_Store_Interface {
 }

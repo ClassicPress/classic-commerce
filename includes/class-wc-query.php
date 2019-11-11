@@ -1,9 +1,9 @@
 <?php
 /**
- * Contains the query functions for WooCommerce which alter the front-end post queries and loops
+ * Contains the query functions for ClassicCommerce which alter the front-end post queries and loops
  *
  * @version WC-3.2.0
- * @package WooCommerce\Classes
+ * @package ClassicCommerce\Classes
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -96,41 +96,41 @@ class WC_Query {
 
 		switch ( $endpoint ) {
 			case 'order-pay':
-				$title = __( 'Pay for order', 'woocommerce' );
+				$title = __( 'Pay for order', 'classic-commerce' );
 				break;
 			case 'order-received':
-				$title = __( 'Order received', 'woocommerce' );
+				$title = __( 'Order received', 'classic-commerce' );
 				break;
 			case 'orders':
 				if ( ! empty( $wp->query_vars['orders'] ) ) {
 					/* translators: %s: page */
-					$title = sprintf( __( 'Orders (page %d)', 'woocommerce' ), intval( $wp->query_vars['orders'] ) );
+					$title = sprintf( __( 'Orders (page %d)', 'classic-commerce' ), intval( $wp->query_vars['orders'] ) );
 				} else {
-					$title = __( 'Orders', 'woocommerce' );
+					$title = __( 'Orders', 'classic-commerce' );
 				}
 				break;
 			case 'view-order':
 				$order = wc_get_order( $wp->query_vars['view-order'] );
 				/* translators: %s: order number */
-				$title = ( $order ) ? sprintf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ) : '';
+				$title = ( $order ) ? sprintf( __( 'Order #%s', 'classic-commerce' ), $order->get_order_number() ) : '';
 				break;
 			case 'downloads':
-				$title = __( 'Downloads', 'woocommerce' );
+				$title = __( 'Downloads', 'classic-commerce' );
 				break;
 			case 'edit-account':
-				$title = __( 'Account details', 'woocommerce' );
+				$title = __( 'Account details', 'classic-commerce' );
 				break;
 			case 'edit-address':
-				$title = __( 'Addresses', 'woocommerce' );
+				$title = __( 'Addresses', 'classic-commerce' );
 				break;
 			case 'payment-methods':
-				$title = __( 'Payment methods', 'woocommerce' );
+				$title = __( 'Payment methods', 'classic-commerce' );
 				break;
 			case 'add-payment-method':
-				$title = __( 'Add payment method', 'woocommerce' );
+				$title = __( 'Add payment method', 'classic-commerce' );
 				break;
 			case 'lost-password':
-				$title = __( 'Lost password', 'woocommerce' );
+				$title = __( 'Lost password', 'classic-commerce' );
 				break;
 			default:
 				$title = '';
@@ -143,7 +143,7 @@ class WC_Query {
 	/**
 	 * Endpoint mask describing the places the endpoint should be added.
 	 *
-	 * @since WC-2.6.2
+	 * @since  WC-2.6.2
 	 * @return int
 	 */
 	public function get_endpoints_mask() {
@@ -340,7 +340,7 @@ class WC_Query {
 	}
 
 	/**
-	 * Pre_get_posts above may adjust the main query to add WooCommerce logic. When this query is done, we need to ensure
+	 * Pre_get_posts above may adjust the main query to add ClassicCommerce logic. When this query is done, we need to ensure
 	 * all custom filters are removed.
 	 *
 	 * This is done here during the_posts filter. The input is not changed.
@@ -794,9 +794,9 @@ class WC_Query {
 	/**
 	 * Order by rating post clauses.
 	 *
-	 * @deprecated 3.0.0
-	 * @param array $args
-	 * @return array
+	 * @deprecated WC-3.0.0
+	 * @param      array $args
+	 * @return     array
 	 */
 	public function order_by_rating_post_clauses( $args ) {
 		global $wpdb;
@@ -818,8 +818,8 @@ class WC_Query {
 	/**
 	 * Return a meta query for filtering by rating.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @return     array
 	 */
 	public function rating_filter_meta_query() {
 		return array();
@@ -828,9 +828,9 @@ class WC_Query {
 	/**
 	 * Returns a meta query to handle product visibility.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @param string $compare (default: 'IN')
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @param      string $compare (default: 'IN')
+	 * @return     array
 	 */
 	public function visibility_meta_query( $compare = 'IN' ) {
 		return array();
@@ -839,9 +839,9 @@ class WC_Query {
 	/**
 	 * Returns a meta query to handle product stock status.
 	 *
-	 * @deprecated 3.0.0 Replaced with taxonomy.
-	 * @param string $status (default: 'instock')
-	 * @return array
+	 * @deprecated WC-3.0.0 Replaced with taxonomy.
+	 * @param      string $status (default: 'instock')
+	 * @return     array
 	 */
 	public function stock_status_meta_query( $status = 'instock' ) {
 		return array();
@@ -850,7 +850,7 @@ class WC_Query {
 	/**
 	 * Layered nav init.
 	 *
-	 * @deprecated 2.6.0
+	 * @deprecated WC-2.6.0
 	 */
 	public function layered_nav_init() {
 		wc_deprecated_function( 'layered_nav_init', '2.6' );
@@ -859,7 +859,7 @@ class WC_Query {
 	/**
 	 * Get an unpaginated list all product IDs (both filtered and unfiltered). Makes use of transients.
 	 *
-	 * @deprecated 2.6.0 due to performance concerns
+	 * @deprecated WC-2.6.0 due to performance concerns
 	 */
 	public function get_products_in_view() {
 		wc_deprecated_function( 'get_products_in_view', '2.6' );
@@ -868,7 +868,7 @@ class WC_Query {
 	/**
 	 * Layered Nav post filter.
 	 *
-	 * @deprecated 2.6.0 due to performance concerns
+	 * @deprecated WC-2.6.0 due to performance concerns
 	 *
 	 * @param mixed $deprecated Deprecated.
 	 */
@@ -879,7 +879,7 @@ class WC_Query {
 	/**
 	 * Search post excerpt.
 	 *
-	 * @deprecated 3.2.0 - Not needed anymore since WordPress 4.5.
+	 * @deprecated WC-3.2.0 - Not needed anymore since WordPress 4.5.
 	 */
 	public function search_post_excerpt( $where = '' ) {
 		wc_deprecated_function( 'WC_Query::search_post_excerpt', '3.2.0', 'Excerpt added to search query by default since WordPress 4.5.' );
@@ -888,7 +888,7 @@ class WC_Query {
 
 	/**
 	 * Remove the posts_where filter.
-	 * @deprecated 3.2.0 - Nothing to remove anymore because search_post_excerpt() is deprecated.
+	 * @deprecated WC-3.2.0 - Nothing to remove anymore because search_post_excerpt() is deprecated.
 	 */
 	public function remove_posts_where() {
 		wc_deprecated_function( 'WC_Query::remove_posts_where', '3.2.0', 'Nothing to remove anymore because search_post_excerpt() is deprecated.' );

@@ -2,13 +2,13 @@
 /**
  * Class WC_Tests_REST_System_Status file.
  *
- * @package WooCommerce/Tests
+ * @package ClassicCommerce/Tests
  */
 
 /**
  * System Status REST Tests.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
@@ -218,72 +218,6 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 		$this->assertArrayHasKey( 'settings', $properties );
 		$this->assertArrayHasKey( 'security', $properties );
 		$this->assertArrayHasKey( 'pages', $properties );
-	}
-
-	/**
-	 * Test to make sure get_items (all tools) response is correct.
-	 *
-	 * @since 3.5.0
-	 */
-	public function test_get_system_tools() {
-		wp_set_current_user( $this->user );
-
-		$tools_controller = new WC_REST_System_Status_Tools_Controller();
-		$raw_tools        = $tools_controller->get_tools();
-
-		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/system_status/tools' ) );
-		$data     = $response->get_data();
-
-		$this->assertEquals( 200, $response->get_status() );
-		$this->assertEquals( count( $raw_tools ), count( $data ) );
-		$this->assertContains(
-			array(
-				'id'          => 'reset_tracking',
-				'name'        => 'Reset usage tracking',
-				'action'      => 'Reset',
-				'description' => 'This will reset your usage tracking settings, causing it to show the opt-in banner again and not sending any data.',
-				'_links'      => array(
-					'item' => array(
-						array(
-							'href'       => rest_url( '/wc/v3/system_status/tools/reset_tracking' ),
-							'embeddable' => true,
-						),
-					),
-				),
-			),
-			$data
-		);
-
-		$query_params = array(
-			'_fields' => 'id,name,nonexisting',
-		);
-		$request      = new WP_REST_Request( 'GET', '/wc/v3/system_status/tools' );
-		$request->set_query_params( $query_params );
-		$response = $this->server->dispatch( $request );
-		$data     = $response->get_data();
-
-		$this->assertEquals( 200, $response->get_status() );
-		$this->assertEquals( count( $raw_tools ), count( $data ) );
-		$this->assertContains(
-			array(
-				'id'   => 'reset_tracking',
-				'name' => 'Reset usage tracking',
-			),
-			$data
-		);
-		foreach ( $data as $item ) {
-			// Fields that are not requested are not returned in response.
-			$this->assertArrayNotHasKey( 'action', $item );
-			$this->assertArrayNotHasKey( 'description', $item );
-			// Links are part of data in collections, so excluded if not explicitly requested.
-			$this->assertArrayNotHasKey( '_links', $item );
-			// Non existing field is ignored.
-			$this->assertArrayNotHasKey( 'nonexisting', $item );
-		}
-
-		// Links are part of data, not links in collections.
-		$links = $response->get_links();
-		$this->assertEquals( 0, count( $links ) );
 	}
 
 	/**

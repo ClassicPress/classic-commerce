@@ -2,7 +2,7 @@
 
 /**
  * Meta
- * @package WooCommerce\Tests\CRUD
+ * @package ClassicCommerce\Tests\CRUD
  */
 class WC_Tests_CRUD_Refunds extends WC_Unit_Test_Case {
 

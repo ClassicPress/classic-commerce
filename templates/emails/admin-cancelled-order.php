@@ -4,14 +4,10 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/emails/admin-cancelled-order.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package ClassicCommerce/Templates/Emails
  * @version WC-3.5.0
  */
 
@@ -25,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %1$s: Customer full name. %2$s: Order numer */ ?>
-<p><?php printf( esc_html__( 'Alas. Just to let you know &mdash; %1$s has cancelled order #%2$s:', 'woocommerce' ), esc_html( $order->get_formatted_billing_full_name() ), esc_html( $order->get_order_number() ) ); ?></p>
+<p><?php printf( esc_html__( 'Alas. Just to let you know &mdash; %1$s has cancelled order #%2$s:', 'classic-commerce' ), esc_html( $order->get_formatted_billing_full_name() ), esc_html( $order->get_order_number() ) ); ?></p>
 
 <?php
 
@@ -49,7 +45,7 @@ do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, 
 do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email );
 ?>
 <p>
-<?php esc_html_e( 'Thanks for reading.', 'woocommerce' ); ?>
+<?php esc_html_e( 'Thanks for reading.', 'classic-commerce' ); ?>
 </p>
 <?php
 

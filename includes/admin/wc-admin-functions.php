@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Admin Functions
+ * ClassicCommerce Admin Functions
  *
  * @author   WooThemes
  * @category Core
- * @package  WooCommerce/Admin/Functions
- * @version  2.4.0
+ * @package  ClassicCommerce/Admin/Functions
+ * @version  WC-2.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,13 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Get all WooCommerce screen ids.
+ * Get all ClassicCommerce screen ids.
  *
  * @return array
  */
 function wc_get_screen_ids() {
 
-	$wc_screen_id = sanitize_title( __( 'WooCommerce', 'woocommerce' ) );
+	$wc_screen_id = sanitize_title( __( 'WooCommerce', 'classic-commerce' ) );
 	$screen_ids   = array(
 		'toplevel_page_' . $wc_screen_id,
 		$wc_screen_id . '_page_wc-reports',

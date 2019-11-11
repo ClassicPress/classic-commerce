@@ -3,7 +3,7 @@
  * Shipping Zone Data Store Interface
  *
  * @version WC-3.0.0
- * @package WooCommerce/Interface
+ * @package ClassicCommerce/Interface
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Functions that must be defined by shipping zone store classes.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 interface WC_Shipping_Zone_Data_Store_Interface {
 	/**

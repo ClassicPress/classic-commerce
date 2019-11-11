@@ -7,7 +7,6 @@
 
 	<!-- Exclude paths -->
 	<exclude-pattern>tests/cli/</exclude-pattern>
-	<exclude-pattern>apigen/</exclude-pattern>
 	<exclude-pattern>includes/gateways/simplify-commerce</exclude-pattern>
 	<exclude-pattern>includes/libraries/</exclude-pattern>
 	<exclude-pattern>includes/legacy/</exclude-pattern>
@@ -55,7 +54,7 @@
 	</rule>
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="woocommerce" />
+			<property name="text_domain" type="array" value="classic-commerce" />
 		</properties>
 	</rule>
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">

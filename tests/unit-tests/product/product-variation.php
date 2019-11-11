@@ -2,7 +2,7 @@
 /**
  * Tests for the WC_Product_Variation class.
  *
- * @package WooCommerce\Tests\Product
+ * @package ClassicCommerce\Tests\Product
  */
 
 /**

@@ -6,8 +6,8 @@
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Meta Boxes
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin/Meta Boxes
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -53,7 +53,7 @@ class WC_Meta_Box_Product_Images {
 						echo '<li class="image" data-attachment_id="' . esc_attr( $attachment_id ) . '">
 								' . $attachment . '
 								<ul class="actions">
-									<li><a href="#" class="delete tips" data-tip="' . esc_attr__( 'Delete image', 'woocommerce' ) . '">' . __( 'Delete', 'woocommerce' ) . '</a></li>
+									<li><a href="#" class="delete tips" data-tip="' . esc_attr__( 'Delete image', 'classic-commerce' ) . '">' . __( 'Delete', 'classic-commerce' ) . '</a></li>
 								</ul>
 							</li>';
 
@@ -73,7 +73,7 @@ class WC_Meta_Box_Product_Images {
 
 		</div>
 		<p class="add_product_images hide-if-no-js">
-			<a href="#" data-choose="<?php esc_attr_e( 'Add images to product gallery', 'woocommerce' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'woocommerce' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'woocommerce' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'woocommerce' ); ?>"><?php _e( 'Add product gallery images', 'woocommerce' ); ?></a>
+			<a href="#" data-choose="<?php esc_attr_e( 'Add images to product gallery', 'classic-commerce' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'classic-commerce' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'classic-commerce' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'classic-commerce' ); ?>"><?php _e( 'Add product gallery images', 'classic-commerce' ); ?></a>
 		</p>
 		<?php
 	}

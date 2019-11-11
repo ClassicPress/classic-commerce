@@ -4,14 +4,10 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-order-details.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates/Emails
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package ClassicCommerce/Templates/Emails
  * @version WC-3.5.0
  */
 
@@ -22,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text, $email );
 
 /* translators: %1$s: Order ID. %2$s: Order date */
-echo wp_kses_post( wc_strtoupper( sprintf( __( '[Order #%1$s] (%2$s)', 'woocommerce' ), $order->get_order_number(), wc_format_datetime( $order->get_date_created() ) ) ) ) . "\n";
+echo wp_kses_post( wc_strtoupper( sprintf( __( '[Order #%1$s] (%2$s)', 'classic-commerce' ), $order->get_order_number(), wc_format_datetime( $order->get_date_created() ) ) ) ) . "\n";
 echo "\n" . wc_get_email_order_items( $order, array( // WPCS: XSS ok.
 	'show_sku'      => $sent_to_admin,
 	'show_image'    => false,
@@ -42,12 +38,12 @@ if ( $totals ) {
 }
 
 if ( $order->get_customer_note() ) {
-	echo esc_html__( 'Note:', 'woocommerce' ) . "\t " . wp_kses_post( wptexturize( $order->get_customer_note() ) ) . "\n";
+	echo esc_html__( 'Note:', 'classic-commerce' ) . "\t " . wp_kses_post( wptexturize( $order->get_customer_note() ) ) . "\n";
 }
 
 if ( $sent_to_admin ) {
 	/* translators: %s: Order link. */
-	echo "\n" . sprintf( esc_html__( 'View order: %s', 'woocommerce' ), esc_url( $order->get_edit_order_url() ) ) . "\n";
+	echo "\n" . sprintf( esc_html__( 'View order: %s', 'classic-commerce' ), esc_url( $order->get_edit_order_url() ) ) . "\n";
 }
 
 do_action( 'woocommerce_email_after_order_table', $order, $sent_to_admin, $plain_text, $email );

@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * This class will be removed in future versions.
  *
  * @class       WC_Legacy_Coupon
- * @version     3.0.0
- * @package     WooCommerce/Classes
+ * @version     WC-3.0.0
+ * @package     ClassicCommerce/Classes
  * @category    Class
  * @author      WooThemes
  */

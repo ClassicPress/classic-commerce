@@ -1,9 +1,9 @@
 <?php
 /**
- * WooCommerce Importer Interface
+ * ClassicCommerce Importer Interface
  *
- * @package  WooCommerce/Interface
- * @version  3.1.0
+ * @package  ClassicCommerce/Interface
+ * @version  WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

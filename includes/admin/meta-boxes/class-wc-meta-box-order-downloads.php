@@ -4,8 +4,8 @@
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Meta Boxes
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin/Meta Boxes
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -54,7 +54,7 @@ class WC_Meta_Box_Order_Downloads {
 
 						// Show file title instead of count if set.
 						$file       = $product->get_file( $download->get_download_id() );
-						$file_count = isset( $file['name'] ) ? $file['name'] : sprintf( __( 'File %d', 'woocommerce' ), $file_counter );
+						$file_count = isset( $file['name'] ) ? $file['name'] : sprintf( __( 'File %d', 'classic-commerce' ), $file_counter );
 
 						include 'views/html-order-download-permission.php';
 
@@ -67,9 +67,9 @@ class WC_Meta_Box_Order_Downloads {
 
 			<div class="toolbar">
 				<p class="buttons">
-					<select id="grant_access_id" class="wc-product-search" name="grant_access_id[]" multiple="multiple" style="width: 400px;" data-placeholder="<?php esc_attr_e( 'Search for a downloadable product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_downloadable_products_and_variations"></select>
+					<select id="grant_access_id" class="wc-product-search" name="grant_access_id[]" multiple="multiple" style="width: 400px;" data-placeholder="<?php esc_attr_e( 'Search for a downloadable product&hellip;', 'classic-commerce' ); ?>" data-action="woocommerce_json_search_downloadable_products_and_variations"></select>
 					<button type="button" class="button grant_access">
-						<?php _e( 'Grant access', 'woocommerce' ); ?>
+						<?php _e( 'Grant access', 'classic-commerce' ); ?>
 					</button>
 				</p>
 				<div class="clear"></div>

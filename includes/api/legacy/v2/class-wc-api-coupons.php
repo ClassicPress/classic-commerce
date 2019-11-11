@@ -1,13 +1,13 @@
 <?php
 /**
- * WooCommerce API Coupons Class
+ * ClassicCommerce API Coupons Class
  *
  * Handles requests to the /coupons endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
- * @since       2.1
+ * @package     ClassicCommerce/API
+ * @since       WC-2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -114,7 +114,7 @@ class WC_API_Coupons extends WC_API_Resource {
 			$coupon = new WC_Coupon( $id );
 
 			if ( 0 === $coupon->get_id() ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_id', __( 'Invalid coupon ID', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_id', __( 'Invalid coupon ID', 'classic-commerce' ), 404 );
 			}
 
 			$coupon_data = array(
@@ -160,7 +160,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	public function get_coupons_count( $filter = array() ) {
 		try {
 			if ( ! current_user_can( 'read_private_shop_coupons' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_coupons_count', __( 'You do not have permission to read the coupons count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_coupons_count', __( 'You do not have permission to read the coupons count', 'classic-commerce' ), 401 );
 			}
 
 			$query = $this->query_coupons( $filter );
@@ -186,7 +186,7 @@ class WC_API_Coupons extends WC_API_Resource {
 			$id = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM $wpdb->posts WHERE post_title = %s AND post_type = 'shop_coupon' AND post_status = 'publish' ORDER BY post_date DESC LIMIT 1;", $code ) );
 
 			if ( is_null( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_code', __( 'Invalid coupon code', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_code', __( 'Invalid coupon code', 'classic-commerce' ), 404 );
 			}
 
 			return $this->get_coupon( $id, $fields );
@@ -209,28 +209,28 @@ class WC_API_Coupons extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['coupon'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'coupon' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'coupon' ), 400 );
 			}
 
 			$data = $data['coupon'];
 
 			// Check user permission
 			if ( ! current_user_can( 'publish_shop_coupons' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_coupon', __( 'You do not have permission to create coupons', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_coupon', __( 'You do not have permission to create coupons', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_coupon_data', $data, $this );
 
 			// Check if coupon code is specified
 			if ( ! isset( $data['code'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_code', sprintf( __( 'Missing parameter %s', 'woocommerce' ), 'code' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_code', sprintf( __( 'Missing parameter %s', 'classic-commerce' ), 'code' ), 400 );
 			}
 
 			$coupon_code  = wc_format_coupon_code( $data['code'] );
 			$id_from_code = wc_get_coupon_id_by_code( $coupon_code );
 
 			if ( $id_from_code ) {
-				throw new WC_API_Exception( 'woocommerce_api_coupon_code_already_exists', __( 'The coupon code already exists', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_coupon_code_already_exists', __( 'The coupon code already exists', 'classic-commerce' ), 400 );
 			}
 
 			$defaults = array(
@@ -258,7 +258,7 @@ class WC_API_Coupons extends WC_API_Resource {
 
 			// Validate coupon types
 			if ( ! in_array( wc_clean( $coupon_data['type'] ), array_keys( wc_get_coupon_types() ) ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_type', sprintf( __( 'Invalid coupon type - the coupon type must be any of these: %s', 'woocommerce' ), implode( ', ', array_keys( wc_get_coupon_types() ) ) ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_type', sprintf( __( 'Invalid coupon type - the coupon type must be any of these: %s', 'classic-commerce' ), implode( ', ', array_keys( wc_get_coupon_types() ) ) ), 400 );
 			}
 
 			$new_coupon = array(
@@ -321,7 +321,7 @@ class WC_API_Coupons extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['coupon'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'coupon' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_coupon_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'coupon' ), 400 );
 			}
 
 			$data = $data['coupon'];
@@ -341,13 +341,13 @@ class WC_API_Coupons extends WC_API_Resource {
 				$id_from_code = wc_get_coupon_id_by_code( $coupon_code, $id );
 
 				if ( $id_from_code ) {
-					throw new WC_API_Exception( 'woocommerce_api_coupon_code_already_exists', __( 'The coupon code already exists', 'woocommerce' ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_coupon_code_already_exists', __( 'The coupon code already exists', 'classic-commerce' ), 400 );
 				}
 
 				$updated = wp_update_post( array( 'ID' => intval( $id ), 'post_title' => $coupon_code ) );
 
 				if ( 0 === $updated ) {
-					throw new WC_API_Exception( 'woocommerce_api_cannot_update_coupon', __( 'Failed to update coupon', 'woocommerce' ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_cannot_update_coupon', __( 'Failed to update coupon', 'classic-commerce' ), 400 );
 				}
 			}
 
@@ -355,14 +355,14 @@ class WC_API_Coupons extends WC_API_Resource {
 				$updated = wp_update_post( array( 'ID' => intval( $id ), 'post_excerpt' => $data['description'] ) );
 
 				if ( 0 === $updated ) {
-					throw new WC_API_Exception( 'woocommerce_api_cannot_update_coupon', __( 'Failed to update coupon', 'woocommerce' ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_cannot_update_coupon', __( 'Failed to update coupon', 'classic-commerce' ), 400 );
 				}
 			}
 
 			if ( isset( $data['type'] ) ) {
 				// Validate coupon types
 				if ( ! in_array( wc_clean( $data['type'] ), array_keys( wc_get_coupon_types() ) ) ) {
-					throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_type', sprintf( __( 'Invalid coupon type - the coupon type must be any of these: %s', 'woocommerce' ), implode( ', ', array_keys( wc_get_coupon_types() ) ) ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_type', sprintf( __( 'Invalid coupon type - the coupon type must be any of these: %s', 'classic-commerce' ), implode( ', ', array_keys( wc_get_coupon_types() ) ) ), 400 );
 				}
 				update_post_meta( $id, 'discount_type', $data['type'] );
 			}
@@ -444,7 +444,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * Delete a coupon
 	 *
-	 * @since  2.2
+	 * @since WC-2.2
 	 * @param int $id the coupon ID
 	 * @param bool $force true to permanently delete coupon, false to move to trash
 	 * @return array|WP_Error
@@ -465,7 +465,7 @@ class WC_API_Coupons extends WC_API_Resource {
 	/**
 	 * expiry_date format
 	 *
-	 * @since  2.3.0
+	 * @since  WC-2.3.0
 	 * @param  string $expiry_date
 	 * @param bool $as_timestamp (default: false)
 	 * @return string|int
@@ -518,7 +518,7 @@ class WC_API_Coupons extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['coupons'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_coupons_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'woocommerce' ), 'coupons' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_coupons_data', sprintf( __( 'No %1$s data specified to create/edit %1$s', 'classic-commerce' ), 'coupons' ), 400 );
 			}
 
 			$data  = $data['coupons'];
@@ -526,7 +526,7 @@ class WC_API_Coupons extends WC_API_Resource {
 
 			// Limit bulk operation
 			if ( count( $data ) > $limit ) {
-				throw new WC_API_Exception( 'woocommerce_api_coupons_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'woocommerce' ), $limit ), 413 );
+				throw new WC_API_Exception( 'woocommerce_api_coupons_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'classic-commerce' ), $limit ), 413 );
 			}
 
 			$coupons = array();

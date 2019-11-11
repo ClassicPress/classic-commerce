@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Tests_Log_Handler_DB
- * @package WooCommerce\Tests\Log
+ * @package ClassicCommerce\Tests\Log
  * @since WC-3.0.0
  */
 class WC_Tests_Log_Handler_DB extends WC_Unit_Test_Case {

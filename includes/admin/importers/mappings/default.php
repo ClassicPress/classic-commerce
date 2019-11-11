@@ -2,7 +2,7 @@
 /**
  * Default mappings
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Importer current locale.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  * @return string
  */
 function wc_importer_current_locale() {
@@ -27,7 +27,7 @@ function wc_importer_current_locale() {
 /**
  * Add English mapping placeholders when not using English as current language.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  * @param array $mappings Importer columns mappings.
  * @return array
  */
@@ -87,7 +87,7 @@ add_filter( 'woocommerce_csv_product_import_mapping_default_columns', 'wc_import
 /**
  * Add English special mapping placeholders when not using English as current language.
  *
- * @since 3.1.0
+ * @since WC-3.1.0
  * @param array $mappings Importer columns mappings.
  * @return array
  */

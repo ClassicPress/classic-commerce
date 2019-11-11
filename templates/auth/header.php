@@ -4,15 +4,11 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/auth/header.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
+ * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
- * @package WooCommerce/Templates/Auth
+ * @package ClassicCommerce/Templates/Auth
  * @version WC-2.4.0
  */
 
@@ -26,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="noindex, nofollow" />
-	<title><?php _e( 'Application authentication request', 'woocommerce' ); ?></title>
+	<title><?php _e( 'Application authentication request', 'classic-commerce' ); ?></title>
 	<?php wp_admin_css( 'install', true ); ?>
 	<link rel="stylesheet" href="<?php echo esc_url( str_replace( array( 'http:', 'https:' ), '', WC()->plugin_url() ) . '/assets/css/auth.css' ); ?>" type="text/css" />
 </head>

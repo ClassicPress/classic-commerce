@@ -2,9 +2,9 @@
 /**
  * Product Factory
  *
- * The WooCommerce product factory creating the right product object.
+ * The ClassicCommerce product factory creating the right product object.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 
@@ -52,7 +52,7 @@ class WC_Product_Factory {
 	/**
 	 * Gets a product classname and allows filtering. Returns WC_Product_Simple if the class does not exist.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int    $product_id   Product ID.
 	 * @param  string $product_type Product type.
 	 * @return string
@@ -70,7 +70,7 @@ class WC_Product_Factory {
 	/**
 	 * Get the product type for a product.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  int $product_id Product ID.
 	 * @return string|false
 	 */
@@ -97,7 +97,7 @@ class WC_Product_Factory {
 	/**
 	 * Get the product ID depending on what was passed.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WC_Product|WP_Post|int|bool $product Product instance, post instance, numeric or false to use global $post.
 	 * @return int|bool false on failure
 	 */

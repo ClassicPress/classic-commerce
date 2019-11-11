@@ -2,7 +2,7 @@
 /**
  * Product data meta box.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<span class="type_box hidden"> &mdash;
 		<label for="product-type">
 			<select id="product-type" name="product-type">
-				<optgroup label="<?php esc_attr_e( 'Product Type', 'woocommerce' ); ?>">
+				<optgroup label="<?php esc_attr_e( 'Product Type', 'classic-commerce' ); ?>">
 				<?php foreach ( wc_get_product_types() as $value => $label ) : ?>
 					<option value="<?php echo esc_attr( $value ); ?>" <?php echo selected( $product_object->get_type(), $value, false ); ?>><?php echo esc_html( $label ); ?></option>
 				<?php endforeach; ?>

@@ -4,7 +4,7 @@
  *
  * Generates a range slider to filter products by price.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.3.0
  */
 
@@ -20,14 +20,14 @@ class WC_Widget_Price_Filter extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_price_filter';
-		$this->widget_description = __( 'Display a slider to filter products in your store by price.', 'woocommerce' );
+		$this->widget_description = __( 'Display a slider to filter products in your store by price.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_price_filter';
-		$this->widget_name        = __( 'Filter Products by Price', 'woocommerce' );
+		$this->widget_name        = __( 'Filter Products by Price', 'classic-commerce' );
 		$this->settings           = array(
 			'title' => array(
 				'type'  => 'text',
-				'std'   => __( 'Filter by price', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Filter by price', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 		);
 		$suffix                   = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
@@ -96,11 +96,11 @@ class WC_Widget_Price_Filter extends WC_Widget {
 			<div class="price_slider_wrapper">
 				<div class="price_slider" style="display:none;"></div>
 				<div class="price_slider_amount">
-					<input type="text" id="min_price" name="min_price" value="' . esc_attr( $min_price ) . '" data-min="' . esc_attr( apply_filters( 'woocommerce_price_filter_widget_min_amount', $min ) ) . '" placeholder="' . esc_attr__( 'Min price', 'woocommerce' ) . '" />
-					<input type="text" id="max_price" name="max_price" value="' . esc_attr( $max_price ) . '" data-max="' . esc_attr( apply_filters( 'woocommerce_price_filter_widget_max_amount', $max ) ) . '" placeholder="' . esc_attr__( 'Max price', 'woocommerce' ) . '" />
-					<button type="submit" class="button">' . esc_html__( 'Filter', 'woocommerce' ) . '</button>
+					<input type="text" id="min_price" name="min_price" value="' . esc_attr( $min_price ) . '" data-min="' . esc_attr( apply_filters( 'woocommerce_price_filter_widget_min_amount', $min ) ) . '" placeholder="' . esc_attr__( 'Min price', 'classic-commerce' ) . '" />
+					<input type="text" id="max_price" name="max_price" value="' . esc_attr( $max_price ) . '" data-max="' . esc_attr( apply_filters( 'woocommerce_price_filter_widget_max_amount', $max ) ) . '" placeholder="' . esc_attr__( 'Max price', 'classic-commerce' ) . '" />
+					<button type="submit" class="button">' . esc_html__( 'Filter', 'classic-commerce' ) . '</button>
 					<div class="price_label" style="display:none;">
-						' . esc_html__( 'Price:', 'woocommerce' ) . ' <span class="from"></span> &mdash; <span class="to"></span>
+						' . esc_html__( 'Price:', 'classic-commerce' ) . ' <span class="from"></span> &mdash; <span class="to"></span>
 					</div>
 					' . wc_query_string_form_fields( null, array( 'min_price', 'max_price' ), '', true ) . '
 					<div class="clear"></div>

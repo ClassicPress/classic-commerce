@@ -2,7 +2,7 @@
 /**
  * WC_Order_Data_Store_CPT class file.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Order Data Store: Stored in CPT.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implements WC_Object_Data_Store_Interface, WC_Order_Data_Store_Interface {
 
@@ -378,8 +378,8 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Get all orders matching the passed in args.
 	 *
-	 * @deprecated 3.1.0 - Use wc_get_orders instead.
-	 * @see    wc_get_orders()
+	 * @deprecated WC-3.1.0 - Use wc_get_orders instead.
+	 * @see        wc_get_orders()
 	 *
 	 * @param  array $args List of args passed to wc_get_orders().
 	 *
@@ -423,7 +423,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 			} elseif ( is_numeric( $value ) ) {
 				$meta_query['customer_ids']['value'][] = strval( absint( $value ) );
 			} else {
-				return new WP_Error( 'woocommerce_query_invalid', __( 'Invalid customer query.', 'woocommerce' ), $values );
+				return new WP_Error( 'woocommerce_query_invalid', __( 'Invalid customer query.', 'classic-commerce' ), $values );
 			}
 		}
 
@@ -761,7 +761,7 @@ class WC_Order_Data_Store_CPT extends Abstract_WC_Order_Data_Store_CPT implement
 	/**
 	 * Return the order type of a given item which belongs to WC_Order.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  WC_Order $order Order Object.
 	 * @param  int      $order_item_id Order item id.
 	 * @return string Order Item type

@@ -6,8 +6,8 @@
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
- * @since    3.0.0
+ * @package  ClassicCommerce/API
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Legacy Orders controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_CRUD_Controller
  */
 class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
@@ -32,7 +32,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Query args.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param array $args
 	 * @param WP_REST_Request $request
@@ -91,7 +91,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single order output for response.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param WP_Post $post Post object.
 	 * @param WP_REST_Request $request Request object.
@@ -157,7 +157,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single order for create.
 	 *
-	 * @deprecated 3.0
+	 * @deprecated WC-3.0
 	 *
 	 * @param  WP_REST_Request $request Request object.
 	 * @return WP_Error|WC_Order $data Object.
@@ -225,7 +225,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Create base WC Order object.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param array $data
 	 * @return WC_Order
@@ -237,7 +237,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Create order.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return int|WP_Error
@@ -246,12 +246,12 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 		try {
 			// Make sure customer exists.
 			if ( ! is_null( $request['customer_id'] ) && 0 !== $request['customer_id'] && false === get_user_by( 'id', $request['customer_id'] ) ) {
-				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id',__( 'Customer ID is invalid.', 'woocommerce' ), 400 );
+				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id',__( 'Customer ID is invalid.', 'classic-commerce' ), 400 );
 			}
 
 			// Make sure customer is part of blog.
 			if ( is_multisite() && ! is_user_member_of_blog( $request['customer_id'] ) ) {
-				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id_network',__( 'Customer ID does not belong to this site.', 'woocommerce' ), 400 );
+				throw new WC_REST_Exception( 'woocommerce_rest_invalid_customer_id_network',__( 'Customer ID does not belong to this site.', 'classic-commerce' ), 400 );
 			}
 
 			$order = $this->prepare_item_for_database( $request );
@@ -276,7 +276,7 @@ class WC_REST_Legacy_Orders_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Update order.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return int|WP_Error

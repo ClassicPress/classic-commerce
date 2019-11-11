@@ -4,7 +4,7 @@
  *
  * Lets a user see the status of an order by entering their order details.
  *
- * @package WooCommerce/Shortcodes/Order_Tracking
+ * @package ClassicCommerce/Shortcodes/Order_Tracking
  * @version WC-3.0.0
  */
 
@@ -45,9 +45,9 @@ class WC_Shortcode_Order_Tracking {
 			$order_email = empty( $_REQUEST['order_email'] ) ? '' : sanitize_email( wp_unslash( $_REQUEST['order_email'] ) ); // WPCS: input var ok.
 
 			if ( ! $order_id ) {
-				wc_print_notice( __( 'Please enter a valid order ID', 'woocommerce' ), 'error' );
+				wc_print_notice( __( 'Please enter a valid order ID', 'classic-commerce' ), 'error' );
 			} elseif ( ! $order_email ) {
-				wc_print_notice( __( 'Please enter a valid email address', 'woocommerce' ), 'error' );
+				wc_print_notice( __( 'Please enter a valid email address', 'classic-commerce' ), 'error' );
 			} else {
 				$order = wc_get_order( apply_filters( 'woocommerce_shortcode_order_tracking_order_id', $order_id ) );
 
@@ -60,7 +60,7 @@ class WC_Shortcode_Order_Tracking {
 					);
 					return;
 				} else {
-					wc_print_notice( __( 'Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.', 'woocommerce' ), 'error' );
+					wc_print_notice( __( 'Sorry, the order could not be found. Please contact us if you are having difficulty finding your order details.', 'classic-commerce' ), 'error' );
 				}
 			}
 		}

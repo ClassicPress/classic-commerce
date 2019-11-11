@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce API
+ * ClassicCommerce API
  *
  * Handles WC-API endpoint requests.
  *
- * @package WooCommerce/API
- * @since   2.0.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -65,7 +65,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * API request - Trigger any API requests.
 	 *
-	 * @since   2.0
+	 * @since   WC-2.0
 	 * @version WC-2.4
 	 */
 	public function handle_api_requests() {
@@ -357,7 +357,7 @@ class WC_API extends WC_Legacy_API {
 	/**
 	 * Register WC settings from WP-API to the REST API.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 */
 	public function register_wp_admin_settings() {
 		$pages = WC_Admin_Settings::get_settings_pages();

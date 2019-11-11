@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Terms
+ * ClassicCommerce Terms
  *
  * Functions for handling terms/term meta.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.1.0
  */
 
@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  * Helper to get cached object terms and filter by field using wp_list_pluck().
  * Works as a cached alternative for wp_get_post_terms() and wp_get_object_terms().
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  int    $object_id Object ID.
  * @param  string $taxonomy  Taxonomy slug.
  * @param  string $field     Field name.
@@ -36,7 +36,7 @@ function wc_get_object_terms( $object_id, $taxonomy, $field = null, $index_key =
  * Cached version of wp_get_post_terms().
  * This is a private function (internal use ONLY).
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @param  int    $product_id Product ID.
  * @param  string $taxonomy   Taxonomy slug.
  * @param  array  $args       Query arguments.
@@ -168,7 +168,7 @@ function _wc_get_product_terms_parent_usort_callback( $a, $b ) {
 }
 
 /**
- * WooCommerce Dropdown categories.
+ * ClassicCommerce Dropdown categories.
  *
  * @param array $args Args to control display of dropdown.
  */
@@ -185,7 +185,7 @@ function wc_product_dropdown_categories( $args = array() ) {
 			'orderby'            => 'name',
 			'selected'           => isset( $wp_query->query_vars['product_cat'] ) ? $wp_query->query_vars['product_cat'] : '',
 			'menu_order'         => false,
-			'show_option_none'   => __( 'Select a category', 'woocommerce' ),
+			'show_option_none'   => __( 'Select a category', 'classic-commerce' ),
 			'option_none_value'  => '',
 			'value_field'        => 'slug',
 			'taxonomy'           => 'product_cat',
@@ -279,7 +279,7 @@ function wc_taxonomy_metadata_migrate_data( $wp_db_version, $wp_current_db_versi
 add_action( 'wp_upgrade', 'wc_taxonomy_metadata_migrate_data', 10, 2 );
 
 /**
- * WooCommerce Term Meta API.
+ * ClassicCommerce Term Meta API.
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -295,7 +295,7 @@ function update_woocommerce_term_meta( $term_id, $meta_key, $meta_value, $prev_v
 }
 
 /**
- * WooCommerce Term Meta API.
+ * ClassicCommerce Term Meta API.
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -311,7 +311,7 @@ function add_woocommerce_term_meta( $term_id, $meta_key, $meta_value, $unique = 
 }
 
 /**
- * WooCommerce Term Meta API
+ * ClassicCommerce Term Meta API
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -327,7 +327,7 @@ function delete_woocommerce_term_meta( $term_id, $meta_key, $meta_value = '', $d
 }
 
 /**
- * WooCommerce Term Meta API
+ * ClassicCommerce Term Meta API
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -757,7 +757,7 @@ add_action( 'set_object_terms', 'wc_clear_term_product_ids', 10, 6 );
 /**
  * Get full list of product visibilty term ids.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @return int[]
  */
 function wc_get_product_visibility_term_ids() {

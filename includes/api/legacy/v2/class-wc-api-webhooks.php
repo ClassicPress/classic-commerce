@@ -1,13 +1,13 @@
 <?php
 /**
- * WooCommerce API Webhooks class
+ * ClassicCommerce API Webhooks class
  *
  * Handles requests to the /webhooks endpoint
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
- * @since    2.2
+ * @package  ClassicCommerce/API
+ * @since    WC-2.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -140,7 +140,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 	public function get_webhooks_count( $status = null, $filter = array() ) {
 		try {
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_webhooks_count', __( 'You do not have permission to read the webhooks count', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_read_webhooks_count', __( 'You do not have permission to read the webhooks count', 'classic-commerce' ), 401 );
 			}
 
 			if ( ! empty( $status ) ) {
@@ -168,26 +168,26 @@ class WC_API_Webhooks extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['webhook'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_webhook_data', sprintf( __( 'No %1$s data specified to create %1$s', 'woocommerce' ), 'webhook' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_webhook_data', sprintf( __( 'No %1$s data specified to create %1$s', 'classic-commerce' ), 'webhook' ), 400 );
 			}
 
 			$data = $data['webhook'];
 
 			// permission check
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_webhooks', __( 'You do not have permission to create webhooks.', 'woocommerce' ), 401 );
+				throw new WC_API_Exception( 'woocommerce_api_user_cannot_create_webhooks', __( 'You do not have permission to create webhooks.', 'classic-commerce' ), 401 );
 			}
 
 			$data = apply_filters( 'woocommerce_api_create_webhook_data', $data, $this );
 
 			// validate topic
 			if ( empty( $data['topic'] ) || ! wc_is_webhook_valid_topic( strtolower( $data['topic'] ) ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_topic', __( 'Webhook topic is required and must be valid.', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_topic', __( 'Webhook topic is required and must be valid.', 'classic-commerce' ), 400 );
 			}
 
 			// validate delivery URL
 			if ( empty( $data['delivery_url'] ) || ! wc_is_valid_url( $data['delivery_url'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_url', __( 'Webhook delivery URL must be a valid URL starting with http:// or https://', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_url', __( 'Webhook delivery URL must be a valid URL starting with http:// or https://', 'classic-commerce' ), 400 );
 			}
 
 			$webhook_data = apply_filters( 'woocommerce_new_webhook_data', array(
@@ -196,7 +196,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 				'ping_status'   => 'closed',
 				'post_author'   => get_current_user_id(),
 				'post_password' => strlen( ( $password = uniqid( 'webhook_' ) ) ) > 20 ? substr( $password, 0, 20 ) : $password,
-				'post_title'    => ! empty( $data['name'] ) ? $data['name'] : sprintf( __( 'Webhook created on %s', 'woocommerce' ), strftime( _x( '%b %d, %Y @ %I:%M %p', 'Webhook created on date parsed by strftime', 'woocommerce' ) ) ),
+				'post_title'    => ! empty( $data['name'] ) ? $data['name'] : sprintf( __( 'Webhook created on %s', 'classic-commerce' ), strftime( _x( '%b %d, %Y @ %I:%M %p', 'Webhook created on date parsed by strftime', 'classic-commerce' ) ) ),
 			), $data, $this );
 
 			$webhook = new WC_Webhook();
@@ -239,7 +239,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 
 		try {
 			if ( ! isset( $data['webhook'] ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_missing_webhook_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'woocommerce' ), 'webhook' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_missing_webhook_data', sprintf( __( 'No %1$s data specified to edit %1$s', 'classic-commerce' ), 'webhook' ), 400 );
 			}
 
 			$data = $data['webhook'];
@@ -262,7 +262,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 					$webhook->set_topic( $data['topic'] );
 
 				} else {
-					throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_topic', __( 'Webhook topic must be valid.', 'woocommerce' ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_topic', __( 'Webhook topic must be valid.', 'classic-commerce' ), 400 );
 				}
 			}
 
@@ -273,7 +273,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 					$webhook->set_delivery_url( $data['delivery_url'] );
 
 				} else {
-					throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_url', __( 'Webhook delivery URL must be a valid URL starting with http:// or https://', 'woocommerce' ), 400 );
+					throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_url', __( 'Webhook delivery URL must be a valid URL starting with http:// or https://', 'classic-commerce' ), 400 );
 				}
 			}
 
@@ -410,11 +410,11 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get deliveries for a webhook
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
-	 * @param string $webhook_id webhook ID
-	 * @param string|null $fields fields to include in response
-	 * @return array|WP_Error
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0 Webhooks deliveries logs now uses logging system.
+	 * @param      string $webhook_id webhook ID
+	 * @param      string|null $fields fields to include in response
+	 * @return     array|WP_Error
 	 */
 	public function get_webhook_deliveries( $webhook_id, $fields = null ) {
 
@@ -431,13 +431,13 @@ class WC_API_Webhooks extends WC_API_Resource {
 	/**
 	 * Get the delivery log for the given webhook ID and delivery ID
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0 Webhooks deliveries logs now uses logging system.
-	 * @param string $webhook_id webhook ID
-	 * @param string $id delivery log ID
-	 * @param string|null $fields fields to limit response to
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0 Webhooks deliveries logs now uses logging system.
+	 * @param      string $webhook_id webhook ID
+	 * @param      string $id delivery log ID
+	 * @param      string|null $fields fields to limit response to
 	 *
-	 * @return array|WP_Error
+	 * @return     array|WP_Error
 	 */
 	public function get_webhook_delivery( $webhook_id, $id, $fields = null ) {
 		try {
@@ -451,7 +451,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 			$id = absint( $id );
 
 			if ( empty( $id ) ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_id', __( 'Invalid webhook delivery ID.', 'woocommerce' ), 404 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_id', __( 'Invalid webhook delivery ID.', 'classic-commerce' ), 404 );
 			}
 
 			$webhook = new WC_Webhook( $webhook_id );
@@ -459,7 +459,7 @@ class WC_API_Webhooks extends WC_API_Resource {
 			$log = 0;
 
 			if ( ! $log ) {
-				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_id', __( 'Invalid webhook delivery.', 'woocommerce' ), 400 );
+				throw new WC_API_Exception( 'woocommerce_api_invalid_webhook_delivery_id', __( 'Invalid webhook delivery.', 'classic-commerce' ), 400 );
 			}
 
 			return array( 'webhook_delivery' => apply_filters( 'woocommerce_api_webhook_delivery_response', array(), $id, $fields, $log, $webhook_id, $this ) );
@@ -486,13 +486,13 @@ class WC_API_Webhooks extends WC_API_Resource {
 
 		// Validate ID.
 		if ( empty( $id ) ) {
-			return new WP_Error( "woocommerce_api_invalid_webhook_id", sprintf( __( 'Invalid %s ID', 'woocommerce' ), $type ), array( 'status' => 404 ) );
+			return new WP_Error( "woocommerce_api_invalid_webhook_id", sprintf( __( 'Invalid %s ID', 'classic-commerce' ), $type ), array( 'status' => 404 ) );
 		}
 
 		$webhook = wc_get_webhook( $id );
 
 		if ( null === $webhook ) {
-			return new WP_Error( "woocommerce_api_no_webhook_found", sprintf( __( 'No %1$s found with the ID equal to %2$s', 'woocommerce' ), 'webhook', $id ), array( 'status' => 404 ) );
+			return new WP_Error( "woocommerce_api_no_webhook_found", sprintf( __( 'No %1$s found with the ID equal to %2$s', 'classic-commerce' ), 'webhook', $id ), array( 'status' => 404 ) );
 		}
 
 		// Validate permissions.
@@ -500,19 +500,19 @@ class WC_API_Webhooks extends WC_API_Resource {
 
 			case 'read':
 				if ( ! current_user_can( 'manage_woocommerce' ) ) {
-					return new WP_Error( "woocommerce_api_user_cannot_read_webhook", sprintf( __( 'You do not have permission to read this %s', 'woocommerce' ), 'webhook' ), array( 'status' => 401 ) );
+					return new WP_Error( "woocommerce_api_user_cannot_read_webhook", sprintf( __( 'You do not have permission to read this %s', 'classic-commerce' ), 'webhook' ), array( 'status' => 401 ) );
 				}
 				break;
 
 			case 'edit':
 				if ( ! current_user_can( 'manage_woocommerce' ) ) {
-					return new WP_Error( "woocommerce_api_user_cannot_edit_webhook", sprintf( __( 'You do not have permission to edit this %s', 'woocommerce' ), 'webhook' ), array( 'status' => 401 ) );
+					return new WP_Error( "woocommerce_api_user_cannot_edit_webhook", sprintf( __( 'You do not have permission to edit this %s', 'classic-commerce' ), 'webhook' ), array( 'status' => 401 ) );
 				}
 				break;
 
 			case 'delete':
 				if ( ! current_user_can( 'manage_woocommerce' ) ) {
-					return new WP_Error( "woocommerce_api_user_cannot_delete_webhook", sprintf( __( 'You do not have permission to delete this %s', 'woocommerce' ), 'webhook' ), array( 'status' => 401 ) );
+					return new WP_Error( "woocommerce_api_user_cannot_delete_webhook", sprintf( __( 'You do not have permission to delete this %s', 'classic-commerce' ), 'webhook' ), array( 'status' => 401 ) );
 				}
 				break;
 		}

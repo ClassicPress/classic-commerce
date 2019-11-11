@@ -2,7 +2,7 @@
 /**
  * Class WC_Coupon_Data_Store_CPT file.
  *
- * @package WooCommerce\DataStore
+ * @package ClassicCommerce\DataStore
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Coupon Data Store: Custom Post Type.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Coupon_Data_Store_CPT extends WC_Data_Store_WP implements WC_Coupon_Data_Store_Interface, WC_Object_Data_Store_Interface {
 
@@ -104,7 +104,7 @@ class WC_Coupon_Data_Store_CPT extends WC_Data_Store_WP implements WC_Coupon_Dat
 		$post_object = get_post( $coupon->get_id() );
 
 		if ( ! $coupon->get_id() || ! $post_object || 'shop_coupon' !== $post_object->post_type ) {
-			throw new Exception( __( 'Invalid coupon.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid coupon.', 'classic-commerce' ) );
 		}
 
 		$coupon_id = $coupon->get_id();

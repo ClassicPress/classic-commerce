@@ -3,7 +3,7 @@
  * REST Controller
  *
  * This class extend `WP_REST_Controller` in order to include /batch endpoint
- * for almost all endpoints in WooCommerce REST API.
+ * for almost all endpoints in ClassicCommerce REST API.
  *
  * It's required to follow "Controller Classes" guide before extending this class:
  * <https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/>
@@ -12,7 +12,7 @@
  * If necessary extend this class and create new abstract classes like `WC_REST_CRUD_Controller` or `WC_REST_Terms_Controller`.
  *
  * @class   WC_REST_Controller
- * @package WooCommerce/Abstracts
+ * @package ClassicCommerce/Abstracts
  * @see     https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/
  */
 
@@ -23,9 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Abstract Rest Controller Class
  *
- * @package  WooCommerce/Abstracts
+ * @package  ClassicCommerce/Abstracts
  * @extends  WP_REST_Controller
- * @version  2.6.0
+ * @version  WC-2.6.0
  */
 abstract class WC_REST_Controller extends WP_REST_Controller {
 
@@ -110,7 +110,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 
 		if ( $total > $limit ) {
 			/* translators: %s: items limit */
-			return new WP_Error( 'woocommerce_rest_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'woocommerce' ), $limit ), array( 'status' => 413 ) );
+			return new WP_Error( 'woocommerce_rest_request_entity_too_large', sprintf( __( 'Unable to accept more than %s items for this request.', 'classic-commerce' ), $limit ), array( 'status' => 413 ) );
 		}
 
 		return true;
@@ -252,7 +252,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 		if ( array_key_exists( $value, $setting['options'] ) ) {
 			return $value;
 		} else {
-			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 	}
 
@@ -270,7 +270,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 		}
 
 		if ( ! is_array( $values ) ) {
-			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 
 		$final_values = array();
@@ -293,7 +293,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 	 */
 	public function validate_setting_image_width_field( $values, $setting ) {
 		if ( ! is_array( $values ) ) {
-			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 
 		$current = $setting['value'];
@@ -336,7 +336,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 			$value = isset( $setting['default'] ) ? $setting['default'] : 'no';
 			return $value;
 		} else {
-			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( 'rest_setting_value_invalid', __( 'An invalid setting value was passed.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 	}
 
@@ -395,7 +395,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'create' => array(
-					'description' => __( 'List of created resources.', 'woocommerce' ),
+					'description' => __( 'List of created resources.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit' ),
 					'items'       => array(
@@ -403,7 +403,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 					),
 				),
 				'update' => array(
-					'description' => __( 'List of updated resources.', 'woocommerce' ),
+					'description' => __( 'List of updated resources.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit' ),
 					'items'       => array(
@@ -411,7 +411,7 @@ abstract class WC_REST_Controller extends WP_REST_Controller {
 					),
 				),
 				'delete' => array(
-					'description' => __( 'List of delete resources.', 'woocommerce' ),
+					'description' => __( 'List of delete resources.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit' ),
 					'items'       => array(

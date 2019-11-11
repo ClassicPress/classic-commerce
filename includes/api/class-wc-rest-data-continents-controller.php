@@ -4,8 +4,8 @@
  *
  * Handles requests to the /data/continents endpoint.
  *
- * @package WooCommerce/API
- * @since   3.5.0
+ * @package ClassicCommerce/API
+ * @since   WC-3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Data continents controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
@@ -35,7 +35,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Register routes.
 	 *
-	 * @since 3.5.0
+	 * @since WC-3.5.0
 	 */
 	public function register_routes() {
 		register_rest_route(
@@ -56,7 +56,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 					'permission_callback' => array( $this, 'get_items_permissions_check' ),
 					'args'                => array(
 						'continent' => array(
-							'description' => __( '2 character continent code.', 'woocommerce' ),
+							'description' => __( '2 character continent code.', 'classic-commerce' ),
 							'type'        => 'string',
 						),
 					),
@@ -69,7 +69,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of countries and states for a given continent.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  string          $continent_code Continent code.
 	 * @param  WP_REST_Request $request        Request data.
 	 * @return array|mixed Response data, ready for insertion into collection data.
@@ -155,7 +155,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of states for all continents.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -175,14 +175,14 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Return the list of locations for a given continent.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
 	public function get_item( $request ) {
 		$data = $this->get_continent( strtoupper( $request['location'] ), $request );
 		if ( empty( $data ) ) {
-			return new WP_Error( 'woocommerce_rest_data_invalid_location', __( 'There are no locations matching these parameters.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'woocommerce_rest_data_invalid_location', __( 'There are no locations matching these parameters.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 		return $this->prepare_item_for_response( $data, $request );
 	}
@@ -190,7 +190,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Prepare the data object for response.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @param object          $item Data object.
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_REST_Response $response Response data.
@@ -236,7 +236,7 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 	/**
 	 * Get the location schema, conforming to JSON Schema.
 	 *
-	 * @since  3.5.0
+	 * @since  WC-3.5.0
 	 * @return array
 	 */
 	public function get_item_schema() {
@@ -247,19 +247,19 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 			'properties' => array(
 				'code'      => array(
 					'type'        => 'string',
-					'description' => __( '2 character continent code.', 'woocommerce' ),
+					'description' => __( '2 character continent code.', 'classic-commerce' ),
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'name'      => array(
 					'type'        => 'string',
-					'description' => __( 'Full name of continent.', 'woocommerce' ),
+					'description' => __( 'Full name of continent.', 'classic-commerce' ),
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'countries' => array(
 					'type'        => 'array',
-					'description' => __( 'List of countries on this continent.', 'woocommerce' ),
+					'description' => __( 'List of countries on this continent.', 'classic-commerce' ),
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 					'items'       => array(
@@ -269,49 +269,49 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 						'properties' => array(
 							'code'           => array(
 								'type'        => 'string',
-								'description' => __( 'ISO3166 alpha-2 country code.', 'woocommerce' ),
+								'description' => __( 'ISO3166 alpha-2 country code.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'currency_code'  => array(
 								'type'        => 'string',
-								'description' => __( 'Default ISO4127 alpha-3 currency code for the country.', 'woocommerce' ),
+								'description' => __( 'Default ISO4127 alpha-3 currency code for the country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'currency_pos'   => array(
 								'type'        => 'string',
-								'description' => __( 'Currency symbol position for this country.', 'woocommerce' ),
+								'description' => __( 'Currency symbol position for this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'decimal_sep'    => array(
 								'type'        => 'string',
-								'description' => __( 'Decimal separator for displayed prices for this country.', 'woocommerce' ),
+								'description' => __( 'Decimal separator for displayed prices for this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'dimension_unit' => array(
 								'type'        => 'string',
-								'description' => __( 'The unit lengths are defined in for this country.', 'woocommerce' ),
+								'description' => __( 'The unit lengths are defined in for this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'name'           => array(
 								'type'        => 'string',
-								'description' => __( 'Full name of country.', 'woocommerce' ),
+								'description' => __( 'Full name of country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'num_decimals'   => array(
 								'type'        => 'integer',
-								'description' => __( 'Number of decimal points shown in displayed prices for this country.', 'woocommerce' ),
+								'description' => __( 'Number of decimal points shown in displayed prices for this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'states'         => array(
 								'type'        => 'array',
-								'description' => __( 'List of states in this country.', 'woocommerce' ),
+								'description' => __( 'List of states in this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 								'items'       => array(
@@ -321,13 +321,13 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 									'properties' => array(
 										'code' => array(
 											'type'        => 'string',
-											'description' => __( 'State code.', 'woocommerce' ),
+											'description' => __( 'State code.', 'classic-commerce' ),
 											'context'     => array( 'view' ),
 											'readonly'    => true,
 										),
 										'name' => array(
 											'type'        => 'string',
-											'description' => __( 'Full name of state.', 'woocommerce' ),
+											'description' => __( 'Full name of state.', 'classic-commerce' ),
 											'context'     => array( 'view' ),
 											'readonly'    => true,
 										),
@@ -336,13 +336,13 @@ class WC_REST_Data_Continents_Controller extends WC_REST_Data_Controller {
 							),
 							'thousand_sep'   => array(
 								'type'        => 'string',
-								'description' => __( 'Thousands separator for displayed prices in this country.', 'woocommerce' ),
+								'description' => __( 'Thousands separator for displayed prices in this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),
 							'weight_unit'    => array(
 								'type'        => 'string',
-								'description' => __( 'The unit weights are defined in for this country.', 'woocommerce' ),
+								'description' => __( 'The unit weights are defined in for this country.', 'classic-commerce' ),
 								'context'     => array( 'view' ),
 								'readonly'    => true,
 							),

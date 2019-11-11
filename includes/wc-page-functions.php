@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Page Functions
+ * ClassicCommerce Page Functions
  *
  * Functions related to pages and menus.
  *
- * @package  WooCommerce\Functions
- * @version  2.6.0
+ * @package  ClassicCommerce\Functions
+ * @version  WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;

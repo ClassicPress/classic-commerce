@@ -2,7 +2,7 @@
 /**
  * Tests for the reports customers totals REST API.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
 
@@ -72,12 +72,12 @@ class WC_Tests_API_Reports_Customers_Totals extends WC_REST_Unit_Test_Case {
 		$data = array(
 			array(
 				'slug'  => 'paying',
-				'name'  => __( 'Paying customer', 'woocommerce' ),
+				'name'  => __( 'Paying customer', 'classic-commerce' ),
 				'total' => $total_paying,
 			),
 			array(
 				'slug'  => 'non_paying',
-				'name'  => __( 'Non-paying customer', 'woocommerce' ),
+				'name'  => __( 'Non-paying customer', 'classic-commerce' ),
 				'total' => $total_customers - $total_paying,
 			),
 		);

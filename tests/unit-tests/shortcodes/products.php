@@ -3,7 +3,7 @@
 /**
  * Class WC_Shortcode_Products.
  *
- * @package WooCommerce\Tests\Shortcodes
+ * @package ClassicCommerce\Tests\Shortcodes
  */
 class WC_Test_Shortcode_Products extends WC_Unit_Test_Case {
 

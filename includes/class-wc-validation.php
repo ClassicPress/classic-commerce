@@ -2,8 +2,8 @@
 /**
  * General user data validation methods
  *
- * @package WooCommerce\Classes
- * @version  2.4.0
+ * @package  ClassicCommerce\Classes
+ * @version  WC-2.4.0
  */
 
 defined( 'ABSPATH' ) || exit;

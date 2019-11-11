@@ -6,8 +6,8 @@
  *
  * @author   WooThemes
  * @category API
- * @package  WooCommerce/API
- * @since    3.0.0
+ * @package  ClassicCommerce/API
+ * @since    WC-3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * REST API Legacy Products controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_CRUD_Controller
  */
 class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
@@ -32,7 +32,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Query args.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param array           $args    Request args.
 	 * @param WP_REST_Request $request Request data.
@@ -153,7 +153,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Prepare a single product output for response.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_Post         $post    Post object.
 	 * @param WP_REST_Request $request Request object.
@@ -198,9 +198,9 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Get product menu order.
 	 *
-	 * @deprecated 3.0.0
-	 * @param WC_Product $product Product instance.
-	 * @return int
+	 * @deprecated WC-3.0.0
+	 * @param      WC_Product $product Product instance.
+	 * @return     int
 	 */
 	protected function get_product_menu_order( $product ) {
 		return $product->get_menu_order();
@@ -209,11 +209,11 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Save product meta.
 	 *
-	 * @deprecated 3.0.0
-	 * @param WC_Product $product
-	 * @param WP_REST_Request $request
-	 * @return bool
-	 * @throws WC_REST_Exception
+	 * @deprecated WC-3.0.0
+	 * @param      WC_Product $product
+	 * @param      WP_REST_Request $request
+	 * @return     bool
+	 * @throws     WC_REST_Exception
 	 */
 	protected function save_product_meta( $product, $request ) {
 		$product = $this->set_product_meta( $product, $request );
@@ -225,7 +225,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Set product meta.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @throws WC_REST_Exception REST API exceptions.
 	 * @param WC_Product      $product Product instance.
@@ -515,7 +515,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Save variations.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @throws WC_REST_Exception REST API exceptions.
 	 * @param WC_Product      $product          Product instance.
@@ -529,7 +529,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 			// Create initial name and status.
 			if ( ! $variation->get_slug() ) {
 				/* translators: 1: variation id 2: product name */
-				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'woocommerce' ), $variation->get_id(), $product->get_name() ) );
+				$variation->set_name( sprintf( __( 'Variation #%1$s of %2$s', 'classic-commerce' ), $variation->get_id(), $product->get_name() ) );
 				$variation->set_status( isset( $data['visible'] ) && false === $data['visible'] ? 'private' : 'publish' );
 			}
 
@@ -701,7 +701,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Add post meta fields.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param WP_Post         $post    Post data.
 	 * @param WP_REST_Request $request Request data.
@@ -749,7 +749,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Delete post.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param int|WP_Post $id Post ID or WP_Post instance.
 	 */
@@ -779,7 +779,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Get post types.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @return array
 	 */
@@ -790,7 +790,7 @@ class WC_REST_Legacy_Products_Controller extends WC_REST_CRUD_Controller {
 	/**
 	 * Save product images.
 	 *
-	 * @deprecated 3.0.0
+	 * @deprecated WC-3.0.0
 	 *
 	 * @param int $product_id
 	 * @param array $images

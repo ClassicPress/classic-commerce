@@ -1,22 +1,22 @@
 <?php
 /**
- * WooCommerce setup
+ * ClassicCommerce setup
  *
- * @package WooCommerce
- * @since   3.2.0
+ * @package ClassicCommerce
+ * @since   WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Main WooCommerce Class.
+ * Main ClassicCommerce Class.
  *
- * @class WooCommerce
+ * @class ClassicCommerce
  */
 final class WooCommerce {
 
 	/**
-	 * WooCommerce version.
+	 * ClassicCommerce version.
 	 *
 	 * @var string
 	 */
@@ -25,7 +25,7 @@ final class WooCommerce {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WooCommerce
+	 * @var   ClassicCommerce
 	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
@@ -101,14 +101,14 @@ final class WooCommerce {
 	public $deprecated_hook_handlers = array();
 
 	/**
-	 * Main WooCommerce Instance.
+	 * Main ClassicCommerce Instance.
 	 *
-	 * Ensures only one instance of WooCommerce is loaded or can be loaded.
+	 * Ensures only one instance of ClassicCommerce is loaded or can be loaded.
 	 *
 	 * @since WC-2.1
 	 * @static
 	 * @see WC()
-	 * @return WooCommerce - Main instance.
+	 * @return ClassicCommerce - Main instance.
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
@@ -123,7 +123,7 @@ final class WooCommerce {
 	 * @since WC-2.1
 	 */
 	public function __clone() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -132,7 +132,7 @@ final class WooCommerce {
 	 * @since WC-2.1
 	 */
 	public function __wakeup() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -148,7 +148,7 @@ final class WooCommerce {
 	}
 
 	/**
-	 * WooCommerce Constructor.
+	 * ClassicCommerce Constructor.
 	 */
 	public function __construct() {
 		$this->define_constants();
@@ -187,7 +187,7 @@ final class WooCommerce {
 			$logger = wc_get_logger();
 			$logger->critical(
 				/* translators: 1: error message 2: file name and path 3: line number */
-				sprintf( __( '%1$s in %2$s on line %3$s', 'woocommerce' ), $error['message'], $error['file'], $error['line'] ) . PHP_EOL,
+				sprintf( __( '%1$s in %2$s on line %3$s', 'classic-commerce' ), $error['message'], $error['file'], $error['line'] ) . PHP_EOL,
 				array(
 					'source' => 'fatal-errors',
 				)
@@ -390,10 +390,6 @@ final class WooCommerce {
 			$this->frontend_includes();
 		}
 
-		if ( $this->is_request( 'cron' ) && 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) ) {
-			include_once WC_ABSPATH . 'includes/class-wc-tracker.php';
-		}
-
 		$this->theme_support_includes();
 		$this->query = new WC_Query();
 		$this->api   = new WC_API();
@@ -405,22 +401,16 @@ final class WooCommerce {
 	 * @since WC-3.3.0
 	 */
 	private function theme_support_includes() {
-		if ( wc_is_active_theme( array( 'twentynineteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', 'twentyfourteen', 'twentythirteen', 'twentyeleven', 'twentytwelve', 'twentyten' ) ) ) {
+		if ( wc_is_active_theme( array( 'classicpress-twentyseventeen', 'classicpress-twentysixteen', 'classicpress-twentyfifteen', 'twentyseventeen', 'twentysixteen', 'twentyfifteen', ) ) ) {
 			switch ( get_template() ) {
-				case 'twentyten':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-ten.php';
+				case 'classicpress-twentyfifteen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fifteen.php';
 					break;
-				case 'twentyeleven':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-eleven.php';
+				case 'classicpress-twentysixteen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-sixteen.php';
 					break;
-				case 'twentytwelve':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-twelve.php';
-					break;
-				case 'twentythirteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-thirteen.php';
-					break;
-				case 'twentyfourteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fourteen.php';
+				case 'classicpress-twentyseventeen':
+					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-seventeen.php';
 					break;
 				case 'twentyfifteen':
 					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-fifteen.php';
@@ -430,9 +420,6 @@ final class WooCommerce {
 					break;
 				case 'twentyseventeen':
 					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-seventeen.php';
-					break;
-				case 'twentynineteen':
-					include_once WC_ABSPATH . 'includes/theme-support/class-wc-twenty-nineteen.php';
 					break;
 			}
 		}
@@ -457,14 +444,14 @@ final class WooCommerce {
 	}
 
 	/**
-	 * Function used to Init WooCommerce Template Functions - This makes them pluggable by plugins and themes.
+	 * Function used to Init ClassicCommerce Template Functions - This makes them pluggable by plugins and themes.
 	 */
 	public function include_template_functions() {
 		include_once WC_ABSPATH . 'includes/wc-template-functions.php';
 	}
 
 	/**
-	 * Init WooCommerce when WordPress Initialises.
+	 * Init ClassicCommerce when WordPress Initialises.
 	 */
 	public function init() {
 		// Before init action.
@@ -514,18 +501,18 @@ final class WooCommerce {
 	 */
 	public function load_plugin_textdomain() {
 		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
-		$locale = apply_filters( 'plugin_locale', $locale, 'woocommerce' );
+		$locale = apply_filters( 'plugin_locale', $locale, 'classic-commerce' );
 
-		unload_textdomain( 'woocommerce' );
-		load_textdomain( 'woocommerce', WP_LANG_DIR . '/woocommerce/woocommerce-' . $locale . '.mo' );
-		load_plugin_textdomain( 'woocommerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
+		unload_textdomain( 'classic-commerce' );
+		load_textdomain( 'classic-commerce', WP_LANG_DIR . '/classic-commerce/classic-commerce-' . $locale . '.mo' );
+		load_plugin_textdomain( 'classic-commerce', false, plugin_basename( dirname( WC_PLUGIN_FILE ) ) . '/i18n/languages' );
 	}
 
 	/**
 	 * Ensure theme and server variable compatibility and setup image sizes.
 	 */
 	public function setup_environment() {
-		/* @deprecated 2.2 Use WC()->template_path() instead. */
+		/* @deprecated WC-2.2 Use WC()->template_path() instead. */
 		$this->define( 'WC_TEMPLATE_PATH', $this->template_path() );
 
 		$this->add_thumbnail_support();
@@ -648,7 +635,7 @@ final class WooCommerce {
 	}
 
 	/**
-	 * WooCommerce Payment Token Meta API and Term/Order item Meta - set table names.
+	 * ClassicCommerce Payment Token Meta API and Term/Order item Meta - set table names.
 	 */
 	public function wpdb_table_fix() {
 		global $wpdb;

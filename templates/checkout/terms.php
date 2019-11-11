@@ -2,7 +2,7 @@
 /**
  * Checkout terms and conditions area.
  *
- * @package WooCommerce/Templates
+ * @package ClassicCommerce/Templates
  * @version WC-3.4.0
  */
 

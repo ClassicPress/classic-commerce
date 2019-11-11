@@ -67,7 +67,7 @@ class ActionScheduler_DateTime extends DateTime {
 	/**
 	 * Get the timestamp with the WordPress timezone offset added or subtracted.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function getOffsetTimestamp() {

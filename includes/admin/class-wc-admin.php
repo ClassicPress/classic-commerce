@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce Admin
+ * ClassicCommerce Admin
  *
  * @class    WC_Admin
  * @author   WooThemes
  * @category Admin
- * @package  WooCommerce/Admin
- * @version  2.6.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-2.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -79,10 +79,6 @@ class WC_Admin {
 
 		// Helper
 		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-options.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-api.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-updater.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-plugin-info.php';
-		include_once dirname( __FILE__ ) . '/helper/class-wc-helper-compat.php';
 		include_once dirname( __FILE__ ) . '/helper/class-wc-helper.php';
 	}
 
@@ -196,7 +192,7 @@ class WC_Admin {
 			$mailer = WC()->mailer();
 
 			// get the preview email subject
-			$email_heading = __( 'HTML email template', 'woocommerce' );
+			$email_heading = __( 'HTML email template', 'classic-commerce' );
 
 			// get the preview email content
 			ob_start();
@@ -216,9 +212,9 @@ class WC_Admin {
 	}
 
 	/**
-	 * Change the admin footer text on WooCommerce admin pages.
+	 * Change the admin footer text on Classic Commerce admin pages.
 	 *
-	 * @since  2.3
+	 * @since  WC-2.3
 	 * @param  string $footer_text
 	 * @return string
 	 */
@@ -232,25 +228,9 @@ class WC_Admin {
 		// Set only WC pages.
 		$wc_pages = array_diff( $wc_pages, array( 'profile', 'user-edit' ) );
 
-		// Check to make sure we're on a WooCommerce admin page.
+		// Check to make sure we're on a Classic Commerce admin page.
 		if ( isset( $current_screen->id ) && apply_filters( 'woocommerce_display_admin_footer_text', in_array( $current_screen->id, $wc_pages ) ) ) {
-			// Change the footer text
-			if ( ! get_option( 'woocommerce_admin_footer_text_rated' ) ) {
-				$footer_text = sprintf(
-					/* translators: 1: WooCommerce 2:: five stars */
-					__( 'If you like %1$s please leave us a %2$s rating. A huge thanks in advance!', 'woocommerce' ),
-					sprintf( '<strong>%s</strong>', esc_html__( 'WooCommerce', 'woocommerce' ) ),
-					'<a href="https://wordpress.org/support/plugin/woocommerce/reviews?rate=5#new-post" target="_blank" class="wc-rating-link" data-rated="' . esc_attr__( 'Thanks :)', 'woocommerce' ) . '">&#9733;&#9733;&#9733;&#9733;&#9733;</a>'
-				);
-				wc_enqueue_js(
-					"jQuery( 'a.wc-rating-link' ).click( function() {
-						jQuery.post( '" . WC()->ajax_url() . "', { action: 'woocommerce_rated' } );
-						jQuery( this ).parent().text( jQuery( this ).data( 'rated' ) );
-					});"
-				);
-			} else {
-				$footer_text = __( 'Thank you for selling with WooCommerce.', 'woocommerce' );
-			}
+				$footer_text = __( 'Thank you for using Classic Commerce.', 'classic-commerce' );
 		}
 
 		return $footer_text;

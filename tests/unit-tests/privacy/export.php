@@ -2,7 +2,7 @@
 /**
  * Privacy data exporter.
  *
- * @package WooCommerce\Tests\Util
+ * @package ClassicCommerce\Tests\Util
  */
 class WC_Test_Privacy_Export extends WC_Unit_Test_Case {
 

@@ -6,8 +6,8 @@
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Meta Boxes
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin/Meta Boxes
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -44,17 +44,17 @@ class WC_Meta_Box_Coupon_Data {
 				$coupon_data_tabs = apply_filters(
 					'woocommerce_coupon_data_tabs', array(
 						'general'           => array(
-							'label'  => __( 'General', 'woocommerce' ),
+							'label'  => __( 'General', 'classic-commerce' ),
 							'target' => 'general_coupon_data',
 							'class'  => 'general_coupon_data',
 						),
 						'usage_restriction' => array(
-							'label'  => __( 'Usage restriction', 'woocommerce' ),
+							'label'  => __( 'Usage restriction', 'classic-commerce' ),
 							'target' => 'usage_restriction_coupon_data',
 							'class'  => '',
 						),
 						'usage_limit'       => array(
-							'label'  => __( 'Usage limits', 'woocommerce' ),
+							'label'  => __( 'Usage limits', 'classic-commerce' ),
 							'target' => 'usage_limit_coupon_data',
 							'class'  => '',
 						),
@@ -77,7 +77,7 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_select(
 					array(
 						'id'      => 'discount_type',
-						'label'   => __( 'Discount type', 'woocommerce' ),
+						'label'   => __( 'Discount type', 'classic-commerce' ),
 						'options' => wc_get_coupon_types(),
 						'value'   => $coupon->get_discount_type( 'edit' ),
 					)
@@ -87,9 +87,9 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_text_input(
 					array(
 						'id'          => 'coupon_amount',
-						'label'       => __( 'Coupon amount', 'woocommerce' ),
+						'label'       => __( 'Coupon amount', 'classic-commerce' ),
 						'placeholder' => wc_format_localized_price( 0 ),
-						'description' => __( 'Value of the coupon.', 'woocommerce' ),
+						'description' => __( 'Value of the coupon.', 'classic-commerce' ),
 						'data_type'   => 'price',
 						'desc_tip'    => true,
 						'value'       => $coupon->get_amount( 'edit' ),
@@ -101,8 +101,8 @@ class WC_Meta_Box_Coupon_Data {
 					woocommerce_wp_checkbox(
 						array(
 							'id'          => 'free_shipping',
-							'label'       => __( 'Allow free shipping', 'woocommerce' ),
-							'description' => sprintf( __( 'Check this box if the coupon grants free shipping. A <a href="%s" target="_blank">free shipping method</a> must be enabled in your shipping zone and be set to require "a valid free shipping coupon" (see the "Free Shipping Requires" setting).', 'woocommerce' ), 'https://docs.woocommerce.com/document/free-shipping/' ),
+							'label'       => __( 'Allow free shipping', 'classic-commerce' ),
+							'description' => sprintf( __( 'Check this box if the coupon grants free shipping. A <a href="%s" target="_blank">free shipping method</a> must be enabled in your shipping zone and be set to require "a valid free shipping coupon" (see the "Free Shipping Requires" setting).', 'classic-commerce' ), 'https://docs.woocommerce.com/document/free-shipping/' ),
 							'value'       => wc_bool_to_string( $coupon->get_free_shipping( 'edit' ) ),
 						)
 					);
@@ -114,7 +114,7 @@ class WC_Meta_Box_Coupon_Data {
 					array(
 						'id'                => 'expiry_date',
 						'value'             => esc_attr( $expiry_date ),
-						'label'             => __( 'Coupon expiry date', 'woocommerce' ),
+						'label'             => __( 'Coupon expiry date', 'classic-commerce' ),
 						'placeholder'       => 'YYYY-MM-DD',
 						'description'       => '',
 						'class'             => 'date-picker',
@@ -137,9 +137,9 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_text_input(
 					array(
 						'id'          => 'minimum_amount',
-						'label'       => __( 'Minimum spend', 'woocommerce' ),
-						'placeholder' => __( 'No minimum', 'woocommerce' ),
-						'description' => __( 'This field allows you to set the minimum spend (subtotal) allowed to use the coupon.', 'woocommerce' ),
+						'label'       => __( 'Minimum spend', 'classic-commerce' ),
+						'placeholder' => __( 'No minimum', 'classic-commerce' ),
+						'description' => __( 'This field allows you to set the minimum spend (subtotal) allowed to use the coupon.', 'classic-commerce' ),
 						'data_type'   => 'price',
 						'desc_tip'    => true,
 						'value'       => $coupon->get_minimum_amount( 'edit' ),
@@ -150,9 +150,9 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_text_input(
 					array(
 						'id'          => 'maximum_amount',
-						'label'       => __( 'Maximum spend', 'woocommerce' ),
-						'placeholder' => __( 'No maximum', 'woocommerce' ),
-						'description' => __( 'This field allows you to set the maximum spend (subtotal) allowed when using the coupon.', 'woocommerce' ),
+						'label'       => __( 'Maximum spend', 'classic-commerce' ),
+						'placeholder' => __( 'No maximum', 'classic-commerce' ),
+						'description' => __( 'This field allows you to set the maximum spend (subtotal) allowed when using the coupon.', 'classic-commerce' ),
 						'data_type'   => 'price',
 						'desc_tip'    => true,
 						'value'       => $coupon->get_maximum_amount( 'edit' ),
@@ -163,8 +163,8 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_checkbox(
 					array(
 						'id'          => 'individual_use',
-						'label'       => __( 'Individual use only', 'woocommerce' ),
-						'description' => __( 'Check this box if the coupon cannot be used in conjunction with other coupons.', 'woocommerce' ),
+						'label'       => __( 'Individual use only', 'classic-commerce' ),
+						'description' => __( 'Check this box if the coupon cannot be used in conjunction with other coupons.', 'classic-commerce' ),
 						'value'       => wc_bool_to_string( $coupon->get_individual_use( 'edit' ) ),
 					)
 				);
@@ -173,8 +173,8 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_checkbox(
 					array(
 						'id'          => 'exclude_sale_items',
-						'label'       => __( 'Exclude sale items', 'woocommerce' ),
-						'description' => __( 'Check this box if the coupon should not apply to items on sale. Per-item coupons will only work if the item is not on sale. Per-cart coupons will only work if there are items in the cart that are not on sale.', 'woocommerce' ),
+						'label'       => __( 'Exclude sale items', 'classic-commerce' ),
+						'description' => __( 'Check this box if the coupon should not apply to items on sale. Per-item coupons will only work if the item is not on sale. Per-cart coupons will only work if there are items in the cart that are not on sale.', 'classic-commerce' ),
 						'value'       => wc_bool_to_string( $coupon->get_exclude_sale_items( 'edit' ) ),
 					)
 				);
@@ -184,8 +184,8 @@ class WC_Meta_Box_Coupon_Data {
 				// Product ids.
 				?>
 				<p class="form-field">
-					<label><?php _e( 'Products', 'woocommerce' ); ?></label>
-					<select class="wc-product-search" multiple="multiple" style="width: 50%;" name="product_ids[]" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products_and_variations">
+					<label><?php _e( 'Products', 'classic-commerce' ); ?></label>
+					<select class="wc-product-search" multiple="multiple" style="width: 50%;" name="product_ids[]" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'classic-commerce' ); ?>" data-action="woocommerce_json_search_products_and_variations">
 						<?php
 						$product_ids = $coupon->get_product_ids( 'edit' );
 
@@ -197,13 +197,13 @@ class WC_Meta_Box_Coupon_Data {
 						}
 						?>
 					</select>
-					<?php echo wc_help_tip( __( 'Products that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					<?php echo wc_help_tip( __( 'Products that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'classic-commerce' ) ); ?>
 				</p>
 
 				<?php // Exclude Product ids. ?>
 				<p class="form-field">
-					<label><?php _e( 'Exclude products', 'woocommerce' ); ?></label>
-					<select class="wc-product-search" multiple="multiple" style="width: 50%;" name="exclude_product_ids[]" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'woocommerce' ); ?>" data-action="woocommerce_json_search_products_and_variations">
+					<label><?php _e( 'Exclude products', 'classic-commerce' ); ?></label>
+					<select class="wc-product-search" multiple="multiple" style="width: 50%;" name="exclude_product_ids[]" data-placeholder="<?php esc_attr_e( 'Search for a product&hellip;', 'classic-commerce' ); ?>" data-action="woocommerce_json_search_products_and_variations">
 						<?php
 						$product_ids = $coupon->get_excluded_product_ids( 'edit' );
 
@@ -215,7 +215,7 @@ class WC_Meta_Box_Coupon_Data {
 						}
 						?>
 					</select>
-					<?php echo wc_help_tip( __( 'Products that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					<?php echo wc_help_tip( __( 'Products that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'classic-commerce' ) ); ?>
 				</p>
 				<?php
 
@@ -224,8 +224,8 @@ class WC_Meta_Box_Coupon_Data {
 				// Categories.
 				?>
 				<p class="form-field">
-					<label for="product_categories"><?php _e( 'Product categories', 'woocommerce' ); ?></label>
-					<select id="product_categories" name="product_categories[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php esc_attr_e( 'Any category', 'woocommerce' ); ?>">
+					<label for="product_categories"><?php _e( 'Product categories', 'classic-commerce' ); ?></label>
+					<select id="product_categories" name="product_categories[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php esc_attr_e( 'Any category', 'classic-commerce' ); ?>">
 						<?php
 						$category_ids = $coupon->get_product_categories( 'edit' );
 						$categories   = get_terms( 'product_cat', 'orderby=name&hide_empty=0' );
@@ -236,13 +236,13 @@ class WC_Meta_Box_Coupon_Data {
 							}
 						}
 						?>
-					</select> <?php echo wc_help_tip( __( 'Product categories that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					</select> <?php echo wc_help_tip( __( 'Product categories that the coupon will be applied to, or that need to be in the cart in order for the "Fixed cart discount" to be applied.', 'classic-commerce' ) ); ?>
 				</p>
 
 				<?php // Exclude Categories. ?>
 				<p class="form-field">
-					<label for="exclude_product_categories"><?php _e( 'Exclude categories', 'woocommerce' ); ?></label>
-					<select id="exclude_product_categories" name="exclude_product_categories[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php esc_attr_e( 'No categories', 'woocommerce' ); ?>">
+					<label for="exclude_product_categories"><?php _e( 'Exclude categories', 'classic-commerce' ); ?></label>
+					<select id="exclude_product_categories" name="exclude_product_categories[]" style="width: 50%;"  class="wc-enhanced-select" multiple="multiple" data-placeholder="<?php esc_attr_e( 'No categories', 'classic-commerce' ); ?>">
 						<?php
 						$category_ids = $coupon->get_excluded_product_categories( 'edit' );
 						$categories   = get_terms( 'product_cat', 'orderby=name&hide_empty=0' );
@@ -254,7 +254,7 @@ class WC_Meta_Box_Coupon_Data {
 						}
 						?>
 					</select>
-					<?php echo wc_help_tip( __( 'Product categories that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'woocommerce' ) ); ?>
+					<?php echo wc_help_tip( __( 'Product categories that the coupon will not be applied to, or that cannot be in the cart in order for the "Fixed cart discount" to be applied.', 'classic-commerce' ) ); ?>
 				</p>
 			</div>
 			<div class="options_group">
@@ -263,9 +263,9 @@ class WC_Meta_Box_Coupon_Data {
 				woocommerce_wp_text_input(
 					array(
 						'id'                => 'customer_email',
-						'label'             => __( 'Allowed emails', 'woocommerce' ),
-						'placeholder'       => __( 'No restrictions', 'woocommerce' ),
-						'description'       => __( 'Whitelist of billing emails to check against when an order is placed. Separate email addresses with commas. You can also use an asterisk (*) to match parts of an email. For example "*@gmail.com" would match all gmail addresses.', 'woocommerce' ),
+						'label'             => __( 'Allowed emails', 'classic-commerce' ),
+						'placeholder'       => __( 'No restrictions', 'classic-commerce' ),
+						'description'       => __( 'Whitelist of billing emails to check against when an order is placed. Separate email addresses with commas. You can also use an asterisk (*) to match parts of an email. For example "*@gmail.com" would match all gmail addresses.', 'classic-commerce' ),
 						'value'             => implode( ', ', (array) $coupon->get_email_restrictions( 'edit' ) ),
 						'desc_tip'          => true,
 						'type'              => 'email',
@@ -286,9 +286,9 @@ class WC_Meta_Box_Coupon_Data {
 					woocommerce_wp_text_input(
 						array(
 							'id'                => 'usage_limit',
-							'label'             => __( 'Usage limit per coupon', 'woocommerce' ),
-							'placeholder'       => esc_attr__( 'Unlimited usage', 'woocommerce' ),
-							'description'       => __( 'How many times this coupon can be used before it is void.', 'woocommerce' ),
+							'label'             => __( 'Usage limit per coupon', 'classic-commerce' ),
+							'placeholder'       => esc_attr__( 'Unlimited usage', 'classic-commerce' ),
+							'description'       => __( 'How many times this coupon can be used before it is void.', 'classic-commerce' ),
 							'type'              => 'number',
 							'desc_tip'          => true,
 							'class'             => 'short',
@@ -304,9 +304,9 @@ class WC_Meta_Box_Coupon_Data {
 					woocommerce_wp_text_input(
 						array(
 							'id'                => 'limit_usage_to_x_items',
-							'label'             => __( 'Limit usage to X items', 'woocommerce' ),
-							'placeholder'       => esc_attr__( 'Apply to all qualifying items in cart', 'woocommerce' ),
-							'description'       => __( 'The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart.', 'woocommerce' ),
+							'label'             => __( 'Limit usage to X items', 'classic-commerce' ),
+							'placeholder'       => esc_attr__( 'Apply to all qualifying items in cart', 'classic-commerce' ),
+							'description'       => __( 'The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart.', 'classic-commerce' ),
 							'desc_tip'          => true,
 							'class'             => 'short',
 							'type'              => 'number',
@@ -322,9 +322,9 @@ class WC_Meta_Box_Coupon_Data {
 					woocommerce_wp_text_input(
 						array(
 							'id'                => 'usage_limit_per_user',
-							'label'             => __( 'Usage limit per user', 'woocommerce' ),
-							'placeholder'       => esc_attr__( 'Unlimited usage', 'woocommerce' ),
-							'description'       => __( 'How many times this coupon can be used by an individual user. Uses billing email for guests, and user ID for logged in users.', 'woocommerce' ),
+							'label'             => __( 'Usage limit per user', 'classic-commerce' ),
+							'placeholder'       => esc_attr__( 'Unlimited usage', 'classic-commerce' ),
+							'description'       => __( 'How many times this coupon can be used by an individual user. Uses billing email for guests, and user ID for logged in users.', 'classic-commerce' ),
 							'desc_tip'          => true,
 							'class'             => 'short',
 							'type'              => 'number',
@@ -357,7 +357,7 @@ class WC_Meta_Box_Coupon_Data {
 		$id_from_code = wc_get_coupon_id_by_code( $coupon_code, $post_id );
 
 		if ( $id_from_code ) {
-			WC_Admin_Meta_Boxes::add_error( __( 'Coupon code already exists - customers will use the latest coupon with this code.', 'woocommerce' ) );
+			WC_Admin_Meta_Boxes::add_error( __( 'Coupon code already exists - customers will use the latest coupon with this code.', 'classic-commerce' ) );
 		}
 
 		$product_categories         = isset( $_POST['product_categories'] ) ? (array) $_POST['product_categories'] : array();

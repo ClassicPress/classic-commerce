@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Payment Gateways
+ * ClassicCommerce Payment Gateways
  *
  * Loads payment gateways via hooks for use in the store.
  *
  * @version WC-2.2.0
- * @package WooCommerce/Classes/Payment
+ * @package ClassicCommerce/Classes/Payment
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -25,7 +25,7 @@ class WC_Payment_Gateways {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var WC_Payment_Gateways
+	 * @var   WC_Payment_Gateways
 	 * @since WC-2.1.0
 	 */
 	protected static $_instance = null;
@@ -35,7 +35,7 @@ class WC_Payment_Gateways {
 	 *
 	 * Ensures only one instance of WC_Payment_Gateways is loaded or can be loaded.
 	 *
-	 * @since WC-2.1
+	 * @since  WC-2.1
 	 * @return WC_Payment_Gateways Main instance
 	 */
 	public static function instance() {
@@ -51,7 +51,7 @@ class WC_Payment_Gateways {
 	 * @since WC-2.1
 	 */
 	public function __clone() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Cloning is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -60,7 +60,7 @@ class WC_Payment_Gateways {
 	 * @since WC-2.1
 	 */
 	public function __wakeup() {
-		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'woocommerce' ), '2.1' );
+		wc_doing_it_wrong( __FUNCTION__, __( 'Unserializing instances of this class is forbidden.', 'classic-commerce' ), '2.1' );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class WC_Payment_Gateways {
 		);
 
 		/**
-		 * Simplify Commerce is @deprecated in 2.6.0. Only load when enabled.
+		 * Simplify Commerce is @deprecated in WC-2.6.0. Only load when enabled.
 		 */
 		if ( ! class_exists( 'WC_Gateway_Simplify_Commerce_Loader' ) && in_array( WC()->countries->get_base_country(), apply_filters( 'woocommerce_gateway_simplify_commerce_supported_countries', array( 'US', 'IE' ) ), true ) ) {
 			$simplify_options = get_option( 'woocommerce_simplify_commerce_settings', array() );
@@ -140,7 +140,7 @@ class WC_Payment_Gateways {
 	/**
 	 * Get array of registered gateway ids
 	 *
-	 * @since WC-2.6.0
+	 * @since  WC-2.6.0
 	 * @return array of strings
 	 */
 	public function get_payment_gateway_ids() {

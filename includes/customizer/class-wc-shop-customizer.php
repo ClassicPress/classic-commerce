@@ -1,9 +1,9 @@
 <?php
 /**
- * Adds options to the customizer for WooCommerce.
+ * Adds options to the customizer for ClassicCommerce.
  *
  * @version WC-3.3.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -33,7 +33,7 @@ class WC_Shop_Customizer {
 			'priority'       => 200,
 			'capability'     => 'manage_woocommerce',
 			'theme_supports' => '',
-			'title'          => __( 'WooCommerce', 'woocommerce' ),
+			'title'          => __( 'Classic Commerce', 'classic-commerce' ),
 		) );
 
 		$this->add_store_notice_section( $wp_customize );
@@ -94,9 +94,9 @@ class WC_Shop_Customizer {
 		$max_columns = wc_get_theme_support( 'product_grid::max_columns', '' );
 
 		/* translators: %d: Setting value */
-		$min_notice = __( 'The minimum allowed setting is %d', 'woocommerce' );
+		$min_notice = __( 'The minimum allowed setting is %d', 'classic-commerce' );
 		/* translators: %d: Setting value */
-		$max_notice = __( 'The maximum allowed setting is %d', 'woocommerce' );
+		$max_notice = __( 'The maximum allowed setting is %d', 'classic-commerce' );
 		?>
 		<script type="text/javascript">
 			jQuery( document ).ready( function( $ ) {
@@ -268,12 +268,12 @@ class WC_Shop_Customizer {
 	 */
 	public function sanitize_default_catalog_orderby( $value ) {
 		$options = apply_filters( 'woocommerce_default_catalog_orderby_options', array(
-			'menu_order' => __( 'Default sorting (custom ordering + name)', 'woocommerce' ),
-			'popularity' => __( 'Popularity (sales)', 'woocommerce' ),
-			'rating'     => __( 'Average rating', 'woocommerce' ),
-			'date'       => __( 'Sort by most recent', 'woocommerce' ),
-			'price'      => __( 'Sort by price (asc)', 'woocommerce' ),
-			'price-desc' => __( 'Sort by price (desc)', 'woocommerce' ),
+			'menu_order' => __( 'Default sorting (custom ordering + name)', 'classic-commerce' ),
+			'popularity' => __( 'Popularity (sales)', 'classic-commerce' ),
+			'rating'     => __( 'Average rating', 'classic-commerce' ),
+			'date'       => __( 'Sort by most recent', 'classic-commerce' ),
+			'price'      => __( 'Sort by price (asc)', 'classic-commerce' ),
+			'price-desc' => __( 'Sort by price (desc)', 'classic-commerce' ),
 		) );
 
 		return array_key_exists( $value, $options ) ? $value : 'menu_order';
@@ -288,7 +288,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_section(
 			'woocommerce_store_notice',
 			array(
-				'title'    => __( 'Store Notice', 'woocommerce' ),
+				'title'    => __( 'Store Notice', 'classic-commerce' ),
 				'priority' => 10,
 				'panel'    => 'woocommerce',
 			)
@@ -308,7 +308,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_setting(
 			'woocommerce_demo_store_notice',
 			array(
-				'default'           => __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'woocommerce' ),
+				'default'           => __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'classic-commerce' ),
 				'type'              => 'option',
 				'capability'        => 'manage_woocommerce',
 				'sanitize_callback' => 'wp_kses_post',
@@ -319,8 +319,8 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_demo_store_notice',
 			array(
-				'label'       => __( 'Store notice', 'woocommerce' ),
-				'description' => __( 'If enabled, this text will be shown site-wide. You can use it to show events or promotions to visitors!', 'woocommerce' ),
+				'label'       => __( 'Store notice', 'classic-commerce' ),
+				'description' => __( 'If enabled, this text will be shown site-wide. You can use it to show events or promotions to visitors!', 'classic-commerce' ),
 				'section'     => 'woocommerce_store_notice',
 				'settings'    => 'woocommerce_demo_store_notice',
 				'type'        => 'textarea',
@@ -330,7 +330,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_demo_store',
 			array(
-				'label'    => __( 'Enable store notice', 'woocommerce' ),
+				'label'    => __( 'Enable store notice', 'classic-commerce' ),
 				'section'  => 'woocommerce_store_notice',
 				'settings' => 'woocommerce_demo_store',
 				'type'     => 'checkbox',
@@ -357,7 +357,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_section(
 			'woocommerce_product_catalog',
 			array(
-				'title'    => __( 'Product Catalog', 'woocommerce' ),
+				'title'    => __( 'Product Catalog', 'classic-commerce' ),
 				'priority' => 10,
 				'panel'    => 'woocommerce',
 			)
@@ -376,15 +376,15 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_shop_page_display',
 			array(
-				'label'       => __( 'Shop page display', 'woocommerce' ),
-				'description' => __( 'Choose what to display on the main shop page.', 'woocommerce' ),
+				'label'       => __( 'Shop page display', 'classic-commerce' ),
+				'description' => __( 'Choose what to display on the main shop page.', 'classic-commerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_shop_page_display',
 				'type'        => 'select',
 				'choices'     => array(
-					''              => __( 'Show products', 'woocommerce' ),
-					'subcategories' => __( 'Show categories', 'woocommerce' ),
-					'both'          => __( 'Show categories &amp; products', 'woocommerce' ),
+					''              => __( 'Show products', 'classic-commerce' ),
+					'subcategories' => __( 'Show categories', 'classic-commerce' ),
+					'both'          => __( 'Show categories &amp; products', 'classic-commerce' ),
 				),
 			)
 		);
@@ -402,15 +402,15 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_category_archive_display',
 			array(
-				'label'       => __( 'Category display', 'woocommerce' ),
-				'description' => __( 'Choose what to display on product category pages.', 'woocommerce' ),
+				'label'       => __( 'Category display', 'classic-commerce' ),
+				'description' => __( 'Choose what to display on product category pages.', 'classic-commerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_category_archive_display',
 				'type'        => 'select',
 				'choices'     => array(
-					''              => __( 'Show products', 'woocommerce' ),
-					'subcategories' => __( 'Show subcategories', 'woocommerce' ),
-					'both'          => __( 'Show subcategories &amp; products', 'woocommerce' ),
+					''              => __( 'Show products', 'classic-commerce' ),
+					'subcategories' => __( 'Show subcategories', 'classic-commerce' ),
+					'both'          => __( 'Show subcategories &amp; products', 'classic-commerce' ),
 				),
 			)
 		);
@@ -428,18 +428,18 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_default_catalog_orderby',
 			array(
-				'label'       => __( 'Default product sorting', 'woocommerce' ),
-				'description' => __( 'How should products be sorted in the catalog by default?', 'woocommerce' ),
+				'label'       => __( 'Default product sorting', 'classic-commerce' ),
+				'description' => __( 'How should products be sorted in the catalog by default?', 'classic-commerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_default_catalog_orderby',
 				'type'        => 'select',
 				'choices'     => apply_filters( 'woocommerce_default_catalog_orderby_options', array(
-					'menu_order' => __( 'Default sorting (custom ordering + name)', 'woocommerce' ),
-					'popularity' => __( 'Popularity (sales)', 'woocommerce' ),
-					'rating'     => __( 'Average rating', 'woocommerce' ),
-					'date'       => __( 'Sort by most recent', 'woocommerce' ),
-					'price'      => __( 'Sort by price (asc)', 'woocommerce' ),
-					'price-desc' => __( 'Sort by price (desc)', 'woocommerce' ),
+					'menu_order' => __( 'Default sorting (custom ordering + name)', 'classic-commerce' ),
+					'popularity' => __( 'Popularity (sales)', 'classic-commerce' ),
+					'rating'     => __( 'Average rating', 'classic-commerce' ),
+					'date'       => __( 'Sort by most recent', 'classic-commerce' ),
+					'price'      => __( 'Sort by price (asc)', 'classic-commerce' ),
+					'price-desc' => __( 'Sort by price (desc)', 'classic-commerce' ),
 				) ),
 			)
 		);
@@ -463,8 +463,8 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_catalog_columns',
 			array(
-				'label'       => __( 'Products per row', 'woocommerce' ),
-				'description' => __( 'How many products should be shown per row?', 'woocommerce' ),
+				'label'       => __( 'Products per row', 'classic-commerce' ),
+				'description' => __( 'How many products should be shown per row?', 'classic-commerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_catalog_columns',
 				'type'        => 'number',
@@ -493,8 +493,8 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_catalog_rows',
 			array(
-				'label'       => __( 'Rows per page', 'woocommerce' ),
-				'description' => __( 'How many rows of products should be shown per page?', 'woocommerce' ),
+				'label'       => __( 'Rows per page', 'classic-commerce' ),
+				'description' => __( 'How many rows of products should be shown per page?', 'classic-commerce' ),
 				'section'     => 'woocommerce_product_catalog',
 				'settings'    => 'woocommerce_catalog_rows',
 				'type'        => 'number',
@@ -516,19 +516,19 @@ class WC_Shop_Customizer {
 		if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'photon' ) ) {
 			$regen_description = ''; // Nothing to report; Jetpack will handle magically.
 		} elseif ( apply_filters( 'woocommerce_background_image_regeneration', true ) && ! is_multisite() ) {
-			$regen_description = __( 'After publishing your changes, new image sizes will be generated automatically.', 'woocommerce' );
+			$regen_description = __( 'After publishing your changes, new image sizes will be generated automatically.', 'classic-commerce' );
 		} elseif ( apply_filters( 'woocommerce_background_image_regeneration', true ) && is_multisite() ) {
 			/* translators: 1: tools URL 2: regen thumbs url */
-			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in WooCommerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'woocommerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
+			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you regenerate thumbnails. You can do this from the <a href="%1$s" target="_blank">tools section in Classic Commerce</a> or by using a plugin such as <a href="%2$s" target="_blank">Regenerate Thumbnails</a>.', 'classic-commerce' ), admin_url( 'admin.php?page=wc-status&tab=tools' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
 		} else {
 			/* translators: %s: regen thumbs url */
-			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you <a href="%s" target="_blank">Regenerate Thumbnails</a>.', 'woocommerce' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
+			$regen_description = sprintf( __( 'After publishing your changes, new image sizes may not be shown until you <a href="%s" target="_blank">Regenerate Thumbnails</a>.', 'classic-commerce' ), 'https://en-gb.wordpress.org/plugins/regenerate-thumbnails/' );
 		}
 
 		$wp_customize->add_section(
 			'woocommerce_product_images',
 			array(
-				'title'       => __( 'Product Images', 'woocommerce' ),
+				'title'       => __( 'Product Images', 'classic-commerce' ),
 				'description' => $regen_description,
 				'priority'    => 20,
 				'panel'       => 'woocommerce',
@@ -550,8 +550,8 @@ class WC_Shop_Customizer {
 			$wp_customize->add_control(
 				'woocommerce_single_image_width',
 				array(
-					'label'       => __( 'Main image width', 'woocommerce' ),
-					'description' => __( 'Image size used for the main image on single product pages. These images will remain uncropped.', 'woocommerce' ),
+					'label'       => __( 'Main image width', 'classic-commerce' ),
+					'description' => __( 'Image size used for the main image on single product pages. These images will remain uncropped.', 'classic-commerce' ),
 					'section'     => 'woocommerce_product_images',
 					'settings'    => 'woocommerce_single_image_width',
 					'type'        => 'number',
@@ -578,8 +578,8 @@ class WC_Shop_Customizer {
 			$wp_customize->add_control(
 				'woocommerce_thumbnail_image_width',
 				array(
-					'label'       => __( 'Thumbnail width', 'woocommerce' ),
-					'description' => __( 'Image size used for products in the catalog.', 'woocommerce' ),
+					'label'       => __( 'Thumbnail width', 'classic-commerce' ),
+					'description' => __( 'Image size used for products in the catalog.', 'classic-commerce' ),
 					'section'     => 'woocommerce_product_images',
 					'settings'    => 'woocommerce_thumbnail_image_width',
 					'type'        => 'number',
@@ -636,19 +636,19 @@ class WC_Shop_Customizer {
 						'custom_width'  => 'woocommerce_thumbnail_cropping_custom_width',
 						'custom_height' => 'woocommerce_thumbnail_cropping_custom_height',
 					),
-					'label'    => __( 'Thumbnail cropping', 'woocommerce' ),
+					'label'    => __( 'Thumbnail cropping', 'classic-commerce' ),
 					'choices'  => array(
 						'1:1'       => array(
-							'label'       => __( '1:1', 'woocommerce' ),
-							'description' => __( 'Images will be cropped into a square', 'woocommerce' ),
+							'label'       => __( '1:1', 'classic-commerce' ),
+							'description' => __( 'Images will be cropped into a square', 'classic-commerce' ),
 						),
 						'custom'    => array(
-							'label'       => __( 'Custom', 'woocommerce' ),
-							'description' => __( 'Images will be cropped to a custom aspect ratio', 'woocommerce' ),
+							'label'       => __( 'Custom', 'classic-commerce' ),
+							'description' => __( 'Images will be cropped to a custom aspect ratio', 'classic-commerce' ),
 						),
 						'uncropped' => array(
-							'label'       => __( 'Uncropped', 'woocommerce' ),
-							'description' => __( 'Images will display using the aspect ratio in which they were uploaded', 'woocommerce' ),
+							'label'       => __( 'Uncropped', 'classic-commerce' ),
+							'description' => __( 'Images will display using the aspect ratio in which they were uploaded', 'classic-commerce' ),
 						),
 					),
 				)
@@ -665,18 +665,18 @@ class WC_Shop_Customizer {
 		$wp_customize->add_section(
 			'woocommerce_checkout',
 			array(
-				'title'       => __( 'Checkout', 'woocommerce' ),
+				'title'       => __( 'Checkout', 'classic-commerce' ),
 				'priority'    => 20,
 				'panel'       => 'woocommerce',
-				'description' => __( 'These options let you change the appearance of the WooCommerce checkout.', 'woocommerce' ),
+				'description' => __( 'These options let you change the appearance of the Classic Commerce checkout.', 'classic-commerce' ),
 			)
 		);
 
 		// Checkout field controls.
 		$fields = array(
-			'company'   => __( 'Company name', 'woocommerce' ),
-			'address_2' => __( 'Address line 2', 'woocommerce' ),
-			'phone'     => __( 'Phone', 'woocommerce' ),
+			'company'   => __( 'Company name', 'classic-commerce' ),
+			'address_2' => __( 'Address line 2', 'classic-commerce' ),
+			'phone'     => __( 'Phone', 'classic-commerce' ),
 		);
 		foreach ( $fields as $field => $label ) {
 			$wp_customize->add_setting(
@@ -692,14 +692,14 @@ class WC_Shop_Customizer {
 				'woocommerce_checkout_' . $field . '_field',
 				array(
 					/* Translators: %s field name. */
-					'label'    => sprintf( __( '%s field', 'woocommerce' ), $label ),
+					'label'    => sprintf( __( '%s field', 'classic-commerce' ), $label ),
 					'section'  => 'woocommerce_checkout',
 					'settings' => 'woocommerce_checkout_' . $field . '_field',
 					'type'     => 'select',
 					'choices'  => array(
-						'hidden'   => __( 'Hidden', 'woocommerce' ),
-						'optional' => __( 'Optional', 'woocommerce' ),
-						'required' => __( 'Required', 'woocommerce' ),
+						'hidden'   => __( 'Hidden', 'classic-commerce' ),
+						'optional' => __( 'Optional', 'classic-commerce' ),
+						'required' => __( 'Required', 'classic-commerce' ),
 					),
 				)
 			);
@@ -721,7 +721,7 @@ class WC_Shop_Customizer {
 			'woocommerce_checkout_terms_and_conditions_checkbox_text',
 			array(
 				/* translators: %s terms and conditions page name and link */
-				'default'           => sprintf( __( 'I have read and agree to the website %s', 'woocommerce' ), '[terms]' ),
+				'default'           => sprintf( __( 'I have read and agree to the website %s', 'classic-commerce' ), '[terms]' ),
 				'type'              => 'option',
 				'capability'        => 'manage_woocommerce',
 				'sanitize_callback' => 'wp_kses_post',
@@ -733,7 +733,7 @@ class WC_Shop_Customizer {
 			'woocommerce_checkout_privacy_policy_text',
 			array(
 				/* translators: %s privacy policy page name and link */
-				'default'           => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ),
+				'default'           => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'classic-commerce' ), '[privacy_policy]' ),
 				'type'              => 'option',
 				'capability'        => 'manage_woocommerce',
 				'sanitize_callback' => 'wp_kses_post',
@@ -745,7 +745,7 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_checkout_highlight_required_fields',
 			array(
-				'label'    => __( 'Highlight required fields with an asterisk', 'woocommerce' ),
+				'label'    => __( 'Highlight required fields with an asterisk', 'classic-commerce' ),
 				'section'  => 'woocommerce_checkout',
 				'settings' => 'woocommerce_checkout_highlight_required_fields',
 				'type'     => 'checkbox',
@@ -753,8 +753,8 @@ class WC_Shop_Customizer {
 		);
 
 		$choose_pages = array(
-			'wp_page_for_privacy_policy' => __( 'Privacy policy', 'woocommerce' ),
-			'woocommerce_terms_page_id'  => __( 'Terms and conditions', 'woocommerce' ),
+			'wp_page_for_privacy_policy' => __( 'Privacy policy', 'classic-commerce' ),
+			'woocommerce_terms_page_id'  => __( 'Terms and conditions', 'classic-commerce' ),
 		);
 		$pages        = get_pages( array(
 			'post_type'   => 'page',
@@ -769,7 +769,7 @@ class WC_Shop_Customizer {
 			'sort_order'  => 'asc',
 			'sort_column' => 'post_title',
 		) );
-		$page_choices = array( '' => __( 'No page set', 'woocommerce' ) ) + array_combine( array_map( 'strval', wp_list_pluck( $pages, 'ID' ) ), wp_list_pluck( $pages, 'post_title' ) );
+		$page_choices = array( '' => __( 'No page set', 'classic-commerce' ) ) + array_combine( array_map( 'strval', wp_list_pluck( $pages, 'ID' ) ), wp_list_pluck( $pages, 'post_title' ) );
 
 		foreach ( $choose_pages as $id => $name ) {
 			$wp_customize->add_setting(
@@ -784,7 +784,7 @@ class WC_Shop_Customizer {
 				$id,
 				array(
 					/* Translators: %s: page name. */
-					'label'    => sprintf( __( '%s page', 'woocommerce' ), $name ),
+					'label'    => sprintf( __( '%s page', 'classic-commerce' ), $name ),
 					'section'  => 'woocommerce_checkout',
 					'settings' => $id,
 					'type'     => 'select',
@@ -796,8 +796,8 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_checkout_privacy_policy_text',
 			array(
-				'label'           => __( 'Privacy policy', 'woocommerce' ),
-				'description'     => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'woocommerce' ),
+				'label'           => __( 'Privacy policy', 'classic-commerce' ),
+				'description'     => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'classic-commerce' ),
 				'section'         => 'woocommerce_checkout',
 				'settings'        => 'woocommerce_checkout_privacy_policy_text',
 				'active_callback' => 'wc_privacy_policy_page_id',
@@ -808,8 +808,8 @@ class WC_Shop_Customizer {
 		$wp_customize->add_control(
 			'woocommerce_checkout_terms_and_conditions_checkbox_text',
 			array(
-				'label'           => __( 'Terms and conditions', 'woocommerce' ),
-				'description'     => __( 'Optionally add some text for the terms checkbox that customers must accept.', 'woocommerce' ),
+				'label'           => __( 'Terms and conditions', 'classic-commerce' ),
+				'description'     => __( 'Optionally add some text for the terms checkbox that customers must accept.', 'classic-commerce' ),
 				'section'         => 'woocommerce_checkout',
 				'settings'        => 'woocommerce_checkout_terms_and_conditions_checkbox_text',
 				'active_callback' => 'wc_terms_and_conditions_page_id',

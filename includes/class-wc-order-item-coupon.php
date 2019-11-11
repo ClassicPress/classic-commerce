@@ -2,9 +2,9 @@
 /**
  * Order Line Item (coupon)
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -137,8 +137,8 @@ class WC_Order_Item_Coupon extends WC_Order_Item {
 	 * OffsetGet for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Offset.
-	 * @return mixed
+	 * @param      string $offset Offset.
+	 * @return     mixed
 	 */
 	public function offsetGet( $offset ) {
 		if ( 'discount_amount' === $offset ) {
@@ -153,8 +153,8 @@ class WC_Order_Item_Coupon extends WC_Order_Item {
 	 * OffsetSet for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Offset.
-	 * @param mixed  $value  Value.
+	 * @param      string $offset Offset.
+	 * @param      mixed  $value  Value.
 	 */
 	public function offsetSet( $offset, $value ) {
 		if ( 'discount_amount' === $offset ) {

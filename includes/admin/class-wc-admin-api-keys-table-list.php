@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce API Keys Table List
+ * ClassicCommerce API Keys Table List
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-2.4.0
  */
 
@@ -34,7 +34,7 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 	 * No items found text.
 	 */
 	public function no_items() {
-		esc_html_e( 'No keys found.', 'woocommerce' );
+		esc_html_e( 'No keys found.', 'classic-commerce' );
 	}
 
 	/**
@@ -45,11 +45,11 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 	public function get_columns() {
 		return array(
 			'cb'            => '<input type="checkbox" />',
-			'title'         => __( 'Description', 'woocommerce' ),
-			'truncated_key' => __( 'Consumer key ending in', 'woocommerce' ),
-			'user'          => __( 'User', 'woocommerce' ),
-			'permissions'   => __( 'Permissions', 'woocommerce' ),
-			'last_access'   => __( 'Last access', 'woocommerce' ),
+			'title'         => __( 'Description', 'classic-commerce' ),
+			'truncated_key' => __( 'Consumer key ending in', 'classic-commerce' ),
+			'user'          => __( 'User', 'classic-commerce' ),
+			'permissions'   => __( 'Permissions', 'classic-commerce' ),
+			'last_access'   => __( 'Last access', 'classic-commerce' ),
 		);
 	}
 
@@ -81,7 +81,7 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 			$output .= '<a href="' . esc_url( $url ) . '" class="row-title">';
 		}
 		if ( empty( $key['description'] ) ) {
-			$output .= esc_html__( 'API key', 'woocommerce' );
+			$output .= esc_html__( 'API key', 'classic-commerce' );
 		} else {
 			$output .= esc_html( $key['description'] );
 		}
@@ -93,12 +93,12 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 		// Get actions.
 		$actions = array(
 			/* translators: %s: API key ID. */
-			'id' => sprintf( __( 'ID: %d', 'woocommerce' ), $key['key_id'] ),
+			'id' => sprintf( __( 'ID: %d', 'classic-commerce' ), $key['key_id'] ),
 		);
 
 		if ( $can_edit ) {
-			$actions['edit']  = '<a href="' . esc_url( $url ) . '">' . __( 'View/Edit', 'woocommerce' ) . '</a>';
-			$actions['trash'] = '<a class="submitdelete" aria-label="' . esc_attr__( 'Revoke API key', 'woocommerce' ) . '" href="' . esc_url(
+			$actions['edit']  = '<a href="' . esc_url( $url ) . '">' . __( 'View/Edit', 'classic-commerce' ) . '</a>';
+			$actions['trash'] = '<a class="submitdelete" aria-label="' . esc_attr__( 'Revoke API key', 'classic-commerce' ) . '" href="' . esc_url(
 				wp_nonce_url(
 					add_query_arg(
 						array(
@@ -106,7 +106,7 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 						), admin_url( 'admin.php?page=wc-settings&tab=advanced&section=keys' )
 					), 'revoke'
 				)
-			) . '">' . esc_html__( 'Revoke', 'woocommerce' ) . '</a>';
+			) . '">' . esc_html__( 'Revoke', 'classic-commerce' ) . '</a>';
 		}
 
 		$row_actions = array();
@@ -159,9 +159,9 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 	public function column_permissions( $key ) {
 		$permission_key = $key['permissions'];
 		$permissions    = array(
-			'read'       => __( 'Read', 'woocommerce' ),
-			'write'      => __( 'Write', 'woocommerce' ),
-			'read_write' => __( 'Read/Write', 'woocommerce' ),
+			'read'       => __( 'Read', 'classic-commerce' ),
+			'write'      => __( 'Write', 'classic-commerce' ),
+			'read_write' => __( 'Read/Write', 'classic-commerce' ),
 		);
 
 		if ( isset( $permissions[ $permission_key ] ) ) {
@@ -180,12 +180,12 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 	public function column_last_access( $key ) {
 		if ( ! empty( $key['last_access'] ) ) {
 			/* translators: 1: last access date 2: last access time */
-			$date = sprintf( __( '%1$s at %2$s', 'woocommerce' ), date_i18n( wc_date_format(), strtotime( $key['last_access'] ) ), date_i18n( wc_time_format(), strtotime( $key['last_access'] ) ) );
+			$date = sprintf( __( '%1$s at %2$s', 'classic-commerce' ), date_i18n( wc_date_format(), strtotime( $key['last_access'] ) ), date_i18n( wc_time_format(), strtotime( $key['last_access'] ) ) );
 
 			return apply_filters( 'woocommerce_api_key_last_access_datetime', $date, $key['last_access'] );
 		}
 
-		return __( 'Unknown', 'woocommerce' );
+		return __( 'Unknown', 'classic-commerce' );
 	}
 
 	/**
@@ -199,7 +199,7 @@ class WC_Admin_API_Keys_Table_List extends WP_List_Table {
 		}
 
 		return array(
-			'revoke' => __( 'Revoke', 'woocommerce' ),
+			'revoke' => __( 'Revoke', 'classic-commerce' ),
 		);
 	}
 

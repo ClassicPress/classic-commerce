@@ -4,8 +4,8 @@
  *
  * Based on https://pippinsplugins.com/batch-processing-for-big-data/
  *
- * @package  WooCommerce/Export
- * @version  3.1.0
+ * @package  ClassicCommerce/Export
+ * @version  WC-3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -51,7 +51,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Get the file contents.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @return string
 	 */
 	public function get_file() {
@@ -68,7 +68,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Serve the file and remove once sent to the client.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 */
 	public function export() {
 		$this->send_headers();
@@ -80,7 +80,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Generate the CSV file.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 */
 	public function generate_file() {
 		if ( 1 === $this->get_page() ) {
@@ -93,7 +93,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Write data to the file.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param string $data Data.
 	 */
 	protected function write_csv_data( $data ) {
@@ -111,7 +111,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Get page.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @return int
 	 */
 	public function get_page() {
@@ -121,7 +121,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Set page.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @param int $page Page Nr.
 	 */
 	public function set_page( $page ) {
@@ -131,7 +131,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Get count of records exported.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @return int
 	 */
 	public function get_total_exported() {
@@ -141,7 +141,7 @@ abstract class WC_CSV_Batch_Exporter extends WC_CSV_Exporter {
 	/**
 	 * Get total % complete.
 	 *
-	 * @since 3.1.0
+	 * @since WC-3.1.0
 	 * @return int
 	 */
 	public function get_percent_complete() {

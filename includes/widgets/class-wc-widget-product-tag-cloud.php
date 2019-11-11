@@ -2,7 +2,7 @@
 /**
  * Tag Cloud Widget.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-3.4.0
  */
 
@@ -20,14 +20,14 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_product_tag_cloud';
-		$this->widget_description = __( 'A cloud of your most used product tags.', 'woocommerce' );
+		$this->widget_description = __( 'A cloud of your most used product tags.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_product_tag_cloud';
-		$this->widget_name        = __( 'Product Tag Cloud', 'woocommerce' );
+		$this->widget_name        = __( 'Product Tag Cloud', 'classic-commerce' );
 		$this->settings           = array(
 			'title' => array(
 				'type'  => 'text',
-				'std'   => __( 'Product tags', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Product tags', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 		);
 
@@ -87,7 +87,7 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	 */
 	public function topic_count_text( $count ) {
 		/* translators: %s: product count */
-		return sprintf( _n( '%s product', '%s products', $count, 'woocommerce' ), number_format_i18n( $count ) );
+		return sprintf( _n( '%s product', '%s products', $count, 'classic-commerce' ), number_format_i18n( $count ) );
 	}
 
 	// Ignore whole block to avoid warnings about PSR2.Methods.MethodDeclaration.Underscore violation.
@@ -95,9 +95,9 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	/**
 	 * Return the taxonomy being displayed.
 	 *
-	 * @deprecated 3.4.0
-	 * @param  object $instance Widget instance.
-	 * @return string
+	 * @deprecated WC-3.4.0
+	 * @param      object $instance Widget instance.
+	 * @return     string
 	 */
 	public function _get_current_taxonomy( $instance ) {
 		wc_deprecated_function( '_get_current_taxonomy', '3.4.0', 'WC_Widget_Product_Tag_Cloud->get_current_taxonomy' );
@@ -107,10 +107,10 @@ class WC_Widget_Product_Tag_Cloud extends WC_Widget {
 	/**
 	 * Returns topic count text.
 	 *
-	 * @deprecated 3.4.0
-	 * @since WC-2.6.0
-	 * @param int $count Count text.
-	 * @return string
+	 * @deprecated WC-3.4.0
+	 * @since      WC-2.6.0
+	 * @param      int $count Count text.
+	 * @return     string
 	 */
 	public function _topic_count_text( $count ) {
 		wc_deprecated_function( '_topic_count_text', '3.4.0', 'WC_Widget_Product_Tag_Cloud->topic_count_text' );

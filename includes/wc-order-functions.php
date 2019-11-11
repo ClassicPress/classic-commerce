@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Order Functions
+ * ClassicCommerce Order Functions
  *
  * Functions for order specific things.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * Args and usage: https://github.com/woocommerce/woocommerce/wiki/wc_get_orders-and-WC_Order_Query
  *
- * @since  2.6.0
+ * @since  WC-2.6.0
  * @param  array $args Array of args (above).
  * @return WC_Order[]|stdClass Number of pages and an array of order objects if
  *                             paginate is true, or just an array of values.
@@ -69,7 +69,7 @@ function wc_get_orders( $args ) {
 /**
  * Main function for returning orders, uses the WC_Order_Factory class.
  *
- * @since  2.2
+ * @since  WC-2.2
  *
  * @param  mixed $the_order Post object or post ID of the order.
  *
@@ -92,13 +92,13 @@ function wc_get_order( $the_order = false ) {
  */
 function wc_get_order_statuses() {
 	$order_statuses = array(
-		'wc-pending'    => _x( 'Pending payment', 'Order status', 'woocommerce' ),
-		'wc-processing' => _x( 'Processing', 'Order status', 'woocommerce' ),
-		'wc-on-hold'    => _x( 'On hold', 'Order status', 'woocommerce' ),
-		'wc-completed'  => _x( 'Completed', 'Order status', 'woocommerce' ),
-		'wc-cancelled'  => _x( 'Cancelled', 'Order status', 'woocommerce' ),
-		'wc-refunded'   => _x( 'Refunded', 'Order status', 'woocommerce' ),
-		'wc-failed'     => _x( 'Failed', 'Order status', 'woocommerce' ),
+		'wc-pending'    => _x( 'Pending payment', 'Order status', 'classic-commerce' ),
+		'wc-processing' => _x( 'Processing', 'Order status', 'classic-commerce' ),
+		'wc-on-hold'    => _x( 'On hold', 'Order status', 'classic-commerce' ),
+		'wc-completed'  => _x( 'Completed', 'Order status', 'classic-commerce' ),
+		'wc-cancelled'  => _x( 'Cancelled', 'Order status', 'classic-commerce' ),
+		'wc-refunded'   => _x( 'Refunded', 'Order status', 'classic-commerce' ),
+		'wc-failed'     => _x( 'Failed', 'Order status', 'classic-commerce' ),
 	);
 	return apply_filters( 'wc_order_statuses', $order_statuses );
 }
@@ -117,7 +117,7 @@ function wc_is_order_status( $maybe_status ) {
 /**
  * Get list of statuses which are consider 'paid'.
  *
- * @since  3.0.0
+ * @since  WC-3.0.0
  * @return array
  */
 function wc_get_is_paid_statuses() {
@@ -127,7 +127,7 @@ function wc_get_is_paid_statuses() {
 /**
  * Get the nice name for an order status.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @param  string $status Status.
  * @return string
  */
@@ -152,7 +152,7 @@ function wc_get_order_id_by_order_key( $order_key ) {
 /**
  * Get all registered order types.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @param  string $for Optionally define what you are getting order types for so
  *                     only relevant types are returned.
  *                     e.g. for 'order-meta-boxes', 'order-count'.
@@ -250,7 +250,7 @@ function wc_get_order_type( $type ) {
  *      - exclude_from_order_reports (bool) Whether or not to exclude this type from core reports.
  *      - exclude_from_order_sales_reports (bool) Whether or not to exclude this type from core sales reports.
  *
- * @since  2.2
+ * @since  WC-2.2
  * @see    register_post_type for $args used in that function
  * @param  string $type Post type. (max. 20 characters, can not contain capital letters or spaces).
  * @param  array  $args An array of arguments.
@@ -464,9 +464,9 @@ function wc_ship_to_billing_address_only() {
  *
  * Returns a new refund object on success which can then be used to add additional data.
  *
- * @since WC-2.2
+ * @since  WC-2.2
  * @throws Exception Throws exceptions when fail to create, but returns WP_Error instead.
- * @param array $args New refund arguments.
+ * @param  array $args New refund arguments.
  * @return WC_Order_Refund|WP_Error
  */
 function wc_create_refund( $args = array() ) {
@@ -485,7 +485,7 @@ function wc_create_refund( $args = array() ) {
 		$order = wc_get_order( $args['order_id'] );
 
 		if ( ! $order ) {
-			throw new Exception( __( 'Invalid order ID.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid order ID.', 'classic-commerce' ) );
 		}
 
 		$remaining_refund_amount = $order->get_remaining_refund_amount();
@@ -494,7 +494,7 @@ function wc_create_refund( $args = array() ) {
 		$refund                  = new WC_Order_Refund( $args['refund_id'] );
 
 		if ( 0 > $args['amount'] || $args['amount'] > $remaining_refund_amount ) {
-			throw new Exception( __( 'Invalid refund amount.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid refund amount.', 'classic-commerce' ) );
 		}
 
 		$refund->set_currency( $order->get_currency() );
@@ -612,17 +612,17 @@ function wc_create_refund( $args = array() ) {
 /**
  * Try to refund the payment for an order via the gateway.
  *
- * @since WC-3.0.0
+ * @since  WC-3.0.0
  * @throws Exception Throws exceptions when fail to refund, but returns WP_Error instead.
- * @param WC_Order $order  Order instance.
- * @param string   $amount Amount to refund.
- * @param string   $reason Refund reason.
+ * @param  WC_Order $order  Order instance.
+ * @param  string   $amount Amount to refund.
+ * @param  string   $reason Refund reason.
  * @return bool|WP_Error
  */
 function wc_refund_payment( $order, $amount, $reason = '' ) {
 	try {
 		if ( ! is_a( $order, 'WC_Order' ) ) {
-			throw new Exception( __( 'Invalid order.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid order.', 'classic-commerce' ) );
 		}
 
 		$gateway_controller = WC_Payment_Gateways::instance();
@@ -631,17 +631,17 @@ function wc_refund_payment( $order, $amount, $reason = '' ) {
 		$gateway            = isset( $all_gateways[ $payment_method ] ) ? $all_gateways[ $payment_method ] : false;
 
 		if ( ! $gateway ) {
-			throw new Exception( __( 'The payment gateway for this order does not exist.', 'woocommerce' ) );
+			throw new Exception( __( 'The payment gateway for this order does not exist.', 'classic-commerce' ) );
 		}
 
 		if ( ! $gateway->supports( 'refunds' ) ) {
-			throw new Exception( __( 'The payment gateway for this order does not support automatic refunds.', 'woocommerce' ) );
+			throw new Exception( __( 'The payment gateway for this order does not support automatic refunds.', 'classic-commerce' ) );
 		}
 
 		$result = $gateway->process_refund( $order->get_id(), $amount, $reason );
 
 		if ( ! $result ) {
-			throw new Exception( __( 'An error occurred while attempting to create the refund using the payment gateway API.', 'woocommerce' ) );
+			throw new Exception( __( 'An error occurred while attempting to create the refund using the payment gateway API.', 'classic-commerce' ) );
 		}
 
 		if ( is_wp_error( $result ) ) {
@@ -676,7 +676,7 @@ function wc_restock_refunded_items( $order, $refunded_line_items ) {
 			$new_stock = wc_update_product_stock( $product, $refunded_line_items[ $item_id ]['qty'], 'increase' );
 
 			/* translators: 1: product ID 2: old stock level 3: new stock level */
-			$order->add_order_note( sprintf( __( 'Item #%1$s stock increased from %2$s to %3$s.', 'woocommerce' ), $product->get_id(), $old_stock, $new_stock ) );
+			$order->add_order_note( sprintf( __( 'Item #%1$s stock increased from %2$s to %3$s.', 'classic-commerce' ), $product->get_id(), $old_stock, $new_stock ) );
 
 			do_action( 'woocommerce_restock_refunded_item', $product->get_id(), $old_stock, $new_stock, $order, $product );
 		}
@@ -686,8 +686,8 @@ function wc_restock_refunded_items( $order, $refunded_line_items ) {
 /**
  * Get tax class by tax id.
  *
- * @since WC-2.2
- * @param int $tax_id Tax ID.
+ * @since  WC-2.2
+ * @param  int $tax_id Tax ID.
  * @return string
  */
 function wc_get_tax_class_by_tax_id( $tax_id ) {
@@ -698,8 +698,8 @@ function wc_get_tax_class_by_tax_id( $tax_id ) {
 /**
  * Get payment gateway class by order data.
  *
- * @since WC-2.2
- * @param int|WC_Order $order Order instance.
+ * @since  WC-2.2
+ * @param  int|WC_Order $order Order instance.
  * @return WC_Payment_Gateway|bool
  */
 function wc_get_payment_gateway_by_order( $order ) {
@@ -737,7 +737,7 @@ function wc_order_fully_refunded( $order_id ) {
 	wc_create_refund(
 		array(
 			'amount'     => $max_refund,
-			'reason'     => __( 'Order fully refunded', 'woocommerce' ),
+			'reason'     => __( 'Order fully refunded', 'classic-commerce' ),
 			'order_id'   => $order_id,
 			'line_items' => array(),
 		)
@@ -748,7 +748,7 @@ add_action( 'woocommerce_order_status_refunded', 'wc_order_fully_refunded' );
 /**
  * Search orders.
  *
- * @since  2.6.0
+ * @since  WC-2.6.0
  * @param  string $term Term to search.
  * @return array List of orders ID.
  */
@@ -867,7 +867,7 @@ function wc_cancel_unpaid_orders() {
 			$order = wc_get_order( $unpaid_order );
 
 			if ( apply_filters( 'woocommerce_cancel_unpaid_order', 'checkout' === $order->get_created_via(), $order ) ) {
-				$order->update_status( 'cancelled', __( 'Unpaid order cancelled - time limit reached.', 'woocommerce' ) );
+				$order->update_status( 'cancelled', __( 'Unpaid order cancelled - time limit reached.', 'classic-commerce' ) );
 			}
 		}
 	}
@@ -893,7 +893,7 @@ add_filter( 'woocommerce_shortcode_order_tracking_order_id', 'wc_sanitize_order_
 /**
  * Get an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int|WP_Comment $data Note ID (or WP_Comment instance for internal use only).
  * @return stdClass|null        Object with order note details or null when does not exists.
  */
@@ -912,7 +912,7 @@ function wc_get_order_note( $data ) {
 			'date_created'  => wc_string_to_datetime( $data->comment_date ),
 			'content'       => $data->comment_content,
 			'customer_note' => (bool) get_comment_meta( $data->comment_ID, 'is_customer_note', true ),
-			'added_by'      => __( 'WooCommerce', 'woocommerce' ) === $data->comment_author ? 'system' : $data->comment_author,
+			'added_by'      => __( 'WooCommerce', 'classic-commerce' ) === $data->comment_author ? 'system' : $data->comment_author,
 		), $data
 	);
 }
@@ -920,7 +920,7 @@ function wc_get_order_note( $data ) {
 /**
  * Get order notes.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  array $args Query arguments {
  *     Array of query parameters.
  *
@@ -968,7 +968,7 @@ function wc_get_order_notes( $args ) {
 
 	$args['orderby'] = ! empty( $args['orderby'] ) && in_array( $args['orderby'], array( 'date_created', 'date_created_gmt', 'id' ), true ) ? $orderby_mapping[ $args['orderby'] ] : 'comment_ID';
 
-	// Set WooCommerce order type.
+	// Set ClassicCommerce order type.
 	if ( isset( $args['type'] ) && 'customer' === $args['type'] ) {
 		$args['meta_query'] = array( // WPCS: slow query ok.
 			array(
@@ -1007,7 +1007,7 @@ function wc_get_order_notes( $args ) {
 /**
  * Create an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int    $order_id         Order ID.
  * @param  string $note             Note to add.
  * @param  bool   $is_customer_note If is a costumer note.
@@ -1018,7 +1018,7 @@ function wc_create_order_note( $order_id, $note, $is_customer_note = false, $add
 	$order = wc_get_order( $order_id );
 
 	if ( ! $order ) {
-		return new WP_Error( 'invalid_order_id', __( 'Invalid order ID.', 'woocommerce' ), array( 'status' => 400 ) );
+		return new WP_Error( 'invalid_order_id', __( 'Invalid order ID.', 'classic-commerce' ), array( 'status' => 400 ) );
 	}
 
 	return $order->add_order_note( $note, (int) $is_customer_note, $added_by_user );
@@ -1027,7 +1027,7 @@ function wc_create_order_note( $order_id, $note, $is_customer_note = false, $add
 /**
  * Delete an order note.
  *
- * @since  3.2.0
+ * @since  WC-3.2.0
  * @param  int $note_id Order note.
  * @return bool         True on success, false on failure.
  */

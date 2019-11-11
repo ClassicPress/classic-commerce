@@ -2,7 +2,7 @@
 /**
  * Debug/Status page
  *
- * @package WooCommerce/Admin/System Status
+ * @package ClassicCommerce/Admin/System Status
  * @version WC-2.2.0
  */
 
@@ -50,7 +50,7 @@ class WC_Admin_Status {
 				$tool = array_merge( $tool, $response );
 
 				/**
-				 * Fires after a WooCommerce system status tool has been executed.
+				 * Fires after a ClassicCommerce system status tool has been executed.
 				 *
 				 * @param array  $tool  Details about the tool that has been executed.
 				 */
@@ -58,7 +58,7 @@ class WC_Admin_Status {
 			} else {
 				$response = array(
 					'success' => false,
-					'message' => __( 'Tool does not exist.', 'woocommerce' ),
+					'message' => __( 'Tool does not exist.', 'classic-commerce' ),
 				);
 			}
 
@@ -71,7 +71,7 @@ class WC_Admin_Status {
 
 		// Display message if settings settings have been saved.
 		if ( isset( $_REQUEST['settings-updated'] ) ) { // WPCS: input var ok.
-			echo '<div class="updated inline"><p>' . esc_html__( 'Your changes have been saved.', 'woocommerce' ) . '</p></div>';
+			echo '<div class="updated inline"><p>' . esc_html__( 'Your changes have been saved.', 'classic-commerce' ) . '</p></div>';
 		}
 
 		include_once dirname( __FILE__ ) . '/views/html-admin-page-status-tools.php';
@@ -140,7 +140,7 @@ class WC_Admin_Status {
 	/**
 	 * Retrieve metadata from a file. Based on WP Core's get_file_data function.
 	 *
-	 * @since  2.1.1
+	 * @since  WC-2.1.1
 	 * @param  string $file Path to the file.
 	 * @return string
 	 */
@@ -284,7 +284,7 @@ class WC_Admin_Status {
 	 */
 	public static function remove_log() {
 		if ( empty( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( wp_unslash( $_REQUEST['_wpnonce'] ), 'remove_log' ) ) { // WPCS: input var ok, sanitization ok.
-			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 		}
 
 		if ( ! empty( $_REQUEST['handle'] ) ) {  // WPCS: input var ok.
@@ -303,7 +303,7 @@ class WC_Admin_Status {
 	 */
 	private static function flush_db_logs() {
 		if ( empty( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'woocommerce-status-logs' ) ) { // WPCS: input var ok, sanitization ok.
-			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 		}
 
 		WC_Log_Handler_DB::flush();
@@ -319,7 +319,7 @@ class WC_Admin_Status {
 	 */
 	private static function log_table_bulk_actions() {
 		if ( empty( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'woocommerce-status-logs' ) ) { // WPCS: input var ok, sanitization ok.
-			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+			wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 		}
 
 		$log_ids = array_map( 'absint', (array) isset( $_REQUEST['log'] ) ? wp_unslash( $_REQUEST['log'] ) : array() ); // WPCS: input var ok, sanitization ok.

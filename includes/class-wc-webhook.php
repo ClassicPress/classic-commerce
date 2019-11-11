@@ -6,9 +6,9 @@
  *
  * Webhooks are enqueued to their associated actions, delivered, and logged.
  *
- * @version  3.2.0
- * @package  WooCommerce/Webhooks
- * @since    2.2.0
+ * @version  WC-3.2.0
+ * @package  ClassicCommerce/Webhooks
+ * @since    WC-2.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -115,7 +115,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * Helper to check if the webhook should be delivered, as some hooks.
 	 * (like `wp_trash_post`) will fire for every post type, not just ours.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  mixed $arg First hook argument.
 	 * @return bool       True if webhook should be delivered, false otherwise.
 	 */
@@ -226,7 +226,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get Legacy API payload.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $resource    Resource type.
 	 * @param  int    $resource_id Resource ID.
 	 * @param  string $event       Event type.
@@ -277,7 +277,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get WP API integration payload.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $resource    Resource type.
 	 * @param  int    $resource_id Resource ID.
 	 * @param  string $event       Event type.
@@ -325,7 +325,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Build the payload data for the webhook.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  mixed $resource_id First hook argument, typically the resource ID.
 	 * @return mixed              Payload data.
 	 */
@@ -363,7 +363,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * recipient can verify the authenticity of the webhook. Note that the signature.
 	 * is calculated after the body has already been encoded (JSON by default).
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $payload Payload data to hash.
 	 * @return string
 	 */
@@ -377,7 +377,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * Generate a new unique hash as a delivery id based on current time and wehbook id.
 	 * Return the hash for inclusion in the webhook request.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @return string
 	 */
 	public function get_new_delivery_id() {
@@ -399,7 +399,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 		$message = array(
 			'Webhook Delivery' => array(
 				'Delivery ID' => $delivery_id,
-				'Date'        => date_i18n( __( 'M j, Y @ G:i', 'woocommerce' ), strtotime( 'now' ), true ),
+				'Date'        => date_i18n( __( 'M j, Y @ G:i', 'classic-commerce' ), strtotime( 'now' ), true ),
 				'URL'         => $this->get_delivery_url(),
 				'Duration'    => $duration,
 				'Request'     => array(
@@ -480,7 +480,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the delivery logs for this webhook.
 	 *
-	 * @since  3.3.0
+	 * @since  WC-3.3.0
 	 * @return string
 	 */
 	public function get_delivery_logs() {
@@ -496,10 +496,10 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * + request headers/body
 	 * + response code/message/headers/body
 	 *
-	 * @since WC-2.2
-	 * @deprecated 3.3.0
-	 * @param int $delivery_id Delivery ID.
-	 * @return void
+	 * @since      WC-2.2
+	 * @deprecated WC-3.3.0
+	 * @param      int $delivery_id Delivery ID.
+	 * @return     void
 	 */
 	public function get_delivery_log( $delivery_id ) {
 		wc_deprecated_function( 'WC_Webhook::get_delivery_log', '3.3' );
@@ -508,7 +508,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Send a test ping to the delivery URL, sent when the webhook is first created.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @return bool|WP_Error
 	 */
 	public function deliver_ping() {
@@ -522,12 +522,12 @@ class WC_Webhook extends WC_Legacy_Webhook {
 
 		if ( is_wp_error( $test ) ) {
 			/* translators: error message */
-			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL cannot be reached: %s', 'woocommerce' ), $test->get_error_message() ) );
+			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL cannot be reached: %s', 'classic-commerce' ), $test->get_error_message() ) );
 		}
 
 		if ( 200 !== $response_code ) {
 			/* translators: error message */
-			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL returned response code: %s', 'woocommerce' ), absint( $response_code ) ) );
+			return new WP_Error( 'error', sprintf( __( 'Error: Delivery URL returned response code: %s', 'classic-commerce' ), absint( $response_code ) ) );
 		}
 
 		$this->set_pending_delivery( false );
@@ -545,7 +545,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the friendly name for the webhook.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string
@@ -561,7 +561,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	 * - 'paused' - does not deliver payload, paused by admin.
 	 * - 'disabled' - does not delivery payload, paused automatically due to consecutive failures.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string status
@@ -573,7 +573,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get webhopk created date.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context  What the value is for.
 	 *                          Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null Object if the date is set or null if there is no date.
@@ -585,7 +585,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get webhopk modified date.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context  What the value is for.
 	 *                          Valid values are 'view' and 'edit'.
 	 * @return WC_DateTime|null Object if the date is set or null if there is no date.
@@ -597,7 +597,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the secret used for generating the HMAC-SHA256 signature.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string
@@ -609,7 +609,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the webhook topic, e.g. `order.created`.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string
@@ -621,7 +621,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the delivery URL.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string
@@ -633,7 +633,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the user ID for this webhook.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return int
@@ -645,7 +645,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * API version.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return string
@@ -659,7 +659,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the failure count.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return int
@@ -671,7 +671,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get pending delivery.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $context What the value is for.
 	 *                         Valid values are 'view' and 'edit'.
 	 * @return bool
@@ -826,7 +826,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the associated hook names for a topic.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @param  string $topic Topic name.
 	 * @return array
 	 */
@@ -898,7 +898,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the hook names for the webhook.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @return array
 	 */
 	public function get_hooks() {
@@ -914,7 +914,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the resource for the webhook, e.g. `order`.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @return string
 	 */
 	public function get_resource() {
@@ -926,7 +926,7 @@ class WC_Webhook extends WC_Legacy_Webhook {
 	/**
 	 * Get the event for the webhook, e.g. `created`.
 	 *
-	 * @since  2.2.0
+	 * @since  WC-2.2.0
 	 * @return string
 	 */
 	public function get_event() {

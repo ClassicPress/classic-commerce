@@ -1,8 +1,8 @@
 <?php
 /**
- * WooCommerce Account Settings.
+ * ClassicCommerce Account Settings.
  *
- * @package WooCommerce/Admin
+ * @package ClassicCommerce/Admin
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -21,7 +21,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 	 */
 	public function __construct() {
 		$this->id    = 'account';
-		$this->label = __( 'Accounts &amp; Privacy', 'woocommerce' );
+		$this->label = __( 'Accounts &amp; Privacy', 'classic-commerce' );
 		parent::__construct();
 	}
 
@@ -31,7 +31,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 	 * @return array
 	 */
 	public function get_settings() {
-		$erasure_text = esc_html__( 'account erasure request', 'woocommerce' );
+		$erasure_text = esc_html__( 'account erasure request', 'classic-commerce' );
 		if ( current_user_can( 'manage_privacy_options' ) ) {
 			$erasure_text = sprintf( '<a href="%s">%s</a>', esc_url( admin_url( 'tools.php?page=remove_personal_data' ) ), $erasure_text );
 		}
@@ -44,8 +44,8 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'id'    => 'account_registration_options',
 				),
 				array(
-					'title'         => __( 'Guest checkout', 'woocommerce' ),
-					'desc'          => __( 'Allow customers to place orders without an account', 'woocommerce' ),
+					'title'         => __( 'Guest checkout', 'classic-commerce' ),
+					'desc'          => __( 'Allow customers to place orders without an account', 'classic-commerce' ),
 					'id'            => 'woocommerce_enable_guest_checkout',
 					'default'       => 'yes',
 					'type'          => 'checkbox',
@@ -53,8 +53,8 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'title'         => __( 'Login', 'woocommerce' ),
-					'desc'          => __( 'Allow customers to log into an existing account during checkout', 'woocommerce' ),
+					'title'         => __( 'Login', 'classic-commerce' ),
+					'desc'          => __( 'Allow customers to log into an existing account during checkout', 'classic-commerce' ),
 					'id'            => 'woocommerce_enable_checkout_login_reminder',
 					'default'       => 'no',
 					'type'          => 'checkbox',
@@ -62,8 +62,8 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'title'         => __( 'Account creation', 'woocommerce' ),
-					'desc'          => __( 'Allow customers to create an account during checkout', 'woocommerce' ),
+					'title'         => __( 'Account creation', 'classic-commerce' ),
+					'desc'          => __( 'Allow customers to create an account during checkout', 'classic-commerce' ),
 					'id'            => 'woocommerce_enable_signup_and_login_from_checkout',
 					'default'       => 'no',
 					'type'          => 'checkbox',
@@ -71,7 +71,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'desc'          => __( 'Allow customers to create an account on the "My account" page', 'woocommerce' ),
+					'desc'          => __( 'Allow customers to create an account on the "My account" page', 'classic-commerce' ),
 					'id'            => 'woocommerce_enable_myaccount_registration',
 					'default'       => 'no',
 					'type'          => 'checkbox',
@@ -79,7 +79,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'desc'          => __( 'When creating an account, automatically generate a username from the customer\'s email address', 'woocommerce' ),
+					'desc'          => __( 'When creating an account, automatically generate a username from the customer\'s email address', 'classic-commerce' ),
 					'id'            => 'woocommerce_registration_generate_username',
 					'default'       => 'yes',
 					'type'          => 'checkbox',
@@ -87,7 +87,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'desc'          => __( 'When creating an account, automatically generate an account password', 'woocommerce' ),
+					'desc'          => __( 'When creating an account, automatically generate an account password', 'classic-commerce' ),
 					'id'            => 'woocommerce_registration_generate_password',
 					'default'       => 'yes',
 					'type'          => 'checkbox',
@@ -95,10 +95,10 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'title'         => __( 'Account erasure requests', 'woocommerce' ),
-					'desc'          => __( 'Remove personal data from orders', 'woocommerce' ),
+					'title'         => __( 'Account erasure requests', 'classic-commerce' ),
+					'desc'          => __( 'Remove personal data from orders', 'classic-commerce' ),
 					/* Translators: %s URL to erasure request screen. */
-					'desc_tip'      => sprintf( esc_html__( 'When handling an %s, should personal data within orders be retained or removed?', 'woocommerce' ), $erasure_text ),
+					'desc_tip'      => sprintf( esc_html__( 'When handling an %s, should personal data within orders be retained or removed?', 'classic-commerce' ), $erasure_text ),
 					'id'            => 'woocommerce_erasure_request_removes_order_data',
 					'type'          => 'checkbox',
 					'default'       => 'no',
@@ -106,9 +106,9 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'      => false,
 				),
 				array(
-					'desc'          => __( 'Remove access to downloads', 'woocommerce' ),
+					'desc'          => __( 'Remove access to downloads', 'classic-commerce' ),
 					/* Translators: %s URL to erasure request screen. */
-					'desc_tip'      => sprintf( esc_html__( 'When handling an %s, should access to downloadable files be revoked and download logs cleared?', 'woocommerce' ), $erasure_text ),
+					'desc_tip'      => sprintf( esc_html__( 'When handling an %s, should access to downloadable files be revoked and download logs cleared?', 'classic-commerce' ), $erasure_text ),
 					'id'            => 'woocommerce_erasure_request_removes_download_data',
 					'type'          => 'checkbox',
 					'default'       => 'no',
@@ -120,15 +120,15 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'id'   => 'account_registration_options',
 				),
 				array(
-					'title' => __( 'Privacy policy', 'woocommerce' ),
+					'title' => __( 'Privacy policy', 'classic-commerce' ),
 					'type'  => 'title',
 					'id'    => 'privacy_policy_options',
-					'desc'  => __( 'This section controls the display of your website privacy policy. The privacy notices below will not show up unless a privacy page is first set.', 'woocommerce' ),
+					'desc'  => __( 'This section controls the display of your website privacy policy. The privacy notices below will not show up unless a privacy page is first set.', 'classic-commerce' ),
 				),
 
 				array(
-					'title'    => __( 'Privacy page', 'woocommerce' ),
-					'desc'     => __( 'Choose a page to act as your privacy policy.', 'woocommerce' ),
+					'title'    => __( 'Privacy page', 'classic-commerce' ),
+					'desc'     => __( 'Choose a page to act as your privacy policy.', 'classic-commerce' ),
 					'id'       => 'wp_page_for_privacy_policy',
 					'type'     => 'single_select_page',
 					'default'  => '',
@@ -138,21 +138,21 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 				),
 
 				array(
-					'title'    => __( 'Registration privacy policy', 'woocommerce' ),
-					'desc_tip' => __( 'Optionally add some text about your store privacy policy to show on account registration forms.', 'woocommerce' ),
+					'title'    => __( 'Registration privacy policy', 'classic-commerce' ),
+					'desc_tip' => __( 'Optionally add some text about your store privacy policy to show on account registration forms.', 'classic-commerce' ),
 					'id'       => 'woocommerce_registration_privacy_policy_text',
 					/* translators: %s privacy policy page name and link */
-					'default'  => sprintf( __( 'Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ),
+					'default'  => sprintf( __( 'Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our %s.', 'classic-commerce' ), '[privacy_policy]' ),
 					'type'     => 'textarea',
 					'css'      => 'min-width: 50%; height: 75px;',
 				),
 
 				array(
-					'title'    => __( 'Checkout privacy policy', 'woocommerce' ),
-					'desc_tip' => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'woocommerce' ),
+					'title'    => __( 'Checkout privacy policy', 'classic-commerce' ),
+					'desc_tip' => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'classic-commerce' ),
 					'id'       => 'woocommerce_checkout_privacy_policy_text',
 					/* translators: %s privacy policy page name and link */
-					'default'  => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'woocommerce' ), '[privacy_policy]' ),
+					'default'  => sprintf( __( 'Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our %s.', 'classic-commerce' ), '[privacy_policy]' ),
 					'type'     => 'textarea',
 					'css'      => 'min-width: 50%; height: 75px;',
 				),
@@ -161,17 +161,17 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'id'   => 'privacy_policy_options',
 				),
 				array(
-					'title' => __( 'Personal data retention', 'woocommerce' ),
-					'desc'  => __( 'Choose how long to retain personal data when it\'s no longer needed for processing. Leave the following options blank to retain this data indefinitely.', 'woocommerce' ),
+					'title' => __( 'Personal data retention', 'classic-commerce' ),
+					'desc'  => __( 'Choose how long to retain personal data when it\'s no longer needed for processing. Leave the following options blank to retain this data indefinitely.', 'classic-commerce' ),
 					'type'  => 'title',
 					'id'    => 'personal_data_retention',
 				),
 				array(
-					'title'       => __( 'Retain inactive accounts ', 'woocommerce' ),
-					'desc_tip'    => __( 'Inactive accounts are those which have not logged in, or placed an order, for the specified duration. They will be deleted. Any orders will be converted into guest orders.', 'woocommerce' ),
+					'title'       => __( 'Retain inactive accounts ', 'classic-commerce' ),
+					'desc_tip'    => __( 'Inactive accounts are those which have not logged in, or placed an order, for the specified duration. They will be deleted. Any orders will be converted into guest orders.', 'classic-commerce' ),
 					'id'          => 'woocommerce_delete_inactive_accounts',
 					'type'        => 'relative_date_selector',
-					'placeholder' => __( 'N/A', 'woocommerce' ),
+					'placeholder' => __( 'N/A', 'classic-commerce' ),
 					'default'     => array(
 						'number' => '',
 						'unit'   => 'months',
@@ -179,38 +179,38 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'autoload'    => false,
 				),
 				array(
-					'title'       => __( 'Retain pending orders ', 'woocommerce' ),
-					'desc_tip'    => __( 'Pending orders are unpaid and may have been abandoned by the customer. They will be trashed after the specified duration.', 'woocommerce' ),
+					'title'       => __( 'Retain pending orders ', 'classic-commerce' ),
+					'desc_tip'    => __( 'Pending orders are unpaid and may have been abandoned by the customer. They will be trashed after the specified duration.', 'classic-commerce' ),
 					'id'          => 'woocommerce_trash_pending_orders',
 					'type'        => 'relative_date_selector',
-					'placeholder' => __( 'N/A', 'woocommerce' ),
+					'placeholder' => __( 'N/A', 'classic-commerce' ),
 					'default'     => '',
 					'autoload'    => false,
 				),
 				array(
-					'title'       => __( 'Retain failed orders', 'woocommerce' ),
-					'desc_tip'    => __( 'Failed orders are unpaid and may have been abandoned by the customer. They will be trashed after the specified duration.', 'woocommerce' ),
+					'title'       => __( 'Retain failed orders', 'classic-commerce' ),
+					'desc_tip'    => __( 'Failed orders are unpaid and may have been abandoned by the customer. They will be trashed after the specified duration.', 'classic-commerce' ),
 					'id'          => 'woocommerce_trash_failed_orders',
 					'type'        => 'relative_date_selector',
-					'placeholder' => __( 'N/A', 'woocommerce' ),
+					'placeholder' => __( 'N/A', 'classic-commerce' ),
 					'default'     => '',
 					'autoload'    => false,
 				),
 				array(
-					'title'       => __( 'Retain cancelled orders', 'woocommerce' ),
-					'desc_tip'    => __( 'Cancelled orders are unpaid and may have been cancelled by the store owner or customer. They will be trashed after the specified duration.', 'woocommerce' ),
+					'title'       => __( 'Retain cancelled orders', 'classic-commerce' ),
+					'desc_tip'    => __( 'Cancelled orders are unpaid and may have been cancelled by the store owner or customer. They will be trashed after the specified duration.', 'classic-commerce' ),
 					'id'          => 'woocommerce_trash_cancelled_orders',
 					'type'        => 'relative_date_selector',
-					'placeholder' => __( 'N/A', 'woocommerce' ),
+					'placeholder' => __( 'N/A', 'classic-commerce' ),
 					'default'     => '',
 					'autoload'    => false,
 				),
 				array(
-					'title'       => __( 'Retain completed orders', 'woocommerce' ),
-					'desc_tip'    => __( 'Retain completed orders for a specified duration before anonymizing the personal data within them.', 'woocommerce' ),
+					'title'       => __( 'Retain completed orders', 'classic-commerce' ),
+					'desc_tip'    => __( 'Retain completed orders for a specified duration before anonymizing the personal data within them.', 'classic-commerce' ),
 					'id'          => 'woocommerce_anonymize_completed_orders',
 					'type'        => 'relative_date_selector',
-					'placeholder' => __( 'N/A', 'woocommerce' ),
+					'placeholder' => __( 'N/A', 'classic-commerce' ),
 					'default'     => array(
 						'number' => '',
 						'unit'   => 'months',

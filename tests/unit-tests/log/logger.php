@@ -2,7 +2,7 @@
 
 /**
  * Class WC_Tests_Logger
- * @package WooCommerce\Tests\Log
+ * @package ClassicCommerce\Tests\Log
  * @since WC-2.3
  */
 class WC_Tests_Logger extends WC_Unit_Test_Case {

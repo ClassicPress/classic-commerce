@@ -2,7 +2,7 @@
 /**
  * Class WC_Gateway_Paypal_Response file.
  *
- * @package WooCommerce\Gateways
+ * @package ClassicCommerce\Gateways
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

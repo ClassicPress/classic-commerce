@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Meta Box Functions
+ * ClassicCommerce Meta Box Functions
  *
  * @author      WooThemes
  * @category    Core
- * @package     WooCommerce/Admin/Functions
- * @version     2.3.0
+ * @package     ClassicCommerce/Admin/Functions
+ * @version     WC-2.3.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

@@ -6,6 +6,7 @@ module.exports = function( grunt ) {
 
 		// Setting folder templates.
 		dirs: {
+			scss: 'assets/scss',
 			css: 'assets/css',
 			fonts: 'assets/fonts',
 			images: 'assets/images',
@@ -34,8 +35,8 @@ module.exports = function( grunt ) {
 				configFile: '.stylelintrc'
 			},
 			all: [
-				'<%= dirs.css %>/*.scss',
-				'!<%= dirs.css %>/select2.scss'
+				'<%= dirs.scss %>/*.scss',
+				'!<%= dirs.scss %>/select2.scss'
 			]
 		},
 
@@ -116,7 +117,7 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					expand: true,
-					cwd: '<%= dirs.css %>/',
+					cwd: '<%= dirs.scss %>/',
 					src: ['*.scss'],
 					dest: '<%= dirs.css %>/',
 					ext: '.css'
@@ -163,7 +164,7 @@ module.exports = function( grunt ) {
 		// Watch changes for assets.
 		watch: {
 			css: {
-				files: ['<%= dirs.css %>/*.scss'],
+				files: ['<%= dirs.scss %>/*.scss'],
 				tasks: ['sass', 'rtlcss', 'postcss', 'cssmin', 'concat']
 			},
 			js: {
@@ -183,15 +184,14 @@ module.exports = function( grunt ) {
 				type: 'wp-plugin',
 				domainPath: 'i18n/languages',
 				potHeaders: {
-					'report-msgid-bugs-to': 'https://github.com/woocommerce/woocommerce/issues',
+					'report-msgid-bugs-to': 'https://github.com/ClassicPress-Research/classic-commerce/issues',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
 				}
 			},
 			dist: {
 				options: {
-					potFilename: 'woocommerce.pot',
+					potFilename: 'classic-commerce.pot',
 					exclude: [
-						'apigen/.*',
 						'vendor/.*',
 						'tests/.*',
 						'tmp/.*'
@@ -203,7 +203,7 @@ module.exports = function( grunt ) {
 		// Check textdomain errors.
 		checktextdomain: {
 			options:{
-				text_domain: 'woocommerce',
+				text_domain: 'classic-commerce',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',
@@ -224,7 +224,6 @@ module.exports = function( grunt ) {
 			files: {
 				src:  [
 					'**/*.php',               // Include all files
-					'!apigen/**',             // Exclude apigen/
 					'!includes/libraries/**', // Exclude libraries/
 					'!node_modules/**',       // Exclude node_modules/
 					'!tests/**',              // Exclude tests/
@@ -240,13 +239,6 @@ module.exports = function( grunt ) {
 			options: {
 				stdout: true,
 				stderr: true
-			},
-			apidocs: {
-				command: [
-					'vendor/bin/apigen generate -q',
-					'cd apigen',
-					'php hook-docs.php'
-				].join( '&&' )
 			},
 			e2e_test: {
 				command: 'npm run --silent test:single tests/e2e-tests/' + grunt.option( 'file' )
@@ -299,7 +291,6 @@ module.exports = function( grunt ) {
 			dist: {
 				src:  [
 					'**/*.php',                                                  // Include all files
-					'!apigen/**',                                                // Exclude apigen/
 					'!includes/api/legacy/**',                                   // Exclude legacy REST API
 					'!includes/gateways/simplify-commerce/includes/Simplify/**', // Exclude simplify commerce SDK
 					'!includes/libraries/**',                                    // Exclude libraries/

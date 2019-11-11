@@ -2,7 +2,7 @@
 /**
  * Class WC_Order_Item_Coupon_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Order Item Coupon Data Store
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Order_Item_Coupon_Data_Store extends Abstract_WC_Order_Item_Type_Data_Store implements WC_Object_Data_Store_Interface, WC_Order_Item_Type_Data_Store_Interface {
 

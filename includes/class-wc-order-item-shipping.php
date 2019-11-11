@@ -2,9 +2,9 @@
 /**
  * Order Line Item (shipping)
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
- * @since   3.0.0
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -34,7 +34,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	/**
 	 * Calculate item taxes.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  array $calculate_tax_for Location data to get taxes for. Required.
 	 * @return bool  True if taxes were calculated.
 	 */
@@ -193,7 +193,7 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	public function get_method_title( $context = 'view' ) {
 		$method_title = $this->get_prop( 'method_title', $context );
 		if ( 'view' === $context ) {
-			return $method_title ? $method_title : __( 'Shipping', 'woocommerce' );
+			return $method_title ? $method_title : __( 'Shipping', 'classic-commerce' );
 		} else {
 			return $method_title;
 		}
@@ -272,8 +272,8 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	 * Offset get: for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Key.
-	 * @return mixed
+	 * @param      string $offset Key.
+	 * @return     mixed
 	 */
 	public function offsetGet( $offset ) {
 		if ( 'cost' === $offset ) {
@@ -286,8 +286,8 @@ class WC_Order_Item_Shipping extends WC_Order_Item {
 	 * Offset set: for ArrayAccess/Backwards compatibility.
 	 *
 	 * @deprecated Add deprecation notices in future release.
-	 * @param string $offset Key.
-	 * @param mixed  $value Value to set.
+	 * @param      string $offset Key.
+	 * @param      mixed  $value Value to set.
 	 */
 	public function offsetSet( $offset, $value ) {
 		if ( 'cost' === $offset ) {

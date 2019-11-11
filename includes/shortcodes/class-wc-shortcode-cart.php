@@ -4,7 +4,7 @@
  *
  * Used on the cart page, the cart shortcode displays the cart contents and interface for coupon codes and other cart bits and pieces.
  *
- * @package WooCommerce/Shortcodes/Cart
+ * @package ClassicCommerce/Shortcodes/Cart
  * @version WC-2.3.0
  */
 
@@ -34,7 +34,7 @@ class WC_Shortcode_Cart {
 			$address = apply_filters( 'woocommerce_cart_calculate_shipping_address', $address );
 
 			if ( $address['postcode'] && ! WC_Validation::is_postcode( $address['postcode'], $address['country'] ) ) {
-				throw new Exception( __( 'Please enter a valid postcode / ZIP.', 'woocommerce' ) );
+				throw new Exception( __( 'Please enter a valid postcode / ZIP.', 'classic-commerce' ) );
 			} elseif ( $address['postcode'] ) {
 				$address['postcode'] = wc_format_postcode( $address['postcode'], $address['country'] );
 			}
@@ -50,7 +50,7 @@ class WC_Shortcode_Cart {
 			WC()->customer->set_calculated_shipping( true );
 			WC()->customer->save();
 
-			wc_add_notice( __( 'Shipping costs updated.', 'woocommerce' ), 'notice' );
+			wc_add_notice( __( 'Shipping costs updated.', 'classic-commerce' ), 'notice' );
 
 			do_action( 'woocommerce_calculated_shipping' );
 

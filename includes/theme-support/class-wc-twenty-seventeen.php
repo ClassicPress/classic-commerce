@@ -2,8 +2,8 @@
 /**
  * Twenty Seventeen support.
  *
- * @since   2.6.9
- * @package WooCommerce/Classes
+ * @since   WC-2.6.9
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

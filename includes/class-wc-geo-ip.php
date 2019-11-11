@@ -4,9 +4,9 @@
  *
  * This class is a fork of GeoIP class from MaxMind LLC.
  *
- * @package    WooCommerce/Classes
- * @version    2.4.0
- * @deprecated 3.4.0
+ * @package    ClassicCommerce/Classes
+ * @version    WC-2.4.0
+ * @deprecated WC-3.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Geo_IP Class.
  *
- * @deprecated 3.4.0
+ * @deprecated WC-3.4.0
  */
 class WC_Geo_IP {
 

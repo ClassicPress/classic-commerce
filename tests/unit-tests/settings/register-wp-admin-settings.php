@@ -5,7 +5,7 @@
  * Tests the helper class that makes settings (currently present in wp-admin)
  * available to the REST API.
  *
- * @package WooCommerce\Tests\Settings
+ * @package ClassicCommerce\Tests\Settings
  * @since WC-3.0.0
  */
 class WC_Tests_Register_WP_Admin_Settings extends WC_Unit_Test_Case {

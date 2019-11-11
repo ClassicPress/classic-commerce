@@ -2,9 +2,9 @@
 /**
  * Product Variation
  *
- * The WooCommerce product variation class handles product variation data.
+ * The ClassicCommerce product variation class handles product variation data.
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.0.0
  */
 
@@ -56,7 +56,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Prefix for action and filter hooks on data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_hook_prefix() {
@@ -75,7 +75,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * If the stock level comes from another product ID.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return int
 	 */
 	public function get_stock_managed_by_id() {
@@ -305,7 +305,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Return if product manage stock.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return boolean|string true, false, or parent.
 	 */
@@ -339,7 +339,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	 * Get backorders.
 	 *
 	 * @param  string $context What the value is for. Valid values are view and edit.
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @return string yes no or notify
 	 */
 	public function get_backorders( $context = 'view' ) {
@@ -355,7 +355,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get main image ID.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -372,7 +372,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get purchase note.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return string
 	 */
@@ -389,7 +389,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get shipping class ID.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $context What the value is for. Valid values are view and edit.
 	 * @return int
 	 */
@@ -459,7 +459,7 @@ class WC_Product_Variation extends WC_Product_Simple {
 	/**
 	 * Get the parent data array for this variation.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return array
 	 */
 	public function get_parent_data() {

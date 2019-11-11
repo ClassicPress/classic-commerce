@@ -4,7 +4,7 @@
  *
  * Used on the checkout page, the checkout shortcode displays the checkout process.
  *
- * @package WooCommerce/Shortcodes/Checkout
+ * @package ClassicCommerce/Shortcodes/Checkout
  * @version WC-2.0.0
  */
 
@@ -90,12 +90,12 @@ class WC_Shortcode_Checkout {
 
 				// Order or payment link is invalid.
 				if ( ! $order || $order->get_id() !== $order_id || $order->get_order_key() !== $order_key ) {
-					throw new Exception( __( 'Sorry, this order is invalid and cannot be paid for.', 'woocommerce' ) );
+					throw new Exception( __( 'Sorry, this order is invalid and cannot be paid for.', 'classic-commerce' ) );
 				}
 
 				// Logged out customer does not have permission to pay for this order.
 				if ( ! current_user_can( 'pay_for_order', $order_id ) && ! is_user_logged_in() ) {
-					echo '<div class="woocommerce-info">' . esc_html__( 'Please log in to your account below to continue to the payment form.', 'woocommerce' ) . '</div>';
+					echo '<div class="woocommerce-info">' . esc_html__( 'Please log in to your account below to continue to the payment form.', 'classic-commerce' ) . '</div>';
 					woocommerce_login_form(
 						array(
 							'redirect' => $order->get_checkout_payment_url(),
@@ -106,13 +106,13 @@ class WC_Shortcode_Checkout {
 
 				// Logged in customer trying to pay for someone else's order.
 				if ( ! current_user_can( 'pay_for_order', $order_id ) ) {
-					throw new Exception( __( 'This order cannot be paid for. Please contact us if you need assistance.', 'woocommerce' ) );
+					throw new Exception( __( 'This order cannot be paid for. Please contact us if you need assistance.', 'classic-commerce' ) );
 				}
 
 				// Does not need payment.
 				if ( ! $order->needs_payment() ) {
 					/* translators: %s: order status */
-					throw new Exception( sprintf( __( 'This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance.', 'woocommerce' ), wc_get_order_status_name( $order->get_status() ) ) );
+					throw new Exception( sprintf( __( 'This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance.', 'classic-commerce' ), wc_get_order_status_name( $order->get_status() ) ) );
 				}
 
 				// Ensure order items are still stocked if paying for a failed order. Pending orders do not need this check because stock is held.
@@ -141,7 +141,7 @@ class WC_Shortcode_Checkout {
 
 							if ( ! apply_filters( 'woocommerce_pay_order_product_in_stock', $product->is_in_stock(), $product, $order ) ) {
 								/* translators: %s: product name */
-								throw new Exception( sprintf( __( 'Sorry, "%s" is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused.', 'woocommerce' ), $product->get_name() ) );
+								throw new Exception( sprintf( __( 'Sorry, "%s" is no longer in stock so this order cannot be paid for. We apologize for any inconvenience caused.', 'classic-commerce' ), $product->get_name() ) );
 							}
 
 							// We only need to check products managing stock, with a limited stock qty.
@@ -155,7 +155,7 @@ class WC_Shortcode_Checkout {
 
 							if ( $product->get_stock_quantity() < ( $held_stock + $required_stock ) ) {
 								/* translators: 1: product name 2: quantity in stock */
-								throw new Exception( sprintf( __( 'Sorry, we do not have enough "%1$s" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused.', 'woocommerce' ), $product->get_name(), wc_format_stock_quantity_for_display( $product->get_stock_quantity() - $held_stock, $product ) ) );
+								throw new Exception( sprintf( __( 'Sorry, we do not have enough "%1$s" in stock to fulfill your order (%2$s available). We apologize for any inconvenience caused.', 'classic-commerce' ), $product->get_name(), wc_format_stock_quantity_for_display( $product->get_stock_quantity() - $held_stock, $product ) ) );
 							}
 						}
 					}
@@ -180,7 +180,7 @@ class WC_Shortcode_Checkout {
 					'checkout/form-pay.php', array(
 						'order'              => $order,
 						'available_gateways' => $available_gateways,
-						'order_button_text'  => apply_filters( 'woocommerce_pay_order_button_text', __( 'Pay for order', 'woocommerce' ) ),
+						'order_button_text'  => apply_filters( 'woocommerce_pay_order_button_text', __( 'Pay for order', 'classic-commerce' ) ),
 					)
 				);
 
@@ -201,13 +201,13 @@ class WC_Shortcode_Checkout {
 
 				} else {
 					/* translators: %s: order status */
-					wc_print_notice( sprintf( __( 'This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance.', 'woocommerce' ), wc_get_order_status_name( $order->get_status() ) ), 'error' );
+					wc_print_notice( sprintf( __( 'This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. Please contact us if you need assistance.', 'classic-commerce' ), wc_get_order_status_name( $order->get_status() ) ), 'error' );
 				}
 			} else {
-				wc_print_notice( __( 'Sorry, this order is invalid and cannot be paid for.', 'woocommerce' ), 'error' );
+				wc_print_notice( __( 'Sorry, this order is invalid and cannot be paid for.', 'classic-commerce' ), 'error' );
 			}
 		} else {
-			wc_print_notice( __( 'Invalid order.', 'woocommerce' ), 'error' );
+			wc_print_notice( __( 'Invalid order.', 'classic-commerce' ), 'error' );
 		}
 
 		do_action( 'after_woocommerce_pay' );
@@ -274,7 +274,7 @@ class WC_Shortcode_Checkout {
 			$non_js_checkout = ! empty( $_POST['woocommerce_checkout_update_totals'] ); // WPCS: input var ok, CSRF ok.
 
 			if ( wc_notice_count( 'error' ) === 0 && $non_js_checkout ) {
-				wc_add_notice( __( 'The order totals have been updated. Please confirm your order by pressing the "Place order" button at the bottom of the page.', 'woocommerce' ) );
+				wc_add_notice( __( 'The order totals have been updated. Please confirm your order by pressing the "Place order" button at the bottom of the page.', 'classic-commerce' ) );
 			}
 
 			wc_get_template( 'checkout/form-checkout.php', array( 'checkout' => $checkout ) );

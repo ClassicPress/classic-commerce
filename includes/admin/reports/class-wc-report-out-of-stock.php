@@ -13,8 +13,8 @@ if ( ! class_exists( 'WC_Report_Stock' ) ) {
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin/Reports
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin/Reports
+ * @version     WC-2.1.0
  */
 class WC_Report_Out_Of_Stock extends WC_Report_Stock {
 
@@ -22,7 +22,7 @@ class WC_Report_Out_Of_Stock extends WC_Report_Stock {
 	 * No items found text.
 	 */
 	public function no_items() {
-		_e( 'No out of stock products found.', 'woocommerce' );
+		_e( 'No out of stock products found.', 'classic-commerce' );
 	}
 
 	/**

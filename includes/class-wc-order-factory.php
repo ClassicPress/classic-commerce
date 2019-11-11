@@ -2,10 +2,10 @@
 /**
  * Order Factory
  *
- * The WooCommerce order factory creating the right order objects.
+ * The ClassicCommerce order factory creating the right order objects.
  *
  * @version WC-3.0.0
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  */
 
 defined( 'ABSPATH' ) || exit;

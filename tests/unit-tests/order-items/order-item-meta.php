@@ -2,7 +2,7 @@
 
 /**
  * Order Item Meta Tests.
- * @package WooCommerce\Tests\Order_Items
+ * @package ClassicCommerce\Tests\Order_Items
  * @since 3.0.8
  */
 class WC_Tests_Order_Item_Meta extends WC_Unit_Test_Case {

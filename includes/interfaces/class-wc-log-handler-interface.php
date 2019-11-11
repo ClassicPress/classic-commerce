@@ -3,7 +3,7 @@
  * Log Handler Interface
  *
  * @version WC-3.3.0
- * @package WooCommerce/Interface
+ * @package ClassicCommerce/Interface
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

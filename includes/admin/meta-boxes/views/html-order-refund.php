@@ -3,7 +3,7 @@
  * Show order refund
  *
  * @var object $refund The refund object.
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,20 +20,20 @@ $who_refunded = new WP_User( $refund->get_refunded_by() );
 		if ( $who_refunded->exists() ) {
 			printf(
 				/* translators: 1: refund id 2: refund date 3: username */
-				esc_html__( 'Refund #%1$s - %2$s by %3$s', 'woocommerce' ),
+				esc_html__( 'Refund #%1$s - %2$s by %3$s', 'classic-commerce' ),
 				esc_html( $refund->get_id() ),
 				esc_html( wc_format_datetime( $refund->get_date_created(), get_option( 'date_format' ) . ', ' . get_option( 'time_format' ) ) ),
 				sprintf(
 					'<abbr class="refund_by" title="%1$s">%2$s</abbr>',
 					/* translators: 1: ID who refunded */
-					sprintf( esc_attr__( 'ID: %d', 'woocommerce' ), absint( $who_refunded->ID ) ),
+					sprintf( esc_attr__( 'ID: %d', 'classic-commerce' ), absint( $who_refunded->ID ) ),
 					esc_html( $who_refunded->display_name )
 				)
 			);
 		} else {
 			printf(
 				/* translators: 1: refund id 2: refund date */
-				esc_html__( 'Refund #%1$s - %2$s', 'woocommerce' ),
+				esc_html__( 'Refund #%1$s - %2$s', 'classic-commerce' ),
 				esc_html( $refund->get_id() ),
 				esc_html( wc_format_datetime( $refund->get_date_created(), get_option( 'date_format' ) . ', ' . get_option( 'time_format' ) ) )
 			);

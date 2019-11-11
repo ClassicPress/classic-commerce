@@ -2,7 +2,7 @@
 /**
  * Display notices in admin
  *
- * @package WooCommerce\Admin
+ * @package ClassicCommerce\Admin
  * @version WC-3.4.0
  */
 
@@ -132,11 +132,11 @@ class WC_Admin_Notices {
 	public static function hide_notices() {
 		if ( isset( $_GET['wc-hide-notice'] ) && isset( $_GET['_wc_notice_nonce'] ) ) { // WPCS: input var ok, CSRF ok.
 			if ( ! wp_verify_nonce( sanitize_key( wp_unslash( $_GET['_wc_notice_nonce'] ) ), 'woocommerce_hide_notices_nonce' ) ) { // WPCS: input var ok, CSRF ok.
-				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'classic-commerce' ) );
 			}
 
 			if ( ! current_user_can( 'manage_woocommerce' ) ) {
-				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'woocommerce' ) );
+				wp_die( esc_html__( 'You don&#8217;t have permission to do this.', 'classic-commerce' ) );
 			}
 
 			$hide_notice = sanitize_text_field( wp_unslash( $_GET['wc-hide-notice'] ) ); // WPCS: input var ok, CSRF ok.
@@ -166,7 +166,7 @@ class WC_Admin_Notices {
 			'plugins',
 		);
 
-		// Notices should only show on WooCommerce screens, the main dashboard, and on the plugins screen.
+		// Notices should only show on ClassicCommerce screens, the main dashboard, and on the plugins screen.
 		if ( ! in_array( $screen_id, wc_get_screen_ids(), true ) && ! in_array( $screen_id, $show_on_screens, true ) ) {
 			return;
 		}
@@ -364,7 +364,7 @@ class WC_Admin_Notices {
 	/**
 	 * If Gutenberg is active, tell people about the Products block feature plugin.
 	 *
-	 * @since 3.4.3
+	 * @since WC-3.4.3
 	 * @todo  Remove this notice and associated code once the feature plugin has been merged into core.
 	 */
 	public static function add_wootenberg_feature_plugin_notice() {
@@ -376,7 +376,7 @@ class WC_Admin_Notices {
 	/**
 	 * Tell people about the Products block feature plugin when they activate Gutenberg.
 	 *
-	 * @since 3.4.3
+	 * @since WC-3.4.3
 	 * @todo  Remove this notice and associated code once the feature plugin has been merged into core.
 	 */
 	public static function add_wootenberg_feature_plugin_notice_on_gutenberg_activate() {
@@ -401,7 +401,7 @@ class WC_Admin_Notices {
 	 * Determine if the store is running SSL.
 	 *
 	 * @return bool Flag SSL enabled.
-	 * @since  3.5.1
+	 * @since  WC-3.5.1
 	 */
 	protected static function is_ssl() {
 		$shop_page = 0 < wc_get_page_id( 'shop' ) ? get_permalink( wc_get_page_id( 'shop' ) ) : get_home_url();

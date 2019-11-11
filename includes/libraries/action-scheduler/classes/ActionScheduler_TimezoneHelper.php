@@ -10,7 +10,7 @@ abstract class ActionScheduler_TimezoneHelper {
 	 * Set a DateTime's timezone to the WordPress site's timezone, or a UTC offset
 	 * if no timezone string is available.
 	 *
-	 * @since  2.1.0
+	 * @since  WC-2.1.0
 	 *
 	 * @param DateTime $date
 	 * @return ActionScheduler_DateTime
@@ -82,7 +82,7 @@ abstract class ActionScheduler_TimezoneHelper {
 	/**
 	 * Get timezone offset in seconds.
 	 *
-	 * @since  2.1.0
+	 * @since  WC-2.1.0
 	 * @return float
 	 */
 	protected static function get_local_timezone_offset() {
@@ -97,7 +97,7 @@ abstract class ActionScheduler_TimezoneHelper {
 	}
 
 	/**
-	 * @deprecated 2.1.0
+	 * @deprecated WC-2.1.0
 	 */
 	public static function get_local_timezone( $reset = FALSE ) {
 		_deprecated_function( __FUNCTION__, '2.1.0', 'ActionScheduler_TimezoneHelper::set_local_timezone()' );

@@ -2,13 +2,13 @@
 /**
  * Class WC_Tests_REST_System_Status file.
  *
- * @package WooCommerce/Tests
+ * @package ClassicCommerce/Tests
  */
 
 /**
  * System Status REST Tests.
  *
- * @package WooCommerce\Tests\API
+ * @package ClassicCommerce\Tests\API
  * @since 3.0
  */
 class WC_Tests_REST_System_Status_V2 extends WC_REST_Unit_Test_Case {
@@ -215,41 +215,6 @@ class WC_Tests_REST_System_Status_V2 extends WC_REST_Unit_Test_Case {
 		$this->assertArrayHasKey( 'settings', $properties );
 		$this->assertArrayHasKey( 'security', $properties );
 		$this->assertArrayHasKey( 'pages', $properties );
-	}
-
-	/**
-	 * Test to make sure get_items (all tools) response is correct.
-	 *
-	 * @since 3.0.0
-	 */
-	public function test_get_system_tools() {
-		wp_set_current_user( $this->user );
-
-		$tools_controller = new WC_REST_System_Status_Tools_Controller();
-		$raw_tools        = $tools_controller->get_tools();
-
-		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v2/system_status/tools' ) );
-		$data     = $response->get_data();
-
-		$this->assertEquals( 200, $response->get_status() );
-		$this->assertEquals( count( $raw_tools ), count( $data ) );
-		$this->assertContains(
-			array(
-				'id'          => 'reset_tracking',
-				'name'        => 'Reset usage tracking',
-				'action'      => 'Reset',
-				'description' => 'This will reset your usage tracking settings, causing it to show the opt-in banner again and not sending any data.',
-				'_links'      => array(
-					'item' => array(
-						array(
-							'href'       => rest_url( '/wc/v2/system_status/tools/reset_tracking' ),
-							'embeddable' => true,
-						),
-					),
-				),
-			),
-			$data
-		);
 	}
 
 	/**

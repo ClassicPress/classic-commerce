@@ -2,14 +2,14 @@
 /**
  * Shortcodes
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * WooCommerce Shortcodes class.
+ * ClassicCommerce Shortcodes class.
  */
 class WC_Shortcodes {
 
@@ -591,7 +591,7 @@ class WC_Shortcodes {
 	/**
 	 * Order by rating.
 	 *
-	 * @deprecated 3.2.0 Use WC_Shortcode_Products::order_by_rating_post_clauses().
+	 * @deprecated WC-3.2.0 Use WC_Shortcode_Products::order_by_rating_post_clauses().
 	 * @param      array $args Query args.
 	 * @return     array
 	 */

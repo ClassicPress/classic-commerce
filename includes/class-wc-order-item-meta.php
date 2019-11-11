@@ -4,9 +4,9 @@
  *
  * A Simple class for managing order item meta so plugins add it in the correct format.
  *
- * @package     WooCommerce/Classes
- * @deprecated  3.0.0 wc_display_item_meta function is used instead.
- * @version     2.4
+ * @package     ClassicCommerce/Classes
+ * @deprecated  WC-3.0.0 wc_display_item_meta function is used instead.
+ * @version     WC-2.4
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -119,8 +119,8 @@ class WC_Order_Item_Meta {
 	 *   )
 	 * )
 	 *
-	 * @since WC-2.4
-	 * @param string $hideprefix exclude meta when key is prefixed with this, defaults to '_'.
+	 * @since  WC-2.4
+	 * @param  string $hideprefix exclude meta when key is prefixed with this, defaults to '_'.
 	 * @return array
 	 */
 	public function get_formatted( $hideprefix = '_' ) {

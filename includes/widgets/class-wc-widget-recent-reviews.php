@@ -2,7 +2,7 @@
 /**
  * Recent Reviews Widget.
  *
- * @package WooCommerce/Widgets
+ * @package ClassicCommerce/Widgets
  * @version WC-2.3.0
  */
 
@@ -18,14 +18,14 @@ class WC_Widget_Recent_Reviews extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_recent_reviews';
-		$this->widget_description = __( 'Display a list of recent reviews from your store.', 'woocommerce' );
+		$this->widget_description = __( 'Display a list of recent reviews from your store.', 'classic-commerce' );
 		$this->widget_id          = 'woocommerce_recent_reviews';
-		$this->widget_name        = __( 'Recent Product Reviews', 'woocommerce' );
+		$this->widget_name        = __( 'Recent Product Reviews', 'classic-commerce' );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',
-				'std'   => __( 'Recent reviews', 'woocommerce' ),
-				'label' => __( 'Title', 'woocommerce' ),
+				'std'   => __( 'Recent reviews', 'classic-commerce' ),
+				'label' => __( 'Title', 'classic-commerce' ),
 			),
 			'number' => array(
 				'type'  => 'number',
@@ -33,7 +33,7 @@ class WC_Widget_Recent_Reviews extends WC_Widget {
 				'min'   => 1,
 				'max'   => '',
 				'std'   => 10,
-				'label' => __( 'Number of reviews to show', 'woocommerce' ),
+				'label' => __( 'Number of reviews to show', 'classic-commerce' ),
 			),
 		);
 

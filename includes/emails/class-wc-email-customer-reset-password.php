@@ -2,7 +2,7 @@
 /**
  * Class WC_Email_Customer_Reset_Password file.
  *
- * @package WooCommerce\Emails
+ * @package ClassicCommerce\Emails
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -17,8 +17,8 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 	 * An email sent to the customer when they reset their password.
 	 *
 	 * @class       WC_Email_Customer_Reset_Password
-	 * @version     3.5.0
-	 * @package     WooCommerce/Classes/Emails
+	 * @version     WC-3.5.0
+	 * @package     ClassicCommerce/Classes/Emails
 	 * @extends     WC_Email
 	 */
 	class WC_Email_Customer_Reset_Password extends WC_Email {
@@ -59,8 +59,8 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 			$this->id             = 'customer_reset_password';
 			$this->customer_email = true;
 
-			$this->title       = __( 'Reset password', 'woocommerce' );
-			$this->description = __( 'Customer "reset password" emails are sent when customers reset their passwords.', 'woocommerce' );
+			$this->title       = __( 'Reset password', 'classic-commerce' );
+			$this->description = __( 'Customer "reset password" emails are sent when customers reset their passwords.', 'classic-commerce' );
 
 			$this->template_html  = 'emails/customer-reset-password.php';
 			$this->template_plain = 'emails/plain/customer-reset-password.php';
@@ -75,21 +75,21 @@ if ( ! class_exists( 'WC_Email_Customer_Reset_Password', false ) ) :
 		/**
 		 * Get email subject.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_subject() {
-			return __( 'Password reset request for {site_title}', 'woocommerce' );
+			return __( 'Password reset request for {site_title}', 'classic-commerce' );
 		}
 
 		/**
 		 * Get email heading.
 		 *
-		 * @since  3.1.0
+		 * @since  WC-3.1.0
 		 * @return string
 		 */
 		public function get_default_heading() {
-			return __( 'Password reset request', 'woocommerce' );
+			return __( 'Password reset request', 'classic-commerce' );
 		}
 
 		/**

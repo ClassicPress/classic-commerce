@@ -1,6 +1,6 @@
 {
-  "name": "ClassicPress-research/classic-commerce",
-  "description": "An eCommerce toolkit that helps you sell anything. Beautifully.",
+  "name": "classicpress-research/classic-commerce",
+  "description": "A simple, powerful and independent e-commerce platform. Sell anything with ease.",
   "homepage": "https://github.com/ClassicPress-research/classic-commerce",
   "type": "classicpress-plugin",
   "license": "GPL-3.0-or-later",
@@ -17,7 +17,6 @@
     "woocommerce/woocommerce-sniffs": "*",
     "wimg/php-compatibility": "^8.0",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-    "apigen/apigen": "^4",
     "nette/utils": "~2.3.0"
   },
   "scripts": {

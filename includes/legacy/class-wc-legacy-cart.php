@@ -5,8 +5,8 @@
  * Legacy and deprecated functions are here to keep the WC_Cart class clean.
  * This class will be removed in future versions.
  *
- * @version  3.2.0
- * @package  WooCommerce/Classes
+ * @version  WC-3.2.0
+ * @package  ClassicCommerce/Classes
  * @category Class
  * @author   Automattic
  */
@@ -23,7 +23,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Array of defaults. Not used since 3.2.
 	 *
-	 * @deprecated 3.2.0
+	 * @deprecated WC-3.2.0
 	 */
 	public $cart_session_data = array(
 		'cart_contents_total'         => 0,
@@ -46,7 +46,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Contains an array of coupon usage counts after they have been applied.
 	 *
-	 * @deprecated 3.2.0
+	 * @deprecated WC-3.2.0
 	 * @var array
 	 */
 	public $coupon_applied_count = array();
@@ -269,7 +269,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Remove taxes.
 	 *
-	 * @deprecated 3.2.0 Taxes are never calculated if customer is tax except making this function unused.
+	 * @deprecated WC-3.2.0 Taxes are never calculated if customer is tax except making this function unused.
 	 */
 	public function remove_taxes() {
 		wc_deprecated_function( 'WC_Cart::remove_taxes', '3.2', '' );
@@ -277,7 +277,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Init.
 	 *
-	 * @deprecated 3.2.0 Session is loaded via hooks rather than directly.
+	 * @deprecated WC-3.2.0 Session is loaded via hooks rather than directly.
 	 */
 	public function init() {
 		wc_deprecated_function( 'WC_Cart::init', '3.2', '' );
@@ -305,7 +305,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Gets the url to the cart page.
 	 *
-	 * @deprecated 2.5.0 in favor to wc_get_cart_url()
+	 * @deprecated WC-2.5.0 in favor to wc_get_cart_url()
 	 * @return string url to page
 	 */
 	public function get_cart_url() {
@@ -316,7 +316,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Gets the url to the checkout page.
 	 *
-	 * @deprecated 2.5.0 in favor to wc_get_checkout_url()
+	 * @deprecated WC-2.5.0 in favor to wc_get_checkout_url()
 	 * @return string url to page
 	 */
 	public function get_checkout_url() {
@@ -327,7 +327,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Sees if we need a shipping address.
 	 *
-	 * @deprecated 2.5.0 in favor to wc_ship_to_billing_address_only()
+	 * @deprecated WC-2.5.0 in favor to wc_ship_to_billing_address_only()
 	 * @return bool
 	 */
 	public function ship_to_billing_address_only() {
@@ -338,7 +338,7 @@ abstract class WC_Legacy_Cart {
 	/**
 	 * Coupons enabled function. Filterable.
 	 *
-	 * @deprecated 2.5.0 in favor to wc_coupons_enabled()
+	 * @deprecated WC-2.5.0 in favor to wc_coupons_enabled()
 	 * @return bool
 	 */
 	public function coupons_enabled() {

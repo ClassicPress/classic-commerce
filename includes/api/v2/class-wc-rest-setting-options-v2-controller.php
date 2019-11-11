@@ -4,8 +4,8 @@
  *
  * Handles requests to the /settings/$group/$setting endpoints.
  *
- * @package WooCommerce/API
- * @since   3.0.0
+ * @package ClassicCommerce/API
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Setting Options controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Controller
  */
 class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
@@ -42,7 +42,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 			$this->namespace, '/' . $this->rest_base, array(
 				'args'   => array(
 					'group' => array(
-						'description' => __( 'Settings group ID.', 'woocommerce' ),
+						'description' => __( 'Settings group ID.', 'classic-commerce' ),
 						'type'        => 'string',
 					),
 				),
@@ -59,7 +59,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 			$this->namespace, '/' . $this->rest_base . '/batch', array(
 				'args'   => array(
 					'group' => array(
-						'description' => __( 'Settings group ID.', 'woocommerce' ),
+						'description' => __( 'Settings group ID.', 'classic-commerce' ),
 						'type'        => 'string',
 					),
 				),
@@ -77,11 +77,11 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 			$this->namespace, '/' . $this->rest_base . '/(?P<id>[\w-]+)', array(
 				'args'   => array(
 					'group' => array(
-						'description' => __( 'Settings group ID.', 'woocommerce' ),
+						'description' => __( 'Settings group ID.', 'classic-commerce' ),
 						'type'        => 'string',
 					),
 					'id'    => array(
-						'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+						'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 						'type'        => 'string',
 					),
 				),
@@ -104,7 +104,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Return a single setting.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -123,7 +123,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Return all settings in a group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -150,19 +150,19 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Get all settings in a group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string $group_id Group ID.
 	 * @return array|WP_Error
 	 */
 	public function get_group_settings( $group_id ) {
 		if ( empty( $group_id ) ) {
-			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$settings = apply_filters( 'woocommerce_settings-' . $group_id, array() );
 
 		if ( empty( $settings ) ) {
-			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'rest_setting_setting_group_invalid', __( 'Invalid setting group.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$filtered_settings = array();
@@ -196,7 +196,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Returns a list of countries and states for use in the base location setting.
 	 *
-	 * @since  3.0.7
+	 * @since  WC-3.0.7
 	 * @return array Array of states and countries.
 	 */
 	private function get_countries_and_states() {
@@ -224,14 +224,14 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Get setting data.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string $group_id Group ID.
 	 * @param string $setting_id Setting ID.
 	 * @return stdClass|WP_Error
 	 */
 	public function get_setting( $group_id, $setting_id ) {
 		if ( empty( $setting_id ) ) {
-			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$settings = $this->get_group_settings( $group_id );
@@ -243,13 +243,13 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 		$array_key = array_keys( wp_list_pluck( $settings, 'id' ), $setting_id );
 
 		if ( empty( $array_key ) ) {
-			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		$setting = $settings[ $array_key[0] ];
 
 		if ( ! $this->is_setting_type_valid( $setting['type'] ) ) {
-			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'rest_setting_setting_invalid', __( 'Invalid setting.', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		return $setting;
@@ -258,7 +258,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Bulk create, update and delete items.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full details about the request.
 	 * @return array Of WP_Error or WP_REST_Response.
 	 */
@@ -285,7 +285,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Update a single setting in a group.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  WP_REST_Request $request Request data.
 	 * @return WP_Error|WP_REST_Response
 	 */
@@ -327,7 +327,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Prepare a single setting object for response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param object          $item Setting object.
 	 * @param WP_REST_Request $request Request object.
 	 * @return WP_REST_Response $response Response data.
@@ -345,7 +345,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Prepare links for the request.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param string $setting_id Setting ID.
 	 * @param string $group_id Group ID.
 	 * @return array Links for the given setting.
@@ -367,13 +367,13 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Makes sure the current user has access to READ the settings APIs.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full data about the request.
 	 * @return WP_Error|boolean
 	 */
 	public function get_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'settings', 'read' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_view', __( 'Sorry, you cannot list resources.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -382,13 +382,13 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Makes sure the current user has access to WRITE the settings APIs.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param WP_REST_Request $request Full data about the request.
 	 * @return WP_Error|boolean
 	 */
 	public function update_items_permissions_check( $request ) {
 		if ( ! wc_rest_check_manager_permissions( 'settings', 'edit' ) ) {
-			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you cannot edit this resource.', 'woocommerce' ), array( 'status' => rest_authorization_required_code() ) );
+			return new WP_Error( 'woocommerce_rest_cannot_edit', __( 'Sorry, you cannot edit this resource.', 'classic-commerce' ), array( 'status' => rest_authorization_required_code() ) );
 		}
 
 		return true;
@@ -442,7 +442,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Callback for allowed keys for each setting response.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $key Key to check.
 	 * @return boolean
 	 */
@@ -466,7 +466,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 	/**
 	 * Boolean for if a setting type is a valid supported setting type.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @param  string $type Type.
 	 * @return bool
 	 */
@@ -502,7 +502,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'          => array(
-					'description' => __( 'A unique identifier for the setting.', 'woocommerce' ),
+					'description' => __( 'A unique identifier for the setting.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_title',
@@ -511,7 +511,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'label'       => array(
-					'description' => __( 'A human readable label for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable label for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_text_field',
@@ -520,7 +520,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'description' => array(
-					'description' => __( 'A human readable description for the setting used in interfaces.', 'woocommerce' ),
+					'description' => __( 'A human readable description for the setting used in interfaces.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_text_field',
@@ -529,18 +529,18 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'value'       => array(
-					'description' => __( 'Setting value.', 'woocommerce' ),
+					'description' => __( 'Setting value.', 'classic-commerce' ),
 					'type'        => 'mixed',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'default'     => array(
-					'description' => __( 'Default value for the setting.', 'woocommerce' ),
+					'description' => __( 'Default value for the setting.', 'classic-commerce' ),
 					'type'        => 'mixed',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'tip'         => array(
-					'description' => __( 'Additional help text shown to the user about the setting.', 'woocommerce' ),
+					'description' => __( 'Additional help text shown to the user about the setting.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_text_field',
@@ -549,7 +549,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'placeholder' => array(
-					'description' => __( 'Placeholder text to be displayed in text inputs.', 'woocommerce' ),
+					'description' => __( 'Placeholder text to be displayed in text inputs.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_text_field',
@@ -558,7 +558,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'type'        => array(
-					'description' => __( 'Type of setting.', 'woocommerce' ),
+					'description' => __( 'Type of setting.', 'classic-commerce' ),
 					'type'        => 'string',
 					'arg_options' => array(
 						'sanitize_callback' => 'sanitize_text_field',
@@ -568,7 +568,7 @@ class WC_REST_Setting_Options_V2_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'options'     => array(
-					'description' => __( 'Array of options (key value pairs) for inputs such as select, multiselect, and radio buttons.', 'woocommerce' ),
+					'description' => __( 'Array of options (key value pairs) for inputs such as select, multiselect, and radio buttons.', 'classic-commerce' ),
 					'type'        => 'object',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

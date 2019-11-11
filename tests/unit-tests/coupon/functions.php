@@ -2,7 +2,7 @@
 
 /**
  * Class Functions.
- * @package WooCommerce\Tests\Coupon
+ * @package ClassicCommerce\Tests\Coupon
  * @since WC-2.2
  */
 class WC_Tests_Functions extends WC_Unit_Test_Case {
@@ -15,9 +15,9 @@ class WC_Tests_Functions extends WC_Unit_Test_Case {
 	public function test_wc_get_coupon_types() {
 
 		$coupon_types = array(
-			'percent'       => __( 'Percentage discount', 'woocommerce' ),
-			'fixed_cart'    => __( 'Fixed cart discount', 'woocommerce' ),
-			'fixed_product' => __( 'Fixed product discount', 'woocommerce' ),
+			'percent'       => __( 'Percentage discount', 'classic-commerce' ),
+			'fixed_cart'    => __( 'Fixed cart discount', 'classic-commerce' ),
+			'fixed_product' => __( 'Fixed product discount', 'classic-commerce' ),
 		);
 
 		$this->assertEquals( $coupon_types, wc_get_coupon_types() );

@@ -2,10 +2,10 @@
 /**
  * Variable Product
  *
- * The WooCommerce product class handles individual product data.
+ * The ClassicCommerce product class handles individual product data.
  *
  * @version WC-3.0.0
- * @package WooCommerce/Classes/Products
+ * @package ClassicCommerce/Classes/Products
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -57,18 +57,18 @@ class WC_Product_Variable extends WC_Product {
 	 * @return string
 	 */
 	public function add_to_cart_text() {
-		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->is_purchasable() ? __( 'Select options', 'woocommerce' ) : __( 'Read more', 'woocommerce' ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_text', $this->is_purchasable() ? __( 'Select options', 'classic-commerce' ) : __( 'Read more', 'classic-commerce' ), $this );
 	}
 
 	/**
 	 * Get the add to cart button text description - used in aria tags.
 	 *
-	 * @since WC-3.3.0
+	 * @since  WC-3.3.0
 	 * @return string
 	 */
 	public function add_to_cart_description() {
 		/* translators: %s: Product title */
-		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Select options for &ldquo;%s&rdquo;', 'woocommerce' ), $this->get_name() ), $this );
+		return apply_filters( 'woocommerce_product_add_to_cart_description', sprintf( __( 'Select options for &ldquo;%s&rdquo;', 'classic-commerce' ), $this->get_name() ), $this );
 	}
 
 	/**
@@ -220,7 +220,7 @@ class WC_Product_Variable extends WC_Product {
 	 *
 	 * This is lazy loaded as it's not used often and does require several queries.
 	 *
-	 * @since WC-3.0.0
+	 * @since  WC-3.0.0
 	 * @return array Children ids
 	 */
 	public function get_visible_children() {
@@ -310,7 +310,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Returns an array of data for a variation. Used in the add to cart form.
 	 *
-	 * @since  2.4.0
+	 * @since  WC-2.4.0
 	 * @param  WC_Product $variation Variation product object or ID.
 	 * @return array|bool
 	 */
@@ -486,7 +486,7 @@ class WC_Product_Variable extends WC_Product {
 	/**
 	 * Is a child on backorder?
 	 *
-	 * @since WC-3.3.0
+	 * @since  WC-3.3.0
 	 * @return boolean
 	 */
 	public function child_is_on_backorder() {
@@ -549,7 +549,7 @@ class WC_Product_Variable extends WC_Product {
 	 * Returns whether or not the product has additional options that need
 	 * selecting before adding to cart.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return boolean
 	 */
 	public function has_options() {

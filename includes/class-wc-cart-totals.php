@@ -9,7 +9,7 @@
  * - if something is being stored e.g. item total, store unrounded. This is so taxes can be recalculated later accurately.
  * - if calculating a total, round (if settings allow).
  *
- * @package WooCommerce/Classes
+ * @package ClassicCommerce/Classes
  * @version WC-3.2.0
  */
 
@@ -20,14 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC_Cart_Totals class.
  *
- * @since 3.2.0
+ * @since WC-3.2.0
  */
 final class WC_Cart_Totals {
 
 	/**
 	 * Reference to cart object.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var WC_Cart
 	 */
 	protected $cart;
@@ -35,7 +35,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Reference to customer object.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $customer;
@@ -43,7 +43,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Line items to calculate.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $items = array();
@@ -51,7 +51,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Fees to calculate.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $fees = array();
@@ -59,7 +59,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Shipping costs.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $shipping = array();
@@ -67,7 +67,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Applied coupon objects.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $coupons = array();
@@ -75,7 +75,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Item/coupon discount totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $coupon_discount_totals = array();
@@ -83,7 +83,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Item/coupon discount tax totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $coupon_discount_tax_totals = array();
@@ -98,7 +98,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Stores totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @var array
 	 */
 	protected $totals = array(
@@ -117,7 +117,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Sets up the items provided, and calculate totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @throws Exception If missing WC_Cart object.
 	 * @param WC_Cart $cart Cart object to calculate totals for.
 	 */
@@ -134,7 +134,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Run all calculations methods on the given items in sequence.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate() {
 		$this->calculate_item_totals();
@@ -146,7 +146,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get default blank set of props used per item.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function get_default_item_props() {
@@ -168,7 +168,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get default blank set of props used per fee.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function get_default_fee_props() {
@@ -184,7 +184,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get default blank set of props used per shipping row.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function get_default_shipping_props() {
@@ -218,7 +218,7 @@ final class WC_Cart_Totals {
 	 *  - price: The line price in cents.
 	 *  - product: The product object this cart item is for.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function get_items_from_cart() {
 		$this->items = array();
@@ -241,7 +241,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get item costs grouped by tax class.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function get_tax_class_costs() {
@@ -270,7 +270,7 @@ final class WC_Cart_Totals {
 	 * Get fee objects from the cart. Normalises data
 	 * into the same format for use by this class.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function get_fees_from_cart() {
 		$this->fees = array();
@@ -332,7 +332,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get shipping methods from the cart and normalise.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function get_shipping_from_cart() {
 		$this->shipping = array();
@@ -358,7 +358,7 @@ final class WC_Cart_Totals {
 	 * Return array of coupon objects from the cart. Normalises data
 	 * into the same format for use by this class.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 */
 	protected function get_coupons_from_cart() {
 		$this->coupons = $this->cart->get_coupons();
@@ -415,7 +415,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Ran to remove all base taxes from an item. Used when prices include tax, and the customer is tax exempt.
 	 *
-	 * @since 3.2.2
+	 * @since WC-3.2.2
 	 * @param object $item Item to adjust the prices of.
 	 * @return object
 	 */
@@ -441,7 +441,7 @@ final class WC_Cart_Totals {
 	 *
 	 * Uses edit context so unfiltered tax class is returned.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param object $item Item to adjust the prices of.
 	 * @return object
 	 */
@@ -464,7 +464,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get discounted price of an item with precision (in cents).
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  object $item_key Item to get the price of.
 	 * @return int
 	 */
@@ -491,7 +491,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get item costs grouped by tax class.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @return array
 	 */
 	protected function get_item_costs_by_tax_class() {
@@ -517,7 +517,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get a single total with or without precision (in cents).
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  string $key Total to get.
 	 * @param  bool   $in_cents Should the totals be returned in cents, or without precision.
 	 * @return int|float
@@ -530,7 +530,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Set a single total.
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param string $key Total name you want to set.
 	 * @param int    $total Total to set.
 	 */
@@ -541,7 +541,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get all totals with or without precision (in cents).
 	 *
-	 * @since  3.2.0
+	 * @since  WC-3.2.0
 	 * @param  bool $in_cents Should the totals be returned in cents, or without precision.
 	 * @return array.
 	 */
@@ -552,7 +552,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Get taxes merged by type.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param  bool         $in_cents If returned value should be in cents.
 	 * @param  array|string $types    Types to merge and return. Defaults to all.
 	 * @return array
@@ -586,7 +586,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Combine item taxes into a single array, preserving keys.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @param array $item_taxes Taxes to combine.
 	 * @return array
 	 */
@@ -612,7 +612,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Calculate item totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate_item_totals() {
 		$this->get_items_from_cart();
@@ -672,7 +672,7 @@ final class WC_Cart_Totals {
 	 *
 	 * e.g. $100 bike with $10 coupon = customer pays $90 and tax worked backwards from that.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate_item_subtotals() {
 		foreach ( $this->items as $item_key => $item ) {
@@ -711,7 +711,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Calculate COUPON based discounts which change item prices.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 * @uses  WC_Discounts class.
 	 */
 	protected function calculate_discounts() {
@@ -777,7 +777,7 @@ final class WC_Cart_Totals {
 	 *
 	 * Note: This class sets the totals for the 'object' as they are calculated. This is so that APIs like the fees API can see these totals if needed.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate_fee_totals() {
 		$this->get_fees_from_cart();
@@ -794,7 +794,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Calculate any shipping taxes.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate_shipping_totals() {
 		$this->get_shipping_from_cart();
@@ -809,7 +809,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Main cart totals.
 	 *
-	 * @since 3.2.0
+	 * @since WC-3.2.0
 	 */
 	protected function calculate_totals() {
 		$this->set_total( 'total', round( $this->get_total( 'items_total', true ) + $this->get_total( 'fees_total', true ) + $this->get_total( 'shipping_total', true ) + array_sum( $this->get_merged_taxes( true ) ), 0 ) );
@@ -827,7 +827,7 @@ final class WC_Cart_Totals {
 	/**
 	 * Apply rounding to an array of taxes before summing. Rounds to store DP setting, ignoring precision.
 	 *
-	 * @since  3.2.6
+	 * @since  WC-3.2.6
 	 * @param  float $value Tax value.
 	 * @return float
 	 */

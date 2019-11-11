@@ -2,7 +2,7 @@
 /**
  * Admin View: Header
  *
- * @package WooCommerce\Admin\Importers
+ * @package ClassicCommerce\Admin\Importers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,6 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="wrap woocommerce">
-	<h1><?php esc_html_e( 'Import Products', 'woocommerce' ); ?></h1>
+	<h1><?php esc_html_e( 'Import Products', 'classic-commerce' ); ?></h1>
 
 	<div class="woocommerce-progress-form-wrapper">

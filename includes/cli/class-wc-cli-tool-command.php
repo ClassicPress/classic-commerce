@@ -2,7 +2,7 @@
 /**
  * WC_CLI_Tool_Command class file.
  *
- * @package WooCommerce\CLI
+ * @package ClassicCommerce\CLI
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * https://github.com/wp-cli/restful
  *
  * @version WC-3.0.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 class WC_CLI_Tool_Command {
 
@@ -43,7 +43,7 @@ class WC_CLI_Tool_Command {
 				$synopsis[] = array(
 					'name'        => 'id',
 					'type'        => 'positional',
-					'description' => __( 'The id for the resource.', 'woocommerce' ),
+					'description' => __( 'The id for the resource.', 'classic-commerce' ),
 					'optional'    => false,
 				);
 				$method     = 'update_item';
@@ -52,19 +52,19 @@ class WC_CLI_Tool_Command {
 				$synopsis[] = array(
 					'name'        => 'fields',
 					'type'        => 'assoc',
-					'description' => __( 'Limit response to specific fields. Defaults to all fields.', 'woocommerce' ),
+					'description' => __( 'Limit response to specific fields. Defaults to all fields.', 'classic-commerce' ),
 					'optional'    => true,
 				);
 				$synopsis[] = array(
 					'name'        => 'field',
 					'type'        => 'assoc',
-					'description' => __( 'Get the value of an individual field.', 'woocommerce' ),
+					'description' => __( 'Get the value of an individual field.', 'classic-commerce' ),
 					'optional'    => true,
 				);
 				$synopsis[] = array(
 					'name'        => 'format',
 					'type'        => 'assoc',
-					'description' => __( 'Render response in a particular format.', 'woocommerce' ),
+					'description' => __( 'Render response in a particular format.', 'classic-commerce' ),
 					'optional'    => true,
 					'default'     => 'table',
 					'options'     => array(

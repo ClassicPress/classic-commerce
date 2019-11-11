@@ -4,8 +4,8 @@
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -39,9 +39,9 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 		 */
 		public function init() {
 			if ( current_user_can( 'publish_shop_orders' ) && post_type_supports( 'product', 'comments' ) ) {
-				wp_add_dashboard_widget( 'woocommerce_dashboard_recent_reviews', __( 'WooCommerce recent reviews', 'woocommerce' ), array( $this, 'recent_reviews' ) );
+				wp_add_dashboard_widget( 'woocommerce_dashboard_recent_reviews', __( 'Classic Commerce recent reviews', 'classic-commerce' ), array( $this, 'recent_reviews' ) );
 			}
-			wp_add_dashboard_widget( 'woocommerce_dashboard_status', __( 'WooCommerce status', 'woocommerce' ), array( $this, 'status_widget' ) );
+			wp_add_dashboard_widget( 'woocommerce_dashboard_status', __( 'Classic Commerce status', 'classic-commerce' ), array( $this, 'status_widget' ) );
 
 			// Network Order Widget.
 			if ( is_multisite() ) {
@@ -53,7 +53,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 		 * Register the network order dashboard widget.
 		 */
 		public function register_network_order_widget() {
-			wp_add_dashboard_widget( 'woocommerce_network_orders', __( 'WooCommerce network orders', 'woocommerce' ), array( $this, 'network_orders' ) );
+			wp_add_dashboard_widget( 'woocommerce_network_orders', __( 'Classic Commerce network orders', 'classic-commerce' ), array( $this, 'network_orders' ) );
 		}
 
 		/**
@@ -118,7 +118,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 					<?php
 						/* translators: %s: net sales */
 						printf(
-							__( '%s net sales this month', 'woocommerce' ),
+							__( '%s net sales this month', 'classic-commerce' ),
 							'<strong>' . wc_price( $report_data->net_sales ) . '</strong>'
 						);
 						?>
@@ -135,7 +135,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 					<?php
 						/* translators: 1: top seller product title 2: top seller quantity */
 						printf(
-							__( '%1$s top seller this month (sold %2$d)', 'woocommerce' ),
+							__( '%1$s top seller this month (sold %2$d)', 'classic-commerce' ),
 							'<strong>' . get_the_title( $top_seller->product_id ) . '</strong>',
 							$top_seller->qty
 						);
@@ -173,7 +173,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				<?php
 					/* translators: %s: order count */
 					printf(
-						_n( '<strong>%s order</strong> awaiting processing', '<strong>%s orders</strong> awaiting processing', $processing_count, 'woocommerce' ),
+						_n( '<strong>%s order</strong> awaiting processing', '<strong>%s orders</strong> awaiting processing', $processing_count, 'classic-commerce' ),
 						$processing_count
 					);
 				?>
@@ -184,7 +184,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				<?php
 					/* translators: %s: order count */
 					printf(
-						_n( '<strong>%s order</strong> on-hold', '<strong>%s orders</strong> on-hold', $on_hold_count, 'woocommerce' ),
+						_n( '<strong>%s order</strong> on-hold', '<strong>%s orders</strong> on-hold', $on_hold_count, 'classic-commerce' ),
 						$on_hold_count
 					);
 				?>
@@ -244,7 +244,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				<?php
 					/* translators: %s: order count */
 					printf(
-						_n( '<strong>%s product</strong> low in stock', '<strong>%s products</strong> low in stock', $lowinstock_count, 'woocommerce' ),
+						_n( '<strong>%s product</strong> low in stock', '<strong>%s products</strong> low in stock', $lowinstock_count, 'classic-commerce' ),
 						$lowinstock_count
 					);
 				?>
@@ -255,7 +255,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				<?php
 					/* translators: %s: order count */
 					printf(
-						_n( '<strong>%s product</strong> out of stock', '<strong>%s products</strong> out of stock', $outofstock_count, 'woocommerce' ),
+						_n( '<strong>%s product</strong> out of stock', '<strong>%s products</strong> out of stock', $outofstock_count, 'classic-commerce' ),
 						$outofstock_count
 					);
 				?>
@@ -298,16 +298,16 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 					$rating = intval( get_comment_meta( $comment->comment_ID, 'rating', true ) );
 
 					/* translators: %s: rating */
-					echo '<div class="star-rating"><span style="width:' . ( $rating * 20 ) . '%">' . sprintf( __( '%s out of 5', 'woocommerce' ), $rating ) . '</span></div>';
+					echo '<div class="star-rating"><span style="width:' . ( $rating * 20 ) . '%">' . sprintf( __( '%s out of 5', 'classic-commerce' ), $rating ) . '</span></div>';
 
 					/* translators: %s: review author */
-					echo '<h4 class="meta"><a href="' . get_permalink( $comment->ID ) . '#comment-' . absint( $comment->comment_ID ) . '">' . esc_html( apply_filters( 'woocommerce_admin_dashboard_recent_reviews', $comment->post_title, $comment ) ) . '</a> ' . sprintf( __( 'reviewed by %s', 'woocommerce' ), esc_html( $comment->comment_author ) ) . '</h4>';
+					echo '<h4 class="meta"><a href="' . get_permalink( $comment->ID ) . '#comment-' . absint( $comment->comment_ID ) . '">' . esc_html( apply_filters( 'woocommerce_admin_dashboard_recent_reviews', $comment->post_title, $comment ) ) . '</a> ' . sprintf( __( 'reviewed by %s', 'classic-commerce' ), esc_html( $comment->comment_author ) ) . '</h4>';
 					echo '<blockquote>' . wp_kses_data( $comment->comment_content ) . '</blockquote></li>';
 
 				}
 				echo '</ul>';
 			} else {
-				echo '<p>' . __( 'There are no product reviews yet.', 'woocommerce' ) . '</p>';
+				echo '<p>' . __( 'There are no product reviews yet.', 'classic-commerce' ) . '</p>';
 			}
 		}
 
@@ -336,16 +336,16 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			<div class="post-type-shop_order">
 			<div id="woocommerce-network-order-table-loading" class="woocommerce-network-order-table-loading is-active">
 				<p>
-					<span class="spinner is-active"></span> <?php esc_html_e( 'Loading network orders', 'woocommerce' ); ?>
+					<span class="spinner is-active"></span> <?php esc_html_e( 'Loading network orders', 'classic-commerce' ); ?>
 				</p>
 
 			</div>
 			<table id="woocommerce-network-order-table" class="woocommerce-network-order-table">
 				<thead>
 					<tr>
-						<td><?php esc_html_e( 'Order', 'woocommerce' ); ?></td>
-						<td><?php esc_html_e( 'Status', 'woocommerce' ); ?></td>
-						<td><?php esc_html_e( 'Total', 'woocommerce' ); ?></td>
+						<td><?php esc_html_e( 'Order', 'classic-commerce' ); ?></td>
+						<td><?php esc_html_e( 'Status', 'classic-commerce' ); ?></td>
+						<td><?php esc_html_e( 'Total', 'classic-commerce' ); ?></td>
 					</tr>
 				</thead>
 				<tbody id="network-orders-tbody">
@@ -354,7 +354,7 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 			</table>
 			<div id="woocommerce-network-orders-no-orders" class="woocommerce-network-orders-no-orders">
 				<p>
-					<?php esc_html_e( 'No orders found', 'woocommerce' ); ?>
+					<?php esc_html_e( 'No orders found', 'classic-commerce' ); ?>
 				</p>
 			</div>
 			<script type="text/template" id="network-orders-row-template">

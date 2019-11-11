@@ -4,7 +4,7 @@
  *
  * Shows the 'my account' section where the customer can view past orders and update their information.
  *
- * @package WooCommerce/Shortcodes/My_Account
+ * @package ClassicCommerce/Shortcodes/My_Account
  * @version WC-2.0.0
  */
 
@@ -48,7 +48,7 @@ class WC_Shortcode_My_Account {
 
 			// After password reset, add confirmation message.
 			if ( ! empty( $_GET['password-reset'] ) ) { // WPCS: input var ok, CSRF ok.
-				wc_add_notice( __( 'Your password has been reset successfully.', 'woocommerce' ) );
+				wc_add_notice( __( 'Your password has been reset successfully.', 'classic-commerce' ) );
 			}
 
 			if ( isset( $wp->query_vars['lost-password'] ) ) {
@@ -62,7 +62,7 @@ class WC_Shortcode_My_Account {
 
 			if ( isset( $wp->query_vars['customer-logout'] ) ) {
 				/* translators: %s: logout url */
-				wc_add_notice( sprintf( __( 'Are you sure you want to log out? <a href="%s">Confirm and log out</a>', 'woocommerce' ), wc_logout_url() ) );
+				wc_add_notice( sprintf( __( 'Are you sure you want to log out? <a href="%s">Confirm and log out</a>', 'classic-commerce' ), wc_logout_url() ) );
 			}
 
 			// Collect notices before output.
@@ -110,7 +110,7 @@ class WC_Shortcode_My_Account {
 	private static function my_account( $atts ) {
 		$args = shortcode_atts(
 			array(
-				'order_count' => 15, // @deprecated 2.6.0. Keep for backward compatibility.
+				'order_count' => 15, // @deprecated WC-2.6.0. Keep for backward compatibility.
 			), $atts, 'woocommerce_my_account'
 		);
 
@@ -131,7 +131,7 @@ class WC_Shortcode_My_Account {
 		$order = wc_get_order( $order_id );
 
 		if ( ! current_user_can( 'view_order', $order_id ) ) {
-			echo '<div class="woocommerce-error">' . esc_html__( 'Invalid order.', 'woocommerce' ) . ' <a href="' . esc_url( wc_get_page_permalink( 'myaccount' ) ) . '" class="wc-forward">' . esc_html__( 'My account', 'woocommerce' ) . '</a></div>';
+			echo '<div class="woocommerce-error">' . esc_html__( 'Invalid order.', 'classic-commerce' ) . ' <a href="' . esc_url( wc_get_page_permalink( 'myaccount' ) ) . '" class="wc-forward">' . esc_html__( 'My account', 'classic-commerce' ) . '</a></div>';
 
 			return;
 		}
@@ -142,7 +142,7 @@ class WC_Shortcode_My_Account {
 
 		wc_get_template(
 			'myaccount/view-order.php', array(
-				'status'   => $status, // @deprecated 2.2.
+				'status'   => $status, // @deprecated WC-2.2.
 				'order'    => wc_get_order( $order_id ),
 				'order_id' => $order_id,
 			)
@@ -255,7 +255,7 @@ class WC_Shortcode_My_Account {
 
 		if ( empty( $login ) ) {
 
-			wc_add_notice( __( 'Enter a username or email address.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Enter a username or email address.', 'classic-commerce' ), 'error' );
 
 			return false;
 
@@ -280,13 +280,13 @@ class WC_Shortcode_My_Account {
 		}
 
 		if ( ! $user_data ) {
-			wc_add_notice( __( 'Invalid username or email.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Invalid username or email.', 'classic-commerce' ), 'error' );
 
 			return false;
 		}
 
 		if ( is_multisite() && ! is_user_member_of_blog( $user_data->ID, get_current_blog_id() ) ) {
-			wc_add_notice( __( 'Invalid username or email.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Invalid username or email.', 'classic-commerce' ), 'error' );
 
 			return false;
 		}
@@ -300,7 +300,7 @@ class WC_Shortcode_My_Account {
 
 		if ( ! $allow ) {
 
-			wc_add_notice( __( 'Password reset is not allowed for this user', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'Password reset is not allowed for this user', 'classic-commerce' ), 'error' );
 
 			return false;
 
@@ -335,7 +335,7 @@ class WC_Shortcode_My_Account {
 		$user = check_password_reset_key( $key, $login );
 
 		if ( is_wp_error( $user ) ) {
-			wc_add_notice( __( 'This key is invalid or has already been used. Please reset your password again if needed.', 'woocommerce' ), 'error' );
+			wc_add_notice( __( 'This key is invalid or has already been used. Please reset your password again if needed.', 'classic-commerce' ), 'error' );
 			return false;
 		}
 

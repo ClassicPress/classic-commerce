@@ -2,7 +2,7 @@
 /**
  * Class WC_Payment_Token_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Payment Token Data Store: Custom Table.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment_Token_Data_Store_Interface, WC_Object_Data_Store_Interface {
 
@@ -41,7 +41,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 */
 	public function create( &$token ) {
 		if ( false === $token->validate() ) {
-			throw new Exception( __( 'Invalid or missing payment token fields.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid or missing payment token fields.', 'classic-commerce' ) );
 		}
 
 		global $wpdb;
@@ -85,7 +85,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 	 */
 	public function update( &$token ) {
 		if ( false === $token->validate() ) {
-			throw new Exception( __( 'Invalid or missing payment token fields.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid or missing payment token fields.', 'classic-commerce' ) );
 		}
 
 		global $wpdb;
@@ -171,7 +171,7 @@ class WC_Payment_Token_Data_Store extends WC_Data_Store_WP implements WC_Payment
 			$token->set_object_read( true );
 			do_action( 'woocommerce_payment_token_loaded', $token );
 		} else {
-			throw new Exception( __( 'Invalid payment token.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid payment token.', 'classic-commerce' ) );
 		}
 	}
 

@@ -4,8 +4,8 @@
  *
  * Handles requests to the /webhooks endpoint.
  *
- * @package WooCommerce/API
- * @since   2.6.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Webhooks controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Webhooks_V1_Controller
  */
 class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
@@ -36,7 +36,7 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 		$webhook = wc_get_webhook( $id );
 
 		if ( empty( $webhook ) || is_null( $webhook ) ) {
-			return new WP_Error( "woocommerce_rest_{$this->post_type}_invalid_id", __( 'ID is invalid.', 'woocommerce' ), array( 'status' => 400 ) );
+			return new WP_Error( "woocommerce_rest_{$this->post_type}_invalid_id", __( 'ID is invalid.', 'classic-commerce' ), array( 'status' => 400 ) );
 		}
 
 		$data = array(
@@ -76,7 +76,7 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 	/**
 	 * Get the default REST API version.
 	 *
-	 * @since  3.0.0
+	 * @since  WC-3.0.0
 	 * @return string
 	 */
 	protected function get_default_api_version() {
@@ -95,18 +95,18 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'                => array(
-					'description' => __( 'Unique identifier for the resource.', 'woocommerce' ),
+					'description' => __( 'Unique identifier for the resource.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'name'              => array(
-					'description' => __( 'A friendly name for the webhook.', 'woocommerce' ),
+					'description' => __( 'A friendly name for the webhook.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'status'            => array(
-					'description' => __( 'Webhook status.', 'woocommerce' ),
+					'description' => __( 'Webhook status.', 'classic-commerce' ),
 					'type'        => 'string',
 					'default'     => 'active',
 					'enum'        => array( 'active', 'paused', 'disabled' ),
@@ -116,24 +116,24 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 					),
 				),
 				'topic'             => array(
-					'description' => __( 'Webhook topic.', 'woocommerce' ),
+					'description' => __( 'Webhook topic.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'resource'          => array(
-					'description' => __( 'Webhook resource.', 'woocommerce' ),
+					'description' => __( 'Webhook resource.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'event'             => array(
-					'description' => __( 'Webhook event.', 'woocommerce' ),
+					'description' => __( 'Webhook event.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'hooks'             => array(
-					'description' => __( 'WooCommerce action names associated with the webhook.', 'woocommerce' ),
+					'description' => __( 'WooCommerce action names associated with the webhook.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
@@ -142,37 +142,37 @@ class WC_REST_Webhooks_V2_Controller extends WC_REST_Webhooks_V1_Controller {
 					),
 				),
 				'delivery_url'      => array(
-					'description' => __( 'The URL where the webhook payload is delivered.', 'woocommerce' ),
+					'description' => __( 'The URL where the webhook payload is delivered.', 'classic-commerce' ),
 					'type'        => 'string',
 					'format'      => 'uri',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'secret'            => array(
-					'description' => __( "Secret key used to generate a hash of the delivered webhook and provided in the request headers. This will default to a MD5 hash from the current user's ID|username if not provided.", 'woocommerce' ),
+					'description' => __( "Secret key used to generate a hash of the delivered webhook and provided in the request headers. This will default to a MD5 hash from the current user's ID|username if not provided.", 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'edit' ),
 				),
 				'date_created'      => array(
-					'description' => __( "The date the webhook was created, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date the webhook was created, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_created_gmt'  => array(
-					'description' => __( 'The date the webhook was created, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date the webhook was created, as GMT.', 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_modified'     => array(
-					'description' => __( "The date the webhook was last modified, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date the webhook was last modified, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
 				),
 				'date_modified_gmt' => array(
-					'description' => __( 'The date the webhook was last modified, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date the webhook was last modified, as GMT.', 'classic-commerce' ),
 					'type'        => 'date-time',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

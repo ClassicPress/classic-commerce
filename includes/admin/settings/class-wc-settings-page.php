@@ -1,11 +1,11 @@
 <?php
 /**
- * WooCommerce Settings Page/Tab
+ * ClassicCommerce Settings Page/Tab
  *
  * @author      WooThemes
  * @category    Admin
- * @package     WooCommerce/Admin
- * @version     2.1.0
+ * @package     ClassicCommerce/Admin
+ * @version     WC-2.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

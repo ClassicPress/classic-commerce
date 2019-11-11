@@ -4,8 +4,8 @@
  *
  * Handles requests to the /shipping/zones/<id>/locations endpoint.
  *
- * @package WooCommerce/API
- * @since   3.0.0
+ * @package ClassicCommerce/API
+ * @since   WC-3.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Shipping Zone Locations class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Shipping_Zones_Controller_Base
  */
 class WC_REST_Shipping_Zone_Locations_V2_Controller extends WC_REST_Shipping_Zones_Controller_Base {
@@ -26,7 +26,7 @@ class WC_REST_Shipping_Zone_Locations_V2_Controller extends WC_REST_Shipping_Zon
 			$this->namespace, '/' . $this->rest_base . '/(?P<id>[\d]+)/locations', array(
 				'args'   => array(
 					'id' => array(
-						'description' => __( 'Unique ID for the resource.', 'woocommerce' ),
+						'description' => __( 'Unique ID for the resource.', 'classic-commerce' ),
 						'type'        => 'integer',
 					),
 				),
@@ -85,7 +85,7 @@ class WC_REST_Shipping_Zone_Locations_V2_Controller extends WC_REST_Shipping_Zon
 		}
 
 		if ( 0 === $zone->get_id() ) {
-			return new WP_Error( 'woocommerce_rest_shipping_zone_locations_invalid_zone', __( 'The "locations not covered by your other zones" zone cannot be updated.', 'woocommerce' ), array( 'status' => 403 ) );
+			return new WP_Error( 'woocommerce_rest_shipping_zone_locations_invalid_zone', __( 'The "locations not covered by your other zones" zone cannot be updated.', 'classic-commerce' ), array( 'status' => 403 ) );
 		}
 
 		$raw_locations = $request->get_json_params();
@@ -166,12 +166,12 @@ class WC_REST_Shipping_Zone_Locations_V2_Controller extends WC_REST_Shipping_Zon
 			'type'       => 'object',
 			'properties' => array(
 				'code' => array(
-					'description' => __( 'Shipping zone location code.', 'woocommerce' ),
+					'description' => __( 'Shipping zone location code.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit' ),
 				),
 				'type' => array(
-					'description' => __( 'Shipping zone location type.', 'woocommerce' ),
+					'description' => __( 'Shipping zone location type.', 'classic-commerce' ),
 					'type'        => 'string',
 					'default'     => 'country',
 					'enum'        => array(

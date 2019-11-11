@@ -2,7 +2,7 @@
 /**
  * WC_CLI_Update_Command class file.
  *
- * @package WooCommerce\CLI
+ * @package ClassicCommerce\CLI
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Allows updates via CLI.
  *
  * @version WC-3.0.0
- * @package WooCommerce
+ * @package ClassicCommerce
  */
 class WC_CLI_Update_Command {
 
@@ -25,7 +25,7 @@ class WC_CLI_Update_Command {
 	}
 
 	/**
-	 * Runs all pending WooCommerce database updates.
+	 * Runs all pending ClassicCommerce database updates.
 	 */
 	public static function update() {
 		global $wpdb;
@@ -42,7 +42,7 @@ class WC_CLI_Update_Command {
 			if ( version_compare( $current_db_version, $version, '<' ) ) {
 				foreach ( $update_callbacks as $update_callback ) {
 					/* translators: %s: DB update callback key */
-					WP_CLI::log( sprintf( __( 'Calling update function: %s', 'woocommerce' ), $update_callback ) );
+					WP_CLI::log( sprintf( __( 'Calling update function: %s', 'classic-commerce' ), $update_callback ) );
 					call_user_func( $update_callback );
 					$update_count ++;
 				}
@@ -51,6 +51,6 @@ class WC_CLI_Update_Command {
 
 		WC_Admin_Notices::remove_notice( 'update' );
 		/* translators: 1: Number of database updates performed 2: Database version number */
-		WP_CLI::success( sprintf( __( '%1$d updates complete. Database version is %2$s', 'woocommerce' ), absint( $update_count ), get_option( 'woocommerce_db_version' ) ) );
+		WP_CLI::success( sprintf( __( '%1$d updates complete. Database version is %2$s', 'classic-commerce' ), absint( $update_count ), get_option( 'woocommerce_db_version' ) ) );
 	}
 }

@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Customer Functions
+ * ClassicCommerce Customer Functions
  *
  * Functions for customers.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-2.2.0
  */
 
@@ -41,11 +41,11 @@ if ( ! function_exists( 'wc_create_new_customer' ) ) {
 
 		// Check the email address.
 		if ( empty( $email ) || ! is_email( $email ) ) {
-			return new WP_Error( 'registration-error-invalid-email', __( 'Please provide a valid email address.', 'woocommerce' ) );
+			return new WP_Error( 'registration-error-invalid-email', __( 'Please provide a valid email address.', 'classic-commerce' ) );
 		}
 
 		if ( email_exists( $email ) ) {
-			return new WP_Error( 'registration-error-email-exists', apply_filters( 'woocommerce_registration_error_email_exists', __( 'An account is already registered with your email address. Please log in.', 'woocommerce' ), $email ) );
+			return new WP_Error( 'registration-error-email-exists', apply_filters( 'woocommerce_registration_error_email_exists', __( 'An account is already registered with your email address. Please log in.', 'classic-commerce' ), $email ) );
 		}
 
 		// Handle username creation.
@@ -53,11 +53,11 @@ if ( ! function_exists( 'wc_create_new_customer' ) ) {
 			$username = sanitize_user( $username );
 
 			if ( empty( $username ) || ! validate_username( $username ) ) {
-				return new WP_Error( 'registration-error-invalid-username', __( 'Please enter a valid account username.', 'woocommerce' ) );
+				return new WP_Error( 'registration-error-invalid-username', __( 'Please enter a valid account username.', 'classic-commerce' ) );
 			}
 
 			if ( username_exists( $username ) ) {
-				return new WP_Error( 'registration-error-username-exists', __( 'An account is already registered with that username. Please choose another.', 'woocommerce' ) );
+				return new WP_Error( 'registration-error-username-exists', __( 'An account is already registered with that username. Please choose another.', 'classic-commerce' ) );
 			}
 		} else {
 			$username = sanitize_user( current( explode( '@', $email ) ), true );
@@ -80,7 +80,7 @@ if ( ! function_exists( 'wc_create_new_customer' ) ) {
 		}
 
 		if ( empty( $password ) ) {
-			return new WP_Error( 'registration-error-missing-password', __( 'Please enter an account password.', 'woocommerce' ) );
+			return new WP_Error( 'registration-error-missing-password', __( 'Please enter an account password.', 'classic-commerce' ) );
 		}
 
 		// Use WP_Error to handle registration errors.
@@ -106,7 +106,7 @@ if ( ! function_exists( 'wc_create_new_customer' ) ) {
 		$customer_id = wp_insert_user( $new_customer_data );
 
 		if ( is_wp_error( $customer_id ) ) {
-			return new WP_Error( 'registration-error', __( 'Couldn&#8217;t register you&hellip; please contact us if you continue to have problems.', 'woocommerce' ) );
+			return new WP_Error( 'registration-error', __( 'Couldn&#8217;t register you&hellip; please contact us if you continue to have problems.', 'classic-commerce' ) );
 		}
 
 		do_action( 'woocommerce_created_customer', $customer_id, $new_customer_data, $password_generated );
@@ -641,8 +641,8 @@ function wc_set_user_last_update_time( $user_id ) {
 /**
  * Get customer saved payment methods list.
  *
- * @since WC-2.6.0
- * @param int $customer_id Customer ID.
+ * @since  WC-2.6.0
+ * @param  int $customer_id Customer ID.
  * @return array
  */
 function wc_get_customer_saved_methods_list( $customer_id ) {
@@ -652,8 +652,8 @@ function wc_get_customer_saved_methods_list( $customer_id ) {
 /**
  * Get info about customer's last order.
  *
- * @since WC-2.6.0
- * @param int $customer_id Customer ID.
+ * @since  WC-2.6.0
+ * @param  int $customer_id Customer ID.
  * @return WC_Order|bool Order object if successful or false.
  */
 function wc_get_customer_last_order( $customer_id ) {
@@ -665,8 +665,8 @@ function wc_get_customer_last_order( $customer_id ) {
 /**
  * Add support for searching by display_name.
  *
- * @since WC-3.2.0
- * @param array $search_columns Column names.
+ * @since  WC-3.2.0
+ * @param  array $search_columns Column names.
  * @return array
  */
 function wc_user_search_columns( $search_columns ) {
@@ -676,7 +676,7 @@ function wc_user_search_columns( $search_columns ) {
 add_filter( 'user_search_columns', 'wc_user_search_columns' );
 
 /**
- * When a user is deleted in WordPress, delete corresponding WooCommerce data.
+ * When a user is deleted in WordPress, delete corresponding ClassicCommerce data.
  *
  * @param int $user_id User ID being deleted.
  */
@@ -716,7 +716,7 @@ add_action( 'delete_user', 'wc_delete_user_data' );
  * @param int|object $user       User.
  */
 function wc_maybe_store_user_agent( $user_login, $user ) {
-	if ( 'yes' === get_option( 'woocommerce_allow_tracking', 'no' ) && user_can( $user, 'manage_woocommerce' ) ) {
+	if ( user_can( $user, 'manage_woocommerce' ) ) {
 		$admin_user_agents   = array_filter( (array) get_option( 'woocommerce_tracker_ua', array() ) );
 		$admin_user_agents[] = wc_get_user_agent();
 		update_option( 'woocommerce_tracker_ua', array_unique( $admin_user_agents ) );

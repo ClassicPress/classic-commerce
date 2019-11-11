@@ -1,14 +1,14 @@
 <?php
 /**
- * WooCommerce API Coupons Class
+ * ClassicCommerce API Coupons Class
  *
  * Handles requests to the /coupons endpoint
  *
  * @author      WooThemes
  * @category    API
- * @package     WooCommerce/API
- * @since       2.1
- * @version     2.1
+ * @package     ClassicCommerce/API
+ * @since       WC-2.1
+ * @version     WC-2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -108,7 +108,7 @@ class WC_API_Coupons extends WC_API_Resource {
 		$coupon = new WC_Coupon( $id );
 
 		if ( 0 === $coupon->get_id() ) {
-			throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_id', __( 'Invalid coupon ID', 'woocommerce' ), 404 );
+			throw new WC_API_Exception( 'woocommerce_api_invalid_coupon_id', __( 'Invalid coupon ID', 'classic-commerce' ), 404 );
 		}
 
 		$coupon_data = array(
@@ -151,7 +151,7 @@ class WC_API_Coupons extends WC_API_Resource {
 		$query = $this->query_coupons( $filter );
 
 		if ( ! current_user_can( 'read_private_shop_coupons' ) ) {
-			return new WP_Error( 'woocommerce_api_user_cannot_read_coupons_count', __( 'You do not have permission to read the coupons count', 'woocommerce' ), array( 'status' => 401 ) );
+			return new WP_Error( 'woocommerce_api_user_cannot_read_coupons_count', __( 'You do not have permission to read the coupons count', 'classic-commerce' ), array( 'status' => 401 ) );
 		}
 
 		return array( 'count' => (int) $query->found_posts );
@@ -171,7 +171,7 @@ class WC_API_Coupons extends WC_API_Resource {
 		$id = $wpdb->get_var( $wpdb->prepare( "SELECT id FROM $wpdb->posts WHERE post_title = %s AND post_type = 'shop_coupon' AND post_status = 'publish' ORDER BY post_date DESC LIMIT 1;", $code ) );
 
 		if ( is_null( $id ) ) {
-			return new WP_Error( 'woocommerce_api_invalid_coupon_code', __( 'Invalid coupon code', 'woocommerce' ), array( 'status' => 404 ) );
+			return new WP_Error( 'woocommerce_api_invalid_coupon_code', __( 'Invalid coupon code', 'classic-commerce' ), array( 'status' => 404 ) );
 		}
 
 		return $this->get_coupon( $id, $fields );

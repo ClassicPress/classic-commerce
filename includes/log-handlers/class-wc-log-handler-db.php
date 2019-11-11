@@ -2,7 +2,7 @@
 /**
  * Class WC_Log_Handler_DB file.
  *
- * @package WooCommerce\Log Handlers
+ * @package ClassicCommerce\Log Handlers
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Handles log entries by writing to database.
  *
  * @class          WC_Log_Handler_DB
- * @version        1.0.0
- * @package        WooCommerce/Classes/Log_Handlers
+ * @version        WC-1.0.0
+ * @package        ClassicCommerce/Classes/Log_Handlers
  */
 class WC_Log_Handler_DB extends WC_Log_Handler {
 
@@ -132,7 +132,7 @@ class WC_Log_Handler_DB extends WC_Log_Handler {
 	/**
 	 * Delete all logs older than a defined timestamp.
 	 *
-	 * @since 3.4.0
+	 * @since WC-3.4.0
 	 * @param integer $timestamp Timestamp to delete logs before.
 	 */
 	public static function delete_logs_before_timestamp( $timestamp = 0 ) {

@@ -2,8 +2,8 @@
 /**
  * List tables: coupons.
  *
- * @package  WooCommerce/Admin
- * @version  3.3.0
+ * @package  ClassicCommerce/Admin
+ * @version  WC-3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -43,9 +43,9 @@ class WC_Admin_List_Table_Coupons extends WC_Admin_List_Table {
 	 */
 	protected function render_blank_state() {
 		echo '<div class="woocommerce-BlankState">';
-		echo '<h2 class="woocommerce-BlankState-message">' . esc_html__( 'Coupons are a great way to offer discounts and rewards to your customers. They will appear here once created.', 'woocommerce' ) . '</h2>';
-		echo '<a class="woocommerce-BlankState-cta button-primary button" href="' . esc_url( admin_url( 'post-new.php?post_type=shop_coupon' ) ) . '">' . esc_html__( 'Create your first coupon', 'woocommerce' ) . '</a>';
-		echo '<a class="woocommerce-BlankState-cta button" target="_blank" href="https://docs.woocommerce.com/document/coupon-management/?utm_source=blankslate&utm_medium=product&utm_content=couponsdoc&utm_campaign=woocommerceplugin">' . esc_html__( 'Learn more about coupons', 'woocommerce' ) . '</a>';
+		echo '<h2 class="woocommerce-BlankState-message">' . esc_html__( 'Coupons are a great way to offer discounts and rewards to your customers. They will appear here once created.', 'classic-commerce' ) . '</h2>';
+		echo '<a class="woocommerce-BlankState-cta button-primary button" href="' . esc_url( admin_url( 'post-new.php?post_type=shop_coupon' ) ) . '">' . esc_html__( 'Create your first coupon', 'classic-commerce' ) . '</a>';
+		echo '<a class="woocommerce-BlankState-cta button" target="_blank" href="https://docs.woocommerce.com/document/coupon-management/?utm_source=blankslate&utm_medium=product&utm_content=couponsdoc&utm_campaign=woocommerceplugin">' . esc_html__( 'Learn more about coupons', 'classic-commerce' ) . '</a>';
 		echo '</div>';
 	}
 
@@ -79,13 +79,13 @@ class WC_Admin_List_Table_Coupons extends WC_Admin_List_Table {
 	public function define_columns( $columns ) {
 		$show_columns                = array();
 		$show_columns['cb']          = $columns['cb'];
-		$show_columns['coupon_code'] = __( 'Code', 'woocommerce' );
-		$show_columns['type']        = __( 'Coupon type', 'woocommerce' );
-		$show_columns['amount']      = __( 'Coupon amount', 'woocommerce' );
-		$show_columns['description'] = __( 'Description', 'woocommerce' );
-		$show_columns['products']    = __( 'Product IDs', 'woocommerce' );
-		$show_columns['usage']       = __( 'Usage / Limit', 'woocommerce' );
-		$show_columns['expiry_date'] = __( 'Expiry date', 'woocommerce' );
+		$show_columns['coupon_code'] = __( 'Code', 'classic-commerce' );
+		$show_columns['type']        = __( 'Coupon type', 'classic-commerce' );
+		$show_columns['amount']      = __( 'Coupon amount', 'classic-commerce' );
+		$show_columns['description'] = __( 'Description', 'classic-commerce' );
+		$show_columns['products']    = __( 'Product IDs', 'classic-commerce' );
+		$show_columns['usage']       = __( 'Usage / Limit', 'classic-commerce' );
+		$show_columns['expiry_date'] = __( 'Expiry date', 'classic-commerce' );
 
 		return $show_columns;
 	}
@@ -166,7 +166,7 @@ class WC_Admin_List_Table_Coupons extends WC_Admin_List_Table {
 
 		printf(
 			/* translators: 1: count 2: limit */
-			__( '%1$s / %2$s', 'woocommerce' ),
+			__( '%1$s / %2$s', 'classic-commerce' ),
 			esc_html( $usage_count ),
 			$usage_limit ? esc_html( $usage_limit ) : '&infin;'
 		);
@@ -198,7 +198,7 @@ class WC_Admin_List_Table_Coupons extends WC_Admin_List_Table {
 	protected function render_filters() {
 		?>
 		<select name="coupon_type" id="dropdown_shop_coupon_type">
-			<option value=""><?php esc_html_e( 'Show all types', 'woocommerce' ); ?></option>
+			<option value=""><?php esc_html_e( 'Show all types', 'classic-commerce' ); ?></option>
 			<?php
 			$types = wc_get_coupon_types();
 

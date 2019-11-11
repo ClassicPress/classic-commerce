@@ -4,8 +4,8 @@
  *
  * Handles requests to the /customers/<customer_id>/downloads endpoint.
  *
- * @package WooCommerce/API
- * @since   2.6.0
+ * @package ClassicCommerce/API
+ * @since   WC-2.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * REST API Customers controller class.
  *
- * @package WooCommerce/API
+ * @package ClassicCommerce/API
  * @extends WC_REST_Customer_Downloads_V1_Controller
  */
 class WC_REST_Customer_Downloads_V2_Controller extends WC_REST_Customer_Downloads_V1_Controller {
@@ -78,79 +78,79 @@ class WC_REST_Customer_Downloads_V2_Controller extends WC_REST_Customer_Download
 			'type'       => 'object',
 			'properties' => array(
 				'download_id'         => array(
-					'description' => __( 'Download ID.', 'woocommerce' ),
+					'description' => __( 'Download ID.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'download_url'        => array(
-					'description' => __( 'Download file URL.', 'woocommerce' ),
+					'description' => __( 'Download file URL.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'product_id'          => array(
-					'description' => __( 'Downloadable product ID.', 'woocommerce' ),
+					'description' => __( 'Downloadable product ID.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'product_name'        => array(
-					'description' => __( 'Product name.', 'woocommerce' ),
+					'description' => __( 'Product name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'download_name'       => array(
-					'description' => __( 'Downloadable file name.', 'woocommerce' ),
+					'description' => __( 'Downloadable file name.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'order_id'            => array(
-					'description' => __( 'Order ID.', 'woocommerce' ),
+					'description' => __( 'Order ID.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'order_key'           => array(
-					'description' => __( 'Order key.', 'woocommerce' ),
+					'description' => __( 'Order key.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'downloads_remaining' => array(
-					'description' => __( 'Number of downloads remaining.', 'woocommerce' ),
+					'description' => __( 'Number of downloads remaining.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'access_expires'      => array(
-					'description' => __( "The date when download access expires, in the site's timezone.", 'woocommerce' ),
+					'description' => __( "The date when download access expires, in the site's timezone.", 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'access_expires_gmt'  => array(
-					'description' => __( 'The date when download access expires, as GMT.', 'woocommerce' ),
+					'description' => __( 'The date when download access expires, as GMT.', 'classic-commerce' ),
 					'type'        => 'string',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 				),
 				'file'                => array(
-					'description' => __( 'File details.', 'woocommerce' ),
+					'description' => __( 'File details.', 'classic-commerce' ),
 					'type'        => 'object',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
 					'properties'  => array(
 						'name' => array(
-							'description' => __( 'File name.', 'woocommerce' ),
+							'description' => __( 'File name.', 'classic-commerce' ),
 							'type'        => 'string',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
 						),
 						'file' => array(
-							'description' => __( 'File URL.', 'woocommerce' ),
+							'description' => __( 'File URL.', 'classic-commerce' ),
 							'type'        => 'string',
 							'context'     => array( 'view' ),
 							'readonly'    => true,

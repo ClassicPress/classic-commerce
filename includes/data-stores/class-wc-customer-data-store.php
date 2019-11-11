@@ -2,7 +2,7 @@
 /**
  * Class WC_Customer_Data_Store file.
  *
- * @package WooCommerce\DataStores
+ * @package ClassicCommerce\DataStores
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WC Customer Data Store.
  *
- * @version  3.0.0
+ * @version  WC-3.0.0
  */
 class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Data_Store_Interface, WC_Object_Data_Store_Interface {
 
@@ -144,12 +144,12 @@ class WC_Customer_Data_Store extends WC_Data_Store_WP implements WC_Customer_Dat
 
 		// User object is required.
 		if ( ! $user_object || empty( $user_object->ID ) ) {
-			throw new Exception( __( 'Invalid customer.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid customer.', 'classic-commerce' ) );
 		}
 
 		// Only users on this site should be read.
 		if ( is_multisite() && ! is_user_member_of_blog( $customer->get_id() ) ) {
-			throw new Exception( __( 'Invalid customer.', 'woocommerce' ) );
+			throw new Exception( __( 'Invalid customer.', 'classic-commerce' ) );
 		}
 
 		$customer_id = $customer->get_id();

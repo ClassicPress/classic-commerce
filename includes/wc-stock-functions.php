@@ -1,10 +1,10 @@
 <?php
 /**
- * WooCommerce Stock Functions
+ * ClassicCommerce Stock Functions
  *
  * Functions used to manage product stock levels.
  *
- * @package WooCommerce/Functions
+ * @package ClassicCommerce/Functions
  * @version WC-3.4.0
  */
 
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
  *
  * Uses queries rather than update_post_meta so we can do this in one query (to avoid stock issues).
  *
- * @since  3.0.0 this supports set, increase and decrease.
+ * @since  WC-3.0.0 this supports set, increase and decrease.
  *
  * @param  int|WC_Product $product        Product ID or product instance.
  * @param  int|null       $stock_quantity Stock quantity.
@@ -171,7 +171,7 @@ function wc_reduce_stock_levels( $order_id ) {
 
 		if ( is_wp_error( $new_stock ) ) {
 			/* translators: %s item name. */
-			$order->add_order_note( sprintf( __( 'Unable to reduce stock for item %s.', 'woocommerce' ), $item_name ) );
+			$order->add_order_note( sprintf( __( 'Unable to reduce stock for item %s.', 'classic-commerce' ), $item_name ) );
 			continue;
 		}
 
@@ -225,7 +225,7 @@ function wc_trigger_stock_change_notifications( $order, $changes ) {
 		}
 	}
 
-	$order->add_order_note( __( 'Stock levels reduced:', 'woocommerce' ) . ' ' . implode( ', ', $order_notes ) );
+	$order->add_order_note( __( 'Stock levels reduced:', 'classic-commerce' ) . ' ' . implode( ', ', $order_notes ) );
 }
 
 /**
@@ -268,7 +268,7 @@ function wc_increase_stock_levels( $order_id ) {
 
 		if ( is_wp_error( $new_stock ) ) {
 			/* translators: %s item name. */
-			$order->add_order_note( sprintf( __( 'Unable to restore stock for item %s.', 'woocommerce' ), $item_name ) );
+			$order->add_order_note( sprintf( __( 'Unable to restore stock for item %s.', 'classic-commerce' ), $item_name ) );
 			continue;
 		}
 
@@ -279,7 +279,7 @@ function wc_increase_stock_levels( $order_id ) {
 	}
 
 	if ( $changes ) {
-		$order->add_order_note( __( 'Stock levels increased:', 'woocommerce' ) . ' ' . implode( ', ', $changes ) );
+		$order->add_order_note( __( 'Stock levels increased:', 'classic-commerce' ) . ' ' . implode( ', ', $changes ) );
 	}
 
 	do_action( 'woocommerce_restore_order_stock', $order );
@@ -321,7 +321,7 @@ function wc_get_held_stock_quantity( $product, $exclude_order_id = 0 ) {
  * Return low stock amount to determine if notification needs to be sent
  *
  * @param  WC_Product $product
- * @since  3.5.0
+ * @since  WC-3.5.0
  * @return int
  */
 function wc_get_low_stock_amount( WC_Product $product ) {
