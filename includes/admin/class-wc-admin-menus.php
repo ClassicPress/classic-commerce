@@ -31,6 +31,7 @@ class WC_Admin_Menus {
 			add_action( 'admin_menu', array( $this, 'addons_menu' ), 70 );
 		}
 
+		add_action( 'admin_menu', array( $this, 'admin_menu_rename' ), PHP_INT_MAX - 1 );
 		add_action( 'admin_head', array( $this, 'menu_highlight' ) );
 		add_action( 'admin_head', array( $this, 'menu_order_count' ) );
 		add_filter( 'menu_order', array( $this, 'menu_order' ) );
@@ -127,9 +128,32 @@ class WC_Admin_Menus {
 	 * Addons menu item.
 	 */
 	public function addons_menu() {
-		
 		$menu_title = __( 'Extensions', 'classic-commerce' );
 		add_submenu_page( 'woocommerce', __( 'Classic Commerce extensions', 'classic-commerce' ), $menu_title, 'manage_woocommerce', 'wc-addons', array( $this, 'addons_page' ) );
+	}
+
+	/**
+	 * Rename the top-level menu item.
+	 *
+	 * This is still registered as WooCommerce for compatibility with existing
+	 * extensions that use the screen ID.  More info:
+	 *
+	 * - https://www.skyverge.com/blog/screen-id-checks-wordpress-submenu-pages/
+	 * - https://wpdirectory.net, search for "sanitize_title.{0,90}woocommerce"
+	 * - https://github.com/ClassicPress-research/classic-commerce/pull/119
+	 *
+	 * Based on https://gist.github.com/geoffspink/e191a7cad8c9a23f5c60.
+	 *
+	 * @since 1.0.0
+	 */
+	public function admin_menu_rename() {
+		global $menu;
+		foreach ( $menu as $key => &$value ) {
+			if ( $value[5] === 'toplevel_page_woocommerce' ) {
+				$value[0] = esc_html__( 'Commerce', 'classic-commerce' );
+				break;
+			}
+		}
 	}
 
 	/**
