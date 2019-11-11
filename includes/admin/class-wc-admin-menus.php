@@ -56,11 +56,7 @@ class WC_Admin_Menus {
 			$menu[] = array( '', 'read', 'separator-woocommerce', '', 'wp-menu-separator woocommerce' ); // WPCS: override ok.
 		}
 
-<<<<<<< develop
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, null, '55.5' );
-=======
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'Classic Commerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, WC()->plugin_url() . '/assets/images/classiccommerce-icon-white.svg', '55.5' );
->>>>>>> local
+		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'Classic Commerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, null, '55.5' );
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'classic-commerce' ), __( 'Attributes', 'classic-commerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
