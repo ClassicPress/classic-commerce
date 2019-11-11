@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php printf( __( '<strong>Your theme does not declare Classic Commerce support</strong> &#8211; Please read our <a href="%1$s" target="_blank">integration</a> guide or check out our <a href="%2$s" target="_blank">Storefront</a> theme which is totally free to download and designed specifically for use with WooCommerce.', 'classic-commerce' ), esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/', 'theme-compatibility' ) ), esc_url( self_admin_url( 'theme-install.php?theme=storefront' ) ) ); ?></p>
 	<p class="submit">
-		<a href="https://woocommerce.com/storefront/?utm_source=notice&amp;utm_medium=product&amp;utm_content=storefront&amp;utm_campaign=woocommerceplugin" class="button-primary" target="_blank"><?php _e( 'Read more about Storefront', 'classic-commerce' ); ?></a>
-		<a href="<?php echo esc_url( apply_filters( 'woocommerce_docs_url', 'http://docs.woocommerce.com/document/third-party-custom-theme-compatibility/?utm_source=notice&utm_medium=product&utm_content=themecompatibility&utm_campaign=woocommerceplugin' ) ); ?>" class="button-secondary" target="_blank"><?php _e( 'Theme integration guide', 'classic-commerce' ); ?></a>
+		<a href="https://woocommerce.com/storefront/" class="button-primary" target="_blank"><?php _e( 'Read more about Storefront', 'classic-commerce' ); ?></a>
+		<a href="<?php echo esc_url( apply_filters( 'woocommerce_docs_url', 'http://docs.woocommerce.com/document/third-party-custom-theme-compatibility/' ) ); ?>" class="button-secondary" target="_blank"><?php _e( 'Theme integration guide', 'classic-commerce' ); ?></a>
 	</p>
 </div>
