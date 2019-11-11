@@ -18,11 +18,17 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 	class WC_Admin_Assets {
 
 		/**
+		 * Add screen_id variable.
+		 */
+		protected $wc_screen_id;
+
+		/**
 		 * Hook in tabs.
 		 */
 		public function __construct() {
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+			$this->wc_screen_id = sanitize_title( __( 'Classic Commerce', 'classic-commerce' ) );
 		}
 
 		/**
@@ -61,7 +67,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 				wp_enqueue_style( 'woocommerce_admin_dashboard_styles' );
 			}
 
-			if ( in_array( $screen_id, array( 'woocommerce_page_wc-reports', 'toplevel_page_wc-reports' ) ) ) {
+			if ( in_array( $screen_id, array( $this->wc_screen_id . '_page_wc-reports', 'toplevel_page_wc-reports' ) ) ) {
 				wp_enqueue_style( 'woocommerce_admin_print_reports_styles' );
 			}
 
@@ -81,7 +87,6 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 
 			$screen       = get_current_screen();
 			$screen_id    = $screen ? $screen->id : '';
-			$wc_screen_id = sanitize_title( __( 'Classic Commerce', 'classic-commerce' ) );
 			$suffix       = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 			// Register scripts.
@@ -365,7 +370,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 			}
 
 			// Reports Pages.
-			if ( in_array( $screen_id, apply_filters( 'woocommerce_reports_screen_ids', array( $wc_screen_id . '_page_wc-reports', 'toplevel_page_wc-reports', 'dashboard' ) ) ) ) {
+			if ( in_array( $screen_id, apply_filters( 'woocommerce_reports_screen_ids', array( $this->wc_screen_id . '_page_wc-reports', 'toplevel_page_wc-reports', 'dashboard' ) ) ) ) {
 				wp_register_script( 'wc-reports', WC()->plugin_url() . '/assets/js/admin/reports' . $suffix . '.js', array( 'jquery', 'jquery-ui-datepicker' ), WC_VERSION );
 
 				wp_enqueue_script( 'wc-reports' );
@@ -377,7 +382,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 			}
 
 			// API settings.
-			if ( $wc_screen_id . '_page_wc-settings' === $screen_id && isset( $_GET['section'] ) && 'keys' == $_GET['section'] ) {
+			if ( $this->wc_screen_id . '_page_wc-settings' === $screen_id && isset( $_GET['section'] ) && 'keys' == $_GET['section'] ) {
 				wp_register_script( 'wc-api-keys', WC()->plugin_url() . '/assets/js/admin/api-keys' . $suffix . '.js', array( 'jquery', 'woocommerce_admin', 'underscore', 'backbone', 'wp-util', 'qrcode', 'wc-clipboard' ), WC_VERSION, true );
 				wp_enqueue_script( 'wc-api-keys' );
 				wp_localize_script(
@@ -392,7 +397,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 			}
 
 			// System status.
-			if ( $wc_screen_id . '_page_wc-status' === $screen_id ) {
+			if ( $this->wc_screen_id . '_page_wc-status' === $screen_id ) {
 				wp_register_script( 'wc-admin-system-status', WC()->plugin_url() . '/assets/js/admin/system-status' . $suffix . '.js', array( 'wc-clipboard' ), WC_VERSION );
 				wp_enqueue_script( 'wc-admin-system-status' );
 				wp_localize_script(
