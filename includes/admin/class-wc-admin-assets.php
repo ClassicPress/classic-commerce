@@ -18,7 +18,10 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 	class WC_Admin_Assets {
 
 		/**
-		 * Add screen_id variable.
+		 * Add screen_id variable for WC_Admin_Assets class.
+		 *
+		 * @since CC-1.0.0
+		 * @var String
 		 */
 		protected $wc_screen_id;
 
