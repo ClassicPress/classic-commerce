@@ -81,7 +81,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 
 			$screen       = get_current_screen();
 			$screen_id    = $screen ? $screen->id : '';
-			$wc_screen_id = sanitize_title( __( 'WooCommerce', 'classic-commerce' ) );
+			$wc_screen_id = sanitize_title( __( 'Classic Commerce', 'classic-commerce' ) );
 			$suffix       = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 			// Register scripts.
