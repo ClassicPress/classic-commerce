@@ -650,7 +650,7 @@ class WC_REST_Webhooks_V1_Controller extends WC_REST_Controller {
 					'readonly'    => true,
 				),
 				'hooks' => array(
-					'description' => __( 'WooCommerce action names associated with the webhook.', 'classic-commerce' ),
+					'description' => __( 'Classic Commerce action names associated with the webhook.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

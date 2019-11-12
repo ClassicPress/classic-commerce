@@ -953,7 +953,7 @@ class WC_REST_Orders_V1_Controller extends WC_REST_Posts_Controller {
 					'context'     => array( 'view', 'edit' ),
 				),
 				'version' => array(
-					'description' => __( 'Version of WooCommerce which last updated the order.', 'classic-commerce' ),
+					'description' => __( 'Version of Classic Commerce which last updated the order.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,

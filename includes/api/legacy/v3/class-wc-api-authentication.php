@@ -107,7 +107,7 @@ class WC_API_Authentication {
 	 * @since WC-2.4
 	 */
 	private function exit_with_unauthorized_headers() {
-		$auth_message = __( 'WooCommerce API. Use a consumer key in the username field and a consumer secret in the password field.', 'classic-commerce' );
+		$auth_message = __( 'Classic Commerce API. Use a consumer key in the username field and a consumer secret in the password field.', 'classic-commerce' );
 		header( 'WWW-Authenticate: Basic realm="' . $auth_message . '"' );
 		header( 'HTTP/1.0 401 Unauthorized' );
 		throw new Exception( __( 'Consumer Secret is invalid.', 'classic-commerce' ), 401 );
