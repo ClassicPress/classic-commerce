@@ -197,6 +197,10 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 			)
 		);
 
+		if ( ! apply_filters( 'woocommerce_background_image_regeneration', true ) ) {
+			unset( $tools['regenerate_thumbnails'] );
+		}
+
 		return apply_filters( 'woocommerce_debug_tools', $tools );
 	}
 
