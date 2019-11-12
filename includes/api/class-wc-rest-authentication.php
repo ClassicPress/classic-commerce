@@ -577,7 +577,7 @@ class WC_REST_Authentication {
 	 */
 	public function send_unauthorized_headers( $response ) {
 		if ( is_wp_error( $this->get_error() ) && 'basic_auth' === $this->auth_method ) {
-			$auth_message = __( 'WooCommerce API. Use a consumer key in the username field and a consumer secret in the password field.', 'classic-commerce' );
+			$auth_message = __( 'Classic Commerce API. Use a consumer key in the username field and a consumer secret in the password field.', 'classic-commerce' );
 			$response->header( 'WWW-Authenticate', 'Basic realm="' . $auth_message . '"', true );
 		}
 

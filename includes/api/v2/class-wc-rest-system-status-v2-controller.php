@@ -122,7 +122,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 							'readonly'    => true,
 						),
 						'wc_version'                => array(
-							'description' => __( 'WooCommerce version.', 'classic-commerce' ),
+							'description' => __( 'Classic Commerce version.', 'classic-commerce' ),
 							'type'        => 'string',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
@@ -379,7 +379,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 							'readonly'    => true,
 						),
 						'has_woocommerce_support' => array(
-							'description' => __( 'Does the theme declare WooCommerce support?', 'classic-commerce' ),
+							'description' => __( 'Does the theme declare Classic Commerce support?', 'classic-commerce' ),
 							'type'        => 'boolean',
 							'context'     => array( 'view' ),
 							'readonly'    => true,
@@ -527,7 +527,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 					),
 				),
 				'pages'          => array(
-					'description' => __( 'WooCommerce pages.', 'classic-commerce' ),
+					'description' => __( 'Classic Commerce pages.', 'classic-commerce' ),
 					'type'        => 'array',
 					'context'     => array( 'view' ),
 					'readonly'    => true,
@@ -585,7 +585,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 			'https://www.paypal.com/cgi-bin/webscr',
 			array(
 				'timeout'     => 10,
-				'user-agent'  => 'WooCommerce/' . WC()->version,
+				'user-agent'  => 'ClassicCommerce/' . WC()->version,
 				'httpversion' => '1.1',
 				'body'        => array(
 					'cmd' => '_notify-validate',

@@ -515,7 +515,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 
 			case 'install_pages':
 				WC_Install::create_pages();
-				$message = __( 'All missing WooCommerce pages successfully installed', 'classic-commerce' );
+				$message = __( 'All missing Classic Commerce pages successfully installed', 'classic-commerce' );
 				break;
 
 			case 'delete_taxes':
