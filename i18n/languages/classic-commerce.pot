@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/ClassicPress-Research/classic-commerce/issues\n"
-"POT-Creation-Date: 2019-11-11 11:17:48+00:00\n"
+"POT-Creation-Date: 2019-11-11 19:33:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6932,7 +6932,7 @@ msgid "Limit result set to resources with a specific slug."
 msgstr ""
 
 #: includes/abstracts/abstract-wc-settings-api.php:774
-#: includes/admin/class-wc-admin-menus.php:325
+#: includes/admin/class-wc-admin-menus.php:349
 #: includes/admin/class-wc-admin-settings.php:621
 #: includes/admin/meta-boxes/views/html-product-attribute.php:56
 msgid "Select all"
@@ -7105,7 +7105,7 @@ msgid "You do not have permission to revoke API Keys"
 msgstr ""
 
 #: includes/admin/class-wc-admin-assets.php:84
-#: includes/admin/class-wc-admin-menus.php:59
+#: includes/admin/class-wc-admin-menus.php:60
 #: includes/admin/wc-admin-functions.php:22
 #: includes/api/class-wc-rest-order-notes-controller.php:38
 #: includes/class-wc-order.php:1632 includes/class-wc-order.php:1633
@@ -7596,7 +7596,7 @@ msgid "WooCommerce Endpoint"
 msgstr ""
 
 #: includes/admin/class-wc-admin-customize.php:79
-#: includes/admin/class-wc-admin-menus.php:296
+#: includes/admin/class-wc-admin-menus.php:320
 #: includes/admin/settings/class-wc-settings-advanced.php:274
 #: includes/class-wc-query.php:133
 msgid "Lost password"
@@ -7611,7 +7611,7 @@ msgid "Classic Commerce recent reviews"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:44
-#: includes/admin/class-wc-admin-menus.php:123
+#: includes/admin/class-wc-admin-menus.php:124
 msgid "Classic Commerce status"
 msgstr ""
 
@@ -7686,7 +7686,7 @@ msgid "Order"
 msgstr ""
 
 #: includes/admin/class-wc-admin-dashboard.php:347
-#: includes/admin/class-wc-admin-menus.php:123
+#: includes/admin/class-wc-admin-menus.php:124
 #: includes/admin/class-wc-admin-webhooks-table-list.php:49
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:116
 #: includes/admin/meta-boxes/views/html-product-data-variations.php:58
@@ -7837,6 +7837,7 @@ msgid "About ClassicPress"
 msgstr ""
 
 #: includes/admin/class-wc-admin-help.php:87
+#: includes/admin/class-wc-admin-menus.php:131
 msgid "Extensions"
 msgstr ""
 
@@ -7947,49 +7948,48 @@ msgstr ""
 msgid "Classic Commerce"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:61
+#: includes/admin/class-wc-admin-menus.php:62
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:717
 #: includes/admin/meta-boxes/class-wc-meta-box-product-data.php:111
 #: includes/admin/views/html-admin-page-product-export.php:41
 msgid "Attributes"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:69
+#: includes/admin/class-wc-admin-menus.php:70
 msgid "Reports"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:71
+#: includes/admin/class-wc-admin-menus.php:72
 msgid "Sales reports"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:79
+#: includes/admin/class-wc-admin-menus.php:80
 msgid "Classic Commerce settings"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:79
+#: includes/admin/class-wc-admin-menus.php:80
 #: includes/admin/views/html-admin-page-status-report.php:629
 #: includes/class-wc-install.php:1168
 msgid "Settings"
-msgstr ""
-
-#: includes/admin/class-wc-admin-menus.php:131
-#. translators: %s: extensions count
-msgid "Extensions %s"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:132
 msgid "Classic Commerce extensions"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:280
+#: includes/admin/class-wc-admin-menus.php:153
+msgid "Commerce"
+msgstr ""
+
+#: includes/admin/class-wc-admin-menus.php:304
 msgid "Classic Commerce endpoints"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:328
+#: includes/admin/class-wc-admin-menus.php:352
 msgid "Add to menu"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:362
+#: includes/admin/class-wc-admin-menus.php:386
 msgid "Visit Store"
 msgstr ""
 
@@ -8044,7 +8044,7 @@ msgstr ""
 msgid "Reviews"
 msgstr ""
 
-#: includes/admin/class-wc-admin-notices.php:135
+#: includes/admin/class-wc-admin-notices.php:132
 #: includes/admin/class-wc-admin-status.php:287
 #: includes/admin/class-wc-admin-status.php:306
 #: includes/admin/class-wc-admin-status.php:322
@@ -8052,7 +8052,7 @@ msgstr ""
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: includes/admin/class-wc-admin-notices.php:139
+#: includes/admin/class-wc-admin-notices.php:136
 #: includes/emails/class-wc-email.php:830
 msgid "You don&#8217;t have permission to do this."
 msgstr ""
@@ -8242,7 +8242,6 @@ msgstr ""
 #: includes/admin/views/html-notice-template-check.php:15
 #: includes/admin/views/html-notice-theme-support.php:12
 #: includes/admin/views/html-notice-updated.php:12
-#: includes/admin/views/html-notice-wootenberg.php:12
 #: includes/wc-template-functions.php:966
 msgid "Dismiss"
 msgstr ""
@@ -15242,20 +15241,6 @@ msgstr ""
 
 #: includes/admin/views/html-notice-updating.php:23
 msgid "Taking a while? Click here to run it now."
-msgstr ""
-
-#: includes/admin/views/html-notice-wootenberg.php:15
-msgid ""
-"We noticed you have the block editor available: Try the WooCommerce "
-"Products Block for a powerful new way to feature products in posts."
-msgstr ""
-
-#: includes/admin/views/html-notice-wootenberg.php:19
-msgid "Activate the Products Block"
-msgstr ""
-
-#: includes/admin/views/html-notice-wootenberg.php:30
-msgid "Install the WooCommerce Products Block"
 msgstr ""
 
 #: includes/admin/views/html-report-by-date.php:22
@@ -26590,7 +26575,7 @@ msgctxt "enhanced select"
 msgid "Searching&hellip;"
 msgstr ""
 
-#: includes/admin/class-wc-admin-menus.php:171
+#: includes/admin/class-wc-admin-menus.php:195
 #: includes/class-wc-post-types.php:383
 msgctxt "Admin menu name"
 msgid "Orders"
