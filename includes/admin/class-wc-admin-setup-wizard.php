@@ -117,7 +117,6 @@ class WC_Admin_Setup_Wizard {
 	 * Hooked onto 'admin_enqueue_scripts'.
 	 */
 	public function enqueue_scripts() {
-		// Whether or not there is a pending background install of Jetpack.
 		$suffix          = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 		wp_register_script( 'jquery-blockui', WC()->plugin_url() . '/assets/js/jquery-blockui/jquery.blockUI' . $suffix . '.js', array( 'jquery' ), '2.70', true );
@@ -609,8 +608,7 @@ class WC_Admin_Setup_Wizard {
 	}
 
 	/**
-	 * TODO: Remove if not used get_wcs_requisite_plugins()
-	 * Retrieve info for missing WooCommerce Services and/or Jetpack plugin.
+	 * Retrieve info for missing WooCommerce Services.
 	 *
 	 * @return array
 	 */

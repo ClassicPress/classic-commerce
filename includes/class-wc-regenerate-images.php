@@ -38,11 +38,6 @@ class WC_Regenerate_Images {
 		add_filter( 'wp_generate_attachment_metadata', array( __CLASS__, 'add_uncropped_metadata' ) );
 		add_filter( 'wp_get_attachment_image_src', array( __CLASS__, 'maybe_resize_image' ), 10, 4 );
 
-		// Not required when Jetpack Photon is in use.
-		if ( method_exists( 'Jetpack', 'is_module_active' ) && Jetpack::is_module_active( 'photon' ) ) {
-			return;
-		}
-
 		if ( apply_filters( 'woocommerce_background_image_regeneration', true ) ) {
 			include_once WC_ABSPATH . 'includes/class-wc-regenerate-images-request.php';
 
@@ -79,14 +74,9 @@ class WC_Regenerate_Images {
 
 		// See if the image size has changed from our settings.
 		if ( ! self::image_size_matches_settings( $data, $size ) ) {
-			// If Photon is running we can just return false and let Jetpack handle regeneration.
-			if ( method_exists( 'Jetpack', 'is_module_active' ) && Jetpack::is_module_active( 'photon' ) ) {
-				return false;
-			} else {
-				// If we get here, Jetpack is not running and we don't have the correct image sized stored. Try to return closest match.
-				$size_data = wc_get_image_size( $size );
-				return image_get_intermediate_size( $attachment_id, array( absint( $size_data['width'] ), absint( $size_data['height'] ) ) );
-			}
+			// If we get here and we don't have the correct image sized stored. Try to return closest match.
+			$size_data = wc_get_image_size( $size );
+			return image_get_intermediate_size( $attachment_id, array( absint( $size_data['width'] ), absint( $size_data['height'] ) ) );
 		}
 		return $data;
 	}
