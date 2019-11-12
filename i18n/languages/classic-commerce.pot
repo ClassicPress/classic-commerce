@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://github.com/ClassicPress-Research/classic-commerce/issues\n"
-"POT-Creation-Date: 2019-11-12 05:28:53+00:00\n"
+"POT-Creation-Date: 2019-11-11 19:33:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15196,10 +15196,17 @@ msgstr ""
 #: includes/admin/views/html-notice-theme-support.php:14
 msgid ""
 "<strong>Your theme does not declare Classic Commerce support</strong> "
-"&#8211; Please read our <a href=\"%1$s\" target=\"_blank\">integration</a>."
+"&#8211; Please read our <a href=\"%1$s\" target=\"_blank\">integration</a> "
+"guide or check out our <a href=\"%2$s\" target=\"_blank\">Storefront</a> "
+"theme which is totally free to download and designed specifically for use "
+"with WooCommerce."
 msgstr ""
 
 #: includes/admin/views/html-notice-theme-support.php:16
+msgid "Read more about Storefront"
+msgstr ""
+
+#: includes/admin/views/html-notice-theme-support.php:17
 msgid "Theme integration guide"
 msgstr ""
 
