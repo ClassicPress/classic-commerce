@@ -212,7 +212,7 @@ class WC_API_Server {
 
 			$this->send_status( 404 );
 
-			echo $this->handler->generate_response( array( 'errors' => array( 'code' => 'woocommerce_api_disabled', 'message' => 'The WooCommerce API is disabled on this site' ) ) );
+			echo $this->handler->generate_response( array( 'errors' => array( 'code' => 'woocommerce_api_disabled', 'message' => 'The Classic Commerce API is disabled on this site' ) ) );
 
 			return;
 		}

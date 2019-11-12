@@ -149,7 +149,7 @@ class WC_Admin_Menus {
 	public function admin_menu_rename() {
 		global $menu;
 		foreach ( $menu as $key => &$value ) {
-			if ( $value[5] === 'toplevel_page_woocommerce' ) {
+			if ( isset( $value[5] ) && $value[5] === 'toplevel_page_woocommerce' ) {
 				$value[0] = esc_html__( 'Commerce', 'classic-commerce' );
 				break;
 			}

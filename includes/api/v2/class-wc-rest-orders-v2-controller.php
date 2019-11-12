@@ -865,7 +865,7 @@ class WC_REST_Orders_V2_Controller extends WC_REST_Legacy_Orders_Controller {
 					'readonly'    => true,
 				),
 				'version'              => array(
-					'description' => __( 'Version of WooCommerce which last updated the order.', 'classic-commerce' ),
+					'description' => __( 'Version of Classic Commerce which last updated the order.', 'classic-commerce' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit' ),
 					'readonly'    => true,
