@@ -26576,7 +26576,7 @@ msgid "Searching&hellip;"
 msgstr ""
 
 #: includes/admin/class-wc-admin-menus.php:195
-#: includes/class-wc-post-types.php:382
+#: includes/class-wc-post-types.php:383
 msgctxt "Admin menu name"
 msgid "Orders"
 msgstr ""
