@@ -78,7 +78,7 @@ class WC_Gateway_Simplify_Commerce extends WC_Payment_Gateway_CC {
 
 		Simplify::$publicKey  = $this->public_key;
 		Simplify::$privateKey = $this->private_key;
-		Simplify::$userAgent  = 'WooCommerce/' . WC()->version;
+		Simplify::$userAgent  = 'ClassicCommerce/' . WC()->version;
 	}
 
 	/**

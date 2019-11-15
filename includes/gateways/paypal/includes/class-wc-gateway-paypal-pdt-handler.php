@@ -51,7 +51,7 @@ class WC_Gateway_Paypal_PDT_Handler extends WC_Gateway_Paypal_Response {
 			),
 			'timeout'     => 60,
 			'httpversion' => '1.1',
-			'user-agent'  => 'WooCommerce/' . WC_VERSION,
+			'user-agent'  => 'ClassicCommerce/' . WC_VERSION,
 		);
 
 		// Post back to get a response.
