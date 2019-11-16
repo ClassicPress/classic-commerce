@@ -244,10 +244,10 @@ function woocommerce_product_loop() {
 function wc_generator_tag( $gen, $type ) {
 	switch ( $type ) {
 		case 'html':
-			$gen .= "\n" . '<meta name="generator" content="WooCommerce ' . esc_attr( WC_VERSION ) . '">';
+			$gen .= "\n" . '<meta name="generator" content="ClassicCommerce ' . esc_attr( WC_VERSION ) . '">';
 			break;
 		case 'xhtml':
-			$gen .= "\n" . '<meta name="generator" content="WooCommerce ' . esc_attr( WC_VERSION ) . '" />';
+			$gen .= "\n" . '<meta name="generator" content="ClassicCommerce ' . esc_attr( WC_VERSION ) . '" />';
 			break;
 	}
 	return $gen;
