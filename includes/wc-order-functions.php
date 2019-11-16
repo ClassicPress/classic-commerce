@@ -912,7 +912,7 @@ function wc_get_order_note( $data ) {
 			'date_created'  => wc_string_to_datetime( $data->comment_date ),
 			'content'       => $data->comment_content,
 			'customer_note' => (bool) get_comment_meta( $data->comment_ID, 'is_customer_note', true ),
-			'added_by'      => __( 'WooCommerce', 'classic-commerce' ) === $data->comment_author ? 'system' : $data->comment_author,
+			'added_by'      => __( 'ClassicCommerce', 'classic-commerce' ) === $data->comment_author ? 'system' : $data->comment_author,
 		), $data
 	);
 }
