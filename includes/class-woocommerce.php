@@ -166,6 +166,7 @@ final class WooCommerce {
 	private function init_hooks() {
 		register_activation_hook( WC_PLUGIN_FILE, array( 'WC_Install', 'install' ) );
 		register_shutdown_function( array( $this, 'log_errors' ) );
+		add_filter( 'option_active_plugins', array( $this, 'cc_add_wc_plugin_name_option' ), 10, 1 );
 		add_action( 'after_setup_theme', array( $this, 'setup_environment' ) );
 		add_action( 'after_setup_theme', array( $this, 'include_template_functions' ), 11 );
 		add_action( 'init', array( $this, 'init' ), 0 );
@@ -174,6 +175,16 @@ final class WooCommerce {
 		add_action( 'init', array( $this, 'wpdb_table_fix' ), 0 );
 		add_action( 'init', array( $this, 'add_image_sizes' ) );
 		add_action( 'switch_blog', array( $this, 'wpdb_table_fix' ), 0 );
+	}
+
+	/**
+	 * Adds a woocommerce/woocommerce.php string to active_plugins options for dependent extensions.
+	 *
+	 * @since CC-1.0.0
+	 */
+	public function cc_add_wc_plugin_name_option($plugins) {
+			$plugins[] = 'woocommerce/woocommerce.php';
+			return $plugins;
 	}
 
 	/**
