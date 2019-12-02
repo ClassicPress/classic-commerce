@@ -22,6 +22,7 @@ php:
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
 
 env:
   - CP_VERSION=latest WP_MULTISITE=0
@@ -45,13 +46,10 @@ matrix:
   - name: "Unit tests code coverage"
     php: 7.3
     env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
-  - php: 7.4snapshot
-    env: CP_VERSION=latest WP_MULTISITE=0
   allow_failures:
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
-  - php: 7.4snapshot
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
