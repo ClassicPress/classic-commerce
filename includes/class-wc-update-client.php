@@ -15,13 +15,6 @@
  * -----------------------------------------------------------------------------
  * Copyright © 2019 - CodePotent
  * -----------------------------------------------------------------------------
- *           ____          _      ____       _             _
- *          / ___|___   __| | ___|  _ \ ___ | |_ ___ _ __ | |_
- *         | |   / _ \ / _` |/ _ \ |_) / _ \| __/ _ \ '_ \| __|
- *         | |__| (_) | (_| |  __/  __/ (_) | ||  __/ | | | |_
- *          \____\___/ \__,_|\___|_|   \___/ \__\___|_| |_|\__|.com
- *
- * -----------------------------------------------------------------------------
  */
 
 // EDIT HERE: Make this unique. Ex: YourDevName\YourPluginName;
@@ -391,7 +384,7 @@ class UpdateClient {
 		$body['screenshot_urls'] = $this->get_plugin_images('screenshot', dirname($plugin));
 
 		// The directory where banners and icons are stored.
-		$body['image_url'] = untrailingslashit(WP_PLUGIN_URL).'/'.dirname($this->config['id']).'/images';
+		$body['image_url'] = untrailingslashit(WP_PLUGIN_URL).'/'.dirname($this->config['id']).'/assets/images';
 
 		// Assemble args to post back to the Update Manager plugin.
 		$options = [
