@@ -611,6 +611,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 			'home_url'                  => get_option( 'home' ),
 			'site_url'                  => get_option( 'siteurl' ),
 			'version'                   => WC()->version,
+			'cc_version'                => WC()->cc_version,
 			'log_directory'             => WC_LOG_DIR,
 			'log_directory_writable'    => (bool) @fopen( WC_LOG_DIR . 'test-log.log', 'a' ),
 			'wp_version'                => get_bloginfo( 'version' ),

@@ -1894,3 +1894,10 @@ function wc_update_352_drop_download_log_fk() {
 		$wpdb->query( "ALTER TABLE {$wpdb->prefix}wc_download_log DROP FOREIGN KEY fk_wc_download_log_permission_id" ); // phpcs:ignore WordPress.WP.PreparedSQL.NotPrepared
 	}
 }
+
+/**
+ * Update DB Version.
+ */
+function wc_update_353_db_version() {
+	WC_Install::update_db_version( '3.5.3' );
+}
