@@ -70,8 +70,8 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 			<td><?php echo esc_html( $environment['cc_version'] ); ?></td>
 		</tr>
 		<tr>
-			<td data-export-label="WC Version"><?php esc_html_e( 'WooCommerce version', 'classic-commerce' ); ?>:</td>
-			<td class="help"><?php echo wc_help_tip( esc_html__( 'The version of WooCommerce installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
+			<td data-export-label="WC Version"><?php esc_html_e( 'WooCommerce equivalent version', 'classic-commerce' ); ?>:</td>
+			<td class="help"><?php echo wc_help_tip( esc_html__( 'Equivalent version of WooCommerce installed on your site.', 'classic-commerce' ) ); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?></td>
 			<td><?php echo esc_html( $environment['version'] ); ?></td>
 		</tr>
 		<tr>
