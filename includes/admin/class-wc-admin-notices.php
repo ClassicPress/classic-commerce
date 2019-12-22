@@ -34,7 +34,7 @@ class WC_Admin_Notices {
 		'simplify_commerce'       => 'simplify_commerce_notice',
 		'regenerating_thumbnails' => 'regenerating_thumbnails_notice',
 		'no_secure_connection'    => 'secure_connection_notice',
-		'require_compat_plugin'   => 'require_compat_plugin_notice'
+		'require_compat_plugin'   => 'require_compat_plugin_notice',
 	);
 
 	/**
