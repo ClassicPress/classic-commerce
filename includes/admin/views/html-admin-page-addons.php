@@ -4,7 +4,9 @@
  *
  * @var string $view
  * @var object $addons
+ * @package Classic Commerce
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
