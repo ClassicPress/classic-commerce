@@ -1100,24 +1100,6 @@ class WC_Admin_Setup_Wizard {
 				);
 				?>
 			</p>
-			<?php if ( $featured_gateways ) : ?>
-			<ul class="wc-wizard-services featured">
-				<?php
-				foreach ( $featured_gateways as $gateway_id => $gateway ) {
-					$this->display_service_item( $gateway_id, $gateway );
-				}
-				?>
-			</ul>
-			<?php endif; ?>
-			<?php if ( $in_cart_gateways ) : ?>
-			<ul class="wc-wizard-services in-cart">
-				<?php
-				foreach ( $in_cart_gateways as $gateway_id => $gateway ) {
-					$this->display_service_item( $gateway_id, $gateway );
-				}
-				?>
-			</ul>
-			<?php endif; ?>
 			<ul class="wc-wizard-services manual">
 				<li class="wc-wizard-services-list-toggle closed">
 					<div class="wc-wizard-service-name">
