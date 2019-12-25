@@ -30,9 +30,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'This is an optional plugin that is seperately installed and activated. Its primary purpose is to ensure Classic Commerce compatibility with extensions that are dependent on the installation of WooCommerce.', 'classic-commerce' ); ?></p>
 	
-	<p><?php printf( __( '<strong>Note:</strong> It does not fix all compatibility issues with extensions apart from specific checks run to detect WooCommerce installation not present in Classic Commerce.', 'classic-commerce' ) ); ?></p>
+	<p><?php printf( __( '<strong>First, uninstall WooCommerce</strong> inorder to run the Compatibility plugin. The two cannot co-exist!', 'classic-commerce' ) ); ?></p>
 
-	<p><?php printf( __( '<strong>Sample checks fixed:</strong>', 'classic-commerce' ) ); ?></p>
+	<p><?php printf( __( '<strong>Note:</strong> The Compatibility plugin does not fix all compatibility issues apart from specific checks the extensions run to detect WooCommerce installation.', 'classic-commerce' ) ); ?></p>
+
+	<p><?php printf( __( '<strong>Sample checks include:</strong>', 'classic-commerce' ) ); ?></p>
 
 	<p><code>in_array( 'woocommerce/woocommerce.php', self::$active_plugins ) || array_key_exists( 'woocommerce/woocommerce.php', self::$active_plugins );</code></p>
 
@@ -44,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<h3><?php esc_html_e( 'Disclaimer', 'classic-commerce' ); ?></h3>
 
-	<p><strong><?php esc_html_e( 'The end user is entirely responsible for choosing, installing, testing and monitoring any extensions or plugins that are needed to provide extra functionality to the Classic Commerce core.', 'classic-commerce' ); ?></strong></p>
+	<p><?php printf( __( '<strong>The end user is entirely responsible</strong> for choosing, installing, testing and monitoring any extensions or plugins that are needed to provide extra functionality to the Classic Commerce core.', 'classic-commerce' ) ); ?></p>
 
 	<p><?php esc_html_e( 'Before installing and using any extensions or plugins we strongly recommend that you first work in a test environment. If you are working on a live site please ensure that you have a recent backup.', 'classic-commerce' ); ?></p>
 
