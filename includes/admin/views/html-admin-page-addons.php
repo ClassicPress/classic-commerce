@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'This is an optional plugin that is seperately installed and activated. Its primary purpose is to ensure Classic Commerce compatibility with extensions that are dependent on the installation of WooCommerce.', 'classic-commerce' ); ?></p>
 	
-	<p><?php printf( __( '<strong>First, uninstall WooCommerce</strong> inorder to run the Compatibility plugin. The two cannot co-exist!', 'classic-commerce' ) ); ?></p>
+	<p><?php printf( __( '<strong>First, uninstall WooCommerce</strong> in order to run the Compatibility plugin. The two cannot co-exist!', 'classic-commerce' ) ); ?></p>
 
 	<p><?php printf( __( '<strong>Note:</strong> The Compatibility plugin does not fix all compatibility issues apart from specific checks the extensions run to detect WooCommerce installation.', 'classic-commerce' ) ); ?></p>
 
