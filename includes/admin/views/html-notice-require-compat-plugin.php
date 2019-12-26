@@ -21,8 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p>
 		<?php
-		/*Translators: Warning to uninstall WooCommerce.*/
-		echo sprintf( wp_kses( __( 'Make sure to <a href="%s">uninstall WooCommerce</a> first before installing the Compatibility Plugin.', 'classic-commerce' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'plugins.php' ) ) );
+		/*Translators: Warning to delete WooCommerce.*/
+		echo sprintf( wp_kses( __( 'Make sure to <a href="%s">delete WooCommerce</a> first before installing the Compatibility Plugin.', 'classic-commerce' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'plugins.php' ) ) );
 		?>
 	</p>
 
