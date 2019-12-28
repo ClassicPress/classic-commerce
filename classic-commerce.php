@@ -20,27 +20,31 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 	include_once ABSPATH . 'wp-admin/includes/plugin.php';
 }
 
+/**
+ * Returns error when WooCommerce is detected among the files on the server.
+ *
+ * @return void
+ */
 function cc_wc_already_active_notice() {
-    echo '<div class="error notice is_dismissible"><p>';
-    echo __( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
-    echo '</p></div>';
+	echo '<div class="error notice is_dismissible"><p>';
+	echo esc_html__( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
+	echo '</p></div>';
 }
 
-if ( function_exists( 'wc' ) || is_plugin_active('woocommerce/woocommerce.php') || class_exists('WooCommerce') ) {
+if ( file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) && file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/class-woocommerce.php' ) && file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/admin/class-wc-admin.php' ) ) {
 
-    // The main wc() function already exists, which means WooCommerce is active.
-    // Show an admin notice.
-    add_action( 'admin_notices', 'cc_wc_already_active_notice' );
-	
-    // Deactivate Classic Commerce.
-    deactivate_plugins( array( 'classic-commerce/classic-commerce.php' ) );
-	
-    // Do not proceed further with Classic Commerce loading.
-    return;
-}
-else {
+	// Woocommerce Files already exist. Show an admin notice.
+	add_action( 'admin_notices', 'cc_wc_already_active_notice' );
 
-	// Load the Update Client to manage Classic Commerce updates
+	// Deactivate Classic Commerce.
+	deactivate_plugins( array( 'classic-commerce/classic-commerce.php' ) );
+
+	// Do not proceed further with Classic Commerce loading.
+	return;
+
+} else {
+
+	// Load the Update Client to manage Classic Commerce updates.
 	include_once dirname( __FILE__ ) . '/includes/class-wc-update-client.php';
 
 	// Define WC_PLUGIN_FILE.
