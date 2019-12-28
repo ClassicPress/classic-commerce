@@ -16,6 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+if ( ! function_exists( 'is_plugin_active' ) ) {
+	include_once ABSPATH . 'wp-admin/includes/plugin.php';
+}
+
 function cc_wc_already_active_notice() {
     echo '<div class="error notice is_dismissable"><p>';
     echo __( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
