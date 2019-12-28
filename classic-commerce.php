@@ -3,7 +3,7 @@
  * Plugin Name: Classic Commerce
  * Plugin URI: https://github.com/ClassicPress-research/classic-commerce
  * Description: A simple, powerful and independent e-commerce platform. Sell anything with ease.
- * Version: 0.1.0
+ * Version: 1.0.0-alpha1
  * Author: ClassicPress Research Team
  * Author URI: https://github.com/ClassicPress-research/classic-commerce
  * Text Domain: classic-commerce
@@ -21,7 +21,7 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 }
 
 function cc_wc_already_active_notice() {
-    echo '<div class="error notice is_dismissable"><p>';
+    echo '<div class="error notice is_dismissible"><p>';
     echo __( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
     echo '</p></div>';
 }
