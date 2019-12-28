@@ -26,7 +26,7 @@ function cc_wc_already_active_notice() {
     echo '</p></div>';
 }
 
-if ( function_exists( 'wc' ) || is_plugin_active('woocommerce/woocommerce.php') || class_exists('WooCommerce') ) {
+if( file_exists( WP_PLUGIN_DIR . "/woocommerce/woocommerce.php" ) && file_exists( WP_PLUGIN_DIR . "/woocommerce/includes/class-woocommerce.php" ) && file_exists( WP_PLUGIN_DIR . "/woocommerce/includes/admin/class-wc-admin.php" ) ) {
 
     // The main wc() function already exists, which means WooCommerce is active.
     // Show an admin notice.
