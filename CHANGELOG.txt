@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.0-alpha1 - 2019-12-28
+First alpha release of Classic Commerce
+
 = 0.1.0 - 2018-05-24 =
 WIP - Forking and documenting ClassicCommerce 0.1.0
 

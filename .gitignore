@@ -14,6 +14,7 @@ project.properties
 # Grunt
 /node_modules/
 none
+Gruntfile.js
 
 # Sass
 .sass-cache/
@@ -46,3 +47,18 @@ contributors.md
 
 # Screenshots for e2e tests failures
 /screenshots/
+
+# Other
+CODE_OF_CONDUCT.*
+package-lock.*
+package.*
+phpcs.xml
+phpunit.xml
+.travis.yml
+.jshintrc
+.scrutinizer.yml
+.stylelintrc
+.babelrc
+.codeclimate.yml
+.codecov.yml
+.editorconfig
