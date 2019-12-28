@@ -27,14 +27,13 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
  */
 function cc_wc_already_active_notice() {
 	echo '<div class="error notice is_dismissible"><p>';
-	echo esc_html( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
+	echo esc_html__( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
 	echo '</p></div>';
 }
 
 if ( file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) && file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/class-woocommerce.php' ) && file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/admin/class-wc-admin.php' ) ) {
 
-	// Woocommerce Files already exist.
-	// Show an admin notice.
+	// Woocommerce Files already exist. Show an admin notice.
 	add_action( 'admin_notices', 'cc_wc_already_active_notice' );
 
 	// Deactivate Classic Commerce.

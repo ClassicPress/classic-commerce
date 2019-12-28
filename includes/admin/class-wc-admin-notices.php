@@ -364,7 +364,7 @@ class WC_Admin_Notices {
 	 * Notice for requiring the Classic Commerce compatibility plugin to run Woocommerce specific extensions.
 	 */
 	public static function require_compat_plugin_notice() {
-		if( ! defined('CCWOOADDONSCOMPAT_VERSION')) {
+		if ( ! defined( 'CCWOOADDONSCOMPAT_VERSION' ) ) {
 			include dirname( __FILE__ ) . '/views/html-notice-require-compat-plugin.php';
 		}
 	}
