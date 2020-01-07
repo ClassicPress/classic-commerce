@@ -35,6 +35,7 @@ class WC_Admin_Notices {
 		'regenerating_thumbnails' => 'regenerating_thumbnails_notice',
 		'no_secure_connection'    => 'secure_connection_notice',
 		'require_compat_plugin'   => 'require_compat_plugin_notice',
+		'usage_tracking'		  => 'usage_tracking_notice',
 	);
 
 	/**
@@ -93,6 +94,7 @@ class WC_Admin_Notices {
 
 		self::add_notice( 'template_files' );
 		self::add_notice( 'require_compat_plugin' );
+		self::add_notice( 'usage_tracking' );
 	}
 
 	/**
@@ -367,6 +369,13 @@ class WC_Admin_Notices {
 		if ( ! defined( 'CCWOOADDONSCOMPAT_VERSION' ) ) {
 			include dirname( __FILE__ ) . '/views/html-notice-require-compat-plugin.php';
 		}
+	}
+
+	/**
+	 * Notice for requiring the Classic Commerce compatibility plugin to run Woocommerce specific extensions.
+	 */
+	public static function usage_tracking_notice() {
+		include dirname( __FILE__ ) . '/views/html-notice-toggle-tracking.php';
 	}
 
 	/**
