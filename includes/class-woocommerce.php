@@ -582,7 +582,8 @@ final class WooCommerce {
 	 * @return string
 	 */
 	public function template_path() {
-		return apply_filters( 'woocommerce_template_path', 'woocommerce/' );
+		$templatepath = file_exists( get_stylesheet_directory() . '/classic-commerce/' ) ? 'classic-commerce/' : 'woocommerce/';
+		return apply_filters( 'woocommerce_template_path', $templatepath );
 	}
 
 	/**
