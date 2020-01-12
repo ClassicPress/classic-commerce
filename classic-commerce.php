@@ -29,11 +29,11 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
  */
 function cc_wc_already_active_notice() {
 	echo '<div class="notice error is-dismissible">';
-	echo '<p style="font-weight: bold">';
+	echo '<p><strong>';
 	echo esc_html__( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
-	echo '</p>';
+	echo '</strong></p>';
 	echo '<p>';
-	echo esc_html__( 'Classic Commerce has been deactivated.', 'classic-commerce' );
+	echo esc_html__( 'Classic Commerce has not been activated.', 'classic-commerce' );
 	echo '</p>';
 	echo '</div>';
 }
