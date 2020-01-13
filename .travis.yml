@@ -1,4 +1,12 @@
 language: php
+dist: xenial
+
+# Since Xenial services are not started by default, we need to instruct it below to start.
+services:
+  - xvfb
+  - mysql
+  - docker
+  - docker-compose
 
 sudo: false
 
