@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Unit Tests Bootstrap
+ * Classic Commerce Unit Tests Bootstrap
  *
  * @since WC-2.2
  */
@@ -44,32 +44,32 @@ class WC_Unit_Tests_Bootstrap {
 		// load test function so tests_add_filter() is available
 		require_once $this->wp_tests_dir . '/includes/functions.php';
 
-		// load WC
+		// load CC
 		tests_add_filter( 'muplugins_loaded', array( $this, 'load_wc' ) );
 
-		// install WC
+		// install CC
 		tests_add_filter( 'setup_theme', array( $this, 'install_wc' ) );
 
 		// load the WP testing environment
 		require_once $this->wp_tests_dir . '/includes/bootstrap.php';
 
-		// load WC testing framework
+		// load CC testing framework
 		$this->includes();
 	}
 
 	/**
-	 * Load WooCommerce.
+	 * Load Classic Commerce.
 	 *
 	 * @since WC-2.2
 	 */
 	public function load_wc() {
 		define( 'WC_TAX_ROUNDING_MODE', 'auto' );
 		define( 'WC_USE_TRANSACTIONS', false );
-		require_once $this->plugin_dir . '/woocommerce.php';
+		require_once $this->plugin_dir . '/classic-commerce.php';
 	}
 
 	/**
-	 * Install ClassicCommerce after the test environment and WC have been loaded.
+	 * Install Classic Commerce after the test environment and CC have been loaded.
 	 *
 	 * @since WC-2.2
 	 */
@@ -90,11 +90,11 @@ class WC_Unit_Tests_Bootstrap {
 			wp_roles();
 		}
 
-		echo esc_html( 'Installing WooCommerce...' . PHP_EOL );
+		echo esc_html( 'Installing Classic Commerce...' . PHP_EOL );
 	}
 
 	/**
-	 * Load WC-specific test cases and factories.
+	 * Load CC-specific test cases and factories.
 	 *
 	 * @since WC-2.2
 	 */
