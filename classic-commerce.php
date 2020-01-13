@@ -21,28 +21,49 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 }
 
 /**
- * Returns error when WooCommerce is detected among the files on the server.
+ * Shows an error message when WooCommerce is detected as currently active.
+ *
+ * WooCommerce and Classic Commerce cannot both be active at once.
  *
  * @return void
  */
 function cc_wc_already_active_notice() {
-	echo '<div class="error notice is_dismissible"><p>';
+	echo '<div class="notice error is-dismissible">';
+	echo '<p><strong>';
 	echo esc_html__( 'You must deactivate WooCommerce before activating Classic Commerce.', 'classic-commerce' );
-	echo '</p></div>';
+	echo '</strong></p>';
+	echo '<p>';
+	echo esc_html__( 'Classic Commerce has not been activated.', 'classic-commerce' );
+	echo '</p>';
+	echo '</div>';
 }
 
-if ( file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) && file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/class-woocommerce.php' ) && is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+// Check if WooCommerce is already active.  In this case we need to block
+// Classic Commerce from being activated to avoid fatal errors.
+if (
+	file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) &&
+	// Make sure we are really looking at WooCommerce and not the compatibility plugin!
+	file_exists( WP_PLUGIN_DIR . '/woocommerce/includes/class-woocommerce.php' ) &&
+	is_plugin_active( 'woocommerce/woocommerce.php' )
+) {
 
-	// Woocommerce Files already exist. Show an admin notice.
+	// WooCommerce is already active. Show an admin notice.
 	add_action( 'admin_notices', 'cc_wc_already_active_notice' );
 
 	// Deactivate Classic Commerce.
 	deactivate_plugins( array( 'classic-commerce/classic-commerce.php' ) );
 
+	// Avoid showing a "Plugin activated" message in the admin screen.
+	// See also src/wp-admin/plugins.php in core.
+	unset( $_GET['activate'] );
+
 	// Do not proceed further with Classic Commerce loading.
-	return;
 
 } else {
+
+	////////////////////////////////////////////
+	// BEGIN CLASSIC COMMERCE LOADING PROCESS //
+	////////////////////////////////////////////
 
 	// Load the Update Client to manage Classic Commerce updates.
 	include_once dirname( __FILE__ ) . '/includes/class-wc-update-client.php';
@@ -72,4 +93,11 @@ if ( file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) && file_exist
 	// Global for backwards compatibility.
 	$GLOBALS['woocommerce'] = wc();
 
+	//////////////////////////////////////////
+	// END CLASSIC COMMERCE LOADING PROCESS //
+	//////////////////////////////////////////
+
 }
+
+// Do not add any new code here!  All code required to load Classic Commerce
+// must go inside the "CLASSIC COMMERCE LOADING PROCESS" block above.
