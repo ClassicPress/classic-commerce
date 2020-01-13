@@ -38,6 +38,8 @@ function cc_wc_already_active_notice() {
 	echo '</div>';
 }
 
+// Check if WooCommerce is already active.  In this case we need to block
+// Classic Commerce from being activated to avoid fatal errors.
 if (
 	file_exists( WP_PLUGIN_DIR . '/woocommerce/woocommerce.php' ) &&
 	// Make sure we are really looking at WooCommerce and not the compatibility plugin!
@@ -52,7 +54,7 @@ if (
 	deactivate_plugins( array( 'classic-commerce/classic-commerce.php' ) );
 
 	// Avoid showing a "Plugin activated" message in the admin screen.
-	// See src/wp-admin/plugins.php in core
+	// See also src/wp-admin/plugins.php in core.
 	unset( $_GET['activate'] );
 
 	// Do not proceed further with Classic Commerce loading.
