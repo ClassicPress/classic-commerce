@@ -130,8 +130,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 				array(
 					'title'    => __( 'Anonymous data collection', 'classic-commerce' ),
 					'desc'     => __( 'Allow us to collect encrypted data. <strong>We cannot identify you or your website from this data</strong>.', 'classic-commerce' ),
-					'desc_tip'  => __( 'Classic Commerce collects <strong>anonymized</strong> and encrypted data. This data is important to us as it helps us to keep track of Classic Commerce installations. It includes the timestamp of plugin last update check and URL of the website asking for updates which is sha512 hashed.', 'classic-commerce' 
-					),
+					'desc_tip' => __( 'Classic Commerce collects <strong>anonymized</strong> and encrypted data. This data is important to us as it helps us to keep track of Classic Commerce installations. It includes the timestamp of plugin last update check and URL of the website asking for updates which is sha512 hashed.', 'classic-commerce' ),
 					'id'       => 'cc_usage_tracking',
 					'type'     => 'checkbox',
 					'default'  => 'yes',
