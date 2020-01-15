@@ -175,6 +175,15 @@ final class WooCommerce {
 		add_action( 'init', array( $this, 'wpdb_table_fix' ), 0 );
 		add_action( 'init', array( $this, 'add_image_sizes' ) );
 		add_action( 'switch_blog', array( $this, 'wpdb_table_fix' ), 0 );
+		add_action( 'admin_head', array( $this, 'load_icon_style' ) );
+	}
+	
+	/**
+	 * Some plugins block loading of menu.css causing the CC menu icon to display incorrectly.
+	 * Here we add the necessary style to ensure the icon style is loaded.
+	 */
+	public function load_icon_style() {
+		echo '<style>#adminmenu #toplevel_page_woocommerce .wp-menu-image img{max-width:20px;height:20px;margin-top:-3px}</style>';
 	}
 
 	/**
@@ -582,7 +591,8 @@ final class WooCommerce {
 	 * @return string
 	 */
 	public function template_path() {
-		return apply_filters( 'woocommerce_template_path', 'woocommerce/' );
+		$templatepath = file_exists( get_stylesheet_directory() . '/classic-commerce/' ) ? 'classic-commerce/' : 'woocommerce/';
+		return apply_filters( 'woocommerce_template_path', $templatepath );
 	}
 
 	/**
