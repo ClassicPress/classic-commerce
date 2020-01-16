@@ -473,8 +473,8 @@ class UpdateClient {
 		$body['screenshot_urls'] = $this->get_plugin_images('screenshot', dirname($plugin));
 
 		// Add opt out data tracking - stats for Update manager
-		if( 'no' === get_option( 'cc_usage_tracking' ) ) {
-			$body['sfum']='no-log';
+		if( 'no' === get_option( 'cc_usage_tracking' ) ) {
+			$body['sfum'] = 'no-log';
 		}
 
 		// Assemble args to post back to the Update Manager plugin.
