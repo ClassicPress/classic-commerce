@@ -472,6 +472,11 @@ class UpdateClient {
 		$body['banner_urls'] = $this->get_plugin_images('banner', dirname($plugin));
 		$body['screenshot_urls'] = $this->get_plugin_images('screenshot', dirname($plugin));
 
+		// Add opt out data tracking - stats for Update manager
+		if( 'no' === get_option( 'cc_usage_tracking' ) ) {
+			$body['sfum'] = 'no-log';
+		}
+
 		// Assemble args to post back to the Update Manager plugin.
 		$options = [
 			'user-agent' => 'ClassicPress/'.$cp_version.'; '.get_bloginfo('url'),

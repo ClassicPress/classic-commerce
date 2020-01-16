@@ -39,7 +39,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 		$settings = apply_filters(
 			'woocommerce_' . $this->id . '_settings', array(
 				array(
-					'title' => '',
+					'title' => 'Accounts',
 					'type'  => 'title',
 					'id'    => 'account_registration_options',
 				),
@@ -119,6 +119,27 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'type' => 'sectionend',
 					'id'   => 'account_registration_options',
 				),
+
+				array(
+					'title' => __( 'Usage Tracking', 'classic-commerce' ),
+					'type'  => 'title',
+					'id'    => 'section_cc_usage_tracking',
+					'desc'  => __( 'This section controls the collection of limited encrypted data.' 
+					),
+				),
+				array(
+					'title'    => __( 'Anonymous data collection', 'classic-commerce' ),
+					'desc'     => __( 'Allow us to collect encrypted data. <strong>We cannot identify you or your website from this data</strong>.', 'classic-commerce' ),
+					'desc_tip' => __( 'Classic Commerce collects <strong>anonymized</strong> and encrypted data. This data is important to us as it helps us to keep track of Classic Commerce installations. It includes the timestamp of plugin last update check and URL of the website asking for updates which is sha512 hashed.', 'classic-commerce' ),
+					'id'       => 'cc_usage_tracking',
+					'type'     => 'checkbox',
+					'default'  => 'yes',
+				),
+				array(
+					'type' => 'sectionend',
+					'id'   => 'section_cc_usage_tracking',
+				),
+
 				array(
 					'title' => __( 'Privacy policy', 'classic-commerce' ),
 					'type'  => 'title',
