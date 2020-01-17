@@ -27,7 +27,3 @@ Closes # .
 * [ ] Have you successfully ran tests with your changes locally?
 
 <!-- Mark completed items with an [x] -->
-
-### Changelog entry
-
-> Enter a short summary of all changes on this Pull Request. This will appear in the changelog if accepted.
