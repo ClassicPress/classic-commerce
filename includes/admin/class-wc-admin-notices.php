@@ -375,6 +375,7 @@ class WC_Admin_Notices {
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			// The current user cannot manage plugins.  Don't show them a
 			// notice they can't act on.
+			return;
 		}
 
 		if ( get_user_meta( get_current_user_id(), 'dismissed_require_compat_plugin_notice', true ) ) {
