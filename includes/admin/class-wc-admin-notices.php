@@ -361,12 +361,29 @@ class WC_Admin_Notices {
 	}
 
 	/**
-	 * Notice for requiring the Classic Commerce compatibility plugin to run Woocommerce specific extensions.
+	 * Notice for requiring the Classic Commerce compatibility plugin to run
+	 * some WooCommerce-specific extensions.
+	 *
+	 * See: https://github.com/Classic-Commerce/cc-compat-woo
 	 */
 	public static function require_compat_plugin_notice() {
-		if ( ! defined( 'CCWOOADDONSCOMPAT_VERSION' ) ) {
-			include dirname( __FILE__ ) . '/views/html-notice-require-compat-plugin.php';
+		if ( defined( 'CCWOOADDONSCOMPAT_VERSION' ) ) {
+			// The compatibility plugin is already installed.
+			return;
 		}
+
+		if ( ! current_user_can( 'activate_plugins' ) ) {
+			// The current user cannot manage plugins.  Don't show them a
+			// notice they can't act on.
+			return;
+		}
+
+		if ( get_user_meta( get_current_user_id(), 'dismissed_require_compat_plugin_notice', true ) ) {
+			// The current user has already dismissed this notice.
+			return;
+		}
+
+		include dirname( __FILE__ ) . '/views/html-notice-require-compat-plugin.php';
 	}
 
 	/**
