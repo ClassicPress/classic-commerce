@@ -1,5 +1,16 @@
 == Changelog ==
 
+= 1.0.0-alpha.3 - 2020-01-20
+NEW: Add usage tracking notice & opt-out
+NEW: Change template path to look for classic-commerce in theme folder
+UPDATE: Improve CC/Woo activation logic
+UPDATE: Change compatibility plugin warning message
+FIX: Fix deactivating WC/CC issue and change notice
+FIX: Prevent PHP fatal error when trying to activate WC while CC is still active
+FIX: Fix for CC admin menu icon display issues
+FiX: Prevent the compatibility plugin notice from appearing when it shouldn't
+Other minor tweaks
+
 = 1.0.0-alpha.2 - 2019-12-29
 Fix for issues #159 and #162 - notices displaying when they shouldn't
 
@@ -10,4 +21,4 @@ First alpha release of Classic Commerce
 WIP - Forking and documenting ClassicCommerce 0.1.0
 
 = WooCommerce 3.4.5 - 2018-08-29 =
-[See changelog for all versions](https://raw.githubusercontent.com/ClassicPress-research/classic-commerce/master/CHANGELOG-Archive.txt).
+[See changelog archive for all versions](https://raw.githubusercontent.com/ClassicPress-research/classic-commerce/master/CHANGELOG-Archive.txt).
