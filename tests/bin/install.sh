@@ -65,6 +65,11 @@ install_cp() {
 	download \
 		https://raw.github.com/markoheijnen/wp-mysqli/master/db.php \
 		"$CP_CORE_DIR/wp-content/db.php"
+
+	# Hello Dolly is still used in some tests.
+	download \
+		"$CP_DEV_FILE_URL/src/wp-content/plugins/hello.php" \
+		"$CP_CORE_DIR/wp-content/plugins/hello.php"
 }
 
 clean_github_download() {
