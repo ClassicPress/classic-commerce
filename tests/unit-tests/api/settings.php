@@ -704,7 +704,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 
 		// Repalce the old value with something uniquely new
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -736,7 +736,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 
 		// Repalce the old value with something uniquely new
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address_2' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -768,7 +768,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 
 		// Repalce the old value with something uniquely new
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_city' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -800,7 +800,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 
 		// Repalce the old value with something uniquely new
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_postcode' );
 		$request->set_body_params( array(
 			'value' => $new_value,
