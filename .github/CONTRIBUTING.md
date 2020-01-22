@@ -7,7 +7,7 @@ There are many ways to contribute to the Classic Commerce project!
 - Submitting fixes, improvements and enhancements through PRs.
 - Testing the development builds and [filing issues](https://github.com/ClassicPress-research/classic-commerce/issues)
 
-ClassicCommerce is still growing and your help making it even more awesome will be greatly appreciated :)
+Classic Commerce is still growing and your help making it even more awesome will be greatly appreciated :)
 
 If you think something can be improved and you wish to contribute code,
 [fork](https://help.github.com/articles/fork-a-repo/) Classic Commerce, commit your changes,
