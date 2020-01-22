@@ -2,7 +2,7 @@
 # See https://raw.githubusercontent.com/wp-cli/scaffold-command/master/templates/install-wp-tests.sh
 
 if [ $# -lt 3 ]; then
-	echo "usage: $0 <db-name> <db-user> <db-pass> [db-host] [wp-version] [skip-database-creation]"
+	echo "usage: $0 <db-name> <db-user> <db-pass> [db-host] [cp-version] [skip-database-creation]"
 	exit 1
 fi
 
@@ -10,87 +10,75 @@ DB_NAME=$1
 DB_USER=$2
 DB_PASS=$3
 DB_HOST=${4-localhost}
-WP_VERSION=${5-latest}
+CP_VERSION=${5-latest}
 SKIP_DB_CREATE=${6-false}
 
 TMPDIR=${TMPDIR-/tmp}
 TMPDIR=$(echo $TMPDIR | sed -e "s/\/$//")
-WP_TESTS_DIR=${WP_TESTS_DIR-$TMPDIR/wordpress-tests-lib}
-WP_CORE_DIR=${WP_CORE_DIR-$TMPDIR/wordpress/}
+CP_TESTS_DIR=${CP_TESTS_DIR-$TMPDIR/classicpress-tests-lib}
+CP_CORE_DIR=${CP_CORE_DIR-$TMPDIR/classicpress}
+
+# Remove trailing slashes
+CP_TESTS_DIR=$(echo "$CP_TESTS_DIR" | sed 's:/\+$::')
+CP_CORE_DIR=$(echo "$CP_CORE_DIR" | sed 's:/\+$::')
 
 download() {
-    if [ `which curl` ]; then
-        curl -s "$1" > "$2";
-    elif [ `which wget` ]; then
-        wget -nv -O "$2" "$1"
-    fi
+	if [ `which curl` ]; then
+		curl -L -s "$1" -o "$2"
+	elif [ `which wget` ]; then
+		wget -nv -O "$2" "$1"
+	fi
 }
-
-if [[ $WP_VERSION =~ ^[0-9]+\.[0-9]+$ ]]; then
-	WP_TESTS_TAG="branches/$WP_VERSION"
-elif [[ $WP_VERSION =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
-	if [[ $WP_VERSION =~ [0-9]+\.[0-9]+\.[0] ]]; then
-		# version x.x.0 means the first release of the major version, so strip off the .0 and download version x.x
-		WP_TESTS_TAG="tags/${WP_VERSION%??}"
-	else
-		WP_TESTS_TAG="tags/$WP_VERSION"
-	fi
-elif [[ $WP_VERSION == 'nightly' || $WP_VERSION == 'trunk' ]]; then
-	WP_TESTS_TAG="trunk"
-else
-	# http serves a single offer, whereas https serves multiple. we only want one
-	download http://api.wordpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
-	grep '[0-9]+\.[0-9]+(\.[0-9]+)?' $TMPDIR/wp-latest.json
-	LATEST_VERSION=$(grep -o '"version":"[^"]*' $TMPDIR/wp-latest.json | sed 's/"version":"//')
-	if [[ -z "$LATEST_VERSION" ]]; then
-		echo "Latest WordPress version could not be found"
-		exit 1
-	fi
-	WP_TESTS_TAG="tags/$LATEST_VERSION"
-fi
 
 set -ex
 
-install_wp() {
+if [[ "$CP_VERSION" == latest ]]; then
+	# Find the version number of the latest release
+	download \
+		https://api.github.com/repos/ClassicPress/ClassicPress-release/releases/latest \
+		"$TMPDIR/cp-latest.json"
+	CP_VERSION="$(grep -Po '"tag_name":\s*"[^"]+"' "$TMPDIR/cp-latest.json" | cut -d'"' -f4)"
+elif ! [[ "$CP_VERSION" =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
+	echo "ClassicPress version number not supported: $CP_VERSION"
+	exit 1
+fi
 
-	if [ -d $WP_CORE_DIR ]; then
+CP_BUILD_ZIP_URL="https://github.com/ClassicPress/ClassicPress-release/archive/$CP_VERSION.zip"
+CP_DEV_ZIP_URL="https://github.com/ClassicPress/ClassicPress/archive/$CP_VERSION+dev.zip"
+CP_DEV_FILE_URL="https://raw.githubusercontent.com/ClassicPress/ClassicPress/$CP_VERSION+dev"
+
+CP_BUILD_ZIP_PATH="$TMPDIR/classicpress-release-$CP_VERSION.zip"
+CP_DEV_ZIP_PATH="$TMPDIR/classicpress-dev-$CP_VERSION.zip"
+CP_DEV_PATH="$TMPDIR/classicpress-dev-$CP_VERSION"
+
+install_cp() {
+	if [ -d $CP_CORE_DIR ]; then
 		return;
 	fi
 
-	mkdir -p $WP_CORE_DIR
+	mkdir -p $CP_CORE_DIR
 
-	if [[ $WP_VERSION == 'nightly' || $WP_VERSION == 'trunk' ]]; then
-		mkdir -p $TMPDIR/wordpress-nightly
-		download https://wordpress.org/nightly-builds/wordpress-latest.zip  $TMPDIR/wordpress-nightly/wordpress-nightly.zip
-		unzip -q $TMPDIR/wordpress-nightly/wordpress-nightly.zip -d $TMPDIR/wordpress-nightly/
-		mv $TMPDIR/wordpress-nightly/wordpress/* $WP_CORE_DIR
-	else
-		if [ $WP_VERSION == 'latest' ]; then
-			local ARCHIVE_NAME='latest'
-		elif [[ $WP_VERSION =~ [0-9]+\.[0-9]+ ]]; then
-			# https serves multiple offers, whereas http serves single.
-			download https://api.wordpress.org/core/version-check/1.7/ $TMPDIR/wp-latest.json
-			if [[ $WP_VERSION =~ [0-9]+\.[0-9]+\.[0] ]]; then
-				# version x.x.0 means the first release of the major version, so strip off the .0 and download version x.x
-				LATEST_VERSION=${WP_VERSION%??}
-			else
-				# otherwise, scan the releases and get the most up to date minor version of the major release
-				local VERSION_ESCAPED=`echo $WP_VERSION | sed 's/\./\\\\./g'`
-				LATEST_VERSION=$(grep -o '"version":"'$VERSION_ESCAPED'[^"]*' $TMPDIR/wp-latest.json | sed 's/"version":"//' | head -1)
-			fi
-			if [[ -z "$LATEST_VERSION" ]]; then
-				local ARCHIVE_NAME="wordpress-$WP_VERSION"
-			else
-				local ARCHIVE_NAME="wordpress-$LATEST_VERSION"
-			fi
-		else
-			local ARCHIVE_NAME="wordpress-$WP_VERSION"
-		fi
-		download https://wordpress.org/${ARCHIVE_NAME}.tar.gz  $TMPDIR/wordpress.tar.gz
-		tar --strip-components=1 -zxmf $TMPDIR/wordpress.tar.gz -C $WP_CORE_DIR
-	fi
+	download "$CP_BUILD_ZIP_URL" "$CP_BUILD_ZIP_PATH"
+	unzip -q "$CP_BUILD_ZIP_PATH" -d "$CP_CORE_DIR"
+	clean_github_download "$CP_CORE_DIR"
 
-	download https://raw.github.com/markoheijnen/wp-mysqli/master/db.php $WP_CORE_DIR/wp-content/db.php
+	download \
+		https://raw.github.com/markoheijnen/wp-mysqli/master/db.php \
+		"$CP_CORE_DIR/wp-content/db.php"
+
+	# Hello Dolly is still used in some tests.
+	download \
+		"$CP_DEV_FILE_URL/src/wp-content/plugins/hello.php" \
+		"$CP_CORE_DIR/wp-content/plugins/hello.php"
+}
+
+clean_github_download() {
+	# GitHub downloads extract with a single folder inside, named based on the
+	# version downloaded. Get rid of this.
+	dir="$1"
+	mv "$dir" "$dir-old"
+	mv "$dir-old/ClassicPress-"* "$dir"
+	rmdir "$dir-old"
 }
 
 install_test_suite() {
@@ -102,22 +90,26 @@ install_test_suite() {
 	fi
 
 	# set up testing suite if it doesn't yet exist
-	if [ ! -d $WP_TESTS_DIR ]; then
-		# set up testing suite
-		mkdir -p $WP_TESTS_DIR
-		svn co --quiet https://develop.svn.wordpress.org/${WP_TESTS_TAG}/tests/phpunit/includes/ $WP_TESTS_DIR/includes
-		svn co --quiet https://develop.svn.wordpress.org/${WP_TESTS_TAG}/tests/phpunit/data/ $WP_TESTS_DIR/data
+	if [ ! -d "$CP_TESTS_DIR" ]; then
+		mkdir -p "$CP_TESTS_DIR"
+		download "$CP_DEV_ZIP_URL" "$CP_DEV_ZIP_PATH"
+		unzip -q "$CP_DEV_ZIP_PATH" -d "$CP_DEV_PATH"
+		clean_github_download "$CP_DEV_PATH"
+		cp -ar \
+			"$CP_DEV_PATH/tests/phpunit/includes" \
+			"$CP_DEV_PATH/tests/phpunit/data" \
+			"$CP_TESTS_DIR/"
 	fi
 
 	if [ ! -f wp-tests-config.php ]; then
-		download https://develop.svn.wordpress.org/${WP_TESTS_TAG}/wp-tests-config-sample.php "$WP_TESTS_DIR"/wp-tests-config.php
-		# remove all forward slashes in the end
-		WP_CORE_DIR=$(echo $WP_CORE_DIR | sed "s:/\+$::")
-		sed $ioption "s:dirname( __FILE__ ) . '/src/':'$WP_CORE_DIR/':" "$WP_TESTS_DIR"/wp-tests-config.php
-		sed $ioption "s/youremptytestdbnamehere/$DB_NAME/" "$WP_TESTS_DIR"/wp-tests-config.php
-		sed $ioption "s/yourusernamehere/$DB_USER/" "$WP_TESTS_DIR"/wp-tests-config.php
-		sed $ioption "s/yourpasswordhere/$DB_PASS/" "$WP_TESTS_DIR"/wp-tests-config.php
-		sed $ioption "s|localhost|${DB_HOST}|" "$WP_TESTS_DIR"/wp-tests-config.php
+		download \
+			"$CP_DEV_FILE_URL/wp-tests-config-sample.php" \
+			"$CP_TESTS_DIR/wp-tests-config.php"
+		sed $ioption "s:dirname( __FILE__ ) . '/src/':'$CP_CORE_DIR/':" "$CP_TESTS_DIR"/wp-tests-config.php
+		sed $ioption "s/youremptytestdbnamehere/$DB_NAME/" "$CP_TESTS_DIR"/wp-tests-config.php
+		sed $ioption "s/yourusernamehere/$DB_USER/" "$CP_TESTS_DIR"/wp-tests-config.php
+		sed $ioption "s/yourpasswordhere/$DB_PASS/" "$CP_TESTS_DIR"/wp-tests-config.php
+		sed $ioption "s|localhost|${DB_HOST}|" "$CP_TESTS_DIR"/wp-tests-config.php
 	fi
 
 }
@@ -154,15 +146,15 @@ install_e2e_site() {
 
 		# Script Variables
 		CONFIG_DIR="./tests/e2e-tests/config/travis"
-		WP_CORE_DIR="$HOME/wordpress"
-		WC_PLUGIN_DIR="$WP_CORE_DIR/wp-content/plugins/classic-commerce"
+		CP_CORE_DIR="$HOME/classicpress"
+		CC_PLUGIN_DIR="$CP_CORE_DIR/wp-content/plugins/classic-commerce"
 		NGINX_DIR="$HOME/nginx"
 		PHP_FPM_BIN="$HOME/.phpenv/versions/$TRAVIS_PHP_VERSION/sbin/php-fpm"
 		PHP_FPM_CONF="$NGINX_DIR/php-fpm.conf"
-		WP_SITE_URL="http://localhost:8080"
+		CP_SITE_URL="http://localhost:8080"
 		BRANCH=$TRAVIS_BRANCH
 		REPO=$TRAVIS_REPO_SLUG
-		WP_DB_DATA="$HOME/build/$REPO/tests/e2e-tests/data/e2e-db.sql"
+		CP_DB_DATA="$HOME/build/$REPO/tests/e2e-tests/data/e2e-db.sql"
 		WORKING_DIR="$PWD"
 
 		if [ "$TRAVIS_PULL_REQUEST_BRANCH" != "" ]; then
@@ -175,7 +167,7 @@ install_e2e_site() {
 		export NODE_CONFIG_DIR="./tests/e2e-tests/config"
 
 		# Set up nginx to run the server
-		mkdir -p "$WP_CORE_DIR"
+		mkdir -p "$CP_CORE_DIR"
 		mkdir -p "$NGINX_DIR"
 		mkdir -p "$NGINX_DIR/sites-enabled"
 		mkdir -p "$NGINX_DIR/var"
@@ -193,32 +185,32 @@ install_e2e_site() {
 		# Start nginx.
 		nginx -c "$NGINX_DIR/nginx.conf"
 
-		# Set up WordPress using wp-cli
-		cd "$WP_CORE_DIR"
+		# Set up ClassicPress using wp-cli
+		cd "$CP_CORE_DIR"
 
 		curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-		php wp-cli.phar core download --version=$WP_VERSION
+		php wp-cli.phar core download "$CP_BUILD_ZIP_URL"
 		php wp-cli.phar core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_HOST --dbprefix=wp_ --extra-php <<PHP
 /* Change WP_MEMORY_LIMIT to increase the memory limit for public pages. */
 define('WP_MEMORY_LIMIT', '256M');
 define('SCRIPT_DEBUG', true);
 PHP
-		php wp-cli.phar core install --url="$WP_SITE_URL" --title="Example" --admin_user=admin --admin_password=password --admin_email=info@example.com --path=$WP_CORE_DIR --skip-email
-		php wp-cli.phar db import $WP_DB_DATA
-		php wp-cli.phar search-replace "http://local.wordpress.test" "$WP_SITE_URL"
+		php wp-cli.phar core install --url="$CP_SITE_URL" --title="Example" --admin_user=admin --admin_password=password --admin_email=info@example.com --path=$CP_CORE_DIR --skip-email
+		php wp-cli.phar db import $CP_DB_DATA
+		php wp-cli.phar search-replace "http://local.wordpress.test" "$CP_SITE_URL"
 		php wp-cli.phar theme install twentytwelve --activate
 
 		# Instead of installing WC from a GH zip, rather used the checked out branch?
 		# php wp-cli.phar plugin install https://github.com/$REPO/archive/$BRANCH.zip --activate
-		echo "CREATING Classic Commerce PLUGIN DIR AT $WC_PLUGIN_DIR"
-		mkdir $WC_PLUGIN_DIR
-		echo "COPYING CHECKED OUT BRANCH TO $WC_PLUGIN_DIR"
-		cp -R "$TRAVIS_BUILD_DIR" "$WP_CORE_DIR/wp-content/plugins/"
-		ls "$WP_CORE_DIR/wp-content/plugins/classic-commerce/"
+		echo "CREATING Classic Commerce PLUGIN DIR AT $CC_PLUGIN_DIR"
+		mkdir $CC_PLUGIN_DIR
+		echo "COPYING CHECKED OUT BRANCH TO $CC_PLUGIN_DIR"
+		cp -R "$TRAVIS_BUILD_DIR" "$CP_CORE_DIR/wp-content/plugins/"
+		ls "$CP_CORE_DIR/wp-content/plugins/classic-commerce/"
 
 		# Compile assets and installing dependencies
-		echo "COMPILING ASSETS IN $WC_PLUGIN_DIR"
-		cd $WC_PLUGIN_DIR
+		echo "COMPILING ASSETS IN $CC_PLUGIN_DIR"
+		cd $CC_PLUGIN_DIR
 		npm install
 		composer install
 		grunt e2e-build
@@ -234,7 +226,7 @@ PHP
 	fi
 }
 
-install_wp
+install_cp
 install_test_suite
 install_db
 install_e2e_site

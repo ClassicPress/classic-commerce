@@ -77,12 +77,49 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 	 */
 	public function test_get_system_status_info_environment() {
 		wp_set_current_user( $this->user );
-		$response    = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/system_status' ) );
-		$data        = $response->get_data();
+		$response = $this->server->dispatch(
+			new WP_REST_Request( 'GET', '/wc/v3/system_status' )
+		);
+		$data = $response->get_data();
+
 		$environment = (array) $data['environment'];
 
-		// Make sure all expected data is present
-		$this->assertEquals( 32, count( $environment ) );
+		// Make sure all expected data is present.
+		$this->assertEquals( [
+			'home_url',
+			'site_url',
+			'version',
+			'cc_version',
+			'log_directory',
+			'log_directory_writable',
+			'wp_version',
+			'wp_multisite',
+			'wp_memory_limit',
+			'wp_debug_mode',
+			'wp_cron',
+			'language',
+			'external_object_cache',
+			'server_info',
+			'php_version',
+			'php_post_max_size',
+			'php_max_execution_time',
+			'php_max_input_vars',
+			'curl_version',
+			'suhosin_installed',
+			'max_upload_size',
+			'mysql_version',
+			'mysql_version_string',
+			'default_timezone',
+			'fsockopen_or_curl_enabled',
+			'soapclient_enabled',
+			'domdocument_enabled',
+			'gzip_enabled',
+			'mbstring_enabled',
+			'remote_post_successful',
+			'remote_post_response',
+			'remote_get_successful',
+			'remote_get_response',
+		], array_keys( $environment ) );
 
 		// Test some responses to make sure they match up.
 		$this->assertEquals( get_option( 'home' ), $environment['home_url'] );
@@ -143,7 +180,7 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 		$theme    = (array) $data['theme'];
 
 		$this->assertEquals( 13, count( $theme ) );
-		$this->assertEquals( $active_theme->Name, $theme['name'] ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.NotSnakeCaseMemberVar
+		$this->assertEquals( $active_theme->name, $theme['name'] );
 	}
 
 	/**
@@ -402,7 +439,7 @@ class WC_Tests_REST_System_Status extends WC_REST_Unit_Test_Case {
 	 *
 	 * This function is called by WP_HTTP_TestCase::http_request_listner().
 	 *
-	 * @param array $request Request arguments.
+	 * @param array  $request Request arguments.
 	 * @param string $url URL of the request.
 	 *
 	 * @return array|false mocked response or false to let WP perform a regular request.
