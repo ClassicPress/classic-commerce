@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Main ClassicCommerce Class.
  *
- * @class ClassicCommerce
+ * @class WooCommerce
  */
 final class WooCommerce {
 
