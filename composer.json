@@ -11,22 +11,9 @@
   },
   "require-dev": {
     "phpunit/phpunit": "6.*",
-    "woocommerce/woocommerce-git-hooks": "*",
     "woocommerce/woocommerce-sniffs": "0.0.9"
   },
   "scripts": {
-    "pre-update-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::preHooks"
-    ],
-    "pre-install-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::preHooks"
-    ],
-    "post-install-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::postHooks"
-    ],
-    "post-update-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::postHooks"
-    ],
     "test": [
       "phpunit"
     ],
