@@ -1,4 +1,4 @@
-<!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
+# Classic Commerce [![Build status](https://img.shields.io/travis/ClassicPress-research/classic-commerce/develop.svg?style=flat)](https://travis-ci.org/ClassicPress-research/classic-commerce)
 
 Welcome to the Classic Commerce repository on GitHub. This is a fork of Woocommerce and is still in development. 
 
