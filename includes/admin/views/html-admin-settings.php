@@ -2,7 +2,7 @@
 /**
  * Admin View: Settings
  *
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

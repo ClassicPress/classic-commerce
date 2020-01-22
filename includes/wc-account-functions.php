@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Account Functions
+ * Classic Commerce Account Functions
  *
  * Functions for account specific things.
  *

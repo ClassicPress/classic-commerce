@@ -1,4 +1,4 @@
-Feature: Manage ClassicCommerce Products
+Feature: Manage Classic Commerce Products
 
 Background:
 

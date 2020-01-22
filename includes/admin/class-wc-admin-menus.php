@@ -184,7 +184,7 @@ class WC_Admin_Menus {
 		global $submenu;
 
 		if ( isset( $submenu['woocommerce'] ) ) {
-			// Remove 'ClassicCommerce' sub menu item.
+			// Remove 'Classic Commerce' sub menu item.
 			unset( $submenu['woocommerce'][0] );
 
 			$order_count = wc_processing_order_count();

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce countries
+ * Classic Commerce countries
  *
  * @package ClassicCommerce\l10n
  * @version WC-3.3.0
@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * The ClassicCommerce countries class stores country/state data.
+ * The Classic Commerce countries class stores country/state data.
  */
 class WC_Countries {
 

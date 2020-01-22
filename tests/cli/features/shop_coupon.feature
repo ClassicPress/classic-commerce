@@ -1,4 +1,4 @@
-Feature: Manage ClassicCommerce Coupons
+Feature: Manage Classic Commerce Coupons
 
 Background:
 

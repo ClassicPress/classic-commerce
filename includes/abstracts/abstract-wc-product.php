@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce product base class.
+ * Classic Commerce product base class.
  *
  * @package ClassicCommerce/Abstracts
  */
@@ -18,7 +18,7 @@ require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-product.php';
 /**
  * Abstract Product Class
  *
- * The ClassicCommerce product class handles individual product data.
+ * The Classic Commerce product class handles individual product data.
  *
  * @version  WC-3.0.0
  * @package  ClassicCommerce/Abstracts

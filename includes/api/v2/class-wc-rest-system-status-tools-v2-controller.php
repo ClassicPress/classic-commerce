@@ -277,7 +277,7 @@ class WC_REST_System_Status_Tools_V2_Controller extends WC_REST_Controller {
 		$tool           = array_merge( $tool, $execute_return );
 
 		/**
-		 * Fires after a ClassicCommerce REST system status tool has been executed.
+		 * Fires after a Classic Commerce REST system status tool has been executed.
 		 *
 		 * @param array           $tool    Details about the tool that has been executed.
 		 * @param WP_REST_Request $request The current WP_REST_Request object.

@@ -2,7 +2,7 @@
 /**
  * Checkout functionality
  *
- * The ClassicCommerce checkout class handles the checkout process, collecting user data and processing the payment.
+ * The Classic Commerce checkout class handles the checkout process, collecting user data and processing the payment.
  *
  * @package ClassicCommerce/Classes
  * @version WC-3.4.0

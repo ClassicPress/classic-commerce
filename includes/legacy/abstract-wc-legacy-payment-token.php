@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @version  WC-3.0.0
  * @package  ClassicCommerce/Classes
  * @category Class
- * @author   ClassicCommerce
+ * @author   Classic Commerce
  */
 abstract class WC_Legacy_Payment_Token extends WC_Data {
 

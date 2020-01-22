@@ -15,7 +15,7 @@ if ( ! class_exists( 'WP_Importer' ) ) {
 }
 
 /**
- * Tax Rates importer - import tax rates and local tax rates into ClassicCommerce.
+ * Tax Rates importer - import tax rates and local tax rates into Classic Commerce.
  *
  * @package     ClassicCommerce/Admin/Importers
  * @version     WC-2.3.0

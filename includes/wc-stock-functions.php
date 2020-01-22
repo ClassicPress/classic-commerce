@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Stock Functions
+ * Classic Commerce Stock Functions
  *
  * Functions used to manage product stock levels.
  *

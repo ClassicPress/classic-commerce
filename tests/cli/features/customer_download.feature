@@ -1,4 +1,4 @@
-Feature: List ClassicCommerce customer downloads
+Feature: List Classic Commerce customer downloads
 
 Background:
 

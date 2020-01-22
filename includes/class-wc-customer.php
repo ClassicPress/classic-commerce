@@ -1,6 +1,6 @@
 <?php
 /**
- * The ClassicCommerce customer class handles storage of the current customer's data, such as location.
+ * The Classic Commerce customer class handles storage of the current customer's data, such as location.
  *
  * @package ClassicCommerce/Classes
  * @version WC-3.0.0

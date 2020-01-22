@@ -4,7 +4,7 @@
  * Deprecated API functions for scheduling actions
  *
  * Functions with the wc prefix were deprecated to avoid confusion with
- * Action Scheduler being included in ClassicCommerce core, and it providing
+ * Action Scheduler being included in Classic Commerce core, and it providing
  * a different set of APIs for working with the action queue.
  */
 

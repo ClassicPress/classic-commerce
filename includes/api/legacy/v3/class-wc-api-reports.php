@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Reports Class
+ * Classic Commerce API Reports Class
  *
  * Handles requests to the /reports endpoint
  *

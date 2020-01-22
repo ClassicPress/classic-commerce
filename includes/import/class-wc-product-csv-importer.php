@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Product CSV importer
+ * Classic Commerce Product CSV importer
  *
  * @package  ClassicCommerce/Import
  * @version  WC-3.1.0

@@ -15,7 +15,7 @@
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
-namespace ClassicCommerce\ClassicCommerce;
+namespace ClassicCommerce\Classic Commerce;
 
 // EDIT: URL where Update Manager is installed; with trailing slash!
 const UPDATE_SERVER = 'https://classiccommerce.cc/';

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce product embed
+ * Classic Commerce product embed
  *
  * @version  WC-2.4.11
  * @package  ClassicCommerce/Classes/Embed
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Embed Class which handles any ClassicCommerce Products that are embedded on this site or another site.
+ * Embed Class which handles any Classic Commerce Products that are embedded on this site or another site.
  */
 class WC_Embed {
 

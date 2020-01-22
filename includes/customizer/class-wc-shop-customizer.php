@@ -1,9 +1,9 @@
 <?php
 /**
- * Adds options to the customizer for ClassicCommerce.
+ * Adds options to the customizer for Classic Commerce.
  *
  * @version WC-3.3.0
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 
 defined( 'ABSPATH' ) || exit;

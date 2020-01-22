@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Core Functions
+ * Classic Commerce Core Functions
  *
  * General core functions available on both the front-end and admin.
  *
@@ -645,7 +645,7 @@ function get_woocommerce_currency_symbol( $currency = '' ) {
 }
 
 /**
- * Send HTML emails from ClassicCommerce.
+ * Send HTML emails from Classic Commerce.
  *
  * @param mixed  $to          Receiver.
  * @param mixed  $subject     Subject.
@@ -834,7 +834,7 @@ function wc_setcookie( $name, $value, $expire = 0, $secure = false ) {
 }
 
 /**
- * Get the URL to the ClassicCommerce REST API.
+ * Get the URL to the Classic Commerce REST API.
  *
  * @since  WC-2.1
  * @param  string $path an endpoint to include in the URL.
@@ -1339,7 +1339,7 @@ function wc_back_link( $label, $url ) {
 }
 
 /**
- * Display a ClassicCommerce help tip.
+ * Display a Classic Commerce help tip.
  *
  * @since  WC-2.5.0
  *
@@ -1858,7 +1858,7 @@ function wc_get_permalink_structure() {
 }
 
 /**
- * Switch ClassicCommerce to site language.
+ * Switch Classic Commerce to site language.
  *
  * @since WC-3.1.0
  */
@@ -1875,7 +1875,7 @@ function wc_switch_to_site_locale() {
 }
 
 /**
- * Switch ClassicCommerce language to original.
+ * Switch Classic Commerce language to original.
  *
  * @since WC-3.1.0
  */
@@ -1933,7 +1933,7 @@ function wc_get_var( &$var, $default = null ) {
 }
 
 /**
- * Read in ClassicCommerce headers when reading plugin headers.
+ * Read in Classic Commerce headers when reading plugin headers.
  *
  * @since  WC-3.2.0
  * @param  array $headers Headers.
@@ -1951,7 +1951,7 @@ function wc_enable_wc_plugin_headers( $headers ) {
 add_filter( 'extra_plugin_headers', 'wc_enable_wc_plugin_headers' );
 
 /**
- * Prevent auto-updating the ClassicCommerce plugin on major releases if there are untested extensions active.
+ * Prevent auto-updating the Classic Commerce plugin on major releases if there are untested extensions active.
  *
  * @since  WC-3.2.0
  * @param  bool   $should_update If should update.

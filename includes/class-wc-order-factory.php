@@ -2,7 +2,7 @@
 /**
  * Order Factory
  *
- * The ClassicCommerce order factory creating the right order objects.
+ * The Classic Commerce order factory creating the right order objects.
  *
  * @version WC-3.0.0
  * @package ClassicCommerce/Classes

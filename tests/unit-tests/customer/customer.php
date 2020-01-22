@@ -15,7 +15,7 @@ class WC_Tests_Customer extends WC_Unit_Test_Case {
 		$base_store_address = WC_Helper_Customer::get_expected_store_location();
 		$customer_address   = $customer->get_taxable_address(); // Default is geolocation!
 
-		// Get the original settings for the session and the ClassicCommerce options
+		// Get the original settings for the session and the Classic Commerce options
 		$original_chosen_shipping_methods = WC_Helper_Customer::get_chosen_shipping_methods();
 		$original_tax_based_on            = WC_Helper_Customer::get_tax_based_on();
 		$original_customer_details        = WC_Helper_Customer::get_customer_details();
@@ -58,7 +58,7 @@ class WC_Tests_Customer extends WC_Unit_Test_Case {
 	 */
 	public function test_is_customer_outside_base() {
 
-		// Get the original settings for the session and the ClassicCommerce options
+		// Get the original settings for the session and the Classic Commerce options
 		$original_chosen_shipping_methods = WC_Helper_Customer::get_chosen_shipping_methods();
 		$original_tax_based_on            = WC_Helper_Customer::get_tax_based_on();
 		$original_customer_details        = WC_Helper_Customer::get_customer_details();

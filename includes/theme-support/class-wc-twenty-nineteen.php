@@ -18,7 +18,7 @@ class WC_Twenty_Nineteen {
 	 */
 	public static function init() {
 
-		// Change ClassicCommerce wrappers.
+		// Change Classic Commerce wrappers.
 		remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 		remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 

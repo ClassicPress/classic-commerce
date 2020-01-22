@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Conditional Functions
+ * Classic Commerce Conditional Functions
  *
  * Functions for determining the current query/page.
  *
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Is_woocommerce - Returns true if on a page which uses ClassicCommerce templates (cart and checkout are standard pages with shortcodes and thus are not included).
+ * Is_woocommerce - Returns true if on a page which uses Classic Commerce templates (cart and checkout are standard pages with shortcodes and thus are not included).
  *
  * @return bool
  */

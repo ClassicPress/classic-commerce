@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API
+ * Classic Commerce API
  *
  * Handles parsing JSON request bodies and generating JSON responses
  *

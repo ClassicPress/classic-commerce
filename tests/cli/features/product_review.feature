@@ -1,4 +1,4 @@
-Feature: Manage ClassicCommerce Product Reviews
+Feature: Manage Classic Commerce Product Reviews
 
 Background:
 

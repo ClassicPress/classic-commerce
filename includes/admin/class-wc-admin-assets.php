@@ -148,7 +148,7 @@ if ( ! class_exists( 'WC_Admin_Assets', false ) ) :
 				)
 			);
 
-			// ClassicCommerce admin pages.
+			// Classic Commerce admin pages.
 			if ( in_array( $screen_id, wc_get_screen_ids() ) ) {
 				wp_enqueue_script( 'iris' );
 				wp_enqueue_script( 'woocommerce_admin' );

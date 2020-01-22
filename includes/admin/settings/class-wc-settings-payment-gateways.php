@@ -1,6 +1,6 @@
 <?php // @codingStandardsIgnoreLine.
 /**
- * ClassicCommerce Checkout Settings
+ * Classic Commerce Checkout Settings
  *
  * @package ClassicCommerce/Admin
  */

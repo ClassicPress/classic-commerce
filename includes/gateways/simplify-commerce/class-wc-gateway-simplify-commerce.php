@@ -719,7 +719,7 @@ class WC_Gateway_Simplify_Commerce extends WC_Payment_Gateway_CC {
 
 	/**
 	 * Process refunds.
-	 * ClassicCommerce 2.2 or later.
+	 * Classic Commerce 2.2 or later.
 	 *
 	 * @param  int    $order_id
 	 * @param  float  $amount

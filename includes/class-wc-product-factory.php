@@ -2,7 +2,7 @@
 /**
  * Product Factory
  *
- * The ClassicCommerce product factory creating the right product object.
+ * The Classic Commerce product factory creating the right product object.
  *
  * @package ClassicCommerce/Classes
  * @version WC-3.0.0

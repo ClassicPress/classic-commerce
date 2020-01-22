@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Admin Settings Class
+ * Classic Commerce Admin Settings Class
  *
  * @package  ClassicCommerce/Admin
  * @version  WC-3.4.0

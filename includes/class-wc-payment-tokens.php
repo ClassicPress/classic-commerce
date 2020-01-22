@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Payment Tokens
+ * Classic Commerce Payment Tokens
  *
  * An API for storing and managing tokens for gateways and customers.
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Keys Table List
+ * Classic Commerce API Keys Table List
  *
  * @package ClassicCommerce\Admin
  * @version WC-2.4.0

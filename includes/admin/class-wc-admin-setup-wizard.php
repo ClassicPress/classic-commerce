@@ -68,7 +68,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * The theme "extra" should only be shown if the current user can modify themes
-	 * and the store doesn't already have a ClassicCommerce theme.
+	 * and the store doesn't already have a Classic Commerce theme.
 	 *
 	 * @return boolean
 	 */

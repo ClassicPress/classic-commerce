@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Shipping Settings
+ * Classic Commerce Shipping Settings
  *
  * @package     ClassicCommerce/Admin
  * @version     WC-2.6.0

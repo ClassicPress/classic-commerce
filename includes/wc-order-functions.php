@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Order Functions
+ * Classic Commerce Order Functions
  *
  * Functions for order specific things.
  *
@@ -912,7 +912,7 @@ function wc_get_order_note( $data ) {
 			'date_created'  => wc_string_to_datetime( $data->comment_date ),
 			'content'       => $data->comment_content,
 			'customer_note' => (bool) get_comment_meta( $data->comment_ID, 'is_customer_note', true ),
-			'added_by'      => __( 'ClassicCommerce', 'classic-commerce' ) === $data->comment_author ? 'system' : $data->comment_author,
+			'added_by'      => __( 'Classic Commerce', 'classic-commerce' ) === $data->comment_author ? 'system' : $data->comment_author,
 		), $data
 	);
 }
@@ -968,7 +968,7 @@ function wc_get_order_notes( $args ) {
 
 	$args['orderby'] = ! empty( $args['orderby'] ) && in_array( $args['orderby'], array( 'date_created', 'date_created_gmt', 'id' ), true ) ? $orderby_mapping[ $args['orderby'] ] : 'comment_ID';
 
-	// Set ClassicCommerce order type.
+	// Set Classic Commerce order type.
 	if ( isset( $args['type'] ) && 'customer' === $args['type'] ) {
 		$args['meta_query'] = array( // WPCS: slow query ok.
 			array(

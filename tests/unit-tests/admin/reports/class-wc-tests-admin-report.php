@@ -11,7 +11,7 @@
 class WC_Tests_Admin_Report extends WC_Unit_Test_Case {
 
 	/**
-	 * Load the necessary files, as they're not automatically loaded by ClassicCommerce.
+	 * Load the necessary files, as they're not automatically loaded by Classic Commerce.
 	 *
 	 */
 	public static function setUpBeforeClass() {

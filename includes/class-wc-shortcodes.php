@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * ClassicCommerce Shortcodes class.
+ * Classic Commerce Shortcodes class.
  */
 class WC_Shortcodes {
 

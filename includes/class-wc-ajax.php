@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce WC_AJAX. AJAX Event Handlers.
+ * Classic Commerce WC_AJAX. AJAX Event Handlers.
  *
  * @class    WC_AJAX
  * @package  ClassicCommerce/Classes

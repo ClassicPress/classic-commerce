@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Webhook functions
+ * Classic Commerce Webhook functions
  *
  * @package ClassicCommerce/Functions
  * @version WC-3.3.0

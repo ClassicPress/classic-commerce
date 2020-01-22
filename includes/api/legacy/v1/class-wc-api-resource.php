@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Resource class
+ * Classic Commerce API Resource class
  *
  * Provides shared functionality for resource-specific API classes
  *

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Mock Session Handler
+ * Classic Commerce Mock Session Handler
  *
  * @since WC-2.2
  */

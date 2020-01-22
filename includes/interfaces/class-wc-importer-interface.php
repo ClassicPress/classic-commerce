@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Importer Interface
+ * Classic Commerce Importer Interface
  *
  * @package  ClassicCommerce/Interface
  * @version  WC-3.1.0

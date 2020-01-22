@@ -2,7 +2,7 @@
 /**
  * Admin View: Page - Status Report.
  *
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 
 defined( 'ABSPATH' ) || exit;

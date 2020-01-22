@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Message Functions
+ * Classic Commerce Message Functions
  *
  * Functions for error/message handling and display.
  *

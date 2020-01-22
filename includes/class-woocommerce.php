@@ -1,22 +1,22 @@
 <?php
 /**
- * ClassicCommerce setup
+ * Classic Commerce setup
  *
- * @package ClassicCommerce
+ * @package Classic Commerce
  * @since   WC-3.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Main ClassicCommerce Class.
+ * Main Classic Commerce Class.
  *
  * @class WooCommerce
  */
 final class WooCommerce {
 
 	/**
-	 * ClassicCommerce version.
+	 * Classic Commerce version.
 	 *
 	 * @var string
 	 */
@@ -26,7 +26,7 @@ final class WooCommerce {
 	/**
 	 * The single instance of the class.
 	 *
-	 * @var   ClassicCommerce
+	 * @var   Classic Commerce
 	 * @since WC-2.1
 	 */
 	protected static $_instance = null;
@@ -102,14 +102,14 @@ final class WooCommerce {
 	public $deprecated_hook_handlers = array();
 
 	/**
-	 * Main ClassicCommerce Instance.
+	 * Main Classic Commerce Instance.
 	 *
-	 * Ensures only one instance of ClassicCommerce is loaded or can be loaded.
+	 * Ensures only one instance of Classic Commerce is loaded or can be loaded.
 	 *
 	 * @since WC-2.1
 	 * @static
 	 * @see WC()
-	 * @return ClassicCommerce - Main instance.
+	 * @return Classic Commerce - Main instance.
 	 */
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
@@ -149,7 +149,7 @@ final class WooCommerce {
 	}
 
 	/**
-	 * ClassicCommerce Constructor.
+	 * Classic Commerce Constructor.
 	 */
 	public function __construct() {
 		$this->define_constants();
@@ -454,14 +454,14 @@ final class WooCommerce {
 	}
 
 	/**
-	 * Function used to Init ClassicCommerce Template Functions - This makes them pluggable by plugins and themes.
+	 * Function used to Init Classic Commerce Template Functions - This makes them pluggable by plugins and themes.
 	 */
 	public function include_template_functions() {
 		include_once WC_ABSPATH . 'includes/wc-template-functions.php';
 	}
 
 	/**
-	 * Init ClassicCommerce when WordPress Initialises.
+	 * Init Classic Commerce when WordPress Initialises.
 	 */
 	public function init() {
 		// Before init action.
@@ -646,7 +646,7 @@ final class WooCommerce {
 	}
 
 	/**
-	 * ClassicCommerce Payment Token Meta API and Term/Order item Meta - set table names.
+	 * Classic Commerce Payment Token Meta API and Term/Order item Meta - set table names.
 	 */
 	public function wpdb_table_fix() {
 		global $wpdb;

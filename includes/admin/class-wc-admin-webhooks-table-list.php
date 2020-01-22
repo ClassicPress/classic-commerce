@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Webhooks Table List
+ * Classic Commerce Webhooks Table List
  *
  * @package ClassicCommerce\Admin
  * @version WC-3.3.0

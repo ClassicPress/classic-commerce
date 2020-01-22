@@ -3,7 +3,7 @@
  * REST Controller
  *
  * This class extend `WP_REST_Controller` in order to include /batch endpoint
- * for almost all endpoints in ClassicCommerce REST API.
+ * for almost all endpoints in Classic Commerce REST API.
  *
  * It's required to follow "Controller Classes" guide before extending this class:
  * <https://developer.wordpress.org/rest-api/extending-the-rest-api/controller-classes/>

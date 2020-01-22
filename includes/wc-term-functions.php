@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Terms
+ * Classic Commerce Terms
  *
  * Functions for handling terms/term meta.
  *
@@ -168,7 +168,7 @@ function _wc_get_product_terms_parent_usort_callback( $a, $b ) {
 }
 
 /**
- * ClassicCommerce Dropdown categories.
+ * Classic Commerce Dropdown categories.
  *
  * @param array $args Args to control display of dropdown.
  */
@@ -279,7 +279,7 @@ function wc_taxonomy_metadata_migrate_data( $wp_db_version, $wp_current_db_versi
 add_action( 'wp_upgrade', 'wc_taxonomy_metadata_migrate_data', 10, 2 );
 
 /**
- * ClassicCommerce Term Meta API.
+ * Classic Commerce Term Meta API.
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -295,7 +295,7 @@ function update_woocommerce_term_meta( $term_id, $meta_key, $meta_value, $prev_v
 }
 
 /**
- * ClassicCommerce Term Meta API.
+ * Classic Commerce Term Meta API.
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -311,7 +311,7 @@ function add_woocommerce_term_meta( $term_id, $meta_key, $meta_value, $unique = 
 }
 
 /**
- * ClassicCommerce Term Meta API
+ * Classic Commerce Term Meta API
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.
@@ -327,7 +327,7 @@ function delete_woocommerce_term_meta( $term_id, $meta_key, $meta_value = '', $d
 }
 
 /**
- * ClassicCommerce Term Meta API
+ * Classic Commerce Term Meta API
  *
  * WC tables for storing term meta are @deprecated from WordPress 4.4 since 4.4 has its own table.
  * This function serves as a wrapper, using the new table if present, or falling back to the WC table.

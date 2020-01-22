@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API
+ * Classic Commerce API
  *
  * Handles REST API requests
  *

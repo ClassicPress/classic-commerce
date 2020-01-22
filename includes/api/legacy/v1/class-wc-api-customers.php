@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Customers Class
+ * Classic Commerce API Customers Class
  *
  * Handles requests to the /customers endpoint
  *

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ClassicCommerce eCheck Payment Token.
+ * Classic Commerce eCheck Payment Token.
  *
  * Representation of a payment token for eChecks.
  *

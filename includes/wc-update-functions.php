@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Updates
+ * Classic Commerce Updates
  *
  * Functions for updating data, used by the background updater.
  *

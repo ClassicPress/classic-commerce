@@ -50,7 +50,7 @@ class WC_Admin_Status {
 				$tool = array_merge( $tool, $response );
 
 				/**
-				 * Fires after a ClassicCommerce system status tool has been executed.
+				 * Fires after a Classic Commerce system status tool has been executed.
 				 *
 				 * @param array  $tool  Details about the tool that has been executed.
 				 */

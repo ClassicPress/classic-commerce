@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Allows updates via CLI.
  *
  * @version WC-3.0.0
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 class WC_CLI_Update_Command {
 
@@ -25,7 +25,7 @@ class WC_CLI_Update_Command {
 	}
 
 	/**
-	 * Runs all pending ClassicCommerce database updates.
+	 * Runs all pending Classic Commerce database updates.
 	 */
 	public static function update() {
 		global $wpdb;

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Exception Class
+ * Classic Commerce API Exception Class
  *
  * Extends Exception to provide additional data
  *

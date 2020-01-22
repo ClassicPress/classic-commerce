@@ -5,7 +5,7 @@
  * Used for our image cropping settings.
  *
  * @version WC-3.3.0
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

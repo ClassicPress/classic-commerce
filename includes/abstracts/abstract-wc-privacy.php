@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce abstract privacy class.
+ * Classic Commerce abstract privacy class.
  *
  * @since WC-3.4.0
  * @package ClassicCommerce/Abstracts
@@ -72,7 +72,7 @@ abstract class WC_Abstract_Privacy {
 	 */
 	protected function init() {
 		add_action( 'admin_init', array( $this, 'add_privacy_message' ) );
-		// We set priority to 5 to help ClassicCommerce's findings appear before those from extensions in exported items.
+		// We set priority to 5 to help Classic Commerce's findings appear before those from extensions in exported items.
 		add_filter( 'wp_privacy_personal_data_exporters', array( $this, 'register_exporters' ), $this->export_priority );
 		add_filter( 'wp_privacy_personal_data_erasers', array( $this, 'register_erasers' ), $this->erase_priority );
 	}

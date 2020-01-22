@@ -71,7 +71,7 @@ class WC_REST_Products_Controller extends WC_REST_Products_V2_Controller {
 	}
 
 	/**
-	 * Make extra product orderby features supported by ClassicCommerce available to the WC API.
+	 * Make extra product orderby features supported by Classic Commerce available to the WC API.
 	 * This includes 'price', 'popularity', and 'rating'.
 	 *
 	 * @param WP_REST_Request $request Request data.

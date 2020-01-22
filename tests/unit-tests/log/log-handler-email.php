@@ -34,7 +34,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log messages:'
+				'You have received the following Classic Commerce log messages:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY msg_emergency'
@@ -50,7 +50,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 			$mailer->get_sent( 0 )->body
 		);
 		$this->assertEquals(
-			"[{$site_name}] EMERGENCY: 2 ClassicCommerce log messages",
+			"[{$site_name}] EMERGENCY: 2 Classic Commerce log messages",
 			$mailer->get_sent( 0 )->subject
 		);
 		$this->assertEquals( get_option( 'admin_email' ), $mailer->get_recipient( 'to' )->address );
@@ -59,7 +59,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->send_log_email();
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY msg_emergency'
@@ -96,12 +96,12 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->send_log_email();
 
 		$this->assertEquals(
-			"[{$site_name}] DEBUG: 1 ClassicCommerce log message",
+			"[{$site_name}] DEBUG: 1 Classic Commerce log message",
 			$mailer->get_sent( 0 )->subject
 		);
 
 		$this->assertEquals(
-			"[{$site_name}] ALERT: 3 ClassicCommerce log messages",
+			"[{$site_name}] ALERT: 3 Classic Commerce log messages",
 			$mailer->get_sent( 1 )->subject
 		);
 	}
@@ -210,7 +210,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY message 1'
@@ -226,7 +226,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY message 2'

@@ -1,8 +1,8 @@
 <?php
 /**
- * ClassicCommerce coupons.
+ * Classic Commerce coupons.
  *
- * The ClassicCommerce coupons class gets coupon data from storage and checks coupon validity.
+ * The Classic Commerce coupons class gets coupon data from storage and checks coupon validity.
  *
  * @package ClassicCommerce/Classes
  * @version WC-3.0.0

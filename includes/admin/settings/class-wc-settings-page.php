@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Settings Page/Tab
+ * Classic Commerce Settings Page/Tab
  *
  * @author      WooThemes
  * @category    Admin

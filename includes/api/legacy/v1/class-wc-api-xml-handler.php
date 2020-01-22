@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API
+ * Classic Commerce API
  *
  * Handles parsing XML request bodies and generating XML responses
  *

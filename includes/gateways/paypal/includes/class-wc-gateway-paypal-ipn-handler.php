@@ -163,7 +163,7 @@ class WC_Gateway_Paypal_IPN_Handler extends WC_Gateway_Paypal_Response {
 
 	/**
 	 * Check receiver email from PayPal. If the receiver email in the IPN is different than what is stored in.
-	 * ClassicCommerce -> Settings -> Checkout -> PayPal, it will log an error about it.
+	 * Classic Commerce -> Settings -> Checkout -> PayPal, it will log an error about it.
 	 *
 	 * @param WC_Order $order          Order object.
 	 * @param string   $receiver_email Email to validate.

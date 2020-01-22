@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Payment Gateways
+ * Classic Commerce Payment Gateways
  *
  * Loads payment gateways via hooks for use in the store.
  *

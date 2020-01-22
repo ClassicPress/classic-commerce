@@ -6,7 +6,7 @@
  * SQL updates if nothing changed.
  *
  * @version WC-3.2.0
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 
 defined( 'ABSPATH' ) || exit;
