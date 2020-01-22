@@ -1,4 +1,4 @@
-<?php
+<?php // phpcs:disable Squiz.Commenting.FileComment.Missing
 /**
  * Classic Commerce Unit Tests Bootstrap
  *
@@ -25,10 +25,10 @@ class WC_Unit_Tests_Bootstrap {
 	 */
 	public function __construct() {
 
-		// phpcs:disable WordPress.PHP.DiscouragedPHPFunctions, WordPress.PHP.DevelopmentFunctions
+		// phpcs:disable WordPress.PHP.IniSet.display_errors_Blacklisted
 		ini_set( 'display_errors', 'on' );
 		error_reporting( E_ALL );
-		// phpcs:enable WordPress.PHP.DiscouragedPHPFunctions, WordPress.PHP.DevelopmentFunctions
+		// phpcs:enable WordPress.PHP.IniSet.display_errors_Blacklisted
 
 		// Ensure server variable is set for WP email functions.
 		// phpcs:disable WordPress.VIP.SuperGlobalInputUsage.AccessDetected
@@ -41,19 +41,19 @@ class WC_Unit_Tests_Bootstrap {
 		$this->plugin_dir   = dirname( $this->tests_dir );
 		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : '/tmp/wordpress-tests-lib';
 
-		// load test function so tests_add_filter() is available
+		// Load test function so tests_add_filter() is available.
 		require_once $this->wp_tests_dir . '/includes/functions.php';
 
-		// load CC
+		// Load CC.
 		tests_add_filter( 'muplugins_loaded', array( $this, 'load_wc' ) );
 
-		// install CC
+		// Install CC.
 		tests_add_filter( 'setup_theme', array( $this, 'install_wc' ) );
 
-		// load the WP testing environment
+		// Load the WP testing environment.
 		require_once $this->wp_tests_dir . '/includes/bootstrap.php';
 
-		// load CC testing framework
+		// Load CC testing framework.
 		$this->includes();
 	}
 
@@ -82,7 +82,8 @@ class WC_Unit_Tests_Bootstrap {
 
 		WC_Install::install();
 
-		// Reload capabilities after install, see https://core.trac.wordpress.org/ticket/28374
+		// Reload capabilities after install.
+		// @see https://core.trac.wordpress.org/ticket/28374 .
 		if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
 			$GLOBALS['wp_roles']->reinit();
 		} else {
@@ -100,7 +101,7 @@ class WC_Unit_Tests_Bootstrap {
 	 */
 	public function includes() {
 
-		// framework
+		// Framework.
 		require_once $this->tests_dir . '/framework/class-wc-unit-test-factory.php';
 		require_once $this->tests_dir . '/framework/class-wc-mock-session-handler.php';
 		require_once $this->tests_dir . '/framework/class-wc-mock-wc-data.php';
@@ -109,13 +110,13 @@ class WC_Unit_Tests_Bootstrap {
 		require_once $this->tests_dir . '/framework/class-wc-payment-token-stub.php';
 		require_once $this->tests_dir . '/framework/vendor/class-wp-test-spy-rest-server.php';
 
-		// test cases
+		// Test cases.
 		require_once $this->tests_dir . '/includes/wp-http-testcase.php';
 		require_once $this->tests_dir . '/framework/class-wc-unit-test-case.php';
 		require_once $this->tests_dir . '/framework/class-wc-api-unit-test-case.php';
 		require_once $this->tests_dir . '/framework/class-wc-rest-unit-test-case.php';
 
-		// Helpers
+		// Helpers.
 		require_once $this->tests_dir . '/framework/helpers/class-wc-helper-product.php';
 		require_once $this->tests_dir . '/framework/helpers/class-wc-helper-coupon.php';
 		require_once $this->tests_dir . '/framework/helpers/class-wc-helper-fee.php';

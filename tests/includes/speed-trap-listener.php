@@ -1,5 +1,4 @@
-<?php
-
+<?php // phpcs:disable Squiz.Commenting.FileComment.Missing
 /**
  * A PHPUnit TestListener that exposes your slowest running tests by outputting
  * results directly to the console.
