@@ -82,7 +82,7 @@ Classic Commerce uses `phpcs` and the WooCommerce coding style rules, with a few
 Code style is automatically checked for each pull request, in all files that were modified in that pull request.  If you'd like to check the code style locally for the files you've modified, you can change to the plugin root directory and run the `tests/bin/local-phpcs.sh` script:
 
 ```
-./vendor/bin/tests/bin/local-phpcs.sh
+./tests/bin/local-phpcs.sh
 ```
 
 Correct code style is **encouraged** but not currently required, due to the high number of pre-existing violations that appear whenever a file is modified.
