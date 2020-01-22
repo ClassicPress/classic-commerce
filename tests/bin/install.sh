@@ -35,9 +35,14 @@ set -ex
 if [[ "$CP_VERSION" == latest ]]; then
 	# Find the version number of the latest release
 	download \
-		https://api.github.com/repos/ClassicPress/ClassicPress-release/releases/latest \
+		https://www.classicpress.net/latest.json \
 		"$TMPDIR/cp-latest.json"
-	CP_VERSION="$(grep -Po '"tag_name":\s*"[^"]+"' "$TMPDIR/cp-latest.json" | cut -d'"' -f4)"
+	CP_VERSION="$(grep -Po '"version":\s*"[^"]+"' "$TMPDIR/cp-latest.json" | cut -d'"' -f4)"
+	if [ -z "$CP_VERSION" ]; then
+		echo "ClassicPress version not detected correctly!"
+		cat "$TMPDIR/cp-latest.json"
+		exit 1
+	fi
 elif ! [[ "$CP_VERSION" =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
 	echo "ClassicPress version number not supported: $CP_VERSION"
 	exit 1
