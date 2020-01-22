@@ -30,7 +30,7 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	 * @since WC-2.2
 	 */
 	public function test_wc_instance() {
-		$this->assertClassHasStaticAttribute( '_instance', 'classic-commerce' );
+		$this->assertClassHasStaticAttribute( '_instance', 'WooCommerce' );
 	}
 
 	/**
