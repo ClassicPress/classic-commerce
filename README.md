@@ -1,10 +1,10 @@
 <!---<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>-->
 
-Welcome to the Classic Commerce repository on GitHub. This is a fork of Woocommerce and is still in development. 
+Welcome to the Classic Commerce repository on GitHub. This is a fork of WooCommerce and is still in development.
 
 Classic Commerce is a simple, powerful and independent e-commerce platform. Sell anything with ease.
 
-You can browse the source, look at open issues and keep track of development here. 
+You can browse the source, look at open issues and keep track of development here.
 
 We recommend all developers follow the [Issues](https://github.com/ClassicPress-research/classic-commerce/issues) and [Pull Requests](https://github.com/ClassicPress-research/classic-commerce/pulls) for the latest development updates.
 
@@ -28,7 +28,7 @@ Classic Commerce is a fork of WooCommerce 3.5.3.
 All of the extensions compatible with WooCommerce 3.5.3 should still be usable, provided they do not rely on Jetpack or WooCommerce Services. However, we strongly recommend that you test and monitor any extensions or plugins that you may need to provide extra functionality.
 
 **How do I switch over from using WooCommerce to using Classic Commerce? Is it safe to uninstall WooCommerce?**
-To try out Classic Commerce you can manually install it as a plugin. Make sure you deactivate WooCommerce before activating Classic Commerce. If you want to uninstall WooCommerce completely you can do so safely, but we recommend you take a full backup of your site first. Note that deactivating and deleting WooCommerce *normally* only removes the plugin and its files; the settings, orders, products, pages, etc are retained in the database. However, there is a possibility that a setting in your site’s wp-config file may over-ride this, so it is worth checking to make sure the following condition has not been included anywhere in that file: `define( 'WC_REMOVE_ALL_DATA', true);` 
+To try out Classic Commerce you can manually install it as a plugin. Make sure you deactivate WooCommerce before activating Classic Commerce. If you want to uninstall WooCommerce completely you can do so safely, but we recommend you take a full backup of your site first. Note that deactivating and deleting WooCommerce *normally* only removes the plugin and its files; the settings, orders, products, pages, etc are retained in the database. However, there is a possibility that a setting in your site’s wp-config file may over-ride this, so it is worth checking to make sure the following condition has not been included anywhere in that file: `define( 'WC_REMOVE_ALL_DATA', true);`
 
 ## Documentation
 * [WooCommerce Documentation](https://docs.woocommerce.com/documentation/plugins/woocommerce/)
