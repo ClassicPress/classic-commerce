@@ -53,6 +53,16 @@ A text code coverage summary can be displayed using the `--coverage-text` option
 
 Tests are automatically run with [Travis-CI](https://travis-ci.org/woocommerce/woocommerce) for each commit and pull request.
 
+## Code Style
+
+Classic Commerce uses `phpcs` and the WooCommerce coding style rules, with a few small modifications.
+
+Code style is automatically checked for each pull request, in all files that were modified in that pull request.  If you'd like to check the code style locally for the files you've modified, you can change to the plugin root directory and run the `tests/bin/local-phpcs.sh` script:
+
+```
+tests/bin/local-phpcs.sh
+```
+
 ## Code Coverage
 
 Code coverage is available on [Scrutinizer](https://scrutinizer-ci.com/g/woocommerce/woocommerce/) and [Code Climate](https://codeclimate.com/github/woocommerce/woocommerce) which receives updated data after each Travis build.
