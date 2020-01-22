@@ -24,7 +24,7 @@ php:
   - 7.3
 
 env:
-  - WP_VERSION=4.9.13 WP_MULTISITE=0
+  - CP_VERSION=1.1.2 WP_MULTISITE=0
 
 # Additional tests against stable PHP (min version is 5.6)
 # and code coverage report.
@@ -33,10 +33,10 @@ matrix:
   include:
   - name: "Coding standard check"
     php: 7.2
-    env: WP_VERSION=4.9.13 WP_MULTISITE=0 RUN_PHPCS=1
+    env: CP_VERSION=1.1.2 WP_MULTISITE=0 RUN_PHPCS=1
   - name: "e2e tests"
     php: 7.2
-    env: WP_VERSION=4.9.13 WP_MULTISITE=0 RUN_E2E=1
+    env: CP_VERSION=1.1.2 WP_MULTISITE=0 RUN_E2E=1
     addons:
       chrome: stable
       apt:
@@ -44,12 +44,12 @@ matrix:
           - nginx
   - name: "Unit tests code coverage"
     php: 7.3
-    env: WP_VERSION=4.9.13 WP_MULTISITE=0 RUN_CODE_COVERAGE=1
+    env: CP_VERSION=1.1.2 WP_MULTISITE=0 RUN_CODE_COVERAGE=1
   - php: 7.4snapshot
-    env: WP_VERSION=nightly WP_MULTISITE=0
+    env: CP_VERSION=1.1.2 WP_MULTISITE=0
   allow_failures:
   - php: 7.3
-    env: WP_VERSION=4.9.13 WP_MULTISITE=0 RUN_CODE_COVERAGE=1
+    env: CP_VERSION=1.1.2 WP_MULTISITE=0 RUN_CODE_COVERAGE=1
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
@@ -63,8 +63,8 @@ before_script:
   - composer install --no-dev
   - |
     # Install WP Test suite, install PHPUnit globally:
-    if [[ ! -z "$WP_VERSION" ]]; then
-      bash tests/bin/install.sh woocommerce_test root '' localhost $WP_VERSION
+    if [[ ! -z "$CP_VERSION" ]]; then
+      bash tests/bin/install.sh woocommerce_test root '' localhost $CP_VERSION
       composer global require "phpunit/phpunit=5.7.*|7.5.*"
     fi
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"

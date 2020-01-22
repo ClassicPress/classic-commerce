@@ -10,7 +10,7 @@ class WC_Unit_Tests_Bootstrap {
 	protected static $instance = null;
 
 	/** @var string directory where wordpress-tests-lib is installed */
-	public $wp_tests_dir;
+	public $cp_tests_dir;
 
 	/** @var string testing directory */
 	public $tests_dir;
@@ -39,10 +39,10 @@ class WC_Unit_Tests_Bootstrap {
 
 		$this->tests_dir    = dirname( __FILE__ );
 		$this->plugin_dir   = dirname( $this->tests_dir );
-		$this->wp_tests_dir = getenv( 'WP_TESTS_DIR' ) ? getenv( 'WP_TESTS_DIR' ) : '/tmp/wordpress-tests-lib';
+		$this->cp_tests_dir = getenv( 'CP_TESTS_DIR' ) ? getenv( 'CP_TESTS_DIR' ) : '/tmp/classicpress-tests-lib';
 
 		// Load test function so tests_add_filter() is available.
-		require_once $this->wp_tests_dir . '/includes/functions.php';
+		require_once $this->cp_tests_dir . '/includes/functions.php';
 
 		// Load CC.
 		tests_add_filter( 'muplugins_loaded', array( $this, 'load_wc' ) );
@@ -51,7 +51,7 @@ class WC_Unit_Tests_Bootstrap {
 		tests_add_filter( 'setup_theme', array( $this, 'install_wc' ) );
 
 		// Load the WP testing environment.
-		require_once $this->wp_tests_dir . '/includes/bootstrap.php';
+		require_once $this->cp_tests_dir . '/includes/bootstrap.php';
 
 		// Load CC testing framework.
 		$this->includes();
