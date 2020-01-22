@@ -95,8 +95,8 @@ class WC_Tests_Report_Sales_By_Date extends WC_Unit_Test_Case {
 			'There should be a single coupon applied.'
 		);
 		$this->assertEquals(
-			cc_normalize_decimal( $data->coupons[0]->discount_amount ),
-			cc_normalize_decimal( $data->total_coupon )
+			cc_tests_normalize_decimal( $data->coupons[0]->discount_amount ),
+			cc_tests_normalize_decimal( $data->total_coupon )
 		);
 
 		$this->assertCount( 1, $data->refund_lines, 'There was one refund granted.' );

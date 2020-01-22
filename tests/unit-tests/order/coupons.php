@@ -128,15 +128,15 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 
 		// Check it's expected.
 		$this->assertEquals( 'shop_order', $order->get_type() );
-		$this->assertEquals( '799', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '799', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Remove the virtual coupon. Total should be 999.
 		$order->remove_coupon( 'this-is-a-virtal-coupon' );
-		$this->assertEquals( '999', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '999', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Remove the other coupon. Total should be 1000.
 		$order->remove_coupon( 'test-coupon-1' );
-		$this->assertEquals( '1000', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '1000', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Reset.
 		$this->init_test();
@@ -146,13 +146,13 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 
 		// Check it's expected.
 		$this->assertEquals( 'shop_order', $order->get_type() );
-		$this->assertEquals( '799', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '799', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Do the above tests in reverse.
 		$order->remove_coupon( 'test-coupon-1' );
-		$this->assertEquals( '800', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '800', cc_tests_normalize_decimal( $order->get_total() ) );
 		$order->remove_coupon( 'this-is-a-virtal-coupon' );
-		$this->assertEquals( '1000', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '1000', cc_tests_normalize_decimal( $order->get_total() ) );
 	}
 
 	/**
@@ -166,7 +166,7 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 		$order_id = $this->objects['order']->get_id();
 		$order    = wc_get_order( $order_id );
 
-		$this->assertEquals( '799', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '799', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		/**
 		 * Discount should be based on subtotal unless coupons apply sequencially.
@@ -286,7 +286,7 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 		$order    = wc_get_order( $order_id );
 
 		$order->apply_coupon( 'test-coupon-2' );
-		$this->assertEquals( '599', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '599', cc_tests_normalize_decimal( $order->get_total() ) );
 	}
 
 	/**
@@ -302,15 +302,15 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 
 		// Check it's expected.
 		$this->assertEquals( 'shop_order', $order->get_type() );
-		$this->assertEquals( '799', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '799', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Remove the virtual coupon. Total should be 999.
 		$order->remove_coupon( 'this-is-a-virtal-coupon' );
-		$this->assertEquals( '999', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '999', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Remove the other coupon. Total should be 1000.
 		$order->remove_coupon( 'test-coupon-1' );
-		$this->assertEquals( '1000', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '1000', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Reset.
 		$this->init_test();
@@ -320,13 +320,13 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 
 		// Check it's expected.
 		$this->assertEquals( 'shop_order', $order->get_type() );
-		$this->assertEquals( '799', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '799', cc_tests_normalize_decimal( $order->get_total() ) );
 
 		// Do the above tests in reverse.
 		$order->remove_coupon( 'test-coupon-1' );
-		$this->assertEquals( '800', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '800', cc_tests_normalize_decimal( $order->get_total() ) );
 		$order->remove_coupon( 'this-is-a-virtal-coupon' );
-		$this->assertEquals( '1000', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '1000', cc_tests_normalize_decimal( $order->get_total() ) );
 	}
 
 	/**
@@ -341,6 +341,6 @@ class WC_Tests_Order_Coupons extends WC_Unit_Test_Case {
 		$order    = wc_get_order( $order_id );
 
 		$order->apply_coupon( 'test-coupon-2' );
-		$this->assertEquals( '599', cc_normalize_decimal( $order->get_total() ) );
+		$this->assertEquals( '599', cc_tests_normalize_decimal( $order->get_total() ) );
 	}
 }

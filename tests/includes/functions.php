@@ -17,6 +17,6 @@
  * @param string $decimal_str The number to normalize.
  * @return string
  */
-function cc_normalize_decimal( $decimal_str ) {
+function cc_tests_normalize_decimal( $decimal_str ) {
 	return preg_replace( '#\.0*$#', '', $decimal_str );
 }
