@@ -7,6 +7,7 @@
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	verbose="true"
+	syntaxCheck="true"
 	>
 	<testsuites>
 		<testsuite name="WooCommerce Test Suite">
@@ -44,6 +45,6 @@
 		</whitelist>
 	</filter>
 	<listeners>
-		<listener class="WC_SpeedTrapListener" file="tests/includes/speed-trap-listener.php" />
+		<listener class="SpeedTrapListener" file="tests/includes/speed-trap-listener.php" />
 	</listeners>
 </phpunit>
