@@ -48,8 +48,7 @@ matrix:
   - php: 7.4snapshot
     env: CP_VERSION=latest WP_MULTISITE=0
   allow_failures:
-  - php: 7.3
-    env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
+  - env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
