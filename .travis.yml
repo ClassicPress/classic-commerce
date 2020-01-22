@@ -48,6 +48,7 @@ matrix:
   - php: 7.4snapshot
     env: CP_VERSION=latest WP_MULTISITE=0
   allow_failures:
+  - env: CP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
   - php: 7.4snapshot
