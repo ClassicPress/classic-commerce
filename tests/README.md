@@ -2,39 +2,61 @@
 
 ## Initial Setup
 
-1) Install [PHPUnit](http://phpunit.de/) by following their [installation guide](https://phpunit.de/getting-started.html). If you've installed it correctly, this should display the version:
+1. Install [composer](https://getcomposer.org/) by following their [installation guide](https://getcomposer.org/download/). If you've installed it correctly, this should display the version:
 
     ```
-    $ phpunit --version
+    composer --version
     ```
 
-2) Install WordPress and the WP Unit Test lib using the `install.sh` script. Change to the plugin root directory and type:
+2. Change to the plugin root directory and run `composer install` to install PHPUnit and other required dependencies:
 
     ```
-    $ tests/bin/install.sh <db-name> <db-user> <db-password> [db-host]
+    composer install
     ```
 
-Sample usage:
+    If the dependencies have installed correctly, then this command should show you the PHPUnit version you have installed:
 
-    $ tests/bin/install.sh woocommerce_tests root root
+    ```
+    ./vendor/bin/phpunit --version
+    ```
 
-**Important**: The `<db-name>` database will be created if it doesn't exist and all data will be removed during testing.
+3. Create a new, empty MySQL database on your computer for the tests to use, with a database user who has access to it.
+
+4. Install WordPress and the WP Unit Test lib using the `install.sh` script. Change to the plugin root directory and type:
+
+    ```
+    tests/bin/install.sh <db-name> <db-user> <db-password> [db-host]
+    ```
+
+    Sample usage:
+
+    ```
+    tests/bin/install.sh woocommerce_tests root root
+    ```
+
+    **Important**: The `<db-name>` database will be created if it doesn't exist and **all data will be removed during testing**.
 
 ## Running Tests
 
 Simply change to the plugin root directory and type:
 
-    $ phpunit
+```
+./vendor/bin/phpunit
+```
 
 The tests will execute and you'll be presented with a summary. Code coverage documentation is automatically generated as HTML in the `tmp/coverage` directory.
 
 You can run specific tests by providing the path and filename to the test class:
 
-    $ phpunit tests/unit-tests/api/orders
+```
+./vendor/bin/phpunit tests/unit-tests/api/orders
+```
 
 A text code coverage summary can be displayed using the `--coverage-text` option:
 
-    $ phpunit --coverage-text
+```
+./vendor/bin/phpunit --coverage-text
+```
 
 ## Writing Tests
 
@@ -60,7 +82,7 @@ Classic Commerce uses `phpcs` and the WooCommerce coding style rules, with a few
 Code style is automatically checked for each pull request, in all files that were modified in that pull request.  If you'd like to check the code style locally for the files you've modified, you can change to the plugin root directory and run the `tests/bin/local-phpcs.sh` script:
 
 ```
-tests/bin/local-phpcs.sh
+./vendor/bin/tests/bin/local-phpcs.sh
 ```
 
 ## Code Coverage
