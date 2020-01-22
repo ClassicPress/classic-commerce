@@ -6,13 +6,12 @@
  * @since WC-3.0.0
  */
 class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
-
-	function setUp() {
+	public function setUp() {
 		parent::setUp();
 		reset_phpmailer_instance();
 	}
 
-	function tearDown() {
+	public function tearDown() {
 		reset_phpmailer_instance();
 		parent::tearDown();
 	}
@@ -32,9 +31,10 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->handle( $time, 'emergency', 'msg_emergency 2', array() );
 		$handler->send_log_email();
 
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log messages:'
+				'You have received the following Classic Commerce log messages:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY msg_emergency'
@@ -50,7 +50,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 			$mailer->get_sent( 0 )->body
 		);
 		$this->assertEquals(
-			"[{$site_name}] EMERGENCY: 2 ClassicCommerce log messages",
+			"[{$site_name}] EMERGENCY: 2 Classic Commerce log messages",
 			$mailer->get_sent( 0 )->subject
 		);
 		$this->assertEquals( get_option( 'admin_email' ), $mailer->get_recipient( 'to' )->address );
@@ -59,7 +59,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->send_log_email();
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY msg_emergency'
@@ -72,7 +72,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 			),
 			$mailer->get_sent( 1 )->body
 		);
-
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
 	}
 
 
@@ -96,12 +96,12 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->send_log_email();
 
 		$this->assertEquals(
-			"[{$site_name}] DEBUG: 1 ClassicCommerce log message",
+			"[{$site_name}] DEBUG: 1 Classic Commerce log message",
 			$mailer->get_sent( 0 )->subject
 		);
 
 		$this->assertEquals(
-			"[{$site_name}] ALERT: 3 ClassicCommerce log messages",
+			"[{$site_name}] ALERT: 3 Classic Commerce log messages",
 			$mailer->get_sent( 1 )->subject
 		);
 	}
@@ -158,7 +158,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->handle( time(), 'info', '', array() );
 		$handler->send_log_email();
 
-		// Info should not be handled, get_sent is false
+		// Info should not be handled, get_sent is false.
 		$this->assertFalse( $mailer->get_sent( 0 ) );
 
 		$handler->handle( time(), 'notice', '', array() );
@@ -178,7 +178,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 		$handler->handle( time(), 'info', '', array() );
 		$handler->send_log_email();
 
-		// Info should not be handled, get_sent is false
+		// Info should not be handled, get_sent is false.
 		$this->assertFalse( $mailer->get_sent( 0 ) );
 
 		$handler->set_threshold( 'info' );
@@ -208,9 +208,10 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 
 		$site_name = get_bloginfo( 'name' );
 
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY message 1'
@@ -226,7 +227,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 
 		$this->assertEquals(
 			(
-				'You have received the following ClassicCommerce log message:'
+				'You have received the following Classic Commerce log message:'
 				. PHP_EOL
 				. PHP_EOL
 				. date( 'c', $time ) . ' EMERGENCY message 2'
@@ -239,6 +240,7 @@ class WC_Tests_Log_Handler_Email extends WC_Unit_Test_Case {
 			),
 			$mailer->get_sent( 1 )->body
 		);
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
 	}
 
 

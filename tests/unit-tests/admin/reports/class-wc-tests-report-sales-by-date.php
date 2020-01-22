@@ -71,7 +71,9 @@ class WC_Tests_Report_Sales_By_Date extends WC_Unit_Test_Case {
 
 		// Parameters borrowed from WC_Admin_Dashboard::get_sales_report_data().
 		$report                 = new WC_Report_Sales_By_Date();
+		// phpcs:disable WordPress.DateTime.RestrictedFunctions.date_date
 		$report->start_date     = strtotime( date( 'Y-m-01', current_time( 'timestamp' ) ) );
+		// phpcs:enable WordPress.DateTime.RestrictedFunctions.date_date
 		$report->end_date       = current_time( 'timestamp' );
 		$report->chart_groupby  = 'day';
 		$report->group_by_query = 'YEAR(posts.post_date), MONTH(posts.post_date), DAY(posts.post_date)';
@@ -92,7 +94,10 @@ class WC_Tests_Report_Sales_By_Date extends WC_Unit_Test_Case {
 			$data->coupons[0]->order_item_name,
 			'There should be a single coupon applied.'
 		);
-		$this->assertEquals( $data->coupons[0]->discount_amount, $data->total_coupons );
+		$this->assertEquals(
+			cc_tests_normalize_decimal( $data->coupons[0]->discount_amount ),
+			cc_tests_normalize_decimal( $data->total_coupons )
+		);
 
 		$this->assertCount( 1, $data->refund_lines, 'There was one refund granted.' );
 		$this->assertEquals( 7, $data->partial_refunds[0]->total_refund, 'Total refunds.' );

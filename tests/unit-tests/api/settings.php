@@ -5,7 +5,6 @@
  * @package ClassicCommerce\Tests\API
  * @since 3.5.0
  */
-
 class Settings extends WC_REST_Unit_Test_Case {
 
 	/**
@@ -154,19 +153,19 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_get_group() {
 		wp_set_current_user( $this->user );
 
-		// test route callback receiving an empty group id
+		// Test route callback receiving an empty group id.
 		$result = $this->endpoint->get_group_settings( '' );
 		$this->assertIsWPError( $result );
 
-		// test getting a group that does not exist
+		// Test getting a group that does not exist.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/not-real' ) );
 		$this->assertEquals( 404, $response->get_status() );
 
-		// test getting the 'invalid' group
+		// Test getting the 'invalid' group.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/invalid' ) );
 		$this->assertEquals( 404, $response->get_status() );
 
-		// test getting a valid group with settings attached to it
+		// Test getting a valid group with settings attached to it.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/test' ) );
 		$data = $response->get_data();
 		$this->assertEquals( 1, count( $data ) );
@@ -194,12 +193,12 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_update_setting() {
 		wp_set_current_user( $this->user );
 
-		// test defaults first
+		// Test defaults first.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/test/woocommerce_shop_page_display' ) );
 		$data = $response->get_data();
 		$this->assertEquals( '', $data['value'] );
 
-		// test updating shop display setting
+		// Test updating shop display setting.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'test', 'woocommerce_shop_page_display' ) );
 		$request->set_body_params( array(
 			'value' => 'both',
@@ -239,12 +238,12 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_update_settings() {
 		wp_set_current_user( $this->user );
 
-		// test defaults first
+		// Test defaults first.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/test' ) );
 		$data = $response->get_data();
 		$this->assertEquals( '', $data[0]['value'] );
 
-		// test setting both at once
+		// Test setting both at once.
 		$request = new WP_REST_Request( 'POST', '/wc/v3/settings/test/batch' );
 		$request->set_body_params( array(
 			'update' => array(
@@ -260,7 +259,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$this->assertEquals( 'both', $data['update'][0]['value'] );
 		$this->assertEquals( 'both', get_option( 'woocommerce_shop_page_display' ) );
 
-		// test updating one, but making sure the other value stays the same
+		// Test updating one, but making sure the other value stays the same.
 		$request = new WP_REST_Request( 'POST', '/wc/v3/settings/test/batch' );
 		$request->set_body_params( array(
 			'update' => array(
@@ -284,17 +283,17 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_get_setting() {
 		wp_set_current_user( $this->user );
 
-		// test getting an invalid setting from a group that does not exist
+		// Test getting an invalid setting from a group that does not exist.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/not-real/woocommerce_shop_page_display' ) );
 		$data = $response->get_data();
 		$this->assertEquals( 404, $response->get_status() );
 
-		// test getting an invalid setting from a group that does exist
+		// Test getting an invalid setting from a group that does exist.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/invalid/invalid' ) );
 		$data = $response->get_data();
 		$this->assertEquals( 404, $response->get_status() );
 
-		// test getting a valid setting
+		// Test getting a valid setting.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/test/woocommerce_shop_page_display' ) );
 		$data = $response->get_data();
 
@@ -347,7 +346,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 	 * @since 3.5.0
 	 */
 	public function test_get_setting_invalid_setting_type() {
-		// $controller = $this->getMock( 'WC_Rest_Setting_Options_Controller', array( 'get_group_settings', 'is_setting_type_valid' ) );
+		// $controller = $this->getMock( 'WC_Rest_Setting_Options_Controller', array( 'get_group_settings', 'is_setting_type_valid' ) );.
 		$controller = $this->getMockBuilder( 'WC_Rest_Setting_Options_Controller' )->setMethods( array( 'get_group_settings', 'is_setting_type_valid' ) )->getMock();
 
 		$controller
@@ -428,7 +427,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_classic_settings() {
 		wp_set_current_user( $this->user );
 
-		// Make sure the group is properly registered
+		// Make sure the group is properly registered.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/products' ) );
 		$data = $response->get_data();
 		$this->assertTrue( is_array( $data ) );
@@ -454,13 +453,13 @@ class Settings extends WC_REST_Unit_Test_Case {
 			),
 		), $data );
 
-		// test get single
+		// Test get single.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/products/woocommerce_dimension_unit' ) );
 		$data = $response->get_data();
 
 		$this->assertEquals( 'cm', $data['default'] );
 
-		// test update
+		// Test update.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'products', 'woocommerce_dimension_unit' ) );
 		$request->set_body_params( array(
 			'value' => 'yd',
@@ -507,7 +506,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 			),
 		), $settings );
 
-		// test get single
+		// Test get single.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/email_new_order/subject' ) );
 		$setting  = $response->get_data();
 
@@ -522,7 +521,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 			'group_id'    => 'email_new_order',
 		), $setting );
 
-		// test update
+		// Test update.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'email_new_order', 'subject' ) );
 		$request->set_body_params( array(
 			'value' => 'This is my subject',
@@ -541,14 +540,14 @@ class Settings extends WC_REST_Unit_Test_Case {
 			'group_id'    => 'email_new_order',
 		), $setting );
 
-		// test updating another subject and making sure it works with a "similar" id
+		// Test updating another subject and making sure it works with a "similar" id.
 		$request = new WP_REST_Request( 'GET', sprintf( '/wc/v3/settings/%s/%s', 'email_customer_new_account', 'subject' ) );
 		$response = $this->server->dispatch( $request );
 		$setting  = $response->get_data();
 
 		$this->assertEmpty( $setting['value'] );
 
-		// test update
+		// Test update.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'email_customer_new_account', 'subject' ) );
 		$request->set_body_params( array(
 			'value' => 'This is my new subject',
@@ -558,7 +557,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 
 		$this->assertEquals( 'This is my new subject', $setting['value'] );
 
-		// make sure the other is what we left it
+		// Make sure the other is what we left it.
 		$response = $this->server->dispatch( new WP_REST_Request( 'GET', '/wc/v3/settings/email_new_order/subject' ) );
 		$setting  = $response->get_data();
 
@@ -573,7 +572,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_validation_checkbox() {
 		wp_set_current_user( $this->user );
 
-		// test bogus value
+		// Test bogus value.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'email_cancelled_order', 'enabled' ) );
 		$request->set_body_params( array(
 			'value' => 'not_yes_or_no',
@@ -581,7 +580,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$response = $this->server->dispatch( $request );
 		$this->assertEquals( 400, $response->get_status() );
 
-		// test yes
+		// Test yes.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'email_cancelled_order', 'enabled' ) );
 		$request->set_body_params( array(
 			'value' => 'yes',
@@ -589,7 +588,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$response = $this->server->dispatch( $request );
 		$this->assertEquals( 200, $response->get_status() );
 
-		// test no
+		// Test no.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'email_cancelled_order', 'enabled' ) );
 		$request->set_body_params( array(
 			'value' => 'no',
@@ -606,7 +605,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 	public function test_validation_radio() {
 		wp_set_current_user( $this->user );
 
-		// not a valid option
+		// Not a valid option.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'shipping', 'woocommerce_ship_to_destination' ) );
 		$request->set_body_params( array(
 			'value' => 'billing2',
@@ -614,7 +613,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$response = $this->server->dispatch( $request );
 		$this->assertEquals( 400, $response->get_status() );
 
-		// valid
+		// Valid.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'shipping', 'woocommerce_ship_to_destination' ) );
 		$request->set_body_params( array(
 			'value' => 'billing',
@@ -656,18 +655,18 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( 'kg', $setting['value'] );
 
-		// invalid
+		// Invalid.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'products', 'woocommerce_weight_unit' ) );
 		$request->set_body_params( array(
-			'value' => 'pounds', // invalid, should be lbs
+			'value' => 'pounds', // Invalid, should be lbs.
 		) );
 		$response = $this->server->dispatch( $request );
 		$this->assertEquals( 400, $response->get_status() );
 
-		// valid
+		// Valid.
 		$request = new WP_REST_Request( 'PUT', sprintf( '/wc/v3/settings/%s/%s', 'products', 'woocommerce_weight_unit' ) );
 		$request->set_body_params( array(
-			'value' => 'lbs', // invalid, should be lbs
+			'value' => 'lbs', // Invalid, should be lbs.
 		) );
 		$response = $this->server->dispatch( $request );
 		$setting  = $response->get_data();
@@ -702,9 +701,9 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( 'text', $setting['type'] );
 
-		// Repalce the old value with something uniquely new
+		// Repalce the old value with something uniquely new.
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -713,7 +712,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( $new_value, $setting['value'] );
 
-		// Put the original value back
+		// Put the original value back.
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address' );
 		$request->set_body_params( array(
 			'value' => $old_value,
@@ -734,9 +733,9 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( 'text', $setting['type'] );
 
-		// Repalce the old value with something uniquely new
+		// Repalce the old value with something uniquely new.
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address_2' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -745,7 +744,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( $new_value, $setting['value'] );
 
-		// Put the original value back
+		// Put the original value back.
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_address_2' );
 		$request->set_body_params( array(
 			'value' => $old_value,
@@ -766,9 +765,9 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( 'text', $setting['type'] );
 
-		// Repalce the old value with something uniquely new
+		// Repalce the old value with something uniquely new.
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_city' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -777,7 +776,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( $new_value, $setting['value'] );
 
-		// Put the original value back
+		// Put the original value back.
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_city' );
 		$request->set_body_params( array(
 			'value' => $old_value,
@@ -798,9 +797,9 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( 'text', $setting['type'] );
 
-		// Repalce the old value with something uniquely new
+		// Repalce the old value with something uniquely new.
 		$old_value = $setting['value'];
-		$new_value = $old_value . ' ' . rand( 1000, 9999 );
+		$new_value = ( $old_value ? $old_value : 'random' ) . ' ' . rand( 1000, 9999 );
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_postcode' );
 		$request->set_body_params( array(
 			'value' => $new_value,
@@ -809,7 +808,7 @@ class Settings extends WC_REST_Unit_Test_Case {
 		$setting  = $response->get_data();
 		$this->assertEquals( $new_value, $setting['value'] );
 
-		// Put the original value back
+		// Put the original value back.
 		$request = new WP_REST_Request( 'PUT', '/wc/v3/settings/general/woocommerce_store_postcode' );
 		$request->set_body_params( array(
 			'value' => $old_value,
