@@ -1,4 +1,4 @@
-<?php // phpcs:disable Squiz.Commenting.FileComment.Missing
+<?php
 /**
  * Classic Commerce Unit Tests Bootstrap
  *
