@@ -85,6 +85,8 @@ Code style is automatically checked for each pull request, in all files that wer
 ./vendor/bin/tests/bin/local-phpcs.sh
 ```
 
+Correct code style is **encouraged** but not currently required, due to the high number of pre-existing violations that appear whenever a file is modified.
+
 ## Code Coverage
 
 Code coverage is available on [Scrutinizer](https://scrutinizer-ci.com/g/woocommerce/woocommerce/) and [Code Climate](https://codeclimate.com/github/woocommerce/woocommerce) which receives updated data after each Travis build.
