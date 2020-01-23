@@ -108,7 +108,7 @@ class WC_Gateway_Paypal_API_Handler {
 				'method'      => 'POST',
 				'body'        => self::get_capture_request( $order, $amount ),
 				'timeout'     => 70,
-				'user-agent'  => 'ClassicCommerce/' . WC()->version,
+				'user-agent'  => 'WooCommerce/3.5.3 (compatible; ClassicCommerce/' . WC()->cc_version . ')',
 				'httpversion' => '1.1',
 			)
 		);
@@ -141,7 +141,7 @@ class WC_Gateway_Paypal_API_Handler {
 				'method'      => 'POST',
 				'body'        => self::get_refund_request( $order, $amount, $reason ),
 				'timeout'     => 70,
-				'user-agent'  => 'ClassicCommerce/' . WC()->version,
+				'user-agent'  => 'WooCommerce/3.5.3 (compatible; ClassicCommerce/' . WC()->cc_version . ')',
 				'httpversion' => '1.1',
 			)
 		);
