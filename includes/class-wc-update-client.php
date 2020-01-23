@@ -479,7 +479,7 @@ class UpdateClient {
 
 		// Assemble args to post back to the Update Manager plugin.
 		$options = [
-			'user-agent' => 'ClassicPress/'.$cp_version.'; '.get_bloginfo('url'),
+			'user-agent' => 'WooCommerce/3.5.3 (compatible; ClassicCommerce/'.$cp_version.'); '.get_bloginfo('url'),
 			'body'       => $body,
 			'timeout'    => 20,
 		];
