@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Formatting
+ * Classic Commerce Formatting
  *
  * Functions for formatting data.
  *
@@ -614,7 +614,7 @@ function wc_let_to_num( $size ) {
 }
 
 /**
- * ClassicCommerce Date Format - Allows to change date format for everything ClassicCommerce.
+ * Classic Commerce Date Format - Allows to change date format for everything Classic Commerce.
  *
  * @return string
  */
@@ -623,7 +623,7 @@ function wc_date_format() {
 }
 
 /**
- * ClassicCommerce Time Format - Allows to change time format for everything ClassicCommerce.
+ * Classic Commerce Time Format - Allows to change time format for everything Classic Commerce.
  *
  * @return string
  */
@@ -687,7 +687,7 @@ function wc_string_to_datetime( $time_string ) {
 }
 
 /**
- * ClassicCommerce Timezone - helper to retrieve the timezone string for a site until.
+ * Classic Commerce Timezone - helper to retrieve the timezone string for a site until.
  * a WP core method exists (see https://core.trac.wordpress.org/ticket/24730).
  *
  * Adapted from https://secure.php.net/manual/en/function.timezone-name-from-abbr.php#89155.

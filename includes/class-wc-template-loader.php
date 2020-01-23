@@ -27,7 +27,7 @@ class WC_Template_Loader {
 	private static $in_content_filter = false;
 
 	/**
-	 * Is ClassicCommerce support defined?
+	 * Is Classic Commerce support defined?
 	 *
 	 * @var boolean
 	 */
@@ -74,7 +74,7 @@ class WC_Template_Loader {
 
 		if ( $default_file ) {
 			/**
-			 * Filter hook to choose which files to find before ClassicCommerce does it's own logic.
+			 * Filter hook to choose which files to find before Classic Commerce does it's own logic.
 			 *
 			 * @since WC-3.0.0
 			 * @var   array
@@ -387,7 +387,7 @@ class WC_Template_Loader {
 	}
 
 	/**
-	 * Filter the title and insert ClassicCommerce content on the shop page.
+	 * Filter the title and insert Classic Commerce content on the shop page.
 	 *
 	 * For non-WC themes, this will setup the main shop page to be shortcode based to improve default appearance.
 	 *
@@ -418,7 +418,7 @@ class WC_Template_Loader {
 	}
 
 	/**
-	 * Filter the content and insert ClassicCommerce content on the shop page.
+	 * Filter the content and insert Classic Commerce content on the shop page.
 	 *
 	 * For non-WC themes, this will setup the main shop page to be shortcode based to improve default appearance.
 	 *
@@ -472,7 +472,7 @@ class WC_Template_Loader {
 	}
 
 	/**
-	 * Filter the content and insert ClassicCommerce content on the shop page.
+	 * Filter the content and insert Classic Commerce content on the shop page.
 	 *
 	 * For non-WC themes, this will setup the main shop page to be shortcode based to improve default appearance.
 	 *

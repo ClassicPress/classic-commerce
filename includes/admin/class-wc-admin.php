@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Admin
+ * Classic Commerce Admin
  *
  * @class    WC_Admin
  * @author   WooThemes

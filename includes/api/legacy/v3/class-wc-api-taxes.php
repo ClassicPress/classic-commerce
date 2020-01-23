@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Taxes Class
+ * Classic Commerce API Taxes Class
  *
  * Handles requests to the /taxes endpoint
  *

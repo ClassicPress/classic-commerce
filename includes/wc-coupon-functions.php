@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Coupons Functions
+ * Classic Commerce Coupons Functions
  *
  * Functions for coupon specific things.
  *

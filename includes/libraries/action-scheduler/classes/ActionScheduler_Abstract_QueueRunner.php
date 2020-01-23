@@ -165,7 +165,7 @@ abstract class ActionScheduler_Abstract_QueueRunner {
 		if ( function_exists( 'ini_get' ) ) {
 			$memory_limit = ini_get( 'memory_limit' );
 		} else {
-			$memory_limit = '128M'; // Sensible default, and minimum required by ClassicCommerce
+			$memory_limit = '128M'; // Sensible default, and minimum required by Classic Commerce
 		}
 
 		if ( ! $memory_limit || -1 === $memory_limit || '-1' === $memory_limit ) {

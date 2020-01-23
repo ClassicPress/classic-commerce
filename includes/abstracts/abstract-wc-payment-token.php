@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once WC_ABSPATH . 'includes/legacy/abstract-wc-legacy-payment-token.php';
 
 /**
- * ClassicCommerce Payment Token.
+ * Classic Commerce Payment Token.
  *
  * Representation of a general payment token to be extended by individuals types of tokens
  * examples: Credit Card, eCheck.

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * https://github.com/wp-cli/restful
  *
  * @version WC-3.0.0
- * @package ClassicCommerce
+ * @package Classic Commerce
  */
 class WC_CLI_Tool_Command {
 

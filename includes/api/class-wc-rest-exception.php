@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce REST Exception Class
+ * Classic Commerce REST Exception Class
  *
  * Extends Exception to provide additional data.
  *

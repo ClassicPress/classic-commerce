@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Attribute Functions
+ * Classic Commerce Attribute Functions
  *
  * @package ClassicCommerce/Functions
  * @version WC-2.1.0

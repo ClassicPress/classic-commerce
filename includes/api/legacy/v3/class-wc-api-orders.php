@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Orders Class
+ * Classic Commerce API Orders Class
  *
  * Handles requests to the /orders endpoint
  *

@@ -1,4 +1,4 @@
-# ClassicCommerce Unit Tests
+# Classic Commerce Unit Tests
 
 ## Initial Setup
 

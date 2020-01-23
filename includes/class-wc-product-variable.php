@@ -2,7 +2,7 @@
 /**
  * Variable Product
  *
- * The ClassicCommerce product class handles individual product data.
+ * The Classic Commerce product class handles individual product data.
  *
  * @version WC-3.0.0
  * @package ClassicCommerce/Classes/Products

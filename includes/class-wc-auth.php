@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Auth
+ * Classic Commerce Auth
  *
  * Handles wc-auth endpoint requests.
  *

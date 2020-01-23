@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Page Functions
+ * Classic Commerce Page Functions
  *
  * Functions related to pages and menus.
  *

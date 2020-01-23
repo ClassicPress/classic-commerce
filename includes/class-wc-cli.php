@@ -1,6 +1,6 @@
 <?php
 /**
- * Enables ClassicCommerce, via the the command line.
+ * Enables Classic Commerce, via the the command line.
  *
  * @package ClassicCommerce\CLI
  * @version WC-3.0.0

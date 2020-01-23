@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Widget Functions
+ * Classic Commerce Widget Functions
  *
  * Widget related functions and widget registration.
  *

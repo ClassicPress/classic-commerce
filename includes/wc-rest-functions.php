@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce REST Functions
+ * Classic Commerce REST Functions
  *
  * Functions for REST specific things.
  *

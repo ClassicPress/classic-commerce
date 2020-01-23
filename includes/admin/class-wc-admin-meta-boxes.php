@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Meta Boxes
+ * Classic Commerce Meta Boxes
  *
  * Sets up the write panels used by products and orders (custom post types).
  *

@@ -18,7 +18,7 @@ Fix for issues #159 and #162 - notices displaying when they shouldn't
 First alpha release of Classic Commerce
 
 = 0.1.0 - 2018-05-24 =
-WIP - Forking and documenting ClassicCommerce 0.1.0
+WIP - Forking and documenting Classic Commerce 0.1.0
 
 = WooCommerce 3.4.5 - 2018-08-29 =
 [See changelog archive for all versions](https://raw.githubusercontent.com/ClassicPress-research/classic-commerce/master/CHANGELOG-Archive.txt).

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Coupons Class
+ * Classic Commerce API Coupons Class
  *
  * Handles requests to the /coupons endpoint
  *

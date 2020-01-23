@@ -230,7 +230,7 @@ class WC_Cache_Helper {
 	}
 
 	/**
-	 * Clean term caches added by ClassicCommerce.
+	 * Clean term caches added by Classic Commerce.
 	 *
 	 * @since WC-3.3.4
 	 * @param array|int $ids Array of ids or single ID to clear cache for.

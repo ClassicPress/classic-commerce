@@ -11,7 +11,7 @@
 class WC_Tests_Report_Sales_By_Date extends WC_Unit_Test_Case {
 
 	/**
-	 * Load the necessary files, as they're not automatically loaded by ClassicCommerce.
+	 * Load the necessary files, as they're not automatically loaded by Classic Commerce.
 	 */
 	public static function setUpBeforeClass() {
 		include_once WC_Unit_Tests_Bootstrap::instance()->plugin_dir . '/includes/admin/reports/class-wc-admin-report.php';

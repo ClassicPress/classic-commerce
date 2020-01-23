@@ -1,8 +1,8 @@
 <?php
 /**
- * ClassicCommerce Template Hooks
+ * Classic Commerce Template Hooks
  *
- * Action/filter hooks used for ClassicCommerce functions/templates.
+ * Action/filter hooks used for Classic Commerce functions/templates.
  *
  * @package ClassicCommerce/Templates
  * @version WC-2.1.0

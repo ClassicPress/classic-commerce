@@ -2,7 +2,7 @@
 /**
  * Product Variation
  *
- * The ClassicCommerce product variation class handles product variation data.
+ * The Classic Commerce product variation class handles product variation data.
  *
  * @package ClassicCommerce/Classes
  * @version WC-3.0.0

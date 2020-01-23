@@ -165,7 +165,7 @@ class WC_Admin_Notices {
 			'plugins',
 		);
 
-		// Notices should only show on ClassicCommerce screens, the main dashboard, and on the plugins screen.
+		// Notices should only show on Classic Commerce screens, the main dashboard, and on the plugins screen.
 		if ( ! in_array( $screen_id, wc_get_screen_ids(), true ) && ! in_array( $screen_id, $show_on_screens, true ) ) {
 			return;
 		}

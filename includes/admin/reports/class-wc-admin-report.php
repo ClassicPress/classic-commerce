@@ -598,7 +598,7 @@ class WC_Admin_Report {
 	}
 
 	/**
-	 * Return currency tooltip JS based on ClassicCommerce currency position settings.
+	 * Return currency tooltip JS based on Classic Commerce currency position settings.
 	 *
 	 * @return string
 	 */

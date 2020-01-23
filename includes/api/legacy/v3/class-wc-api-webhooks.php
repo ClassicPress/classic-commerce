@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Webhooks class
+ * Classic Commerce API Webhooks class
  *
  * Handles requests to the /webhooks endpoint
  *

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ClassicCommerce Credit Card Payment Token.
+ * Classic Commerce Credit Card Payment Token.
  *
  * Representation of a payment token for credit cards.
  *

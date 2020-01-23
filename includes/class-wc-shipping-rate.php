@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Shipping Rate
+ * Classic Commerce Shipping Rate
  *
  * Simple Class for storing rates.
  *

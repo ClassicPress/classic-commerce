@@ -1,8 +1,8 @@
 <?php
 /**
- * ClassicCommerce cart
+ * Classic Commerce cart
  *
- * The ClassicCommerce cart class stores cart data and active coupons as well as handling customer sessions and some cart related urls.
+ * The Classic Commerce cart class stores cart data and active coupons as well as handling customer sessions and some cart related urls.
  * The cart class also has a price calculation function which calls upon other classes to calculate totals.
  *
  * @package ClassicCommerce/Classes

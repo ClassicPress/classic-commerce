@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Order Class.
  *
- * These are regular ClassicCommerce orders, which extend the abstract order class.
+ * These are regular Classic Commerce orders, which extend the abstract order class.
  */
 class WC_Order extends WC_Abstract_Order {
 
@@ -181,7 +181,7 @@ class WC_Order extends WC_Abstract_Order {
 		}
 
 		/**
-		 * Filter ClassicCommerce formatted order total.
+		 * Filter Classic Commerce formatted order total.
 		 *
 		 * @param string   $formatted_total  Total to display.
 		 * @param WC_Order $order            Order data.
@@ -1629,8 +1629,8 @@ class WC_Order extends WC_Abstract_Order {
 			$comment_author       = $user->display_name;
 			$comment_author_email = $user->user_email;
 		} else {
-			$comment_author        = __( 'ClassicCommerce', 'classic-commerce' );
-			$comment_author_email  = strtolower( __( 'ClassicCommerce', 'classic-commerce' ) ) . '@';
+			$comment_author        = __( 'Classic Commerce', 'classic-commerce' );
+			$comment_author_email  = strtolower( __( 'Classic Commerce', 'classic-commerce' ) ) . '@';
 			$comment_author_email .= isset( $_SERVER['HTTP_HOST'] ) ? str_replace( 'www.', '', sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ) : 'noreply.com'; // WPCS: input var ok.
 			$comment_author_email  = sanitize_email( $comment_author_email );
 		}
@@ -1642,7 +1642,7 @@ class WC_Order extends WC_Abstract_Order {
 				'comment_author_email' => $comment_author_email,
 				'comment_author_url'   => '',
 				'comment_content'      => $note,
-				'comment_agent'        => 'ClassicCommerce',
+				'comment_agent'        => 'Classic Commerce',
 				'comment_type'         => 'order_note',
 				'comment_parent'       => 0,
 				'comment_approved'     => 1,

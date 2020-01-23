@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Authentication Class
+ * Classic Commerce API Authentication Class
  *
  * @author   WooThemes
  * @category API

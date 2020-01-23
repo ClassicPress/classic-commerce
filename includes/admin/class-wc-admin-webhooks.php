@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Admin Webhooks Class
+ * Classic Commerce Admin Webhooks Class
  *
  * @package ClassicCommerce\Admin
  * @version WC-3.3.0

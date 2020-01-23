@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API
+ * Classic Commerce API
  *
  * Defines an interface that API request/response handlers should implement
  *

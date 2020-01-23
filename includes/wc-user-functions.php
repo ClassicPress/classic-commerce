@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Customer Functions
+ * Classic Commerce Customer Functions
  *
  * Functions for customers.
  *
@@ -676,7 +676,7 @@ function wc_user_search_columns( $search_columns ) {
 add_filter( 'user_search_columns', 'wc_user_search_columns' );
 
 /**
- * When a user is deleted in WordPress, delete corresponding ClassicCommerce data.
+ * When a user is deleted in WordPress, delete corresponding Classic Commerce data.
  *
  * @param int $user_id User ID being deleted.
  */

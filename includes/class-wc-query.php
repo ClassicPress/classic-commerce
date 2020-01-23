@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains the query functions for ClassicCommerce which alter the front-end post queries and loops
+ * Contains the query functions for Classic Commerce which alter the front-end post queries and loops
  *
  * @version WC-3.2.0
  * @package ClassicCommerce\Classes
@@ -340,7 +340,7 @@ class WC_Query {
 	}
 
 	/**
-	 * Pre_get_posts above may adjust the main query to add ClassicCommerce logic. When this query is done, we need to ensure
+	 * Pre_get_posts above may adjust the main query to add Classic Commerce logic. When this query is done, we need to ensure
 	 * all custom filters are removed.
 	 *
 	 * This is done here during the_posts filter. The input is not changed.

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Log Table List
+ * Classic Commerce Log Table List
  *
  * @author   WooThemes
  * @category Admin

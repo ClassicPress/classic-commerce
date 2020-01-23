@@ -68,7 +68,7 @@ class WC_Admin_Setup_Wizard {
 
 	/**
 	 * The theme "extra" should only be shown if the current user can modify themes
-	 * and the store doesn't already have a ClassicCommerce theme.
+	 * and the store doesn't already have a Classic Commerce theme.
 	 *
 	 * @return boolean
 	 */
@@ -267,7 +267,7 @@ class WC_Admin_Setup_Wizard {
 			<?php do_action( 'admin_head' ); ?>
 		</head>
 		<body class="wc-setup wp-core-ui">
-			<h1 id="wc-logo"><a href="https://github.com/ClassicPress-research/classic-commerce/"><img src="<?php echo esc_url( WC()->plugin_url() ); ?>/assets/images/classiccommerce-logo.png" alt="Classic Commerce" /></a></h1>
+			<h1 id="wc-logo"><a href="https://github.com/ClassicPress-research/classic-commerce/"><img src="<?php echo esc_url( WC()->plugin_url() ); ?>/assets/images/classic-commerce-logo.png" alt="Classic Commerce" /></a></h1>
 		<?php
 	}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Template
+ * Classic Commerce Template
  *
  * Functions for the templating system.
  *
@@ -223,7 +223,7 @@ function wc_set_loop_prop( $prop, $value = '' ) {
 }
 
 /**
- * Should the ClassicCommerce loop be displayed?
+ * Should the Classic Commerce loop be displayed?
  *
  * This will return true if we have posts (products) or if we have subcats to display.
  *
@@ -244,10 +244,10 @@ function woocommerce_product_loop() {
 function wc_generator_tag( $gen, $type ) {
 	switch ( $type ) {
 		case 'html':
-			$gen .= "\n" . '<meta name="generator" content="ClassicCommerce ' . esc_attr( WC_VERSION ) . '">';
+			$gen .= "\n" . '<meta name="generator" content="Classic Commerce ' . esc_attr( WC_VERSION ) . '">';
 			break;
 		case 'xhtml':
-			$gen .= "\n" . '<meta name="generator" content="ClassicCommerce ' . esc_attr( WC_VERSION ) . '" />';
+			$gen .= "\n" . '<meta name="generator" content="Classic Commerce ' . esc_attr( WC_VERSION ) . '" />';
 			break;
 	}
 	return $gen;
@@ -833,7 +833,7 @@ function wc_privacy_policy_text( $type = 'checkout' ) {
 }
 
 /**
- * Replaces placeholders with links to ClassicCommerce policy pages.
+ * Replaces placeholders with links to Classic Commerce policy pages.
  *
  * @since WC-3.4.0
  * @param string $text Text to find/replace within.
@@ -860,7 +860,7 @@ function wc_replace_policy_page_link_placeholders( $text ) {
 if ( ! function_exists( 'woocommerce_content' ) ) {
 
 	/**
-	 * Output ClassicCommerce content.
+	 * Output Classic Commerce content.
 	 *
 	 * This function is only used in the optional 'woocommerce.php' template.
 	 * which people can add to their themes to add basic woocommerce support.
@@ -2006,7 +2006,7 @@ if ( ! function_exists( 'woocommerce_mini_cart' ) ) {
 if ( ! function_exists( 'woocommerce_login_form' ) ) {
 
 	/**
-	 * Output the ClassicCommerce Login Form.
+	 * Output the Classic Commerce Login Form.
 	 *
 	 * @param array $args Arguments.
 	 */
@@ -2027,7 +2027,7 @@ if ( ! function_exists( 'woocommerce_login_form' ) ) {
 if ( ! function_exists( 'woocommerce_checkout_login_form' ) ) {
 
 	/**
-	 * Output the ClassicCommerce Checkout Login Form.
+	 * Output the Classic Commerce Checkout Login Form.
 	 */
 	function woocommerce_checkout_login_form() {
 		wc_get_template( 'checkout/form-login.php', array(
@@ -2039,7 +2039,7 @@ if ( ! function_exists( 'woocommerce_checkout_login_form' ) ) {
 if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 
 	/**
-	 * Output the ClassicCommerce Breadcrumb.
+	 * Output the Classic Commerce Breadcrumb.
 	 *
 	 * @param array $args Arguments.
 	 */
@@ -2062,7 +2062,7 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 		$args['breadcrumb'] = $breadcrumbs->generate();
 
 		/**
-		 * ClassicCommerce Breadcrumb hook
+		 * Classic Commerce Breadcrumb hook
 		 *
 		 * @hooked WC_Structured_Data::generate_breadcrumblist_data() - 10
 		 */

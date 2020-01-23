@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Cart Functions
+ * Classic Commerce Cart Functions
  *
  * Functions for cart specific things.
  *

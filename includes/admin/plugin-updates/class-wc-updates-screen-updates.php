@@ -1,6 +1,6 @@
 <?php
 /**
- * Manages ClassicCommerce plugin updating on the Updates screen.
+ * Manages Classic Commerce plugin updating on the Updates screen.
  *
  * @package     ClassicCommerce/Admin
  * @version     WC-3.2.0

@@ -1,6 +1,6 @@
 <?php
 /**
- * Base test case for all ClassicCommerce tests.
+ * Base test case for all Classic Commerce tests.
  *
  * @package ClassicCommerce\Tests
  */
@@ -8,7 +8,7 @@
 /**
  * WC Unit Test Case.
  *
- * Provides ClassicCommerce-specific setup/tear down/assert methods, custom factories,
+ * Provides Classic Commerce-specific setup/tear down/assert methods, custom factories,
  * and helper functions.
  *
  * @since WC-2.2

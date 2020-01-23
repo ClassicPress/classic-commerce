@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ClassicCommerce Webhook data store interface.
+ * Classic Commerce Webhook data store interface.
  */
 interface WC_Webhook_Data_Store_Interface {
 

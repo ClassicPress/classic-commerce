@@ -42,7 +42,7 @@ class WC_Privacy_Exporters {
 	}
 
 	/**
-	 * Finds and exports data which could be used to identify a person from ClassicCommerce data associated with an email address.
+	 * Finds and exports data which could be used to identify a person from Classic Commerce data associated with an email address.
 	 *
 	 * Orders are exported in blocks of 10 to avoid timeouts.
 	 *

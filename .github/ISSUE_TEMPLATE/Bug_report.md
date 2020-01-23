@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41E Bug report"
-about: Report a bug if something isn't working as expected in the core ClassicCommerce
+about: Report a bug if something isn't working as expected in the core Classic Commerce
   plugin.
 
 ---
@@ -22,13 +22,13 @@ If applicable, add screenshots to help explain your problem.
 A clear and concise description of what you expected to happen.
 
 **Isolating the problem (mark completed items with an [x]):**
-- [ ] I have deactivated other plugins and confirmed this bug occurs when only ClassicCommerce plugin is active.
+- [ ] I have deactivated other plugins and confirmed this bug occurs when only Classic Commerce plugin is active.
 - [ ] This bug happens with a default ClassicPress theme active.
 - [ ] I can reproduce this bug consistently using the steps above.
 
 **ClassicPress Environment**
 <details>
 ```
-Copy and paste the system status report from **ClassicCommerce > System Status** in ClassicPress admin.
+Copy and paste the system status report from **Classic Commerce > System Status** in ClassicPress admin.
 ```
 </details>

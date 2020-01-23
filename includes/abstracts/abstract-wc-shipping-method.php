@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ClassicCommerce Shipping Method Class.
+ * Classic Commerce Shipping Method Class.
  *
  * Extended by shipping methods to handle shipping calculations etc.
  *

@@ -2,7 +2,7 @@
 /**
  * Transactional Emails Controller
  *
- * ClassicCommerce Emails Class which handles the sending on transactional emails and email templates. This class loads in available emails.
+ * Classic Commerce Emails Class which handles the sending on transactional emails and email templates. This class loads in available emails.
  *
  * @package ClassicCommerce/Classes/Emails
  * @version WC-2.3.0

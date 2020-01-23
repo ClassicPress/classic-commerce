@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Admin API Keys Class
+ * Classic Commerce Admin API Keys Class
  *
  * @package ClassicCommerce\Admin
  * @version WC-2.4.0

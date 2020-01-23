@@ -213,7 +213,7 @@ class WC_Admin_Attributes {
 							/**
 							 * Attribute types can change the way attributes are displayed on the frontend and admin.
 							 *
-							 * By Default ClassicCommerce only includes the `select` type. Others can be added with the
+							 * By Default Classic Commerce only includes the `select` type. Others can be added with the
 							 * `product_attributes_type_selector` filter. If there is only the default type registered,
 							 * this setting will be hidden.
 							 */
@@ -405,7 +405,7 @@ class WC_Admin_Attributes {
 								/**
 								 * Attribute types can change the way attributes are displayed on the frontend and admin.
 								 *
-								 * By Default ClassicCommerce only includes the `select` type. Others can be added with the
+								 * By Default Classic Commerce only includes the `select` type. Others can be added with the
 								 * `product_attributes_type_selector` filter. If there is only the default type registered,
 								 * this setting will be hidden.
 								 */

@@ -16,7 +16,7 @@ if ( class_exists( 'WC_Email', false ) ) {
 /**
  * Email Class
  *
- * ClassicCommerce Email Class which is extended by specific email template classes to add emails to ClassicCommerce
+ * Classic Commerce Email Class which is extended by specific email template classes to add emails to Classic Commerce
  *
  * @class       WC_Email
  * @version     WC-2.5.0

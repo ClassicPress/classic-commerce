@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce API Products Class
+ * Classic Commerce API Products Class
  *
  * Handles requests to the /products endpoint
  *

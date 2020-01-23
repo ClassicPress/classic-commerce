@@ -709,7 +709,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 		$core_tables = array_map( array( $this, 'add_db_table_prefix' ), $core_tables );
 
 		/**
-		 * Organize ClassicCommerce and non-ClassicCommerce tables separately for display purposes later.
+		 * Organize Classic Commerce and non-Classic Commerce tables separately for display purposes later.
 		 *
 		 * To ensure we include all WC tables, even if they do not exist, pre-populate the WC array with all the tables.
 		 */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Admin Functions
+ * Classic Commerce Admin Functions
  *
  * @author   WooThemes
  * @category Core
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Get all ClassicCommerce screen ids.
+ * Get all Classic Commerce screen ids.
  *
  * @return array
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Autoloader.
+ * Classic Commerce Autoloader.
  *
  * @package ClassicCommerce/Classes
  * @version WC-2.3.0

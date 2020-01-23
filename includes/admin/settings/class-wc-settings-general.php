@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce General Settings
+ * Classic Commerce General Settings
  *
  * @package ClassicCommerce/Admin
  */

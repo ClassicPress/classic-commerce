@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Shipping
+ * Classic Commerce Shipping
  *
  * Handles shipping and loads shipping methods via hooks.
  *

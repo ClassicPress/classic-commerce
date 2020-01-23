@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * ClassicCommerce Payment Gateway class.
+ * Classic Commerce Payment Gateway class.
  *
  * Extended by individual payment gateways to handle payments.
  *

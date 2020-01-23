@@ -1,8 +1,8 @@
 <?php
 /**
- * ClassicCommerce Integrations class
+ * Classic Commerce Integrations class
  *
- * Loads Integrations into ClassicCommerce.
+ * Loads Integrations into Classic Commerce.
  *
  * @version WC-2.3.0
  * @package ClassicCommerce/Classes/Integrations

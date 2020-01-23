@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Integration Settings
+ * Classic Commerce Integration Settings
  *
  * @author      WooThemes
  * @category    Admin

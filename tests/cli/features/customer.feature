@@ -1,4 +1,4 @@
-Feature: Manage ClassicCommerce customers
+Feature: Manage Classic Commerce customers
 
 Background:
 

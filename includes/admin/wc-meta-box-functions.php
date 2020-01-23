@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Meta Box Functions
+ * Classic Commerce Meta Box Functions
  *
  * @author      WooThemes
  * @category    Core

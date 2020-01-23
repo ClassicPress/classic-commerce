@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since WC-3.0.0
  * @param string $tag         The name of the action hook.
  * @param array  $args        Array of additional function arguments to be passed to do_action().
- * @param string $version     The version of ClassicCommerce that deprecated the hook.
+ * @param string $version     The version of Classic Commerce that deprecated the hook.
  * @param string $replacement The hook that should have been used.
  * @param string $message     A message regarding the change.
  */
@@ -1002,7 +1002,7 @@ function wc_get_customer_avatar_url( $email ) {
 }
 
 /**
- * ClassicCommerce Core Supported Themes.
+ * Classic Commerce Core Supported Themes.
  *
  * @deprecated WC-3.3.0
  * @since      WC-2.2

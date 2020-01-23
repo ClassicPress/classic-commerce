@@ -1,6 +1,6 @@
 <?php
 /**
- * ClassicCommerce Tax Settings
+ * Classic Commerce Tax Settings
  *
  * @author      WooThemes
  * @category    Admin
