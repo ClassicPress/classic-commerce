@@ -509,7 +509,7 @@ final class WooCommerce {
 	 *      - WP_LANG_DIR/woocommerce/woocommerce-LOCALE.mo
 	 *      - WP_LANG_DIR/plugins/woocommerce-LOCALE.mo
 	 */
-	public function load_plugin_textdomain() {
+	public static function load_plugin_textdomain() {
 		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
 		$locale = apply_filters( 'plugin_locale', $locale, 'classic-commerce' );
 
