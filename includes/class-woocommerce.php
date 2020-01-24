@@ -509,7 +509,7 @@ final class WooCommerce {
 	 *      - WP_LANG_DIR/woocommerce/woocommerce-LOCALE.mo
 	 *      - WP_LANG_DIR/plugins/woocommerce-LOCALE.mo
 	 */
-	public static function load_plugin_textdomain() {
+	public function load_plugin_textdomain() {
 		$locale = is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale();
 		$locale = apply_filters( 'plugin_locale', $locale, 'classic-commerce' );
 
@@ -667,7 +667,7 @@ final class WooCommerce {
 	 * @param string    $webhook Optional webhook (eg Hookshot).
 	 * @return string
 	 */
-	public function user_agent_header( $webhook = '' ) {
+	public static function user_agent_header( $webhook = '' ) {
 		return sprintf( 'WooCommerce/%s %s (compatible; ClassicCommerce/%s)', WC()->version, $webhook, WC()->cc_version );
 	}
 
