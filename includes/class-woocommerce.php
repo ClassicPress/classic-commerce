@@ -660,6 +660,16 @@ final class WooCommerce {
 			$wpdb->tables[]             = 'woocommerce_termmeta';
 		}
 	}
+	
+	/**
+	 * Generates user agent
+	 *
+	 * @param string    $webhook Optional webhook (eg Hookshot).
+	 * @return string
+	 */
+	public function user_agent_header( $webhook = '' ) {
+		return sprintf( 'WooCommerce/%s %s (compatible; ClassicCommerce/%s)', WC()->version, $webhook, WC()->cc_version );
+	}
 
 	/**
 	 * Get queue instance.
