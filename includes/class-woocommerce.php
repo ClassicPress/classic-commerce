@@ -668,7 +668,10 @@ final class WooCommerce {
 	 * @return string
 	 */
 	public static function user_agent_header( $webhook = '' ) {
-		return sprintf( 'WooCommerce/%s %s (compatible; ClassicCommerce/%s)', WC()->version, $webhook, WC()->cc_version );
+		if ( ! empty( $webhook ) ) {
+			$webhook = ' ' . $webhook;
+		}
+		return sprintf( 'WooCommerce/%s%s (compatible; ClassicCommerce/%s)', WC()->version, $webhook, WC()->cc_version );
 	}
 
 	/**
