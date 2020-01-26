@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div id="message" class="updated woocommerce-message wc-connect">
+<div id="message" class="updated wc-connect">
 
 	<p>
 		<?php
