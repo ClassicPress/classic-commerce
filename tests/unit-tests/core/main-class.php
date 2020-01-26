@@ -77,12 +77,12 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	}
 	
 	public static function test_user_agent_header( $webhook = '' ) {
-		if ( ! empty( $webhook ) {
-        	$this->expectOutputString('WooCommerce/3.5.3 Hookshot (compatible; ClassicCommerce/1.0.0)');
+		if ( ! empty( $webhook ) ) {
+        	$this->expectOutputString( 'WooCommerce/3.5.3 Hookshot (compatible; ClassicCommerce/1.0.0)' );
         	print 'WooCommerce/' . WC()->version . ' ' . $webhook '(compatible; ClassicCommerce/' . WC()->cc_version . ')';
 		}
 		else {
-			$this->expectOutputString('WooCommerce/3.5.3 (compatible; ClassicCommerce/1.0.0)');
+			$this->expectOutputString( 'WooCommerce/3.5.3 (compatible; ClassicCommerce/1.0.0)' );
         	print 'WooCommerce/' . WC()->version . ' (compatible; ClassicCommerce/' . WC()->cc_version . ')';
 		}
 	}
