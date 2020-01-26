@@ -1096,7 +1096,7 @@ class WC_Admin_Setup_Wizard {
 						)
 					),
 					esc_url( admin_url( 'admin.php?page=wc-settings&tab=checkout&section=paypal' ) ),
-					esc_url( admin_url( 'admin.php?page=wc-addons&section=payment-gateways' ) )
+					esc_url( admin_url( 'admin.php?page=wc-addons' ) )
 				);
 				?>
 			</p>
