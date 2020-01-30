@@ -205,6 +205,7 @@ class WC_Admin_Menus {
 	 * Reorder the WC menu items in admin.
 	 *
 	 * @param int $menu_order Menu order.
+	 *
 	 * @return array
 	 */
 	public function menu_order( $menu_order ) {
@@ -239,6 +240,7 @@ class WC_Admin_Menus {
 	 * Custom menu order.
 	 *
 	 * @param bool $enabled Whether custom menu ordering is already enabled.
+	 *
 	 * @return bool
 	 */
 	public function custom_menu_order( $enabled ) {
@@ -361,6 +363,7 @@ class WC_Admin_Menus {
 	 * Add the "Visit Store" link in admin bar main menu.
 	 *
 	 * @since WC-2.4.0
+	 * 
 	 * @param WP_Admin_Bar $wp_admin_bar Admin bar instance.
 	 */
 	public function admin_bar_menus( $wp_admin_bar ) {
