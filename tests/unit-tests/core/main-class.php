@@ -80,9 +80,11 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 	 * Test: user_agent_header
 	 */
 	public function test_user_agent_header() {
-		$expected = 'WooCommerce/3.5.3 (compatible; ClassicCommerce/1.0.0)';
+		$wc_version = $this->wc->version;
+		$cc_version = $this->wc->cc_version;
+		$expected = "WooCommerce/$wc_version (compatible; ClassicCommerce/$cc_version)";
 		$actual = $this->wc->user_agent_header();
-		$expected_with_hook = 'WooCommerce/3.5.3 Hookshot (compatible; ClassicCommerce/1.0.0)';
+		$expected_with_hook = "WooCommerce/$wc_version Hookshot (compatible; ClassicCommerce/$cc_version)";
 		$actual_with_hook = $this->wc->user_agent_header( 'Hookshot' );
 
 		$this->assertEquals( $expected, $actual );
