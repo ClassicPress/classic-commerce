@@ -585,7 +585,7 @@ class WC_REST_System_Status_V2_Controller extends WC_REST_Controller {
 			'https://www.paypal.com/cgi-bin/webscr',
 			array(
 				'timeout'     => 10,
-				'user-agent'  => 'ClassicCommerce/' . WC()->version,
+				'user-agent'  => WooCommerce::user_agent_header(),
 				'httpversion' => '1.1',
 				'body'        => array(
 					'cmd' => '_notify-validate',

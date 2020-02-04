@@ -92,7 +92,7 @@ class WC_Gateway_Paypal_IPN_Handler extends WC_Gateway_Paypal_Response {
 			'httpversion' => '1.1',
 			'compress'    => false,
 			'decompress'  => false,
-			'user-agent'  => 'ClassicCommerce/' . WC()->version,
+			'user-agent'  => WooCommerce::user_agent_header(),
 		);
 
 		// Post back to get a response.
