@@ -75,4 +75,19 @@ class WC_Test_WooCommerce extends WC_Unit_Test_Case {
 		$this->assertInstanceOf( 'WC_Payment_Gateways', $this->wc->payment_gateways() );
 		$this->assertInstanceOf( 'WC_Checkout', $this->wc->checkout() );
 	}
+	
+	/**
+	 * Test: user_agent_header
+	 */
+	public function test_user_agent_header() {
+		$wc_version = $this->wc->version;
+		$cc_version = $this->wc->cc_version;
+		$expected = "WooCommerce/$wc_version (compatible; ClassicCommerce/$cc_version)";
+		$actual = $this->wc->user_agent_header();
+		$expected_with_hook = "WooCommerce/$wc_version Hookshot (compatible; ClassicCommerce/$cc_version)";
+		$actual_with_hook = $this->wc->user_agent_header( 'Hookshot' );
+
+		$this->assertEquals( $expected, $actual );
+		$this->assertEquals( $expected_with_hook, $actual_with_hook );
+	}
 }
