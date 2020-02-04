@@ -671,7 +671,7 @@ final class WooCommerce {
 		if ( ! empty( $webhook ) ) {
 			$webhook = ' ' . $webhook;
 		}
-		return sprintf( 'WooCommerce/%s%s (compatible; ClassicCommerce/%s)', WC()->version, $webhook, WC()->cc_version );
+		return sprintf( 'WooCommerce/%s%s (compatible; Classic Commerce/%s)', WC()->version, $webhook, WC()->cc_version );
 	}
 
 	/**
