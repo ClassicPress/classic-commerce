@@ -169,9 +169,9 @@ class UpdateClient {
 		// Only need this JS/CSS on the plugin admin page and updates page.
 		if ($screen->base === 'plugins' || $screen->base === 'plugin-install') {
 			// This will make the jQuery below work with various languages.
-			$text1 = esc_html__('Compatible up to:', 'codepotent-update-manager');
-			$text2 = esc_html__('Reviews', 'codepotent-update-manager');
-			$text3 = esc_html__('Read all reviews', 'codepotent-update-manager');
+			$text1 = esc_html__('Compatible up to:');
+			$text2 = esc_html__('Reviews');
+			$text3 = esc_html__('Read all reviews');
 			// Swap "Compatible up to: 4.9.99" with "Compatible up to: 1.1.1".
 			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.$text1.'</strong> '.$this->cp_latest_version.'");$(".fyi h3:contains('.$text2.')").hide();$(".fyi p:contains('.$text3.')").hide();});</script>'."\n";
 			// Styles for the modal window.
