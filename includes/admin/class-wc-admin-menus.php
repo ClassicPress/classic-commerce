@@ -57,7 +57,7 @@ class WC_Admin_Menus {
 			$menu[] = array( '', 'read', 'separator-woocommerce', '', 'wp-menu-separator woocommerce' ); // WPCS: override ok.
 		}
 
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, WC()->plugin_url() . '/assets/images/classic-commerce-icon-white.svg', '55.5' );
+		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, WC()->plugin_url() . '/assets/images/classic-commerce-dashicon-grey-on-white.svg', '55.5' );
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'classic-commerce' ), __( 'Attributes', 'classic-commerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
@@ -205,6 +205,7 @@ class WC_Admin_Menus {
 	 * Reorder the WC menu items in admin.
 	 *
 	 * @param int $menu_order Menu order.
+	 *
 	 * @return array
 	 */
 	public function menu_order( $menu_order ) {
@@ -239,6 +240,7 @@ class WC_Admin_Menus {
 	 * Custom menu order.
 	 *
 	 * @param bool $enabled Whether custom menu ordering is already enabled.
+	 *
 	 * @return bool
 	 */
 	public function custom_menu_order( $enabled ) {
@@ -361,6 +363,7 @@ class WC_Admin_Menus {
 	 * Add the "Visit Store" link in admin bar main menu.
 	 *
 	 * @since WC-2.4.0
+	 * 
 	 * @param WP_Admin_Bar $wp_admin_bar Admin bar instance.
 	 */
 	public function admin_bar_menus( $wp_admin_bar ) {
