@@ -11,7 +11,7 @@
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Full
  * text of the license is available at https://www.gnu.org/licenses/gpl-2.0.txt.
  * -----------------------------------------------------------------------------
- * Copyright © 2019 - CodePotent
+ * Copyright © 2019 - Code Potent
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
@@ -32,8 +32,7 @@ if (!defined('ABSPATH')) {
  * integrated update path for end-users of your ClassicPress plugins. This class
  * is intended for plugins that will be receiving updates directly from a remote
  * server, such as GitHub or your own site. The Update Manager ensures that your
- * updates look great with all the right images and texts. If you need some more
- * context, skip to: https://codepotent.com/classicpress/plugins/update-manager/
+ * updates look great with all the right images and texts.
  *
  * @author John Alarcon
  */
@@ -128,7 +127,7 @@ class UpdateClient {
 
 		// Print footer scripts; see comments on the method.
 		add_action('admin_print_footer_scripts', [$this, 'print_admin_scripts']);
-		
+
 		// Filter the plugin admin row.
 		add_filter('plugin_row_meta', [$this, 'filter_plugin_row_meta'], 10, 2);
 
@@ -169,9 +168,9 @@ class UpdateClient {
 		// Only need this JS/CSS on the plugin admin page and updates page.
 		if ($screen->base === 'plugins' || $screen->base === 'plugin-install') {
 			// This will make the jQuery below work with various languages.
-			$text1 = esc_html__('Compatible up to:');
-			$text2 = esc_html__('Reviews');
-			$text3 = esc_html__('Read all reviews');
+			$text1 = esc_html__('Compatible up to:', 'codepotent-update-manager');
+			$text2 = esc_html__('Reviews', 'codepotent-update-manager');
+			$text3 = esc_html__('Read all reviews', 'codepotent-update-manager');
 			// Swap "Compatible up to: 4.9.99" with "Compatible up to: 1.1.1".
 			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.$text1.'</strong> '.$this->cp_latest_version.'");$(".fyi h3:contains('.$text2.')").hide();$(".fyi p:contains('.$text3.')").hide();});</script>'."\n";
 			// Styles for the modal window.
@@ -324,7 +323,7 @@ class UpdateClient {
 		// Add the link to the plugin's own row, if not already existing.
 		if ($this->identifier === $plugin_file) {
 			$anchors_string = implode('', $plugin_meta);
-			$anchor_text = esc_html('View details', 'codepotent-update-manager');
+			$anchor_text = esc_html__('View details', 'codepotent-update-manager');
 			if (!preg_match('|(\<a[ \s\S\d]*)('.$anchor_text.')(<\/a>)|', $anchors_string)) {
 				$plugin_meta[] = '<a class="thickbox" href="'.admin_url('/plugin-install.php?tab=plugin-information&plugin='.$this->server_slug.'&TB_iframe=true&width=600&height=550').'">'.$anchor_text.'</a>';
 			}
@@ -550,6 +549,10 @@ class UpdateClient {
 		// Set path and URL to this plugin's own images directory.
 		$image_path = untrailingslashit(WP_PLUGIN_DIR).'/'.$plugin.'/assets/images';
 		$image_url  = untrailingslashit(WP_PLUGIN_URL).'/'.$plugin.'/assets/images';
+
+		// Allow directory location to be filtered.
+		$image_path = apply_filters('codepotent_update_manager_image_path', $image_path);
+		$image_url  = apply_filters('codepotent_update_manager_image_url', $image_url);
 
 		// Banner and icon images are keyed differently; it's a core thing.
 		$image_qualities = [
