@@ -183,7 +183,7 @@ class WC_Admin {
 	public function preview_emails() {
 
 		if ( isset( $_GET['preview_woocommerce_mail'] ) ) {
-			if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'preview-mail' ) ) {
+			if ( ! ( isset( $_REQUEST['_wpnonce'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) ), 'preview-mail' ) ) ) {
 				die( 'Security check' );
 			}
 
