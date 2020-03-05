@@ -304,12 +304,8 @@ body {
 			.video-walkthrough a::before {
 				content: '\f126';
 			}
-			.newsletter a::before {
-				content: '\f465';
-			}
 		}
 	}
-	.woocommerce-newsletter,
 	.updated {
 		padding: 24px 24px 0;
 		margin: 0 0 24px;
@@ -781,45 +777,6 @@ body {
 	display: none;
 }
 
-.wc-wizard-features {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding: 0;
-
-	.wc-wizard-feature-item {
-		flex-basis: calc( 50% - 4em - 3px); // two columns, account for padding and borders
-		border: 1px solid #eee;
-		padding: 2em;
-	}
-
-	.wc-wizard-feature-item:nth-child(1) {
-		border-radius: 4px 0 0 0;
-	}
-
-	.wc-wizard-feature-item:nth-child(2) {
-		border-left: 0;
-		border-radius: 0 4px 0 0;
-	}
-
-	.wc-wizard-feature-item:nth-child(3) {
-		border-top: 0;
-		border-radius: 0 0 0 4px;
-	}
-
-	.wc-wizard-feature-item:nth-child(4) {
-		border-top: 0;
-		border-left: 0;
-		border-radius: 0 0 4px 0;
-	}
-
-	p.wc-wizard-feature-name,
-	p.wc-wizard-feature-description {
-		margin: 0;
-		line-height: 1.5em;
-	}
-}
-
 .activate-splash {
 	.wcs-notice {
 		margin-top: 1em;
@@ -844,35 +801,6 @@ body {
 	&:hover,
 	&:active {
 		box-shadow: none;
-	}
-}
-
-.wc-setup .wc-setup-actions .plugin-install-info {
-	display: block;
-	font-style: italic;
-	color: #999;
-	font-size: 14px;
-	line-height: 1.5em;
-	margin: 5px 0;
-
-	& > * {
-		display: block;
-	}
-	
-	.plugin-install-info-list-item::after {
-		content: ', ';
-	}
-
-	.plugin-install-info-list-item:last-of-type::after {
-		content: '. ';
-	}
-
-	a {
-		white-space: nowrap;
-
-		&:not(:hover):not(:focus) {
-			color: inherit;
-		}
 	}
 }
 
@@ -961,34 +889,6 @@ body {
 			color: #aaa;
 		}
 	}
-}
-
-.newsletter-form-container {
-	display: flex;
-
-	.newsletter-form-email {
-		border: 1px solid #aaa;
-		border-color: #ddd;
-		border-radius: 4px;
-		height: 42px;
-		padding: 0 8px;
-		font-size: 16px;
-		color: #666;
-		background-color: #fff;
-		display: inline-block;
-		margin-right: 6px;
-		flex-grow: 1;
-	}
-
-	.newsletter-form-button-container {
-		flex-grow: 0;
-	}
-}
-
-.wc-setup .wc-setup-actions .button.newsletter-form-button {
-	height: 42px;
-	padding: 0 1em;
-	margin: 0;
 }
 
 .wc-wizard-next-steps {

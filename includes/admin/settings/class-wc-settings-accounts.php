@@ -124,8 +124,7 @@ class WC_Settings_Accounts extends WC_Settings_Page {
 					'title' => __( 'Usage Tracking', 'classic-commerce' ),
 					'type'  => 'title',
 					'id'    => 'section_cc_usage_tracking',
-					'desc'  => __( 'This section controls the collection of limited encrypted data.' 
-					),
+					'desc'  => __( 'This section controls the collection of limited encrypted data.', 'classic-commerce' ),
 				),
 				array(
 					'title'    => __( 'Anonymous data collection', 'classic-commerce' ),
