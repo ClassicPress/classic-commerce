@@ -91,7 +91,7 @@ install_cp() {
 		download "$CP_DEV_ZIP_URL" "$CP_DEV_ZIP_PATH"
 		unzip -q "$CP_DEV_ZIP_PATH" -d "$CP_CORE_DIR"
 	fi
-	clean_github_download "$CP_CORE_DIR"
+	clean_github_download "$CP_CORE_DIR" true
 
 	download \
 		https://raw.github.com/markoheijnen/wp-mysqli/master/db.php \
@@ -107,10 +107,11 @@ clean_github_download() {
 	# GitHub downloads extract with a single folder inside, named based on the
 	# version downloaded. Get rid of this.
 	dir="$1"
+	remove_src_dir="$2"
 	mv "$dir" "$dir-old"
 	mv "$dir-old/ClassicPress-"* "$dir"
 	rmdir "$dir-old"
-	if [ -d "$dir/src" ]; then
+	if [ -d "$dir/src" ] && [ "$remove_src_dir" = true ]; then
 		# Development build - get rid of the 'src' directory too.
 		mv "$dir" "$dir-old"
 		mv "$dir-old/src" "$dir"
@@ -131,7 +132,7 @@ install_test_suite() {
 		mkdir -p "$CP_TESTS_DIR"
 		download "$CP_DEV_ZIP_URL" "$CP_DEV_ZIP_PATH"
 		unzip -q "$CP_DEV_ZIP_PATH" -d "$CP_DEV_PATH"
-		clean_github_download "$CP_DEV_PATH"
+		clean_github_download "$CP_DEV_PATH" false
 		cp -ar \
 			"$CP_DEV_PATH/tests/phpunit/includes" \
 			"$CP_DEV_PATH/tests/phpunit/data" \
