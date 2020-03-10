@@ -15,16 +15,19 @@ cache:
     - vendor
     - $HOME/.composer/cache
 
-# Test main supported versions of PHP against latest WP 4.9.x.
+# Test main supported versions of PHP against the latest ClassicPress release.
 php:
   - 5.6
   - 7.0
   - 7.1
   - 7.2
   - 7.3
+  - 7.4
 
+# TODO: Set CP_VERSION=latest after ClassicPress v1.2.0 is released with full
+# PHP 7.4 compatibility!
 env:
-  - CP_VERSION=latest WP_MULTISITE=0
+  - CP_VERSION=git-f765dbfa0 WP_MULTISITE=0
 
 # Additional tests against stable PHP (min version is 5.6)
 # and code coverage report.
@@ -45,13 +48,10 @@ matrix:
   - name: "Unit tests code coverage"
     php: 7.3
     env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
-  - php: 7.4snapshot
-    env: CP_VERSION=latest WP_MULTISITE=0
   allow_failures:
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_CODE_COVERAGE=1
   - env: CP_VERSION=latest WP_MULTISITE=0 RUN_E2E=1
-  - php: 7.4snapshot
 
 before_script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
