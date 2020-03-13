@@ -30,7 +30,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php esc_html_e( 'This is an optional plugin that is seperately installed and activated. Its primary purpose is to ensure Classic Commerce compatibility with extensions that are dependent on the installation of WooCommerce.', 'classic-commerce' ); ?></p>
 	
-	<p><?php printf( __( '<strong>First, delete WooCommerce</strong> in order to run the Compatibility plugin. The two cannot co-exist!', 'classic-commerce' ) ); ?></p>
+	<p><?php printf( __( 'The compatibility plugin can be downloaded from GitHub by clicking <strong><a href="%s">here</a></strong>. Save to your hard drive.', 'classic-commerce' ), 'https://github.com/Classic-Commerce/cc-compat-woo/releases/download/v9999.0/woocommerce.zip' ); ?></p>
+	
+	<p><?php printf( __( 'To install, <strong>first, delete WooCommerce</strong> (after making a backup first if needed). The compatibility plugin and WooCommerce cannot co-exist.', 'classic-commerce' ) ); ?></p>
+	
+	<p><?php printf( __( 'Then <strong>install the compatibility plugin</strong> the same way as you would install any other plugin and activate it.', 'classic-commerce' ) ); ?></p>
+	
+	<p><?php printf( __( 'That\'s it. Other plugins will now think that WooCommerce is still installed.', 'classic-commerce' ) ); ?></p>
 
 	<p><?php printf( __( '<strong>Note:</strong> The Compatibility plugin does not fix all compatibility issues apart from specific checks the extensions run to detect WooCommerce installation.', 'classic-commerce' ) ); ?></p>
 
