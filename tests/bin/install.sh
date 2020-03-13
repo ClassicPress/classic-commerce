@@ -32,6 +32,12 @@ download() {
 
 set -ex
 
+# $CP_VERSION may be one of the following:
+# 'latest' - latest stable release
+# '1.2.3' or '1.2.3-rc1' etc - any released version number
+# 'git+abc123' - use the specific commit 'abc123' from the *development* repo
+
+CP_RELEASE=y
 if [[ "$CP_VERSION" == latest ]]; then
 	# Find the version number of the latest release
 	download \
@@ -43,18 +49,33 @@ if [[ "$CP_VERSION" == latest ]]; then
 		cat "$TMPDIR/cp-latest.json"
 		exit 1
 	fi
-elif ! [[ "$CP_VERSION" =~ [0-9]+\.[0-9]+\.[0-9]+ ]]; then
+elif [[ "$CP_VERSION" = git-* ]]; then
+	# Use a specific commit from the development repo
+	CP_RELEASE=n
+	CP_VERSION=${CP_VERSION#git-}
+elif ! [[ "$CP_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-|$) ]]; then
+	# Anything else needs to be a release version number
 	echo "ClassicPress version number not supported: $CP_VERSION"
 	exit 1
 fi
 
-CP_BUILD_ZIP_URL="https://github.com/ClassicPress/ClassicPress-release/archive/$CP_VERSION.zip"
-CP_DEV_ZIP_URL="https://github.com/ClassicPress/ClassicPress/archive/$CP_VERSION+dev.zip"
-CP_DEV_FILE_URL="https://raw.githubusercontent.com/ClassicPress/ClassicPress/$CP_VERSION+dev"
-
-CP_BUILD_ZIP_PATH="$TMPDIR/classicpress-release-$CP_VERSION.zip"
-CP_DEV_ZIP_PATH="$TMPDIR/classicpress-dev-$CP_VERSION.zip"
-CP_DEV_PATH="$TMPDIR/classicpress-dev-$CP_VERSION"
+if [ $CP_RELEASE = y ]; then
+	# Remote URLs for release and dev packages/files
+	CP_BUILD_ZIP_URL="https://github.com/ClassicPress/ClassicPress-release/archive/$CP_VERSION.zip"
+	CP_DEV_ZIP_URL="https://github.com/ClassicPress/ClassicPress/archive/$CP_VERSION+dev.zip"
+	CP_DEV_FILE_URL="https://raw.githubusercontent.com/ClassicPress/ClassicPress/$CP_VERSION+dev"
+	# Local paths
+	CP_BUILD_ZIP_PATH="$TMPDIR/classicpress-release-$CP_VERSION.zip"
+	CP_DEV_ZIP_PATH="$TMPDIR/classicpress-dev-$CP_VERSION.zip"
+	CP_DEV_PATH="$TMPDIR/classicpress-dev-$CP_VERSION"
+else
+	# Remote URLs for dev packages/files (no release build)
+	CP_DEV_ZIP_URL="https://github.com/ClassicPress/ClassicPress/archive/$CP_VERSION.zip"
+	CP_DEV_FILE_URL="https://raw.githubusercontent.com/ClassicPress/ClassicPress/$CP_VERSION"
+	# Local paths
+	CP_DEV_ZIP_PATH="$TMPDIR/classicpress-dev-$CP_VERSION.zip"
+	CP_DEV_PATH="$TMPDIR/classicpress-dev-$CP_VERSION"
+fi
 
 install_cp() {
 	if [ -d $CP_CORE_DIR ]; then
@@ -63,9 +84,14 @@ install_cp() {
 
 	mkdir -p $CP_CORE_DIR
 
-	download "$CP_BUILD_ZIP_URL" "$CP_BUILD_ZIP_PATH"
-	unzip -q "$CP_BUILD_ZIP_PATH" -d "$CP_CORE_DIR"
-	clean_github_download "$CP_CORE_DIR"
+	if [ $CP_RELEASE = y ]; then
+		download "$CP_BUILD_ZIP_URL" "$CP_BUILD_ZIP_PATH"
+		unzip -q "$CP_BUILD_ZIP_PATH" -d "$CP_CORE_DIR"
+	else
+		download "$CP_DEV_ZIP_URL" "$CP_DEV_ZIP_PATH"
+		unzip -q "$CP_DEV_ZIP_PATH" -d "$CP_CORE_DIR"
+	fi
+	clean_github_download "$CP_CORE_DIR" true
 
 	download \
 		https://raw.github.com/markoheijnen/wp-mysqli/master/db.php \
@@ -81,9 +107,16 @@ clean_github_download() {
 	# GitHub downloads extract with a single folder inside, named based on the
 	# version downloaded. Get rid of this.
 	dir="$1"
+	remove_src_dir="$2"
 	mv "$dir" "$dir-old"
 	mv "$dir-old/ClassicPress-"* "$dir"
 	rmdir "$dir-old"
+	if [ -d "$dir/src" ] && [ "$remove_src_dir" = true ]; then
+		# Development build - get rid of the 'src' directory too.
+		mv "$dir" "$dir-old"
+		mv "$dir-old/src" "$dir"
+		rm -rf "$dir-old"
+	fi
 }
 
 install_test_suite() {
@@ -99,7 +132,7 @@ install_test_suite() {
 		mkdir -p "$CP_TESTS_DIR"
 		download "$CP_DEV_ZIP_URL" "$CP_DEV_ZIP_PATH"
 		unzip -q "$CP_DEV_ZIP_PATH" -d "$CP_DEV_PATH"
-		clean_github_download "$CP_DEV_PATH"
+		clean_github_download "$CP_DEV_PATH" false
 		cp -ar \
 			"$CP_DEV_PATH/tests/phpunit/includes" \
 			"$CP_DEV_PATH/tests/phpunit/data" \
@@ -194,6 +227,12 @@ install_e2e_site() {
 		cd "$CP_CORE_DIR"
 
 		curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+		# Note, `wp core download` does not work when running the tests with a
+		# development version of ClassicPress, so we'll substitute the latest
+		# build instead!
+		if [ -z "$CP_BUILD_ZIP_URL" ]; then
+			CP_BUILD_ZIP_URL="https://www.classicpress.net/latest.zip"
+		fi
 		php wp-cli.phar core download "$CP_BUILD_ZIP_URL"
 		php wp-cli.phar core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --dbhost=$DB_HOST --dbprefix=wp_ --extra-php <<PHP
 /* Change WP_MEMORY_LIMIT to increase the memory limit for public pages. */
