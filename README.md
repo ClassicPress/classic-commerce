@@ -1,4 +1,4 @@
-# Classic Commerce [![Build status](https://img.shields.io/travis/ClassicPress-research/classic-commerce/develop.svg?style=flat)](https://travis-ci.org/ClassicPress-research/classic-commerce)
+# Classic Commerce [![Build Status](https://travis-ci.com/ClassicPress-research/classic-commerce.svg?branch=master)](https://travis-ci.com/ClassicPress-research/classic-commerce)
 
 Welcome to the Classic Commerce repository on GitHub. This is a fork of WooCommerce and is still in development.
 
