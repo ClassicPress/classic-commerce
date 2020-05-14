@@ -2,7 +2,7 @@
   "name": "classicpress-research/classic-commerce",
   "description": "A simple, powerful and independent e-commerce platform. Sell anything with ease.",
   "homepage": "https://github.com/ClassicPress-research/classic-commerce",
-  "type": "classicpress-plugin",
+  "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",
   "prefer-stable": true,
   "minimum-stability": "dev",
