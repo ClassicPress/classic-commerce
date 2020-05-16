@@ -1,5 +1,18 @@
 == Changelog ==
 
+= 1.0.0-beta.1 - 2020-05-16
+Improved automated testing on GitHub (#174)
+Coding standards improvements (#174)
+Added user agent (#202)
+Various CSS tweaks
+Various spacing and capitalization tweaks
+Rename logo and icon image files as per CP naming standard (#210)
+Updates to CodePotent Update Manager (#215)
+Comb out remnant css after Install wizard + Jetpack + woo services removal (#204)
+Backport security fixes from WC 3.8.0 and below (#218, #219, #220, #221, #222, #225, #228, #229, #230)
+Improved compatibility with PHP 7.4, ready for upcoming ClassicPress 1.2.0 (#225)
+Changed composer.json "type" back to "wordpress-plugin" for greater compatibility (#239, #240)
+
 = 1.0.0-alpha.3 - 2020-01-20
 NEW: Add usage tracking notice & opt-out
 NEW: Change template path to look for classic-commerce in theme folder
