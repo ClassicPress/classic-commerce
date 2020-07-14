@@ -1,5 +1,5 @@
 /*!
- * SelectWoo 1.0.5
+ * SelectWoo 1.0.6
  * https://github.com/woocommerce/selectWoo
  *
  * Released under the MIT license
@@ -1613,7 +1613,7 @@ S2.define('select2/selection/single',[
     var $rendered = this.$selection.find('.select2-selection__rendered');
     var formatted = this.display(selection, $rendered);
 
-	$rendered.empty().text(formatted);
+    $rendered.empty().append(formatted);
     $rendered.prop('title', selection.title || selection.text);
   };
 
@@ -3992,7 +3992,7 @@ S2.define('select2/dropdown/search',[
     var $search = $(
       '<span class="select2-search select2-search--dropdown">' +
         '<input class="select2-search__field" type="text" tabindex="-1"' +
-		' autocomplete="off" autocorrect="off" autocapitalize="none"' +
+        ' autocomplete="off" autocorrect="off" autocapitalize="none"' +
         ' spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="true" />' +
       '</span>'
     );
