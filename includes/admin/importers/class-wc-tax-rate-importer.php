@@ -30,13 +30,6 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 	public $id;
 
 	/**
-	 * The current file url.
-	 *
-	 * @var string
-	 */
-	public $file_url;
-
-	/**
 	 * The current import page.
 	 *
 	 * @var string
@@ -79,15 +72,8 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 				check_admin_referer( 'import-upload' );
 
 				if ( $this->handle_upload() ) {
-
-					if ( $this->id ) {
-						$file = get_attached_file( $this->id );
-					} else {
-						$file = ABSPATH . $this->file_url;
-					}
-
+					$file = get_attached_file( $this->id );
 					add_filter( 'http_request_timeout', array( $this, 'bump_request_timeout' ) );
-
 					$this->import( $file );
 				}
 				break;
@@ -215,57 +201,45 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 	 * @return bool False if error uploading or invalid file, true otherwise
 	 */
 	public function handle_upload() {
-		$file_url = isset( $_POST['file_url'] ) ? wc_clean( wp_unslash( $_POST['file_url'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.NoNonceVerification -- Nonce already verified in WC_Tax_Rate_Importer::dispatch()
-
-		if ( empty( $file_url ) ) {
-			if ( ! isset( $_FILES['import'] ) || $_FILES['import']['name'] == '' ) {
-			  $this->import_error( __( 'File is empty. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'classic-commerce' ) );
-			}
-
-			if ( ! wc_is_file_valid_csv( $_FILES['import']['name'], false ) ) {
-				$this->import_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
-			}
-			
-			$overrides = array(
-				'test_form' => false,
-				'mimes'     => self::get_valid_csv_filetypes(),
-			);
-			$import    = $_FILES['import']; // WPCS: sanitization ok, input var ok.
-			$upload    = wp_handle_upload( $import, $overrides );
-			
-			if ( isset( $upload['error'] ) ) {
-				$this->import_error( $upload['error'] );
-			}
-			
-			// Construct the object array.
-			$object = array(
-			  'post_title'     => basename( $upload['file'] ),
-			  'post_content'   => $upload['url'],
-			  'post_mime_type' => $upload['type'],
-			  'guid'           => $upload['url'],
-			  'context'        => 'import',
-			  'post_status'    => 'private',
-			);
-
-			// Save the data.
-			$id = wp_insert_attachment( $object, $upload['file'] );
-			
-			/*
-			 * Schedule a cleanup for one day from now in case of failed
-			 * import or missing wp_import_cleanup() call.
-			 */
-			wp_schedule_single_event( time() + DAY_IN_SECONDS, 'importer_scheduled_cleanup', array( $id ) );
-
-			$this->id = absint( $id );
-		} elseif ( file_exists( ABSPATH . $file_url ) ) {
-			if ( ! wc_is_file_valid_csv( ABSPATH . $file_url ) ) {
-				$this->import_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
-			}
-
-			$this->file_url = esc_attr( $file_url );
-		} else {
-			$this->import_error();
+		if ( ! isset( $_FILES['import'] ) || $_FILES['import']['name'] == '' ) {
+		  $this->import_error( __( 'File is empty. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'classic-commerce' ) );
 		}
+
+		if ( ! wc_is_file_valid_csv( $_FILES['import']['name'], false ) ) {
+			$this->import_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
+		}
+
+		$overrides = array(
+			'test_form' => false,
+			'mimes'     => self::get_valid_csv_filetypes(),
+		);
+		$import    = $_FILES['import']; // WPCS: sanitization ok, input var ok.
+		$upload    = wp_handle_upload( $import, $overrides );
+
+		if ( isset( $upload['error'] ) ) {
+			$this->import_error( $upload['error'] );
+		}
+
+		// Construct the object array.
+		$object = array(
+		  'post_title'     => basename( $upload['file'] ),
+		  'post_content'   => $upload['url'],
+		  'post_mime_type' => $upload['type'],
+		  'guid'           => $upload['url'],
+		  'context'        => 'import',
+		  'post_status'    => 'private',
+		);
+
+		// Save the data.
+		$id = wp_insert_attachment( $object, $upload['file'] );
+
+		/*
+		 * Schedule a cleanup for one day from now in case of failed
+		 * import or missing wp_import_cleanup() call.
+		 */
+		wp_schedule_single_event( time() + DAY_IN_SECONDS, 'importer_scheduled_cleanup', array( $id ) );
+
+		$this->id = absint( $id );
 
 		return true;
 	}
