@@ -192,7 +192,22 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 
 		do_action( 'import_end' );
 	}
-
+	
+	
+	/**
+	 * Get all the valid filetypes for a CSV file.
+	 *
+	 * @return array
+	 */
+	protected static function get_valid_csv_filetypes() {
+		return apply_filters(
+			'woocommerce_csv_import_valid_filetypes', array(
+				'csv' => 'text/csv',
+				'txt' => 'text/plain',
+			)
+		);
+	}
+	
 	/**
 	 * Handles the CSV upload and initial parsing of the file to prepare for.
 	 * displaying author import options.
@@ -203,20 +218,45 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 		$file_url = isset( $_POST['file_url'] ) ? wc_clean( wp_unslash( $_POST['file_url'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.NoNonceVerification -- Nonce already verified in WC_Tax_Rate_Importer::dispatch()
 
 		if ( empty( $file_url ) ) {
-			$file = wp_import_handle_upload();
-
-			if ( isset( $file['error'] ) ) {
-				$this->import_error( $file['error'] );
+			if ( ! isset( $_FILES['import'] ) || $_FILES['import']['name'] == '' ) {
+			  $this->import_error( __( 'File is empty. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.', 'classic-commerce' ) );
 			}
-			
-			if ( ! wc_is_file_valid_csv( $file['file'], false ) ) {
-				// Remove file if not valid.
-				wp_delete_attachment( $file['id'], true );
 
+			if ( ! wc_is_file_valid_csv( $_FILES['import']['name'], false ) ) {
 				$this->import_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
 			}
+			
+			$overrides = array(
+				'test_form' => false,
+				'mimes'     => self::get_valid_csv_filetypes(),
+			);
+			$import    = $_FILES['import']; // WPCS: sanitization ok, input var ok.
+			$upload    = wp_handle_upload( $import, $overrides );
+			
+			if ( isset( $upload['error'] ) ) {
+				$this->import_error( $upload['error'] );
+			}
+			
+			// Construct the object array.
+			$object = array(
+			  'post_title'     => basename( $upload['file'] ),
+			  'post_content'   => $upload['url'],
+			  'post_mime_type' => $upload['type'],
+			  'guid'           => $upload['url'],
+			  'context'        => 'import',
+			  'post_status'    => 'private',
+			);
 
-			$this->id = absint( $file['id'] );
+			// Save the data.
+			$id = wp_insert_attachment( $object, $upload['file'] );
+			
+			/*
+			 * Schedule a cleanup for one day from now in case of failed
+			 * import or missing wp_import_cleanup() call.
+			 */
+			wp_schedule_single_event( time() + DAY_IN_SECONDS, 'importer_scheduled_cleanup', array( $id ) );
+
+			$this->id = absint( $id );
 		} elseif ( file_exists( ABSPATH . $file_url ) ) {
 			if ( ! wc_is_file_valid_csv( ABSPATH . $file_url ) ) {
 				$this->import_error( __( 'Invalid file type. The importer supports CSV and TXT file formats.', 'classic-commerce' ) );
@@ -273,7 +313,7 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 					<tbody>
 						<tr>
 							<th>
-								<label for="upload"><?php esc_html_e( 'Choose a file from your computer:', 'classic-commerce' ); ?></label>
+								<label for="upload"><?php esc_html_e( 'Choose a CSV file from your computer:', 'classic-commerce' ); ?></label>
 							</th>
 							<td>
 								<input type="file" id="upload" name="import" size="25" />
@@ -288,14 +328,6 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 									);
 									?>
 								</small>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<label for="file_url"><?php esc_html_e( 'OR enter path to file:', 'classic-commerce' ); ?></label>
-							</th>
-							<td>
-								<?php echo ' ' . esc_html( ABSPATH ) . ' '; ?><input type="text" id="file_url" name="file_url" size="25" />
 							</td>
 						</tr>
 						<tr>
@@ -325,6 +357,7 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 			echo esc_html( $message );
 		}
 		echo '</p>';
+		echo '<p><a href="' . esc_url( admin_url( 'admin.php?import=woocommerce_tax_rate_csv' ) ) . '">' . esc_html__( '&laquo; Back', 'classic-commerce' ) . '</a></p>';
 		$this->footer();
 		die();
 	}
