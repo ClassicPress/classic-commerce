@@ -291,7 +291,7 @@ class WC_Tax_Rate_Importer extends WP_Importer {
 	public function greet() {
 
 		echo '<div class="narrow">';
-		echo '<p>' . esc_html__( 'Hi there! Upload a CSV file containing tax rates to import the contents into your shop. Choose a .csv file to upload, then click "Upload file and import".', 'classic-commerce' ) . '</p>';
+		echo '<p>' . esc_html__( 'Upload a CSV file containing tax rates to import the contents into your shop. Choose a .csv file to upload, then click "Upload file and import".', 'classic-commerce' ) . '</p>';
 
 		/* translators: 1: Link to tax rates sample file 2: Closing link. */
 		echo '<p>' . sprintf( esc_html__( 'Your CSV needs to include columns in a specific order. %1$sClick here to download a sample%2$s.', 'classic-commerce' ), '<a href="' . esc_url( WC()->plugin_url() ) . '/sample-data/sample_tax_rates.csv">', '</a>' ) . '</p>';
