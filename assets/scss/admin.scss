@@ -177,7 +177,7 @@
 		 }
 
 		 mark.yes {
-			 color: $purple;
+			 color: $cc-green;
 		 }
 
 		 mark.no {
@@ -2595,7 +2595,7 @@
 		 }
 	 }
 	 td.wc-shipping-zones-blank-state, td.wc-shipping-zone-method-blank-state {
-		 background: #f7f1f6 !important;
+		 background: #f8f8f8 !important;
 		 overflow: hidden;
 		 position: relative;
 		 padding: 7.5em 7.5% !important;
@@ -2639,12 +2639,12 @@
 			 position: absolute;
 		 }
 		 .button-primary {
-			 background-color: #804877;
-			 border-color: #804877;
+			 background-color: #3bad74;
+			 border-color: #3bad74;
 			 box-shadow: inset 0 1px 0 rgba( 255, 255, 255, 0.2 ), 0 1px 0 rgba( 0, 0, 0, 0.15 );
 			 margin: 0;
 			 opacity: 1;
-			 text-shadow: 0 -1px 1px #8a4f7f, 1px 0 1px #8a4f7f, 0 1px 1px #8a4f7f, -1px 0 1px #8a4f7f;
+			 text-shadow: none;
 			 font-size: 1.5em;
 			 padding: 0.75em 1em;
 			 height: auto;
