@@ -2595,7 +2595,7 @@
 		 }
 	 }
 	 td.wc-shipping-zones-blank-state, td.wc-shipping-zone-method-blank-state {
-		 background: #f8f8f8 !important;
+		 background: #eee !important;
 		 overflow: hidden;
 		 position: relative;
 		 padding: 7.5em 7.5% !important;
@@ -2608,13 +2608,13 @@
 			 }
 		 }
 		 p, li {
-			 color: $primary;
+			 color: $gray-text;
 			 font-size: 1.5em;
 			 line-height: 1.5em;
 			 margin: 0 0 1em;
 			 position: relative;
 			 z-index: 1;
-			 text-shadow: 1px 1px 1px white;
+			 text-shadow:none;
 
 			 &.main {
 				 font-size: 2em;
@@ -2629,7 +2629,7 @@
 			 font-family: $woocommerce_font;
 			 text-align: center;
 			 line-height: 1;
-			 color: #eee2ec;
+			 color: #cbefd5;
 			 display: block;
 			 width: 1em;
 			 font-size: 40em;
