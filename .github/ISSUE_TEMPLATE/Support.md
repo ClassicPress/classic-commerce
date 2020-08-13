@@ -10,4 +10,4 @@ We don't offer technical support on GitHub so we recommend using the following:
 Usage docs can be found here: https://docs.woocommerce.com/
 
 **Technical support, General usage and development questions**
-If you have a problem, you may want to write an issue to the Classic Commerce GitHub Repo: https://github.com/ClassicPress-research/classic-commerce/issues
+If you have a problem, you may want to write an issue to the Classic Commerce GitHub Repo: https://github.com/ClassicPress-plugins/classic-commerce/issues

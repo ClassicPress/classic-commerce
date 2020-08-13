@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Classic Commerce
- * Plugin URI: https://github.com/ClassicPress-research/classic-commerce
+ * Plugin URI: https://github.com/ClassicPress-plugins/classic-commerce
  * Description: A simple, powerful and independent e-commerce platform. Sell anything with ease.
  * Version: 1.0.0-beta.1
  * Author: ClassicPress Research Team
- * Author URI: https://github.com/ClassicPress-research/classic-commerce
+ * Author URI: https://github.com/ClassicPress-plugins/classic-commerce
  * Text Domain: classic-commerce
  * Domain Path: /i18n/languages/
  *
