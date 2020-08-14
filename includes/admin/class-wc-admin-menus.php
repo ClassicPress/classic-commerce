@@ -140,7 +140,7 @@ class WC_Admin_Menus {
 	 *
 	 * - https://www.skyverge.com/blog/screen-id-checks-wordpress-submenu-pages/
 	 * - https://wpdirectory.net, search for "sanitize_title.{0,90}woocommerce"
-	 * - https://github.com/ClassicPress-research/classic-commerce/pull/119
+	 * - https://github.com/ClassicPress-plugins/classic-commerce/pull/119
 	 *
 	 * Based on https://gist.github.com/geoffspink/e191a7cad8c9a23f5c60.
 	 *

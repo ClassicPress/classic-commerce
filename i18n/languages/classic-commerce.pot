@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Classic Commerce 0.1.0\n"
 "Report-Msgid-Bugs-To: "
-"https://github.com/ClassicPress-Research/classic-commerce/issues\n"
+"https://github.com/ClassicPress-plugins/classic-commerce/issues\n"
 "POT-Creation-Date: 2019-11-11 19:19:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -26462,7 +26462,7 @@ msgid "Only logged in customers who have purchased this product may leave a revi
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://github.com/ClassicPress-research/classic-commerce"
+msgid "https://github.com/ClassicPress-plugins/classic-commerce"
 msgstr ""
 
 #. Description of the plugin/theme
