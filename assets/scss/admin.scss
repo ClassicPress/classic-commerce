@@ -2946,7 +2946,7 @@
 
  .status-enabled::before {
 	 @include icon( '\e015' );
-	 color: $primary;
+	 color: $ccgreen;
  }
 
  .status-disabled::before {
