@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<p><?php printf( __( 'For discussion and help with finding compatible Classic Commerce addons, use the <a href="%s">ClassicPress community forum</a>.', 'classic-commerce' ), 'https://forums.classicpress.net/tags/classic-commerce/' ); ?></p>
 
-	<p><?php printf( __( 'For problems with the Classic Commerce core files please raise an issue via <a href="%s">Github issues</a>.', 'classic-commerce' ), 'https://github.com/ClassicPress-research/classic-commerce/issues/' ); ?></p>
+	<p><?php printf( __( 'For problems with the Classic Commerce core files please raise an issue via <a href="%s">Github issues</a>.', 'classic-commerce' ), 'https://github.com/ClassicPress-plugins/classic-commerce/issues/' ); ?></p>
 
 	<hr />
 

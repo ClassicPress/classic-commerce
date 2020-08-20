@@ -2,10 +2,10 @@
   "name": "classic-commerce",
   "title": "Classic Commerce",
   "version": "0.1.0",
-  "homepage": "https://github.com/ClassicPress-research/classic-commerce",
+  "homepage": "https://github.com/ClassicPress-plugins/classic-commerce",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ClassicPress-research/classic-commerce.git"
+    "url": "https://github.com/ClassicPress-plugins/classic-commerce.git"
   },
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",

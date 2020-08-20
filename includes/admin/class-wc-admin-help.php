@@ -64,8 +64,8 @@ class WC_Admin_Help {
 				'content' =>
 					'<h2>' . __( 'Found a bug?', 'classic-commerce' ) . '</h2>' .
 					/* translators: 1: GitHub issues URL 2: System status report URL */
-					'<p>' . sprintf( __( 'If you find a bug within Classic Commerce core you can create a ticket via <a href="%1$s">Github issues</a>. To help us solve your issue, please be as descriptive as possible and include your <a href="%2$s">system status report</a>.', 'classic-commerce' ), 'https://github.com/ClassicPress-research/classic-commerce/issues', admin_url( 'admin.php?page=wc-status' ) ) . '</p>' .
-					'<p><a href="https://github.com/ClassicPress-research/classic-commerce/issues" class="button button-primary">' . __( 'Report a bug', 'classic-commerce' ) . '</a> <a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button">' . __( 'System status', 'classic-commerce' ) . '</a></p>',
+					'<p>' . sprintf( __( 'If you find a bug within Classic Commerce core you can create a ticket via <a href="%1$s">Github issues</a>. To help us solve your issue, please be as descriptive as possible and include your <a href="%2$s">system status report</a>.', 'classic-commerce' ), 'https://github.com/ClassicPress-plugins/classic-commerce/issues', admin_url( 'admin.php?page=wc-status' ) ) . '</p>' .
+					'<p><a href="https://github.com/ClassicPress-plugins/classic-commerce/issues" class="button button-primary">' . __( 'Report a bug', 'classic-commerce' ) . '</a> <a href="' . admin_url( 'admin.php?page=wc-status' ) . '" class="button">' . __( 'System status', 'classic-commerce' ) . '</a></p>',
 			)
 		);
 
@@ -82,7 +82,7 @@ class WC_Admin_Help {
 
 		$screen->set_help_sidebar(
 			'<p><strong>' . __( 'For more information:', 'classic-commerce' ) . '</strong></p>' .
-			'<p><a href="https://github.com/ClassicPress-research/classic-commerce/" target="_blank">' . __( 'Github project', 'classic-commerce' ) . '</a></p>' .
+			'<p><a href="https://github.com/ClassicPress-plugins/classic-commerce/" target="_blank">' . __( 'Github project', 'classic-commerce' ) . '</a></p>' .
 			'<p><a href="https://classicpress.net/" target="_blank">' . __( 'About ClassicPress', 'classic-commerce' ) . '</a></p>' .
 			'<p><a href="https://woocommerce.com/product-category/woocommerce-extensions/" target="_blank">' . __( 'Extensions', 'classic-commerce' ) . '</a></p>'
 		);
