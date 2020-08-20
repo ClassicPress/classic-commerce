@@ -6,9 +6,6 @@ services:
   - xvfb
   - mysql
   - docker
-  - docker-compose
-
-sudo: false
 
 cache:
   directories:
