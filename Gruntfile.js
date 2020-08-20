@@ -225,6 +225,7 @@ module.exports = function( grunt ) {
 				src:  [
 					'**/*.php',               // Include all files
 					'!includes/libraries/**', // Exclude libraries/
+					'!includes/class-wc-update-client.php', // Exclude Update Manager
 					'!node_modules/**',       // Exclude node_modules/
 					'!tests/**',              // Exclude tests/
 					'!vendor/**',             // Exclude vendor/
