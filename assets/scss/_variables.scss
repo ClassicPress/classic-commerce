@@ -4,12 +4,17 @@
 
 @import 'fonts';
 
-$purple:         	   #a46497; 
-$red:           	   #a00;
-$orange:        	   #ffba00;
-$blue:          	   #2ea2cc;
+$purple:                 #a46497; 
+$red:                    #a00;
+$orange:                 #ffba00;
+$blue:                   #2ea2cc;
 
-$primary:                #3bad74;                                  // Primary color
+// CC color palette
+$ccblue:                 #0476e5;
+$ccgreen:                #3bad74;
+$ccaqua:                 #338084;
+
+$primary:                $ccaqua;                                    // Primary color
 $primary_light:          lighten( $primary, 33% );                   // Primary color light
 $secondary:              desaturate(lighten($primary, 40%), 21%);    // Secondary buttons
 
@@ -19,17 +24,17 @@ $secondarytext:          desaturate(darken($secondary, 60%), 21%);   // Text on 
 $highlight:              adjust-hue($primary, 150deg);               // Prices, In stock labels, sales flash
 $highlightext:           desaturate(lighten($highlight, 50%), 18%);  // Text on highlight color bg
 
-$white:                #fff;                                     
-$black:                #000;                                     
-$subtext:              lighten($black, 70%);                          // small, breadcrumbs etc
-$stat-light:           adjust-hue($white, 90deg);                     // Stats light
+$white:                  #fff;                                     
+$black:                  #000;                                     
+$subtext:                lighten($black, 70%);                        // small, breadcrumbs etc
+$stat-light:             adjust-hue($white, 90deg);                   // Stats light
 
-$contentbg:            $white;                                       // Content BG - Tabs (active state)
+$contentbg:              $white;                                      // Content BG - Tabs (active state)
 
 // Grays
 $gray:                   #87a6bc;
 $gray-light:             lighten( $gray, 33% ); //#f3f6f8
-$gray-dark:              darken( $gray, 38% ); //#2e4453
+$gray-dark:              darken( $gray, 38% );  //#2e4453
 
 // $gray-text: ideal for standard, non placeholder text
 // $gray-text-min: minimum contrast needed for WCAG 2.0 AA on white background
@@ -43,8 +48,8 @@ $color_button_secondary: $primarytext;
 $woocommerce_font:       'WooCommerce';                               // Custom font - WooCommerce	
 $star_font:              'star';                                      // Custom font - Star	
 
-$headings: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-$body: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+$headings:               -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+$body:                   "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
 
-$body-color: #111;
-$highlights-color: #0073aa;
+$body-color:             #111;
+$highlights-color:       #0073aa;

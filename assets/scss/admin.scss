@@ -29,17 +29,17 @@
  .woocommerce-BlankState {
 	 a.button-primary,
 	 button.button-primary {
-		 background: $primary;
-		 border-color: $primary;
-		 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 $primary;
+		 background: $ccaqua;
+		 border-color: $ccaqua;
+		 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 $ccaqua;
 		 color: #fff;
-		 text-shadow: 0 -1px 1px $primary, 1px 0 1px $primary, 0 1px 1px $primary, -1px 0 1px $primary;
+		 text-shadow: none;
 		 display: inline-block;
 
 		 &:hover, &:focus, &:active {
-			 background: $primary;
-			 border-color: $primary;
-			 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 $primary;
+			 background: $ccaqua;
+			 border-color: $ccaqua;
+			 box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0 $ccaqua;
 		 }
 	 }
  }
@@ -177,7 +177,7 @@
 		 }
 
 		 mark.yes {
-			 color: $purple;
+			 color: $ccgreen;
 		 }
 
 		 mark.no {
@@ -2595,7 +2595,7 @@
 		 }
 	 }
 	 td.wc-shipping-zones-blank-state, td.wc-shipping-zone-method-blank-state {
-		 background: #f7f1f6 !important;
+		 background: #eee !important;
 		 overflow: hidden;
 		 position: relative;
 		 padding: 7.5em 7.5% !important;
@@ -2608,13 +2608,13 @@
 			 }
 		 }
 		 p, li {
-			 color: $primary;
+			 color: $gray-text;
 			 font-size: 1.5em;
 			 line-height: 1.5em;
 			 margin: 0 0 1em;
 			 position: relative;
 			 z-index: 1;
-			 text-shadow: 1px 1px 1px white;
+			 text-shadow:none;
 
 			 &.main {
 				 font-size: 2em;
@@ -2629,7 +2629,7 @@
 			 font-family: $woocommerce_font;
 			 text-align: center;
 			 line-height: 1;
-			 color: #eee2ec;
+			 color: #d2e3e4;
 			 display: block;
 			 width: 1em;
 			 font-size: 40em;
@@ -2639,12 +2639,12 @@
 			 position: absolute;
 		 }
 		 .button-primary {
-			 background-color: #804877;
-			 border-color: #804877;
+			 background-color: $primary;
+			 border-color: $primary;
 			 box-shadow: inset 0 1px 0 rgba( 255, 255, 255, 0.2 ), 0 1px 0 rgba( 0, 0, 0, 0.15 );
 			 margin: 0;
 			 opacity: 1;
-			 text-shadow: 0 -1px 1px #8a4f7f, 1px 0 1px #8a4f7f, 0 1px 1px #8a4f7f, -1px 0 1px #8a4f7f;
+			 text-shadow: none;
 			 font-size: 1.5em;
 			 padding: 0.75em 1em;
 			 height: auto;
@@ -2946,7 +2946,7 @@
 
  .status-enabled::before {
 	 @include icon( '\e015' );
-	 color: $primary;
+	 color: $ccgreen;
  }
 
  .status-disabled::before {
