@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 1.0.0-rc.1 - 2020-08-29
+Fixed: Incorrect escaping of strings in setup wizard and order edit page. #244
+Improved: Better checks and improved messaging when invalid file type chosen for CSV tax import. #245
+Improved: CSS tweaks to enhance CC branding. New CC aqua color introduced. #247
+Improved: Big improvements to CC build process. #250, #251
+Tweaked: Removed all references to old ClassicPress-Research repository. #249
+
 = 1.0.0-beta.1 - 2020-05-16
 Improved automated testing on GitHub (#174)
 Coding standards improvements (#174)
