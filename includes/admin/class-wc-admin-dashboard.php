@@ -239,6 +239,8 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				set_transient( $transient_name, $outofstock_count, DAY_IN_SECONDS * 30 );
 			}
 			?>
+			
+			<?php if ( 'yes' === get_option( 'woocommerce_manage_stock' ) ) { ?>
 			<li class="low-in-stock">
 			<a href="<?php echo admin_url( 'admin.php?page=wc-reports&tab=stock&report=low_in_stock' ); ?>">
 				<?php
@@ -261,6 +263,8 @@ if ( ! class_exists( 'WC_Admin_Dashboard', false ) ) :
 				?>
 				</a>
 			</li>
+			<?php } ?>
+			
 			<?php
 		}
 
