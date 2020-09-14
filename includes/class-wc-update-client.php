@@ -11,7 +11,8 @@
  * implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Full
  * text of the license is available at https://www.gnu.org/licenses/gpl-2.0.txt.
  * -----------------------------------------------------------------------------
- * Copyright © 2019 - Code Potent
+ * Copyright 2020, Code Potent
+ * -----------------------------------------------------------------------------
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
@@ -20,19 +21,22 @@ namespace ClassicCommerce\ClassicCommerce;
 // EDIT: URL where Update Manager is installed; with trailing slash!
 const UPDATE_SERVER = 'https://classiccommerce.cc/';
 
+// EDIT: plugin or theme?
+const UPDATE_TYPE = 'plugin';
+
 // Prevent direct access.
 if (!defined('ABSPATH')) {
 	die();
 }
 
 /**
- * Remote updater class for ClassicPress plugins.
+ * Remote updater class for ClassicPress plugin and themes.
  *
  * This class is used in conjunction with the Update Manager plugin to create an
- * integrated update path for end-users of your ClassicPress plugins. This class
- * is intended for plugins that will be receiving updates directly from a remote
- * server, such as GitHub or your own site. The Update Manager ensures that your
- * updates look great with all the right images and texts.
+ * integrated update path for end-users of your ClassicPress plugins and themes.
+ * This class is for plugins and themes that will get updates directly from some
+ * remote location such as GitHub or your own site. The Update Manager plugin is
+ * what makes your updates look great with all the right images and texts.
  *
  * @author John Alarcon
  */
@@ -51,11 +55,20 @@ class UpdateClient {
 	 * property can be set to 4.9.x (whatever x might be at the time,) if you're
 	 * wanting to be exact. The issue with doing that is that you'd have to bump
 	 * that number with every new release of 4.9.x to ensure that core indicates
-	 * 100% compatibility in the table. If your plugin is compatible with 4.9.x,
-	 * it is compatible with ClassicPress 1.x.x, so, there shouldn't be any need
-	 * for this. Setting it to 4.9.99 ensures you don't have to update it again.
+	 * 100% compatibility in the table. If your plugin or theme is compatible to
+	 * WordPress 4.9.x, it is compatible with ClassicPress 1.x.x, so, there will
+	 * not be a need for this. Setting it to 4.9.99 ensures don't have to update
+	 * it again.
 	 */
 	private $cp_latest_version = '4.9.99';
+
+	/**
+	 * Cached component data
+	 *
+	 * As pre_set_site_transient_update_plugins is called twice by ClassicPress,
+	 * saving this value will cut an extra HTTP call to the update server.
+	 */
+	private $component_data = '';
 
 	/**
 	 * Constructor.
@@ -73,11 +86,11 @@ class UpdateClient {
 			// The URL where your Update Manager plugin is installed.
 			'server' => UPDATE_SERVER,
 			// Leave as-is; may add support for theme updates later.
-			'type' => 'plugin',
+			'type' => UPDATE_TYPE,
 			// Plugin identifier; ie, plugin-folder/plugin-file.php.
-			'id' => $this->get_plugin_identifier(),
+			'id' => $this->get_identifier(),
 			// Leave as-is.
-			'api' => '1.1.0',
+			'api' => '2.0.0',
 			// Leave as-is – tutorial can be created with enough interest.
 			'post' => [],
 		];
@@ -85,7 +98,7 @@ class UpdateClient {
 		// Find and store the latest CP version during update process.
 		$this->cp_latest_version = get_option('cp_latest_version', '');
 
-		// Hook the plugin into the system.
+		// Hook the update client into the system.
 		$this->init();
 
 	}
@@ -115,7 +128,7 @@ class UpdateClient {
 	}
 
 	/**
-	 * Initialize the plugin.
+	 * Initialize the update manager client.
 	 *
 	 * Hook in actions and filters.
 	 *
@@ -128,14 +141,14 @@ class UpdateClient {
 		// Print footer scripts; see comments on the method.
 		add_action('admin_print_footer_scripts', [$this, 'print_admin_scripts']);
 
-		// Filter the plugin admin row.
-		add_filter('plugin_row_meta', [$this, 'filter_plugin_row_meta'], 10, 2);
+		// Filter the admin row links.
+		add_filter($this->config['type'].'_row_meta', [$this, 'filter_component_row_meta'], 10, 2);
 
-		// Filter plugin update data into the transient before saving.
-		add_filter('pre_set_site_transient_update_plugins', [$this, 'filter_plugin_update_transient']);
+		// Filter update data into the transient before saving.
+		add_filter('pre_set_site_transient_update_'.$this->config['type'].'s', [$this, 'filter_component_update_transient']);
 
-		// Filter the plugin install API results.
-		add_filter('plugins_api_result', [$this, 'filter_plugins_api_result'], 10, 3);
+		// Filter install API results.
+		add_filter($this->config['type'].'s_api_result', [$this, 'filter_components_api_result'], 10, 3);
 
 		// Filter after-install process.
 		add_filter('upgrader_post_install', [$this, 'filter_upgrader_post_install'], 11, 3);
@@ -152,7 +165,7 @@ class UpdateClient {
 	 * Note that scripts and styles should be enqueued with the proper hooks and
 	 * not printed directly (as is done here) unless there is a valid reason for
 	 * doing so. In this case, the valid reason is simply that this update class
-	 * is intended to be a single-file addition to your plugin; if you enqueue a
+	 * is intended to be a single file in your plugin or theme; if you enqueue a
 	 * file, it must be an actual file – this would add needless complication to
 	 * implementing the class.
 	 *
@@ -168,9 +181,9 @@ class UpdateClient {
 		// Only need this JS/CSS on the plugin admin page and updates page.
 		if ($screen->base === 'plugins' || $screen->base === 'plugin-install') {
 			// This will make the jQuery below work with various languages.
-			$text1 = esc_html__('Compatible up to:', 'codepotent-update-manager');
-			$text2 = esc_html__('Reviews', 'codepotent-update-manager');
-			$text3 = esc_html__('Read all reviews', 'codepotent-update-manager');
+			$text1 = esc_html__('Compatible up to:');
+			$text2 = esc_html__('Reviews');
+			$text3 = esc_html__('Read all reviews');
 			// Swap "Compatible up to: 4.9.99" with "Compatible up to: 1.1.1".
 			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.$text1.'</strong> '.$this->cp_latest_version.'");$(".fyi h3:contains('.$text2.')").hide();$(".fyi p:contains('.$text3.')").hide();});</script>'."\n";
 			// Styles for the modal window.
@@ -200,61 +213,64 @@ class UpdateClient {
 	}
 
 	/**
-	 * Filter plugin update transient.
+	 * Filter the update transient.
 	 *
 	 * @author John Alarcon
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
 	 * @param object $value
 	 * @return object $value
 	 */
-	public function filter_plugin_update_transient($value) {
+	public function filter_component_update_transient($value) {
 
 		// Is there a response?
 		if (isset($value->response)) {
 
-			// Update the database with the latest version number.
-			update_option('cp_latest_version', $this->get_latest_version_number());
+			// Ensure the latest ClassicPress version number is available.
+			$this->get_latest_version_number();
 
-			// Get the installed plugins.
-			$installed_plugins = $this->get_plugin_data('query_plugins');
+			// Get the installed components.
+			$components = $this->get_component_data('query_'.$this->config['type'].'s');
 
-			// Iterate over installed plugins.
-			foreach($installed_plugins as $plugin=>$data) {
+			// Iterate over installed components.
+			foreach($components as $component=>$data) {
 
 				// Is there a new version?
-				if (isset($data['new_version'], $data['slug'], $data['plugin'])) {
+				if (isset($data['id'], $data['new_version'], $data['package'])) {
 
-					// If icons are found, add their urls to the $data.
-					$icons = [];
-					if (!empty($icons = $this->get_plugin_images('icon', dirname($plugin)))) {
-						$data['icons'] = $icons;
+					// Add update data to response.
+					if ($this->config['type'] === 'plugin') {
+
+						// Plugin images.
+						$icons = $banners = $screenshots = [];
+						if (!empty($icons = $this->get_plugin_images('icon', dirname($component)))) {
+							$data['icons'] = $icons;
+						}
+						if (!empty($banners = $this->get_plugin_images('banner', dirname($component)))) {
+							$data['banners'] = $banners;
+						}
+						if (!empty($screenshots = $this->get_plugin_images('screenshot', dirname($component)))) {
+							$data['screenshots'] = $screenshots;
+						}
+						// Cast as object.
+						$value->response[$component] = (object)$data;
+
+					} else if ($this->config['type'] === 'theme') {
+
+						// Cast as array.
+						$value->response[$component] = (array)$data;
+
 					}
-
-					// If banners are found, add their urls to the $data.
-					$banners = [];
-					if (!empty($banners = $this->get_plugin_images('banner', dirname($plugin)))) {
-						$data['banners'] = $banners;
-					}
-
-					// If screenshots are found, add their urls to the $data.
-					$screenshots = [];
-					if (!empty($screenshots = $this->get_plugin_images('screenshot', dirname($plugin)))) {
-						$data['screenshots'] = $screenshots;
-					}
-
-					// Add the update data to the response.
-					$value->response[$plugin] = (object)$data;
 
 				} else {
 
 					// If no new version, no update. Unset the entry.
-					unset($value->response[$plugin]);
+					unset($value->response[$component]);
 
 				} // if/else
 
-			} // foreach $installed_plugins
+			} // foreach $components
 
 		} // isset($value->response)
 
@@ -264,36 +280,52 @@ class UpdateClient {
 	}
 
 	/**
-	 * Filter plugins API result.
+	 * Filter the update transient.
 	 *
 	 * @author John Alarcon
 	 *
 	 * @since 1.0.0
+	 *
+	 * @deprecated 2.0.0 Use filter_component_update_transient() method instead.
+	 *
+	 * @param object $value
+	 * @return object $value
+	 */
+	public function filter_plugin_update_transient($value) {
+		return $this->filter_component_update_transient($value);
+	}
+
+	/**
+	 * Filter the API result.
+	 *
+	 * @author John Alarcon
+	 *
+	 * @since 2.0.0
 	 *
 	 * @param object $res
 	 * @param string $action
 	 * @param object $args
 	 * @return object $res
 	 */
-	public function filter_plugins_api_result($res, $action, $args) {
+	public function filter_components_api_result($res, $action, $args) {
 
 		// If needed args are missing, just return the result.
-		if (empty($args->slug) || $action !== 'plugin_information') {
+		if (empty($args->slug) || $action !== $this->config['type'].'_information') {
 			return $res;
 		}
 
-		// Create an array of the plugin, ie, 'example'=>'example/example.php'
-		$list_plugins = [
+		// Create an array of the plugin or theme slug and identifier.
+		$list_components = [
 			dirname($this->config['id']) => $this->config['id'],
 		];
 
-		// Check if plugin exists
-		if (!array_key_exists($args->slug, $list_plugins)) {
+		// Check if component exists
+		if (!array_key_exists($args->slug, $list_components)) {
 			return $res;
 		}
 
-		// Get the plugin's information.
-		$info = $this->get_plugin_data($action, $list_plugins[$args->slug]);
+		// Get the component's information.
+		$info = $this->get_component_data($action, $list_components[$args->slug]);
 
 		// If the response has all the right properties, cast $info to object.
 		if (isset($info['name'], $info['slug'], $info['external'], $info['sections'])) {
@@ -306,6 +338,53 @@ class UpdateClient {
 	}
 
 	/**
+	 * Filter plugins API result.
+	 *
+	 * @author John Alarcon
+	 *
+	 * @since 1.0.0
+	 *
+	 * @deprecated 2.0.0 Use filter_components_api_result() method instead.
+	 *
+	 * @param object $res
+	 * @param string $action
+	 * @param object $args
+	 * @return object $res
+	 */
+	public function filter_plugins_api_result($res, $action, $args) {
+		return $this->filter_components_api_result($res, $action, $args);
+	}
+
+	/**
+	 * Filter admin row meta.
+	 *
+	 * A method to add a "View Details" link to the admin row item.
+	 *
+	 * @author John Alarcon
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param array $component_meta Array of metadata (links, typically)
+	 * @param string $component_file Ex: plugin-folder/plugin-file.php
+	 * @return array $component_meta with an added link.
+	 */
+	public function filter_component_row_meta($component_meta, $component_file) {
+
+		// Add the link to the plugin's or theme's row, if not already existing.
+		if ($this->identifier === $component_file) {
+			$anchors_string = implode('', $component_meta);
+			$anchor_text = esc_html__('View details');
+			if (!preg_match('|(\<a[ \s\S\d]*)('.$anchor_text.')(<\/a>)|', $anchors_string)) {
+				$component_meta[] = '<a class="thickbox" href="'.admin_url('/'.$this->config['type'].'-install.php?tab='.$this->config['type'].'-information&'.$this->config['type'].'='.$this->server_slug.'&TB_iframe=true&width=600&height=550').'">'.$anchor_text.'</a>';
+			}
+		}
+
+		// Return the maybe amended links.
+		return $component_meta;
+
+	}
+
+	/**
 	 * Filter plugin row meta.
 	 *
 	 * A method to add a "View Details" link to the plugin's admin row item.
@@ -314,24 +393,14 @@ class UpdateClient {
 	 *
 	 * @since 1.0.0
 	 *
+	 * @deprecated 2.0.0 Use filter_component_row_meta() method instead.
+	 *
 	 * @param array $plugin_meta Array of metadata (links, typically)
 	 * @param string $plugin_file Ex: plugin-folder/plugin-file.php
 	 * @return array $plugin_meta with an added link.
 	 */
 	public function filter_plugin_row_meta($plugin_meta, $plugin_file) {
-
-		// Add the link to the plugin's own row, if not already existing.
-		if ($this->identifier === $plugin_file) {
-			$anchors_string = implode('', $plugin_meta);
-			$anchor_text = esc_html__('View details', 'codepotent-update-manager');
-			if (!preg_match('|(\<a[ \s\S\d]*)('.$anchor_text.')(<\/a>)|', $anchors_string)) {
-				$plugin_meta[] = '<a class="thickbox" href="'.admin_url('/plugin-install.php?tab=plugin-information&plugin='.$this->server_slug.'&TB_iframe=true&width=600&height=550').'">'.$anchor_text.'</a>';
-			}
-		}
-
-		// Return the maybe amended links.
-		return $plugin_meta;
-
+		return $this->filter_component_row_meta($plugin_meta, $plugin_file);
 	}
 
 	/**
@@ -348,36 +417,37 @@ class UpdateClient {
 	 */
 	public function filter_upgrader_post_install($response, $hook_extra, $result) {
 
-		// Not dealing with a plugin install? Bail.
-		if (!isset($hook_extra['plugin'])) {
+		// Not dealing with an install? Bail.
+		if (!isset($hook_extra[$this->config['type']])) {
 			return $response;
 		}
 
 		// Bring variables into scope.
 		global $wp_filesystem, $hook_suffix;
 
-		// Destination for new plugin.
-		$destination = trailingslashit($result['local_destination']).dirname($hook_extra['plugin']);
+		// Destination for new component.
+		$destination = trailingslashit($result['local_destination']).dirname($hook_extra[$this->config['type']]);
 
-		// Move the plugin to the correct location.
+		// Move the component to the correct location.
 		$wp_filesystem->move($result['destination'], $destination);
 
 		// Match'em up.
 		$result['destination'] = $destination;
 
 		// Set destination name.
-		$result['destination_name'] = dirname($hook_extra['plugin']);
+		$result['destination_name'] = dirname($hook_extra[$this->config['type']]);
 
-		// What?! Oh, updating a plugin? Sweet.
+		// Updating a plugin or theme?
 		if ($hook_suffix === 'update') {
 			// Got both of the needed arguments?
-			if (isset($_GET['action'], $_GET['plugin'])) {
+			if (isset($_GET['action'], $_GET[$this->config['type']])) {
 				// First argument is good?
-				if ($_GET['action'] === 'upgrade-plugin') {
+				if ($_GET['action'] === 'upgrade-'.$this->config['type']) {
 					// Next argument is good?
-					if ($_GET['plugin'] === $hook_extra['plugin']) {
-						// Activate the plugin.
-						activate_plugin($hook_extra['plugin']);
+					if ($_GET[$this->config['type']] === $hook_extra[$this->config['type']]) {
+						// Activate the component.
+						$function = ($this->config['type'] === 'plugin') ? 'activate_plugin' : 'activate_theme';
+						$function($hook_extra[$this->config['type']]);
 					}
 				}
 			}
@@ -385,6 +455,68 @@ class UpdateClient {
 
 		// Return the response unaltered.
 		return $response;
+
+	}
+
+	/**
+	 * Get component identifier.
+	 *
+	 * A plugin identifier (ie, plugin-folder/plugin-file.php) may possibly have
+	 * different locations in different implementations. This method is reliable
+	 * in determining the identifier, regardless of where the file may exist. In
+	 * the case of themes, the identifier is simply a directory name; the method
+	 * works for this, as well.
+	 *
+	 * @author John Alarcon
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return string Component identifier; ie, plugin-folder/plugin-file.php or
+	 * 										ie, some-theme-directory
+	 */
+	private function get_identifier() {
+
+		$identifier = '';
+
+		if (UPDATE_TYPE === 'theme') {
+
+			$path_parts = explode('/', str_replace('\\', '/', __FILE__));
+			foreach ($path_parts as $n=>$part) {
+				if ($part === 'themes') {
+					$this->identifier = $identifier = $path_parts[$n+1];
+					break;
+				}
+			}
+
+		} else if (UPDATE_TYPE === 'plugin') {
+
+			// Gain access the get_plugins() function.
+			include_once(ABSPATH.'/wp-admin/includes/plugin.php');
+
+			// Get path to plugin dir and this file; make consistent the slashes.
+			$dir = explode('/', str_replace('\\', '/', WP_PLUGIN_DIR));
+			$file = explode('/', str_replace('\\', '/', __FILE__));
+
+			// Strip plugin dir parts, leaving this plugin's directory at $diff[0].
+			$diff = array_diff($file, $dir);
+
+			// This plugin's directory name.
+			$this->server_slug = $dir_name = array_shift($diff);
+
+			// Initialization.
+			$identifier = '';
+
+			// Find the plugin id that matches the directory name.
+			foreach (array_keys(get_plugins()) as $id) {
+				if (strpos($id, $dir_name.'/') === 0) {
+					$this->identifier = $identifier = $id;
+					break;
+				}
+			}
+		}
+
+		// Return the identifier.
+		return $identifier;
 
 	}
 
@@ -400,51 +532,35 @@ class UpdateClient {
 	 *
 	 * @since 1.0.0
 	 *
+	 * @deprecated 2.0.0 Replaced with get_identifier() method.
+	 *
 	 * @return string Plugin identifier; ie, plugin-folder/plugin-file.php
 	 */
 	private function get_plugin_identifier() {
-
-		// Gain access the get_plugins() function.
-		include_once(ABSPATH.'/wp-admin/includes/plugin.php');
-
-		// Get path to plugin dir and this file; make consistent the slashes.
-		$dir = explode('/', str_replace('\\', '/', WP_PLUGIN_DIR));
-		$file = explode('/', str_replace('\\', '/', __FILE__));
-
-		// Strip plugin dir parts, leaving this plugin's directory at $diff[0].
-		$diff = array_diff($file, $dir);
-
-		// This plugin's directory name.
-		$this->server_slug = $dir_name = array_shift($diff);
-
-		// Initialization.
-		$identifier = '';
-
-		// Find the plugin id that matches the directory name.
-		foreach (array_keys(get_plugins()) as $id) {
-			if (strpos($id, $dir_name.'/') === 0) {
-				$this->identifier = $identifier = $id;
-				break;
-			}
-		}
-
-		// Return the identifier.
-		return $identifier;
-
+		return $this->get_identifier();
 	}
 
 	/**
-	 * Get plugin data.
+	 * Get component data.
 	 *
 	 * @author John Alarcon
 	 *
-	 * @since 1.0.0
+	 * @since 2.0.0
 	 *
-	 * @param string $action
-	 * @param string $plugin
-	 * @return array|array|mixed
+	 * @param string $action May be any of the following:
+	 * 							plugin_information
+	 * 							theme_information
+	 * 							query_plugins
+	 * 							query_themes
+	 * @param string $component Will be 'plugin' or 'theme'.
+	 * @return array|array|mixed Data for the plugin or theme.
 	 */
-	private function get_plugin_data($action, $plugin='') {
+	private function get_component_data($action, $component='') {
+
+		// If component data exists, no need to requery; return that data.
+		if (!empty($this->component_data)) {
+			return $this->component_data;
+		}
 
 		// Localize the platform version.
 		global $cp_version;
@@ -452,35 +568,65 @@ class UpdateClient {
 		// Initialize the data to be posted.
 		$body = $this->config['post'];
 
-		// Get plugin(s) and assign to $body.
 		if ($action === 'plugin_information') {
+
 			// If querying a single plugin, assign it to the post body.
-			$body['plugin'] =  $plugin;
+			$body[$this->config['type']] = $component;
+
+		} else if ($action === 'theme_information') {
+
+			// If querying a single theme, assign it to the post body.
+			$body[$this->config['type']] = $component;
+
 		} else if ($action === 'query_plugins') {
+
 			// If querying for all plugins, assign them to the post body.
 			$body['plugins'] = get_plugins();
+
+		} else if ($action === 'query_themes') {
+
+			// If querying for all themes, preprocess and assign to post body.
+			$themes = [];
+			$get_themes = wp_get_themes();
+			foreach ($get_themes as $theme) {
+				$stylesheet = $theme->get_stylesheet();
+				$themes[$stylesheet] = [
+					'Name'        => $theme->get('Name'),
+					'ThemeURI'    => $theme->get('ThemeURI'),
+					'Description' => $theme->get('Description'),
+					'Author'      => $theme->get('Author'),
+					'AuthorURI'   => $theme->get('AuthorURI'),
+					'Version'     => $theme->get('Version'),
+					'Template'    => $theme->get('Template'),
+					'Status'      => $theme->get('Status'),
+					'Tags'        => $theme->get('Tags'),
+					'TextDomain'  => $theme->get('TextDomain'),
+					'DomainPath'  => $theme->get('DomainPath'),
+				];
+			}
+			$body['themes'] = $themes;
+
 		} else {
+
 			return [];
+
 		}
 
 		// Site URL; allows for particular URLs to test updates before pushing.
 		$body['site_url'] = site_url();
 
 		// Images, if any.
-		$body['icon_urls'] = $this->get_plugin_images('icon', dirname($plugin));
-		$body['banner_urls'] = $this->get_plugin_images('banner', dirname($plugin));
-		$body['screenshot_urls'] = $this->get_plugin_images('screenshot', dirname($plugin));
-
-		// Add opt out data tracking - stats for Update manager
-		if( 'no' === get_option( 'cc_usage_tracking' ) ) {
-			$body['sfum'] = 'no-log';
+		if ($this->config['type'] === 'plugin') {
+			$body['icon_urls'] = $this->get_plugin_images('icon', dirname($component));
+			$body['banner_urls'] = $this->get_plugin_images('banner', dirname($component));
+			$body['screenshot_urls'] = $this->get_plugin_images('screenshot', dirname($component));
 		}
 
 		// Assemble args to post back to the Update Manager plugin.
 		$options = [
 			'user-agent' => 'ClassicPress/'.$cp_version.'; '.get_bloginfo('url'),
 			'body'       => $body,
-			'timeout'    => 20,
+			'timeout'    => apply_filters('codepotent_update_manager_timeout', 5),
 		];
 
 		// Args to append to the endpoint URL.
@@ -512,9 +658,29 @@ class UpdateClient {
 		// Get the response body; decode it as an array.
 		$data = json_decode(trim(wp_remote_retrieve_body($raw_response)), true);
 
-		// Return the reponse body.
-		return is_array($data) ? $data : [];
+		// Set retrieved data to the object for reuse elsewhere.
+		$this->component_data = is_array($data) ? $data : [];
 
+		// Return the reponse body.
+		return $this->component_data;
+
+	}
+
+	/**
+	 * Get plugin data.
+	 *
+	 * @author John Alarcon
+	 *
+	 * @since 1.0.0
+	 *
+	 * @deprecated 2.0.0 Replaced with get_component_data() method.
+	 *
+	 * @param string $action
+	 * @param string $plugin
+	 * @return array|array|mixed
+	 */
+	private function get_plugin_data($action, $plugin='') {
+		return $this->get_component_data($action, $plugin);
 	}
 
 	/**
@@ -644,8 +810,13 @@ class UpdateClient {
 	 */
 	public function get_latest_version_number() {
 
-		// Initialization.
-		$version = '';
+		// Get current ClassicPress version, if stored.
+		$version = get_transient('codepotent_update_manager_cp_version');
+
+		// Return version number, if now known.
+		if (!empty($version)) {
+			return $version;
+		}
 
 		// Make a request to the ClassicPress versions API.
 		$response = wp_remote_get('https://api-v1.classicpress.net/upgrade/index.php', ['timeout'=>3]);
@@ -672,10 +843,13 @@ class UpdateClient {
 			}
 		} // At this point, $version = 1.1.1.json
 
-		// Get just the version.
+		// Get just the version portion of the string.
 		if ($version) {
 			$version = str_replace('.json', '', $version);
 		}
+
+		// A transient ensures the query is not run more than every 10 minutes.
+		set_transient('codepotent_update_manager_cp_version', $version, MINUTE_IN_SECONDS * 10);
 
 		// Return the version string.
 		return $version;
