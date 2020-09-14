@@ -53,11 +53,14 @@ class WC_Admin_Menus {
 	public function admin_menu() {
 		global $menu;
 
+		$icon_svg = file_get_contents( WC()->plugin_url() . '/assets/images/classic-commerce-dashicon-white-on-transparent.svg' );
+		$cc_icon = base64_encode( $icon_svg );
+
 		if ( current_user_can( 'manage_woocommerce' ) ) {
 			$menu[] = array( '', 'read', 'separator-woocommerce', '', 'wp-menu-separator woocommerce' ); // WPCS: override ok.
 		}
 
-		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, WC()->plugin_url() . '/assets/images/classic-commerce-dashicon-grey-on-white.svg', '55.5' );
+		add_menu_page( __( 'Classic Commerce', 'classic-commerce' ), __( 'WooCommerce', 'classic-commerce' ), 'manage_woocommerce', 'woocommerce', null, 'data:image/svg+xml;base64,' . $cc_icon, '55.5' );
 
 		add_submenu_page( 'edit.php?post_type=product', __( 'Attributes', 'classic-commerce' ), __( 'Attributes', 'classic-commerce' ), 'manage_product_terms', 'product_attributes', array( $this, 'attributes_page' ) );
 	}
