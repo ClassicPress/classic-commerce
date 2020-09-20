@@ -1901,3 +1901,10 @@ function wc_update_352_drop_download_log_fk() {
 function wc_update_353_db_version() {
 	WC_Install::update_db_version( '3.5.3' );
 }
+
+/**
+ * Update Classic Commerce base color.
+ */
+function cc_update_100_default_base_color() {
+	update_option( 'woocommerce_email_base_color, '#338084' );
+}
