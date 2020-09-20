@@ -29,6 +29,9 @@ else
 	echo 'To fix this, run `grunt` and commit the resulting changes.'
 	echo
 	echo 'Full differences:'
+	echo '$ git status'
+	git status
+	echo '$ git diff'
 	git diff
 	exit 1
 fi
