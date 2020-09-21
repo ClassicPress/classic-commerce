@@ -1,4 +1,7 @@
-/* jshint node:true */
+/* jshint node:true, es3:false, esversion:6 */
+const path = require( 'path' );
+const fs = require( 'fs' );
+
 module.exports = function( grunt ) {
 	'use strict';
 
@@ -151,21 +154,11 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Concatenate select2.css onto the admin.css files.
-		concat: {
-			admin: {
-				files: {
-					'<%= dirs.css %>/admin.css' : ['<%= dirs.css %>/select2.css', '<%= dirs.css %>/admin.css'],
-					'<%= dirs.css %>/admin-rtl.css' : ['<%= dirs.css %>/select2.css', '<%= dirs.css %>/admin-rtl.css']
-				}
-			}
-		},
-
 		// Watch changes for assets.
 		watch: {
 			css: {
 				files: ['<%= dirs.scss %>/*.scss'],
-				tasks: ['sass', 'rtlcss', 'postcss', 'cssmin', 'concat']
+				tasks: ['sass', 'rtlcss', 'postcss', 'cssmin', 'css:concat']
 			},
 			js: {
 				files: [
@@ -336,7 +329,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-prompt' );
@@ -360,7 +352,7 @@ module.exports = function( grunt ) {
 		'rtlcss',
 		'postcss',
 		'cssmin',
-		'concat'
+		'css:concat'
 	]);
 
 	grunt.registerTask( 'docs', [
@@ -372,6 +364,22 @@ module.exports = function( grunt ) {
 		'prompt:contributors',
 		'shell:contributors'
 	]);
+
+	// Concatenate select2.css onto the admin.css files.
+	grunt.registerTask( 'css:concat', function() {
+		const cssDir = path.join( __dirname, grunt.config.get( 'dirs.css' ) );
+		const select2 = fs.readFileSync( path.join( cssDir, 'select2.css' ), 'utf8' );
+		[ 'admin.css', 'admin-rtl.css' ].forEach( cssFilename => {
+			const cssPath = path.join( cssDir, cssFilename );
+			const css = fs.readFileSync( cssPath, 'utf8' );
+			if ( css.substring( 0, select2.length ) === select2 ) {
+				grunt.log.ok( cssFilename + ': already up to date' );
+			} else {
+				fs.writeFileSync( cssPath, select2 + css );
+				grunt.log.ok( cssFilename + ': updated' );
+			}
+		} );
+	} );
 
 	// Only an alias to 'default' task.
 	grunt.registerTask( 'dev', [
