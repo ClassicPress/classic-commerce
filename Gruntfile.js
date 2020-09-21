@@ -367,15 +367,23 @@ module.exports = function( grunt ) {
 
 	// Concatenate select2.css onto the admin.css files.
 	grunt.registerTask( 'css:concat', function() {
+		function clean( css ) {
+			return css.replace( /^@charset "UTF-8";/, '' ).trim();
+		}
 		const cssDir = path.join( __dirname, grunt.config.get( 'dirs.css' ) );
 		const select2 = fs.readFileSync( path.join( cssDir, 'select2.css' ), 'utf8' );
 		[ 'admin.css', 'admin-rtl.css' ].forEach( cssFilename => {
 			const cssPath = path.join( cssDir, cssFilename );
-			const css = fs.readFileSync( cssPath, 'utf8' );
-			if ( css.substring( 0, select2.length ) === select2 ) {
+			const cssInput = fs.readFileSync( cssPath, 'utf8' );
+			const cssOutput = [
+				'@charset "UTF-8";',
+				clean( select2 ),
+				clean( cssInput.replace( select2, '' ) ),
+			].join( '\n' );
+			if ( cssInput === cssOutput ) {
 				grunt.log.ok( cssFilename + ': already up to date' );
 			} else {
-				fs.writeFileSync( cssPath, select2 + css );
+				fs.writeFileSync( cssPath, cssOutput );
 				grunt.log.ok( cssFilename + ': updated' );
 			}
 		} );
