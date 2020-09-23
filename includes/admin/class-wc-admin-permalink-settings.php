@@ -111,6 +111,8 @@ class WC_Admin_Permalink_Settings {
 			1 => '/' . trailingslashit( $base_slug ),
 			2 => '/' . trailingslashit( $base_slug ) . trailingslashit( '%product_cat%' ),
 		);
+		
+		$cms = function_exists( 'classicpress_version' ) ? "ClassicPress" : "WordPress";
 		?>
 		<table class="form-table wc-permalink-structure">
 			<tbody>
@@ -132,7 +134,12 @@ class WC_Admin_Permalink_Settings {
 					<th><label><input name="product_permalink" id="woocommerce_custom_selection" type="radio" value="custom" class="tog" <?php checked( in_array( $this->permalinks['product_base'], $structures, true ), false ); ?> />
 						<?php esc_html_e( 'Custom base', 'classic-commerce' ); ?></label></th>
 					<td>
-						<input name="product_permalink_structure" id="woocommerce_permalink_structure" type="text" value="<?php echo esc_attr( $this->permalinks['product_base'] ? trailingslashit( $this->permalinks['product_base'] ) : '' ); ?>" class="regular-text code"> <span class="description"><?php esc_html_e( 'Enter a custom base to use. A base must be set or your CMS will use default instead.', 'classic-commerce' ); ?></span>
+						<input name="product_permalink_structure" id="woocommerce_permalink_structure" type="text" value="<?php echo esc_attr( $this->permalinks['product_base'] ? trailingslashit( $this->permalinks['product_base'] ) : '' ); ?>" class="regular-text code"> 
+						<span class="description">
+						<?php /* translators: %s: ClassicPress or WordPress */
+						printf( esc_html__( 'Enter a custom base to use. A base must be set or %s will use default instead.', 'classic-commerce' ), $cms ); 
+						?>
+						</span>
 					</td>
 				</tr>
 			</tbody>
