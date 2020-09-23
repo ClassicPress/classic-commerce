@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div id="message" class="inline notice woocommerce-message">
 				<p><?php echo wp_kses_post( __( 'Before you can add a variation you need to add some variation attributes on the <strong>Attributes</strong> tab.', 'classic-commerce' ) ); ?></p>
-				<p><a class="button-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/document/variable-product/', 'product-variations' ) ); ?>" target="_blank"><?php esc_html_e( 'Learn more', 'classic-commerce' ); ?></a></p>
+				<p><a class="button-primary" href="<?php echo esc_url( apply_filters( 'woocommerce_docs_url', 'https://classiccommerce.cc/docs/installation-and-setup/variable-products/', 'product-variations' ) ); ?>" target="_blank"><?php esc_html_e( 'Learn more', 'classic-commerce' ); ?></a></p>
 			</div>
 
 		<?php else : ?>
