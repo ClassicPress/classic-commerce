@@ -44,8 +44,8 @@ class WC_Admin_Help {
 					'<h2>' . __( 'Help &amp; Support', 'classic-commerce' ) . '</h2>' .
 					'<p>' . sprintf(
 						/* translators: %s: Documentation URL */
-						__( 'Should you need help understanding, using, or extending Classic Commerce, <a href="%s">please refer to the WooCommerce documentation</a>. You will find all kinds of resources including snippets, tutorials and much more.', 'classic-commerce' ),
-						'https://docs.woocommerce.com/documentation/plugins/woocommerce/'
+						__( 'Should you need help understanding, using, or extending Classic Commerce, <a href="%s">please refer to the documentation</a>. You will find all kinds of resources including snippets, tutorials and much more.', 'classic-commerce' ),
+						'https://classiccommerce.cc/docs/'
 					) . '</p>' .
 					'<p>' . sprintf(
 						/* translators: %s: Forum URL */
