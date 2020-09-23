@@ -48,7 +48,7 @@ class WC_Admin_List_Table_Orders extends WC_Admin_List_Table {
 	protected function render_blank_state() {
 		echo '<div class="woocommerce-BlankState">';
 		echo '<h2 class="woocommerce-BlankState-message">' . esc_html__( 'When you receive a new order, it will appear here.', 'classic-commerce' ) . '</h2>';
-		echo '<a class="woocommerce-BlankState-cta button-primary button" target="_blank" href="https://docs.woocommerce.com/document/managing-orders/">' . esc_html__( 'Learn more about orders', 'classic-commerce' ) . '</a>';
+		echo '<a class="woocommerce-BlankState-cta button-primary button" target="_blank" href="https://classiccommerce.cc/usage-and-maintenance/managing-orders/">' . esc_html__( 'Learn more about orders', 'classic-commerce' ) . '</a>';
 		echo '</div>';
 	}
 
