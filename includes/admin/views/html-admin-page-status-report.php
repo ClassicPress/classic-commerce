@@ -220,7 +220,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				if ( version_compare( $environment['php_version'], '7.2', '>=' ) ) {
 					echo '<mark class="yes">' . esc_html( $environment['php_version'] ) . '</mark>';
 				} else {
-					$update_link = ' <a href="https://docs.woocommerce.com/document/how-to-update-your-php-version/" target="_blank">' . esc_html__( 'How to update your PHP version', 'classic-commerce' ) . '</a>';
+					$update_link = ' <a href="https://classiccommerce.cc/usage-and-maintenance/update-php-version/" target="_blank">' . esc_html__( 'How to update your PHP version', 'classic-commerce' ) . '</a>';
 					$class       = 'error';
 
 					if ( version_compare( $environment['php_version'], '5.4', '<' ) ) {
@@ -444,7 +444,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				<?php
 				if ( strlen( $database['database_prefix'] ) > 20 ) {
 					/* Translators: %1$s: Database prefix, %2$s: Docs link. */
-					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend using a prefix with less than 20 characters. See: %2$s', 'classic-commerce' ), esc_html( $database['database_prefix'] ), '<a href="https://docs.woocommerce.com/document/completed-order-email-doesnt-contain-download-links/#section-2" target="_blank">' . esc_html__( 'How to update your database table prefix', 'classic-commerce' ) . '</a>' ) . '</mark>';
+					echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - We recommend using a prefix with less than 20 characters. See: %2$s', 'classic-commerce' ), esc_html( $database['database_prefix'] ), '<a href="https://classiccommerce.cc/usage-and-maintenance/update-database-table-prefix/" target="_blank">' . esc_html__( 'How to update your database table prefix', 'classic-commerce' ) . '</a>' ) . '</mark>';
 				} else {
 					echo '<mark class="yes">' . esc_html( $database['database_prefix'] ) . '</mark>';
 				}
@@ -557,7 +557,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					<mark class="error"><span class="dashicons dashicons-warning"></span>
 					<?php
 					/* Translators: %s: docs link. */
-					echo wp_kses_post( sprintf( __( 'Your store is not using HTTPS. <a href="%s" target="_blank">Learn more about HTTPS and SSL Certificates</a>.', 'classic-commerce' ), 'https://docs.woocommerce.com/document/ssl-and-https/' ) );
+					echo wp_kses_post( sprintf( __( 'Your store is not using HTTPS. <a href="%s" target="_blank">Learn more about HTTPS and SSL Certificates</a>.', 'classic-commerce' ), 'https://classiccommerce.cc/docs/installation-and-setup/ssl-and-https/' ) );
 					?>
 					</mark>
 				<?php endif; ?>
@@ -894,7 +894,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					<mark class="error">
 						<span class="dashicons dashicons-warning"></span>
 					</mark>
-					<a href="https://docs.woocommerce.com/document/fix-outdated-templates-woocommerce/" target="_blank">
+					<a href="https://classiccommerce.cc/usage-and-maintenance/fix-outdated-templates/" target="_blank">
 						<?php esc_html_e( 'Learn how to update', 'classic-commerce' ); ?>
 					</a>
 				</td>
