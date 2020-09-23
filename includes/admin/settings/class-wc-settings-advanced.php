@@ -135,7 +135,7 @@ class WC_Settings_Advanced extends WC_Settings_Page {
 						'checkboxgroup'   => 'start',
 						'show_if_checked' => 'option',
 						/* Translators: %s Docs URL. */
-						'desc_tip'        => sprintf( __( 'Force SSL (HTTPS) on the checkout pages (<a href="%s" target="_blank">an SSL Certificate is required</a>).', 'classic-commerce' ), 'https://docs.woocommerce.com/document/ssl-and-https/#section-3' ),
+						'desc_tip'        => sprintf( __( 'Force SSL (HTTPS) on the checkout pages (<a href="%s" target="_blank">an SSL Certificate is required</a>).', 'classic-commerce' ), 'https://classiccommerce.cc/docs/installation-and-setup/ssl-and-https/' ),
 					),
 
 					'unforce_ssl_checkout' => array(
