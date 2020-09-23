@@ -31,7 +31,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	</p>
 	<p class="submit">
 		<a href="#" class="button-primary debug-report"><?php esc_html_e( 'Get system report', 'classic-commerce' ); ?></a>
-		<a class="button-secondary docs" href="https://docs.woocommerce.com/document/understanding-the-woocommerce-system-status-report/" target="_blank">
+		<a class="button-secondary docs" href="https://classiccommerce.cc/docs/installation-and-setup/status-report/" target="_blank">
 			<?php esc_html_e( 'Understanding the status report', 'classic-commerce' ); ?>
 		</a>
 	</p>
