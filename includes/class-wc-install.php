@@ -1194,7 +1194,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 	public static function plugin_row_meta( $links, $file ) {
 		if ( WC_PLUGIN_BASENAME === $file ) {
 			$row_meta = array(
-				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://docs.woocommerce.com/documentation/plugins/woocommerce/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce documentation', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'classic-commerce' ) . '</a>',
+				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://classiccommerce.cc/docs/' ) ) . '" aria-label="' . esc_attr__( 'View Classic Commerce documentation', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'classic-commerce' ) . '</a>',
 				'apidocs' => '<a href="' . esc_url( apply_filters( 'woocommerce_apidocs_url', 'https://docs.woocommerce.com/wc-apidocs/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce API docs', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'API docs', 'classic-commerce' ) . '</a>',
 				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://github.com/ClassicPress-plugins/classic-commerce/issues' ) ) . '" aria-label="' . esc_attr__( 'Visit issues  support section on github', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'classic-commerce' ) . '</a>',
 			);
