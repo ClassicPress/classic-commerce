@@ -122,9 +122,6 @@ class WC_Install {
 		),
 		'3.5.3' => array(
 			'wc_update_353_db_version',
-		),
-		'1.0.0' => array(
-			'cc_update_100_default_base_color',
 		)
 	);
 
