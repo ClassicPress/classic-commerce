@@ -31,6 +31,9 @@ env:
 matrix:
   fast_finish: true
   include:
+  - name: "Built files check"
+    php: 7.2
+    env: CP_VERSION=latest WP_MULTISITE=0 RUN_CHECK_BUILT_FILES=1
   - name: "Coding standard check"
     php: 7.2
     env: CP_VERSION=latest WP_MULTISITE=0 RUN_PHPCS=1
@@ -71,6 +74,7 @@ before_script:
 script:
   - bash tests/bin/phpunit.sh
   - bash tests/bin/phpcs.sh
+  - bash tests/bin/check-built-files.sh
   - travis_retry bash tests/bin/run-e2e-CI.sh
 
 after_script:
