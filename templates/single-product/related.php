@@ -4,9 +4,7 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/related.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
  * @package ClassicCommerce/Templates
  * @version WC-3.0.0
