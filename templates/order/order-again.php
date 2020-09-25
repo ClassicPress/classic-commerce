@@ -2,7 +2,7 @@
 /**
  * Order again button
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/order/order-again.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/order/order-again.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

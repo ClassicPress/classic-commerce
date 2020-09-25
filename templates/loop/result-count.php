@@ -4,7 +4,7 @@
  *
  * Shows text: Showing x - x of x results.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/result-count.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/result-count.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

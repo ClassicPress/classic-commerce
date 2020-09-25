@@ -2,7 +2,7 @@
 /**
  * Order tracking
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/order/tracking.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/order/tracking.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

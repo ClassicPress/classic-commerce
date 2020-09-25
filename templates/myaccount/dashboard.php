@@ -4,7 +4,7 @@
  *
  * Shows the first intro screen on the account dashboard.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/dashboard.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/dashboard.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

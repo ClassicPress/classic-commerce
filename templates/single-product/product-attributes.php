@@ -4,7 +4,7 @@
  *
  * Used by list_attributes() in the products class.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-attributes.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/product-attributes.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

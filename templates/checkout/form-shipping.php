@@ -2,7 +2,7 @@
 /**
  * Checkout shipping information form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-shipping.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/form-shipping.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

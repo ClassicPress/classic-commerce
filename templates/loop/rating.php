@@ -2,7 +2,7 @@
 /**
  * Loop Rating
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/rating.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/rating.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

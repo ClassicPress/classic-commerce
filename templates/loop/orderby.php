@@ -2,7 +2,7 @@
 /**
  * Show options for ordering
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/orderby.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/orderby.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

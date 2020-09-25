@@ -2,7 +2,7 @@
 /**
  * Customer new account email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-new-account.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/customer-new-account.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails

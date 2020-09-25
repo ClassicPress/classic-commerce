@@ -2,7 +2,7 @@
 /**
  * The template for displaying product category thumbnails within loops
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-product_cat.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/content-product_cat.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

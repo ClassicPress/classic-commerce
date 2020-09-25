@@ -2,7 +2,7 @@
 /**
  * Order Customer Details
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/order/order-details-customer.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/order/order-details-customer.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

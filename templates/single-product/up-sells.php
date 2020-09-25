@@ -2,7 +2,7 @@
 /**
  * Single Product Up-Sells
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/up-sells.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/up-sells.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

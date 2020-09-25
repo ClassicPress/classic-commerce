@@ -2,7 +2,7 @@
 /**
  * Single Product Price
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/price.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/price.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

@@ -2,7 +2,7 @@
 /**
  * My Addresses
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/my-address.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/my-address.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

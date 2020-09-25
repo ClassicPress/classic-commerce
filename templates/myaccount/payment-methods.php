@@ -4,7 +4,7 @@
  *
  * Shows customer payment methods on the account page.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/payment-methods.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/payment-methods.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

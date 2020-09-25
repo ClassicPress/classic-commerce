@@ -2,7 +2,7 @@
 /**
  * Product Loop End
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/loop-end.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/loop-end.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

@@ -4,7 +4,7 @@
  *
  * Shows the details of a particular order on the account page.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/view-order.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/view-order.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

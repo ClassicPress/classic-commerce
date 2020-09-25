@@ -2,7 +2,7 @@
 /**
  * Show messages
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/notices/success.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/notices/success.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

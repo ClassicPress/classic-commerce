@@ -2,7 +2,7 @@
 /**
  * My Account navigation
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/navigation.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/navigation.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

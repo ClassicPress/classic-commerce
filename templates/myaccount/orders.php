@@ -4,7 +4,7 @@
  *
  * Shows orders on the account page.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/orders.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/orders.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

@@ -2,7 +2,7 @@
 /**
  * The template for displaying product search form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/product-searchform.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/product-searchform.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

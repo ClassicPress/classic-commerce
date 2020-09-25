@@ -4,7 +4,7 @@
  *
  * Sharing plugins can hook into here or you can add your own code directly.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/share.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/share.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

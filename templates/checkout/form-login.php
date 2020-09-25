@@ -2,7 +2,7 @@
 /**
  * Checkout login form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-login.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/form-login.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

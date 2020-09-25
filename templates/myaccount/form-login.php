@@ -2,7 +2,7 @@
 /**
  * Login Form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-login.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/form-login.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

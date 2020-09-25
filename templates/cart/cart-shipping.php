@@ -4,7 +4,7 @@
  *
  * In 2.1 we show methods per package. This allows for multiple methods per order if so desired.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-shipping.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/cart-shipping.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

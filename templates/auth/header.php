@@ -2,7 +2,7 @@
 /**
  * Auth header
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/auth/header.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/auth/header.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

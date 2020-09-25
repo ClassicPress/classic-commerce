@@ -2,7 +2,7 @@
 /**
  * Checkout Form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-checkout.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/form-checkout.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

@@ -2,7 +2,7 @@
 /**
  * Single product short description
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/short-description.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/short-description.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  Automattic

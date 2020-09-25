@@ -2,7 +2,7 @@
 /**
  * Content wrappers
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/global/wrapper-start.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/global/wrapper-start.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

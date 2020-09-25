@@ -2,7 +2,7 @@
 /**
  * Additional Information tab
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/tabs/additional-information.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/tabs/additional-information.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

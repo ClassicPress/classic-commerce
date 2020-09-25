@@ -2,7 +2,7 @@
 /**
  * Cross-sells
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/cross-sells.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/cross-sells.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

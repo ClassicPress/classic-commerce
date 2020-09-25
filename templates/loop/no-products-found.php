@@ -2,7 +2,7 @@
 /**
  * Displayed when no products are found matching the current query
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/no-products-found.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/no-products-found.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

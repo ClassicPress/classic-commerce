@@ -2,7 +2,7 @@
 /**
  * Display single product reviews (comments)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product-reviews.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product-reviews.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

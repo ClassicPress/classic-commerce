@@ -2,7 +2,7 @@
 /**
  * Email Order Items (plain)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-order-items.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/plain/email-order-items.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

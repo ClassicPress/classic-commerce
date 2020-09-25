@@ -2,7 +2,7 @@
 /**
  * Order Downloads.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/order/order-downloads.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/order/order-downloads.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  Automattic

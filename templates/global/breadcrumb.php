@@ -2,7 +2,7 @@
 /**
  * Shop breadcrumb
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/global/breadcrumb.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/global/breadcrumb.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

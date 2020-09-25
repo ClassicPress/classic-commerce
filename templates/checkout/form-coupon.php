@@ -2,7 +2,7 @@
 /**
  * Checkout coupon form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-coupon.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/form-coupon.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

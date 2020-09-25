@@ -2,7 +2,7 @@
 /**
  * My Account page
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/my-account.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/my-account.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

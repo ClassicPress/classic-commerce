@@ -2,7 +2,7 @@
 /**
  * Shipping Calculator
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/shipping-calculator.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/shipping-calculator.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

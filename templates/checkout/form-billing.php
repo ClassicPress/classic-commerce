@@ -2,7 +2,7 @@
 /**
  * Checkout billing information form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-billing.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/form-billing.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

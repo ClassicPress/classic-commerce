@@ -2,7 +2,7 @@
 /**
  * Loop Price
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/price.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/price.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

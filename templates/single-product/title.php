@@ -2,7 +2,7 @@
 /**
  * Single Product title
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/title.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/title.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

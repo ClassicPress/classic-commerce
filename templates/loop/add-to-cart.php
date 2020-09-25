@@ -2,7 +2,7 @@
 /**
  * Loop Add to Cart
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/add-to-cart.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/add-to-cart.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

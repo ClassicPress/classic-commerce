@@ -2,7 +2,7 @@
 /**
  * Lost password confirmation text.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/lost-password-confirmation.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/lost-password-confirmation.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

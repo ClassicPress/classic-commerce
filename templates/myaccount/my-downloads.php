@@ -4,7 +4,7 @@
  *
  * Shows downloads on the account page.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/my-downloads.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/my-downloads.php.
  *
  * @see        https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author     WooThemes

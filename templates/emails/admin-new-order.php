@@ -2,7 +2,7 @@
 /**
  * Admin new order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/admin-new-order.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/admin-new-order.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails/HTML

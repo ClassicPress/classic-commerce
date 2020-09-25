@@ -156,7 +156,7 @@ function wc_update_order( $args ) {
 function wc_get_template_part( $slug, $name = '' ) {
 	$template = '';
 
-	// Look in yourtheme/slug-name.php and yourtheme/woocommerce/slug-name.php.
+	// Look in yourtheme/slug-name.php and yourtheme/classic-commerce/slug-name.php.
 	if ( $name && ! WC_TEMPLATE_DEBUG_MODE ) {
 		$template = locate_template( array( "{$slug}-{$name}.php", WC()->template_path() . "{$slug}-{$name}.php" ) );
 	}
@@ -166,7 +166,7 @@ function wc_get_template_part( $slug, $name = '' ) {
 		$template = WC()->plugin_path() . "/templates/{$slug}-{$name}.php";
 	}
 
-	// If template file doesn't exist, look in yourtheme/slug.php and yourtheme/woocommerce/slug.php.
+	// If template file doesn't exist, look in yourtheme/slug.php and yourtheme/classic-commerce/slug.php.
 	if ( ! $template && ! WC_TEMPLATE_DEBUG_MODE ) {
 		$template = locate_template( array( "{$slug}.php", WC()->template_path() . "{$slug}.php" ) );
 	}

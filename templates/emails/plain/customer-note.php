@@ -2,7 +2,7 @@
 /**
  * Customer note email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/customer-note.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/plain/customer-note.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails/Plain

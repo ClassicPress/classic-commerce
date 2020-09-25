@@ -2,7 +2,7 @@
 /**
  * Customer Reset Password email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/customer-reset-password.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/plain/customer-reset-password.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails/Plain

@@ -2,7 +2,7 @@
 /**
  * Email Addresses (plain)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-addresses.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/plain/email-addresses.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails/Plain

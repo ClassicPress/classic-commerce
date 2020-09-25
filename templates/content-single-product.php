@@ -2,7 +2,7 @@
 /**
  * The template for displaying product content in the single-product.php template
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-single-product.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/content-single-product.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

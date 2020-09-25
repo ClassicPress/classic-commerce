@@ -2,7 +2,7 @@
 /**
  * Single Product Sale Flash
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/sale-flash.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/sale-flash.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

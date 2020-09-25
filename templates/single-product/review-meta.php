@@ -2,7 +2,7 @@
 /**
  * The template to display the reviewers meta data (name, verified owner, review date)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/review-meta.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/review-meta.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

@@ -2,7 +2,7 @@
 /**
  * Product Loop Start
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/loop-start.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/loop-start.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

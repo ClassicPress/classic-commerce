@@ -2,7 +2,7 @@
 /**
  * Edit address form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-edit-address.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/form-edit-address.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

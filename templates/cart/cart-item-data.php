@@ -2,7 +2,7 @@
 /**
  * Cart item data (when outputting non-flat)
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-item-data.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/cart-item-data.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

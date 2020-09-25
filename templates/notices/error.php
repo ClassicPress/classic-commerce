@@ -2,7 +2,7 @@
 /**
  * Show error messages
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/notices/error.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/notices/error.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

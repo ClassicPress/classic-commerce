@@ -2,7 +2,7 @@
 /**
  * The template for displaying product widget entries.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-widget-product.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/content-widget-product.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

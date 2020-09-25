@@ -2,7 +2,7 @@
 /**
  * Related Products
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/related.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/related.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

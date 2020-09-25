@@ -2,7 +2,7 @@
 /**
  * Auth form grant access
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/auth/form-grant-access.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/auth/form-grant-access.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

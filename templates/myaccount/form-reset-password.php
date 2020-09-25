@@ -2,7 +2,7 @@
 /**
  * Lost password reset form.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/form-reset-password.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/myaccount/form-reset-password.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

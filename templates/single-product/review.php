@@ -4,7 +4,7 @@
  *
  * Closing li is left out on purpose!.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/review.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/review.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

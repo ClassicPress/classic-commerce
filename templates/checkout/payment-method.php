@@ -2,7 +2,7 @@
 /**
  * Output a single payment method
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/payment-method.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/payment-method.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

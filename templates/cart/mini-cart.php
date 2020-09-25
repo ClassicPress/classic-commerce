@@ -4,7 +4,7 @@
  *
  * Contains the markup for the mini-cart, used by the cart widget.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/mini-cart.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/mini-cart.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

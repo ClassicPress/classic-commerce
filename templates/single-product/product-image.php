@@ -2,7 +2,7 @@
 /**
  * Single Product Image
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/product-image.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/product-image.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates

@@ -2,7 +2,7 @@
 /**
  * Cart totals
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/cart-totals.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes

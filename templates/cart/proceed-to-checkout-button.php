@@ -4,7 +4,7 @@
  *
  * Contains the markup for the proceed to checkout button on the cart.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/cart/proceed-to-checkout-button.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/cart/proceed-to-checkout-button.php.
  *
  * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
