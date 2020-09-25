@@ -102,7 +102,7 @@ class WC_Meta_Box_Coupon_Data {
 						array(
 							'id'          => 'free_shipping',
 							'label'       => __( 'Allow free shipping', 'classic-commerce' ),
-							'description' => sprintf( __( 'Check this box if the coupon grants free shipping. A <a href="%s" target="_blank">free shipping method</a> must be enabled in your shipping zone and be set to require "a valid free shipping coupon" (see the "Free Shipping Requires" setting).', 'classic-commerce' ), 'https://docs.woocommerce.com/document/free-shipping/' ),
+							'description' => sprintf( __( 'Check this box if the coupon grants free shipping. A <a href="%s" target="_blank">free shipping method</a> must be enabled in your shipping zone and be set to require "a valid free shipping coupon" (see the "Free Shipping Requires" setting).', 'classic-commerce' ), 'https://classiccommerce.cc/docs/installation-and-setup/shipping/' ),
 							'value'       => wc_bool_to_string( $coupon->get_free_shipping( 'edit' ) ),
 						)
 					);

@@ -1220,13 +1220,10 @@ class WC_Admin_Setup_Wizard {
 	public function wc_setup_ready() {
 		// We've made it! Don't prompt the user to run the wizard again.
 		WC_Admin_Notices::remove_notice( 'install' );
-
-		$videos_url   = 'https://docs.woocommerce.com/document/woocommerce-guided-tour-videos/';
-		$docs_url     = 'https://docs.woocommerce.com/documentation/plugins/woocommerce/getting-started/';
+		$docs_url     = 'https://classiccommerce.cc/docs/installation-and-setup/';
 		$help_text    = sprintf(
-			/* translators: %1$s: link to videos, %2$s: link to docs */
-			__( 'Watch <a href="%1$s" target="_blank">guided tour videos</a> to learn more about Classic Commerce, or visit WooCommerce.com to learn more about <a href="%2$s" target="_blank">getting started</a>.', 'classic-commerce' ),
-			$videos_url,
+			/* translators: %1$s: link to docs */
+			__( 'Visit classiccommerce.cc to learn more about <a href="%1$s" target="_blank">getting started</a>.', 'classic-commerce' ),
 			$docs_url
 		);
 		?>

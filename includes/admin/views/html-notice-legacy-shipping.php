@@ -17,6 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( empty( $_GET['page'] ) || empty( $_GET['tab'] ) || 'wc-settings' !== $_GET['page'] || 'shipping' !== $_GET['tab'] ) : ?>
 			<a class="button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=wc-settings&tab=shipping' ) ); ?>"><?php _e( 'Setup shipping zones', 'classic-commerce' ); ?></a>
 		<?php endif; ?>
-		<a class="button-secondary" href="https://docs.woocommerce.com/document/setting-up-shipping-zones/"><?php _e( 'Learn more about shipping zones', 'classic-commerce' ); ?></a>
+		<a class="button-secondary" href="https://classiccommerce.cc/docs/installation-and-setup/shipping/"><?php _e( 'Learn more about shipping zones', 'classic-commerce' ); ?></a>
 	</p>
 </div>
