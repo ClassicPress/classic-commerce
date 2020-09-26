@@ -2,11 +2,9 @@
 /**
  * Email Downloads.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-downloads.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/plain/email-downloads.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates
  * @version WC-3.4.0
  */

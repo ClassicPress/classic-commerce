@@ -2,11 +2,9 @@
 /**
  * Product loop sale flash
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/sale-flash.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/loop/sale-flash.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
  * @package ClassicCommerce/Templates
  * @version WC-1.6.4

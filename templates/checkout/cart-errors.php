@@ -2,11 +2,9 @@
 /**
  * Cart errors page
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/checkout/cart-errors.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/checkout/cart-errors.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates
  * @version WC-3.5.0
  */

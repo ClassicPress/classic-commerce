@@ -2,11 +2,9 @@
 /**
  * Single product short description
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/short-description.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/short-description.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  Automattic
  * @package ClassicCommerce/Templates
  * @version WC-3.3.0

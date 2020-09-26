@@ -2,7 +2,7 @@
 /**
  * Single variation cart button
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates
  * @version WC-3.4.0
  */

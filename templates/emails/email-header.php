@@ -2,11 +2,9 @@
 /**
  * Email Header
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/email-header.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/email-header.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
  * @package ClassicCommerce/Templates/Emails
  * @version WC-2.4.0

@@ -2,11 +2,9 @@
 /**
  * Description tab
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/single-product/tabs/description.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/tabs/description.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
  * @package ClassicCommerce/Templates
  * @version WC-2.0.0

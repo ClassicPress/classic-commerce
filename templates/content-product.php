@@ -2,11 +2,9 @@
 /**
  * The template for displaying product content within loops
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/content-product.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/content-product.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates
  * @version WC-3.4.0
  */

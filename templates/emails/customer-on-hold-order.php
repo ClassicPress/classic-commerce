@@ -2,11 +2,9 @@
 /**
  * Customer on-hold order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-on-hold-order.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/emails/customer-on-hold-order.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @package ClassicCommerce/Templates/Emails
  * @version WC-3.5.0
  */

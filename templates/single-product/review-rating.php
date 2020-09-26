@@ -2,11 +2,9 @@
 /**
  * The template to display the reviewers star rating in reviews
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/review-rating.php.
+ * This template can be overridden by copying it to yourtheme/classic-commerce/review-rating.php.
  *
- * Template Overrides: https://docs.woocommerce.com/document/template-structure/#section-1
- *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://classiccommerce.cc/docs/installation-and-setup/template-structure/
  * @author  WooThemes
  * @package ClassicCommerce/Templates
  * @version WC-3.1.0
