@@ -31,8 +31,8 @@ All of the extensions compatible with WooCommerce 3.5.3 should still be usable, 
 To try out Classic Commerce you can manually install it as a plugin. Make sure you deactivate WooCommerce before activating Classic Commerce. If you want to uninstall WooCommerce completely you can do so safely, but we recommend you take a full backup of your site first. Note that deactivating and deleting WooCommerce *normally* only removes the plugin and its files; the settings, orders, products, pages, etc are retained in the database. However, there is a possibility that a setting in your site’s wp-config file may over-ride this, so it is worth checking to make sure the following condition has not been included anywhere in that file: `define( 'WC_REMOVE_ALL_DATA', true);`
 
 ## Documentation
-* [WooCommerce Documentation](https://docs.woocommerce.com/documentation/plugins/woocommerce/)
-* [WooCommerce Code Reference](https://docs.woocommerce.com/wc-apidocs/)
+* [Classic Commerce Documentation](https://classiccommerce.cc/docs/)
+* [Classic Commerce Code Reference](https://classiccommerce.cc/docs/)
 * [WooCommerce REST API Docs](https://woocommerce.github.io/woocommerce-rest-api-docs/)
 
 ## Reporting Security Issues
