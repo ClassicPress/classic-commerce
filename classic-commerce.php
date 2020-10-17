@@ -150,11 +150,6 @@ if ( $_cc_can_load ) {
 		define( 'WC_PLUGIN_FILE', __FILE__ );
 	}
 
-	// Define WC_PLUGIN_DIR.
-	if ( ! defined( 'WC_PLUGIN_DIR' ) ) {
-		define( 'WC_PLUGIN_DIR', plugin_dir_path( WC_PLUGIN_FILE ) );
-	}
-
 	// Include the main WooCommerce class.
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		include_once dirname( __FILE__ ) . '/includes/class-woocommerce.php';
