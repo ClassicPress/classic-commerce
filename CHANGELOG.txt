@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.0.1 - 2020-10-17
+Fixed: CC icon not showing in some installations #289
+
 = 1.0.0 - 2020-10-01
 New: Complete new set of sample products created specifically for CC #284
 Updated: All documentation links now point to classiccommerce.cc #274, #278, #281
@@ -9,7 +12,6 @@ Updated: node-sass and handlebars dependencies #258, #259
 Improved: Stock levels are now hidden on the dashboard widget if inventory is disabled #261
 Improved: Additional checks made during build process #269
 Tweaks: Some well-hidden instances of WC purple changes to CC aqua #270, #271
-
 
 = 1.0.0-rc.2 - 2020-08-29
 Fixed: Corrected color of two images to CC aqua, missed in rc1. #255
