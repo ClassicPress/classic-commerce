@@ -52,10 +52,10 @@ class WC_Admin_Menus {
 	 */
 	public function admin_menu() {
 		global $menu;
-		
+
 		$cc_icon = '';
-		$icon_file = WP_PLUGIN_DIR  . '/classic-commerce/assets/images/classic-commerce-dashicon-white-on-transparent.svg';
-		
+		$icon_file = WC_ABSPATH . 'assets/images/classic-commerce-dashicon-white-on-transparent.svg';
+
 		if ( file_exists( $icon_file ) ) {
 			$icon_svg = file_get_contents( $icon_file );
 			$cc_icon = 'data:image/svg+xml;base64,' . base64_encode( $icon_svg );
@@ -371,7 +371,7 @@ class WC_Admin_Menus {
 	 * Add the "Visit Store" link in admin bar main menu.
 	 *
 	 * @since WC-2.4.0
-	 * 
+	 *
 	 * @param WP_Admin_Bar $wp_admin_bar Admin bar instance.
 	 */
 	public function admin_bar_menus( $wp_admin_bar ) {
