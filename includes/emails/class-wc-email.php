@@ -741,7 +741,7 @@ class WC_Email extends WC_Settings_API {
 	 * @return string
 	 */
 	public function get_theme_template_file( $template ) {
-		return get_stylesheet_directory() . '/' . apply_filters( 'woocommerce_template_directory', 'woocommerce', $template ) . '/' . $template;
+		return get_stylesheet_directory() . '/' . apply_filters( 'woocommerce_template_directory', 'classic-commerce', $template ) . '/' . $template;
 	}
 
 	/**
@@ -899,7 +899,7 @@ class WC_Email extends WC_Settings_API {
 					$local_file    = $this->get_theme_template_file( $template );
 					$core_file     = $this->template_base . $template;
 					$template_file = apply_filters( 'woocommerce_locate_core_template', $core_file, $template, $this->template_base, $this->id );
-					$template_dir  = apply_filters( 'woocommerce_template_directory', 'woocommerce', $template );
+					$template_dir  = apply_filters( 'woocommerce_template_directory', 'classic-commerce', $template );
 					?>
 					<div class="template <?php echo esc_attr( $template_type ); ?>">
 						<h4><?php echo wp_kses_post( $title ); ?></h4>
