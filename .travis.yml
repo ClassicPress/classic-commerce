@@ -63,6 +63,7 @@ before_script:
       echo "xdebug.ini does not exist"
     fi
   - composer install --no-dev
+  - composer self-update 1.8.4
   - |
     # Install WP Test suite, install PHPUnit globally:
     if [[ ! -z "$CP_VERSION" ]]; then
