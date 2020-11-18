@@ -741,7 +741,7 @@ class WC_Email extends WC_Settings_API {
 	 * @return string
 	 */
 	public function get_theme_template_file( $template ) {
-		return get_stylesheet_directory() . '/' . apply_filters( 'woocommerce_template_directory', 'woocommerce', $template ) . '/' . $template;
+		return get_stylesheet_directory() . '/' . apply_filters( 'woocommerce_template_directory', 'classic-commerce', $template ) . '/' . $template;
 	}
 
 	/**
@@ -896,10 +896,11 @@ class WC_Email extends WC_Settings_API {
 						continue;
 					}
 
-					$local_file    = $this->get_theme_template_file( $template );
-					$core_file     = $this->template_base . $template;
-					$template_file = apply_filters( 'woocommerce_locate_core_template', $core_file, $template, $this->template_base, $this->id );
-					$template_dir  = apply_filters( 'woocommerce_template_directory', 'woocommerce', $template );
+					$local_file		= $this->get_theme_template_file( $template );
+					$core_file		= $this->template_base . $template;
+					$template_file	= apply_filters( 'woocommerce_locate_core_template', $core_file, $template, $this->template_base, $this->id );
+					$template_dir	= apply_filters( 'woocommerce_template_directory', 'classic-commerce', $template );
+					$email_docs_url	= 'https://classiccommerce.cc/docs/installation-and-setup/email-settings/';
 					?>
 					<div class="template <?php echo esc_attr( $template_type ); ?>">
 						<h4><?php echo wp_kses_post( $title ); ?></h4>
@@ -956,6 +957,8 @@ class WC_Email extends WC_Settings_API {
 								<?php
 								/* translators: 1: Path to template file 2: Path to theme folder */
 								printf( esc_html__( 'To override and edit this email template copy %1$s to your theme folder: %2$s.', 'classic-commerce' ), '<code>' . esc_html( plugin_basename( $template_file ) ) . '</code>', '<code>' . esc_html( trailingslashit( basename( get_stylesheet_directory() ) ) . $template_dir . '/' . $template ) . '</code>' );
+								/* translators: 1: URL to documentation */
+								printf( __( ' <a href="%1$s" rel="noopener nofollow" target="_blank">View documentation</a>.', 'classic-commerce' ), $email_docs_url ) ;
 								?>
 							</p>
 
