@@ -1,5 +1,12 @@
 == Changelog ==
 
+= 1.0.3 - 2020-11-19
+Fixed: Fix for failing travis builds #294
+Fixed: Backport of WC security fix [e711a44](https://github.com/woocommerce/woocommerce/commit/e711a447feaf3d6020204e4319fdd5ba47c3f0b9). See [this post](See changelog archive for all versions](https://developer.woocommerce.com/2020/11/05/woocommerce-4-6-2-fix-release/). #293
+Fixed: Update email template override to use classic-commerce directory instead of woocommerce #292
+
+= 1.0.2 - No release
+
 = 1.0.1 - 2020-10-17
 Fixed: CC icon not showing in some installations #289
 
