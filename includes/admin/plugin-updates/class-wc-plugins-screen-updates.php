@@ -98,13 +98,28 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 	 * @return string
 	 */
 	private function parse_update_notice( $content, $new_version ) {
-		$version_parts     = explode( '.', $new_version );
-		$check_for_notices = array(
-			$version_parts[0] . '.0', // Major.
-			$version_parts[0] . '.0.0', // Major.
-			$version_parts[0] . '.' . $version_parts[1], // Minor.
-			$version_parts[0] . '.' . $version_parts[1] . '.' . $version_parts[2], // Patch.
-		);
+		$version_parts		= explode( '.', $new_version );
+		$check_for_notices	= [];
+
+		if ( isset ( $version_parts[0] ) ) {
+			// Major
+			$check_for_notices = [
+				$version_parts[0] . '.0',
+				$version_parts[0] . '.0.0',
+			];
+			if ( isset ( $version_parts[1] ) ) {
+				// Minor
+				$minor = $version_parts[0] . '.' . $version_parts[1];
+				array_push( $check_for_notices, $minor );
+
+				if ( isset ( $version_parts[2] ) ) {
+					// Patch
+					$patch = $version_parts[0] . '.' . $version_parts[1] . '.' . $version_parts[2];
+					array_push( $check_for_notices, $patch );
+				}
+			}
+		}
+
 		$notice_regexp     = '~==\s*Upgrade Notice\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( $new_version ) . '\s*=|$)~Uis';
 		$upgrade_notice    = '';
 
