@@ -99,49 +99,49 @@ class WC_Plugins_Screen_Updates extends WC_Plugin_Updates {
 	 */
 	private function parse_update_notice( $content, $new_version ) {
 		$version_parts		= explode( '.', $new_version );
-		$check_for_notices	= [];
 
 		if ( isset ( $version_parts[0] ) ) {
-			// Major
-			$check_for_notices = [
-				$version_parts[0] . '.0',
-				$version_parts[0] . '.0.0',
-			];
-			if ( isset ( $version_parts[1] ) ) {
-				// Minor
-				$minor = $version_parts[0] . '.' . $version_parts[1];
-				array_push( $check_for_notices, $minor );
-
-				if ( isset ( $version_parts[2] ) ) {
-					// Patch
-					$patch = $version_parts[0] . '.' . $version_parts[1] . '.' . $version_parts[2];
-					array_push( $check_for_notices, $patch );
-				}
+			// Initialize minor and patch if none is already set.
+			// Avoids potential PHP notices being thrown in $check_for_notices array.
+			if ( ! isset( $version_parts[1] ) ) {
+				$version_parts[1] = 0; // Minor.
 			}
+			if ( ! isset( $version_parts[2] ) ) {
+				$version_parts[2] = 0; // Patch.
+			}
+			// Build $check_for_notices array
+			$check_for_notices = array(
+				$version_parts[0] . '.0', // Major.
+				$version_parts[0] . '.0.0', // Major.
+				$version_parts[0] . '.' . $version_parts[1], // Minor.
+				$version_parts[0] . '.' . $version_parts[1] . '.' . $version_parts[2], // Patch.
+			);
 		}
 
 		$notice_regexp     = '~==\s*Upgrade Notice\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( $new_version ) . '\s*=|$)~Uis';
 		$upgrade_notice    = '';
 
-		foreach ( $check_for_notices as $check_version ) {
-			if ( version_compare( WC_VERSION, $check_version, '>' ) ) {
-				continue;
-			}
-
-			$matches = null;
-			if ( preg_match( $notice_regexp, $content, $matches ) ) {
-				$notices = (array) preg_split( '~[\r\n]+~', trim( $matches[2] ) );
-
-				if ( version_compare( trim( $matches[1] ), $check_version, '=' ) ) {
-					$upgrade_notice .= '<p class="wc_plugin_upgrade_notice">';
-
-					foreach ( $notices as $index => $line ) {
-						$upgrade_notice .= preg_replace( '~\[([^\]]*)\]\(([^\)]*)\)~', '<a href="${2}">${1}</a>', $line );
-					}
-
-					$upgrade_notice .= '</p>';
+		if ( $check_for_notices ) {
+			foreach ( $check_for_notices as $check_version ) {
+				if ( version_compare( WC_VERSION, $check_version, '>' ) ) {
+					continue;
 				}
-				break;
+
+				$matches = null;
+				if ( preg_match( $notice_regexp, $content, $matches ) ) {
+					$notices = (array) preg_split( '~[\r\n]+~', trim( $matches[2] ) );
+
+					if ( version_compare( trim( $matches[1] ), $check_version, '=' ) ) {
+						$upgrade_notice .= '<p class="wc_plugin_upgrade_notice">';
+
+						foreach ( $notices as $index => $line ) {
+							$upgrade_notice .= preg_replace( '~\[([^\]]*)\]\(([^\)]*)\)~', '<a href="${2}">${1}</a>', $line );
+						}
+
+						$upgrade_notice .= '</p>';
+					}
+					break;
+				}
 			}
 		}
 		return wp_kses_post( $upgrade_notice );
