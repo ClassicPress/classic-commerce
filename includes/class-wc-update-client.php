@@ -19,7 +19,7 @@
 namespace ClassicCommerce\ClassicCommerce;
 
 // EDIT: URL where Update Manager is installed; with trailing slash!
-const UPDATE_SERVER = 'https://classiccommerce.cc/';
+const UPDATE_SERVER = 'https://officialplugins.classicpress.net/';
 
 // EDIT: plugin or theme?
 const UPDATE_TYPE = 'plugin';
