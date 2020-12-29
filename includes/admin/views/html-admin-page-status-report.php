@@ -117,26 +117,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running ClassicPress Version %s', 'classic-commerce' ), esc_html( $classicpress_version ) );
 					}
 				} else {
-					$latest_version = get_transient( 'woocommerce_system_status_wp_version_check' );
-
-					if ( false === $latest_version ) {
-						$version_check = wp_remote_get( 'https://api.wordpress.org/core/version-check/1.7/' );
-						$api_response  = json_decode( wp_remote_retrieve_body( $version_check ), true );
-
-						if ( $api_response && isset( $api_response['offers'], $api_response['offers'][0], $api_response['offers'][0]['version'] ) ) {
-							$latest_version = $api_response['offers'][0]['version'];
-						} else {
-							$latest_version = $environment['wp_version'];
-						}
-						set_transient( 'woocommerce_system_status_wp_version_check', $latest_version, DAY_IN_SECONDS );
-					}
-
-					if ( version_compare( $environment['wp_version'], $latest_version, '<' ) ) {
-						/* Translators: %1$s: Current version, %2$s: New version */
-						echo '<mark class="error"><span class="dashicons dashicons-warning"></span> ' . sprintf( esc_html__( '%1$s - There is a newer version of WordPress available (%2$s)', 'classic-commerce' ), esc_html( $environment['wp_version'] ), esc_html( $latest_version ) ) . '</mark>';
-					} else {
-						echo '<mark class="yes"><span class="dashicons dashicons-yes"></span></mark> ' . sprintf( esc_html__( 'You are running WordPress Version %s', 'classic-commerce' ), esc_html( $environment['wp_version'] ) );
-					}
+						echo sprintf( esc_html__( 'You are running WordPress Version %s', 'classic-commerce' ), esc_html( $environment['wp_version'] ) );
 				}
 				?>
 			</td>
