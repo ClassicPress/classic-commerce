@@ -365,7 +365,7 @@ class WC_Countries {
 			$countries[] = 'IM';
 		}
 
-		return $countries;
+		return apply_filters( 'woocommerce_european_union_countries', $countries, $type );
 	}
 
 	/**
