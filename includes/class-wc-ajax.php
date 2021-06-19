@@ -378,7 +378,7 @@ class WC_AJAX {
 		$product           = wc_get_product( $product_id );
 		$quantity          = empty( $_POST['quantity'] ) ? 1 : wc_stock_amount( $_POST['quantity'] );
 		$passed_validation = apply_filters( 'woocommerce_add_to_cart_validation', true, $product_id, $quantity );
-		$product_status    = get_post_status( $product_id );
+		$product_status    = $product->get_status();
 		$variation_id      = 0;
 		$variation         = array();
 
