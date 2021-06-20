@@ -33,7 +33,7 @@ function wc_update_product_stock( $product, $stock_quantity = null, $operation =
 	if ( ! is_null( $stock_quantity ) && $product->managing_stock() ) {
 		// Some products (variations) can have their stock managed by their parent. Get the correct ID to reduce here.
 		$product_id_with_stock = $product->get_stock_managed_by_id();
-		$data_store            = WC_Data_Store::load( 'product' );
+		$data_store            = WC_Data_Store::load( 'product-' . $product->get_type() );
 		$data_store->update_product_stock( $product_id_with_stock, $stock_quantity, $operation );
 		delete_transient( 'wc_low_stock_count' );
 		delete_transient( 'wc_outofstock_count' );
