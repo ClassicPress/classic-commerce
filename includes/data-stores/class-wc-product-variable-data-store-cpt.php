@@ -75,7 +75,8 @@ class WC_Product_Variable_Data_Store_CPT extends WC_Product_Data_Store_CPT imple
 					$options = wc_get_text_attributes( $meta_value['value'] );
 				}
 
-				$attribute = new WC_Product_Attribute();
+				$classname = apply_filters( 'woocommerce_product_attribute_class', 'WC_Product_Attribute', $product );
+				$attribute = new $classname();
 				$attribute->set_id( $id );
 				$attribute->set_name( $meta_value['name'] );
 				$attribute->set_options( $options );

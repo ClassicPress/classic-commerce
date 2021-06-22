@@ -265,7 +265,8 @@ class WC_Meta_Box_Product_Data {
 					continue;
 				}
 
-				$attribute = new WC_Product_Attribute();
+				$classname = apply_filters( 'woocommerce_product_attribute_class', 'WC_Product_Attribute', $data );
+				$attribute = new $classname();
 				$attribute->set_id( $attribute_id );
 				$attribute->set_name( $attribute_name );
 				$attribute->set_options( $options );
