@@ -1,4 +1,4 @@
-This fork of Classic Commerce is for my pull requests for issues [#318](https://github.com/ClassicPress-plugins/classic-commerce/issues/318), [#319](https://github.com/ClassicPress-plugins/classic-commerce/issues/319), [#320](https://github.com/ClassicPress-plugins/classic-commerce/issues/320), [#321](https://github.com/ClassicPress-plugins/classic-commerce/issues/321) and [#324](https://github.com/ClassicPress-plugins/classic-commerce/issues/324).
+This branch is for my pull request for issue[#320](https://github.com/ClassicPress-plugins/classic-commerce/issues/320).
 
 # Classic Commerce [![Build Status](https://travis-ci.com/ClassicPress-plugins/classic-commerce.svg?branch=master)](https://travis-ci.com/ClassicPress-plugins/classic-commerce)
 
