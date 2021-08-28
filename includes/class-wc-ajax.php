@@ -606,15 +606,6 @@ class WC_AJAX {
 	 * Save attributes via ajax.
 	 */
 	public static function save_attributes() {
-		$response = self::save_attributes_main();
-		if ( ! array_key_exists( 'error', $response ) ) {
-			wp_send_json_success( $response );
-		} else {
-			wp_send_json_error( $response );
-		}
-	}
-
-	public static function save_attributes_main() {
 		check_ajax_referer( 'save-attributes', 'security' );
 
 		if ( ! current_user_can( 'edit_products' ) ) {
@@ -657,10 +648,11 @@ class WC_AJAX {
 
 			$response['html'] = ob_get_clean();
 
-			return $response;
+			wp_send_json_success( $response );
 		} catch ( Exception $e ) {
-			return array( 'error' => $e->getMessage() );
+			wp_send_json_error( array( 'error' => $e->getMessage() ) );
 		}
+		wp_die();
 	}
 
 	/**
