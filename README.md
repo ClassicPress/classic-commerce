@@ -1,5 +1,3 @@
-This branch is for my pull request for issue [#320](https://github.com/ClassicPress-plugins/classic-commerce/issues/320).
-
 # Classic Commerce [![Build Status](https://travis-ci.com/ClassicPress-plugins/classic-commerce.svg?branch=master)](https://travis-ci.com/ClassicPress-plugins/classic-commerce)
 
 Welcome to the Classic Commerce repository on GitHub. This is a fork of WooCommerce and is still in development.
