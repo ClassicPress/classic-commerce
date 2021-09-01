@@ -3,7 +3,7 @@
  * Plugin Name: Classic Commerce
  * Plugin URI: https://github.com/ClassicPress-plugins/classic-commerce
  * Description: A simple, powerful and independent e-commerce platform. Sell anything with ease.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: ClassicPress Research Team
  * Author URI: https://github.com/ClassicPress-plugins/classic-commerce
  * Text Domain: classic-commerce
