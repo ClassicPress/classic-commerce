@@ -3355,6 +3355,12 @@
 			 }
 		 }
 
+		 .type_box {
+			display: inline;
+			line-height: inherit;
+			vertical-align: baseline;
+		}
+
 		 select {
 			 margin: 0;
 		 }
@@ -5543,6 +5549,22 @@
  .woocommerce table.form-table .select2-container {
 	 min-width: 400px !important;
  }
+
+.wc-wp-version-gte-55 {
+	#woocommerce-product-data {
+		.hndle {
+			display: block;
+			line-height: 24px;
+
+			.type_box {
+				display: inline;
+				line-height: inherit;
+				vertical-align: baseline;
+			}
+		}
+	}
+}
+
  .post-type-product .tablenav,
  .post-type-shop_order .tablenav {
 	 .actions {
