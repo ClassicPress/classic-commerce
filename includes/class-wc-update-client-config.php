@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 
 class UpdateClientConfig {
 
-	public function __construct( ) {
+	public function __construct() {
 
 		// Deal with privacy options.
 		add_filter( 'codepotent_update_manager_filter_classic-commerce/classic-commerce.php_client_request',	array( $this, 'client_request' ) );
@@ -21,7 +21,7 @@ class UpdateClientConfig {
 
 	}
 
-	public function client_request ( $config ) {
+	public function client_request( $config ) {
 		if ( 'no' === get_option( 'cc_usage_tracking', 'no' ) ) {
 			$config['sfum'] = 'no-log';
 		}
@@ -29,7 +29,7 @@ class UpdateClientConfig {
 	}
 
 	public function patch_paths( $path ) {
-		return preg_replace('/images$/', 'assets/images', $path);
+		return preg_replace( '/images$/', 'assets/images', $path );
 	}
 
 }
