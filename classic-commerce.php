@@ -143,6 +143,7 @@ if ( $_cc_can_load ) {
 	////////////////////////////////////////////
 
 	// Load the Update Client to manage Classic Commerce updates.
+	include_once dirname( __FILE__ ) . '/includes/class-wc-update-client-config.php';
 	include_once dirname( __FILE__ ) . '/includes/class-wc-update-client.php';
 
 	// Define WC_PLUGIN_FILE.
