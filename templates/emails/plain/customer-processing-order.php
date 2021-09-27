@@ -18,7 +18,7 @@ echo '= ' . esc_html( $email_heading ) . " =\n\n";
 /* translators: %s: Customer first name */
 echo sprintf( esc_html__( 'Hi %s,', 'classic-commerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
 /* translators: %s: Order number */
-echo sprintf( esc_html__( 'Just to let you know &mdash; your payment has been confirmed, and order #%s is now being processed:', 'classic-commerce' ), esc_html( $order->get_order_number() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed:', 'classic-commerce' ), esc_html( $order->get_order_number() ) ) . "\n\n";
 
 echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
