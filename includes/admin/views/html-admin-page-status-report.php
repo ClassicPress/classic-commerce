@@ -602,7 +602,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				if ( $plugin_details['WC requires at least'] !== '' ) {
 					$WC_requires = ' &ndash; ' . esc_html__( 'Requires at least WC ' . $plugin_details['WC requires at least'], 'classic-commerce' );
 					if (version_compare($plugin_details['WC requires at least'], '3.5.3', '>')) {
-						$WC_requires = ' &ndash; <mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Requires at least WC ', 'classic-commerce' ) . $plugin_details['WC requires at least'] . wp_kses_post( sprintf( __( ' <a href="%s" target="_blank">Learn more</a>.', 'classic-commerce' ), 'https://classiccommerce.cc/docs/using-woocommerce-plugins-with-classic-commerce/' ) ) . '</mark>';
+						$WC_requires = ' &ndash; <mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Requires at least WC ', 'classic-commerce' ) . $plugin_details['WC requires at least'] . wp_kses_post( sprintf( __( ' <a href="%s" target="_blank" rel="noreferrer noopenner">Learn more</a>.', 'classic-commerce' ), 'https://classiccommerce.cc/docs/using-woocommerce-plugins-with-classic-commerce/' ) ) . '</mark>';
 					}
 				}
 				?>
