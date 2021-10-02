@@ -551,7 +551,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				<?php if ( $security['hide_errors'] ) : ?>
 					<mark class="yes"><span class="dashicons dashicons-yes"></span></mark>
 				<?php else : ?>
-					<mark class="error"><span class="dashicons dashicons-warning"></span><?php esc_html_e( 'Error messages should not be shown to visitors.', 'classic-commerce' ); ?></mark>
+					<mark class="error"><span class="dashicons dashicons-warning"></span> <?php esc_html_e( 'Error messages should not be shown to visitors.', 'classic-commerce' ); ?></mark>
 				<?php endif; ?>
 			</td>
 		</tr>
@@ -566,6 +566,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 	<tbody>
 		<?php
 		foreach ( $active_plugins as $plugin ) {
+
+			$plugin_path = WP_PLUGIN_DIR . '/' . $plugin['plugin'];
+
+			$plugin_details = get_file_data( $plugin_path, array(
+						'WC requires at least' => 'WC requires at least'
+					) );
+
 			if ( ! empty( $plugin['name'] ) ) {
 				$dirname = dirname( $plugin['plugin'] );
 
@@ -591,6 +598,13 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 				if ( array_key_exists( $plugin['plugin'], $untested_plugins ) ) {
 					$untested_string = ' &ndash; <strong style="color:red;">' . esc_html__( 'Not tested with the active version of Classic Commerce', 'classic-commerce' ) . '</strong>';
 				}
+				$WC_requires = '';
+				if ( $plugin_details['WC requires at least'] !== '' ) {
+					$WC_requires = ' &ndash; ' . esc_html__( 'Requires at least WC ' . $plugin_details['WC requires at least'], 'classic-commerce' );
+					if (version_compare($plugin_details['WC requires at least'], '3.5.3', '>')) {
+						$WC_requires = ' &ndash; <mark class="error"><span class="dashicons dashicons-warning"></span> ' . esc_html__( 'Requires at least WC ', 'classic-commerce' ) . $plugin_details['WC requires at least'] . '</mark>';
+					}
+				}
 				?>
 				<tr>
 					<td><?php echo wp_kses_post( $plugin_name ); ?></td>
@@ -599,7 +613,7 @@ $untested_plugins = $plugin_updates->get_untested_plugins( WC()->version, 'minor
 					<?php
 						/* translators: %s: plugin author */
 						printf( esc_html__( 'by %s', 'classic-commerce' ), esc_html( $plugin['author_name'] ) );
-						echo ' &ndash; ' . esc_html( $plugin['version'] ) . $version_string . $untested_string . $network_string; // WPCS: XSS ok.
+						echo ' &ndash; ' . esc_html( $plugin['version'] ) . $version_string . $untested_string . $network_string . $WC_requires; // WPCS: XSS ok.
 					?>
 					</td>
 				</tr>
