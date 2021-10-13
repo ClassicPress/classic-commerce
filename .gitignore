@@ -41,6 +41,7 @@ tests/cli/vendor
 /logs
 
 # Composer
+composer.lock
 /vendor/
 contributors.md
 
