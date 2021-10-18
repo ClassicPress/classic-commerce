@@ -30,7 +30,11 @@ class WC_Admin {
 		add_action( 'admin_init', array( $this, 'admin_redirects' ) );
 		add_action( 'admin_footer', 'wc_print_js', 25 );
 		add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ), 1 );
-	}
+
+		// Add body class for WP 5.3+ compatibility.
+		add_filter( 'admin_body_class', array( $this, 'include_admin_body_class' ), 9999 );
+
+}
 
 	/**
 	 * Output buffering allows admin screens to make redirects later on.
@@ -233,6 +237,35 @@ class WC_Admin {
 		}
 
 		return $footer_text;
+	}
+
+	/**
+	 * Include admin classes.
+	 *
+	 * @since 4.2.0
+	 * @param string $classes Body classes string.
+	 * @return string
+	 */
+	public function include_admin_body_class( $classes ) {
+		if ( false !== strpos( $classes, 'wc-wp-version-gte-53' ) ) {
+			return $classes;
+		}
+
+		$raw_version   = get_bloginfo( 'version' );
+		$version_parts = explode( '-', $raw_version );
+		$version       = count( $version_parts ) > 1 ? $version_parts[0] : $raw_version;
+
+		// Add WP 5.3+ compatibility class.
+		if ( $raw_version && version_compare( $version, '5.3', '>=' ) ) {
+			$classes .= ' wc-wp-version-gte-53';
+		}
+
+		// Add WP 5.5+ compatibility class.
+		if ( $raw_version && version_compare( $version, '5.5', '>=' ) ) {
+			$classes .= ' wc-wp-version-gte-55';
+		}
+
+		return $classes;
 	}
 
 }
