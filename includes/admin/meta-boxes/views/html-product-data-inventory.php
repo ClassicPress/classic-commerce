@@ -82,7 +82,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				'custom_attributes' => array(
 					'step' => 'any',
 				),
-				'data_type'         => 'stock',
 			) );
 
 			do_action( 'woocommerce_product_options_stock_fields' );
