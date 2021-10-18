@@ -27,7 +27,7 @@ $text_align = is_rtl() ? 'right' : 'left';
 					<br/><?php echo esc_html( $order->get_billing_phone() ); ?>
 				<?php endif; ?>
 				<?php if ( $order->get_billing_email() ) : ?>
-					<p><?php echo esc_html( $order->get_billing_email() ); ?></p>
+					<br/><?php echo esc_html( $order->get_billing_email() ); ?>
 				<?php endif; ?>
 			</address>
 		</td>
