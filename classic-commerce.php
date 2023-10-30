@@ -1,11 +1,13 @@
 <?php
 /**
  * Plugin Name: Classic Commerce
- * Plugin URI: https://github.com/ClassicPress-plugins/classic-commerce
+ * Plugin URI: https://classiccommerce.cc
  * Description: A simple, powerful and independent e-commerce platform. Sell anything with ease.
  * Version: 1.0.5
  * Author: ClassicPress Research Team
- * Author URI: https://github.com/ClassicPress-plugins/classic-commerce
+ * Author URI: https://www.classicpress.net
+ * Requires PHP: 7.0
+ * Requires CP: 1.0
  * Text Domain: classic-commerce
  * Domain Path: /i18n/languages/
  *
@@ -141,9 +143,6 @@ if ( $_cc_can_load ) {
 	////////////////////////////////////////////
 	// BEGIN CLASSIC COMMERCE LOADING PROCESS //
 	////////////////////////////////////////////
-
-	// Load the Update Client to manage Classic Commerce updates.
-	include_once dirname( __FILE__ ) . '/includes/class-wc-update-client.php';
 
 	// Define WC_PLUGIN_FILE.
 	if ( ! defined( 'WC_PLUGIN_FILE' ) ) {
