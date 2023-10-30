@@ -144,7 +144,7 @@ class WC_Install {
 		add_filter( 'wpmu_drop_tables', array( __CLASS__, 'wpmu_drop_tables' ) );
 		add_filter( 'cron_schedules', array( __CLASS__, 'cron_schedules' ) );
 	}
-	
+
 	/**
 	 * Init background updates
 	 */
@@ -1196,7 +1196,7 @@ CREATE TABLE {$wpdb->prefix}woocommerce_termmeta (
 			$row_meta = array(
 				'docs'    => '<a href="' . esc_url( apply_filters( 'woocommerce_docs_url', 'https://classiccommerce.cc/docs/' ) ) . '" aria-label="' . esc_attr__( 'View Classic Commerce documentation', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'classic-commerce' ) . '</a>',
 				'apidocs' => '<a href="' . esc_url( apply_filters( 'woocommerce_apidocs_url', 'https://docs.woocommerce.com/wc-apidocs/' ) ) . '" aria-label="' . esc_attr__( 'View WooCommerce API docs', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'API docs', 'classic-commerce' ) . '</a>',
-				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://github.com/ClassicPress-plugins/classic-commerce/issues' ) ) . '" aria-label="' . esc_attr__( 'Visit issues  support section on github', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'classic-commerce' ) . '</a>',
+				'support' => '<a href="' . esc_url( apply_filters( 'woocommerce_support_url', 'https://github.com/ClassicPress/classic-commerce/issues' ) ) . '" aria-label="' . esc_attr__( 'Visit issues  support section on github', 'classic-commerce' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'classic-commerce' ) . '</a>',
 			);
 
 			return array_merge( $links, $row_meta );
